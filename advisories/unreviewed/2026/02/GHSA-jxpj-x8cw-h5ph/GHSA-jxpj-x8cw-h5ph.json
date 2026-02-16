@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jxpj-x8cw-h5ph",
+  "modified": "2026-02-16T18:31:29Z",
+  "published": "2026-02-16T18:31:29Z",
+  "aliases": [
+    "CVE-2026-2566"
+  ],
+  "details": "A security vulnerability has been detected in Wavlink WL-NU516U1 up to 130/260. This affects the function sub_406194 of the file /cgi-bin/adm.cgi. Such manipulation of the argument firmware_url leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2566"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Wlz1112/Wavlink-NU516U1-V251208-/blob/main/firmware_url.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.346173"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.346173"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.751908"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-16T18:19:45Z"
+  }
+}
