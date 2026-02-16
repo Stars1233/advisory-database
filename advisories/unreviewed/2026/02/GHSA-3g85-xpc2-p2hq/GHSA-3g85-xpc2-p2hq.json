@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3g85-xpc2-p2hq",
+  "modified": "2026-02-16T12:30:25Z",
+  "published": "2026-02-16T12:30:25Z",
+  "aliases": [
+    "CVE-2026-2577"
+  ],
+  "details": "The WhatsApp bridge component in Nanobot binds the WebSocket server to all network interfaces (0.0.0.0) on port 3001 by default and does not require authentication for incoming connections. An unauthenticated remote attacker with network access to the bridge can connect to the WebSocket server to hijack the WhatsApp session. This allows the attacker to send messages on behalf of the user, intercept all incoming messages and media in real-time, and capture authentication QR codes.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.1.3.post7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenable.com/security/research/tra-2026-09"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-16T10:16:08Z"
+  }
+}
