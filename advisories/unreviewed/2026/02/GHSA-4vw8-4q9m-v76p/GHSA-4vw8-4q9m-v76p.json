@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4vw8-4q9m-v76p",
+  "modified": "2026-02-17T15:31:35Z",
+  "published": "2026-02-17T15:31:35Z",
+  "aliases": [
+    "CVE-2024-31118"
+  ],
+  "details": "Missing Authorization vulnerability in Smartypants SP Project & Document Manager allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects SP Project & Document Manager: from n/a through 4.70.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-31118"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/sp-client-document-manager/vulnerability/wordpress-sp-project-document-manager-plugin-4-70-broken-access-control-to-xss-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-17T15:16:05Z"
+  }
+}

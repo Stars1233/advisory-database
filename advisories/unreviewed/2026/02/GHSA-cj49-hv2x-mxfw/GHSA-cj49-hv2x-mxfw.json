@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cj49-hv2x-mxfw",
+  "modified": "2026-02-17T15:31:36Z",
+  "published": "2026-02-17T15:31:36Z",
+  "aliases": [
+    "CVE-2026-2616"
+  ],
+  "details": "A vulnerability has been found in Beetel 777VR1 up to 01.00.09. The impacted element is an unknown function of the component Web Management Interface. The manipulation leads to hard-coded credentials. The attack needs to be initiated within the local network. The exploit has been disclosed to the public and may be used. It is advisable to modify the configuration settings. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2616"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/raghav20232023/d8dcaaa76e71790f77f8d3ea714d2afc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/raghav20232023/d8dcaaa76e71790f77f8d3ea714d2afc#reproduction-steps"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.346266"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.346266"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.751314"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-259"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-17T15:16:24Z"
+  }
+}
