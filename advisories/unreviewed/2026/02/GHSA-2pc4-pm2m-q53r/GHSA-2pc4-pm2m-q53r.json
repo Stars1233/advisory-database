@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2pc4-pm2m-q53r",
+  "modified": "2026-02-18T12:31:11Z",
+  "published": "2026-02-18T12:31:11Z",
+  "aliases": [
+    "CVE-2025-14799"
+  ],
+  "details": "The Brevo - Email, SMS, Web Push, Chat, and more. plugin for WordPress is vulnerable to authorization bypass due to type juggling in all versions up to, and including, 3.3.0. This is due to the use of loose comparison (==) instead of strict comparison (===) when validating the installation ID in the `/wp-json/mailin/v1/mailin_disconnect` REST API endpoint. This makes it possible for unauthenticated attackers to disconnect the Brevo integration, delete the API key, remove all subscription forms, and reset plugin settings by sending a boolean `true` value for the `id` parameter, which bypasses the authorization check through PHP type juggling.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14799"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/mailin/tags/3.2.9/sendinblue.php#L1795"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/mailin/tags/3.2.9/sendinblue.php#L1833"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3448639"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f29e5b19-2505-4b02-92c7-071833de6bc2?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-843"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T12:15:58Z"
+  }
+}
