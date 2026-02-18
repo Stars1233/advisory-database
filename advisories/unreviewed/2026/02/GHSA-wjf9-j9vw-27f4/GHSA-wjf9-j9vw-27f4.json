@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wjf9-j9vw-27f4",
+  "modified": "2026-02-18T21:31:22Z",
+  "published": "2026-02-18T21:31:22Z",
+  "aliases": [
+    "CVE-2025-70064"
+  ],
+  "details": "PHPGurukul Hospital Management System v4.0 contains a Privilege Escalation vulnerability. A low-privileged user (Patient) can directly access the Administrator Dashboard and all sub-modules (e.g., User Logs, Doctor Management) by manually browsing to the /admin/ directory after authentication. This allows any self-registered user to takeover the application, view confidential logs, and modify system data.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-70064"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/Sanka1pp/c6f20cd6db1fbb1f0e7e199ead66691d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packetstorm.news/files/id/213711"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T19:21:42Z"
+  }
+}

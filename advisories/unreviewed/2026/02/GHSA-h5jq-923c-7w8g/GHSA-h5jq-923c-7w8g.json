@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h5jq-923c-7w8g",
+  "modified": "2026-02-18T21:31:22Z",
+  "published": "2026-02-18T21:31:22Z",
+  "aliases": [
+    "CVE-2026-0874"
+  ],
+  "details": "A maliciously crafted CATPART file, when parsed through certain Autodesk products, can force an Out-of-Bounds Write vulnerability. A malicious actor may leverage this vulnerability to cause a crash, cause data corruption, or execute arbitrary code in the context of the current process.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0874"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.autodesk.com/products/autodesk-access/overview"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.autodesk.com/trust/security-advisories/adsk-sa-2026-0004"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T20:18:32Z"
+  }
+}

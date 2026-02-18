@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8gfj-223w-87pr",
+  "modified": "2026-02-18T21:31:22Z",
+  "published": "2026-02-18T21:31:22Z",
+  "aliases": [
+    "CVE-2025-70063"
+  ],
+  "details": "The 'Medical History' module in PHPGurukul Hospital Management System v4.0 contains an Insecure Direct Object Reference (IDOR) vulnerability. The application fails to verify that the requested 'viewid' parameter belongs to the currently authenticated patient. This allows a user to access the confidential medical records of other patients by iterating the 'viewid' integer.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-70063"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/Sanka1pp/f43c7eca5048152899e14412523afe80"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packetstorm.news/files/id/213711"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T19:21:42Z"
+  }
+}

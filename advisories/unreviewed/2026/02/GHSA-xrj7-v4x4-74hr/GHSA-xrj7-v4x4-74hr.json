@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xrj7-v4x4-74hr",
+  "modified": "2026-02-18T21:31:23Z",
+  "published": "2026-02-18T21:31:23Z",
+  "aliases": [
+    "CVE-2025-8860"
+  ],
+  "details": "A flaw was found in QEMU in the uefi-vars virtual device. When the guest writes to register UEFI_VARS_REG_BUFFER_SIZE, the .write callback `uefi_vars_write` is invoked. The function allocates a heap buffer without zeroing the memory, leaving the buffer filled with residual data from prior allocations. When the guest later reads from register UEFI_VARS_REG_PIO_BUFFER_TRANSFER, the .read callback `uefi_vars_read` returns leftover metadata or other sensitive process memory from the previously allocated buffer, leading to an information disclosure vulnerability.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-8860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2387588"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-212"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T21:16:22Z"
+  }
+}

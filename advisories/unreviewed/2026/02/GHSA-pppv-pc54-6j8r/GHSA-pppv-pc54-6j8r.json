@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pppv-pc54-6j8r",
+  "modified": "2026-02-18T21:31:23Z",
+  "published": "2026-02-18T21:31:22Z",
+  "aliases": [
+    "CVE-2026-2661"
+  ],
+  "details": "A security flaw has been discovered in Squirrel up to 3.2. This affects the function SQObjectPtr::operator in the library squirrel/sqobject.h. The manipulation results in heap-based buffer overflow. The attack needs to be approached locally. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2661"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/albertodemichelis/squirrel/issues/310"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/oneafter/0122/blob/main/i310/repro"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.346459"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.346459"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.753165"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T20:18:36Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4pq4-6gr5-cr69",
+  "modified": "2026-02-18T21:31:23Z",
+  "published": "2026-02-18T21:31:23Z",
+  "aliases": [
+    "CVE-2026-0665"
+  ],
+  "details": "An off-by-one error was found in QEMU's KVM Xen guest support. A malicious guest could use this flaw to trigger out-of-bounds heap accesses in the QEMU process via the emulated Xen physdev hypercall interface, leading to a denial of service or potential memory corruption.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0665"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-0665"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2428640"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T21:16:22Z"
+  }
+}

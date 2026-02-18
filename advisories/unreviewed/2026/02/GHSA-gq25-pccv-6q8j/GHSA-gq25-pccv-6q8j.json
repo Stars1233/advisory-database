@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gq25-pccv-6q8j",
+  "modified": "2026-02-18T21:31:23Z",
+  "published": "2026-02-18T21:31:23Z",
+  "aliases": [
+    "CVE-2025-14876"
+  ],
+  "details": "A flaw was found in the virtio-crypto device of QEMU. A malicious guest operating system can exploit a missing length limit in the AKCIPHER path, leading to uncontrolled memory allocation. This can result in a denial of service (DoS) on the host system by causing the QEMU process to terminate unexpectedly.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14876"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-14876"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2423549"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T21:16:20Z"
+  }
+}
