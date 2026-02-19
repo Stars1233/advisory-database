@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-33hq-fvwr-56pm",
+  "modified": "2026-02-19T20:29:30Z",
+  "published": "2026-02-19T20:29:30Z",
+  "aliases": [],
+  "summary": "devalue affected by CPU and memory amplification from sparse arrays",
+  "details": "Under certain circumstances, serializing sparse arrays using `uneval` or `stringify` could cause CPU and/or memory exhaustion. When this occurs on the server, it results in a DoS. This is extremely difficult to take advantage of in practice, as an attacker would have to manage to create a sparse array on the server — which is impossible in every mainstream wire format — and then that sparse array would have to be run through `uneval` or `stringify`.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "devalue"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.6.3"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 5.6.2"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sveltejs/devalue/security/advisories/GHSA-33hq-fvwr-56pm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sveltejs/devalue/commit/819f1ac7475ab37547645cfb09bf2f678a799cf0"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/sveltejs/devalue"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sveltejs/devalue/releases/tag/v5.6.3"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-02-19T20:29:30Z",
+    "nvd_published_at": null
+  }
+}
