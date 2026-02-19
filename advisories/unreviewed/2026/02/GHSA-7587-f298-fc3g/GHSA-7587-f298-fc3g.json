@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7587-f298-fc3g",
+  "modified": "2026-02-19T00:30:29Z",
+  "published": "2026-02-19T00:30:29Z",
+  "aliases": [
+    "CVE-2019-25359"
+  ],
+  "details": "SD.NET RIM versions before 4.7.3c contain a SQL injection vulnerability that allows attackers to inject malicious SQL statements through POST parameters 'idtyp' and 'idgremium'. Attackers can exploit this vulnerability by crafting specially formed POST requests to the /vorlagen/ endpoint, enabling unauthorized database manipulation and potential information disclosure.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25359"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/47589"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sitzungsdienst.net"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sitzungsdienst.net/2018/12/sd-net-rim-4-7-3-veroeffentlicht"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/sdnet-rim-c-idtyp-sql-injection"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:21Z"
+  }
+}

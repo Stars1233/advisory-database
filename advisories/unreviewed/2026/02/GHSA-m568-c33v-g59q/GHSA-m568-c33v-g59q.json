@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m568-c33v-g59q",
+  "modified": "2026-02-19T00:30:30Z",
+  "published": "2026-02-19T00:30:30Z",
+  "aliases": [
+    "CVE-2026-2649"
+  ],
+  "details": "Integer overflow in V8 in Google Chrome prior to 145.0.7632.109 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2649"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_18.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/481074858"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-472"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:26Z"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vx2f-2j7r-3p8x",
+  "modified": "2026-02-19T00:30:28Z",
+  "published": "2026-02-19T00:30:28Z",
+  "aliases": [
+    "CVE-2019-25349"
+  ],
+  "details": "ScadaApp for iOS 1.1.4.0 contains a denial of service vulnerability that allows attackers to crash the application by inputting an oversized buffer in the Servername field. Attackers can paste a 257-character buffer during login to trigger an application crash on iOS devices.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25349"
+    },
+    {
+      "type": "WEB",
+      "url": "https://apps.apple.com/ca/app/scadaapp/id1206266634"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/47678"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/scadaapp-for-ios-servername-denial-of-service"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-120"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:19Z"
+  }
+}

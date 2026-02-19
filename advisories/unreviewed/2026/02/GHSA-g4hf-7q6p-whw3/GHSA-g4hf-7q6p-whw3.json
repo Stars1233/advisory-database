@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g4hf-7q6p-whw3",
+  "modified": "2026-02-19T00:30:30Z",
+  "published": "2026-02-19T00:30:30Z",
+  "aliases": [
+    "CVE-2026-27182"
+  ],
+  "details": "Saturn Remote Mouse Server contains a command injection vulnerability that allows unauthenticated attackers to execute arbitrary commands by sending specially crafted UDP JSON frames to port 27000. Attackers on the local network can send malformed packets with unsanitized command data that the service forwards directly to OS execution functions, enabling remote code execution under the service account.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27182"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packetstorm.news/files/id/215835"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.saturnremote.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/saturn-remote-mouse-server-udp-command-injection-rce"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:26Z"
+  }
+}

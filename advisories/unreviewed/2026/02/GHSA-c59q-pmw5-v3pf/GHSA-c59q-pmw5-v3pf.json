@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c59q-pmw5-v3pf",
+  "modified": "2026-02-19T00:30:29Z",
+  "published": "2026-02-19T00:30:29Z",
+  "aliases": [
+    "CVE-2026-27177"
+  ],
+  "details": "MajorDoMo (aka Major Domestic Module) contains a stored cross-site scripting (XSS) vulnerability via the /objects/?op=set endpoint, which is intentionally unauthenticated for IoT device integration. User-supplied property values are stored raw in the database without sanitization. When an administrator views the property editor in the admin panel, the stored values are rendered without escaping in both a paragraph tag (SOURCE field) and a textarea element (VALUE field). The XSS fires on page load without requiring any click from the admin. Additionally, the session cookie lacks the HttpOnly flag, enabling session hijack via document.cookie exfiltration. An attacker can enumerate properties via the unauthenticated /api.php/data/ endpoint and poison any property with malicious JavaScript.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27177"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sergejey/majordomo/pull/1177"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chocapikk.com/posts/2026/majordomo-revisited"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/majordomo-stored-cross-site-scripting-via-property-set-endpoint"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:25Z"
+  }
+}

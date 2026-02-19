@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-653m-4r27-3m6m",
+  "modified": "2026-02-19T00:30:28Z",
+  "published": "2026-02-19T00:30:28Z",
+  "aliases": [
+    "CVE-2019-25357"
+  ],
+  "details": "Control Center PRO 6.2.9 contains a stack-based buffer overflow vulnerability in the user creation module's username field that allows attackers to overwrite Structured Exception Handler (SEH). Attackers can craft a malicious payload exceeding 664 bytes to inject shellcode and potentially execute arbitrary code on vulnerable Windows systems.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25357"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/47645"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/control-center-pro-local-stack-based-bufferoverflow"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.webgateinc.com/wgi/eng/products/list.php?ec_idx1=P610"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.webgateinc.com/wgi/eng/products/list.php?ec_idx1=P610&ptype=view&page=&p_idx=90&tab=download&#tabdown"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:21Z"
+  }
+}

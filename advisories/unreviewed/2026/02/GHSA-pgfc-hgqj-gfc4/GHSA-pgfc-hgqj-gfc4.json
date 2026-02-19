@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pgfc-hgqj-gfc4",
+  "modified": "2026-02-19T00:30:29Z",
+  "published": "2026-02-19T00:30:29Z",
+  "aliases": [
+    "CVE-2019-25398"
+  ],
+  "details": "IPFire 2.21 Core Update 127 contains multiple cross-site scripting vulnerabilities in the ovpnmain.cgi script that allow attackers to inject malicious scripts through VPN configuration parameters. Attackers can submit POST requests with script payloads in parameters like VPN_IP, DMTU, ccdname, ccdsubnet, DOVPN_SUBNET, DHCP_DOMAIN, DHCP_DNS, DHCP_WINS, ROUTES_PUSH, FRAGMENT, KEEPALIVE_1, and KEEPALIVE_2 to execute arbitrary JavaScript in administrator browsers.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25398"
+    },
+    {
+      "type": "WEB",
+      "url": "https://downloads.ipfire.org/releases/ipfire-2.x/2.21-core127/ipfire-2.21.x86_64-full-core127.iso"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46344"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ipfire.org"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ipfire-core-update-cross-site-scripting-via-ovpnma"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:23Z"
+  }
+}

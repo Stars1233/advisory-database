@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rpq9-4jjf-2xhh",
+  "modified": "2026-02-19T00:30:29Z",
+  "published": "2026-02-19T00:30:29Z",
+  "aliases": [
+    "CVE-2026-27176"
+  ],
+  "details": "MajorDoMo (aka Major Domestic Module) contains a reflected cross-site scripting (XSS) vulnerability in command.php. The $qry parameter is rendered directly into the HTML page without sanitization via htmlspecialchars(), both in an input field value attribute and in a paragraph element. An attacker can inject arbitrary JavaScript by crafting a URL with malicious content in the qry parameter.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27176"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sergejey/majordomo/pull/1177"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chocapikk.com/posts/2026/majordomo-revisited"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/majordomo-reflected-cross-site-scripting-in-commandphp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-18T22:16:25Z"
+  }
+}
