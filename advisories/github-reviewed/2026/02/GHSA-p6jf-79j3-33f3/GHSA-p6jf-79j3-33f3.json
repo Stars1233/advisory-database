@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p6jf-79j3-33f3",
+  "modified": "2026-02-19T22:11:44Z",
+  "published": "2026-02-19T18:31:54Z",
+  "aliases": [
+    "CVE-2025-13590"
+  ],
+  "summary": "carbon-apimgt does not properly restrict uploaded files",
+  "details": "A malicious actor with administrative privileges can upload an arbitrary file to a user-controlled location within the deployment via a system REST API. Successful uploads may lead to remote code execution. \n\n By leveraging the vulnerability, a malicious actor may perform Remote Code Execution by uploading a specially crafted payload.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.impl"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.32.167"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13590"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/wso2/carbon-apimgt/pull/13560"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/wso2/carbon-apimgt/commit/49a6427b39a5d9552ce97430858bb4b1912a3044"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/wso2/carbon-apimgt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/wso2/carbon-apimgt/releases/tag/v9.32.167"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2025-4849"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-02-19T22:11:44Z",
+    "nvd_published_at": "2026-02-19T10:16:11Z"
+  }
+}
