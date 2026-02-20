@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rxjp-cgw5-jfcg",
+  "modified": "2026-02-20T18:31:39Z",
+  "published": "2026-02-20T18:31:39Z",
+  "aliases": [
+    "CVE-2026-26049"
+  ],
+  "details": "The web management interface of the device renders the passwords in a \nplaintext input field. The current password is directly visible to \nanyone with access to the UI, potentially exposing administrator \ncredentials to unauthorized observation via shoulder surfing, \nscreenshots, or browser form caching.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26049"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-050-03.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-03"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-522"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-20T17:25:53Z"
+  }
+}

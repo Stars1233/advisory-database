@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xq4j-x39q-xhqm",
+  "modified": "2026-02-20T18:31:40Z",
+  "published": "2026-02-20T18:31:40Z",
+  "aliases": [
+    "CVE-2026-2818"
+  ],
+  "details": "A zip-slip path traversal vulnerability in Spring Data Geode's import snapshot functionality allows attackers to write files outside the intended extraction directory. This vulnerability appears to be susceptible on Windows OS only.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2818"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.herodevs.com/vulnerability-directory/cve-2026-2818"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-23"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-20T17:25:57Z"
+  }
+}

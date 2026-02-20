@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vg7x-9fx9-rhfv",
+  "modified": "2026-02-20T18:31:33Z",
+  "published": "2026-02-20T18:31:33Z",
+  "aliases": [
+    "CVE-2025-52603"
+  ],
+  "details": "HCL Connections is vulnerable to information disclosure.  In a very specific user navigation scenario, this could allow a user to obtain limited information when a single piece of internal metadata is returned in the browser.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52603"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0124242"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-213"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-20T16:22:01Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-82j5-hm8j-jwhq",
+  "modified": "2026-02-20T18:31:39Z",
+  "published": "2026-02-20T18:31:39Z",
+  "aliases": [
+    "CVE-2026-24790"
+  ],
+  "details": "The underlying PLC of the device can be remotely influenced, without proper safeguards or authentication.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24790"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-050-04.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-04"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.welker.com/contact-us/welker-team"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-20T17:25:51Z"
+  }
+}
