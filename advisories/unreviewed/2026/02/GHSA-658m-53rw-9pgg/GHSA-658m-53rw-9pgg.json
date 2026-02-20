@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-658m-53rw-9pgg",
+  "modified": "2026-02-20T03:31:40Z",
+  "published": "2026-02-20T03:31:39Z",
+  "aliases": [
+    "CVE-2026-2820"
+  ],
+  "details": "A security flaw has been discovered in Fujian Smart Integrated Management Platform System up to 7.5. This issue affects some unknown processing of the file /Module/CRXT/Controller/XAccessPermissionPlus.ashx. The manipulation of the argument DeviceIDS results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2820"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/luoye197-prog/cve-yinda-sql/blob/main/introduce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/luoye197-prog/cve-yinda-sql/blob/main/poc.py"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.346945"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.346945"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.753397"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-20T02:16:55Z"
+  }
+}
