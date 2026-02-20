@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7cp9-3m8m-4jv3",
+  "modified": "2026-02-20T15:31:03Z",
+  "published": "2026-02-20T15:31:03Z",
+  "aliases": [
+    "CVE-2025-14547"
+  ],
+  "details": "An integer underflow vulnerability is present in Silicon Lab’s implementation of PSA Crypto and SE Manager EC-JPAKE APIs during ZKP parsing. Triggering the underflow can lead to a hard fault, causing a temporary denial of service.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14547"
+    },
+    {
+      "type": "WEB",
+      "url": "https://community.silabs.com/068Vm00000e1UTF"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-191"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-20T15:20:29Z"
+  }
+}
