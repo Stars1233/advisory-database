@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9jmq-xgjm-p8c2",
+  "modified": "2026-02-20T21:15:36Z",
+  "published": "2026-02-20T18:31:33Z",
+  "aliases": [
+    "CVE-2025-67438"
+  ],
+  "summary": "Sync-in Server has a stored cross-site scripting (XSS) vulnerability",
+  "details": "A Stored Cross-Site Scripting (XSS) vulnerability in Sync-in Server before 1.9.3 allows an authenticated attacker to execute arbitrary JavaScript in a victim's browser. By uploading a crafted SVG file containing a malicious payload, an attacker can access and exfiltrate sensitive information, including the user's session cookies.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@sync-in/server"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.9.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67438"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Sync-in/server/commit/a6276d067725637310e4e83a3eee337aae81f439"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/x0root/86db30af91bb0e1707eb7e57a049b6ad"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/Sync-in/server"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Sync-in/server/releases/tag/v1.9.3"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-02-20T21:15:36Z",
+    "nvd_published_at": "2026-02-20T16:22:02Z"
+  }
+}
