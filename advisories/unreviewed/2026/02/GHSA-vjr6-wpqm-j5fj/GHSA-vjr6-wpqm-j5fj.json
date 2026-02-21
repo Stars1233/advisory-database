@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vjr6-wpqm-j5fj",
+  "modified": "2026-02-21T12:30:26Z",
+  "published": "2026-02-21T12:30:26Z",
+  "aliases": [
+    "CVE-2026-1787"
+  ],
+  "details": "The LearnPress Export Import – WordPress extension for LearnPress plugin for WordPress is vulnerable to unauthorized loss of data due to a missing capability check on the 'delete_migrated_data' function in all versions up to, and including, 4.1.0. This makes it possible for unauthenticated attackers to delete course that have been migrated from Tutor LMS. The Tutor LMS plugin must be installed and activated in order to exploit the vulnerability.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1787"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/learnpress-import-export/tags/4.1.0/inc/Migration/Controllers/TutorMigrationController.php#L55"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3458589"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7bde915d-092a-452b-a0e0-ce5c2ce203dc?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-21T11:15:55Z"
+  }
+}
