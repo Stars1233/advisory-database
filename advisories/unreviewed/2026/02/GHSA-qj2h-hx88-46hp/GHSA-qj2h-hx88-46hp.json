@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qj2h-hx88-46hp",
+  "modified": "2026-02-21T09:33:57Z",
+  "published": "2026-02-21T09:33:57Z",
+  "aliases": [
+    "CVE-2026-2864"
+  ],
+  "details": "A vulnerability has been found in feng_ha_ha/megagao ssm-erp and production_ssm up to 4288d53bd35757b27f2d070057aefb2c07bdd097. This affects the function pictureDelete of the file PictureController.java. Such manipulation of the argument picName leads to path traversal. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. This product is distributed under two entirely different names. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2864"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/megagao/production_ssm/issues/38"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/megagao/production_ssm/issues/38#issue-3915113401"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.347103"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.347103"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.754557"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-21T08:16:12Z"
+  }
+}
