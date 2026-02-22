@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qjwf-h778-47mm",
+  "modified": "2026-02-22T06:30:17Z",
+  "published": "2026-02-22T06:30:17Z",
+  "aliases": [
+    "CVE-2026-2913"
+  ],
+  "details": "A vulnerability was determined in libvips up to 8.19.0. The affected element is the function vips_source_read_to_memory of the file libvips/iofuncs/source.c. This manipulation causes heap-based buffer overflow. It is possible to launch the attack on the local host. The attack's complexity is rated as high. The exploitability is described as difficult. The exploit has been publicly disclosed and may be utilized. Patch name: a56feecbe9ed66521d9647ec9fbcd2546eccd7ee. Applying a patch is the recommended action to fix this issue. The confirmation of the bugfix mentions: \"[T]he impact of this is negligible, since this only affects custom seekable sources larger than 4 GiB (and the crash occurs in user code rather than libvips itself).\"",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2913"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/issues/4857"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/issues/4857#issue-3920154326"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/issues/4857#issuecomment-3878479322"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/commit/a56feecbe9ed66521d9647ec9fbcd2546eccd7ee"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.347222"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.347222"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.755224"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-22T04:15:59Z"
+  }
+}
