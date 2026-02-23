@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m879-6gvr-239v",
+  "modified": "2026-02-23T09:31:24Z",
+  "published": "2026-02-23T09:31:24Z",
+  "aliases": [
+    "CVE-2026-2979"
+  ],
+  "details": "A flaw has been found in FastApiAdmin up to 2.2.0. This issue affects the function user_avatar_upload_controller of the file /backend/app/api/v1/module_system/user/controller.py of the component Scheduled Task API. Executing a manipulation can lead to unrestricted upload. The attack can be launched remotely. The exploit has been published and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2979"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/fastapi-admin/vulnerability-5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.347363"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.347363"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.756156"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-23T09:17:01Z"
+  }
+}
