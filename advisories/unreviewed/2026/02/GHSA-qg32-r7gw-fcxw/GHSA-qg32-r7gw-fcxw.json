@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qg32-r7gw-fcxw",
+  "modified": "2026-02-23T21:31:28Z",
+  "published": "2026-02-23T21:31:28Z",
+  "aliases": [
+    "CVE-2026-3027"
+  ],
+  "details": "A vulnerability was found in erzhongxmu JEEWMS up to 3.7. This affects an unknown part of the file src/main/webapp/plug-in/ueditor/jsp/getContent.jsp of the component UEditor. The manipulation of the argument myEditor results in cross site scripting. The attack can be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3027"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.347383"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.347383"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.756523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/JEEWMS-Reflected-XSS-Vulnerability-in-UEditor-Module-304ea92a3c41806a97ffc9b707f2fbf0"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-23T21:19:12Z"
+  }
+}

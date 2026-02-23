@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fqqc-4836-hph4",
+  "modified": "2026-02-23T21:31:27Z",
+  "published": "2026-02-23T21:31:27Z",
+  "aliases": [
+    "CVE-2025-63946"
+  ],
+  "details": "A privilege escalation (PE) vulnerability in the Tencent PC Manager app thru 17.10.28554.205 on Windows devices enables a local user to execute programs with elevated privileges. However, execution requires that the local user is able to successfully exploit a race condition.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-63946"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alexlee820/CVE-2025-63946-Tencent-PC-Manager-EoP/blob/main/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alexlee820/Tencent-PC-Manager-EoP"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-59"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-23T20:28:53Z"
+  }
+}
