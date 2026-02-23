@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p76h-f4cx-3273",
+  "modified": "2026-02-23T18:32:02Z",
+  "published": "2026-02-23T18:32:02Z",
+  "aliases": [
+    "CVE-2026-22568"
+  ],
+  "details": "Improper neutralization of special elements in user-supplied input within the ZIA Admin UI could allow an authenticated administrator to access or retrieve unauthorized internal information in rare conditions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22568"
+    },
+    {
+      "type": "WEB",
+      "url": "https://help.zscaler.com/zia/release-upgrade-summary-2026?applicable_category=zscaler.net&deployment_date=2026-02-12&id=1538576"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-23T17:23:29Z"
+  }
+}

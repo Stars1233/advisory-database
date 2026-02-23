@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4jh8-xj74-jhxx",
+  "modified": "2026-02-23T18:32:02Z",
+  "published": "2026-02-23T18:32:02Z",
+  "aliases": [
+    "CVE-2025-70043"
+  ],
+  "details": "An issue pertaining to CWE-295: Improper Certificate Validation was discovered in Ayms node-To master. The application disables TLS/SSL certificate validation by setting 'rejectUnauthorized': false in TLS socket options",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-70043"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/zcxlighthouse/33cc4342dfe650664548b4531d16b655"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Ayms"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Ayms/node-To"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-295"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-23T16:29:36Z"
+  }
+}

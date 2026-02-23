@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pj4q-4jcg-hp2c",
+  "modified": "2026-02-23T18:32:02Z",
+  "published": "2026-02-23T18:32:02Z",
+  "aliases": [
+    "CVE-2026-22567"
+  ],
+  "details": "Improper validation of user-supplied input in the ZIA Admin UI could allow an authenticated administrator to initiate backend functions through specific input fields in limited scenarios.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22567"
+    },
+    {
+      "type": "WEB",
+      "url": "https://help.zscaler.com/zia/release-upgrade-summary-2025?applicable_category=zscalertwo.net&deployment_date=2025-12-17&id=1538575"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-23T17:23:28Z"
+  }
+}
