@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vxg3-v4p6-f3fp",
+  "modified": "2026-02-24T20:03:23Z",
+  "published": "2026-02-24T20:03:23Z",
+  "aliases": [
+    "CVE-2026-27461"
+  ],
+  "summary": "Pimcore vulnerable to SQL injection via unsanitized filter value in Dependency Dao RLIKE clause",
+  "details": "The filter query parameter in the dependency listing endpoints is JSON-decoded and the value field is concatenated directly into RLIKE clauses without sanitization or parameterized queries.\n\nAffected code in models/Dependency/Dao.php:\n- getFilterRequiresByPath() lines 90, 95, 100\n- getFilterRequiredByPath() lines 148, 153, 158\n\nAll 6 locations use direct string concatenation like:\n\n    \"AND LOWER(CONCAT(o.path, o.key)) RLIKE '\".$value.\"'\"\n\nNote that $orderBy and $orderDirection in the same methods (lines 75-81) ARE properly whitelist-validated, but $value has zero sanitization.\n\nEntry points (pimcore/admin-ui-classic-bundle ElementController.php):\n- GET /admin/element/get-requires-dependencies (line 654)\n- GET /admin/element/get-required-by-dependencies (line 714)\n\nThe controller JSON-decodes the filter query param and passes $filter['value'] straight to the Dao without any escaping.\n\nPoC (time-based blind):\n\n    GET /admin/element/get-requires-dependencies?id=1&elementType=document&filter=[{\"type\":\"string\",\"value\":\"x' OR SLEEP(5)#\"}]\n\nIf vulnerable, the response is delayed by ~15 seconds (SLEEP runs 3 times, once per UNION arm in the inner subquery).\n\nPoC (error-based extraction):\n\n    GET /admin/element/get-requires-dependencies?id=1&elementType=document&filter=[{\"type\":\"string\",\"value\":\"x' OR extractvalue(1,concat(0x7e,(SELECT version())))#\"}]\n\nReturns the MySQL version string in the error response.\n\nRequires admin authentication. An attacker with admin panel access can extract the full database including password hashes of other admin users.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "pimcore/pimcore"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "11.5.14.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "pimcore/pimcore"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pimcore/pimcore/security/advisories/GHSA-vxg3-v4p6-f3fp"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27461"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pimcore/pimcore/pull/18991"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pimcore/pimcore/commit/1c3925fbec4895abeb21e5c244a83679c4e4a6f4"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/pimcore/pimcore"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pimcore/pimcore/releases/tag/v12.3.3"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-02-24T20:03:23Z",
+    "nvd_published_at": "2026-02-24T04:15:58Z"
+  }
+}
