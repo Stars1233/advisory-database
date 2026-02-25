@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p7fh-wf7x-3xhv",
+  "modified": "2026-02-25T09:30:27Z",
+  "published": "2026-02-25T09:30:27Z",
+  "aliases": [
+    "CVE-2026-2479"
+  ],
+  "details": "The Responsive Lightbox & Gallery plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 2.7.1. This is due to the use of `strpos()` for substring-based hostname validation instead of strict host comparison in the `ajax_upload_image()` function. This makes it possible for authenticated attackers, with Author-level access and above, to make web requests to arbitrary locations originating from the web application, which can be used to query and modify information from internal services.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2479"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/responsive-lightbox/tags/2.7.0/includes/class-remote-library.php#L329"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/responsive-lightbox/tags/2.7.0/includes/class-remote-library.php#L344"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/responsive-lightbox/trunk/includes/class-remote-library.php#L329"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3464566?contextall=1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/44276b28-9509-4f59-936c-fff2ae404076?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-25T09:16:15Z"
+  }
+}
