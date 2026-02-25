@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wmg2-7qv4-gfgx",
+  "modified": "2026-02-25T18:31:38Z",
+  "published": "2026-02-25T18:31:38Z",
+  "aliases": [
+    "CVE-2026-3206"
+  ],
+  "details": "Improper Resource Shutdown or Release vulnerability in KrakenD, SLU KrakenD-CE (CircuitBreaker modules), KrakenD, SLU KrakenD-EE (CircuitBreaker modules). This issue affects KrakenD-CE: before 2.13.1; KrakenD-EE: before 2.12.5.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:A/V:D/RE:L/U:Clear"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3206"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.krakend.io/blog/krakend-2.13.1-release-notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.krakend.io/blog/krakend-ee-2.12.5-release-notes"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-404"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-25T16:23:30Z"
+  }
+}

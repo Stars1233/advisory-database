@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4g2q-86h2-35w4",
+  "modified": "2026-02-25T18:31:38Z",
+  "published": "2026-02-25T18:31:38Z",
+  "aliases": [
+    "CVE-2026-3193"
+  ],
+  "details": "A vulnerability was detected in Chia Blockchain 2.1.0. Impacted is an unknown function of the file /send_transaction. The manipulation results in cross-site request forgery. The attack may be performed from remote. The attack requires a high level of complexity. The exploitability is considered difficult. The exploit is now public and may be used. The vendor was informed early via email. A separate report via bugbounty was rejected with the reason \"This is by design. The user is responsible for host security\".",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3193"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Danimlzg/chia-rpc-auth-bypass.git"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.347749"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.347749"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-25T17:25:42Z"
+  }
+}
