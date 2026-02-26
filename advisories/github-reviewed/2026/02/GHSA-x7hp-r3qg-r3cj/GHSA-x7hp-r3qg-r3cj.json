@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x7hp-r3qg-r3cj",
+  "modified": "2026-02-26T19:55:33Z",
+  "published": "2026-02-26T19:55:33Z",
+  "aliases": [
+    "CVE-2026-27888"
+  ],
+  "summary": "pypdf: Manipulated FlateDecode XFA streams can exhaust RAM",
+  "details": "### Impact\nAn attacker who uses this vulnerability can craft a PDF which leads to the RAM being exhausted. This requires accessing the `xfa` property of a reader or writer and the corresponding stream being compressed using `/FlateDecode`.\n\n### Patches\nThis has been fixed in [pypdf==6.7.3](https://github.com/py-pdf/pypdf/releases/tag/6.7.3).\n\n### Workarounds\nIf projects cannot upgrade yet, consider applying the changes from PR [#3658](https://github.com/py-pdf/pypdf/pull/3658).",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "pypdf"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.7.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-x7hp-r3qg-r3cj"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27888"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/py-pdf/pypdf/pull/3658"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/py-pdf/pypdf/commit/7a4c8246ed48d9d328fb596942271da47b6d109c"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/py-pdf/pypdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/py-pdf/pypdf/releases/tag/6.7.3"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-02-26T19:55:33Z",
+    "nvd_published_at": "2026-02-26T01:16:25Z"
+  }
+}
