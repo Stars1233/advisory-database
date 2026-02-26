@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mfwc-76p3-m2rc",
+  "modified": "2026-02-26T03:31:18Z",
+  "published": "2026-02-26T03:31:18Z",
+  "aliases": [
+    "CVE-2026-2356"
+  ],
+  "details": "The User Registration & Membership – Custom Registration Form, Login Form, and User Profile plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.1.2 via the 'register_member' function, due to missing validation on the 'member_id' user controlled key. This makes it possible for unauthenticated attackers to delete arbitrary user accounts that newly registered on the site who has the 'urm_user_just_created' user meta set.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2356"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/user-registration/tags/5.1.1/modules/membership/includes/AJAX.php#L142"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a5a1ccb2-4f78-4855-a01d-b15f73407822?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-26T03:16:05Z"
+  }
+}
