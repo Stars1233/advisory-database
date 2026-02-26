@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-ggxg-6g5h-6m7w",
+  "modified": "2026-02-26T12:30:25Z",
+  "published": "2026-02-26T12:30:25Z",
+  "aliases": [
+    "CVE-2026-1198"
+  ],
+  "details": "SIMPLE.ERP is vulnerable to the SQL Injection in search functionality in \"Obroty na kontach\" window. Lack of input validation allows an authenticated attacker to prepare a malicious query to the database that will be executed.\nThis issue was fixed in 6.30@A04.4_u06.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1198"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cert.pl/posts/2026/02/CVE-2026-1198"
+    },
+    {
+      "type": "WEB",
+      "url": "https://simple.com.pl"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-26T12:15:58Z"
+  }
+}
