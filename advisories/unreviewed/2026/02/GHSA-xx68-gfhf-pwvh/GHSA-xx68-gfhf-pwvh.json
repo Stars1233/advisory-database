@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xx68-gfhf-pwvh",
+  "modified": "2026-02-27T03:30:26Z",
+  "published": "2026-02-27T03:30:26Z",
+  "aliases": [
+    "CVE-2026-20902"
+  ],
+  "details": "An OS command injection \n\n\n\nvulnerability exists in XWEB Pro version 1.12.1 and prior, enabling an \nauthenticated attacker to achieve remote code execution on the system by\n injecting malicious input into the map filename field during the map \nupload action of the parameters route.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20902"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T01:16:17Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f2v6-m58p-hr23",
+  "modified": "2026-02-27T03:30:27Z",
+  "published": "2026-02-27T03:30:27Z",
+  "aliases": [
+    "CVE-2026-3037"
+  ],
+  "details": "An OS command injection vulnerability exists in XWEB Pro version 1.12.1 \nand prior, enabling an authenticated attacker to achieve remote code \nexecution on the system by modifying malicious input injected into the \nMBird SMS service URL and/or code via the utility route which is later \nprocessed during system setup, leading to remote code execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3037"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-10.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://webapps.copeland.com/Dixell/Pages/SystemSoftwareUpdate"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T02:16:20Z"
+  }
+}

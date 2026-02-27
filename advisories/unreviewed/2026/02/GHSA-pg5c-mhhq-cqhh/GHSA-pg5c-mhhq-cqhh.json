@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pg5c-mhhq-cqhh",
+  "modified": "2026-02-27T03:30:27Z",
+  "published": "2026-02-27T03:30:27Z",
+  "aliases": [
+    "CVE-2026-3282"
+  ],
+  "details": "A flaw has been found in libvips 8.19.0. This vulnerability affects the function vips_unpremultiply_build of the file libvips/conversion/unpremultiply.c. Executing a manipulation of the argument alpha_band can lead to out-of-bounds read. The attack needs to be launched locally. The exploit has been published and may be used. This patch is called 7215ead1e0cd7d3703cc4f5fca06d7d0f4c22b91. A patch should be applied to remediate this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3282"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/issues/4881"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/issues/4881#issue-3944216443"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/pull/4886"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/commit/7215ead1e0cd7d3703cc4f5fca06d7d0f4c22b91"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.348011"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.348011"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.758862"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T03:16:02Z"
+  }
+}

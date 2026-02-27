@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f98h-2fjh-775c",
+  "modified": "2026-02-27T03:30:27Z",
+  "published": "2026-02-27T03:30:27Z",
+  "aliases": [
+    "CVE-2026-3281"
+  ],
+  "details": "A vulnerability was detected in libvips 8.19.0. This affects the function vips_bandrank_build of the file libvips/conversion/bandrank.c. Performing a manipulation of the argument index results in heap-based buffer overflow. The attack must be initiated from a local position. The exploit is now public and may be used. The patch is named fd28c5463697712cb0ab116a2c55e4f4d92c4088. It is suggested to install a patch to address this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3281"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/issues/4878"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/issues/4878#issue-3944209102"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/pull/4895"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips/commit/fd28c5463697712cb0ab116a2c55e4f4d92c4088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libvips/libvips"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.348010"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.348010"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.758861"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T02:16:20Z"
+  }
+}
