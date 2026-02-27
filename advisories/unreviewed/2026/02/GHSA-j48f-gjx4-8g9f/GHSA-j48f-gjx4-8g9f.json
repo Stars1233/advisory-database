@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j48f-gjx4-8g9f",
+  "modified": "2026-02-27T18:31:06Z",
+  "published": "2026-02-27T18:31:06Z",
+  "aliases": [
+    "CVE-2026-27751"
+  ],
+  "details": "SODOLA SL902-SWTGW124AS firmware versions through 200.1.20 contain a default credentials vulnerability that allows remote attackers to obtain administrative access to the management interface. Attackers can authenticate using the hardcoded default credentials without password change enforcement to gain full administrative control of the device.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27751"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sodola-network.com/products/sodola-6-port-2-5g-easy-web-managed-switch-4-x-2-5g-base-t-ports-2-x-10g-sfp-static-aggregation-qos-vlan-igmp-2-5gb-network-home-lab-switch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/sodola-sl902-swtgw124as-use-of-default-credentials"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1392"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T18:16:12Z"
+  }
+}

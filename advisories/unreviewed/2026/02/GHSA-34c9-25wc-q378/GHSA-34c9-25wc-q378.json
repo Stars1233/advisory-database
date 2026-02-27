@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-34c9-25wc-q378",
+  "modified": "2026-02-27T18:31:05Z",
+  "published": "2026-02-27T18:31:05Z",
+  "aliases": [
+    "CVE-2026-2750"
+  ],
+  "details": "Improper Input Validation vulnerability in Centreon Centreon Open Tickets on Central Server on Linux (Centreon Open Tickets modules).This issue affects Centreon Open Tickets on Central Server: from all before 25.10; 24.10;24.04.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2750"
+    },
+    {
+      "type": "WEB",
+      "url": "https://thewatch.centreon.com/latest-security-bulletins-64/cve-2026-2750-centreon-web-critical-severity-5503"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T16:16:25Z"
+  }
+}

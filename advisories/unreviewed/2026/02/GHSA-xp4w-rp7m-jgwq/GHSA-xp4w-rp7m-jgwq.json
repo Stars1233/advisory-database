@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xp4w-rp7m-jgwq",
+  "modified": "2026-02-27T18:31:06Z",
+  "published": "2026-02-27T18:31:06Z",
+  "aliases": [
+    "CVE-2026-27752"
+  ],
+  "details": "SODOLA SL902-SWTGW124AS firmware versions through 200.1.20 transmit authentication credentials over unencrypted HTTP, allowing attackers to capture credentials. An attacker positioned to observe network traffic between a user and the device can intercept credentials and reuse them to gain administrative access to the gateway.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27752"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sodola-network.com/products/sodola-6-port-2-5g-easy-web-managed-switch-4-x-2-5g-base-t-ports-2-x-10g-sfp-static-aggregation-qos-vlan-igmp-2-5gb-network-home-lab-switch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/sodola-sl902-swtgw124as-cleartext-credential-transmission"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-319"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T18:16:13Z"
+  }
+}
