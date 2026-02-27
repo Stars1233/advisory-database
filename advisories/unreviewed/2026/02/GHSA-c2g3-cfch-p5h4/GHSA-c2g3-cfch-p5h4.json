@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c2g3-cfch-p5h4",
+  "modified": "2026-02-27T09:30:29Z",
+  "published": "2026-02-27T09:30:29Z",
+  "aliases": [
+    "CVE-2025-9908"
+  ],
+  "details": "A flaw was found in the Red Hat Ansible Automation Platform, Event-Driven Ansible (EDA) Event Streams. This vulnerability allows an authenticated user to gain access to sensitive internal infrastructure headers (such as X-Trusted-Proxy and X-Envoy-*) and event stream URLs via crafted requests and job templates. By exfiltrating these headers, an attacker could spoof trusted requests, escalate privileges, or perform malicious event injection.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-9908"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:19201"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:19221"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23069"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23131"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-9908"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2392835"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-02-27T08:17:07Z"
+  }
+}
