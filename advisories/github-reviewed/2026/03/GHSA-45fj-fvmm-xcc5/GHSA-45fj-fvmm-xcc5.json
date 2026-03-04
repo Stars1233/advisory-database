@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-45fj-fvmm-xcc5",
+  "modified": "2026-03-04T21:36:26Z",
+  "published": "2026-03-04T03:31:34Z",
+  "aliases": [
+    "CVE-2026-3240"
+  ],
+  "summary": "Concrete CMS has a stored Cross-site Scripting (XSS) vulnerability",
+  "details": "In Concrete CMS below version 9.4.8, a user with permission to edit a page with element Legacy form can perform a stored XSS attack towards high-privilege accounts via the Question field. \n\nThe Concrete CMS security team thanks minhnn42, namdi and quanlna2 from VCSLab-Viettel Cyber Security for reporting.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "concrete5/concrete5"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.4.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3240"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/concretecms/concretecms/pull/12826"
+    },
+    {
+      "type": "WEB",
+      "url": "https://documentation.concretecms.org/9-x/developers/introduction/version-history/948-release-notes"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/concretecms/concretecms"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-04T21:36:26Z",
+    "nvd_published_at": "2026-03-04T03:16:04Z"
+  }
+}
