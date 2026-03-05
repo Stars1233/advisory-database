@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-57q8-p4r4-7xr7",
+  "modified": "2026-03-05T06:30:25Z",
+  "published": "2026-03-05T06:30:25Z",
+  "aliases": [
+    "CVE-2026-23767"
+  ],
+  "details": "ESC/POS, a printer control language designed by Seiko Epson Corporation, lacks mechanisms for user authentication and command authorization, does not provide controls to restrict sources or destinations of network communication, and transmits commands without encryption or integrity protection.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23767"
+    },
+    {
+      "type": "WEB",
+      "url": "https://download4.epson.biz/sec_pubs/bs/pdf/IP_Filtering_Guide_en_revA.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jvn.jp/en/ta/JVNTA97995322"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.epson.jp/support/misc_t/260305_oshirase.htm"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-05T06:16:22Z"
+  }
+}

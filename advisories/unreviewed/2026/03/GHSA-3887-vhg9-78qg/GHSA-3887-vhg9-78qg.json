@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3887-vhg9-78qg",
+  "modified": "2026-03-05T06:30:22Z",
+  "published": "2026-03-05T06:30:22Z",
+  "aliases": [
+    "CVE-2026-3523"
+  ],
+  "details": "The Apocalypse Meow plugin for WordPress is vulnerable to SQL Injection via the 'type' parameter in all versions up to, and including, 22.1.0. This is due to a flawed logical operator in the type validation check on line 261 of ajax.php — the condition uses `&&` (AND) instead of `||` (OR), causing the `in_array()` validation to be short-circuited and never evaluated for any non-empty type value. Combined with `stripslashes_deep()` being called on line 101 which removes `wp_magic_quotes()` protection, attacker-controlled single quotes pass through unescaped into the SQL query on line 298. This makes it possible for authenticated attackers, with Administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/tags/22.1.0/lib/blobfolio/wp/meow/ajax.php#L101"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/tags/22.1.0/lib/blobfolio/wp/meow/ajax.php#L167"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/tags/22.1.0/lib/blobfolio/wp/meow/ajax.php#L261"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/tags/22.1.0/lib/blobfolio/wp/meow/ajax.php#L298"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/trunk/lib/blobfolio/wp/meow/ajax.php#L101"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/trunk/lib/blobfolio/wp/meow/ajax.php#L167"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/trunk/lib/blobfolio/wp/meow/ajax.php#L261"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/apocalypse-meow/trunk/lib/blobfolio/wp/meow/ajax.php#L298"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3448958%40apocalypse-meow&new=3448958%40apocalypse-meow&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a1af9757-23e9-41d2-bbcd-15b0610b6538?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-05T05:16:37Z"
+  }
+}

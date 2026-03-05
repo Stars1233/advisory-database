@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-47mx-mh44-vmwj",
+  "modified": "2026-03-05T06:30:22Z",
+  "published": "2026-03-05T06:30:22Z",
+  "aliases": [
+    "CVE-2026-2899"
+  ],
+  "details": "The Fluent Forms Pro Add On Pack plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 6.1.17. This is due to the `deleteFile()` method in the `Uploader` class lacking nonce verification and capability checks. The AJAX action is registered via `addPublicAjaxAction()` which creates both `wp_ajax_` and `wp_ajax_nopriv_` hooks. This makes it possible for unauthenticated attackers to delete arbitrary WordPress media attachments via the `attachment_id` parameter.\n\nNote: The researcher described file deletion via the `path` parameter using `sanitize_file_name()`, but the actual code uses `Protector::decrypt()` for path-based deletion which prevents exploitation. The vulnerability is exploitable via the `attachment_id` parameter instead.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2899"
+    },
+    {
+      "type": "WEB",
+      "url": "https://fluentforms.com/docs/changelog/#3-toc-title"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/bb036338-abd7-4061-835d-038b765c68a6?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-05T04:15:57Z"
+  }
+}
