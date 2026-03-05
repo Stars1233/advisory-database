@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7c4q-hg77-9jfj",
+  "modified": "2026-03-05T21:30:48Z",
+  "published": "2026-03-05T21:30:48Z",
+  "aliases": [
+    "CVE-2025-13350"
+  ],
+  "details": "Ubuntu Linux 6.8 GA retains the legacy AF_UNIX garbage collector but backports upstream commit 8594d9b85c07 (\"af_unix: Don’t call skb_get() for OOB skb\"). When orphaned MSG_OOB sockets hit unix_gc(), the garbage collector still calls kfree_skb() as if OOB SKBs held two references; on Ubuntu Linux 6.8 (Noble Numbat) kernel tree, they have only the queue reference, so the buffer is freed while still reachable and subsequent queue walks dereference freed memory, yielding a reliable local privilege escalation (LPE) caused by a use-after-free (UAF). Ubuntu builds that have already taken the new GC stack from commit 4090fa373f0e, and mainline Linux kernels shipping that infrastructure are unaffected because they no longer execute the legacy collector path. This issue affects Ubuntu Linux from 6.8.0-56.58 before 6.8.0-84.84.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13350"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugs.launchpad.net/ubuntu/+source/linux/+bug/2121515"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/noble/commit/?id=79cbc2a1d4f61e492ddac5da65b075836675f94d"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/03/05/7"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-05T20:16:10Z"
+  }
+}
