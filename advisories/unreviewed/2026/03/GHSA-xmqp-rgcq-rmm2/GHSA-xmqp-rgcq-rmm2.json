@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xmqp-rgcq-rmm2",
+  "modified": "2026-03-06T09:31:33Z",
+  "published": "2026-03-06T09:31:33Z",
+  "aliases": [
+    "CVE-2026-2330"
+  ],
+  "details": "An attacker may access restricted filesystem areas on the device via the CROWN REST interface due to incomplete whitelist enforcement. Certain directories intended for internal testing were not covered by the whitelist and are accessible without authentication. An unauthenticated attacker could place a manipulated parameter file that becomes active after a reboot, allowing modification of critical device settings, including network configuration and application parameters.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2330"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.first.org/cvss/calculator/3.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/.well-known/csaf/white/2026/sca-2026-0006.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/.well-known/csaf/white/2026/sca-2026-0006.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/media/docs/9/19/719/special_information_sick_operating_guidelines_cybersecurity_by_sick_en_im0106719.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/psirt"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-552"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-06T08:16:27Z"
+  }
+}

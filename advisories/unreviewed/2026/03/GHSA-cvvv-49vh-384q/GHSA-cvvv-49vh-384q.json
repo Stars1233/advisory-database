@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cvvv-49vh-384q",
+  "modified": "2026-03-06T09:31:33Z",
+  "published": "2026-03-06T09:31:33Z",
+  "aliases": [
+    "CVE-2026-2331"
+  ],
+  "details": "An attacker may perform unauthenticated read and write operations on sensitive filesystem areas via the AppEngine Fileaccess over HTTP due to improper access restrictions. A critical filesystem directory was unintentionally exposed through the HTTP-based file access feature, allowing access without authentication. This includes device parameter files, enabling an attacker to read and modify application settings, including customer-defined passwords. Additionally, exposure of the custom application directory may allow execution of arbitrary Lua code within the sandboxed AppEngine environment.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2331"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.first.org/cvss/calculator/3.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/.well-known/csaf/white/2026/sca-2026-0006.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/.well-known/csaf/white/2026/sca-2026-0006.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/media/docs/9/19/719/special_information_sick_operating_guidelines_cybersecurity_by_sick_en_im0106719.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sick.com/psirt"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-552"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-06T08:16:27Z"
+  }
+}
