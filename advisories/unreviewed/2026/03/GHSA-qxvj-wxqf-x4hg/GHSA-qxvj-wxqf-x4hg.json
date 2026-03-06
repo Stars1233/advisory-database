@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qxvj-wxqf-x4hg",
+  "modified": "2026-03-06T15:31:30Z",
+  "published": "2026-03-06T15:31:30Z",
+  "aliases": [
+    "CVE-2018-25200"
+  ],
+  "details": "OOP CMS BLOG 1.0 contains a cross-site request forgery vulnerability that allows unauthenticated attackers to create administrative user accounts by crafting malicious POST requests. Attackers can submit forms to the addUser.php endpoint with parameters including userName, password, email, and role set to administrative privileges to gain unauthorized access.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25200"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45794"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/oop-cms-blog-cross-site-request-forgery-via-adduserphp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-06T13:16:03Z"
+  }
+}

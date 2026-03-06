@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-86q7-q8m5-6pgc",
+  "modified": "2026-03-06T15:31:29Z",
+  "published": "2026-03-06T15:31:29Z",
+  "aliases": [
+    "CVE-2018-25180"
+  ],
+  "details": "Maitra 1.7.2 contains an sql injection vulnerability that allows authenticated attackers to execute arbitrary SQL queries by injecting malicious code through the mailid parameter in outmail and inmail modules. Attackers can also download the SQLite database file directly from the application directory to extract sensitive mail tracking data and credentials.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25180"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45841"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/maitra-sql-injection-and-database-file-download"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-06T13:16:00Z"
+  }
+}

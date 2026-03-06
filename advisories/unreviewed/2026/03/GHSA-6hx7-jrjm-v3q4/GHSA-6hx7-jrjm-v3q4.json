@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6hx7-jrjm-v3q4",
+  "modified": "2026-03-06T15:31:29Z",
+  "published": "2026-03-06T15:31:29Z",
+  "aliases": [
+    "CVE-2018-25172"
+  ],
+  "details": "Pedidos 1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'q' parameter. Attackers can send GET requests to the ajax/load_proveedores.php endpoint with crafted SQL payloads to extract sensitive database information including schema names and table structures.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25172"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45856"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/pedidos-sql-injection-via-load-proveedoresphp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-06T13:15:58Z"
+  }
+}
