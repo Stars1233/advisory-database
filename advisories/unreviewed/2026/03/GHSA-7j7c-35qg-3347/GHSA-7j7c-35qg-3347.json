@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7j7c-35qg-3347",
+  "modified": "2026-03-07T03:30:27Z",
+  "published": "2026-03-07T03:30:27Z",
+  "aliases": [
+    "CVE-2026-2020"
+  ],
+  "details": "The JS Archive List plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.1.7 via the 'included' shortcode attribute. This is due to the deserialization of untrusted input supplied via the 'included' parameter of the plugin's shortcode. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software. If a POP chain is present via an additional plugin or theme installed on the target system, it could allow the attacker to delete arbitrary files, retrieve sensitive data, or execute code.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2020"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jquery-archive-list-widget/tags/6.1.7/classes/class-jq-archive-list-widget.php#L674"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jquery-archive-list-widget/tags/6.1.7/classes/class-js-archive-list-settings.php#L10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jquery-archive-list-widget/trunk/classes/class-jq-archive-list-widget.php#L674"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jquery-archive-list-widget/trunk/classes/class-js-archive-list-settings.php#L10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3466978%40jquery-archive-list-widget&new=3466978%40jquery-archive-list-widget&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/9b0f6653-471b-4cee-9c92-f24dbe2c2dbd?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-07T02:16:12Z"
+  }
+}

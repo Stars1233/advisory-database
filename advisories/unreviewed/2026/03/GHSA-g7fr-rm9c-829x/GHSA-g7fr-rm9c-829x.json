@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g7fr-rm9c-829x",
+  "modified": "2026-03-07T03:30:27Z",
+  "published": "2026-03-07T03:30:27Z",
+  "aliases": [
+    "CVE-2026-1650"
+  ],
+  "details": "The MDJM Event Management plugin for WordPress is vulnerable to unauthorized data modification due to a missing capability check on the 'custom_fields_controller' function in all versions up to, and including, 1.7.8.1. This makes it possible for unauthenticated attackers to delete arbitrary custom event fields via the 'delete_custom_field' and 'id' parameters.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1650"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/mobile-dj-manager/tags/1.7.7/includes/admin/pages/event-fields.php#L100"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/mobile-dj-manager/trunk/includes/admin/pages/event-fields.php#L100"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3464190%40mobile-dj-manager&new=3464190%40mobile-dj-manager&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/cb309336-5b35-45cf-9c58-4bb75d8a5cba?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-07T02:16:11Z"
+  }
+}

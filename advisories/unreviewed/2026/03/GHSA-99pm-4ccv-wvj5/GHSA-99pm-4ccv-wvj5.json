@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-99pm-4ccv-wvj5",
+  "modified": "2026-03-07T03:30:27Z",
+  "published": "2026-03-07T03:30:27Z",
+  "aliases": [
+    "CVE-2026-3352"
+  ],
+  "details": "The Easy PHP Settings plugin for WordPress is vulnerable to PHP Code Injection in all versions up to, and including, 1.0.4 via the `update_wp_memory_constants()` method. This is due to insufficient input validation on the `wp_memory_limit` and `wp_max_memory_limit` settings before writing them to `wp-config.php`. The `sanitize_text_field()` function used for sanitization does not filter single quotes, allowing an attacker to break out of the string context in a PHP `define()` statement. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject and execute arbitrary PHP code on the server by modifying `wp-config.php`, which is loaded on every page request.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3352"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/easy-php-settings/tags/1.0.4/class-easy-php-settings.php#L1800"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/easy-php-settings/tags/1.0.5/class-easy-php-settings.php#L1998"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/easy-php-settings/trunk/class-easy-php-settings.php#L1800"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f9927487-99fb-46d9-a208-f19e0a371267?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-07T02:16:13Z"
+  }
+}
