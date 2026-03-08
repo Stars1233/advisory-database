@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-987x-fj9w-984x",
+  "modified": "2026-03-08T09:30:21Z",
+  "published": "2026-03-08T09:30:21Z",
+  "aliases": [
+    "CVE-2026-3724"
+  ],
+  "details": "A weakness has been identified in SourceCodester Patients Waiting Area Queue Management System 1.0. This impacts an unknown function of the file /checkin.php. This manipulation of the argument patient_id causes improper authorization. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3724"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hiranerakkot/Patients-Waiting-Area-Queue-Management-System/blob/main/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.349700"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.349700"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.766389"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sourcecodester.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-266"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-08T09:16:18Z"
+  }
+}

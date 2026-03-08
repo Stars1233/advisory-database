@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3vhr-rrhf-p2mj",
+  "modified": "2026-03-08T09:30:21Z",
+  "published": "2026-03-08T09:30:21Z",
+  "aliases": [
+    "CVE-2026-3725"
+  ],
+  "details": "A flaw has been found in 1024-lab/lab1024 SmartAdmin up to 3.29. Affected by this issue is the function freemarkerResolverContent of the file sa-base/src/main/java/net/lab1024/sa/base/module/support/mail/MailService.java of the component FreeMarker Template Handler. Executing a manipulation of the argument template_content can lead to improper neutralization of special elements used in a template engine. The attack can be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3725"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.349703"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.349703"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.766459"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/SmartAdmin-Server-Side-Template-Injection-SSTI-in-Email-Template-Rendering-310ea92a3c418087ac63ec8e5a061b62"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-791"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-08T09:16:18Z"
+  }
+}
