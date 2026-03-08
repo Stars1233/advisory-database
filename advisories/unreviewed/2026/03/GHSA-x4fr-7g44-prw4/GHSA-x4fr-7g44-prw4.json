@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x4fr-7g44-prw4",
+  "modified": "2026-03-08T15:30:30Z",
+  "published": "2026-03-08T15:30:30Z",
+  "aliases": [
+    "CVE-2026-3737"
+  ],
+  "details": "A vulnerability was determined in SourceCodester Pet Grooming Management Software 1.0. This affects an unknown part of the file add_user.php of the component User Creation Handler. Executing a manipulation can lead to improper authorization. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3737"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hiranerakkot/Pet-Grooming-Software/blob/main/Vulnerability_1.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.349715"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.349715"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.767320"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sourcecodester.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-266"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-08T14:15:54Z"
+  }
+}
