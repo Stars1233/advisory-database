@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hff3-38mc-m39m",
+  "modified": "2026-03-08T03:30:28Z",
+  "published": "2026-03-08T03:30:28Z",
+  "aliases": [
+    "CVE-2026-3697"
+  ],
+  "details": "A vulnerability was determined in Planet ICG-2510 1.0_20250811. The impacted element is the function sub_40C8E4 of the file /usr/sbin/httpd of the component Language Package Configuration Handler. Executing a manipulation of the argument Language can lead to stack-based buffer overflow. The attack can be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3697"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/glkfc/IoT-Vulnerability/blob/main/PLANET/ICG-2510/vulnerability_report1.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.349643"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.349643"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.765682"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-08T02:16:00Z"
+  }
+}
