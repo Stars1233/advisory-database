@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rmhq-3pj8-86qj",
+  "modified": "2026-03-09T09:30:30Z",
+  "published": "2026-03-09T09:30:30Z",
+  "aliases": [
+    "CVE-2025-41759"
+  ],
+  "details": "An administrator may attempt to block all networks by specifying \"\\*\" or \"all\" as the network identifier. However, these values are not supported and do not trigger any validation error. Instead, they are silently interpreted as network 0 which results in no networks being blocked at all.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41759"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mbs-solutions.de/mbs-2025-0001"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-636"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-09T09:15:59Z"
+  }
+}

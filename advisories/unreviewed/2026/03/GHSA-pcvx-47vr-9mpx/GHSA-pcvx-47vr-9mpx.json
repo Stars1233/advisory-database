@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pcvx-47vr-9mpx",
+  "modified": "2026-03-09T09:30:30Z",
+  "published": "2026-03-09T09:30:30Z",
+  "aliases": [
+    "CVE-2026-3809"
+  ],
+  "details": "A flaw has been found in Tenda FH1202 1.2.0.14(408). The impacted element is the function fromNatStaticSetting of the file /goform/NatSaticSetting. Executing a manipulation of the argument page can lead to stack-based buffer overflow. The attack may be launched remotely. The exploit has been published and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3809"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Svigo-o/Tenda_vul/tree/main/tenda-fh1202-natsaticsetting-page-buffer-overflow"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.349775"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.349775"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.769039"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenda.com.cn"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-09T08:16:01Z"
+  }
+}

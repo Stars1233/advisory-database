@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6hp4-rq8j-6v6j",
+  "modified": "2026-03-09T09:30:31Z",
+  "published": "2026-03-09T09:30:30Z",
+  "aliases": [
+    "CVE-2025-41767"
+  ],
+  "details": "A high-privileged remote attacker can fully compromise the device by abusing an update signature bypass vulnerability in the wwwupdate.cgi method in the web interface of UBR.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41767"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mbs-solutions.de/mbs-2025-0001"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-347"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-09T09:16:01Z"
+  }
+}
