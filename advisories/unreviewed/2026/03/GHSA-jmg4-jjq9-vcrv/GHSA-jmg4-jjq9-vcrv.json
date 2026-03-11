@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jmg4-jjq9-vcrv",
+  "modified": "2026-03-11T18:30:33Z",
+  "published": "2026-03-11T18:30:33Z",
+  "aliases": [
+    "CVE-2026-20046"
+  ],
+  "details": "A vulnerability in task group assignment for a specific CLI command in Cisco IOS XR Software could allow an authenticated, local attacker to elevate privileges and gain full administrative control of an affected device.\n\nThis vulnerability is due to incorrect mapping of a command to task groups within the source code. An attacker with a low-privileged account could exploit this vulnerability by using the CLI command to bypass the task group&ndash;based checks. A successful exploit could allow the attacker to elevate privileges and perform actions on an affected device without authorization checks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20046"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-privesc-bF8D5U4W"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T17:16:55Z"
+  }
+}

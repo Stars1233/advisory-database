@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w927-ccxx-qvrj",
+  "modified": "2026-03-11T18:30:32Z",
+  "published": "2026-03-11T18:30:32Z",
+  "aliases": [
+    "CVE-2025-12555"
+  ],
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.1 before 18.7.6, 18.8 before 18.8.6, and 18.9 before 18.9.2 that, under certain conditions, could have allowed an authenticated user to access previous pipeline job information on projects with repository and CI/CD disabled due to improper authorization checks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12555"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3354642"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/03/11/patch-release-gitlab-18-9-2-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/579126"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T17:16:50Z"
+  }
+}

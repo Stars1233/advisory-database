@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3c9f-25h4-p2q8",
+  "modified": "2026-03-11T18:30:33Z",
+  "published": "2026-03-11T18:30:33Z",
+  "aliases": [
+    "CVE-2026-20162"
+  ],
+  "details": "In Splunk Enterprise versions below 10.2.0, 10.0.3, 9.4.9, and 9.3.9, and Splunk Cloud Platform versions below 10.2.2510.4, 10.1.2507.15, 10.0.2503.11, and 9.3.2411.123, a low-privileged user who does not hold the \"admin\" or \"power\" Splunk roles could craft a malicious payload when creating a View (Settings -  User Interface - Views) at the `/manager/launcher/data/ui/views/_new` endpoint leading to a Stored Cross-Site Scripting (XSS) through a path traversal vulnerability. This could result in execution of unauthorized JavaScript code in the browser of a user.  \n\nThe vulnerability requires the attacker to phish the victim by tricking them into initiating a request within their browser. The authenticated user should not be able to exploit the vulnerability at will.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20162"
+    },
+    {
+      "type": "WEB",
+      "url": "https://advisory.splunk.com/advisories/SVD-2026-0301"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T17:16:56Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7vjc-jh6c-q29g",
+  "modified": "2026-03-11T18:30:33Z",
+  "published": "2026-03-11T18:30:33Z",
+  "aliases": [
+    "CVE-2026-20163"
+  ],
+  "details": "In Splunk Enterprise versions below 10.2.0, 10.0.4, 9.4.9, and 9.3.10, and Splunk Cloud Platform versions below 10.2.2510.5, 10.0.2503.12, 10.1.2507.16, and 9.3.2411.124, a user who holds a role that contains the high-privilege capability `edit_cmd` could execute arbitrary shell commands using the `unarchive_cmd` parameter for the `/splunkd/__upload/indexing/preview` REST endpoint.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20163"
+    },
+    {
+      "type": "WEB",
+      "url": "https://advisory.splunk.com/advisories/SVD-2026-0302"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T17:16:56Z"
+  }
+}

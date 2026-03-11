@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fc3g-2crx-rgcj",
+  "modified": "2026-03-11T18:30:33Z",
+  "published": "2026-03-11T18:30:33Z",
+  "aliases": [
+    "CVE-2026-20164"
+  ],
+  "details": "In Splunk Enterprise versions below 10.2.0, 10.0.3, 9.4.9, and 9.3.10, and Splunk Cloud Platform versions below 10.2.2510.5, 10.1.2507.16, 10.0.2503.11, and 9.3.2411.123, a low-privileged user that does not hold the \"admin\" or \"power\" Splunk roles could access the `/splunkd/__raw/servicesNS/-/-/configs/conf-passwords` REST API endpoint, which exposes the hashed or plaintext password values that are stored in the passwords.conf configuration file due to improper access control. This vulnerability could allow for the unauthorized disclosure of sensitive credentials.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20164"
+    },
+    {
+      "type": "WEB",
+      "url": "https://advisory.splunk.com/advisories/SVD-2026-0303"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T17:16:56Z"
+  }
+}

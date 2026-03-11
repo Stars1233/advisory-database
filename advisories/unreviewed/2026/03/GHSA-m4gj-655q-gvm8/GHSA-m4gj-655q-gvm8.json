@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m4gj-655q-gvm8",
+  "modified": "2026-03-11T18:30:33Z",
+  "published": "2026-03-11T18:30:33Z",
+  "aliases": [
+    "CVE-2026-20165"
+  ],
+  "details": "In Splunk Enterprise versions below 10.2.1, 10.0.4, 9.4.9, and 9.3.10, and Splunk Cloud Platform versions below 10.2.2510.7, 10.1.2507.17, 10.0.2503.12, and 9.3.2411.124, a low-privileged user that does not hold the \"admin\" or \"power\" Splunk roles could retrieve sensitive information by inspecting the job's search log due to improper access control in the MongoClient logging channel.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20165"
+    },
+    {
+      "type": "WEB",
+      "url": "https://advisory.splunk.com/advisories/SVD-2026-0304"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-532"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T17:16:56Z"
+  }
+}

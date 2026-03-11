@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-phr8-q335-28xj",
+  "modified": "2026-03-11T18:30:33Z",
+  "published": "2026-03-11T18:30:33Z",
+  "aliases": [
+    "CVE-2026-20166"
+  ],
+  "details": "In Splunk Enterprise versions below 10.2.1 and 10.0.4, and Splunk Cloud Platform versions below 10.2.2510.5, 10.1.2507.16, and 10.0.2503.12, a low-privileged user that does not hold the \"admin\" or \"power\" Splunk roles could retrieve the Observability Cloud API access token through the Discover Splunk Observability Cloud app due to improper access control. \n\nThis vulnerability does not affect Splunk Enterprise versions below 9.4.9 and 9.3.10 because the Discover Splunk Observability Cloud app does not come with Splunk Enterprise.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20166"
+    },
+    {
+      "type": "WEB",
+      "url": "https://advisory.splunk.com/advisories/SVD-2026-0305"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T17:16:57Z"
+  }
+}
