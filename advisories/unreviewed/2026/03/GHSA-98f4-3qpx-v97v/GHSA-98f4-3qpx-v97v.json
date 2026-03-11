@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-98f4-3qpx-v97v",
+  "modified": "2026-03-11T00:31:36Z",
+  "published": "2026-03-11T00:31:36Z",
+  "aliases": [
+    "CVE-2026-27267"
+  ],
+  "details": "Illustrator versions 29.8.4, 30.1 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27267"
+    },
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/illustrator/apsb26-18.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-10T23:16:43Z"
+  }
+}

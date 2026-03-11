@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7q7m-rc75-vrr5",
+  "modified": "2026-03-11T00:31:32Z",
+  "published": "2026-03-11T00:31:32Z",
+  "aliases": [
+    "CVE-2026-27278"
+  ],
+  "details": "Acrobat Reader versions 24.001.30307, 24.001.30308, 25.001.21265 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27278"
+    },
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/acrobat/apsb26-26.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-10T22:16:18Z"
+  }
+}
