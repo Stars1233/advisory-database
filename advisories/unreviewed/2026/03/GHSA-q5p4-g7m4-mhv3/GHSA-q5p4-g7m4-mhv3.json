@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q5p4-g7m4-mhv3",
+  "modified": "2026-03-11T12:31:22Z",
+  "published": "2026-03-11T12:31:22Z",
+  "aliases": [
+    "CVE-2026-1992"
+  ],
+  "details": "The ExactMetrics – Google Analytics Dashboard for WordPress plugin is vulnerable to Insecure Direct Object Reference in versions 8.6.0 through 9.0.2. This is due to the `store_settings()` method in the `ExactMetrics_Onboarding` class accepting a user-supplied `triggered_by` parameter that is used instead of the current user's ID to check permissions. This makes it possible for authenticated attackers with the `exactmetrics_save_settings` capability to bypass the `install_plugins` capability check by specifying an administrator's user ID in the `triggered_by` parameter, allowing them to install arbitrary plugins and achieve Remote Code Execution. This vulnerability only affects sites on which administrator has given other user types the permission to view reports and can only be exploited by users of that type.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1992"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-analytics-dashboard-for-wp/trunk/includes/admin/class-exactmetrics-onboarding.php#L273"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3473805/google-analytics-dashboard-for-wp/trunk/includes/admin/class-exactmetrics-onboarding.php?old=3309894&old_path=google-analytics-dashboard-for-wp%2Ftrunk%2Fincludes%2Fadmin%2Fclass-exactmetrics-onboarding.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/79b6b896-df66-4c3d-a4d4-d3dbeb630134?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T10:16:13Z"
+  }
+}

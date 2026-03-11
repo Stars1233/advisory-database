@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m9hw-mv78-pf7m",
+  "modified": "2026-03-11T12:31:22Z",
+  "published": "2026-03-11T12:31:22Z",
+  "aliases": [
+    "CVE-2026-3492"
+  ],
+  "details": "The Gravity Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 2.9.28.1. This is due to a compound failure involving missing authorization on the `create_from_template` AJAX endpoint (allowing any authenticated user to create forms), insufficient input sanitization (`sanitize_text_field()` preserves single quotes), and missing output escaping when the form title is rendered in the Form Switcher dropdown (`title` attribute constructed without `esc_attr()`, and JavaScript `saferHtml` utility only escapes `&`, `<`, `>` but not quotes). This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary JavaScript that executes when an Administrator searches in the Form Switcher dropdown in the Form Editor.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3492"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.gravityforms.com/gravityforms-change-log"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a4d16ccd-149a-4f70-84b4-59429827baa5?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T10:16:14Z"
+  }
+}
