@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jp3m-m8r2-v4x3",
+  "modified": "2026-03-11T03:31:28Z",
+  "published": "2026-03-11T03:31:28Z",
+  "aliases": [
+    "CVE-2026-3453"
+  ],
+  "details": "The ProfilePress plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 4.16.11. This is due to missing ownership validation on the change_plan_sub_id parameter in the process_checkout() function. The ppress_process_checkout AJAX handler accepts a user-controlled subscription ID intended for plan upgrades, loads the subscription record, and cancels/expires it without verifying the subscription belongs to the requesting user. This makes it possible for authenticated attackers, with Subscriber-level access and above, to cancel and expire any other user's active subscription via the change_plan_sub_id parameter during checkout, causing immediate loss of paid access for victims.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3453"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.9/src/Membership/Controllers/CheckoutController.php#L237"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.9/src/Membership/Controllers/CheckoutController.php#L334"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-user-avatar/tags/4.16.9/src/Membership/Controllers/CheckoutController.php#L342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3474509/wp-user-avatar/trunk/src/Membership/Controllers/CheckoutController.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/74e4808f-bd6f-4e62-91cb-31c86a427498?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T03:15:56Z"
+  }
+}
