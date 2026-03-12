@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-92rh-qgqp-3674",
+  "modified": "2026-03-12T03:31:06Z",
+  "published": "2026-03-12T03:31:06Z",
+  "aliases": [
+    "CVE-2026-1878"
+  ],
+  "details": "An Insufficient Integrity Verification vulnerability in the ASUS ROG peripheral driver installation process allows privilege escalation to SYSTEM. The vulnerability is due to improper access control on the installation directory, which enables the exploitation of a race condition where the legitimate installer is substituted with an unexpected payload immediately after download, resulting in arbitrary code execution. Refer to the \"Security Update for ASUS ROG peripheral driver\" section on the ASUS Security Advisory for more information.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1878"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.asus.com/security-advisory"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-494"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-12T03:15:57Z"
+  }
+}

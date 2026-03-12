@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p3cx-frrm-35m8",
+  "modified": "2026-03-12T03:31:06Z",
+  "published": "2026-03-12T03:31:06Z",
+  "aliases": [
+    "CVE-2026-1182"
+  ],
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 8.14 before 18.7.6, 18.8 before 18.8.6, and 18.9 before 18.9.2 that could have allowed an authenticated user to gain unauthorized access to confidential issue title created in public projects under certain circumstances.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1182"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3515716"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/586613"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-212"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-12T02:15:58Z"
+  }
+}
