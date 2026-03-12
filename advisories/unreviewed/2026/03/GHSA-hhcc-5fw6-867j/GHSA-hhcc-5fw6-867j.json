@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hhcc-5fw6-867j",
+  "modified": "2026-03-12T21:34:50Z",
+  "published": "2026-03-12T21:34:50Z",
+  "aliases": [
+    "CVE-2026-26793"
+  ],
+  "details": "GL-iNet GL-AR300M16 v4.3.11 was discovered to contain a command injection vulnerability via the set_config function. This vulnerability allows attackers to execute arbitrary commands via a crafted input.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26793"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sezangel/IOT-vul/tree/main/GL-iNet/GL-AR300M16/set_config"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-12T19:16:16Z"
+  }
+}
