@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jhf5-cppx-wj5h",
+  "modified": "2026-03-12T00:31:17Z",
+  "published": "2026-03-12T00:31:17Z",
+  "aliases": [
+    "CVE-2026-3958"
+  ],
+  "details": "A vulnerability has been found in Woahai321 ListSync up to 0.6.6. This issue affects the function requests.post of the file list-sync-main/api_server.py of the component JSON Handler. The manipulation leads to server-side request forgery. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3958"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Woahai321/list-sync/issues/79"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Woahai321/list-sync/issues/79#issue-3993946476"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.350388"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.350388"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.768070"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-11T22:16:36Z"
+  }
+}
