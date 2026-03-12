@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gr63-2w3v-w2gp",
+  "modified": "2026-03-12T06:31:36Z",
+  "published": "2026-03-12T06:31:36Z",
+  "aliases": [
+    "CVE-2026-3979"
+  ],
+  "details": "A flaw has been found in quickjs-ng quickjs up to 0.12.1. This affects the function js_iterator_concat_return of the file quickjs.c. This manipulation causes use after free. The attack requires local access. The exploit has been published and may be used. Patch name: daab4ad4bae4ef071ed0294618d6244e92def4cd. Applying a patch is the recommended action to fix this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3979"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/quickjs-ng/quickjs/issues/1368"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/quickjs-ng/quickjs/issues/1368#issue-4004680962"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/quickjs-ng/quickjs/pull/1370"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/quickjs-ng/quickjs/commit/daab4ad4bae4ef071ed0294618d6244e92def4cd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/quickjs-ng/quickjs"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.350414"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.350414"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.769600"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-12T04:16:40Z"
+  }
+}

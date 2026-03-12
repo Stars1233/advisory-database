@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w77x-v6v5-9x28",
+  "modified": "2026-03-12T06:31:37Z",
+  "published": "2026-03-12T06:31:37Z",
+  "aliases": [
+    "CVE-2026-3994"
+  ],
+  "details": "A vulnerability was detected in rui314 mold up to 2.40.4. This issue affects the function mold::ObjectFilemold::X86_64::initialize_sections of the file src/input-files.cc of the component Object File Handler. Performing a manipulation results in heap-based buffer overflow. Attacking locally is a requirement. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3994"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rui314/mold/issues/1548"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/oneafter/0209/blob/main/mo2/repro"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rui314/mold"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.350476"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.350476"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.769772"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-12T06:16:32Z"
+  }
+}
