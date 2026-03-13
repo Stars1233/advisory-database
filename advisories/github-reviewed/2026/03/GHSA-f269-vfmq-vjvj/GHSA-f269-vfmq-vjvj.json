@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f269-vfmq-vjvj",
+  "modified": "2026-03-13T20:07:26Z",
+  "published": "2026-03-13T20:07:26Z",
+  "aliases": [
+    "CVE-2026-1528"
+  ],
+  "summary": "Undici: Malicious WebSocket 64-bit length overflows parser and crashes the client",
+  "details": "### Impact\nA server can reply with a WebSocket frame using the 64-bit length form and an extremely large length. undici's ByteParser overflows internal math, ends up in an invalid state, and throws a fatal TypeError that terminates the process. \n\n### Patches\n\n\n Patched in the undici version v7.24.0 and v6.24.0. Users should upgrade to this version or later.\n\n### Workarounds\n\nThere are no workarounds.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "undici"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.24.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "undici"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.24.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nodejs/undici/security/advisories/GHSA-f269-vfmq-vjvj"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1528"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3537648"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cna.openjsf.org/security-advisories.html"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/nodejs/undici"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1284",
+      "CWE-248"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-13T20:07:26Z",
+    "nvd_published_at": "2026-03-12T21:16:25Z"
+  }
+}
