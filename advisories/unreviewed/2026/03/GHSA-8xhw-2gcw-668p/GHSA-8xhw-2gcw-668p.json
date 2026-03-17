@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8xhw-2gcw-668p",
+  "modified": "2026-03-17T21:31:45Z",
+  "published": "2026-03-17T21:31:45Z",
+  "aliases": [
+    "CVE-2025-66342"
+  ],
+  "details": "A type confusion vulnerability exists in the EMF functionality of Canva Affinity. A specially crafted EMF file can trigger this vulnerability, which can lead to memory corruption and result in arbitrary code execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2297"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trust.canva.com/?tcuUid=1f728b0d-17f3-4c9c-97e9-6662b769eb62"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2025-2297"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-843"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-17T19:15:59Z"
+  }
+}
