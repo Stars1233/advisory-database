@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c57j-h24c-r8gw",
+  "modified": "2026-03-18T00:30:54Z",
+  "published": "2026-03-18T00:30:54Z",
+  "aliases": [
+    "CVE-2026-3856"
+  ],
+  "details": "IBM Db2 Recovery Expert for Linux, UNIX and Windows 5.5 IF 2 could allow an attacker to modify or corrupt data due to an insecure mechanism used for verifying the integrity of the data during transmission.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3856"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ibm.com/support/pages/node/7266272"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-353"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-17T23:16:17Z"
+  }
+}

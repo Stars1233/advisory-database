@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mgcj-3w53-qpg2",
+  "modified": "2026-03-18T00:30:54Z",
+  "published": "2026-03-18T00:30:54Z",
+  "aliases": [
+    "CVE-2026-32840"
+  ],
+  "details": "Edimax GS-5008PL firmware version 1.00.54 and prior contain a stored cross-site scripting vulnerability in the system_name_set.cgi script that allows attackers to inject arbitrary script code by manipulating the sysName parameter. Attackers can send a crafted POST request with malicious script payload that executes when management pages including system_data.js are viewed by administrators.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32840"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/us/smb_legacy_switches/gs-5008pl"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.edimax.com/edimax/merchandise/merchandise_list/data/edimax/us/smb_legacy_products"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/edimax-gs-5008pl-stored-xss-via-device-name"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-17T22:16:14Z"
+  }
+}

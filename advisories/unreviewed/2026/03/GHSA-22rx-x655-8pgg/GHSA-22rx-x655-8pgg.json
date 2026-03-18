@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-22rx-x655-8pgg",
+  "modified": "2026-03-18T00:30:54Z",
+  "published": "2026-03-18T00:30:54Z",
+  "aliases": [
+    "CVE-2026-22727"
+  ],
+  "details": "Unprotected internal endpoints in Cloud Foundry Capi Release 1.226.0 and below, and CF Deployment v54.9.0 and below on all platforms allows any user who has bypassed the firewall to potentially replace droplets and therefore applications allowing them to access secure application information.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22727"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cloudfoundry.org/blog/cve-2026-22727-unprotected-internal-endpoints"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-17T23:16:17Z"
+  }
+}

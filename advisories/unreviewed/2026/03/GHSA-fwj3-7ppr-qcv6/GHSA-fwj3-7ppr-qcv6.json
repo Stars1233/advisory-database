@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fwj3-7ppr-qcv6",
+  "modified": "2026-03-18T00:30:54Z",
+  "published": "2026-03-18T00:30:54Z",
+  "aliases": [
+    "CVE-2025-14806"
+  ],
+  "details": "IBM Planning Analytics Local 2.1.0 through 2.1.17 could allow an attacker to trick the caching mechanism into storing and serving sensitive, user-specific responses as publicly cacheable resources.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14806"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ibm.com/support/pages/node/7263581"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-524"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-17T22:16:13Z"
+  }
+}
