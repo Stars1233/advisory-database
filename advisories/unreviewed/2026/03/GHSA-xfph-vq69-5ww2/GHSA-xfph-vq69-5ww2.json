@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xfph-vq69-5ww2",
+  "modified": "2026-03-19T18:31:19Z",
+  "published": "2026-03-19T18:31:19Z",
+  "aliases": [
+    "CVE-2026-26940"
+  ],
+  "details": "Improper Validation of Specified Quantity in Input (CWE-1284) in the Timelion visualization plugin in Kibana can lead Denial of Service via Excessive Allocation (CAPEC-130). The vulnerability allows an authenticated user to send a specially crafted Timelion expression that overwrites internal series data properties with an excessively large quantity value.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26940"
+    },
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-13-9-2-7-9-3-2-security-update-esa-2026-20/385535"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-19T18:16:21Z"
+  }
+}
