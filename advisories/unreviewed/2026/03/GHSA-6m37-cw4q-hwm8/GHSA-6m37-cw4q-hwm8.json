@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6m37-cw4q-hwm8",
+  "modified": "2026-03-20T06:31:33Z",
+  "published": "2026-03-20T06:31:33Z",
+  "aliases": [
+    "CVE-2026-4038"
+  ],
+  "details": "The Aimogen Pro plugin for WordPress is vulnerable to Arbitrary Function Call that can lead to privilege escalation due to a missing capability check on the 'aiomatic_call_ai_function_realtime' function in all versions up to, and including, 2.7.5. This makes it possible for unauthenticated attackers to call arbitrary WordPress functions such as 'update_option' to update the default role for registration to administrator and enable user registration for attackers to gain administrative user access to a vulnerable site.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4038"
+    },
+    {
+      "type": "WEB",
+      "url": "https://codecanyon.net/item/aimogen-pro-allinone-ai-content-writer-editor-chatbot-automation-toolkit/38877369"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b3e45a17-cb41-41ba-ab6c-c83202f0ecfd?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-20T04:16:50Z"
+  }
+}
