@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4mwf-8qvq-c4w5",
+  "modified": "2026-03-20T09:32:09Z",
+  "published": "2026-03-20T09:32:09Z",
+  "aliases": [
+    "CVE-2026-4477"
+  ],
+  "details": "A vulnerability was determined in Yi Technology YI Home Camera 2 2.1.1_20171024151200. This affects an unknown function of the component WPA/WPS. Executing a manipulation can lead to use of hard-coded cryptographic key\n . The attack can only be done within the local network. This attack is characterized by high complexity. The exploitability is reported as difficult. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.351767"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.351767"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.773095"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-20T07:16:14Z"
+  }
+}
