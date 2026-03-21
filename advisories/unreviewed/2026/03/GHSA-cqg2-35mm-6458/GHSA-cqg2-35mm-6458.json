@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cqg2-35mm-6458",
+  "modified": "2026-03-21T15:33:24Z",
+  "published": "2026-03-21T15:33:24Z",
+  "aliases": [
+    "CVE-2019-25572"
+  ],
+  "details": "NordVPN 6.19.6 contains a denial of service vulnerability that allows local attackers to crash the application by submitting an excessively long string in the email input field. Attackers can paste a buffer of 100,000 characters into the email field during login to trigger an application crash.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25572"
+    },
+    {
+      "type": "WEB",
+      "url": "https://downloads.nordcdn.com/apps/windows/10/NordVPN/latest/NordVPNSetup.exe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nordvpn.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46343"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/nordvpn-denial-of-service-via-email-field-buffer-overflow"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1260"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-21T13:16:21Z"
+  }
+}

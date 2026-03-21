@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gv43-pc8g-6xfj",
+  "modified": "2026-03-21T15:33:22Z",
+  "published": "2026-03-21T15:33:22Z",
+  "aliases": [
+    "CVE-2019-25546"
+  ],
+  "details": "NetAware 1.20 contains a buffer overflow vulnerability in the Share Name field that allows local attackers to crash the application by supplying an excessively long string. Attackers can trigger a denial of service by pasting a 1000-byte buffer into the Share Name parameter when adding a new share through the Manage Shares interface.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25546"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46909"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.infiltration-systems.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/netaware-share-name-denial-of-service"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-21T13:16:16Z"
+  }
+}
