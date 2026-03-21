@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4p22-4q7x-9xpq",
+  "modified": "2026-03-21T00:31:44Z",
+  "published": "2026-03-21T00:31:44Z",
+  "aliases": [
+    "CVE-2026-25086"
+  ],
+  "details": "Under certain conditions, an attacker could bind to the same port used \nby WebCTRL. This could allow the attacker to craft and send malicious \npackets and impersonate the WebCTRL service without requiring code \ninjection into the WebCTRL software.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25086"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-078-08.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.automatedlogic.com/en/company/security-commitment"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-08"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-605"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-21T00:16:25Z"
+  }
+}

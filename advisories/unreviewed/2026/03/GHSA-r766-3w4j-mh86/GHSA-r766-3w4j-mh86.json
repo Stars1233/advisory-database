@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r766-3w4j-mh86",
+  "modified": "2026-03-21T00:31:44Z",
+  "published": "2026-03-21T00:31:44Z",
+  "aliases": [
+    "CVE-2026-3577"
+  ],
+  "details": "The Keep Backup Daily plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the backup title alias (`val` parameter) in the `update_kbd_bkup_alias` AJAX action in all versions up to, and including, 2.1.2. This is due to insufficient input sanitization and output escaping. While `sanitize_text_field()` strips HTML tags on save, it does not encode double quotes. The backup titles are output in HTML attribute contexts without `esc_attr()`. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject arbitrary web scripts via attribute injection that will execute whenever another administrator views the backup list page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/keep-backup-daily/tags/2.1.1/inc/functions.php#L626"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/keep-backup-daily/tags/2.1.1/inc/kbd_cron.php#L505"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/keep-backup-daily/trunk/inc/functions.php#L626"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/keep-backup-daily/trunk/inc/kbd_cron.php#L505"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3481587%40keep-backup-daily&new=3481587%40keep-backup-daily&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/18a4fa4b-5c99-4347-8b34-e49f7e0972be?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-21T00:16:28Z"
+  }
+}
