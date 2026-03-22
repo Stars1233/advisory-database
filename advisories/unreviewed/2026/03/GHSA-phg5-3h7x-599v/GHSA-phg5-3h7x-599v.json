@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-phg5-3h7x-599v",
+  "modified": "2026-03-22T15:31:28Z",
+  "published": "2026-03-22T15:31:28Z",
+  "aliases": [
+    "CVE-2019-25613"
+  ],
+  "details": "Easy Chat Server 3.1 contains a denial of service vulnerability that allows remote attackers to crash the application by sending oversized data in the message parameter. Attackers can establish a session via the chat.ghp endpoint and then send a POST request to body2.ghp with an excessively large message parameter value to cause the service to crash.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25613"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46806"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/easy-chat-server-denial-of-service-via-message-parameter"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.echatserver.com"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.echatserver.com/ecssetup.exe"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-940"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-22T14:16:29Z"
+  }
+}

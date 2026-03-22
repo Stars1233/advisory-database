@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hwv9-r628-99xx",
+  "modified": "2026-03-22T15:31:28Z",
+  "published": "2026-03-22T15:31:28Z",
+  "aliases": [
+    "CVE-2019-25602"
+  ],
+  "details": "GSearch 1.0.1.0 contains a denial of service vulnerability that allows local attackers to crash the application by inputting an excessively long string in the search bar. Attackers can paste a buffer of 2000 characters into the search field, click search, and select any result to trigger an application crash.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25602"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/47026"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.microsoft.com/store/productId/9NDTMZKLC693"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/gsearch-denial-of-service-via-search-input"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1260"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-22T14:16:27Z"
+  }
+}

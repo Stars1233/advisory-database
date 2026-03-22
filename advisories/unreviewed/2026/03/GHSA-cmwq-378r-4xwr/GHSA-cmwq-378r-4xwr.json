@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cmwq-378r-4xwr",
+  "modified": "2026-03-22T15:31:28Z",
+  "published": "2026-03-22T15:31:28Z",
+  "aliases": [
+    "CVE-2019-25590"
+  ],
+  "details": "Axessh 4.2 contains a denial of service vulnerability in the logging configuration that allows local attackers to crash the application by supplying an excessively long string in the log file name field. Attackers can enable session logging, paste a buffer of 500 or more characters into the log file name parameter, and trigger a crash when establishing a telnet connection.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25590"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46858"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/axessh-denial-of-service-via-log-file-name"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.labf.com"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.labf.com/download/axessh.exe"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1282"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-22T14:16:24Z"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h6ff-pwr6-vvx9",
+  "modified": "2026-03-22T15:31:28Z",
+  "published": "2026-03-22T15:31:28Z",
+  "aliases": [
+    "CVE-2019-25605"
+  ],
+  "details": "EquityPandit 1.0 contains an insecure logging vulnerability that allows attackers to capture sensitive user credentials by accessing developer console logs via Android Debug Bridge. Attackers can use adb logcat to extract plaintext passwords logged during the forgot password function, exposing user account credentials.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25605"
+    },
+    {
+      "type": "WEB",
+      "url": "https://play.google.com/store/apps/details?id=com.yieldnotion.equitypandit"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46933"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/equitypandit-insecure-logging-information-disclosure"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-612"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-22T14:16:28Z"
+  }
+}

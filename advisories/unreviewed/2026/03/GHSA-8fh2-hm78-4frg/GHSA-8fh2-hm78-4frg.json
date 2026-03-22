@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8fh2-hm78-4frg",
+  "modified": "2026-03-22T15:31:28Z",
+  "published": "2026-03-22T15:31:28Z",
+  "aliases": [
+    "CVE-2026-4548"
+  ],
+  "details": "A vulnerability was detected in mickasmt next-saas-stripe-starter 1.0.0. Affected by this vulnerability is the function updateUserrole of the file actions/update-user-role.ts. The manipulation of the argument userId/role results in improper authorization. The attack may be launched remotely.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4548"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.352375"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.352375"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.774805"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-266"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-22T14:16:34Z"
+  }
+}
