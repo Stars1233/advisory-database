@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-29mf-95fh-hwxf",
+  "modified": "2026-03-22T00:30:28Z",
+  "published": "2026-03-22T00:30:28Z",
+  "aliases": [
+    "CVE-2026-4528"
+  ],
+  "details": "A vulnerability was determined in trueleaf ApiFlow 0.9.7. The impacted element is the function validateUrlSecurity of the file packages/server/src/service/proxy/http_proxy.service.ts of the component URL Validation Handler. This manipulation causes server-side request forgery. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4528"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.352316"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.352316"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.784197"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/Server-Side-Request-Forgery-SSRF-in-ApiFlow-329ea92a3c4180489df2fa2702078fe5"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-21T22:16:20Z"
+  }
+}

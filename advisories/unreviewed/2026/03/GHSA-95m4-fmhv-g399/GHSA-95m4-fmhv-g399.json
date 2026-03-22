@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-95m4-fmhv-g399",
+  "modified": "2026-03-22T00:30:28Z",
+  "published": "2026-03-22T00:30:28Z",
+  "aliases": [
+    "CVE-2026-4529"
+  ],
+  "details": "A vulnerability was identified in D-Link DHP-1320 1.00WWB04. This affects the function redirect_count_down_page of the component SOAP Handler. Such manipulation leads to stack-based buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4529"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dhp1320-dlink"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.352317"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.352317"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.773932"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dlink.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-21T23:16:51Z"
+  }
+}

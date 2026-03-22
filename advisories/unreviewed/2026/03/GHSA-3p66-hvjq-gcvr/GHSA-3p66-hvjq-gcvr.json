@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3p66-hvjq-gcvr",
+  "modified": "2026-03-22T00:30:28Z",
+  "published": "2026-03-22T00:30:28Z",
+  "aliases": [
+    "CVE-2026-4530"
+  ],
+  "details": "A security flaw has been discovered in apconw Aix-DB up to 1.2.3. This impacts an unknown function of the file agent/text2sql/rag/terminology_retriever.py. Performing a manipulation of the argument Description results in sql injection. The attack requires a local approach. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4530"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Ka7arotto/cve/blob/main/Aix-DB-nl2sql.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.352318"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.352318"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.774072"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-22T00:16:06Z"
+  }
+}
