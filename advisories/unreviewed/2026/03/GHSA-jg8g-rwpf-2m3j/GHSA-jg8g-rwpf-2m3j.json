@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jg8g-rwpf-2m3j",
+  "modified": "2026-03-22T12:32:27Z",
+  "published": "2026-03-22T12:32:26Z",
+  "aliases": [
+    "CVE-2026-4544"
+  ],
+  "details": "A vulnerability was determined in Wavlink WL-WN578W2 221110. This affects an unknown function of the file /cgi-bin/login.cgi of the component POST Request Handler. Executing a manipulation of the argument homepage/hostname/login_page can lead to cross site scripting. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4544"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Litengzheng/vul_db/blob/main/WL-WN578W2/vul_6/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Litengzheng/vul_db/blob/main/WL-WN578W2/vul_7/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.352361"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.352361"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.774692"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.774693"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.774696"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-22T10:16:07Z"
+  }
+}
