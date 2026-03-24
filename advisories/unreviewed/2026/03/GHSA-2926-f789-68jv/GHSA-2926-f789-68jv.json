@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2926-f789-68jv",
+  "modified": "2026-03-24T00:30:24Z",
+  "published": "2026-03-24T00:30:24Z",
+  "aliases": [
+    "CVE-2025-60949"
+  ],
+  "details": "Census CSWeb 8.0.1 allows \"app/config\" to be reachable via HTTP in some deployments. A remote, unauthenticated attacker could send requests to configuration files and obtain leaked secrets. Fixed in 8.1.0 alpha.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60949"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/csprousers/csweb/commit/eba0b59a243390a1a4f9524cce6dbc0314bf0d91"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hx381/cspro-exploits"
+    },
+    {
+      "type": "WEB",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-082-01.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-60949"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-23T22:16:23Z"
+  }
+}

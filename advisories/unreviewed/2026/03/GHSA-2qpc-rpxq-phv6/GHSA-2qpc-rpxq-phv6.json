@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2qpc-rpxq-phv6",
+  "modified": "2026-03-24T00:30:26Z",
+  "published": "2026-03-24T00:30:26Z",
+  "aliases": [
+    "CVE-2026-4001"
+  ],
+  "details": "The Woocommerce Custom Product Addons Pro plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 5.4.1 via the custom pricing formula eval() in the process_custom_formula() function within includes/process/price.php. This is due to insufficient sanitization and validation of user-submitted field values before passing them to PHP's eval() function. The sanitize_values() method strips HTML tags but does not escape single quotes or prevent PHP code injection. This makes it possible for unauthenticated attackers to execute arbitrary code on the server by submitting a crafted value to a WCPA text field configured with custom pricing formula (pricingType: \"custom\" with {this.value}).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4001"
+    },
+    {
+      "type": "WEB",
+      "url": "https://acowebs.com/woo-custom-product-addons"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/70a2b6ff-defc-4722-9af9-3cae94e98632?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-95"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-24T00:16:31Z"
+  }
+}
