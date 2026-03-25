@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rrrp-782c-4484",
+  "modified": "2026-03-25T15:31:29Z",
+  "published": "2026-03-25T15:31:29Z",
+  "aliases": [
+    "CVE-2026-3119"
+  ],
+  "details": "Under certain conditions, `named` may crash when processing a correctly signed query containing a TKEY record. The affected code can only be reached if an incoming request has a valid transaction signature (TSIG) from a key declared in the `named` configuration.\nThis issue affects BIND 9 versions 9.20.0 through 9.20.20, 9.21.0 through 9.21.19, and 9.20.9-S1 through 9.20.20-S1.\nBIND 9 versions 9.18.0 through 9.18.46 and 9.18.11-S1 through 9.18.46-S1 are NOT affected.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3119"
+    },
+    {
+      "type": "WEB",
+      "url": "https://downloads.isc.org/isc/bind9/9.20.21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://downloads.isc.org/isc/bind9/9.21.20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://kb.isc.org/docs/cve-2026-3119"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-617"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-25T14:16:37Z"
+  }
+}

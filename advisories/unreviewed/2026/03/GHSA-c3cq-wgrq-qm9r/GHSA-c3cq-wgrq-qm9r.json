@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c3cq-wgrq-qm9r",
+  "modified": "2026-03-25T15:31:29Z",
+  "published": "2026-03-25T15:31:29Z",
+  "aliases": [
+    "CVE-2026-4363"
+  ],
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.1 before 18.8.7, 18.9 before 18.9.3, and 18.10 before 18.10.1 that under certain conditions could have allowed an authenticated user to gain unauthorized access to resources due to improper caching of authorization decisions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4363"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/578561"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-25T15:16:50Z"
+  }
+}
