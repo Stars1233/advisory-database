@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-254g-wcpq-w26f",
+  "modified": "2026-03-26T15:30:39Z",
+  "published": "2026-03-26T15:30:39Z",
+  "aliases": [
+    "CVE-2025-55274"
+  ],
+  "details": "HCL Aftermarket DPC is affected by Cross-Origin Resource Sharing vulnerability. CORS misconfigurations includes the exposure of sensitive user information to attackers, unauthorized access to APIs, and possible data manipulation or leakage. If an attacker to exploit CORS misconfiguration, they could steal sensitive data, perform actions on behalf of a legitimate user.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55274"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-942"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T13:16:27Z"
+  }
+}

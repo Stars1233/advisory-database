@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mv6v-v62w-gfh5",
+  "modified": "2026-03-26T15:30:40Z",
+  "published": "2026-03-26T15:30:40Z",
+  "aliases": [
+    "CVE-2018-25219"
+  ],
+  "details": "PassFab Excel Password Recovery 8.3.1 contains a structured exception handling buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious payload in the registration code field. Attackers can craft a buffer overflow payload with a pop-pop-ret gadget and shellcode that triggers code execution when pasted into the Licensed E-mail and Registration Code field during the registration process.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25219"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46301"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.passfab.com/downloads/passfab-excel-password-recovery.exe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.passfab.com/products/excel-password-recovery.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/passfab-excel-password-recovery-seh-buffer-overflow"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T14:16:06Z"
+  }
+}

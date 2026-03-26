@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rh5v-5pwc-jx6p",
+  "modified": "2026-03-26T15:30:38Z",
+  "published": "2026-03-26T15:30:38Z",
+  "aliases": [
+    "CVE-2025-55267"
+  ],
+  "details": "HCL Aftermarket DPC is affected by Unrestricted File Upload vulnerability, allows attacker to upload and execute malicious scripts, gaining full control over the server.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55267"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T13:16:25Z"
+  }
+}

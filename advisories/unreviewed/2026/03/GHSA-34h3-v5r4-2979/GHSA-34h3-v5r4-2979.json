@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-34h3-v5r4-2979",
+  "modified": "2026-03-26T15:30:39Z",
+  "published": "2026-03-26T15:30:39Z",
+  "aliases": [
+    "CVE-2025-55277"
+  ],
+  "details": "HCL Aftermarket DPC is affected by Use of Vulnerable/Outdated Versions vulnerability using which an attacker may make use of the exploits available across the internet and craft attacks against the application.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55277"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1104"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T13:16:27Z"
+  }
+}

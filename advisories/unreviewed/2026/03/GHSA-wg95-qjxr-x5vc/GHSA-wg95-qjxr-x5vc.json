@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wg95-qjxr-x5vc",
+  "modified": "2026-03-26T15:30:38Z",
+  "published": "2026-03-26T15:30:38Z",
+  "aliases": [
+    "CVE-2025-55269"
+  ],
+  "details": "HCL Aftermarket DPC is affected by Weak Password Policy vulnerability, which makes it easier for attackers to guess weak passwords or use brute-force techniques to gain unauthorized access to user accounts.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55269"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-521"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T13:16:26Z"
+  }
+}

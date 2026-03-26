@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4mx2-9grf-8f85",
+  "modified": "2026-03-26T15:30:38Z",
+  "published": "2026-03-26T15:30:38Z",
+  "aliases": [
+    "CVE-2025-55266"
+  ],
+  "details": "HCL Aftermarket DPC is affected by Session Fixation which allows attacker to takeover the user's session and use it carry out unauthorized transaction behalf of the user.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55266"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129793"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-384"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T13:16:25Z"
+  }
+}

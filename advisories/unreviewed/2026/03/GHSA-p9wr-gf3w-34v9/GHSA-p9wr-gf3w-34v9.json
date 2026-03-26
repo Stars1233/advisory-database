@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p9wr-gf3w-34v9",
+  "modified": "2026-03-26T15:30:41Z",
+  "published": "2026-03-26T15:30:41Z",
+  "aliases": [
+    "CVE-2026-28297"
+  ],
+  "details": "SolarWinds Observability Self-Hosted was found to be affected by a stored cross-site scripting vulnerability, which when exploited, can lead to unintended script execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28297"
+    },
+    {
+      "type": "WEB",
+      "url": "https://documentation.solarwinds.com/en/success_center/orionplatform/content/release_notes/hco_2026-1-1_release_notes.htm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.solarwinds.com/trust-center/security-advisories/CVE-2026-28297"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T15:16:34Z"
+  }
+}
