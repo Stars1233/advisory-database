@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9f9p-gp89-cxxh",
+  "modified": "2026-03-26T03:30:28Z",
+  "published": "2026-03-26T03:30:28Z",
+  "aliases": [
+    "CVE-2026-4833"
+  ],
+  "details": "A weakness has been identified in Orc discount up to 3.0.1.2. This issue affects the function compile of the file markdown.c of the component Markdown Handler. This manipulation causes uncontrolled recursion. The attack is restricted to local execution. The exploit has been made available to the public and could be used for attacks. The project maintainer confirms: \"[I]f you feed it an infinitely deep blockquote input it will crash. (...) [T]his is a duplicate of an old bug that I've been working on.\"",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4833"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Orc/discount/issues/305"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Orc/discount/issues/305#issuecomment-4027546673"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Orc/discount"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/user-attachments/files/25847391/crash00.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.353138"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.353138"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.775841"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-404"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-26T02:16:08Z"
+  }
+}
