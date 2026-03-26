@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qj4q-79hc-9854",
+  "modified": "2026-03-26T00:30:55Z",
+  "published": "2026-03-26T00:30:55Z",
+  "aliases": [
+    "CVE-2026-4823"
+  ],
+  "details": "A flaw has been found in Enter Software Iperius Backup up to 8.7.3. Affected by this vulnerability is an unknown functionality of the component NTLM2 Handler. Executing a manipulation can lead to information disclosure. The attack is restricted to local execution. Attacks of this nature are highly complex. The exploitation appears to be difficult. The exploit has been published and may be used. Upgrading to version 8.7.4 addresses this issue. Upgrading the affected component is advised. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4823"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/0truust/iperius-backup-security-advisories/blob/main/advisories/ntlm-relay-credential-exposure.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.353123"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.353123"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.774218"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.iperiusbackup.com/download-software-backup.aspx"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-25T22:16:19Z"
+  }
+}
