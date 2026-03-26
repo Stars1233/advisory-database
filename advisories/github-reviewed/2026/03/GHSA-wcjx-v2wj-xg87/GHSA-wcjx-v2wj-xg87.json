@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wcjx-v2wj-xg87",
+  "modified": "2026-03-26T22:27:12Z",
+  "published": "2026-03-26T22:27:12Z",
+  "aliases": [],
+  "summary": "C2C CI utils is vulnerable to DoS via pyasn dependency (CVE-2026-30922)",
+  "details": "Pin vulnerable version of pyasn, see: See: https://github.com/advisories/GHSA-jr27-m4p2-rc6r",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "c2cciutils"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.1.66"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 1.1.65"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/camptocamp/c2cciutils/security/advisories/GHSA-wcjx-v2wj-xg87"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/camptocamp/c2cciutils/commit/1ab415014817d7d1cf09ad56cc8a7dec2a1108d8"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/camptocamp/c2cciutils"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1395",
+      "CWE-674"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-26T22:27:12Z",
+    "nvd_published_at": null
+  }
+}
