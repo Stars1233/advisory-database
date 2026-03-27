@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vj2p-7pgw-g2wf",
+  "modified": "2026-03-27T15:46:53Z",
+  "published": "2026-03-27T15:46:53Z",
+  "aliases": [],
+  "summary": "Postiz App has a High-Severity SSRF Vulnerability via Next.js",
+  "details": "### Impact\nA successful SSRF attack allows an attacker to:\n- Bypass firewalls to scan and interact with internal network services/ports.\n- Access sensitive cloud metadata services (e.g., AWS IMDS 169.254.169.254) to potentially leak instance credentials.\n- Pivot into the internal network environment where Postiz is hosted.\n\n### Workarounds\nThere are no workarounds known to this, please upgrade to Postiz version `v2.21.1`.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "postiz"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2.0.12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/gitroomhq/postiz-app/security/advisories/GHSA-vj2p-7pgw-g2wf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-fr5h-rqp8-mj6g"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34351"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/gitroomhq/postiz-app"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1395",
+      "CWE-918"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-27T15:46:53Z",
+    "nvd_published_at": null
+  }
+}
