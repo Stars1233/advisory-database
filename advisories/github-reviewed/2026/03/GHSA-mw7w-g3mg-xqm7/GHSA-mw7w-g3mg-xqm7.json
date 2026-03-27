@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mw7w-g3mg-xqm7",
+  "modified": "2026-03-27T22:32:06Z",
+  "published": "2026-03-27T22:32:06Z",
+  "aliases": [],
+  "summary": "OpenClaw: BlueBubbles Group Reactions Bypass requireMention and Still Enqueue Agent-Visible System Events",
+  "details": "## Summary\n\nBlueBubbles Group Reactions Bypass requireMention and Still Enqueue Agent-Visible System Events\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Affected versions: `<= 2026.3.24`\n- First patched version: `2026.3.25`\n- Latest published npm version at verification time: `2026.3.24`\n\n## Details\n\nBlueBubbles group reaction events previously bypassed `requireMention` and still enqueued agent-visible system events in groups that were supposed to stay mention-gated. Commit `f8c98630785288cc1f1d0893503ef3b653a3cede` applies the reaction path to the same mention gate as normal group messages.\n\nVerified vulnerable on tag `v2026.3.24` and fixed on `main` by commit `f8c98630785288cc1f1d0893503ef3b653a3cede`.\n\n## Fix Commit(s)\n\n- `f8c98630785288cc1f1d0893503ef3b653a3cede`",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "openclaw"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2026.3.24"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mw7w-g3mg-xqm7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openclaw/openclaw/commit/f8c98630785288cc1f1d0893503ef3b653a3cede"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/openclaw/openclaw"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-288",
+      "CWE-863"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-27T22:32:06Z",
+    "nvd_published_at": null
+  }
+}
