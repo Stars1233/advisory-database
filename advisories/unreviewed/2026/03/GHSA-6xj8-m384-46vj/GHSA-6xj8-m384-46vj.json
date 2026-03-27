@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6xj8-m384-46vj",
+  "modified": "2026-03-27T21:31:37Z",
+  "published": "2026-03-27T21:31:37Z",
+  "aliases": [
+    "CVE-2026-4973"
+  ],
+  "details": "A vulnerability was detected in SourceCodester Online Quiz System hasta 1.0. Affected by this vulnerability is an unknown functionality of the file endpoint/add-question.php. Performing a manipulation of the argument quiz_question results in cross site scripting. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4973"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/Mohdanass/5992b65cca5612c036f1d31d8d8f0646"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.353860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.353860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.778101"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sourcecodester.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-27T20:16:38Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v9x5-p5rr-wxmv",
+  "modified": "2026-03-27T21:31:37Z",
+  "published": "2026-03-27T21:31:37Z",
+  "aliases": [
+    "CVE-2026-4971"
+  ],
+  "details": "A weakness has been identified in SourceCodester Note Taking App up to 1.0. This impacts an unknown function. This manipulation causes cross-site request forgery. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. If you want to get best quality of vulnerability data, you may have to visit VulDB.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4971"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/Mohdanass/b7c5984922238397d10644f5f33ec592"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.353858"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.353858"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.777877"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sourcecodester.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-27T20:16:37Z"
+  }
+}

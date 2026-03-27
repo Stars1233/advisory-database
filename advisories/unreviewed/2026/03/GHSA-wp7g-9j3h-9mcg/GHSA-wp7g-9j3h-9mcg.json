@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wp7g-9j3h-9mcg",
+  "modified": "2026-03-27T21:31:35Z",
+  "published": "2026-03-27T21:31:35Z",
+  "aliases": [
+    "CVE-2025-15612"
+  ],
+  "details": "Wazuh provisioning scripts and Dockerfiles contain an insecure transport vulnerability where curl is invoked with the -k/--insecure flag, disabling SSL/TLS certificate validation. Attackers with network access can perform man-in-the-middle attacks to intercept and modify downloaded dependencies or code during the build process, leading to remote code execution and supply chain compromise.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/wazuh/wazuh/security/advisories/GHSA-wvg9-7q49-c7mg"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15612"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/various-uses-of-curl-without-verifying-the-authenticity-of-the-ssl-certificate-leading-to-mitm-rce-in-build-infrastructure"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-295"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-27T19:16:41Z"
+  }
+}
