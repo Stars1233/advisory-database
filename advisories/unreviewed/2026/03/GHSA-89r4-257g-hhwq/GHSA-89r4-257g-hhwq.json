@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-89r4-257g-hhwq",
+  "modified": "2026-03-28T15:32:01Z",
+  "published": "2026-03-28T15:32:01Z",
+  "aliases": [
+    "CVE-2026-4998"
+  ],
+  "details": "A weakness has been identified in Sinaptik AI PandasAI up to 3.0.0. This vulnerability affects the function CodeExecutor.execute of the file pandasai/core/code_execution/code_executor.py of the component Chat Message Handler. Executing a manipulation can lead to code injection. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4998"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/YLChen-007/78ed1dbcccdb8895adb230dddde3316d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/778270"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/353885"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/353885/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-28T14:15:58Z"
+  }
+}
