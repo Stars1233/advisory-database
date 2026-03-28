@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gf8v-vm5f-44rx",
+  "modified": "2026-03-28T18:30:19Z",
+  "published": "2026-03-28T18:30:19Z",
+  "aliases": [
+    "CVE-2026-5002"
+  ],
+  "details": "A vulnerability has been found in PromtEngineer localGPT up to 4d41c7d1713b16b216d8e062e51a5dd88b20b054. The impacted element is the function _route_using_overviews of the file backend/server.py of the component LLM Prompt Handler. Such manipulation leads to injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5002"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/August829/CVEP/issues/9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/779122"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/353889"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/353889/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-28T17:16:45Z"
+  }
+}
