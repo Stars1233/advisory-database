@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mhrg-94vw-45c5",
+  "modified": "2026-03-29T15:33:25Z",
+  "published": "2026-03-27T06:31:43Z",
+  "aliases": [
+    "CVE-2026-22742"
+  ],
+  "summary": "Spring AI: Insufficient Validation causes SSRF when processing multimodal messages with user-supplied URLs",
+  "details": "Spring AI's spring-ai-bedrock-converse contains a Server-Side Request Forgery (SSRF) vulnerability in BedrockProxyChatModel when processing multimodal messages that include user-supplied media URLs. Insufficient validation of those URLs allows an attacker to induce the server to issue HTTP requests to unintended internal or external destinations.\n\nThis issue affects Spring AI: from 1.0.0 before 1.0.5, from 1.1.0 before 1.1.4.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.ai:spring-ai-bedrock-converse"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0-M5"
+            },
+            {
+              "fixed": "1.0.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.ai:spring-ai-bedrock-converse"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.1.0-M1"
+            },
+            {
+              "fixed": "1.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22742"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/spring-projects/spring-ai/commit/a7d3223bc11a010b93fbc40a17fa9b68c52a8118"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/spring-projects/spring-ai"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/spring-projects/spring-ai/releases/tag/v1.0.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/spring-projects/spring-ai/releases/tag/v1.1.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://spring.io/security/cve-2026-22742"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-29T15:33:25Z",
+    "nvd_published_at": "2026-03-27T06:16:37Z"
+  }
+}
