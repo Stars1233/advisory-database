@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qvhx-mc2j-pvc4",
+  "modified": "2026-03-30T18:31:17Z",
+  "published": "2026-03-30T18:31:17Z",
+  "aliases": [
+    "CVE-2026-34472"
+  ],
+  "details": "Unauthenticated credential disclosure in the wizard interface in ZTE ZXHN H188A V6.0.10P2_TE and V6.0.10P3N3_TE allows unauthenticated attackers on the local network to retrieve sensitive credentials from the router's web management interface, including the default administrator password, WLAN PSK, and PPPoE credentials. In some observed cases, configuration changes may also be performed without authentication.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34472"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/minanagehsalalma/7a8516b9b00d0008f2f25750320560c9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.zte.com.cn/global"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T16:16:07Z"
+  }
+}

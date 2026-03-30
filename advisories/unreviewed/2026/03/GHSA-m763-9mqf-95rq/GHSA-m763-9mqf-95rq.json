@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m763-9mqf-95rq",
+  "modified": "2026-03-30T18:31:18Z",
+  "published": "2026-03-30T18:31:17Z",
+  "aliases": [
+    "CVE-2026-5123"
+  ],
+  "details": "A weakness has been identified in osrg GoBGP up to 4.3.0. This impacts the function DecodeFromBytes of the file pkg/packet/bgp/bgp.go. Executing a manipulation of the argument data[1] can lead to off-by-one. The attack may be launched remotely. Attacks of this nature are highly complex. The exploitability is said to be difficult. This patch is called 67c059413470df64bc20801c46f64058e88f800f. A patch should be applied to remediate this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5123"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/osrg/gobgp/pull/3342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/osrg/gobgp/commit/67c059413470df64bc20801c46f64058e88f800f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/osrg/gobgp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/780179"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354155"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354155/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T16:16:10Z"
+  }
+}
