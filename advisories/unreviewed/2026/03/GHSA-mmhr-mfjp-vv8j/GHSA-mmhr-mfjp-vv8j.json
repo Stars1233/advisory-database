@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mmhr-mfjp-vv8j",
+  "modified": "2026-03-30T15:32:05Z",
+  "published": "2026-03-30T15:32:05Z",
+  "aliases": [
+    "CVE-2026-4266"
+  ],
+  "details": "An Insecure Deserialization vulnerability in WatchGuard Fireware OS allows an attacker that has obtained write access to the local filesystem through another vulnerability to execute arbitrary code in the context of the portald user.This issue affects Fireware OS: 12.1 through 12.11.8 and 2025.1 through 2026.1.2.\n\nNote, this vulnerability does not affect Firebox platforms that do not support the Access Portal feature, including the T-15 and T-35.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4266"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.watchguard.com/wgrd-psirt/advisory/wgsa-2026-00007"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T13:16:22Z"
+  }
+}

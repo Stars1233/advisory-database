@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vj73-h4qp-97x2",
+  "modified": "2026-03-30T15:32:07Z",
+  "published": "2026-03-30T15:32:07Z",
+  "aliases": [
+    "CVE-2026-5122"
+  ],
+  "details": "A security flaw has been discovered in osrg GoBGP up to 4.3.0. This affects the function DecodeFromBytes of the file pkg/packet/bgp/bgp.go of the component BGP OPEN Message Handler. Performing a manipulation of the argument domainNameLen results in improper access controls. The attack may be initiated remotely. A high degree of complexity is needed for the attack. The exploitability is reported as difficult. The patch is named 2b09db390a3d455808363c53e409afe6b1b86d2d. It is suggested to install a patch to address this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5122"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/osrg/gobgp/pull/3343"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/osrg/gobgp/commit/2b09db390a3d455808363c53e409afe6b1b86d2d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/osrg/gobgp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/780124"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354154"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354154/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-266"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T15:16:35Z"
+  }
+}

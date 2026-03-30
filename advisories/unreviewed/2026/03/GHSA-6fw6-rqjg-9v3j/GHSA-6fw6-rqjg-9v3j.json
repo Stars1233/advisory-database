@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6fw6-rqjg-9v3j",
+  "modified": "2026-03-30T15:32:07Z",
+  "published": "2026-03-30T15:32:07Z",
+  "aliases": [
+    "CVE-2026-5165"
+  ],
+  "details": "A flaw was found in virtio-win, specifically within the VirtIO Block (BLK) device. When the device undergoes a reset, it fails to properly manage memory, resulting in a use-after-free vulnerability. This issue could allow a local attacker to corrupt system memory, potentially leading to system instability or unexpected behavior.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5165"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/virtio-win/kvm-guest-drivers-windows/pull/1493"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-5165"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2453015"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-825"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T15:16:36Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g6wp-9j53-v66x",
+  "modified": "2026-03-30T15:32:06Z",
+  "published": "2026-03-30T15:32:06Z",
+  "aliases": [
+    "CVE-2026-28528"
+  ],
+  "details": "BlueKitchen BTstack versions prior to 1.8.1 contain an out-of-bounds read vulnerability in the AVRCP Browsing Target GET_FOLDER_ITEMS handler that fails to validate packet boundaries and attribute count data. An attacker with a paired Bluetooth Classic connection can exploit insufficient bounds checking on the attr_id parameter to cause crashes and corrupt attribute bitmap state.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28528"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/bluekitchen/btstack/releases/tag/v1.8.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/bluekitchen-btstack-avrcp-browsing-target-get-folder-items-handler-oob-read-undefined-behavior"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T14:16:35Z"
+  }
+}
