@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mv2c-2q2x-3x5v",
+  "modified": "2026-03-30T12:32:26Z",
+  "published": "2026-03-30T12:32:26Z",
+  "aliases": [
+    "CVE-2018-25226"
+  ],
+  "details": "FTPShell Server 6.83 contains a buffer overflow vulnerability that allows local attackers to crash the application by supplying an excessively long string in the account name field. Attackers can trigger a denial of service by pasting a 417-byte payload into the 'Account name to ban' parameter within the Manage FTP Accounts interface.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25226"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46430"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ftpshell-server-denial-of-service-via-account-name"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.ftpshell.com/downloadserver.htm"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.ftpshell.com/index.htm"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T12:16:15Z"
+  }
+}
