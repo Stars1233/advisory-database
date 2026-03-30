@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x497-46w3-2gh7",
+  "modified": "2026-03-30T09:31:28Z",
+  "published": "2026-03-30T09:31:28Z",
+  "aliases": [
+    "CVE-2026-4416"
+  ],
+  "details": "The Performance Library component of Gigabyte Control Center has an Insecure Deserialization vulnerability. Authenticated local attackers can send a malicious serialized payload to the EasyTune Engine service, resulting in privilege escalation.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4416"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.twcert.org.tw/en/cp-139-10806-fbc4a-2.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.twcert.org.tw/tw/cp-132-10805-a53f6-1.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-30T08:16:18Z"
+  }
+}
