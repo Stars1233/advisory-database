@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mq38-9qw3-63h6",
+  "modified": "2026-03-31T15:31:56Z",
+  "published": "2026-03-31T15:31:56Z",
+  "aliases": [
+    "CVE-2026-4799"
+  ],
+  "details": "In Search Guard FLX up to version 4.0.1, it is possible to use specially crafted requests to redirect the user to an untrusted URL.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4799"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.search-guard.com/latest/changelog-searchguard-flx-4_1_0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://search-guard.com/cve-advisory"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-03-31T15:16:21Z"
+  }
+}
