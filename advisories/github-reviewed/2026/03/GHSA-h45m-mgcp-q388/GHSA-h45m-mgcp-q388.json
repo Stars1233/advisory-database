@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h45m-mgcp-q388",
+  "modified": "2026-03-31T23:41:26Z",
+  "published": "2026-03-31T23:41:26Z",
+  "aliases": [],
+  "summary": "openssl-encrypt: TOTP rate limiter is in-memory only — not shared across workers, lost on restart",
+  "details": "## Severity: HIGH\n\n### Summary\n\nThe TOTP brute-force rate limiter in `openssl_encrypt_server/modules/pepper/totp.py` at **lines 47-98** uses an in-memory `defaultdict(list)` as a class variable.\n\n### Affected Code\n\n```python\nclass TOTPRateLimiter:\n    def __init__(self, ...):\n        self.attempts: Dict[str, List[datetime]] = defaultdict(list)\n        self.lockouts: Dict[str, datetime] = {}\n\nclass TOTPService:\n    _rate_limiter = TOTPRateLimiter()  # Class variable, in-memory only\n```\n\n### Impact\n\n1. Rate limit state is **not shared** across multiple server instances/workers — an attacker can distribute attempts\n2. All rate limit state is **lost on server restart** — allows immediate retry\n3. In multi-worker deployments, each worker has independent rate limit state\n\n### Recommended Fix\n\n- Use Redis or the database for rate limit state storage\n- Or use a shared-memory approach for multi-worker deployments\n- At minimum, persist lockout state to survive restarts\n\n### Fix\n\nFixed in commit `2749bc0` on branch `releases/1.4.x` — added abstract RateLimitBackend with InMemoryBackend and DatabaseBackend implementations; defaults to DatabaseBackend when DB available.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "openssl-encrypt"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-h45m-mgcp-q388"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jahlives/openssl_encrypt/commit/2749bc0949b34a5921a35fb4a3f1856fc51916de"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/jahlives/openssl_encrypt"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-03-31T23:41:26Z",
+    "nvd_published_at": null
+  }
+}
