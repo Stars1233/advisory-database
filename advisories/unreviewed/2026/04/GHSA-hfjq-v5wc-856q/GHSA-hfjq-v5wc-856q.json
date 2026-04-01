@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hfjq-v5wc-856q",
+  "modified": "2026-04-01T03:31:40Z",
+  "published": "2026-04-01T03:31:40Z",
+  "aliases": [
+    "CVE-2026-3778"
+  ],
+  "details": "The application does not detect or guard against cyclic PDF object references while handling JavaScript in PDF. When pages and annotations are crafted that reference each other in a loop, passing the document to APIs (e.g., SOAP) that perform deep traversal can cause uncontrolled recursion, stack exhaustion, and application crashes.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.foxit.com/support/security-bulletins.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-674"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-01T02:16:02Z"
+  }
+}

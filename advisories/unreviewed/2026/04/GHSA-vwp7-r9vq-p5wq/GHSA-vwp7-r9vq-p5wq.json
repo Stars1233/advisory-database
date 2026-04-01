@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vwp7-r9vq-p5wq",
+  "modified": "2026-04-01T03:31:40Z",
+  "published": "2026-04-01T03:31:40Z",
+  "aliases": [
+    "CVE-2026-5251"
+  ],
+  "details": "A vulnerability was identified in z-9527 admin 1.0/2.0. This impacts an unknown function of the file /server/routes/user.js of the component User Update Endpoint. Such manipulation of the argument isAdmin with the input 1 leads to dynamically-determined object attributes. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5251"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/z9527-admin/vulnerability-11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/780607"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354441"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354441/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-913"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-01T03:15:59Z"
+  }
+}

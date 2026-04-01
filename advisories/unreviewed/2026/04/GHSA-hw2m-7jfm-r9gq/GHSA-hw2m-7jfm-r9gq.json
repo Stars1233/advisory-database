@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hw2m-7jfm-r9gq",
+  "modified": "2026-04-01T03:31:40Z",
+  "published": "2026-04-01T03:31:40Z",
+  "aliases": [
+    "CVE-2026-4947"
+  ],
+  "details": "Addressed a potential insecure direct object reference (IDOR) vulnerability in the signing invitation acceptance process. Under certain conditions, this issue could have allowed an attacker to access or modify unauthorized resources by manipulating user-supplied object identifiers, potentially leading to forged signatures and compromising the integrity and authenticity of documents undergoing the signing process. The issue was caused by insufficient authorization validation on referenced resources during request processing.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4947"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.foxit.com/support/security-bulletins.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-01T02:16:03Z"
+  }
+}
