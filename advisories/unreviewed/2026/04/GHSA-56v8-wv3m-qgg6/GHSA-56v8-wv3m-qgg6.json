@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-56v8-wv3m-qgg6",
+  "modified": "2026-04-01T21:30:30Z",
+  "published": "2026-04-01T21:30:30Z",
+  "aliases": [
+    "CVE-2025-66442"
+  ],
+  "details": "In Mbed TLS through 4.0.0, there is a compiler-induced timing side channel (in RSA and CBC/ECB decryption) that only occurs with LLVM's select-optimize feature. TF-PSA-Crypto through 1.0.0 is also affected.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66442"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Mbed-TLS/TF-PSA-Crypto/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Mbed-TLS/mbedtls/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mbed-tls.readthedocs.io/en/latest/security-advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-compiler-induced-constant-time-violations"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-385"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-01T20:16:22Z"
+  }
+}
