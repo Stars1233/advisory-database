@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qc22-xmq4-qg46",
+  "modified": "2026-04-01T20:47:06Z",
+  "published": "2026-04-01T20:47:06Z",
+  "aliases": [],
+  "summary": "c2cciutils affected by CVE-2022-40896 ",
+  "details": "Pinned vulnerable version of Pygment [CVE-2022-40896](https://nvd.nist.gov/vuln/detail/CVE-2022-40896)",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "c2cciutils"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.1.67"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 1.1.66"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/camptocamp/c2cciutils/security/advisories/GHSA-qc22-xmq4-qg46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/camptocamp/c2cciutils/commit/9d54eab73fcf24d492b339137040400da7ef4076"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/advisories/GHSA-mrwq-x4v8-fh7p"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/camptocamp/c2cciutils"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-01T20:47:06Z",
+    "nvd_published_at": null
+  }
+}
