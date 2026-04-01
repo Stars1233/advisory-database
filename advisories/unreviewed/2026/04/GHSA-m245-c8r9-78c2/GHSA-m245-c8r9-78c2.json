@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m245-c8r9-78c2",
+  "modified": "2026-04-01T09:31:28Z",
+  "published": "2026-04-01T09:31:28Z",
+  "aliases": [
+    "CVE-2026-5261"
+  ],
+  "details": "A vulnerability was identified in Shandong Hoteam InforCenter PLM up to 8.3.8. The impacted element is the function uploadFileToIIS of the file /Base/BaseHandler.ashx. The manipulation of the argument File leads to unrestricted upload. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5261"
+    },
+    {
+      "type": "WEB",
+      "url": "https://my.feishu.cn/docx/ToGkdd5jwokb4PxEMkHcKrfXn3b?from=from_copylink"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/780725"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354450"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354450/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-01T09:16:17Z"
+  }
+}
