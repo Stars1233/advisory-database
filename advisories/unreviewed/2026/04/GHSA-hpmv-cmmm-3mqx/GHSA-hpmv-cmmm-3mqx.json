@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hpmv-cmmm-3mqx",
+  "modified": "2026-04-02T21:32:52Z",
+  "published": "2026-04-02T21:32:52Z",
+  "aliases": [
+    "CVE-2024-44303"
+  ],
+  "details": "The issue was addressed with improved checks. This issue is fixed in macOS Sequoia 15.1. A malicious application may be able to modify protected parts of the file system.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-44303"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/121564"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T19:18:38Z"
+  }
+}

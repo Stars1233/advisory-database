@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fw24-mh6x-62vp",
+  "modified": "2026-04-02T21:32:54Z",
+  "published": "2026-04-02T21:32:54Z",
+  "aliases": [
+    "CVE-2026-5420"
+  ],
+  "details": "A security flaw has been discovered in Shinrays Games Goods Triple App up to 1.200. The affected element is an unknown function of the file jRwTX.java of the component cats.goods.sort.sorting.games. Performing a manipulation of the argument AES_IV/AES_PASSWORD results in use of hard-coded cryptographic key\n . Attacking locally is a requirement. The complexity of an attack is rather high. The exploitability is described as difficult. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5420"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/781740"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354856"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354856/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/Exposed-Cryptographic-Key-and-IV-in-cats-goods-sort-sorting-games-3262de3f97fb801499ebc3dfd56e232e?source=copy_link"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T20:16:29Z"
+  }
+}

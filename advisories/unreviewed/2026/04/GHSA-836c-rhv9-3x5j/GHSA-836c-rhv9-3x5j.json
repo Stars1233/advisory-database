@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-836c-rhv9-3x5j",
+  "modified": "2026-04-02T21:32:53Z",
+  "published": "2026-04-02T21:32:52Z",
+  "aliases": [
+    "CVE-2025-43210"
+  ],
+  "details": "An out-of-bounds access issue was addressed with improved bounds checking. This issue is fixed in iOS 18.6 and iPadOS 18.6, iPadOS 17.7.9, macOS Sequoia 15.6, macOS Sonoma 14.7.7, macOS Ventura 13.7.7, tvOS 18.6, visionOS 2.6, watchOS 11.6. Processing a maliciously crafted media file may lead to unexpected app termination or corrupt process memory.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43210"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124147"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124148"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124149"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124150"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124151"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124153"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124154"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124155"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T19:20:05Z"
+  }
+}

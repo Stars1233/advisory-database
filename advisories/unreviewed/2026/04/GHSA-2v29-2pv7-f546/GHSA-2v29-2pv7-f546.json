@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2v29-2pv7-f546",
+  "modified": "2026-04-02T21:32:53Z",
+  "published": "2026-04-02T21:32:53Z",
+  "aliases": [
+    "CVE-2026-5417"
+  ],
+  "details": "A vulnerability was determined in Dataease SQLbot up to 1.6.0. This issue affects the function get_es_data_by_http of the file backend/apps/db/es_engine.py of the component Elasticsearch Handler. This manipulation of the argument address causes server-side request forgery. The attack may be initiated remotely. The exploit has been publicly disclosed and may be utilized. Upgrading to version 1.7.0 is capable of addressing this issue. You should upgrade the affected component. The vendor was contacted early about this disclosure.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5417"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/dataease/SQLBot/releases/tag/v1.7.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/756043"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354854"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354854/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/SQLbot-SSRF-in-Elasticsearch-Unvalidated-Requests-2afea92a3c4180bea524f1a253f8d9a0"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T19:21:36Z"
+  }
+}

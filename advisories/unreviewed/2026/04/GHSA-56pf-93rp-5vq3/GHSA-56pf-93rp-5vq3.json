@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-56pf-93rp-5vq3",
+  "modified": "2026-04-02T21:32:52Z",
+  "published": "2026-04-02T21:32:52Z",
+  "aliases": [
+    "CVE-2025-43257"
+  ],
+  "details": "This issue was addressed with improved handling of symlinks. This issue is fixed in macOS Sequoia 15.6. An app may be able to break out of its sandbox.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43257"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/124149"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-59"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T19:20:15Z"
+  }
+}

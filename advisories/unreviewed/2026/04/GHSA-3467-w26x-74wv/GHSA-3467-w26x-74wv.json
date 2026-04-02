@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3467-w26x-74wv",
+  "modified": "2026-04-02T21:32:54Z",
+  "published": "2026-04-02T21:32:53Z",
+  "aliases": [
+    "CVE-2026-35383"
+  ],
+  "details": "Bentley Systems iTwin Platform exposed a Cesium ion access token in the source of some web pages. An unauthenticated attacker could use this token to enumerate or delete certain assets. As of 2026-03-27, the token is no longer present in the web pages and cannot be used to enumerate or delete assets.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35383"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cesium.com/learn/ion/cesium-ion-access-tokens"
+    },
+    {
+      "type": "WEB",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-092-01.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-35383"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-540"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T20:16:29Z"
+  }
+}

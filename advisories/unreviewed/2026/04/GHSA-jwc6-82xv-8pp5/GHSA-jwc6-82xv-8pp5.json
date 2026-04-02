@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jwc6-82xv-8pp5",
+  "modified": "2026-04-02T21:32:53Z",
+  "published": "2026-04-02T21:32:53Z",
+  "aliases": [
+    "CVE-2026-5418"
+  ],
+  "details": "A vulnerability was identified in appsmithorg appsmith up to 1.97. Impacted is the function computeDisallowedHosts of the file app/server/appsmith-interfaces/src/main/java/com/appsmith/util/WebClientUtils.java of the component Dashboard. Such manipulation leads to server-side request forgery. The attack may be launched remotely. The exploit is publicly available and might be used. Upgrading to version 1.99 is recommended to address this issue. The affected component should be upgraded. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/security/advisories/GHSA-9m89-5jw7-q5cr"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5418"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/780190"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354855"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354855/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T19:21:36Z"
+  }
+}
