@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-95rp-mv97-7vqq",
+  "modified": "2026-04-02T06:31:16Z",
+  "published": "2026-04-02T06:31:16Z",
+  "aliases": [
+    "CVE-2026-5322"
+  ],
+  "details": "A vulnerability has been found in AlejandroArciniegas mcp-data-vis bc597e391f184d2187062fd567599a3cb72adf51/de5a51525a69822290eaee569a1ab447b490746d. This affects the function Request of the file src/servers/database/server.js of the component MCP Handler. The manipulation leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5322"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/wing3e/public_exp/issues/19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/780731"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354654"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/354654/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-02T06:16:23Z"
+  }
+}
