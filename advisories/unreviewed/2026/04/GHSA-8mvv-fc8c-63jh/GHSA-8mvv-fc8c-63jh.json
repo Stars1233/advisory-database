@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8mvv-fc8c-63jh",
+  "modified": "2026-04-03T09:30:16Z",
+  "published": "2026-04-03T09:30:16Z",
+  "aliases": [
+    "CVE-2026-5455"
+  ],
+  "details": "A vulnerability was determined in Dialogue App up to 4.3.2 on Android. The affected element is an unknown function of the file file res/raw/config.json of the component ca.diagram.dialogue. Executing a manipulation of the argument SEGMENT_WRITE_KEY can lead to use of hard-coded cryptographic key\n . The attack is restricted to local execution. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5455"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/781761"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355043"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355043/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/Segment-Write-Key-Exposure-Leading-to-Data-Injection-and-User-Profile-Manipulation-In-ca-diagram-dia-3262de3f97fb802fb5f0d2c9d179dcf6?source=copy_link"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T07:16:20Z"
+  }
+}

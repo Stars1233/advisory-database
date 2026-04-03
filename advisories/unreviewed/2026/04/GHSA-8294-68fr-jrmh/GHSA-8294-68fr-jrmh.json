@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8294-68fr-jrmh",
+  "modified": "2026-04-03T09:30:16Z",
+  "published": "2026-04-03T09:30:16Z",
+  "aliases": [
+    "CVE-2026-5462"
+  ],
+  "details": "A vulnerability was identified in Wahoo Fitness SYSTM App up to 7.2.1 on Android. Impacted is an unknown function of the file com/WahooFitness/SYSTM/BuildConfig.java of the component com.WahooFitness.SYSTM. Such manipulation of the argument SEGMENT_WRITE_KEY leads to use of hard-coded cryptographic key\n . Local access is required to approach this attack. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5462"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/781767"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355053"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355053/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/Segment-Write-Key-Exposure-Leading-to-Data-Injection-and-User-Profile-Manipulation-In-com-WahooFitne-3262de3f97fb8038808eed63af1a48b8?source=copy_link"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T08:16:17Z"
+  }
+}

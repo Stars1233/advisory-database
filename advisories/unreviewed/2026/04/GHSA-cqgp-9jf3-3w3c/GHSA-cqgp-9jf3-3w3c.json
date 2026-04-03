@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cqgp-9jf3-3w3c",
+  "modified": "2026-04-03T09:30:16Z",
+  "published": "2026-04-03T09:30:16Z",
+  "aliases": [
+    "CVE-2026-5456"
+  ],
+  "details": "A vulnerability was identified in Align Technology My Invisalign App 3.12.4 on Android. The impacted element is an unknown function of the file com/aligntech/myinvisalign/BuildConfig.java of the component com.aligntech.myinvisalign.emea. The manipulation of the argument CDAACCESS_TOKEN leads to use of hard-coded cryptographic key\n . The attack must be carried out locally. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5456"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/781763"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355044"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355044/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.notion.so/Contentful-CDA-Tokens-Exposure-Leading-to-Unauthorized-Access-to-Master-and-Release-Environments-in--3262de3f97fb802ebd1af88e1264cb9f?source=copy_link"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T07:16:20Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mw98-2gv2-mp63",
+  "modified": "2026-04-03T09:30:16Z",
+  "published": "2026-04-03T09:30:16Z",
+  "aliases": [
+    "CVE-2025-7024"
+  ],
+  "details": "Incorrect Default Permissions vulnerability in AIRBUS PSS TETRA Connectivity Server on Windows Server OS allows Privilege Abuse.\n\n\nAn attacker may execute arbitrary code with SYSTEM privileges if a user is tricked or directed to place a crafted file into the vulnerable directory.\n\nThis issue affects TETRA connectivity Server: 7.0.\n\n\nVulnerability fix is available and delivered to impacted customers.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7024"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cwe.mitre.org/data/definitions/276.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-276"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T08:16:17Z"
+  }
+}
