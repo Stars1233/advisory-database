@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-58q2-7r52-jq62",
+  "modified": "2026-04-03T03:06:18Z",
+  "published": "2026-04-03T03:06:18Z",
+  "aliases": [],
+  "summary": "OpenClaw: Path traversal via inbound channel attachment path in ACP dispatch allows arbitrary file read",
+  "details": "## Summary\nPath traversal via inbound channel attachment path in ACP dispatch allows arbitrary file read\n\n## Current Maintainer Triage\n- Normalized severity: medium\n- Assessment: v2026.3.28 ACP dispatch still reads attachment paths outside the guarded attachment-cache or root checks, and the root-enforcement fix is not yet shipped.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Latest published npm version: `2026.3.31`\n- Vulnerable version range: `<=2026.3.28`\n- Patched versions: `>= 2026.3.31`\n- First stable tag containing the fix: `v2026.3.31`\n\n## Fix Commit(s)\n- `566fb73d9da2d73c0be0d9b8e5b762e4dcd8e81d` — 2026-03-30T14:04:02+01:00\n\nOpenClaw thanks @north-echo for reporting.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "openclaw"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.3.31"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 2026.3.28"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-58q2-7r52-jq62"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openclaw/openclaw/commit/566fb73d9da2d73c0be0d9b8e5b762e4dcd8e81d"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/openclaw/openclaw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.31"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-03T03:06:18Z",
+    "nvd_published_at": null
+  }
+}
