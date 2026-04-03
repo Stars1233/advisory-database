@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hhvx-m2m7-4wp8",
+  "modified": "2026-04-03T21:31:42Z",
+  "published": "2026-04-03T21:31:42Z",
+  "aliases": [
+    "CVE-2022-4987"
+  ],
+  "details": "Hirschmann Industrial HiVision version 08.1.03 prior to 08.1.04 and 08.2.00 contains a vulnerability in the execution of user-configured external applications that allows a local attacker to execute arbitrary binaries. Due to insufficient path sanitization, an attacker can place a malicious binary in the execution path of a configured external application, causing it to be executed instead of the intended application. This can result in execution with elevated privileges depending on the context of the external application.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4987"
+    },
+    {
+      "type": "WEB",
+      "url": "https://assets.belden.com/m/62ae167036cb17c3/original/Microsoft-Word-Belden_Security_Bulletin_BSECV-2021-03_1v0-002-docx.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/hirschmann-industrial-hivision-external-application-path-hijacking-leading-to-arbitrary-code-execution"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-426"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T21:17:08Z"
+  }
+}
