@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g5fc-f834-rcr2",
+  "modified": "2026-04-03T03:31:02Z",
+  "published": "2026-04-03T03:31:02Z",
+  "aliases": [
+    "CVE-2026-35535"
+  ],
+  "details": "In Sudo through 1.9.17p2 before 3e474c2, a failure of a setuid, setgid, or setgroups call, during a privilege drop before running the mailer, is not a fatal error and can lead to privilege escalation.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35535"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sudo-project/sudo/commit/3e474c2f201484be83d994ae10a4e20e8c81bb69"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugs.debian.org/1130593"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugs.launchpad.net/ubuntu/+source/sudo/+bug/2143042"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.qualys.com/2026/03/10/crack-armor.txt"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-271"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T03:16:18Z"
+  }
+}
