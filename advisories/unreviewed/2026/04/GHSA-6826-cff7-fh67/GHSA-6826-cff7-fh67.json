@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6826-cff7-fh67",
+  "modified": "2026-04-04T00:31:26Z",
+  "published": "2026-04-04T00:31:26Z",
+  "aliases": [
+    "CVE-2017-20235"
+  ],
+  "details": "ProSoft Technology ICX35-HWC version 1.3 and prior cellular gateways contain an authentication bypass vulnerability in the web user interface that allows unauthenticated attackers to gain access to administrative functions without valid credentials. Attackers can bypass the authentication mechanism in affected firmware versions to obtain full administrative access to device configuration and settings.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20235"
+    },
+    {
+      "type": "WEB",
+      "url": "https://assets.belden.com/m/1281cac2c9e90abf/original/Security-Bulletin-Authentication-Security-ProSoft-ICX35-BSECV-2017-09.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/prosoft-technology-icx35-hwc-authentication-bypass"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-287"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T23:17:00Z"
+  }
+}

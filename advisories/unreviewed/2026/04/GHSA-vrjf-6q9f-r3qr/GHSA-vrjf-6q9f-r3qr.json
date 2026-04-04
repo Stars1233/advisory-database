@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vrjf-6q9f-r3qr",
+  "modified": "2026-04-04T00:31:26Z",
+  "published": "2026-04-04T00:31:26Z",
+  "aliases": [
+    "CVE-2017-20234"
+  ],
+  "details": "GarrettCom Magnum 6K and 10K managed switches contain an authentication bypass vulnerability that allows unauthenticated attackers to gain unauthorized access by exploiting a hardcoded string in the authentication mechanism. Attackers can bypass login controls to access administrative functions and sensitive switch configuration without valid credentials.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20234"
+    },
+    {
+      "type": "WEB",
+      "url": "https://assets.belden.com/m/114be964b4651983/original/Security-Bulletin-MNS-6K-10K-GarrettCom-BSECV-2017-08.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/garrettcom-magnum-6k-and-10k-authentication-bypass-via-hardcoded-string"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-798"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T23:17:00Z"
+  }
+}

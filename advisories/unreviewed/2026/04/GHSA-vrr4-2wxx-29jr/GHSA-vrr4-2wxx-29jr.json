@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vrr4-2wxx-29jr",
+  "modified": "2026-04-04T00:31:26Z",
+  "published": "2026-04-04T00:31:26Z",
+  "aliases": [
+    "CVE-2018-25237"
+  ],
+  "details": "Hirschmann HiSecOS devices versions prior to 05.3.03 contain a buffer overflow vulnerability in the HTTPS login interface when RADIUS authentication is enabled that allows remote attackers to crash the device or execute arbitrary code by submitting a password longer than 128 characters. Attackers can exploit improper bounds checking in password handling to overflow a fixed-size buffer and achieve denial of service or remote code execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25237"
+    },
+    {
+      "type": "WEB",
+      "url": "https://assets.belden.com/m/2d5657b3e5d721c6/original/Security-Bulletin-RADIUS-Authentication-BSECV-2018-04.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/hirschmann-hisecos-buffer-overflow-via-https-login"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-120"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-03T22:16:24Z"
+  }
+}
