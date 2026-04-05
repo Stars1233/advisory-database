@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c36w-gwff-q62j",
+  "modified": "2026-04-05T03:30:23Z",
+  "published": "2026-04-05T03:30:23Z",
+  "aliases": [
+    "CVE-2026-5532"
+  ],
+  "details": "A vulnerability was found in ScrapeGraphAI scrapegraph-ai up to 1.74.0. The affected element is the function create_sandbox_and_execute of the file scrapegraphai/nodes/generate_code_node.py of the component GenerateCodeNode Component. The manipulation results in os command injection. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5532"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/August829/CVEP/issues/19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/782169"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355285"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355285/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-05T02:16:01Z"
+  }
+}
