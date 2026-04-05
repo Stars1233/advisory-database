@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vm3q-w7cc-43ff",
+  "modified": "2026-04-05T12:30:24Z",
+  "published": "2026-04-05T12:30:24Z",
+  "aliases": [
+    "CVE-2026-5557"
+  ],
+  "details": "A vulnerability was detected in badlogic pi-mono up to 0.58.4. This issue affects some unknown processing of the file packages/mom/src/slack.ts of the component pi-mom Slack Bot. The manipulation results in authentication bypass using alternate channel. The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5557"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/August829/CVEP/issues/28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/782879"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355327"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/355327/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-287"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-05T10:16:19Z"
+  }
+}
