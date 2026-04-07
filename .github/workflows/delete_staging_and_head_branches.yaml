@@ -16,7 +16,7 @@ jobs:
     if: ${{ !github.event.pull_request.head.repo.fork }}
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v4
+     - uses: actions/checkout@v6
      - name: Delete staging and head branches
        env:
          STAGING_BRANCH: ${{ github.event.pull_request.base.ref }}
