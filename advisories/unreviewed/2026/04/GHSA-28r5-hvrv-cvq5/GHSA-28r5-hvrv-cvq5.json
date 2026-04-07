@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-28r5-hvrv-cvq5",
+  "modified": "2026-04-07T15:30:49Z",
+  "published": "2026-04-07T15:30:49Z",
+  "aliases": [
+    "CVE-2026-23818"
+  ],
+  "details": "A vulnerability has been identified in the graphical user interface (GUI) of HPE Aruba Networking Private 5G Core On-Prem that could allow an attacker to abuse an open redirect vulnerability in the login flow using a crafted URL. Successful exploitation may redirect an authenticated user to an attacker-controlled server hosting a spoofed login page prompting the unsuspecting victim to give away their credentials, which could then be captured by the attacker, before being redirected back to the legitimate login page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23818"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05032en_us&docLocale=en_US"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-07T13:16:45Z"
+  }
+}

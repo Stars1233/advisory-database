@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pqp2-x3gp-9g37",
+  "modified": "2026-04-07T15:30:52Z",
+  "published": "2026-04-07T15:30:52Z",
+  "aliases": [
+    "CVE-2026-5379"
+  ],
+  "details": "An issue that allowed MCP agents to access certificate information from outside of their authorized organization scope has been resolved. This is an instance of CWE-863: Incorrect Authorization, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:N/A:N (3.0 Low). This issue was fixed in version 4.0.260203.0 of the runZero Platform.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5379"
+    },
+    {
+      "type": "WEB",
+      "url": "https://help.runzero.com/docs/release-notes/#402602030"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.runzero.com/advisories/runzero-platform-mcp-cert-infoleak-cve-2026-5379"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-07T15:17:47Z"
+  }
+}

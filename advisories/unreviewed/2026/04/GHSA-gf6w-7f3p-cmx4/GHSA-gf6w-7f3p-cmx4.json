@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gf6w-7f3p-cmx4",
+  "modified": "2026-04-07T15:30:52Z",
+  "published": "2026-04-07T15:30:52Z",
+  "aliases": [
+    "CVE-2026-5376"
+  ],
+  "details": "An issue that could prevent session inactivity timeouts from triggering due to automatic page reloading has been resolved. This is an instance of CWE-613: Insufficient Control of Resources After Expiration or Release, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N (5.9 Medium). This issue was fixed in version 4.0.260203.0 of the runZero Platform.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5376"
+    },
+    {
+      "type": "WEB",
+      "url": "https://help.runzero.com/docs/release-notes/#402602030"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.runzero.com/advisories/runzero-platform-session-timeout-failure-cve-2026-5376"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-613"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-07T15:17:47Z"
+  }
+}
