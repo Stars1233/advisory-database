@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pq38-4mfg-vpxj",
+  "modified": "2026-04-07T21:32:39Z",
+  "published": "2026-04-07T21:32:39Z",
+  "aliases": [
+    "CVE-2025-14858"
+  ],
+  "details": "The Semtech LR11xx LoRa transceivers running early versions of firmware contains an information disclosure vulnerability in its firmware validation functionality. When a host issues a firmware validity check command via the SPI interface, the device decrypts the provided encrypted firmware package block-by-block to validate its integrity. However, the last decrypted firmware block remains uncleared in memory after the validation process completes. An attacker with access to the SPI interface can subsequently issue memory read commands to retrieve the decrypted firmware contents from this residual memory, effectively bypassing the firmware encryption protection mechanism. The attack requires physical access to the device's SPI interface.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:A/V:C/RE:M/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14858"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.semtech.com/company/security/security-bulletins/sem-psa-2026-001"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-226"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-07T20:16:22Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xjjj-2993-4g39",
+  "modified": "2026-04-07T21:32:39Z",
+  "published": "2026-04-07T21:32:39Z",
+  "aliases": [
+    "CVE-2025-14857"
+  ],
+  "details": "An improper access control vulnerability exists in Semtech LoRa LR11xxx transceivers running early versions of firmware where the memory write command accessible via the physical SPI interface fails to enforce write protection on the program call stack. An attacker with physical access to the SPI interface can overwrite stack memory to hijack program control flow and achieve limited arbitrary code execution. However, the impact is limited to the active attack session: the device's secure boot mechanism prevents persistent firmware modification, the crypto engine isolates cryptographic keys from direct firmware access, and all modifications are lost upon device reboot or loss of physical access.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:P/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:A/V:D/RE:M/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14857"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.semtech.com/company/security/security-bulletins/sem-psa-2026-001"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-123"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-07T20:16:21Z"
+  }
+}
