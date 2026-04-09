@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gfmx-pph7-g46x",
+  "modified": "2026-04-09T14:22:14Z",
+  "published": "2026-04-09T14:22:14Z",
+  "aliases": [],
+  "summary": "OpenClaw: Lower-trust background runtime output is injected into trusted `System:` events, and local async exec completion misses the intended `exec-event` downgrade",
+  "details": "## Impact\n\nLower-trust background runtime output is injected into trusted `System:` events, and local async exec completion misses the intended `exec-event` downgrade.\n\nLower-trust runtime/background output could be promoted into trusted System events, allowing prompt-injection into later agent turns.\n\nOpenClaw is a user-controlled local assistant. This advisory is scoped to the OpenClaw trust model and does not assume a multi-tenant service boundary.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.4.2`\n- Patched versions: `2026.4.8`\n\n## Fix\n\nThe issue was fixed on `main` and is available in the patched npm version listed above. The verified fixed tree is commit `d7c3210cd6f5fdfdc1beff4c9541673e814354d5`.\n\n## Verification\n\nThe fix was re-checked against `main` before publication, including targeted regression tests for the affected security boundary.\n\n## Credits\n\nThanks @tdjackey for reporting.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "openclaw"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.4.8"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 2026.4.2"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gfmx-pph7-g46x"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/openclaw/openclaw"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-501"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-09T14:22:14Z",
+    "nvd_published_at": null
+  }
+}
