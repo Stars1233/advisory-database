@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xhg5-7962-f335",
+  "modified": "2026-04-09T06:30:27Z",
+  "published": "2026-04-09T06:30:27Z",
+  "aliases": [
+    "CVE-2026-4429"
+  ],
+  "details": "The OSM – OpenStreetMap plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'marker_name' and 'file_color_list' shortcode attribute of the [osm_map_v3] shortcode in all versions up to and including 6.1.15. This is due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4429"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/tags/6.1.15/osm-icon-class.php#L347"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/tags/6.1.15/osm-icon-class.php#L356"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/tags/6.1.15/osm_map_v3/osm-sc-osm_map_v3.php#L31"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/tags/6.1.15/osm_map_v3/osm-sc-osm_map_v3.php#L560"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/trunk/osm-icon-class.php#L347"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/trunk/osm-icon-class.php#L356"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/trunk/osm_map_v3/osm-sc-osm_map_v3.php#L31"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/osm/trunk/osm_map_v3/osm-sc-osm_map_v3.php#L560"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3493950%40osm&new=3493950%40osm&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/65dffde9-2a50-41fe-bc21-3d0915068887?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-09T04:17:14Z"
+  }
+}

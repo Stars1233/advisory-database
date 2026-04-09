@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-883j-v822-6wwv",
+  "modified": "2026-04-09T06:30:28Z",
+  "published": "2026-04-09T06:30:28Z",
+  "aliases": [
+    "CVE-2026-5848"
+  ],
+  "details": "A vulnerability was found in jeecgboot JimuReport up to 2.3.0. The affected element is the function DriverManager.getConnection of the file /drag/onlDragDataSource/testConnection of the component Data Source Handler. Performing a manipulation of the argument dbUrl results in code injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor confirmed the issue and will provide a fix in the upcoming release.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/jimureport/issues/4587"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/jimureport/issues/4587#issuecomment-4152596778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/jimureport"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/790769"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356374"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356374/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-09T06:16:23Z"
+  }
+}
