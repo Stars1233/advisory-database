@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-92wx-pxch-p9px",
+  "modified": "2026-04-09T00:31:59Z",
+  "published": "2026-04-09T00:31:59Z",
+  "aliases": [
+    "CVE-2026-40035"
+  ],
+  "details": "Unfurl through 2025.08 contains an improper input validation vulnerability in config parsing that enables Flask debug mode by default. The debug configuration value is read as a string and passed directly to app.run(), causing any non-empty string to evaluate truthy, allowing attackers to access the Werkzeug debugger and disclose sensitive information or achieve remote code execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/obsidianforensics/unfurl/security/advisories/GHSA-vg9h-jx4v-cwx2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40035"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/dfir-unfurl-werkzeug-debugger-exposure-via-string-config-parsing"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-489"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-08T22:16:24Z"
+  }
+}

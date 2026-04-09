@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5234-75g6-h6rq",
+  "modified": "2026-04-09T00:32:01Z",
+  "published": "2026-04-09T00:32:01Z",
+  "aliases": [
+    "CVE-2026-5813"
+  ],
+  "details": "A weakness has been identified in PHPGurukul Online Course Registration 3.1. This vulnerability affects unknown code of the file /check_availability.php. Executing a manipulation of the argument cid can lead to sql injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5813"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/f1rstb100d/CVE/issues/20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phpgurukul.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/787686"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356261"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356261/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-08T23:17:00Z"
+  }
+}

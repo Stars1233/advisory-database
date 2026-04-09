@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wxrw-fvc7-2xmx",
+  "modified": "2026-04-09T00:31:59Z",
+  "published": "2026-04-09T00:31:59Z",
+  "aliases": [
+    "CVE-2026-40031"
+  ],
+  "details": "MemProcFS before 5.17 contains multiple unsafe library-loading patterns that enable DLL and shared-library hijacking across six attack surfaces, including bare-name LoadLibraryU and dlopen calls without path qualification for vmmpyc, libMSCompression, and plugin DLLs. An attacker who places a malicious DLL or shared library in the working directory or manipulates LD_LIBRARY_PATH can achieve arbitrary code execution when MemProcFS loads.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40031"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ufrisk/MemProcFS/commit/df80e6e83641f5004025ce661e6dd8139028d7b5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ufrisk/MemProcFS/releases/tag/v5.17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mobasi.ai/sentinel"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/memprocfs-dll-shared-library-hijacking"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-427"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-08T22:16:23Z"
+  }
+}

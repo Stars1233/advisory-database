@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4759-m874-gwp3",
+  "modified": "2026-04-09T00:32:01Z",
+  "published": "2026-04-09T00:32:01Z",
+  "aliases": [
+    "CVE-2026-2104"
+  ],
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.2 before 18.8.9, 18.9 before 18.9.5, and 18.10 before 18.10.3 that could have allowed an authenticated user to access confidential issues assigned to other users via CSV export due to insufficient authorization checks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2104"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3541476"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/04/08/patch-release-gitlab-18-10-3-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/589021"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-08T23:16:58Z"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wg7x-9f3g-8524",
+  "modified": "2026-04-09T00:31:59Z",
+  "published": "2026-04-09T00:31:59Z",
+  "aliases": [
+    "CVE-2026-40027"
+  ],
+  "details": "ALEAPP (Android Logs Events And Protobuf Parser) through 3.4.0 contains a path traversal vulnerability in the NQ_Vault.py artifact parser that uses attacker-controlled file_name_from values from a database directly as the output filename, allowing arbitrary file writes outside the report output directory. An attacker can embed a path traversal payload such as ../../../outside_written.bin in the database to write files to arbitrary locations, potentially achieving code execution by overwriting executable files or configuration.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40027"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/abrignoni/aleapp/pull/669"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/abrignoni/ALEAPP/commit/0cafd8fe0027663420eb3d0fa821b2d1a713880d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mobasi.ai/sentinel"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/aleapp-nq-vault-artifact-parser-path-traversal"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-08T22:16:22Z"
+  }
+}
