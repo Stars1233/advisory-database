@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4gvx-284h-fwmm",
+  "modified": "2026-04-12T00:32:57Z",
+  "published": "2026-04-12T00:32:57Z",
+  "aliases": [
+    "CVE-2026-6106"
+  ],
+  "details": "A vulnerability was detected in 1Panel-dev MaxKB up to 2.2.1. This vulnerability affects the function StaticHeadersMiddleware of the file apps/common/middleware/static_headers_middleware.py of the component Public Chat Interface. The manipulation of the argument Name results in cross site scripting. The attack may be launched remotely. The exploit is now public and may be used. Upgrading to version 2.8.0 is able to resolve this issue. The patch is identified as 026a2d623e2aa5efa67c4834651e79d5d7cab1da. It is recommended to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6106"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AnalogyC0de/public_exp/issues/23"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/1Panel-dev/MaxKB/pull/4919"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/1Panel-dev/MaxKB/commit/026a2d623e2aa5efa67c4834651e79d5d7cab1da"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/1Panel-dev/MaxKB"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/1Panel-dev/MaxKB/releases/tag/v2.8.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/781810"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356965"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356965/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-11T23:16:05Z"
+  }
+}
