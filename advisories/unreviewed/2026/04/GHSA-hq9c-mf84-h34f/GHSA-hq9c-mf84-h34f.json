@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hq9c-mf84-h34f",
+  "modified": "2026-04-12T09:31:38Z",
+  "published": "2026-04-12T09:31:38Z",
+  "aliases": [
+    "CVE-2026-6121"
+  ],
+  "details": "A flaw has been found in Tenda F451 1.0.0.7. Affected by this vulnerability is the function WrlclientSet of the file /goform/WrlclientSet of the component httpd. This manipulation of the argument GO causes stack-based buffer overflow. The attack may be initiated remotely. The exploit has been published and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6121"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Jimi-Lab/cve/issues/12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/792865"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356984"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356984/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenda.com.cn"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-12T08:16:36Z"
+  }
+}
