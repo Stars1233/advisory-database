@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-49rw-2cx9-hjm3",
+  "modified": "2026-04-12T06:30:27Z",
+  "published": "2026-04-12T06:30:27Z",
+  "aliases": [
+    "CVE-2026-6112"
+  ],
+  "details": "A weakness has been identified in Totolink A7100RU 7.4cu.2313_b20191024. Affected is the function setRadvdCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument maxRtrAdvInterval causes os command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6112"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_177/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/792245"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356972"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356972/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.totolink.net"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-12T04:16:47Z"
+  }
+}

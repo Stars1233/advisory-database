@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6932-6g42-m69h",
+  "modified": "2026-04-12T06:30:27Z",
+  "published": "2026-04-12T06:30:27Z",
+  "aliases": [
+    "CVE-2026-6113"
+  ],
+  "details": "A security vulnerability has been detected in Totolink A7100RU 7.4cu.2313_b20191024. Affected by this vulnerability is the function setTtyServiceCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. Such manipulation of the argument ttyEnable leads to os command injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6113"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_178/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/792246"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356973"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356973/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.totolink.net"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-12T04:16:49Z"
+  }
+}

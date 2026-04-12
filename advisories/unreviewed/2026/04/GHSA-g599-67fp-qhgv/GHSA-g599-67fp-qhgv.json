@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g599-67fp-qhgv",
+  "modified": "2026-04-12T06:30:27Z",
+  "published": "2026-04-12T06:30:27Z",
+  "aliases": [
+    "CVE-2026-6118"
+  ],
+  "details": "A vulnerability was determined in AstrBotDevs AstrBot up to 4.22.1. Impacted is the function add_mcp_server of the file astrbot/dashboard/routes/tools.py of the component MCP Endpoint. This manipulation of the argument command causes command injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6118"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AstrBotDevs/AstrBot/issues/7169"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AstrBotDevs/AstrBot"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/792655"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356978"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/356978/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-12T05:16:01Z"
+  }
+}
