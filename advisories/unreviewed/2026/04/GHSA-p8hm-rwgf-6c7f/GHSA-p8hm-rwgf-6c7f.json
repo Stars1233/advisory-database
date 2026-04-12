@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p8hm-rwgf-6c7f",
+  "modified": "2026-04-12T15:30:25Z",
+  "published": "2026-04-12T15:30:25Z",
+  "aliases": [
+    "CVE-2018-25258"
+  ],
+  "details": "RGui 3.5.0 contains a local buffer overflow vulnerability in the GUI preferences dialog that allows attackers to bypass DEP protections through structured exception handling exploitation. Attackers can craft malicious input in the Language for menus and messages field to trigger a stack-based buffer overflow, execute a ROP chain for VirtualAlloc allocation, and achieve arbitrary code execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25258"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cran.r-project.org/bin/windows/base/old/3.5.0/R-3.5.0-win.exe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46107"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.r-project.org"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/rgui-local-buffer-overflow-seh-dep-bypass"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-12T13:16:31Z"
+  }
+}
