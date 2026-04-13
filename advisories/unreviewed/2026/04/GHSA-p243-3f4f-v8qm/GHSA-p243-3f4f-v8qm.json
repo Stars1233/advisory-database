@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p243-3f4f-v8qm",
+  "modified": "2026-04-13T03:30:29Z",
+  "published": "2026-04-13T03:30:29Z",
+  "aliases": [
+    "CVE-2026-6149"
+  ],
+  "details": "A flaw has been found in code-projects Vehicle Showroom Management System 1.0. Affected by this issue is some unknown functionality of the file /util/BookVehicleFunction.php. Executing a manipulation of the argument BRANCH_ID can lead to sql injection. The attack may be performed from remote. The exploit has been published and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6149"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mrpgi/cve/issues/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://code-projects.org"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/796282"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/357029"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/357029/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-13T02:16:05Z"
+  }
+}

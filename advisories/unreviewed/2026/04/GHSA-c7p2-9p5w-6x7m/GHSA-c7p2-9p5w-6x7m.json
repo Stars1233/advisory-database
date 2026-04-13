@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c7p2-9p5w-6x7m",
+  "modified": "2026-04-13T03:30:29Z",
+  "published": "2026-04-13T03:30:29Z",
+  "aliases": [
+    "CVE-2026-6141"
+  ],
+  "details": "A vulnerability was determined in danielmiessler Personal_AI_Infrastructure up to 2.3.0. Affected is an unknown function of the file Skills/Parser/Tools/parse_url.ts. Executing a manipulation can lead to os command injection. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. This patch is called 14322e87e58bf585cf3c7b9295578a6eb7dc4945. It is advisable to implement a patch to correct this issue. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6141"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure/pull/659"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure/pull/659#issuecomment-3905020094"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure/commit/14322e87e58bf585cf3c7b9295578a6eb7dc4945"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/793438"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/357005"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/357005/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-13T01:16:35Z"
+  }
+}
