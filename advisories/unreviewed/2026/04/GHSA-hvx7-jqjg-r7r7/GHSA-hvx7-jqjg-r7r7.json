@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hvx7-jqjg-r7r7",
+  "modified": "2026-04-13T09:31:33Z",
+  "published": "2026-04-13T09:31:33Z",
+  "aliases": [
+    "CVE-2026-0232"
+  ],
+  "details": "A problem with a protection mechanism in the Palo Alto Networks Cortex XDR agent on Windows allows a local Windows administrator to disable the agent. This issue may be leveraged by malware to perform malicious activity without detection.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:D/RE:M/U:Amber"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0232"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0232"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-15"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-13T08:16:20Z"
+  }
+}
