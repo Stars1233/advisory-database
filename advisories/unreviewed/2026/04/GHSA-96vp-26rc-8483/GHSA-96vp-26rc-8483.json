@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-96vp-26rc-8483",
+  "modified": "2026-04-14T15:30:35Z",
+  "published": "2026-04-14T15:30:35Z",
+  "aliases": [
+    "CVE-2026-4345"
+  ],
+  "details": "A maliciously crafted HTML payload, stored in a design name and exported to CSV, can trigger a Stored Cross-site Scripting (XSS) vulnerability in the Autodesk Fusion desktop application. A malicious actor may leverage this vulnerability to read local files or execute arbitrary code in the context of the current process.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4345"
+    },
+    {
+      "type": "WEB",
+      "url": "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.dmg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.exe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.autodesk.com/trust/security-advisories/adsk-sa-2026-0005"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-14T15:16:38Z"
+  }
+}

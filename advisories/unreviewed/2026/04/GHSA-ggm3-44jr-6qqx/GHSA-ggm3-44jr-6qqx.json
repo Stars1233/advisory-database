@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-ggm3-44jr-6qqx",
+  "modified": "2026-04-14T15:30:35Z",
+  "published": "2026-04-14T15:30:35Z",
+  "aliases": [
+    "CVE-2026-4914"
+  ],
+  "details": "Stored XSS in Ivanti N-ITSM before version 2025.4 allows a remote authenticated attacker to obtain limited information from other user sessions. User interaction is required.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4914"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Neurons-for-ITSM-CVE-2026-4913-CVE-2026-4914?language=en_US"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-14T15:16:39Z"
+  }
+}

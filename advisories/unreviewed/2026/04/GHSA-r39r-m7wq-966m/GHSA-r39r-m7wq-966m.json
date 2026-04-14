@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r39r-m7wq-966m",
+  "modified": "2026-04-14T15:30:35Z",
+  "published": "2026-04-14T15:30:35Z",
+  "aliases": [
+    "CVE-2026-4913"
+  ],
+  "details": "Improper protection of an alternate path in Ivanti N-ITSM before version 2025.4 allows a remote authenticated attacker to retain access when their account has been disabled.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4913"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Neurons-for-ITSM-CVE-2026-4913-CVE-2026-4914?language=en_US"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-424"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-14T15:16:39Z"
+  }
+}

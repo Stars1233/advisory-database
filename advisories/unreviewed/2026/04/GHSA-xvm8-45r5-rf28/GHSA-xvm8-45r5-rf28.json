@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xvm8-45r5-rf28",
+  "modified": "2026-04-14T15:30:34Z",
+  "published": "2026-04-14T15:30:34Z",
+  "aliases": [
+    "CVE-2025-7389"
+  ],
+  "details": "A vulnerability in the AdminServer component of OpenEdge on all supported platforms grants its authenticated users OS-level access to the server\nthrough the adopted authority of the AdminServer process itself.  The delegated authority of the AdminServer could allow its users the ability to read arbitrary files on the host system through the misuse of the setFile() and openFile()\n methods exposed through the RMI interface.  Misuse was limited only by OS-level authority of the AdminServer's elevated \nprivileges granted and the user's access to these methods enabled through RMI.  The exploitable methods have been removed thus eliminating their access through RMI or downstream of the RMI registry.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7389"
+    },
+    {
+      "type": "WEB",
+      "url": "https://community.progress.com/s/article/Important-Arbitrary-File-Ready-Security-Update-for-OpenEdge-AdminServer"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-552"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-14T14:16:10Z"
+  }
+}
