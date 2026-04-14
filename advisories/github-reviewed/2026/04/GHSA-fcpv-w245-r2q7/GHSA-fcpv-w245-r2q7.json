@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fcpv-w245-r2q7",
+  "modified": "2026-04-14T23:33:30Z",
+  "published": "2026-04-14T23:33:30Z",
+  "aliases": [],
+  "summary": "DotNetNuke.Core security code analysis rules triggered",
+  "details": "The codebase raises code analysis warnings related to security, including CA3075, CA5366, CA5371, CA5368, CA5369, CA5372, CA5379, CA5350, and CA5351.\n\nMost of these deal with disabling DTD processing in XML documents, but also includes cryptographic algorithm choices.",
+  "severity": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "DotNetNuke.Core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "10.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/dnnsoftware/Dnn.Platform/security/advisories/GHSA-fcpv-w245-r2q7"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/dnnsoftware/Dnn.Platform"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-14T23:33:30Z",
+    "nvd_published_at": null
+  }
+}
