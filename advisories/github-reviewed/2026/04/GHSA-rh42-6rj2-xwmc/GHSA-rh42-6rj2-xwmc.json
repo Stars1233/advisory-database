@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rh42-6rj2-xwmc",
+  "modified": "2026-04-14T01:06:25Z",
+  "published": "2026-04-14T01:06:25Z",
+  "aliases": [],
+  "summary": "Kimai leaks API Token Hash via Invoice Twig Template",
+  "details": "## Summary\n\nThe Twig sandbox used for invoice templates blocks certain sensitive `User` methods (password, TOTP secret, etc.) via a blocklist in `StrictPolicy::checkMethodAllowed()`. However, `getApiToken()` and `getPlainApiToken()` are not on the blocklist. An admin who creates an invoice template can embed calls to these methods, causing the bcrypt or sodium hashed API password of any user who generates an invoice using that template to be included in the rendered output.\n\nOnly relevant for OnPremise installations with template upload activated.\n\n## Background\n\nKimai allows admins (`ROLE_ADMIN` and above) with the `manage_invoice_template` permission to create Twig-based invoice templates. These templates are rendered in a sandboxed Twig environment with `StrictPolicy` controlling which methods and properties are accessible.\n\n`StrictPolicy` explicitly blocks:\n\n```php\n// src/Twig/SecurityPolicy/StrictPolicy.php:156\nif (\\in_array($lcm, [\n    'getpassword',\n    'gettotpsecret',\n    'getplainpassword',\n    'getconfirmationtoken',\n    'gettotpauthenticationconfiguration'\n], true)) {\n    throw new SecurityNotAllowedMethodError(...);\n}\n```\n\n`getApiToken()` and `getPlainApiToken()` are **not** in this list and are freely callable.\n\n## Vulnerable Code\n\n`StrictPolicy.php` — missing entries in the User method blocklist:\n\n```php\n// Current\n['getpassword', 'gettotpsecret', 'getplainpassword', 'getconfirmationtoken', 'gettotpauthenticationconfiguration']\n\n// Should also include:\n'getapitoken', 'getplainapitoken'\n```\n\nThe invoice model passes a `User` object through `model.user`, accessible in any twig invoice template.\n\n## Steps to Reproduce\n\n1. Log in as an admin with the `manage_invoice_template` permission.\n2. Create a new Twig invoice template (HTML or PDF) containing:\n\n```twig\nAPI Token: {{ model.user.getApiToken() }}\nPlain Token: {{ model.user.getPlainApiToken() }}\n```\n\n3. Save the template and set it as the default for a customer.\n4. Log in as a regular user assigned to that customer and generate an invoice.\n5. Observe that the rendered invoice contains the user's API token in plaintext.\n\n## Impact\n\nAn admin can silently embed token-exfiltration code in a shared invoice template. Every user who subsequently generates an invoice using that template will have their hashed API token leaked into the invoice output. \n\n- API passwords are [deprecated since April 2024](https://www.kimai.org/en/changelog/2024/cloud-update-104) and not in wide use anymore (especially by new users)\n- The function `getPlainApiToken()` does NEVER return any data\n- The function `getApiToken()` might return a bcrypt or sodium hashed API password, if the user (who created the invoice) has configured one - this cannot be used, but needs to be cracked using rainbow tables\n- The cloud does not allow Twig template upload, this is only relevant for OnPremise installations with template upload activated\n\n## Fix\n\nThe SecurityPolicy was changed to exclude methods that contains certain trigger words instead of using the hard-coded list, see https://github.com/kimai/kimai/pull/5878 \n\nThis disables access to both the `getApiToken()` and `getPlainApiToken()` function.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "kimai/kimai"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.53.0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 2.52.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kimai/kimai/security/advisories/GHSA-rh42-6rj2-xwmc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kimai/kimai/pull/5878"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/kimai/kimai"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-184"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-14T01:06:25Z",
+    "nvd_published_at": null
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3jp4-mhh4-gcgr",
+  "modified": "2026-04-14T01:06:06Z",
+  "published": "2026-04-14T01:06:06Z",
+  "aliases": [],
+  "summary": "Kimai has an Open Redirect via Unvalidated RelayState in SAML ACS Handler",
+  "details": "### Summary\n\nThe SAML authentication success handler in Kimai returns the `RelayState` POST parameter as a redirect destination without validating the host or scheme. After a user successfully authenticates via SAML, they are redirected to an attacker-controlled URL if the IdP includes a malicious `RelayState` value. This enables phishing attacks that steal credentials or session tokens post-SSO.\n\n*Requires SAML to be enabled (non-default configuration).*\n\n### Details\n\nVulnerable file: `src/Saml/Security/SamlAuthenticationSuccessHandler.php`\n\n```php\n// Line 27-33\n$relayState = $request->request->get('RelayState', $request->query->get('RelayState'));\nif (\\is_scalar($relayState)) {\n    $relayState = (string) $relayState;\n    if ($relayState !== $this->httpUtils->generateUri($request, (string) $this->options['login_path'])) {\n        return $relayState;  // No host/scheme validation — any URL accepted\n    }\n}\n```\n\nThe only check is that `RelayState` does not equal the configured `login_path`. Any external URL (e.g., `https://attacker.com`) passes this check and is returned as the redirect destination.\n\nThe existing unit test `SamlAuthenticationSuccessHandlerTest::testRelayState()` confirms this behavior — an absolute URL in `RelayState` results in a redirect to that URL with no restriction.\n\n### Steps to Reproduce\n\n```\n1. Enable SAML authentication in Kimai\n2. Configure a SAML IdP (e.g., SimpleSAMLphp)\n3. Initiate IdP-initiated SSO with RelayState=https://attacker.com\n   — or intercept the ACS POST and modify RelayState to https://attacker.com\n4. Complete SAML authentication at the IdP\n5. Observe: after the SAMLResponse POST to /saml/acs, Kimai issues:\n   HTTP/1.1 302 Found\n   Location: https://attacker.com\n```\n\nCode-confirmed via unit test (`testRelayState`): `onAuthenticationSuccess` with `RelayState=http://localhost/relayed` redirects directly to that URL. External URLs follow the same code path.\n\n### Impact\n\nWhile this bug exists it has low practical possibilities and the attacker needs to be able to create a SAML request, meaning either admin access to an IdP supporting such an action OR access to the private SAML keys / certificates.\n\nIn other words: only exploitable in IdP-initiated SSO flows where the IdP includes a `RelayState` value supplied by the attacker (e.g., via a malicious link to the IdP).\n\n### Fix\n\nThe `RelayState` is validated before redirecting, see #5878\n\n- It may not contain a host or port and cannot start with `//`. \n- If it contains a host, it must match the current host.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "kimai/kimai"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.53.0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 2.52.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kimai/kimai/security/advisories/GHSA-3jp4-mhh4-gcgr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kimai/kimai/pull/5878"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/kimai/kimai"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-14T01:06:06Z",
+    "nvd_published_at": null
+  }
+}
