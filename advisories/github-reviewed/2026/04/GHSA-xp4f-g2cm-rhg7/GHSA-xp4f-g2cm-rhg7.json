@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xp4f-g2cm-rhg7",
+  "modified": "2026-04-15T19:43:33Z",
+  "published": "2026-04-15T19:43:33Z",
+  "aliases": [],
+  "summary": "PocketMine-MP has LogDoS by many junk properties in client data JWT in LoginPacket",
+  "details": "### Impact\n\nAttackers can fill the body of the clientData JWT in LoginPacket with lots of junk properties, causing the server to flood warning messages, as well as wasting CPU time.\n\nThis happens because the JsonMapper instance used to process the JWT body is configured to warn on unexpected properties instead of rejecting them outright. While this behaviour increases flexibility for random changes introduced by Microsoft, it also creates vulnerabilities if not handled carefully.\n\nThis vulnerability affects PocketMine-MP servers exposed to a public network where unknown actors may have access.\n\n### Patches\n\nThis issue was fixed in c1d4a813fb8c21bfd8b9affd040da864b794df71 by restricting the number of unknown properties to 10, and rejecting the packet if this limit is exceeded. This continues to tolerate random additions to the JWT between versions, while preventing the logger from being abused by clients to slow down the server.\n\n### Workarounds\nPlugins can handle `DataPacketReceiveEvent` to capture `LoginPacket`, and pre-process the clientData JWT to ensure it doesn't have any unusual properties in it. This can be achieved using `JsonMapper` (see the original affected code below) and setting the `bExceptionOnUndefinedProperty` flag to `true`. A `JsonMapper_Exception` will be thrown if the JWT is problematic.\n\nHowever, it's important to caveat that this approach may cause login failures if any unexpected properties appear out of the blue in future versions (which has happened in the past).\n\n### References\nAffected code:\n\nhttps://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L289-L303\nhttps://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L334-L350",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "pocketmine/pocketmine-mp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.42.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pmmp/PocketMine-MP/security/advisories/GHSA-xp4f-g2cm-rhg7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pmmp/PocketMine-MP/commit/c1d4a813fb8c21bfd8b9affd040da864b794df71"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/pmmp/PocketMine-MP"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L289-L303"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pmmp/PocketMine-MP/blob/5.41.1/src/network/mcpe/handler/LoginPacketHandler.php#L334-L350"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-779"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-15T19:43:33Z",
+    "nvd_published_at": null
+  }
+}
