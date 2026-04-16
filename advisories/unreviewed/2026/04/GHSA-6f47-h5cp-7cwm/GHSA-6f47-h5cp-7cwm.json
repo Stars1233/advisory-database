@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6f47-h5cp-7cwm",
+  "modified": "2026-04-16T15:31:32Z",
+  "published": "2026-04-16T15:31:32Z",
+  "aliases": [
+    "CVE-2026-2840"
+  ],
+  "details": "The Email Encoder – Protect Email Addresses and Phone Numbers plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'eeb_mailto' shortcode in all versions up to, and including, 2.4.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2840"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?old_path=/email-encoder-bundle/tags/2.4.4/src/Front/Shortcodes/MailtoShortcode.php&new_path=/email-encoder-bundle/tags/2.4.5/src/Front/Shortcodes/MailtoShortcode.php&old=3462208&new=3494181"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?old_path=/email-encoder-bundle/tags/2.4.4/src/Validate/Encoding.php&new_path=/email-encoder-bundle/tags/2.4.5/src/Validate/Encoding.php&old=3462208&new=3494181"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/9987b5b4-33d8-4446-acbe-58c6cb5604df?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-16T15:17:17Z"
+  }
+}

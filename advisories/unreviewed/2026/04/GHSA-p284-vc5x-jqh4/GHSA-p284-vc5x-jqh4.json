@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p284-vc5x-jqh4",
+  "modified": "2026-04-16T15:31:31Z",
+  "published": "2026-04-16T15:31:31Z",
+  "aliases": [
+    "CVE-2026-40744"
+  ],
+  "details": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Beaver Builder Beaver Builder beaver-builder-lite-version allows Blind SQL Injection.This issue affects Beaver Builder: from n/a through <= 2.10.1.2.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40744"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/Wordpress/Plugin/beaver-builder-lite-version/vulnerability/wordpress-beaver-builder-plugin-2-10-1-2-sql-injection-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-15T11:16:36Z"
+  }
+}

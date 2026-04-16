@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wg7c-97pm-qp3w",
+  "modified": "2026-04-16T15:31:32Z",
+  "published": "2026-04-16T15:31:32Z",
+  "aliases": [
+    "CVE-2026-5785"
+  ],
+  "details": "Zohocorp ManageEngine PAM360 versions before 8531 and ManageEngine Password Manager Pro versions from 8600 to 13230 are vulnerable to Authenticated SQL injection in the query report module.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5785"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.manageengine.com/products/passwordmanagerpro/advisory/cve-2026-5785.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-16T14:16:18Z"
+  }
+}

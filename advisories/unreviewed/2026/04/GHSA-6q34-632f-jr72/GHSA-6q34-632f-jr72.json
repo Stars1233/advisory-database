@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6q34-632f-jr72",
+  "modified": "2026-04-16T15:31:33Z",
+  "published": "2026-04-16T15:31:33Z",
+  "aliases": [
+    "CVE-2026-3324"
+  ],
+  "details": "Zohocorp ManageEngine Log360 versions 13000 through 13013 are vulnerable to authentication bypass on certain actions due to improper filter configuration.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3324"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.manageengine.com/log-management/advisory/CVE-2026-3324.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-288"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-16T15:17:38Z"
+  }
+}
