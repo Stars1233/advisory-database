@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vj45-x3pj-f4w4",
+  "modified": "2026-04-16T20:41:10Z",
+  "published": "2026-04-16T20:41:10Z",
+  "aliases": [
+    "CVE-2026-33212"
+  ],
+  "summary": "Weblate: Improper access control for pending tasks in API",
+  "details": "### Impact\nThe API for tasks didn't verify user access for pending tasks. This could expose logs of in-progress operations to users who don't have access to given scope.\n\n### Patches\n* https://github.com/WeblateOrg/weblate/pull/18515\n\n### Workarounds\nThe attacker needs to guess the random UUID of the task, so exploiting this is unlikely with the default API rate limits.\n\n### References\nThis issue was identified by Michal Čihař.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "weblate"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.17"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/WeblateOrg/weblate/security/advisories/GHSA-vj45-x3pj-f4w4"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33212"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/WeblateOrg/weblate/pull/18515"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/WeblateOrg/weblate/commit/4e06b12cd05d087db68384e09d5f70fe883f2b70"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/WeblateOrg/weblate"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-16T20:41:10Z",
+    "nvd_published_at": "2026-04-15T18:17:19Z"
+  }
+}
