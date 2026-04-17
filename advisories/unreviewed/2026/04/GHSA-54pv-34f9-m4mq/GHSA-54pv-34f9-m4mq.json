@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-54pv-34f9-m4mq",
+  "modified": "2026-04-17T18:31:53Z",
+  "published": "2026-04-17T18:31:53Z",
+  "aliases": [
+    "CVE-2026-40518"
+  ],
+  "details": "ByteDance DeerFlow before commit 2176b2b contains a path traversal and arbitrary file write vulnerability in bootstrap-mode custom-agent creation where the agent name validation is bypassed. Attackers can supply traversal-style values or absolute paths as the agent name to influence directory creation and write files outside the intended custom-agent directory, potentially achieving arbitrary file write on the system subject to filesystem permissions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40518"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/bytedance/deer-flow/pull/2274"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/bytedance/deer-flow/commit/2176b2bbfccfce25ceee08318813f96d843a13fd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/bytedance-deerflow-path-traversal-and-arbitrary-file-write-via-bootstrap-mode"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-17T17:17:09Z"
+  }
+}

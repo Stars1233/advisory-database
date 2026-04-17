@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9859-fqhx-279v",
+  "modified": "2026-04-17T18:31:52Z",
+  "published": "2026-04-17T18:31:52Z",
+  "aliases": [
+    "CVE-2026-3464"
+  ],
+  "details": "The WP Customer Area plugin for WordPress is vulnerable to arbitrary file read and deletion due to insufficient file path validation in the 'ajax_attach_file' function in all versions up to, and including, 8.3.4. This makes it possible for authenticated attackers with a role that an administrator grants access to (e.g., Subscriber) to to read the contents of arbitrary files on the server, which can contain sensitive information, or delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3464"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/js/common/files/file-attachment-manager.js#L170"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/js/common/files/ftp-uploader.js#L63"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/php/core-addons/private-file/private-file-addon.class.php#L844"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/php/core-addons/private-file/private-file-addon.class.php#L883"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/php/core-addons/private-file/private-file-addon.class.php#L920"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/php/core-addons/private-file/private-file-default-handlers.class.php#L404"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/php/core-addons/private-file/private-file-default-handlers.class.php#L422"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/php/core-addons/private-file/private-file-default-handlers.class.php#L428"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customer-area/tags/8.3.4/src/php/core-addons/private-file/templates/private-attachments-add-ftp-folder-frontend.template.php#L17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3507868/customer-area"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/aadf1f4c-c852-4167-9b09-7e679a953725?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-17T17:17:07Z"
+  }
+}
