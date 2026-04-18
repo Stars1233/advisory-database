@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5pgv-4jf4-9r43",
+  "modified": "2026-04-18T06:30:14Z",
+  "published": "2026-04-18T06:30:14Z",
+  "aliases": [
+    "CVE-2026-41253"
+  ],
+  "details": "In iTerm2 through 3.6.9, displaying a .txt file can cause code execution via DCS 2000p and OSC 135 data, if the working directory contains a malicious file whose name is valid output from the conductor encoding path, such as a pathname with an initial ace/c+ substring, aka \"hypothetical in-band signaling abuse.\" This occurs because iTerm2 accepts the SSH conductor protocol from terminal output that does not originate from a legitimate conductor session.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41253"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gnachman/iTerm2/commit/a9e745993c2e2cbb30b884a16617cd5495899f86"
+    },
+    {
+      "type": "WEB",
+      "url": "https://blog.calif.io/p/mad-bugs-even-cat-readmetxt-is-not"
+    },
+    {
+      "type": "WEB",
+      "url": "https://iterm2.com/downloads.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=47809190"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-829"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-18T06:16:17Z"
+  }
+}
