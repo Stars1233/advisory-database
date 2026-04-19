@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fjp8-jqj5-cwp2",
+  "modified": "2026-04-19T09:30:13Z",
+  "published": "2026-04-19T09:30:13Z",
+  "aliases": [
+    "CVE-2026-6561"
+  ],
+  "details": "A vulnerability was detected in EyouCMS up to 1.7.1. This issue affects the function edit_adminlogo of the file application/admin/controller/Index.php. Performing a manipulation of the argument filename results in unrestricted upload. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6561"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/zzk6th/my-cve-notes/blob/main/EyouCMS%20Arbitrary%20File%20Copy%20Vulnerability%20in%20edit_adminlogo()%20Leading%20to%20Sensitive%20Information%20Disclosure.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/788038"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358198"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358198/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-19T08:16:26Z"
+  }
+}
