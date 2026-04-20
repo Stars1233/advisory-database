@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-62jj-2mw3-wfp2",
+  "modified": "2026-04-20T18:31:49Z",
+  "published": "2026-04-20T18:31:49Z",
+  "aliases": [
+    "CVE-2026-30266"
+  ],
+  "details": "Insecure Permissions vulnerability in DeepCool DeepCreative v.1.2.7 and before allows a local attacker to execute arbitrary code via a crafted file",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30266"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/uncle-hash/vulnerability-research/tree/main/CVE-2026-30266"
+    },
+    {
+      "type": "WEB",
+      "url": "http://deepcool.com"
+    },
+    {
+      "type": "WEB",
+      "url": "http://deepcreative.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-277"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-20T17:16:33Z"
+  }
+}

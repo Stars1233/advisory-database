@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-99wh-5v8j-65hf",
+  "modified": "2026-04-20T18:31:49Z",
+  "published": "2026-04-20T18:31:49Z",
+  "aliases": [
+    "CVE-2026-23756"
+  ],
+  "details": "GFI HelpDesk before 4.99.9 contains a stored cross-site scripting vulnerability in the Troubleshooter module where the subject POST parameter is not sanitized in Controller_Step.InsertSubmit() and EditSubmit() before being rendered by View_Step.RenderViewSteps(). An authenticated staff member can inject arbitrary JavaScript into the step subject field, and the payload executes when any user navigates to Troubleshooter > View Troubleshooter and clicks the affected step link.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23756"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gfi.ai/products-and-solutions/email-and-messaging-solutions/helpdesk/resources/product-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/gfi-helpdesk-stored-xss-via-troubleshooter-step-subject"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-20T18:16:24Z"
+  }
+}

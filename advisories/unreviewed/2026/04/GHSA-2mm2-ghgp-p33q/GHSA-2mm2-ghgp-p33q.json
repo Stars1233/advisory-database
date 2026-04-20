@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2mm2-ghgp-p33q",
+  "modified": "2026-04-20T18:31:50Z",
+  "published": "2026-04-20T18:31:50Z",
+  "aliases": [
+    "CVE-2026-39111"
+  ],
+  "details": "SQL Injection vulnerability in Apartment Visitors Management System Apartment Visitors Management System V1.1 in the email parameter of the forgot password page (forgot-password.php). This allows an unauthenticated attacker to manipulate backend SQL queries and retrieve sensitive user data.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39111"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/efekaanakkar/Apartment-Visitors-Management-System-CVEs"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phpgurukul.com/?sdm_process_download=1&download_id=21524"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phpgurukul.com/apartment-visitors-management-system-using-php-and-mysql"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-20T18:16:27Z"
+  }
+}

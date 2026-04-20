@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-82p8-693h-j5x5",
+  "modified": "2026-04-20T18:31:48Z",
+  "published": "2026-04-20T18:31:48Z",
+  "aliases": [
+    "CVE-2026-6651"
+  ],
+  "details": "A security flaw has been discovered in erponline.xyz ERP Online up to 4.0.0. This vulnerability affects unknown code of the component Inventory Edit Item Page. The manipulation of the argument Item Name results in cross site scripting. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6651"
+    },
+    {
+      "type": "WEB",
+      "url": "https://olografix.org/acme/ERP_Online-POC.gif"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/793806"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358285"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358285/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-20T16:16:55Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f22f-m2ph-vfcc",
+  "modified": "2026-04-20T18:31:49Z",
+  "published": "2026-04-20T18:31:49Z",
+  "aliases": [
+    "CVE-2026-26942"
+  ],
+  "details": "Dell PowerProtect Data Domain, versions 8.5 through 8.6 contain(s) an Improper Neutralization of Special Elements used in an OS Command ('OS command injection vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to arbitrary command execution with root privileges.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26942"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dell.com/support/kbdoc/en-us/000450699/dsa-2026-060-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-20T17:16:32Z"
+  }
+}

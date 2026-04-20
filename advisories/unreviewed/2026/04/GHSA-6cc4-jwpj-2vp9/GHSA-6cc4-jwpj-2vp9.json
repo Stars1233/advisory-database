@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6cc4-jwpj-2vp9",
+  "modified": "2026-04-20T18:31:49Z",
+  "published": "2026-04-20T18:31:49Z",
+  "aliases": [
+    "CVE-2026-23752"
+  ],
+  "details": "GFI HelpDesk before 4.99.9 contains a stored cross-site scripting vulnerability in the template group creation and editing functionality that allows authenticated administrators to inject arbitrary JavaScript by manipulating the companyname POST parameter without HTML sanitization. Attackers can inject malicious scripts through the companyname field that execute in the browsers of any administrator viewing the Templates > Groups page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23752"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gfi.ai/products-and-solutions/email-and-messaging-solutions/helpdesk/resources/product-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/gfi-helpdesk-stored-xss-via-companyname-parameter"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-20T18:16:23Z"
+  }
+}
