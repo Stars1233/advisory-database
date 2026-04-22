@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-chmq-57c3-4p7v",
+  "modified": "2026-04-22T09:31:34Z",
+  "published": "2026-04-22T09:31:34Z",
+  "aliases": [
+    "CVE-2026-6845"
+  ],
+  "details": "A flaw was found in binutils, specifically within the `readelf` utility. This vulnerability allows a local attacker to cause a Denial of Service (DoS) by tricking a user into processing a specially crafted Executable and Linkable Format (ELF) file. The exploitation of this flaw can lead to the system becoming unresponsive due to excessive resource consumption or a program crash.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6845"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-6845"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2460012"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T09:16:27Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9pfq-r2rw-3rwv",
+  "modified": "2026-04-22T09:31:31Z",
+  "published": "2026-04-22T09:31:31Z",
+  "aliases": [
+    "CVE-2026-41666"
+  ],
+  "details": "Integer overflow in tensor copy size calculation in Samsung Open Source ONE could lead to out of bounds access during loop state propagation.\nAffected version is prior to commit  1.30.0.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41666"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Samsung/ONE/pull/16481"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-190"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T07:16:13Z"
+  }
+}

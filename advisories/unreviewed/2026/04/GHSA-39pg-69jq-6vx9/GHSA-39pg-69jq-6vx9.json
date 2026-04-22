@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-39pg-69jq-6vx9",
+  "modified": "2026-04-22T09:31:32Z",
+  "published": "2026-04-22T09:31:32Z",
+  "aliases": [
+    "CVE-2026-3362"
+  ],
+  "details": "The Short Comment Filter plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'Minimum Count' settings field in all versions up to and including 2.2. This is due to insufficient input sanitization (no sanitize callback on register_setting) and missing output escaping (no esc_attr() on the echoed value in the input's value attribute). The option value is stored via update_option() and rendered unescaped in an HTML attribute context. This makes it possible for authenticated attackers, with administrator-level access and above, to inject arbitrary web scripts in the settings page that will execute whenever a user accesses that page. This is particularly impactful in WordPress multisite installations or when DISALLOW_UNFILTERED_HTML is set, where administrators are not granted the unfiltered_html capability.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3362"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/tags/2.2/classes/short-comment-filter-settings.php#L21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/tags/2.2/classes/short-comment-filter-settings.php#L54"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/tags/2.2/classes/short-comment-filter-settings.php#L61"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/tags/2.2/views/settings.php#L25"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/trunk/classes/short-comment-filter-settings.php#L21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/trunk/classes/short-comment-filter-settings.php#L54"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/trunk/classes/short-comment-filter-settings.php#L61"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/short-comment-filter/trunk/views/settings.php#L25"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4ba46475-bf54-49a8-9b0e-fae3fb4e1df9?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T09:16:21Z"
+  }
+}

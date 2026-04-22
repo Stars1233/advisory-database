@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8w4w-mfg4-cvw8",
+  "modified": "2026-04-22T09:31:33Z",
+  "published": "2026-04-22T09:31:33Z",
+  "aliases": [
+    "CVE-2026-6294"
+  ],
+  "details": "The Google PageRank Display plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to and including 1.4. This is due to missing nonce validation in the gpdisplay_option() function, which handles the plugin settings page. The settings form does not include a wp_nonce_field(), and the form handler does not call check_admin_referer() or wp_verify_nonce() before processing the POST request. This makes it possible for unauthenticated attackers to trick a logged-in administrator into submitting a crafted request that changes the plugin's settings (stored via update_option()), such as the display style used to render the PageRank badge.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6294"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-pagerank-display/tags/1.4/gpdisplay.php#L32"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-pagerank-display/tags/1.4/gpdisplay.php#L56"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-pagerank-display/trunk/gpdisplay.php#L32"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-pagerank-display/trunk/gpdisplay.php#L56"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/e39ebe27-7780-48b6-8dca-7da7a78fce69?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T09:16:26Z"
+  }
+}

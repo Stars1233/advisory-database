@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vf2r-6g4x-jc4h",
+  "modified": "2026-04-22T09:31:31Z",
+  "published": "2026-04-22T09:31:31Z",
+  "aliases": [
+    "CVE-2026-6022"
+  ],
+  "details": "In Progress® Telerik® UI for AJAX prior to 2026.1.421, RadAsyncUpload contains an uncontrolled resource consumption vulnerability that allows file uploads to exceed the configured maximum size due to missing cumulative size enforcement during chunk reassembly, leading to disk space exhaustion.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6022"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-uncontrolled-resource-consumption-cve-2026-6022"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T08:16:12Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c973-mjq6-p7hj",
+  "modified": "2026-04-22T09:31:33Z",
+  "published": "2026-04-22T09:31:33Z",
+  "aliases": [
+    "CVE-2026-4353"
+  ],
+  "details": "The CI HUB Connector plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'id' attribute of the `cihub_metadata` shortcode in all versions up to, and including, 1.2.106 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4353"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/ci-hub-connector/tags/1.2.106/ci-hub-wordpress-connector.php#L645"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/ci-hub-connector/trunk/ci-hub-wordpress-connector.php#L645"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f4b36468-319a-4de3-9112-bd4a3cf7d637?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T09:16:25Z"
+  }
+}
