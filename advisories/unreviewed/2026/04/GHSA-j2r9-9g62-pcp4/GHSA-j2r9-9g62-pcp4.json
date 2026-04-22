@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j2r9-9g62-pcp4",
+  "modified": "2026-04-22T12:30:29Z",
+  "published": "2026-04-22T12:30:29Z",
+  "aliases": [
+    "CVE-2026-1913"
+  ],
+  "details": "The Gallagher Website Design plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's login_link shortcode in all versions up to, and including, 2.6.4 due to insufficient input sanitization and output escaping on the 'prefix' attribute. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1913"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/gallagher-website-design/tags/2.6.4/gallagher-website-design.php#L203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/gallagher-website-design/trunk/gallagher-website-design.php#L203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3454227%40gallagher-website-design&new=3454227%40gallagher-website-design&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/d8d013ae-a512-454a-bcfc-8725a6928fee?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T10:16:50Z"
+  }
+}
