@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-364h-vxjm-52rp",
+  "modified": "2026-04-22T15:31:45Z",
+  "published": "2026-04-22T15:31:45Z",
+  "aliases": [
+    "CVE-2026-6862"
+  ],
+  "details": "A flaw was found in libefiboot, a component of efivar. The device path node parser in libefiboot fails to validate that each node's Length field is at least 4 bytes, which is the minimum size for an EFI (Extensible Firmware Interface) device path node header. A local user could exploit this vulnerability by providing a specially crafted device path node. This can lead to infinite recursion, causing stack exhaustion and a process crash, resulting in a denial of service (DoS).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6862"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-6862"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2459982"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-674"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:17:08Z"
+  }
+}

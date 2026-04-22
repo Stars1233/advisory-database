@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vx33-3w38-3rj6",
+  "modified": "2026-04-22T15:31:44Z",
+  "published": "2026-04-22T15:31:44Z",
+  "aliases": [
+    "CVE-2026-33598"
+  ],
+  "details": "A cached crafted response can cause an out-of-bounds read if custom Lua code calls getDomainListByAddress() or getAddressListByDomain() on a packet cache.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33598"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-04.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:16:54Z"
+  }
+}

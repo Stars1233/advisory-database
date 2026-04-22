@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vqqc-7rwf-3j3j",
+  "modified": "2026-04-22T15:31:44Z",
+  "published": "2026-04-22T15:31:44Z",
+  "aliases": [
+    "CVE-2026-33611"
+  ],
+  "details": "An operator allowed to use the REST API can cause the Authoritative server to produce invalid HTTPS or SVCB record data, which can in turn cause LMDB database corruption, if using the LMDB backend.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33611"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.powerdns.com/authoritative/security-advisories/powerdns-advisory-powerdns-2026-05.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-190"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:16:55Z"
+  }
+}

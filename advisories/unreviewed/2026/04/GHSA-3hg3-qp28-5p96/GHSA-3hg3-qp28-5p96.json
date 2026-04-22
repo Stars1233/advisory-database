@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3hg3-qp28-5p96",
+  "modified": "2026-04-22T15:31:44Z",
+  "published": "2026-04-22T15:31:44Z",
+  "aliases": [
+    "CVE-2026-33602"
+  ],
+  "details": "A rogue backend can send a crafted UDP response with a query ID off by one related to the maximum configured value, triggering an out-of-bounds write leading to a denial of service.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33602"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-04.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-122"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:16:54Z"
+  }
+}

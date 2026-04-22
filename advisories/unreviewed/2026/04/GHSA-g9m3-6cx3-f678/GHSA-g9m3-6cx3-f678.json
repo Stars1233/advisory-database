@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g9m3-6cx3-f678",
+  "modified": "2026-04-22T15:31:40Z",
+  "published": "2026-04-22T15:31:40Z",
+  "aliases": [
+    "CVE-2010-20124"
+  ],
+  "details": "Rejected reason: This CVE has the been REJECTED and will not be published by the CNA.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-20124"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:16:29Z"
+  }
+}

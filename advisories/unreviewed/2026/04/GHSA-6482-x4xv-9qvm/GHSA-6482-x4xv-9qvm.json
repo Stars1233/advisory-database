@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6482-x4xv-9qvm",
+  "modified": "2026-04-22T15:31:44Z",
+  "published": "2026-04-22T15:31:44Z",
+  "aliases": [
+    "CVE-2026-33595"
+  ],
+  "details": "A client can trigger excessive memory allocation by generating a lot of errors responses over a single DoQ and DoH3 connection, as some resources were not properly released until the end of the connection.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33595"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-04.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:16:53Z"
+  }
+}

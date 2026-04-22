@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w658-hxq6-43mx",
+  "modified": "2026-04-22T15:31:45Z",
+  "published": "2026-04-22T15:31:45Z",
+  "aliases": [
+    "CVE-2026-6861"
+  ],
+  "details": "A flaw was found in GNU Emacs. This vulnerability, a memory corruption issue, occurs when Emacs processes specially crafted SVG (Scalable Vector Graphics) CSS (Cascading Style Sheets) data. A local user could exploit this by convincing a victim to open a malicious SVG file, which may lead to a denial of service (DoS) or potentially information disclosure.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-6861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2459992"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-193"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:17:07Z"
+  }
+}

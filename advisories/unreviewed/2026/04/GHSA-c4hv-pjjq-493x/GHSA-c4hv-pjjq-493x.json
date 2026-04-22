@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c4hv-pjjq-493x",
+  "modified": "2026-04-22T15:31:44Z",
+  "published": "2026-04-22T15:31:44Z",
+  "aliases": [
+    "CVE-2026-5749"
+  ],
+  "details": "Inadequate access control in the registration process in Fullstep V5, which could allow unauthenticated users to obtain a valid JWT token with which to interact with authenticated API resources. Successful exploitation of this vulnerability could allow an unauthenticated attacker to compromise the confidentiality of the affected resource, provided they have a valid token with which to interact with the API.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5749"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-fullstep"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:17:05Z"
+  }
+}

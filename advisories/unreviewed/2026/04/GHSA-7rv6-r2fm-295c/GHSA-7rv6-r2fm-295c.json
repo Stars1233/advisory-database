@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7rv6-r2fm-295c",
+  "modified": "2026-04-22T15:31:45Z",
+  "published": "2026-04-22T15:31:44Z",
+  "aliases": [
+    "CVE-2026-33610"
+  ],
+  "details": "A rogue primary server may cause file descriptor exhaustion and eventually a denial of service, when a PowerDNS secondary server forwards a DNS update request to it.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33610"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.powerdns.com/authoritative/security-advisories/powerdns-advisory-powerdns-2026-05.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T14:16:54Z"
+  }
+}
