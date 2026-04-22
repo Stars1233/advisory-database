@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g2r2-6v8v-5qgm",
+  "modified": "2026-04-22T00:31:40Z",
+  "published": "2026-04-22T00:31:40Z",
+  "aliases": [
+    "CVE-2026-41527"
+  ],
+  "details": "KDE Kleopatra before 26.08.0 on Windows allows local users to obtain the privileges of a Kleopatra user, because there is an error in the mechanism (KUniqueService) for ensuring that only one instance is running.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41527"
+    },
+    {
+      "type": "WEB",
+      "url": "https://commits.kde.org/kleopatra/73471abb92d99c56354adb582bfaec2764c22b79"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/KDE/kleopatra/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://kde.org/info/security/advisory-20260408-1.txt"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-670"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-21T22:16:20Z"
+  }
+}

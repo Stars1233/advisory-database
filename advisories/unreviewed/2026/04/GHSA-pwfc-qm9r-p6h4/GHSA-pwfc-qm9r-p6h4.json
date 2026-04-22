@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pwfc-qm9r-p6h4",
+  "modified": "2026-04-22T00:31:41Z",
+  "published": "2026-04-22T00:31:41Z",
+  "aliases": [
+    "CVE-2026-6832"
+  ],
+  "details": "Hermes WebUI contains an arbitrary file deletion vulnerability in the /api/session/delete endpoint that allows authenticated attackers to delete files outside the session directory by supplying an absolute path or path traversal payload in the session_id parameter. Attackers can exploit unvalidated session identifiers to construct paths that bypass the SESSION_DIR boundary and delete writable JSON files on the host system.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6832"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/pull/409"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/pull/412"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/commit/3cc5839bf303fa6758bfdac538507407a2929655"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/releases/tag/v0.50.132"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/releases/tag/v0.50.32"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/nesquena-hermes-webui-arbitrary-file-deletion-via-unvalidated-session-id"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-21T22:16:21Z"
+  }
+}

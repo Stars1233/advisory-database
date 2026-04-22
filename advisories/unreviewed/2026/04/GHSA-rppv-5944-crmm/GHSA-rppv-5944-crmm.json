@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rppv-5944-crmm",
+  "modified": "2026-04-22T00:31:40Z",
+  "published": "2026-04-22T00:31:40Z",
+  "aliases": [
+    "CVE-2026-6829"
+  ],
+  "details": "nesquena hermes-webui contains a trust-boundary failure vulnerability that allows authenticated attackers to set or change a session workspace to an arbitrary existing directory on disk by manipulating workspace path parameters in endpoints such as /api/session/new, /api/session/update, /api/chat/start, and /api/workspaces/add. Attackers can repoint a session workspace to a directory outside the intended trusted root and then use ordinary file read and write APIs to access or modify files outside the intended workspace boundary within the permissions of the hermes-webui process.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6829"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/pull/416"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/commit/2a7a5ddfaf39e3b0094b7ac37e9f1dbcf40a3918"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nesquena/hermes-webui/releases/tag/v0.50.34"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/nesquena-hermes-webui-arbitrary-workspace-directory-access"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-21T22:16:20Z"
+  }
+}
