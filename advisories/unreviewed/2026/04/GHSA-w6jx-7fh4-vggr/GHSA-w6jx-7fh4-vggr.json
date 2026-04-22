@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w6jx-7fh4-vggr",
+  "modified": "2026-04-22T03:31:36Z",
+  "published": "2026-04-22T03:31:36Z",
+  "aliases": [
+    "CVE-2026-6392"
+  ],
+  "details": "Tanium addressed an information disclosure vulnerability in Threat Response.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6392"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.tanium.com/TAN-2026-011"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-22T03:16:01Z"
+  }
+}
