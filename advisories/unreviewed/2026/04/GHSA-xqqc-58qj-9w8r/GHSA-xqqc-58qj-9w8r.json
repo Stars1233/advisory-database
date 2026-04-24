@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xqqc-58qj-9w8r",
+  "modified": "2026-04-24T06:31:16Z",
+  "published": "2026-04-24T06:31:16Z",
+  "aliases": [
+    "CVE-2026-2028"
+  ],
+  "details": "The MaxiBlocks Builder plugin for WordPress is vulnerable to arbitrary media file deletion due to insufficient file ownership validation on the 'maxi_remove_custom_image_size' AJAX action in all versions up to, and including, 2.1.8. This makes it possible for authenticated attackers, with Author-level access and above, to delete arbitrary files in the wp-content/uploads directory, including files uploaded by other users and administrators.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2028"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/maxi-blocks/maxi-blocks/commit/3dff1db57bfb4e6c14fa7fd42037178d1d0ce199"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/maxi-blocks/tags/2.1.7/core/class-maxi-image-crop.php#L44"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/maxi-blocks/trunk/core/class-maxi-image-crop.php#L44"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3476709/maxi-blocks/trunk/core/class-maxi-image-crop.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3476709%40maxi-blocks&new=3476709%40maxi-blocks&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f50c31df-56d0-4c34-a93c-56198fe91b36?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-24T04:16:09Z"
+  }
+}

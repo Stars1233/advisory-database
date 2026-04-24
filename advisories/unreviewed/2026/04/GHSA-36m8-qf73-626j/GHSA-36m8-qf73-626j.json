@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-36m8-qf73-626j",
+  "modified": "2026-04-24T06:31:17Z",
+  "published": "2026-04-24T06:31:17Z",
+  "aliases": [
+    "CVE-2026-5488"
+  ],
+  "details": "The ExactMetrics – Google Analytics Dashboard for WordPress plugin for WordPress is vulnerable to Missing Authorization in versions up to and including 9.1.2. This is due to missing capability checks in the get_ads_access_token() and reset_experience() AJAX handlers. While the mi-admin-nonce is localized on all admin pages (including profile.php which subscribers can access), and while other similar AJAX endpoints in the same class properly check for the exactmetrics_save_settings capability, these two endpoints only verify the nonce. This makes it possible for authenticated attackers, with subscriber-level access and above, to retrieve valid Google Ads access tokens and reset Google Ads integration settings.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5488"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-analytics-dashboard-for-wp/tags/9.0.3/includes/admin/admin-assets.php#L196"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-analytics-dashboard-for-wp/tags/9.0.3/includes/ppc/google/class-exactmetrics-google-ads.php#L167"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-analytics-dashboard-for-wp/tags/9.0.3/includes/ppc/google/class-exactmetrics-google-ads.php#L243"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-analytics-dashboard-for-wp/trunk/includes/admin/admin-assets.php#L196"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-analytics-dashboard-for-wp/trunk/includes/ppc/google/class-exactmetrics-google-ads.php#L167"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/google-analytics-dashboard-for-wp/trunk/includes/ppc/google/class-exactmetrics-google-ads.php#L243"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3513041%40google-analytics-dashboard-for-wp&new=3513041%40google-analytics-dashboard-for-wp&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6a4359e4-5843-4d2c-b288-5c35f819241a?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-24T04:16:22Z"
+  }
+}
