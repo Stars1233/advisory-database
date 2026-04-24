@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-66v8-c34p-jmrm",
+  "modified": "2026-04-24T09:30:30Z",
+  "published": "2026-04-24T09:30:30Z",
+  "aliases": [
+    "CVE-2026-6272"
+  ],
+  "details": "A client holding only a read JWT scope can still register itself as a signal provider through the production kuksa.val.v2 OpenProviderStream API by sending ProvideSignalRequest.\n\n1. Obtain any valid token with only read scope.\n2. Connect to the normal production gRPC API (kuksa.val.v2).\n3. Open OpenProviderStream.\n4. Send ProvideSignalRequest for a target signal ID.\n5. Wait for the broker to forward GetProviderValueRequest.\n6. Reply with attacker-controlled GetProviderValueResponse.\n7. Other clients performing GetValue / GetValues for that signal receive forged data.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6272"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.eclipse.org/security/cve-assignment/-/issues/98"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-24T09:16:04Z"
+  }
+}

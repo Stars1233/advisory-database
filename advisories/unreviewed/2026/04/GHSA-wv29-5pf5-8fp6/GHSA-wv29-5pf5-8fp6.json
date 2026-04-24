@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wv29-5pf5-8fp6",
+  "modified": "2026-04-24T09:30:29Z",
+  "published": "2026-04-24T09:30:29Z",
+  "aliases": [
+    "CVE-2026-1950"
+  ],
+  "details": "Delta Electronics AS320T has \nNo checking of the length of the buffer with the file name vulnerability.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1950"
+    },
+    {
+      "type": "WEB",
+      "url": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00006_AS320T%20Multiple%20vulnerabilities%20(CVE-2026-1949,%201950,%201951,%201952).pdf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-24T07:16:08Z"
+  }
+}
