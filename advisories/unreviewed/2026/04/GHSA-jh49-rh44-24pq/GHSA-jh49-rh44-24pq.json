@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jh49-rh44-24pq",
+  "modified": "2026-04-24T00:31:52Z",
+  "published": "2026-04-24T00:31:52Z",
+  "aliases": [
+    "CVE-2026-1789"
+  ],
+  "details": "A vulnerability in the browser-based remote management interface may allow an administrator to access sensitive information on the device via crafted requests, affecting certain production printers and office/small office multifunction printers.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1789"
+    },
+    {
+      "type": "WEB",
+      "url": "https://canon.jp/support/support-info/260423vulnerability-response"
+    },
+    {
+      "type": "WEB",
+      "url": "https://psirt.canon/advisory-information/cp2026-003"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.canon-europe.com/support/product-security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.usa.canon.com/about-us/to-our-customers/cpa2026-003-vulnerability-mitigation-remediation-for-production-printers-and-office-multifunction-printers"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-807"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-24T00:16:26Z"
+  }
+}
