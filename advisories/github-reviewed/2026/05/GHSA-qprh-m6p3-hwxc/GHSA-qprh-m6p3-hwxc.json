@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qprh-m6p3-hwxc",
+  "modified": "2026-05-04T21:42:55Z",
+  "published": "2026-05-04T21:42:55Z",
+  "aliases": [],
+  "summary": "`sui-execution-cut` was removed from crates.io for malicious code",
+  "details": "`sui-execution-cut` included a build script that attempted to exfiltrate data from the build machine.\n\nThe malicious crate had 1 version published on 2026-04-20 and had no evidence of actual usage. This crate had no dependencies on crates.io.",
+  "severity": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "sui-execution-cut"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/MystenLabs/sui"
+    },
+    {
+      "type": "WEB",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0108.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-506"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-04T21:42:55Z",
+    "nvd_published_at": null
+  }
+}

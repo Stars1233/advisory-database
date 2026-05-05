@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gh5g-gr5m-vq9w",
+  "modified": "2026-05-05T03:31:42Z",
+  "published": "2026-05-05T03:31:42Z",
+  "aliases": [
+    "CVE-2026-6700"
+  ],
+  "details": "The DX Sources plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.0.1. This is due to missing or incorrect nonce validation on the settings_page_build function. This makes it possible for unauthenticated attackers to trick a logged-in administrator into submitting a forged request that modifies the plugin's configuration options via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6700"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dx-sources/tags/2.0.1/inc/settings.class.php#L46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dx-sources/tags/2.0.1/inc/settings.class.php#L79"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dx-sources/trunk/inc/settings.class.php#L46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dx-sources/trunk/inc/settings.class.php#L79"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b3c96e57-0300-4ea7-a0c6-5d060b6e979d?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T03:16:00Z"
+  }
+}

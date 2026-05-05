@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m5qv-996f-g5rh",
+  "modified": "2026-05-05T03:31:41Z",
+  "published": "2026-05-05T03:31:41Z",
+  "aliases": [
+    "CVE-2026-5722"
+  ],
+  "details": "The MoreConvert Pro plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.9.14. This is due to the guest waitlist verification flow not invalidating or regenerating verification tokens when the customer email address is changed. This makes it possible for unauthenticated attackers to authenticate as existing users, including administrators, by obtaining a valid guest verification token for an attacker-controlled email, changing the same guest customer email to the target account email through the public waitlist flow, and then using the original verification link.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5722"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moreconvert.com/changelog"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/plugins/smart-wishlist-for-more-convert"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/fe887475-f7e8-4fda-a793-bc6f37b70f3e?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-287"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T02:16:05Z"
+  }
+}

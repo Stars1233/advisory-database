@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jccf-76rp-79gq",
+  "modified": "2026-05-05T00:30:23Z",
+  "published": "2026-05-05T00:30:23Z",
+  "aliases": [
+    "CVE-2026-7788"
+  ],
+  "details": "A security flaw has been discovered in Axle-Bucamp MCP-Docusaurus up to 404bc028e15ec304c9a045528560f4b5f27a17e0. The affected element is the function update_document/continue_document/delete_document/get_content of the file app/routes/document.py. Performing a manipulation of the argument DOCS_DIR/path results in path traversal. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7788"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Axle-Bucamp/MCP-Docusaurus/issues/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Axle-Bucamp/MCP-Docusaurus"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/807746"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/360994"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/360994/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T00:16:18Z"
+  }
+}

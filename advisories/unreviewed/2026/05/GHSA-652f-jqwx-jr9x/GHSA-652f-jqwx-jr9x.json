@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-652f-jqwx-jr9x",
+  "modified": "2026-05-05T06:31:05Z",
+  "published": "2026-05-05T06:31:05Z",
+  "aliases": [
+    "CVE-2026-35228"
+  ],
+  "details": "Vulnerability in the Oracle MCP Server Helper Tool product of Oracle Open Source Projects (component: helper tool). The supported versions that is affected is 1.0.1-1.0.156. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle MCP Server Helper Tool. Successful attacks of this vulnerability can result in Oracle MCP Server Helper Tool executing malicious SQL.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35228"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/all-oracle-cves-outside-other-oracle-public-documents.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T04:16:16Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xf3j-2pwf-m9rm",
+  "modified": "2026-05-05T09:31:54Z",
+  "published": "2026-05-05T09:31:54Z",
+  "aliases": [
+    "CVE-2026-2729"
+  ],
+  "details": "The Forminator plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.52.0. This is due to the plugin not properly verifying that a user is authorized to perform an action when processing attacker-supplied Stripe PaymentIntent identifiers in the public payment flow. This makes it possible for unauthenticated attackers to submit high-value paid forms as completed by reusing a previously succeeded low-value Stripe PaymentIntent, resulting in underpayment/payment bypass conditions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2729"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3500669/forminator"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1afb94ab-b3ba-4598-8ff4-f9ffc6717371?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T07:15:59Z"
+  }
+}

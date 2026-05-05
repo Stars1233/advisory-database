@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g38r-8gmr-ghrf",
+  "modified": "2026-05-04T21:43:56Z",
+  "published": "2026-05-04T21:43:56Z",
+  "aliases": [],
+  "summary": "`mysten-metrics` was removed from crates.io for malicious code",
+  "details": "`mysten-metrics` included a build script that attempted to exfiltrate data from the build machine.\n\nThe malicious crate had 1 version published on 2026-04-20 and had no evidence of actual usage. This crate had no dependencies on crates.io.",
+  "severity": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "mysten-metrics"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/MystenLabs/sui"
+    },
+    {
+      "type": "WEB",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0107.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-506"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-04T21:43:56Z",
+    "nvd_published_at": null
+  }
+}

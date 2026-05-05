@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v76r-gcmp-j385",
+  "modified": "2026-05-05T03:31:42Z",
+  "published": "2026-05-05T03:31:42Z",
+  "aliases": [
+    "CVE-2026-5100"
+  ],
+  "details": "The AWP Classifieds plugin for WordPress is vulnerable to SQL Injection via the 'regions' parameter array keys in versions up to, and including, 4.4.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5100"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/frontend/page-search-ads.php#L168"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/frontend/page-search-ads.php#L174"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/frontend/page-search-ads.php#L63"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/frontend/page-search-ads.php#L70"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/functions.php#L1240"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/functions.php#L1258"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/functions.php#L1269"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/functions.php#L1276"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/class-awpcp.php#L339"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/class-awpcp.php#L342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L795"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L804"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L881"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L887"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L890"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L895"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L902"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/another-wordpress-classifieds-plugin/tags/4.4.4/includes/listings/class-query-integration.php#L903"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7908d167-f831-4ed0-b754-2b390b5c3b2c?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T03:15:59Z"
+  }
+}

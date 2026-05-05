@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v9q7-47h2-cg7c",
+  "modified": "2026-05-05T15:31:36Z",
+  "published": "2026-05-05T15:31:36Z",
+  "aliases": [
+    "CVE-2026-7778"
+  ],
+  "details": "An issue that could allow a dashboard configuration to be viewed from outside of the authorized organization scope has been resolved. This is an instance of CWE-269: Improper Privilege Management, and has an estimated CVSS score of CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N (5.0, Medium). This issue was fixed in version v4.0.260416.0 of the runZero Platform.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://help.runzero.com/docs/release-notes/#402604160"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.runzero.com/advisories/runzero-platform-dashboard-configuration-exposure-cve-2026-7778"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-269"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T14:16:09Z"
+  }
+}

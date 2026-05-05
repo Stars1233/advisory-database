@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jqqg-v7qj-c3jq",
+  "modified": "2026-05-05T00:30:22Z",
+  "published": "2026-05-05T00:30:22Z",
+  "aliases": [
+    "CVE-2026-7782"
+  ],
+  "details": "A vulnerability was detected in CodeCanyon Perfex CRM up to 3.4.1. This affects the function Clients::project of the file application/controllers/Clients.php of the component Tenant Handler. The manipulation of the argument ID results in authorization bypass. The attack may be performed from remote. The exploit is now public and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7782"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bytium.com/insights/perfex-crm-3-4-1-cross-tenant-broken-access-control-on-project-discussion-comments"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/807683"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/360979"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/360979/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-285"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-04T23:16:01Z"
+  }
+}

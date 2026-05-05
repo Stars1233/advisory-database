@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qqqc-gw7p-pw85",
+  "modified": "2026-05-05T12:31:37Z",
+  "published": "2026-05-05T12:31:37Z",
+  "aliases": [
+    "CVE-2025-42611"
+  ],
+  "details": "RouterOS provides various services that rely on correct\nverification of client and server certificates to secure confidentiality and\nintegrity of communications. This includes OpenVPN, CAPsMAN, Dot1x (802.1X),\namong others.\n\n\n\nThe vulnerability lies in shared certificate validation\nlogic which uses the system certificate store that is shared and equally\ntrusted by all system services. This causes confusion of scope, allowing any\ncertificate authority present in the system-wide trust store to be trusted in\nany context (with some exceptions), allowing partial or full authentication\nbypass in CAPsMAN, OpenVPN, Dot1X and potentially others.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-42611"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cert.si/en/cve-2025-42611"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-295"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T11:16:31Z"
+  }
+}

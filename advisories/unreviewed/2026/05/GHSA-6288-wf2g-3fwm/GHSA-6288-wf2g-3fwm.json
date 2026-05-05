@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6288-wf2g-3fwm",
+  "modified": "2026-05-05T09:31:55Z",
+  "published": "2026-05-05T09:31:55Z",
+  "aliases": [
+    "CVE-2026-3454"
+  ],
+  "details": "The GenerateBlocks plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.2.0. This is due to missing object-level authorization checks in the /wp-json/generateblocks/v1/dynamic-tag-replacements REST endpoint. The endpoint only verifies that the user has the edit_posts capability but does not verify the user has permission to access the specific post or its associated data referenced by attacker-controlled id parameters in dynamic tag content. This makes it possible for authenticated attackers, with Contributor-level access and above, to extract sensitive information from arbitrary posts including author email addresses and non-protected post meta values by crafting dynamic tag payloads such as {{post_meta id:<target>|key:<meta_key>}} and {{post_title id:<target>|link:author_email}}.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3454"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/generateblocks/tags/2.2.0/includes/class-meta-handler.php#L335"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/generateblocks/tags/2.2.0/includes/dynamic-tags/class-dynamic-tag-callbacks.php#L364"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/generateblocks/tags/2.2.0/includes/dynamic-tags/class-dynamic-tag-callbacks.php#L64"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/generateblocks/tags/2.2.0/includes/dynamic-tags/class-dynamic-tags.php#L392"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/generateblocks/tags/2.2.0/includes/dynamic-tags/class-dynamic-tags.php#L424"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/generateblocks/tags/2.2.0/includes/dynamic-tags/class-dynamic-tags.php#L501"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3495827%40generateblocks%2Ftrunk&old=3415721%40generateblocks%2Ftrunk&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/0297d524-e016-4f8d-920c-d58c62edb2a0?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T07:16:00Z"
+  }
+}

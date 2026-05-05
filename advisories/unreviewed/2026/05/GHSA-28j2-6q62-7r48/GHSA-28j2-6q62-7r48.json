@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-28j2-6q62-7r48",
+  "modified": "2026-05-05T06:31:05Z",
+  "published": "2026-05-05T06:31:05Z",
+  "aliases": [
+    "CVE-2026-5957"
+  ],
+  "details": "The EmailKit plugin for WordPress is vulnerable to Arbitrary File Read in all versions up to and including 1.6.5. This is due to a flawed path traversal validation in the create_template() method of the CheckForm class, where realpath() is called on the allowed base directory (wp-content/uploads/emailkit/templates/) which may not exist, causing it to return false. In PHP 8.x, strpos($real_path, false) implicitly converts false to an empty string, and strpos() with an empty needle always returns 0, causing the check strpos(...) !== 0 to evaluate to false and bypassing the path validation entirely. This makes it possible for authenticated attackers, with Author-level access and above, to read arbitrary files from the server, including sensitive files such as wp-config.php, by supplying an absolute path to the emailkit-editor-template REST API parameter.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5957"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/tags/1.6.5/includes/Admin/Api/CheckForm.php#L163"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/tags/1.6.5/includes/Admin/Api/CheckForm.php#L166"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/tags/1.6.5/includes/Admin/Api/CheckForm.php#L170"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/tags/1.6.5/includes/Admin/EmailSettings/MetformEmailSettings.php#L252"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/trunk/includes/Admin/Api/CheckForm.php#L163"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/trunk/includes/Admin/Api/CheckForm.php#L166"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/trunk/includes/Admin/Api/CheckForm.php#L170"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/emailkit/trunk/includes/Admin/EmailSettings/MetformEmailSettings.php#L252"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3511701%40emailkit%2Ftrunk&old=3496714%40emailkit%2Ftrunk&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/ae58e5b0-b587-4503-8519-c5a50245891a?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T04:16:19Z"
+  }
+}

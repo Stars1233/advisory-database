@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p9xc-cphq-3q9h",
+  "modified": "2026-05-05T03:31:42Z",
+  "published": "2026-05-05T03:31:42Z",
+  "aliases": [
+    "CVE-2026-5247"
+  ],
+  "details": "The Schedule Post Changes With PublishPress Future plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'wrapper' attribute of the [futureaction] shortcode in all versions up to, and including, 4.10.0. This is due to insufficient input sanitization on the wrapper attribute. The plugin uses esc_html() to escape the value, but esc_html() only encodes HTML entities and does not prevent attribute injection when the value is used as an HTML tag name in a sprintf() call. An attacker can inject event handler attributes via spaces in the wrapper value. This makes it possible for authenticated attackers, with administrator-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Since it is also possible for administrators to make this functionality available to lower-privileged users, this introduces the possibility of abuse by contributors.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/publishpress/publishpress-future/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/post-expirator/tags/4.9.4/src/Modules/Expirator/Controllers/ShortcodeController.php#L173"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/post-expirator/trunk/src/Modules/Expirator/Controllers/ShortcodeController.php#L173"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/9acf80aa-8354-4430-9836-18fa17854521?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T03:15:59Z"
+  }
+}
