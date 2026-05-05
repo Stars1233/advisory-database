@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m8qg-qjx9-mfv3",
+  "modified": "2026-05-05T18:33:26Z",
+  "published": "2026-05-05T18:33:26Z",
+  "aliases": [
+    "CVE-2026-7865"
+  ],
+  "details": "A hidden console command is vulnerable to command injection\nflaw when control characters are passed to its second argument. \n\nA third party researcher Eugene Lim had discovered vulnerability\nin the way console command passes to a popen function call. Attackers with\nauthenticated access to SSH console of Crestron devices may use to run\nunderlying OS commands.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7865"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.crestron.com/Software-Firmware/Firmware/Touchpanels/TS-770-TS-1070-TSS-770-TSS-1070-TSW-570/3-003-0015-001"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.crestron.com/release_notes/tsw-xx70_3.003.0015.001_release_notes.pdf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-88"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T16:16:19Z"
+  }
+}

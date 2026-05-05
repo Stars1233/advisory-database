@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gmrr-4gfx-7vm5",
+  "modified": "2026-05-05T18:33:25Z",
+  "published": "2026-05-05T18:33:25Z",
+  "aliases": [
+    "CVE-2026-43069"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: hci_ll: Fix firmware leak on error path\n\nSmatch reports:\n\ndrivers/bluetooth/hci_ll.c:587 download_firmware() warn:\n'fw' from request_firmware() not released on lines: 544.\n\nIn download_firmware(), if request_firmware() succeeds but the returned\nfirmware content is invalid (no data or zero size), the function returns\nwithout releasing the firmware, resulting in a resource leak.\n\nFix this by calling release_firmware() before returning when\nrequest_firmware() succeeded but the firmware content is invalid.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43069"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/28904375d54b436a757641fb0331537778c0de5a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/31148a7be723aa9f2e8fbd62424825ab8d577973"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/5213ef54528dd1ac79b846e30d8f72ce092794aa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/95e8601af227b2b4390eecf8db6abdb9f6a91f17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9ecbfd93cd6de6c78cb7fd51fe079e36c7ff074b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a7803df606a7d22e896b030f619e1d9d20ae0c6b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/b2dfbf1b5ff192cefd49574b951a4af9ddd32213"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/e6d95488c8c964d1df0d3e1db44c958706311e86"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T16:16:16Z"
+  }
+}

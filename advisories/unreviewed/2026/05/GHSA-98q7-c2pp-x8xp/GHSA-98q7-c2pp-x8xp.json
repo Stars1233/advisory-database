@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-98q7-c2pp-x8xp",
+  "modified": "2026-05-05T18:33:25Z",
+  "published": "2026-05-05T18:33:25Z",
+  "aliases": [
+    "CVE-2026-43064"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: idxd: Fix not releasing workqueue on .release()\n\nThe workqueue associated with an DSA/IAA device is not released when\nthe object is freed.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43064"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/2bb9e9e93adff9cc8a138ae9a3a8d59b3452272e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/3d33de353b1ff9023d5ec73b9becf80ea87af695"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/958e96533ddbd1edd127feb7624a7eed0cc379dc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/d02c24af126dee45247dc7890409c86d1831859d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fc34f199eb576b3a73089452fdf0056cc9a9301d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fd4cb61bbd0fc3a749a8da6145cbb56d8f6dba35"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-05T16:16:15Z"
+  }
+}
