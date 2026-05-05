@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-659x-hm75-hpv7",
+  "modified": "2026-04-28T23:19:28Z",
+  "published": "2026-04-20T06:31:27Z",
+  "aliases": [
+    "CVE-2026-6604"
+  ],
+  "summary": "AgentScope vulnerable to Server-Side Request Forgery",
+  "details": "A vulnerability was identified in modelscope agentscope up to 1.0.18. Affected by this issue is the function _parse_url/prepare_image/openai_audio_to_text of the file src/agentscope/tool/_multi_modality/_openai_tools.py of the component Cloud Metadata Endpoint. Such manipulation of the argument image_url/audio_file_url leads to server-side request forgery. The attack may be performed from remote. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "agentscope"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.0.18"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6604"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/YLChen-007/e3e0741b297d8c2ffca59b6350d4c657"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/agentscope-ai/agentscope"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/792224"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358239"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358239/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-28T23:19:28Z",
+    "nvd_published_at": "2026-04-20T05:16:15Z"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m8vv-r8gq-c8g8",
+  "modified": "2026-04-28T21:36:14Z",
+  "published": "2026-04-28T21:36:14Z",
+  "aliases": [
+    "CVE-2026-7290"
+  ],
+  "details": "A vulnerability was determined in JeecgBoot up to 3.9.1. Impacted is the function SqlInjectionUtil of the file jeecg-boot/jeecg-boot-base-core/src/main/java/org/jeecg/common/util/SqlInjectionUtil.java of the component loadDict Endpoint. This manipulation of the argument keyword causes sql injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized. Patch name: a9c8e8eb1185751c4c3c68d2a53f3dadee9edc6b. To fix this issue, it is recommended to deploy a patch.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7290"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot/issues/9491"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot/pull/9493"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgai/JeecgBoot/commit/a9c8e8eb1185751c4c3c68d2a53f3dadee9edc6b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/803072"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/359948"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/359948/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-28T19:37:47Z"
+  }
+}

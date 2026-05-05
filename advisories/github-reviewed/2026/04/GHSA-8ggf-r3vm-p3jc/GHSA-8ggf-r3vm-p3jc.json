@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8ggf-r3vm-p3jc",
+  "modified": "2026-04-28T23:20:08Z",
+  "published": "2026-04-20T06:31:27Z",
+  "aliases": [
+    "CVE-2026-6605"
+  ],
+  "summary": "AgentScope vulnerable to Server-Side Request Forgery",
+  "details": "A security flaw has been discovered in modelscope agentscope up to 1.0.18. This affects the function _get_bytes_from_web_url of the file src/agentscope/_utils/_common.py of the component Internal Service. Performing a manipulation results in server-side request forgery. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "agentscope"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.0.18"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6605"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/YLChen-007/ced2d438ae79a5a11cea663c1ba2c954"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/agentscope-ai/agentscope"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/792225"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358240"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358240/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-28T23:20:08Z",
+    "nvd_published_at": "2026-04-20T05:16:15Z"
+  }
+}

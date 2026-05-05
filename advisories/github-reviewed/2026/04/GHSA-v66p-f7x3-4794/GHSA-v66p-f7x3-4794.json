@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v66p-f7x3-4794",
+  "modified": "2026-04-28T23:18:33Z",
+  "published": "2026-04-20T06:31:27Z",
+  "aliases": [
+    "CVE-2026-6599"
+  ],
+  "summary": "Langflow vulnerable to injection",
+  "details": "A vulnerability was detected in langflow-ai langflow up to 1.8.3. The impacted element is the function get_client_ip/install_mcp_config of the file src/backend/base/langflow/api/v1/mcp_projects.py of the component Model Context Protocol Configuration API. Performing a manipulation of the argument X-Forwarded-For results in injection. The attack may be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "langflow"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.8.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6599"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/chenhouser2025/a909c47316b7a0948ee68c109ab747a3"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/langflow-ai/langflow"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/791922"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358234"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/358234/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-04-28T23:18:33Z",
+    "nvd_published_at": "2026-04-20T04:16:53Z"
+  }
+}

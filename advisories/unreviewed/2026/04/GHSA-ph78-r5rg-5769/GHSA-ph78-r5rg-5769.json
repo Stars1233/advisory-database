@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-ph78-r5rg-5769",
+  "modified": "2026-04-29T18:31:34Z",
+  "published": "2026-04-29T00:30:22Z",
+  "aliases": [
+    "CVE-2026-37750"
+  ],
+  "details": "A reflected Cross-Site Scripting (XSS) vulnerability in School Management System by mahmoudai1 allows unauthenticated remote attackers to execute arbitrary JavaScript in victim's browsers via the unsanitized type parameter in register.php.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37750"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mahmoudai1/school-management-system"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mahmoudai1/school-management-system/blob/main/register.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/menevarad007/CVE-2026-37750"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-04-28T22:16:49Z"
+  }
+}
