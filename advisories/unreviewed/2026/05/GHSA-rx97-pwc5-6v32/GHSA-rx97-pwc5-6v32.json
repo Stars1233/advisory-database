@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rx97-pwc5-6v32",
+  "modified": "2026-05-06T18:30:31Z",
+  "published": "2026-05-06T18:30:31Z",
+  "aliases": [
+    "CVE-2026-20172"
+  ],
+  "details": "A vulnerability in the Lite Agent feature of Cisco Enterprise Chat and Email (ECE) could allow an authenticated, remote attacker to conduct browser-based attacks. To exploit this vulnerability, the attacker must have valid credentials for a user account with at least the role of Agent.\n\nThis vulnerability is due to inadequate validation of file contents during file upload operations. An attacker could exploit this vulnerability by uploading a file that contains malicious scripts or HTML code, which the application could make available to other users to access. A successful exploit could allow the attacker to execute the contents of that file in the browser of a user and conduct browser-based attacks.&nbsp;",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20172"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ece-lite-agent-BCgSN8eb"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-646"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-06T17:16:20Z"
+  }
+}

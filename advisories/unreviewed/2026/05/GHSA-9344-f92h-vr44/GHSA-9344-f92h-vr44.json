@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9344-f92h-vr44",
+  "modified": "2026-05-06T18:30:31Z",
+  "published": "2026-05-06T18:30:31Z",
+  "aliases": [
+    "CVE-2026-42503"
+  ],
+  "details": "gopls by default communicates via pipe. However, -port and -listen flags are supported as means of debugging.\nIf -listen is given a value without an explicit host (e.g. :8080), or -port is used, gopls will listen on 0.0.0.0. \nAs a result, users might inadvertently cause gopls to bind 0.0.0.0.\nThis can allow a malicious party on the same network to execute code arbitrarily via gopls.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42503"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/774381"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/79211"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1327"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-06T17:16:23Z"
+  }
+}

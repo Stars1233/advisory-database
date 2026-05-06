@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wfvp-xw34-rhwq",
+  "modified": "2026-05-06T18:30:30Z",
+  "published": "2026-05-06T18:30:30Z",
+  "aliases": [
+    "CVE-2026-20034"
+  ],
+  "details": "A vulnerability in the web-based management interface of Cisco Unity Connection could allow an authenticated, remote attacker to execute arbitrary code on an affected device.\n\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to execute arbitrary code as root, possibly resulting in the complete compromise of a targeted device.&nbsp;To exploit this vulnerability, the attacker must have valid user credentials on the affected device.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20034"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-unity-rce-ssrf-hENhuASy"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-35"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-06T17:16:20Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-63pc-j336-8qq4",
+  "modified": "2026-05-06T18:30:31Z",
+  "published": "2026-05-06T18:30:31Z",
+  "aliases": [
+    "CVE-2026-20195"
+  ],
+  "details": "A vulnerability in an identity management API endpoint of Cisco ISE could allow an unauthenticated, remote attacker to enumerate valid user accounts on an affected device.\n\nThis vulnerability exists because error messages are observed when the affected API endpoint is called. An attacker could exploit this vulnerability by sending a series of crafted requests to the affected endpoint and analyzing the differentiated responses. A successful exploit could allow the attacker to compile a list of valid usernames on an affected system.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20195"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-bypass-uxjRXGpb"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-204"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-06T17:16:21Z"
+  }
+}

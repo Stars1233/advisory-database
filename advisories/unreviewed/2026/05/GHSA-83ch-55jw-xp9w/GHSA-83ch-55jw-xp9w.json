@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-83ch-55jw-xp9w",
+  "modified": "2026-05-06T18:30:31Z",
+  "published": "2026-05-06T18:30:31Z",
+  "aliases": [
+    "CVE-2026-20219"
+  ],
+  "details": "A vulnerability in the REST API of Cisco Slido could have allowed an authenticated, remote attacker to access the social profile data of other users or affect quiz and poll results. Cisco has addressed this vulnerability in Cisco Slido and no customer action is needed.\n\n This vulnerability existed because of the presence of an insecure direct object reference. Prior to this vulnerability being addressed, an attacker could have exploited this vulnerability by sending a crafted request to the vulnerable API endpoint. A successful exploit could have allowed the attacker to view the social profiles of other users or affect quiz and poll results.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20219"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-slido-idor-CpsFmKxN"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-06T17:16:21Z"
+  }
+}
