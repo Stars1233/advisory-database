@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p2rf-wpxj-mx2g",
+  "modified": "2026-05-06T22:45:55Z",
+  "published": "2026-04-29T15:30:38Z",
+  "aliases": [
+    "CVE-2026-42520"
+  ],
+  "summary": "Jenkins Credentials Binding Plugin has a path traversal vulnerability",
+  "details": "Jenkins Credentials Binding Plugin versions 719.v80e905ef14eb_ and earlier do not sanitize file names for file and zip file credentials.\n\nThis allows attackers able to provide credentials to a job to write files to arbitrary locations on the node filesystem. If Jenkins is configured to allow a low-privileged user to configure file or zip file credentials used for a job running on the built-in node, this can lead to remote code execution.\n\nCredentials Binding Plugin 720.v3f6decef43ea_ sanitizes the file name provided for file and zip file credentials, preventing path traversal.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.jenkins-ci.plugins:credentials-binding"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "720.v3f6decef43ea"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42520"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/jenkinsci/credentials-binding-plugin"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2026-04-29/#SECURITY-3672"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-06T22:45:55Z",
+    "nvd_published_at": "2026-04-29T14:16:19Z"
+  }
+}
