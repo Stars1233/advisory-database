@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9g2q-w3w2-vf7q",
+  "modified": "2026-05-06T18:28:46Z",
+  "published": "2026-05-06T18:28:45Z",
+  "aliases": [],
+  "summary": "Kimai has Missing Voter Check that Allows Cross-Team Timesheet Manipulation",
+  "details": "### Summary\n\nAny ROLE_TEAMLEAD user can enumerate, read, modify, and permanently delete timesheets belonging to any other user in the system — regardless of team membership. This enables data destruction (deleted billable hours), data tampering (forged timesheet durations), and full authorization bypass on timesheet resources. Verified against Kimai 2.52.0.\n\n### Details\n\n`TimesheetVoter::voteOnAttribute()` maps permissions to `own_timesheet` or `other_timesheet` without checking team membership. The voter's own comment confirms this is a known gap:\n\n```php\n// extend me for \"team\" support later on\nif ($subject->getUser()?->getId() === $user->getId()) {\n    $permission .= 'own';\n} else {\n    $permission .= 'other';\n}\n```\n\n### PoC\n\nTested against Kimai 2.52.0 Docker instance.\n\nSetup:\n- User A (usera, ROLE_TEAMLEAD) owns timesheet ID 2 with description \"Private timesheet - UserA only\"\n- User B (userb, ROLE_TEAMLEAD) is NOT on any team with User A\n\n**User B reads User A's timesheet data:**\n\n```\nGET /api/timesheets/2 HTTP/1.1\nX-AUTH-USER: userb\nX-AUTH-TOKEN: <userb_api_token>\n```\n\nResponse: HTTP 200 — returns full timesheet record including description \"Private timesheet - UserA only\".\n\n**User B deletes User A's timesheet:**\n\n```\nDELETE /api/timesheets/3 HTTP/1.1\nX-AUTH-USER: userb\nX-AUTH-TOKEN: <userb_api_token>\n```\n\nResponse: HTTP 204 No Content — timesheet permanently deleted.\n\n**User B tampers User A's timesheet:**\n\n```\nPATCH /api/timesheets/6 HTTP/1.1\nX-AUTH-USER: userb\nX-AUTH-TOKEN: <userb_api_token>\nContent-Type: application/json\n\n{\"begin\":\"2026-03-24T08:00:00\",\"end\":\"2026-03-24T18:00:00\",\"project\":1,\"activity\":1,\"description\":\"TAMPERED\",\"exported\":false,\"billable\":false}\n```\n\nResponse: HTTP 200 OK — duration inflated from 3600s to 36000s, description overwritten.\n\n**Note:** ROLE_USER (userc) is correctly blocked — DELETE returns 403 and the actions endpoint returns an empty array. The vulnerability only affects ROLE_TEAMLEAD and above. Timesheet IDs are sequential integers, trivially enumerable.\n\n### Impact\n\nAny authenticated user with ROLE_TEAMLEAD or above can:\n\n1. Permanently delete timesheets belonging to any user system-wide — destroying billable hours, payroll data, and project billing history\n2. Silently alter timesheet descriptions, hours, and billing flags — forging hours up or down, directly affecting invoicing and payroll\n3. Enumerate all timesheet IDs (sequential integers) and access action metadata for arbitrary records\n\nNo user interaction required. ROLE_USER accounts are correctly restricted; the vulnerability is specific to ROLE_TEAMLEAD receiving global scope instead of team-scoped access.\n\n### Maintainers answer: why this is not eligible for a CVE\n\nThe behavior described matches the documented permission model. Per the Kimai documentation, the relevant permissions granted to `ROLE_TEAMLEAD` are:\n\n- `edit_other_timesheet` — Edit existing records of other users\n- `delete_other_timesheet` — Delete existing records of other users\n\nThese permissions were global by design, not team-scoped. The UI surfaces only the teamlead's own team timesheets, but the API has historically honored these permissions as documented: a role holding `*_other_timesheet` can act on any other user's timesheet. The inline comment `// extend me for \"team\" support later on` reflects this accurately — team-scoped enforcement was a planned enhancement, not a security control that existed and failed.\n\nThe report frames this as authorization bypass, but no authorization boundary is being crossed: `ROLE_TEAMLEAD` is operating within its documented permissions.\n\nKimai acknowledges that this behavior might not be expected, so while it will be treated as a feature request for team-scoped permission enforcement and not a vulnerability, it still track it as having security implications.\n\n### Solution\n\nTeam-scoped timesheet permission checks were added in 2.56.0.\n\nOperators of Kimai <= 2.55 who need stricter isolation between teamleads should not grant `ROLE_TEAMLEAD` to users who must not act on other teams' timesheets.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "kimai/kimai"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.56.0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 2.55.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kimai/kimai/security/advisories/GHSA-9g2q-w3w2-vf7q"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/kimai/kimai"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-06T18:28:45Z",
+    "nvd_published_at": null
+  }
+}
