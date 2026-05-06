@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6p4f-wcwh-5vvm",
+  "modified": "2026-05-06T22:30:01Z",
+  "published": "2026-04-29T12:33:07Z",
+  "aliases": [
+    "CVE-2026-22745"
+  ],
+  "summary": "Spring MVC and WebFlux applications are vulnerable to Denial of Service attacks when resolving static resources",
+  "details": "Spring MVC and WebFlux applications are vulnerable to Denial of Service attacks when resolving static resources.\n\n\nMore precisely, an application can be vulnerable when all the following are true:\n\n  *  the application is using Spring MVC or Spring WebFlux\n  *  the application is serving static resources from the file system\n  *  the application is running on a Windows platform\n\n\nWhen all the conditions above are met, the attacker can send malicious requests that are slow to resolve and that can keep HTTP connections in use. This can cause a Denial of Service on the application.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webflux"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.7"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 7.0.6"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webflux"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.18"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 6.2.17"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webflux"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "last_affected": "6.1.26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webflux"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "5.3.47"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webmvc"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.7"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 7.0.6"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webmvc"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.18"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 6.2.17"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webmvc"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "last_affected": "6.1.26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework:spring-webmvc"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "5.3.47"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22745"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/spring-projects/spring-framework"
+    },
+    {
+      "type": "WEB",
+      "url": "https://spring.io/security/cve-2026-22745"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-06T22:30:01Z",
+    "nvd_published_at": "2026-04-29T12:16:18Z"
+  }
+}
