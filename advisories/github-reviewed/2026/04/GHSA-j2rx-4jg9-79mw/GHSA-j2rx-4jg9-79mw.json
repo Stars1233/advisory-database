@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j2rx-4jg9-79mw",
+  "modified": "2026-05-06T23:11:16Z",
+  "published": "2026-04-29T18:31:34Z",
+  "aliases": [
+    "CVE-2026-38991"
+  ],
+  "summary": "Cockpit Vulnerable to Unrestricted Upload of File with Dangerous Type",
+  "details": "Cockpit versions 2.13.5 and earlier are affected by a misconfiguration within the Bucket component _isFileTypeAllowed function where a specially crafted filename bypasses an extension filter. This allows an authenticated attacker to rename arbitrary files with the .php file extension enabling arbitrary code to be executed on the underlying server.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "cockpit-hq/cockpit"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38991"
+    },
+    {
+      "type": "WEB",
+      "url": "https://felsec.com/posts/cockpit-cms-2.13.5-multi-vulns"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/Cockpit-HQ/Cockpit"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Cockpit-HQ/Cockpit/releases/tag/2.14.0"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-06T23:11:16Z",
+    "nvd_published_at": "2026-04-29T16:16:23Z"
+  }
+}
