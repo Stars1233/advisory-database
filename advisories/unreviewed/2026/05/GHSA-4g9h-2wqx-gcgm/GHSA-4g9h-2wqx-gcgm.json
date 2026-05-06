@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4g9h-2wqx-gcgm",
+  "modified": "2026-05-06T03:33:14Z",
+  "published": "2026-05-06T03:33:14Z",
+  "aliases": [
+    "CVE-2025-71255"
+  ],
+  "details": "In Modem IMS, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71255"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.unisoc.com/en/support/product-security-bulletin/2051836844671422466"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-06T02:16:05Z"
+  }
+}
