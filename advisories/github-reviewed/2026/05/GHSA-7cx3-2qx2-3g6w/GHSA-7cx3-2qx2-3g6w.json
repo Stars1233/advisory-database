@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7cx3-2qx2-3g6w",
+  "modified": "2026-05-06T20:12:07Z",
+  "published": "2026-05-06T20:12:07Z",
+  "aliases": [],
+  "summary": "phpMyFAQ's Missing Authorization on Tag Deletion Allows Any Authenticated User to Delete Tags",
+  "details": "## Summary\n\nThe `TagController::delete()` endpoint at `DELETE /admin/api/content/tags/{tagId}` only verifies that the user is logged in (`userIsAuthenticated()`), but does not check any permission. Any authenticated user — including regular non-admin frontend users — can delete any tag by ID. This contrasts with `TagController::update()` and `TagController::search()`, which both enforce the `FAQ_EDIT` permission.\n\n## Details\n\nIn `phpmyfaq/src/phpMyFAQ/Controller/Administration/Api/TagController.php`, the `delete()` method (line 121-133) uses only `$this->userIsAuthenticated()`:\n\n```php\n#[Route(path: 'content/tags/{tagId}', name: 'admin.api.content.tags.id', methods: ['DELETE'])]\npublic function delete(Request $request): JsonResponse\n{\n    $this->userIsAuthenticated();  // Only checks isLoggedIn() — no permission check\n\n    $tagId = (int) Filter::filterVar($request->attributes->get('tagId'), FILTER_VALIDATE_INT);\n\n    if ($this->tags->delete($tagId)) {\n        return $this->json(['success' => Translation::get(key: 'ad_tag_delete_success')], Response::HTTP_OK);\n    }\n\n    return $this->json(['error' => Translation::get(key: 'ad_tag_delete_error')], Response::HTTP_BAD_REQUEST);\n}\n```\n\nCompare with `update()` (line 48-71) which properly enforces authorization:\n\n```php\npublic function update(Request $request): JsonResponse\n{\n    $this->userHasPermission(PermissionType::FAQ_EDIT);  // Proper permission check\n    // ... also verifies CSRF token ...\n}\n```\n\nThe `userIsAuthenticated()` method in `AbstractController` (line 258-263) only checks `$this->currentUser->isLoggedIn()`:\n\n```php\nprotected function userIsAuthenticated(): void\n{\n    if (!$this->currentUser->isLoggedIn()) {\n        throw new UnauthorizedHttpException(challenge: 'User is not authenticated.');\n    }\n}\n```\n\nThere is no admin-level middleware in the `Kernel` — it registers only RouterListener, LanguageListener, ControllerContainerListener, and exception listeners. The admin API entry point (`admin/api/index.php`) shares the same bootstrap and session as the frontend, meaning a frontend user's session cookie is valid for admin API requests.\n\nAdditionally, this endpoint lacks CSRF token verification (unlike `update()`), though the primary issue is the missing authorization since the attack vector is a logged-in user acting directly.\n\n## PoC\n\n```bash\n# Step 1: Register as a regular user on the phpMyFAQ frontend\n# (or use any existing non-admin authenticated session)\n\n# Step 2: As the authenticated non-admin user, delete tag with ID 1:\ncurl -X DELETE 'https://target.com/admin/api/content/tags/1' \\\n  -H 'Cookie: PHPSESSID=<regular_user_session>'\n\n# Expected: 401 or 403 (user lacks FAQ_EDIT permission)\n# Actual: 200 OK with {\"success\": \"...\"}\n\n# Step 3: Enumerate and delete all tags:\nfor i in $(seq 1 100); do\n  curl -s -X DELETE \"https://target.com/admin/api/content/tags/$i\" \\\n    -H 'Cookie: PHPSESSID=<regular_user_session>'\ndone\n```\n\n## Impact\n\nAny authenticated user (including regular frontend users who registered through the public registration form) can delete all tags in the phpMyFAQ instance. This results in:\n\n- **Data integrity loss:** Tags are permanently deleted from the database. All FAQ-to-tag associations are destroyed.\n- **Disruption of FAQ organization:** Tag-based navigation, filtering, and tag clouds become empty or broken.\n- **No recoverability without backup:** Deleted tags and their associations cannot be restored without a database backup.\n\nThe impact is limited to tags (not FAQ content itself), but in large installations with extensive tag taxonomies, this could significantly degrade usability.\n\n## Recommended Fix\n\nAdd the `FAQ_EDIT` permission check and CSRF token verification to `TagController::delete()`, consistent with `TagController::update()`:\n\n```php\n#[Route(path: 'content/tags/{tagId}', name: 'admin.api.content.tags.id', methods: ['DELETE'])]\npublic function delete(Request $request): JsonResponse\n{\n    $this->userHasPermission(PermissionType::FAQ_EDIT);\n\n    $tagId = (int) Filter::filterVar($request->attributes->get('tagId'), FILTER_VALIDATE_INT);\n\n    if ($this->tags->delete($tagId)) {\n        return $this->json(['success' => Translation::get(key: 'ad_tag_delete_success')], Response::HTTP_OK);\n    }\n\n    return $this->json(['error' => Translation::get(key: 'ad_tag_delete_error')], Response::HTTP_BAD_REQUEST);\n}\n```\n\nAt minimum, add `$this->userHasPermission(PermissionType::FAQ_EDIT)` to enforce the same authorization as the update and search endpoints. Consider also adding a dedicated `TAG_DELETE` permission type for more granular access control.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "phpmyfaq/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.1"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "thorsten/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.1"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-7cx3-2qx2-3g6w"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/thorsten/phpMyFAQ"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-06T20:12:07Z",
+    "nvd_published_at": null
+  }
+}
