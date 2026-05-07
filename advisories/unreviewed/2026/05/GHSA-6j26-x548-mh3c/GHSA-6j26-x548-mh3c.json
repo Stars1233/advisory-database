@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6j26-x548-mh3c",
+  "modified": "2026-05-07T12:31:23Z",
+  "published": "2026-05-07T12:31:23Z",
+  "aliases": [
+    "CVE-2026-6508"
+  ],
+  "details": "Origin Validation Error vulnerability in TUBITAK BILGEM Software Technologies Research Institute Liderahenk allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Liderahenk: from 2.0.1 before 2.0.2.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6508"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0181"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-346"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-07T12:16:18Z"
+  }
+}

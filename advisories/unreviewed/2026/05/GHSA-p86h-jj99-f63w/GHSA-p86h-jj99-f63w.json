@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p86h-jj99-f63w",
+  "modified": "2026-05-07T12:31:23Z",
+  "published": "2026-05-07T12:31:23Z",
+  "aliases": [
+    "CVE-2026-3953"
+  ],
+  "details": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Gosoft Software Industry and Trade Ltd. Co. Proticaret E-Commerce allows Cross-Site Scripting (XSS), Reflected XSS.\n\nThis issue affects Proticaret E-Commerce: from v5.0.0 before V 6.0.1767.1383.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3953"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0180"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-07T12:16:16Z"
+  }
+}
