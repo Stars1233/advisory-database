@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rprm-6mg6-r8fm",
+  "modified": "2026-05-07T03:31:21Z",
+  "published": "2026-05-07T03:31:21Z",
+  "aliases": [
+    "CVE-2026-44599"
+  ],
+  "details": "Tor before 0.4.9.7 can attempt or accept BEGIN_DIR via conflux legs, aka TROVE-2026-008.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44599"
+    },
+    {
+      "type": "WEB",
+      "url": "https://forum.torproject.org/c/news/tor-release-announcement/28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.torproject.org/tpo/core/tor/-/commit/50f90ba849088247734786922855c22661c6fa03"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.torproject.org/tpo/core/tor/-/work_items/41243"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.openwall.com/lists/oss-security/2026/05/06/8"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-669"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-07T03:16:07Z"
+  }
+}

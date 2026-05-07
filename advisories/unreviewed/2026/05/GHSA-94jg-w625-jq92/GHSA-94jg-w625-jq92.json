@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-94jg-w625-jq92",
+  "modified": "2026-05-07T03:31:21Z",
+  "published": "2026-05-07T03:31:21Z",
+  "aliases": [
+    "CVE-2026-44597"
+  ],
+  "details": "Tor before 0.4.9.7 has an out-of-bounds read when an END, a TRUNCATE, or a TRUNCATED cell lacks a reason in its payload, aka TROVE-2026-011.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44597"
+    },
+    {
+      "type": "WEB",
+      "url": "https://forum.torproject.org/c/news/tor-release-announcement/28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.torproject.org/tpo/core/tor/-/commit/8f98054b1982d00a14639864d03e9afd90b87481"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.torproject.org/tpo/core/tor/-/work_items/41254"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.openwall.com/lists/oss-security/2026/05/06/8"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-684"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-07T01:16:01Z"
+  }
+}

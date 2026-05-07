@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2jfv-r29r-j6wr",
+  "modified": "2026-05-07T03:31:21Z",
+  "published": "2026-05-07T03:31:21Z",
+  "aliases": [
+    "CVE-2026-40003"
+  ],
+  "details": "ZTE ZX297520V3 BootROM contains a vulnerability that allows arbitrary memory writes via USB. Attackers can exploit the lack of target address validation in the USB download mode to write data to any location in BootROM runtime memory, thereby overwriting the stack, hijacking the execution flow, bypassing the Secure Boot signature verification mechanism, and achieving unauthorized code execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:P/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40003"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/2144487415169560645"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-07T02:16:03Z"
+  }
+}
