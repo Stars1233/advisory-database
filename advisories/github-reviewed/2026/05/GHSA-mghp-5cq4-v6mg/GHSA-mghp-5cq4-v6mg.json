@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mghp-5cq4-v6mg",
+  "modified": "2026-05-08T23:25:37Z",
+  "published": "2026-05-08T23:25:37Z",
+  "aliases": [
+    "CVE-2026-44833"
+  ],
+  "summary": "Snipe-IT has an open redirect vulnerability",
+  "details": "Open redirect vulnerability in Snipe-IT allows attackers to redirect users to malicious sites via unvalidated HTTP Referer header stored in session variable.\n\n### Impact\n\n-   **Phishing**: Redirect users to fake login pages to steal credentials\n-   **Session Hijacking**: Redirect to attacker site that captures session cookies via JavaScript\n-   **Malware Distribution**: Redirect to sites hosting malware or drive-by downloads\n-   **Reputation Damage**: Users lose trust when redirected to malicious sites from legitimate application\n-   **Social Engineering**: Use trusted Snipe-IT domain to increase phishing success rate\n\nWhen the user clicks \"Save\", the application: \n1. Processes the form \n2. Checks `redirect_option` (if set to 'back') \n3. Calls `Helper::getRedirectOption()` \n4. Retrieves `back_url` from session: `https://evil.com/phishing?target=snipeit` \n5. Executes `redirect()->to($backUrl)` \n6. User is redirected to attacker's site\n\nThis would still require session poisoning, so the actual practical threat here is minimal. \n\n### Patches\nPatched in https://github.com/grokability/snipe-it/commit/e37649212861a337e68a624e589c3540b7a82373, released in 8.4.1.\n\n### Workarounds\n None.\n\n### Resources\n-   CWE-601: URL Redirection to Untrusted Site ('Open Redirect')\n-   OWASP: Unvalidated Redirects and Forwards\n-   Laravel Security: Safe Redirects\n\n[snipeit_open_redirect_submission.md](https://github.com/user-attachments/files/27414869/snipeit_open_redirect_submission.md)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "snipe/snipe-it"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grokability/snipe-it/security/advisories/GHSA-mghp-5cq4-v6mg"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/grokability/snipe-it"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-08T23:25:37Z",
+    "nvd_published_at": null
+  }
+}
