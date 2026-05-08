@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-54h8-vwcv-q5r9",
+  "modified": "2026-05-08T18:31:34Z",
+  "published": "2026-05-08T18:31:34Z",
+  "aliases": [
+    "CVE-2026-34354"
+  ],
+  "details": "Akamai Guardicore Platform Agent (GPA) and Zero Trust Client on Linux and macOS allow TOCTOU-based local privilege escalation. The GPA service creates an IPC socket in the world-writable /tmp directory. It accepts unauthenticated IPC control messages. This enables a TOCTOU vulnerability in the HandleSaveLogs() function of the GPA service, by creating a log file and manipulating it into a symlink that points to the targeted path; this can allow an unprivileged local user to make arbitrary root-owned files world-writable. In addition, a diagnostic collection tool (gimmelogs) running with root privileges was vulnerable to command injection from the dbstore, offering a second privilege escalation vector. (On Windows, gimmelogs does not have command injection but does allow writing a ZIP archive to an unintended location.) This affects Akamai Guardicore Platform Agent 7.0 through 7.3.1 and Akamai Zero Trust Client 6.0 through 6.1.5.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34354"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.akamai.com/blog/security-research/advisory-cve-2026-34354-guardicore-local-privilege-escalation"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-367"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-08T16:16:10Z"
+  }
+}
