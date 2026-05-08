@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v4gp-hf5j-4566",
+  "modified": "2026-05-08T18:52:25Z",
+  "published": "2026-05-04T21:30:25Z",
+  "aliases": [
+    "CVE-2025-67796"
+  ],
+  "summary": "IKUS Rdiffweb allows an attacker with any valid or stolen access token to act as other users",
+  "details": "IKUS Rdiffweb version 2.10.5 and below have an improper authorization flaw that allows an attacker with any valid or stolen access token to act as other users. The API does not enforce binding between the authenticated subject and the targeted user/tenant, so crafted requests can read or modify other users data and, in some cases, perform privileged actions. This issue may enable cross-tenant access. Fixed in version 2.10.6.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "rdiffweb"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.10.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67796"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://gitlab.com/ikus-soft/rdiffweb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/ikus-soft/rdiffweb#2106-2025-10-02"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-08T18:52:25Z",
+    "nvd_published_at": "2026-05-04T20:16:16Z"
+  }
+}
