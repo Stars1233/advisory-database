@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rj36-m5c4-rgw9",
+  "modified": "2026-05-10T15:31:19Z",
+  "published": "2026-05-10T15:31:19Z",
+  "aliases": [
+    "CVE-2021-47927"
+  ],
+  "details": "WordPress Plugin WP Symposium Pro 2021.10 contains a stored cross-site scripting vulnerability that allows authenticated attackers to inject malicious scripts by exploiting insufficient sanitization of the forum name parameter. Attackers can submit POST requests to the admin setup page with JavaScript payloads in the wps_admin_forum_add_name parameter, which are stored and executed when the forum is accessed.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47927"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/plugins/wp-symposium-pro"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/50514"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/wordpress-plugin-wp-symposium-pro-stored-xss-via-wps-admin-forum-add-name"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.wpsymposiumpro.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-10T13:16:28Z"
+  }
+}

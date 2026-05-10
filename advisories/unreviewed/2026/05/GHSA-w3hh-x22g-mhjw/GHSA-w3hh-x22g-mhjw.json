@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w3hh-x22g-mhjw",
+  "modified": "2026-05-10T15:31:20Z",
+  "published": "2026-05-10T15:31:20Z",
+  "aliases": [
+    "CVE-2021-47939"
+  ],
+  "details": "Evolution CMS 3.1.6 contains a remote code execution vulnerability that allows authenticated users with module creation permissions to execute arbitrary system commands by injecting PHP code into module parameters. Attackers can send POST requests to /manager/index.php with malicious PHP code in the 'post' parameter to create modules that execute arbitrary commands when invoked.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47939"
+    },
+    {
+      "type": "WEB",
+      "url": "https://evo.im"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/evolution-cms/evolution/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/50296"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/evolution-cms-authenticated-remote-code-execution-via-module-creation"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-10T13:16:30Z"
+  }
+}

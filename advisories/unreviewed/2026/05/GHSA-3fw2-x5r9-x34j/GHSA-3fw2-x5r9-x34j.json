@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3fw2-x5r9-x34j",
+  "modified": "2026-05-10T15:31:20Z",
+  "published": "2026-05-10T15:31:19Z",
+  "aliases": [
+    "CVE-2021-47943"
+  ],
+  "details": "TextPattern CMS 4.8.7 contains a remote code execution vulnerability that allows authenticated attackers to execute arbitrary commands by uploading malicious PHP files through the file upload functionality. Attackers can upload a PHP shell via the Files section in the content area and execute commands by accessing the uploaded file at /textpattern/files/ with GET parameters passed to the system function.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47943"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/49996"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/50415"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/textpattern-cms-remote-code-execution-via-file-upload"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-10T13:16:30Z"
+  }
+}

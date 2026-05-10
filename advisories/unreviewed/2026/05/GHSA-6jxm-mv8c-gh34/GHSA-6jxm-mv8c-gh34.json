@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6jxm-mv8c-gh34",
+  "modified": "2026-05-10T15:31:19Z",
+  "published": "2026-05-10T15:31:19Z",
+  "aliases": [
+    "CVE-2021-47931"
+  ],
+  "details": "Exponent CMS 2.6 contains a stored cross-site scripting vulnerability that allows authenticated attackers to inject malicious scripts through the Title and Text Block parameters in the text editing endpoint. Attackers can inject iframe payloads with embedded SVG onload events to execute arbitrary JavaScript, and the application also exposes database credentials in responses and lacks brute-force protection on authentication endpoints.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47931"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/50611"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exponentcms.org"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/exponent-cms-multiple-vulnerabilities-stored-xss-authentication"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-10T13:16:29Z"
+  }
+}
