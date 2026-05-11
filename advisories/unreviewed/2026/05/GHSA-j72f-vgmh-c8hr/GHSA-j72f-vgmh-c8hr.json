@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j72f-vgmh-c8hr",
+  "modified": "2026-05-11T12:32:31Z",
+  "published": "2026-05-11T12:32:31Z",
+  "aliases": [
+    "CVE-2025-8154"
+  ],
+  "details": "In Webhook API invocations, the component accepts user-supplied input for HTTP request headers without sufficient validation or sanitization, allowing these headers to be injected into HTTP responses.\n\nBy exploiting this vulnerability, a malicious actor can inject or overwrite arbitrary HTTP response headers. This can lead to various adverse effects, including the manipulation of browser caching, alteration of security-related headers, and the injection of sensitive information such as cookie values, potentially enabling session hijacking or other malicious activities.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8154"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2025-4410"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-11T10:16:12Z"
+  }
+}

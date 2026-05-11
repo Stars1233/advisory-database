@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xh36-jjpq-3cmr",
+  "modified": "2026-05-11T12:32:31Z",
+  "published": "2026-05-11T12:32:31Z",
+  "aliases": [
+    "CVE-2025-8325"
+  ],
+  "details": "The software fails to enforce role-based access controls for certain Gateway API invocations. Users with the 'Internal/Everyone' role can invoke these APIs, bypassing intended permission checks. This same vulnerability also affects Internal Service APIs, potentially exposing them in WSO2 APIM 3.x versions.\n\nA malicious actor with a valid user account on a vulnerable deployment can perform sensitive operations against the Gateway REST API regardless of their actual roles or privileges. This could lead to unintended behavior or misuse, particularly in production environments.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8325"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2025-4401"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-281"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-11T10:16:13Z"
+  }
+}

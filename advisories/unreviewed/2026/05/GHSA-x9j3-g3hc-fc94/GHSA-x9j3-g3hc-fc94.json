@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x9j3-g3hc-fc94",
+  "modified": "2026-05-11T12:32:32Z",
+  "published": "2026-05-11T12:32:32Z",
+  "aliases": [
+    "CVE-2026-41951"
+  ],
+  "details": "Path traversal vulnerability exists in GROWI v7.5.0 and earlier, which may allow an attacker to execute arbitrary EJS templates on the server when an email server is running in GROWI.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41951"
+    },
+    {
+      "type": "WEB",
+      "url": "https://growi.co.jp/news/44"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jvn.jp/jp/JVN38788367"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-11T10:16:13Z"
+  }
+}

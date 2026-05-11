@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r9x2-mg2v-mq96",
+  "modified": "2026-05-11T12:32:31Z",
+  "published": "2026-05-11T12:32:31Z",
+  "aliases": [
+    "CVE-2024-0391"
+  ],
+  "details": "The check user account lock states feature within the email OTP flow fails to validate user input, allowing an attacker to infer the existence of registered user accounts.\n\nThe discovery of valid usernames can increase the risk of brute-force and social engineering attacks. Attackers can leverage this information to craft targeted phishing campaigns or other malicious activities aimed at tricking users into divulging sensitive data, potentially damaging the organization's reputation and leading to regulatory non-compliance and financial consequences.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0391"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2024-3115"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-204"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-11T10:16:11Z"
+  }
+}
