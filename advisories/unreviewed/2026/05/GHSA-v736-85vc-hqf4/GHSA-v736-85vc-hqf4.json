@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v736-85vc-hqf4",
+  "modified": "2026-05-11T06:31:33Z",
+  "published": "2026-05-11T06:31:33Z",
+  "aliases": [
+    "CVE-2026-8269"
+  ],
+  "details": "A vulnerability was found in Open5GS up to 2.7.7. Impacted is the function smf_nsmf_handle_create_sm_context of the component SMF. Performing a manipulation results in denial of service. Remote exploitation of the attack is possible. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8269"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/open5gs/open5gs/issues/4450"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/open5gs/open5gs"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/808486"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/362566"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/362566/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-404"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-11T05:16:15Z"
+  }
+}
