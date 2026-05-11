@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mc29-hmx6-856q",
+  "modified": "2026-05-11T15:29:41Z",
+  "published": "2026-05-11T15:29:41Z",
+  "aliases": [
+    "CVE-2026-44474"
+  ],
+  "summary": "Ella Core has handover failures during concurrent Security Mode Command",
+  "details": "## Summary\n\nElla Core didn't enforce security rules on concurrent running of security procedures defined in TS 33.501 §6.9.5.1 — it could send a NAS Security Mode Command while an N2 handover was still pending (and vice versa).\n\n## Impact\n\nConcurrent Security Mode Command and N2 handover produce a KgNB mismatch between the UE and target gNB, causing the handover to fail. Requires a stalled gNB + re-registration race to trigger.\n\n## Fix\n\nElla Core now enforces both rules from §6.9.5.1, blocking concurrent Security Mode Command and N2 handover procedures.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Go",
+        "name": "github.com/ellanetworks/core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/ellanetworks/core/security/advisories/GHSA-mc29-hmx6-856q"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/ellanetworks/core"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-358"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-11T15:29:41Z",
+    "nvd_published_at": null
+  }
+}
