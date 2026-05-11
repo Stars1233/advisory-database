@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fff5-x34w-4v72",
+  "modified": "2026-05-11T03:31:31Z",
+  "published": "2026-05-11T03:31:31Z",
+  "aliases": [
+    "CVE-2026-8258"
+  ],
+  "details": "A flaw has been found in Squirrel up to 3.2. Impacted is the function validate_format in the library sqstdlib/sqstdstring.cpp. Executing a manipulation can lead to stack-based buffer overflow. The attack can only be executed locally. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8258"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/albertodemichelis/squirrel/issues/325"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/biniamf/pocs/tree/main/squirrel-validate_format-memcpy-oob"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/809873"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/362555"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/362555/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-11T02:16:27Z"
+  }
+}
