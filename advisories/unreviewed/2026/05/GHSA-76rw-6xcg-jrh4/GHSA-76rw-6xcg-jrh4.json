@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-76rw-6xcg-jrh4",
+  "modified": "2026-05-12T12:32:16Z",
+  "published": "2026-05-12T12:32:15Z",
+  "aliases": [
+    "CVE-2026-32684"
+  ],
+  "details": "The application does not impose strict enough restrictions on directory access permissions, posing a risk that other malicious applications could obtain sensitive information.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32684"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pinfo.hikvision.com/hkwsen/unzip/20260511114030_14652_doc/GUID-A47A8570-631E-4F62-BCEE-37E9F2983DD7.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-12T11:16:19Z"
+  }
+}

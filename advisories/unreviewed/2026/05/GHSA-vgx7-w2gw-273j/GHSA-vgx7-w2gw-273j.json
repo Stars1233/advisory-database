@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vgx7-w2gw-273j",
+  "modified": "2026-05-12T12:32:16Z",
+  "published": "2026-05-12T12:32:16Z",
+  "aliases": [
+    "CVE-2026-2465"
+  ],
+  "details": "Incorrect Authorization vulnerability in E-Kalite Software Hardware Engineering Design and Internet Services Industry and Trade Ltd. Co. Turboard FOR-S allows Privilege Escalation.\n\nThis issue affects Turboard FOR-S: from 7.01.2026 before 18.02.2026.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2465"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0224"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-12T11:16:19Z"
+  }
+}

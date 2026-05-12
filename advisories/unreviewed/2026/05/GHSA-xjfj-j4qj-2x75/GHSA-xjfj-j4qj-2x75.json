@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xjfj-j4qj-2x75",
+  "modified": "2026-05-12T12:32:13Z",
+  "published": "2026-05-12T12:32:13Z",
+  "aliases": [
+    "CVE-2025-40948"
+  ],
+  "details": "A vulnerability has been identified in RUGGEDCOM ROX MX5000 (All versions < V2.17.1), RUGGEDCOM ROX MX5000RE (All versions < V2.17.1), RUGGEDCOM ROX RX1400 (All versions < V2.17.1), RUGGEDCOM ROX RX1500 (All versions < V2.17.1), RUGGEDCOM ROX RX1501 (All versions < V2.17.1), RUGGEDCOM ROX RX1510 (All versions < V2.17.1), RUGGEDCOM ROX RX1511 (All versions < V2.17.1), RUGGEDCOM ROX RX1512 (All versions < V2.17.1), RUGGEDCOM ROX RX1524 (All versions < V2.17.1), RUGGEDCOM ROX RX1536 (All versions < V2.17.1), RUGGEDCOM ROX RX5000 (All versions < V2.17.1). Affected devices do not properly validate input in the web server's JSON-RPC interface.\n\nThis could allow an authenticated remote attacker to read arbitrary files from the underlying operating system's filesystem with root privileges.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40948"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-973901.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-88"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-12T10:16:43Z"
+  }
+}
