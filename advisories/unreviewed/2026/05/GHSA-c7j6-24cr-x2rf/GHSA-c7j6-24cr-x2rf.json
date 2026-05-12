@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c7j6-24cr-x2rf",
+  "modified": "2026-05-12T06:31:39Z",
+  "published": "2026-05-12T06:31:39Z",
+  "aliases": [
+    "CVE-2026-7256"
+  ],
+  "details": "** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI program of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow an adjacent attacker on the LAN to execute operating system (OS) commands on a vulnerable device by sending a crafted HTTP request.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7256"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.zyxel.com/global/en/support/end-of-life"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-12T04:16:29Z"
+  }
+}
