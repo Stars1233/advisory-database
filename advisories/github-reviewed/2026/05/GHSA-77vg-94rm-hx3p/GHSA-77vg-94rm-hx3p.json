@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-77vg-94rm-hx3p",
+  "modified": "2026-05-14T20:23:47Z",
+  "published": "2026-05-14T20:23:47Z",
+  "aliases": [
+    "CVE-2026-42570"
+  ],
+  "summary": "Svelte devalue: DoS via sparse array deserialization",
+  "details": "`devalue.parse` could, due to quirks in some JavaScript engines, be convinced to allocate much more memory than was needed when deserializing sparse arrays, leading to excessive memory consumption.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "devalue"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.6.3"
+            },
+            {
+              "fixed": "5.8.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 5.8.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sveltejs/devalue/security/advisories/GHSA-77vg-94rm-hx3p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sveltejs/devalue/commit/206ca6712fbc380a4571c59de9ab04b91110792d"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/sveltejs/devalue"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sveltejs/devalue/releases/tag/v5.8.1"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-14T20:23:47Z",
+    "nvd_published_at": null
+  }
+}
