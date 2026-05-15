@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6cr3-m628-79px",
+  "modified": "2026-05-15T15:30:45Z",
+  "published": "2026-05-15T15:30:45Z",
+  "aliases": [
+    "CVE-2025-14972"
+  ],
+  "details": "*  Countermeasures for DPA within SYMCRYPTO\nengine on SixG301xxx devices are not sufficiently random and will\neventually repeat.\n  *  KSU keys using SYMCRYPTO will be\nimpacted by this vulnerability.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:P/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14972"
+    },
+    {
+      "type": "WEB",
+      "url": "https://community.silabs.com/068Vm00000M3cAX"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-331"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-15T15:16:49Z"
+  }
+}
