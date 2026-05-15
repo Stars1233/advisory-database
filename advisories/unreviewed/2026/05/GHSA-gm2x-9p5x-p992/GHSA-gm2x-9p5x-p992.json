@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gm2x-9p5x-p992",
+  "modified": "2026-05-15T03:30:37Z",
+  "published": "2026-05-15T03:30:37Z",
+  "aliases": [
+    "CVE-2025-66664"
+  ],
+  "details": "Insufficient parameter sanitization in AMD Secure Processor (ASP) TEE SOC Driver could allow an attacker to issue a malformed DRV_SOC_CMD_ID_LOAD_GFX_IP_FW SR-IOV command to cause out-of-bounds read, potentially resulting in SOC Driver memory contents exposure or an exception",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66664"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-6027.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-15T03:16:22Z"
+  }
+}

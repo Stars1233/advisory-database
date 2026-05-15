@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m46g-q7wf-27rp",
+  "modified": "2026-05-15T03:30:36Z",
+  "published": "2026-05-15T03:30:36Z",
+  "aliases": [
+    "CVE-2024-36332"
+  ],
+  "details": "Improper isolation of GPU HW register space could allow a privileged attacker in malicious Guest Virtual Machine (VM) to perform unauthorized access to specific victim range of GPU MMIO register space, potentially causing the host OS to reboot and creating a Denial of Service (DOS) condition.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-36332"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-6027.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1189"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-15T03:16:20Z"
+  }
+}

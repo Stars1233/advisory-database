@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-783m-hm3h-gh75",
+  "modified": "2026-05-15T03:30:36Z",
+  "published": "2026-05-15T03:30:36Z",
+  "aliases": [
+    "CVE-2026-0438"
+  ],
+  "details": "A System Management Mode (SMM) handler could perform a callout to code located in non-SMM/untrusted memory. A highly privileged attacker could, with active user interaction and under high complexity and present preconditions, trigger execution of attacker-controlled code in SMM, potentially compromising the system’s confidentiality, integrity, and availability.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:P/AC:H/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0438"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-3030.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-4017.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1072"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-15T02:16:23Z"
+  }
+}
