@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wrmr-crjv-w33g",
+  "modified": "2026-05-15T06:30:29Z",
+  "published": "2026-05-15T06:30:29Z",
+  "aliases": [
+    "CVE-2025-54518"
+  ],
+  "details": "Improper isolation of shared resources within the CPU operation cache on Zen 2-based products could allow an attacker to corrupt instructions executed at a different privilege level, potentially resulting in privilege escalation.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54518"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-7052.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/12/15"
+    },
+    {
+      "type": "WEB",
+      "url": "http://xenbits.xen.org/xsa/advisory-490.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1189"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-15T05:16:33Z"
+  }
+}
