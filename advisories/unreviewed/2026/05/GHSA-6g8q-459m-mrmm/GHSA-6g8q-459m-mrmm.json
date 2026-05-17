@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6g8q-459m-mrmm",
+  "modified": "2026-05-17T15:31:41Z",
+  "published": "2026-05-17T15:31:41Z",
+  "aliases": [
+    "CVE-2018-25324"
+  ],
+  "details": "Simple Fields 0.2 through 0.3.5 WordPress Plugin contains a local file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by injecting null bytes into the wp_abspath parameter on PHP versions before 5.3.4. Attackers can supply malicious wp_abspath values to simple_fields.php to include files like /etc/passwd or inject PHP code into Apache logs for remote code execution when allow_url_include is enabled.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25324"
+    },
+    {
+      "type": "WEB",
+      "url": "https://downloads.wordpress.org/plugin/simple-fields.0.3.5.zip"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/44425"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/simple-fields-local-file-inclusion-via-wp-abspath"
+    },
+    {
+      "type": "WEB",
+      "url": "http://simple-fields.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-98"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-17T13:16:43Z"
+  }
+}

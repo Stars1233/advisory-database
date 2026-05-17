@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q3m7-9pg6-jjh6",
+  "modified": "2026-05-17T15:31:41Z",
+  "published": "2026-05-17T15:31:41Z",
+  "aliases": [
+    "CVE-2018-25331"
+  ],
+  "details": "Zenar Content Management System contains a cross-site scripting vulnerability that allows unauthenticated attackers to inject malicious scripts by manipulating form parameters in POST requests. Attackers can inject script tags through the current_page parameter sent to the ajax.php endpoint, which reflects unsanitized user input in the response HTML to execute arbitrary JavaScript in victim browsers.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25331"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/44664"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/zenar-content-management-system-cross-site-scripting-via-ajax-php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://zenar.io"
+    },
+    {
+      "type": "WEB",
+      "url": "http://demo.zenar.io"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-17T13:16:44Z"
+  }
+}

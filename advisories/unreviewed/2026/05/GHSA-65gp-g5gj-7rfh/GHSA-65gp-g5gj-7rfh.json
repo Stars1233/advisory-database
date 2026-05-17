@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-65gp-g5gj-7rfh",
+  "modified": "2026-05-17T15:31:42Z",
+  "published": "2026-05-17T15:31:42Z",
+  "aliases": [
+    "CVE-2026-8758"
+  ],
+  "details": "A vulnerability was determined in Metasoft 美特软件 MetaCRM up to 6.4.0 Beta06. This impacts an unknown function of the file /common/jsp/upload3.jsp. Executing a manipulation of the argument File can lead to unrestricted upload. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8758"
+    },
+    {
+      "type": "WEB",
+      "url": "https://ucn9h68n9289.feishu.cn/wiki/XmoNwpJjJiQrBtkLMitccF56ntb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/811283"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/364385"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/364385/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-17T14:16:22Z"
+  }
+}

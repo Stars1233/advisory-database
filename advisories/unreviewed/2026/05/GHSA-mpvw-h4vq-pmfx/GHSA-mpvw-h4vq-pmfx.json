@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mpvw-h4vq-pmfx",
+  "modified": "2026-05-17T15:31:41Z",
+  "published": "2026-05-17T15:31:41Z",
+  "aliases": [
+    "CVE-2018-25327"
+  ],
+  "details": "Joomla! Component Js Jobs 1.2.0 contains a cross-site request forgery vulnerability that allows attackers to perform state-changing actions without token validation. Attackers can craft malicious HTML forms targeting administrative endpoints like job.jobenforcedelete to delete job entries or modify component settings when administrators visit attacker-controlled pages.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25327"
+    },
+    {
+      "type": "WEB",
+      "url": "https://extensions.joomla.org/extension/js-jobs"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/44492"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.joomsky.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/joomla-component-js-jobs-cross-site-request-forgery"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-17T13:16:44Z"
+  }
+}

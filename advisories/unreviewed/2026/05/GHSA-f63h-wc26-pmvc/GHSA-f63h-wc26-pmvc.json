@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f63h-wc26-pmvc",
+  "modified": "2026-05-17T15:31:42Z",
+  "published": "2026-05-17T15:31:42Z",
+  "aliases": [
+    "CVE-2026-8754"
+  ],
+  "details": "A vulnerability was detected in AstrBotDevs AstrBot up to 4.23.5. Impacted is the function post_file of the file astrbot/dashboard/routes/chat.py of the component File Upload Handler. The manipulation of the argument filename results in path traversal. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 4.23.6 is recommended to address this issue. The patch is identified as aaec41e5054569ceaa1113593a34da7568e2d211. You should upgrade the affected component.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8754"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AstrBotDevs/AstrBot/commit/aaec41e5054569ceaa1113593a34da7568e2d211"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/YLChen-007/054415c2b63e58813328bc879a90c504"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AstrBotDevs/AstrBot"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.23.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/811172"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/364381"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/364381/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-17T13:16:46Z"
+  }
+}
