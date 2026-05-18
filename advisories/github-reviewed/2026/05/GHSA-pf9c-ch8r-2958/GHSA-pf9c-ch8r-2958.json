@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pf9c-ch8r-2958",
+  "modified": "2026-05-18T15:32:43Z",
+  "published": "2026-05-18T15:32:43Z",
+  "aliases": [
+    "CVE-2026-45660"
+  ],
+  "summary": "Statamic CMS: Server-Side Request Forgery via Glide",
+  "details": "### Impact\n\nThe Glide image proxy's URL validation could be bypassed using an IP representation that wasn't normalized before the public-IP check. An unauthenticated user could cause the server to make HTTP requests to internal addresses — including loopback, private network, and cloud metadata endpoints.\n\nThis affects sites that pass user-supplied URLs to Glide. Sites running PHP 8.3 or newer are not affected.\n\n### Patches\n\nThis has been fixed in 5.73.22 and 6.18.1",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "statamic/cms"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.73.22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "statamic/cms"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0-alpha.1"
+            },
+            {
+              "fixed": "6.18.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/statamic/cms/security/advisories/GHSA-pf9c-ch8r-2958"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/statamic/cms"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-18T15:32:43Z",
+    "nvd_published_at": null
+  }
+}
