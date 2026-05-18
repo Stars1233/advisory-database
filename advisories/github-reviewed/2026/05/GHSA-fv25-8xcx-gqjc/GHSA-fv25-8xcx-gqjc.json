@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fv25-8xcx-gqjc",
+  "modified": "2026-05-18T20:29:53Z",
+  "published": "2026-05-12T18:30:38Z",
+  "aliases": [
+    "CVE-2026-42498"
+  ],
+  "summary": "Apache Tomcat - WebSocket authentication header exposure",
+  "details": "Versions Affected:\nApache Tomcat 11.0.0-M1 to 11.0.21\nApache Tomcat 10.1.0-M1 to 10.1.54\nApache Tomcat 9.0.2 to 9.0.117\nOlder, unsupported versions may also be affected\n\nDescription:\nIf a WebSocket request was redirected after authentication, Tomcat's\nWebSocket client would present the most recent authentication header to\nthe redirect target host.\n\nMitigation:\nUsers of the affected versions should apply one of the following\nmitigations:\n- Upgrade to Apache Tomcat 11.0.22 or later\n- Upgrade to Apache Tomcat 10.1.55 or later\n- Upgrade to Apache Tomcat 9.0.118 or later\n\nCredit:\nThis issue was identified by lokerxx",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat.embed:tomcat-embed-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.118"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat.embed:tomcat-embed-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "10.1.0-M1"
+            },
+            {
+              "fixed": "10.1.55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat.embed:tomcat-embed-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "11.0.0-M1"
+            },
+            {
+              "fixed": "11.0.22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat:tomcat"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.118"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat:tomcat"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "10.1.0-M1"
+            },
+            {
+              "fixed": "10.1.55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat:tomcat"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "11.0.0-M1"
+            },
+            {
+              "fixed": "11.0.22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat:tomcat-catalina"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.118"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat:tomcat-catalina"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "10.1.0-M1"
+            },
+            {
+              "fixed": "10.1.55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat:tomcat-catalina"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "11.0.0-M1"
+            },
+            {
+              "fixed": "11.0.22"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42498"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/169d725788ea6aec217ecac70fe4161c837ba423"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/6cbe274592ef2d11607b5b188e1df649de52f8d5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/b7b173694d588ddcfa432f079baf763cbbbaa5c4"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/apache/tomcat"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/n61zwf75jrv09rz90j4jssncm244bwdb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-10.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-11.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-9.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/12/14"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-18T20:29:53Z",
+    "nvd_published_at": "2026-05-12T16:16:17Z"
+  }
+}
