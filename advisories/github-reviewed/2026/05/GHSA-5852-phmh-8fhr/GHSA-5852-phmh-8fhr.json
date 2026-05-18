@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5852-phmh-8fhr",
+  "modified": "2026-05-18T17:54:15Z",
+  "published": "2026-05-12T12:32:16Z",
+  "aliases": [
+    "CVE-2026-41713"
+  ],
+  "summary": "Spring AI: Prompt Injection via Memory Poisoning in PromptChatMemoryAdvisor",
+  "details": "A malicious user could craft input that is stored in conversation memory and later interpreted by the model in an unintended way. Applications using the affected advisor with user-controlled input may be susceptible to manipulation of model behavior across conversation turns.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.ai:spring-ai-client-chat"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.0.7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.ai:spring-ai-client-chat"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.1.0-M1"
+            },
+            {
+              "fixed": "1.1.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41713"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/spring-projects/spring-ai"
+    },
+    {
+      "type": "WEB",
+      "url": "https://spring.io/security/cve-2026-41713"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1336"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-18T17:54:15Z",
+    "nvd_published_at": "2026-05-12T11:16:19Z"
+  }
+}
