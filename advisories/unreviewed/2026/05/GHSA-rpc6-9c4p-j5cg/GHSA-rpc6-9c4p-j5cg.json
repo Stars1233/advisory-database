@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rpc6-9c4p-j5cg",
+  "modified": "2026-05-18T00:31:36Z",
+  "published": "2026-05-18T00:31:36Z",
+  "aliases": [
+    "CVE-2026-8766"
+  ],
+  "details": "A flaw has been found in Kilo-Org kilocode up to 7.0.47. This issue affects the function Load of the file packages/opencode/src/config/config.ts of the component Environment Variable Handler. Executing a manipulation of the argument KILO_CONFIG_CONTENT can lead to information disclosure. It is possible to launch the attack remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8766"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/YLChen-007/32b444e49ced1a46bde5a68933ccd09f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/811400"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/364391"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/364391/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-17T23:17:02Z"
+  }
+}
