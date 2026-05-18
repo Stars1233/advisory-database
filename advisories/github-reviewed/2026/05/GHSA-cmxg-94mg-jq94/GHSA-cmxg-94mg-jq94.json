@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cmxg-94mg-jq94",
+  "modified": "2026-05-18T17:07:04Z",
+  "published": "2026-05-18T17:07:04Z",
+  "aliases": [
+    "CVE-2026-45325"
+  ],
+  "summary": "@tmlmobilidade/utils has prototype pollution in its setValueAtPath",
+  "details": "### Impact\nPrototype pollution vulnerability in @tmlmobilidade/utils for setValueAtPath().\n\n### Patches\nA fix is available in versions 20260509.0340.15 and up.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@tmlmobilidade/utils"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "20260509.0340.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tmlmobilidade/go/security/advisories/GHSA-cmxg-94mg-jq94"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tmlmobilidade/go/commit/b10505baa7ba0701f830a05f3007c0a6bdd00eb7"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/tmlmobilidade/go"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tmlmobilidade/go/blob/prd/packages/utils/src/generic/value-at-path.ts"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1321"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-18T17:07:04Z",
+    "nvd_published_at": null
+  }
+}
