@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fhvh-vw7h-9xf3",
+  "modified": "2026-05-19T16:18:53Z",
+  "published": "2026-05-19T16:18:53Z",
+  "aliases": [],
+  "summary": " libcrux-ml-dsa: Signature Verification on AVX2 Platforms Mishandles Edge Case",
+  "details": "The AVX2 implementation of ML-DSA verification incorrectly implemented\nthe `use_hint` function, mishandling an edge case that should lead to\nsignature rejection.\n\n## Impact\nAn attacker could make the ML-DSA verifier accept a crafted invalid\nsignature under a maliciously generated verification key, if the AVX2\nimplementation is used.\n\n## Mitigation\nFrom version `0.0.9` the edge case is handled correctly and invalid\nsignatures are rejected.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "libcrux-ml-dsa"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.0.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/C2SP/wycheproof/pull/234"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cryspen/libcrux/pull/1398"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tink-crypto/tink-go/pull/48"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/cryspen/libcrux"
+    },
+    {
+      "type": "WEB",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0125.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-347"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-19T16:18:53Z",
+    "nvd_published_at": null
+  }
+}
