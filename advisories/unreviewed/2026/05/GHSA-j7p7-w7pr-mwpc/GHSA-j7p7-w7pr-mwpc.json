@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j7p7-w7pr-mwpc",
+  "modified": "2026-05-19T15:31:29Z",
+  "published": "2026-05-19T15:31:29Z",
+  "aliases": [
+    "CVE-2026-42098"
+  ],
+  "details": "Sparx Enterprise Architect software has a security feature that limits user's actions to those specified in the role. An authenticated attacker can modify the Enterprise Architect  client behavior (e.g. using a debugger) and log in as any other user or administrator - then it is possible to do every possible change to the repository.\n\nThe vendor was notified early about this vulnerability, but didn't respond with the details of vulnerability or vulnerable version range. Only version 17.1 and below were tested and confirmed as vulnerable, other versions were not tested and might also be vulnerable.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42098"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cert.pl/en/posts/2026/05/CVE-2026-42096"
+    },
+    {
+      "type": "WEB",
+      "url": "https://efigo.pl/blog/CVE-2026-42096"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sparxsystems.com/products/ea"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sploit.tech/2026/05/19/Sparx-Enterprise-Architect-PCS.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-603"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-19T14:16:42Z"
+  }
+}
