@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2fmj-cw46-4vrm",
+  "modified": "2026-05-20T18:31:36Z",
+  "published": "2026-05-20T18:31:36Z",
+  "aliases": [
+    "CVE-2026-20240"
+  ],
+  "details": "In Splunk Enterprise versions below 10.2.2, 10.0.5, 9.4.11, and 9.3.12, and Splunk Cloud Platform versions below 10.4.2603.1, 10.3.2512.9, 10.2.2510.11, 10.1.2507.21, 10.0.2503.13, and 9.3.2411.129, a low-privileged user that does not hold the ‘admin’ or ‘power’ Splunk roles could cause a Denial of Service by exploiting the `coldToFrozen.sh` script in the `splunk_archiver` app to rename critical Splunk directories, making the instance non-functional.<br><br>The Denial of Service is possible because of missing input validation in the `coldToFrozen.sh` script, which accepts arbitrary file paths and renames them without restricting operations to safe directories.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20240"
+    },
+    {
+      "type": "WEB",
+      "url": "https://advisory.splunk.com/advisories/SVD-2026-0504"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T18:16:26Z"
+  }
+}

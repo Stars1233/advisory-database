@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j82m-6356-v5pg",
+  "modified": "2026-05-20T18:31:35Z",
+  "published": "2026-05-20T18:31:35Z",
+  "aliases": [
+    "CVE-2026-20199"
+  ],
+  "details": "A vulnerability in the SSL certificate handling of Cisco ThousandEyes Virtual Appliance could allow an authenticated, remote attacker to execute commands on the underlying operating system as the root user.\n\n This vulnerability is due to insufficient validation of user-supplied input. An authenticated attacker could exploit this vulnerability by uploading a crafted certificate to an affected device. A successful exploit could allow the attacker to execute arbitrary code as the root user on the underlying operating system. To exploit this vulnerability, the attacker must have valid administrative credentials.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20199"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-tevacert-rce-RMJVEym5"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T17:16:20Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-58jp-6f6m-4v4f",
+  "modified": "2026-05-20T18:31:35Z",
+  "published": "2026-05-20T18:31:35Z",
+  "aliases": [
+    "CVE-2026-8487"
+  ],
+  "details": "Incorrect default permissions vulnerability in Progress Software MOVEit Automation allows Retrieve Embedded Sensitive Data.\n\nThis issue affects MOVEit Automation: before 2025.0.11, from 2025.1.0 before 2025.1.7.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8487"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.progress.com/bundle/moveit-automation-release-notes-2026/page/Fixed-Issues-2026.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-276"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T16:16:27Z"
+  }
+}

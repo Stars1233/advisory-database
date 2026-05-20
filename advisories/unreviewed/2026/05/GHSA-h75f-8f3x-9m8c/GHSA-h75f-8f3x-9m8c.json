@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h75f-8f3x-9m8c",
+  "modified": "2026-05-20T18:31:35Z",
+  "published": "2026-05-20T18:31:35Z",
+  "aliases": [
+    "CVE-2026-20171"
+  ],
+  "details": "A vulnerability in the Border Gateway Protocol (BGP)&nbsp;enforce-first-as feature of&nbsp;Cisco Nexus 3000 Series Switches and Cisco Nexus 9000 Series Switches in standalone NX-OS mode could allow an unauthenticated, remote attacker to trigger BGP peer flaps, resulting in a denial of service (DoS) condition.\n\nThis vulnerability is due to incorrect parsing of a transitive BGP attribute. An attacker could exploit this vulnerability by sending a crafted BGP update through an established BGP peer session. If the update propagates to an affected device, it could cause the device to drop the BGP session and flap with the BGP peer that is forwarding this update, resulting in a DoS condition.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20171"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-bgp-iefab-3hb2pwtx"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-670"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T17:16:19Z"
+  }
+}

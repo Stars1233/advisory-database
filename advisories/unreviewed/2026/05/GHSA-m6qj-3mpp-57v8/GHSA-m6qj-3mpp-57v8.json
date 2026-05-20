@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m6qj-3mpp-57v8",
+  "modified": "2026-05-20T18:31:36Z",
+  "published": "2026-05-20T18:31:36Z",
+  "aliases": [
+    "CVE-2026-9087"
+  ],
+  "details": "A flaw was found in Keycloak. The cross-session verification proof is keyed only by (local userId,\nidpAlias) and is not bound to the upstream identity that was actually verified, so a second upstream account on the same IdP can consume it and get linked to the victim's local account.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9087"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-9087"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2480172"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T17:16:32Z"
+  }
+}
