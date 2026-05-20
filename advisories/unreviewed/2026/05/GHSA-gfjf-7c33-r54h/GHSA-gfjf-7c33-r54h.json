@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gfjf-7c33-r54h",
+  "modified": "2026-05-20T06:31:52Z",
+  "published": "2026-05-20T06:31:52Z",
+  "aliases": [
+    "CVE-2026-24207"
+  ],
+  "details": "NVIDIA Triton Inference Server contains a vulnerability where an attacker could cause an authentication bypass. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, data tampering, denial of service, or information disclosure.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24207"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvidia.custhelp.com/app/answers/detail/a_id/5828"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-24207"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-288"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T04:16:45Z"
+  }
+}

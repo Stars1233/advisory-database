@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vg5m-3g3f-898p",
+  "modified": "2026-05-20T06:31:54Z",
+  "published": "2026-05-20T06:31:54Z",
+  "aliases": [
+    "CVE-2026-9057"
+  ],
+  "details": "A broken access control issue has been identified in the Talend Administration Center, that allows a user with “View” permission to modify the Talend Studio update URL. This issue was resolved in a patch, which is already available.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9057"
+    },
+    {
+      "type": "WEB",
+      "url": "https://community.qlik.com/t5/Official-Support-Articles/Security-fix-for-Qlik-Talend-Administration-Center-URL-access/ta-p/2548524"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T05:16:23Z"
+  }
+}

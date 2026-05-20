@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r5mf-5vch-2vpf",
+  "modified": "2026-05-20T06:31:54Z",
+  "published": "2026-05-20T06:31:54Z",
+  "aliases": [
+    "CVE-2026-7637"
+  ],
+  "details": "The Boost plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 2.0.3 via deserialization of untrusted input in the STYXKEY-BOOST_USER_LOCATION cookie. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7637"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.pixelyoursite.com/boost-plugin"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/e391f560-2037-4180-a77e-1731524a318c?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T04:16:56Z"
+  }
+}

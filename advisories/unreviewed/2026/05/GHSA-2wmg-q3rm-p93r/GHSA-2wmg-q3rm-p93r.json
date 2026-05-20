@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2wmg-q3rm-p93r",
+  "modified": "2026-05-20T06:31:52Z",
+  "published": "2026-05-20T06:31:52Z",
+  "aliases": [
+    "CVE-2026-24160"
+  ],
+  "details": "NVIDIA TRT-LLM for any platform contains a vulnerability where an attacker could cause an  unchecked return value to a null pointer dereference. A successful exploit of this vulnerability might lead to denial of service.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24160"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvidia.custhelp.com/app/answers/detail/a_id/5805"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-24160"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-690"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T04:16:45Z"
+  }
+}

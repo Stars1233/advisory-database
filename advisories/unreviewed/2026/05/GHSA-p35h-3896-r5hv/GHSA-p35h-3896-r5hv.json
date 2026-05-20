@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p35h-3896-r5hv",
+  "modified": "2026-05-20T06:31:53Z",
+  "published": "2026-05-20T06:31:53Z",
+  "aliases": [
+    "CVE-2026-24214"
+  ],
+  "details": "NVIDIA Triton Inference Server contains a vulnerability in the DALI backend where an attacker could cause an integer overflow. A successful exploit of this vulnerability might lead to code execution, data tampering, or denial of service.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24214"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvidia.custhelp.com/app/answers/detail/a_id/5828"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-24214"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-190"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T04:16:47Z"
+  }
+}

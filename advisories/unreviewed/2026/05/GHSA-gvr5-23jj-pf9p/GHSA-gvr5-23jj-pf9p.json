@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gvr5-23jj-pf9p",
+  "modified": "2026-05-20T06:31:52Z",
+  "published": "2026-05-20T06:31:52Z",
+  "aliases": [
+    "CVE-2025-33255"
+  ],
+  "details": "NVIDIA TRT-LLM for any platform contains a vulnerability in MPI server, where an attacker could cause an unsafe deserialization. A successful exploit of this vulnerability might lead to code execution, denial of service, data tampering, and information disclosure.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-33255"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvidia.custhelp.com/app/answers/detail/a_id/5805"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-33255"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-20T04:16:43Z"
+  }
+}
