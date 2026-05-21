@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4j38-f5cw-54h7",
+  "modified": "2026-05-21T21:21:35Z",
+  "published": "2026-05-21T21:21:35Z",
+  "aliases": [
+    "CVE-2026-46628"
+  ],
+  "summary": "Twig: The `spaceless` filter implicitly marks its output as safe",
+  "details": "### Description\n\nThe `spaceless` filter is registered with `is_safe => ['html']`, which means Twig's autoescaper does not escape its output in an HTML context. As a result, applying `spaceless` to attacker-controlled input that contains markup emits the markup unescaped even when the developer never wrote `|raw` and autoescape is enabled.\n\nExample:\n\n```twig\n{% set payload = '<script>alert()</script>' %}\n{{ payload }}          {# escaped #}\n{{ payload|spaceless }} {# not escaped #}\n```\n\nThe filter is deprecated but still functional. With the deprecation, some downstream projects (e.g. Drupal modules) have duplicated the filter and inherited the same `is_safe` flag.\n\n### Resolution\n\nThe `spaceless` filter no longer marks its output as safe. Documentation has been updated to warn that `spaceless` should not be applied to unsanitised user input.\n\n### Credits\n\nTwig would like to thank Pierre Rudloff for reporting the issue.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "twig/twig"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.26.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-4j38-f5cw-54h7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/twig/twig/CVE-2026-46628.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/twigphp/Twig"
+    },
+    {
+      "type": "WEB",
+      "url": "https://symfony.com/cve-2026-46628"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-116"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-21T21:21:35Z",
+    "nvd_published_at": null
+  }
+}
