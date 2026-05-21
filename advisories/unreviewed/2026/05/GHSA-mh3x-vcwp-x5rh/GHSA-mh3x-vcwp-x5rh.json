@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mh3x-vcwp-x5rh",
+  "modified": "2026-05-21T21:30:36Z",
+  "published": "2026-05-21T21:30:36Z",
+  "aliases": [
+    "CVE-2026-4843"
+  ],
+  "details": "The GSheet For Woo Importer plugin for WordPress is vulnerable to unauthorized loss of data due to a missing capability check on the process_ajax_restore_action() function in all versions up to, and including, 2.3.1. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete the plugin's Google Sheets API token and configuration options.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4843"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/import-products-from-gsheet-for-woo-importer/tags/2.3.1/src/Actions/AdminSettingsAction.php#L391"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b0d60991-0675-4efa-9427-380e6b59fe28?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-21T20:16:14Z"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m5gw-83w2-7749",
-  "modified": "2026-05-21T18:33:09Z",
+  "modified": "2026-05-21T21:30:33Z",
   "published": "2026-05-21T18:33:09Z",
   "aliases": [
     "CVE-2026-48207"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://fory.apache.org/security/#cve-2026-48207-pyfory-reduceserializer-deserializationpolicy-bypass"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/21/10"
     }
   ],
   "database_specific": {

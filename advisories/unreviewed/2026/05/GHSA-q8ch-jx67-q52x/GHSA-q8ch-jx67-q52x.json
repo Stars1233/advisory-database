@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q8ch-jx67-q52x",
-  "modified": "2026-05-21T15:34:09Z",
+  "modified": "2026-05-21T21:30:32Z",
   "published": "2026-05-21T15:34:09Z",
   "aliases": [
     "CVE-2026-45760"
@@ -17,6 +17,10 @@
     {
       "type": "WEB",
       "url": "https://camel.apache.org/security/CVE-2026-45760.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/21/8"
     }
   ],
   "database_specific": {

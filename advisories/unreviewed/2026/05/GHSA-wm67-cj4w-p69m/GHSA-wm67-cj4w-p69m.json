@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wm67-cj4w-p69m",
+  "modified": "2026-05-21T21:30:35Z",
+  "published": "2026-05-21T21:30:35Z",
+  "aliases": [
+    "CVE-2026-46473"
+  ],
+  "details": "Authen::TOTP versions before 0.1.1 for Perl generate secrets using rand.\n\nSecrets were generated using Perl's built-in rand function, which is predictable and unsuitable for security usage.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46473"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tchatzi/Authen-TOTP/commit/d04f30cc6538d77fc6b6d550da450cf3017b8561.patch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://metacpan.org/release/TCHATZI/Authen-TOTP-0.1.1/changes"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-331"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-21T19:16:53Z"
+  }
+}

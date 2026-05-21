@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9v2g-37mp-qpxf",
+  "modified": "2026-05-21T21:30:38Z",
+  "published": "2026-05-21T21:30:38Z",
+  "aliases": [
+    "CVE-2026-8203"
+  ],
+  "details": "Concrete CMS 9.5.0 and below has Stored XSS on the height parameter. The controller does not validate or sanitize $height. Any user with editor privileges can inject malicious JavaScript that executes in the context of any visitor's browser, potentially leading to session hijacking, credential theft, or other malicious actions. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 7.3 with vector CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N. Thanks Alfin Joseph for reporting.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://documentation.concretecms.org/9-x/developers/introduction/version-history/951-release-notes"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-21T21:16:33Z"
+  }
+}

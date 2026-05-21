@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q4g6-xq34-4jxw",
-  "modified": "2026-05-08T15:31:27Z",
+  "modified": "2026-05-21T21:30:29Z",
   "published": "2026-05-08T15:31:27Z",
   "aliases": [
     "CVE-2026-43400"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdgpu: add upper bound check on user inputs in signal ioctl\n\nHuge input values in amdgpu_userq_signal_ioctl can lead to a OOM and\ncould be exploited.\n\nSo check these input value against AMDGPU_USERQ_MAX_HANDLES\nwhich is big enough value for genuine use cases and could\npotentially avoid OOM.\n\n(cherry picked from commit be267e15f99bc97cbe202cd556717797cdcf79a5)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -29,7 +34,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-08T15:16:51Z"

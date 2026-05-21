@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-j7hx-vp8g-c83p",
-  "modified": "2026-05-08T15:31:27Z",
+  "modified": "2026-05-21T21:30:29Z",
   "published": "2026-05-08T15:31:27Z",
   "aliases": [
     "CVE-2026-43401"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ncpufreq: intel_pstate: Fix NULL pointer dereference in update_cpu_qos_request()\n\nThe update_cpu_qos_request() function attempts to initialize the 'freq'\nvariable by dereferencing 'cpudata' before verifying if the 'policy'\nis valid.\n\nThis issue occurs on systems booted with the \"nosmt\" parameter, where\nall_cpu_data[cpu] is NULL for the SMT sibling threads. As a result,\nany call to update_qos_requests() will result in a NULL pointer\ndereference as the code will attempt to access pstate.turbo_freq using\nthe NULL cpudata pointer.\n\nAlso, pstate.turbo_freq may be updated by intel_pstate_get_hwp_cap()\nafter initializing the 'freq' variable, so it is better to defer the\n'freq' until intel_pstate_get_hwp_cap() has been called.\n\nFix this by deferring the 'freq' assignment until after the policy and\ndriver_data have been validated.\n\n[ rjw: Added one paragraph to the changelog ]",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -28,8 +33,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-08T15:16:51Z"

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5x97-5xp3-2v33",
-  "modified": "2026-05-21T12:31:43Z",
+  "modified": "2026-05-21T21:30:32Z",
   "published": "2026-05-21T12:31:43Z",
   "aliases": [
     "CVE-2026-28764"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2371"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2371"
     }
   ],
   "database_specific": {

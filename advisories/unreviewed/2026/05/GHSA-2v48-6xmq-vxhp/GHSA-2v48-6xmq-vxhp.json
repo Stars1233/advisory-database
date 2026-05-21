@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2v48-6xmq-vxhp",
-  "modified": "2026-05-08T15:31:27Z",
+  "modified": "2026-05-21T21:30:29Z",
   "published": "2026-05-08T15:31:27Z",
   "aliases": [
     "CVE-2026-43395"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/xe/sync: Cleanup partially initialized sync on parse failure\n\nxe_sync_entry_parse() can allocate references (syncobj, fence, chain fence,\nor user fence) before hitting a later failure path. Several of those paths\nreturned directly, leaving partially initialized state and leaking refs.\n\nRoute these error paths through a common free_sync label and call\nxe_sync_entry_cleanup(sync) before returning the error.\n\n(cherry picked from commit f939bdd9207a5d1fc55cced5459858480686ce22)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-459"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-08T15:16:50Z"

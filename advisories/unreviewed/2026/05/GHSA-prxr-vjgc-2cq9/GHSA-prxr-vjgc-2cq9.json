@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-prxr-vjgc-2cq9",
+  "modified": "2026-05-21T21:30:38Z",
+  "published": "2026-05-21T21:30:38Z",
+  "aliases": [
+    "CVE-2026-8428"
+  ],
+  "details": "Concrete CMS 9.5.0 and below emits a CSRF token in the local_available_update.php view ($token->output('do_update')) but the corresponding do_update() method in concrete/controllers/single_page/dashboard/system/update/update.php never calls $this->token->validate('do_update'). The form is rendered as a POST form, meaning the token reaches the browser, but because the controller discards it without verification, an attacker can craft a cross-site POST that triggers a core CMS update to an attacker-specified version string.  In order to be vulnerable, theictim must be passing canUpgrade()anda valid update version must be present under DIR_CORE_UPDATES. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 7.5 with vector CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N. Thanks https://github.com/maru1009 for reporting.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8428"
+    },
+    {
+      "type": "WEB",
+      "url": "https://documentation.concretecms.org/9-x/developers/introduction/version-history/951-release-notes"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-21T21:16:34Z"
+  }
+}

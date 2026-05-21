@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-25rf-28xv-w8h2",
-  "modified": "2026-05-08T15:31:27Z",
+  "modified": "2026-05-21T21:30:29Z",
   "published": "2026-05-08T15:31:27Z",
   "aliases": [
     "CVE-2026-43397"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/bridge: samsung-dsim: Fix memory leak in error path\n\nIn samsung_dsim_host_attach(), drm_bridge_add() is called to add the\nbridge. However, if samsung_dsim_register_te_irq() or\npdata->host_ops->attach() fails afterwards, the function returns\nwithout removing the bridge, causing a memory leak.\n\nFix this by adding proper error handling with goto labels to ensure\ndrm_bridge_remove() is called in all error paths. Also ensure that\nsamsung_dsim_unregister_te_irq() is called if the attach operation\nfails after the TE IRQ has been registered.\n\nsamsung_dsim_unregister_te_irq() function is moved without changes\nto be before samsung_dsim_host_attach() to avoid forward declaration.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -36,8 +41,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-08T15:16:51Z"

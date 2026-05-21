@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wqgp-m495-6968",
-  "modified": "2026-04-11T15:30:24Z",
+  "modified": "2026-05-21T21:30:28Z",
   "published": "2026-03-18T18:31:17Z",
   "aliases": [
     "CVE-2025-71269"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbtrfs: do not free data reservation in fallback from inline due to -ENOSPC\n\nIf we fail to create an inline extent due to -ENOSPC, we will attempt to\ngo through the normal COW path, reserve an extent, create an ordered\nextent, etc. However we were always freeing the reserved qgroup data,\nwhich is wrong since we will use data. Fix this by freeing the reserved\nqgroup data in __cow_file_range_inline() only if we are not doing the\nfallback (ret is <= 0).",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-03-18T18:16:22Z"

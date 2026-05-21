@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4ccp-cqrh-3w9v",
-  "modified": "2026-05-21T15:34:09Z",
+  "modified": "2026-05-21T21:30:33Z",
   "published": "2026-05-21T15:34:09Z",
   "aliases": [
     "CVE-2026-34926"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://success.trendmicro.com/ja-JP/solution/KA-0022974"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-34926"
     },
     {
       "type": "WEB",
