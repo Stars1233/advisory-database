@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hc7j-44jc-q764",
-  "modified": "2026-05-08T15:31:29Z",
+  "modified": "2026-05-21T18:33:06Z",
   "published": "2026-05-08T15:31:29Z",
   "aliases": [
     "CVE-2026-43453"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_set_pipapo: fix stack out-of-bounds read in pipapo_drop()\n\npipapo_drop() passes rulemap[i + 1].n to pipapo_unmap() as the\nto_offset argument on every iteration, including the last one where\ni == m->field_count - 1. This reads one element past the end of the\nstack-allocated rulemap array (declared as rulemap[NFT_PIPAPO_MAX_FIELDS]\nwith NFT_PIPAPO_MAX_FIELDS == 16).\n\nAlthough pipapo_unmap() returns early when is_last is true without\nusing the to_offset value, the argument is evaluated at the call site\nbefore the function body executes, making this a genuine out-of-bounds\nstack read confirmed by KASAN:\n\n  BUG: KASAN: stack-out-of-bounds in pipapo_drop+0x50c/0x57c [nf_tables]\n  Read of size 4 at addr ffff8000810e71a4\n\n  This frame has 1 object:\n   [32, 160) 'rulemap'\n\n  The buggy address is at offset 164 -- exactly 4 bytes past the end\n  of the rulemap array.\n\nPass 0 instead of rulemap[i + 1].n on the last iteration to avoid\nthe out-of-bounds read.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-08T15:16:58Z"

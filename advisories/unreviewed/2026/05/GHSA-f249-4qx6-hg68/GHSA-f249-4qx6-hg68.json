@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f249-4qx6-hg68",
-  "modified": "2026-05-04T18:30:30Z",
+  "modified": "2026-05-21T18:33:06Z",
   "published": "2026-05-04T18:30:30Z",
   "aliases": [
     "CVE-2026-29514"
@@ -33,7 +33,19 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/netbox-community/netbox/pull/22170"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netbox-community/netbox/commit/d124c5fe86e12aad61285133c0caf16adcda8f2e"
+    },
+    {
+      "type": "WEB",
       "url": "https://chocapikk.com/posts/2026/netbox-export-template-rce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netbox-community/netbox/releases/tag/v4.6.1"
     },
     {
       "type": "WEB",

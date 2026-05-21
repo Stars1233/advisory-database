@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hx98-q4r6-mgcv",
-  "modified": "2026-05-08T15:31:29Z",
+  "modified": "2026-05-21T18:33:06Z",
   "published": "2026-05-08T15:31:29Z",
   "aliases": [
     "CVE-2026-43451"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nfnetlink_queue: fix entry leak in bridge verdict error path\n\nnfqnl_recv_verdict() calls find_dequeue_entry() to remove the queue\nentry from the queue data structures, taking ownership of the entry.\nFor PF_BRIDGE packets, it then calls nfqa_parse_bridge() to parse VLAN\nattributes.  If nfqa_parse_bridge() returns an error (e.g. NFQA_VLAN\npresent but NFQA_VLAN_TCI missing), the function returns immediately\nwithout freeing the dequeued entry or its sk_buff.\n\nThis leaks the nf_queue_entry, its associated sk_buff, and all held\nreferences (net_device refcounts, struct net refcount).  Repeated\ntriggering exhausts kernel memory.\n\nFix this by dropping the entry via nfqnl_reinject() with NF_DROP verdict\non the error path, consistent with other error handling in this file.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-08T15:16:57Z"

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9349-jqww-wh9m",
-  "modified": "2026-05-08T15:31:29Z",
+  "modified": "2026-05-21T18:33:06Z",
   "published": "2026-05-08T15:31:29Z",
   "aliases": [
     "CVE-2026-43444"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdkfd: Unreserve bo if queue update failed\n\nError handling path should unreserve bo then return failed.\n\n(cherry picked from commit c24afed7de9ecce341825d8ab55a43a254348b33)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-08T15:16:56Z"
