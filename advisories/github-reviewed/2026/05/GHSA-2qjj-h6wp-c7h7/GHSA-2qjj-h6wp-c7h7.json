@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2qjj-h6wp-c7h7",
+  "modified": "2026-05-21T19:58:06Z",
+  "published": "2026-05-21T19:58:06Z",
+  "aliases": [
+    "CVE-2026-46616"
+  ],
+  "summary": "Umbraco.Cms: Open Redirect Vulnerability in Surface Controllers",
+  "details": "### Impact\nSome of the Surface Controllers in the CMS provide to support member related operations fail to validate redirect URLs, making Razor templates that derive 'RedirectUrl' from user-controlled query parameters vulnerable to malicious redirect attacks.\n\n### Patches\nThe issue is resolved in versions 17.4.0 and 13.14.0.\n\n### Workarounds\nIf users cannot upgrade immediately, they can mitigate the issue in their own site by ensuring every Razor form that posts to `UmbLoginStatusController`, `UmbProfileController` or `UmbRegisterController` passes a concrete, trusted `RedirectUrl` into `Html.BeginUmbracoForm's` route values. \n\nFor example:\n\n```cshtml\n  @using (Html.BeginUmbracoForm<UmbLoginStatusController>(\n      \"HandleLogout\",\n      new { RedirectUrl = Model.Url() }))\n  {\n      <button type=\"submit\">Log out</button>\n  }\n```\n\n### Resources\n\nhttps://github.com/umbraco/Umbraco-CMS/pull/22565\nhttps://github.com/umbraco/Umbraco-CMS/pull/22561",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Umbraco.Cms"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Umbraco.Cms"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "17.3.0-rc"
+            },
+            {
+              "fixed": "17.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/umbraco/Umbraco-CMS/security/advisories/GHSA-2qjj-h6wp-c7h7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/umbraco/Umbraco-CMS/pull/22561"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/umbraco/Umbraco-CMS/pull/22565"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/umbraco/Umbraco-CMS"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-21T19:58:06Z",
+    "nvd_published_at": null
+  }
+}
