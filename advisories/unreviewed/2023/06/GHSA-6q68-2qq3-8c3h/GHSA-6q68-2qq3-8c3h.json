@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6q68-2qq3-8c3h",
-  "modified": "2024-04-04T04:46:33Z",
+  "modified": "2026-05-22T09:31:27Z",
   "published": "2023-06-13T12:30:18Z",
   "aliases": [
     "CVE-2023-3050"
   ],
-  "details": "Reliance on Cookies without Validation and Integrity Checking in a Security Decision vulnerability in TMT Lockcell allows Privilege Abuse, Authentication Bypass.This issue affects Lockcell: before 15.\n\n",
+  "details": "Reliance on Cookies without Validation and Integrity Checking in a Security Decision vulnerability in TMT Lockcell allows Privilege Abuse, Authentication Bypass.This issue affects Lockcell: before 15.",
   "severity": [
     {
       "type": "CVSS_V3",
