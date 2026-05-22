@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c5g3-m8p9-m3gh",
-  "modified": "2026-05-20T12:30:36Z",
+  "modified": "2026-05-22T00:31:15Z",
   "published": "2026-05-20T12:30:36Z",
   "aliases": [
     "CVE-2026-41054"
@@ -38,6 +38,10 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2026/05/20/1"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/21/17"
     }
   ],
   "database_specific": {

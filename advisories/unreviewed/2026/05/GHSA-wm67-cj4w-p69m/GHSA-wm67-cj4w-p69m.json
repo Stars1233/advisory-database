@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wm67-cj4w-p69m",
-  "modified": "2026-05-21T21:30:35Z",
+  "modified": "2026-05-22T00:31:15Z",
   "published": "2026-05-21T21:30:35Z",
   "aliases": [
     "CVE-2026-46473"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://metacpan.org/release/TCHATZI/Authen-TOTP-0.1.1/changes"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/21/15"
     }
   ],
   "database_specific": {

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6qjh-p324-694f",
+  "modified": "2026-05-22T00:31:17Z",
+  "published": "2026-05-22T00:31:17Z",
+  "aliases": [
+    "CVE-2026-8434"
+  ],
+  "details": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/backend/file rescanMultiple(). The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8434"
+    },
+    {
+      "type": "WEB",
+      "url": "https://documentation.concretecms.org/9-x/developers/introduction/version-history/951-release-notes"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-21T22:16:51Z"
+  }
+}

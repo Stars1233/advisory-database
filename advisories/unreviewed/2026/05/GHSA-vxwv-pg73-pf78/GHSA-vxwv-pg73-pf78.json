@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vxwv-pg73-pf78",
+  "modified": "2026-05-22T00:31:15Z",
+  "published": "2026-05-22T00:31:15Z",
+  "aliases": [
+    "CVE-2026-22678"
+  ],
+  "details": "Webmin before 2.641 contains a stored cross-site scripting vulnerability in the email template description field of the System and Server Status module that allows low-privileged authenticated attackers to execute arbitrary commands by injecting unsanitized input stored in save_tmpl.cgi and rendered unescaped in list_tmpls.cgi.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22678"
+    },
+    {
+      "type": "WEB",
+      "url": "https://webmin.com/changelog/webmin-2.641-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/webmin-stored-xss-via-system-and-server-status"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-21T22:16:46Z"
+  }
+}

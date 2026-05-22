@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pcrh-gj77-j4mw",
+  "modified": "2026-05-22T00:31:16Z",
+  "published": "2026-05-22T00:31:16Z",
+  "aliases": [
+    "CVE-2026-8139"
+  ],
+  "details": "Concrete CMS 9.5.0 and below is vulnerable to Stored XSS via external-link page cvName because updateCollectionAliasExternal bypasses being sanitized. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.0 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N.  Thanks Yonatan Drori (Tenzai) for reporting.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8139"
+    },
+    {
+      "type": "WEB",
+      "url": "https://documentation.concretecms.org/9-x/developers/introduction/version-history/951-release-notes"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-21T22:16:49Z"
+  }
+}
