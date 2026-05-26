@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vv9j-gjw2-j8wp",
+  "modified": "2026-05-26T23:10:38Z",
+  "published": "2026-05-26T23:10:38Z",
+  "aliases": [
+    "CVE-2026-42089"
+  ],
+  "summary": "yeoman-environment Vulnerable to Arbitrary Package Installation without User Confirmation",
+  "details": "### Impact\n\n`yeoman-environment` versions `>= 2.9.0` and `< 6.0.1` install missing local generator packages from caller-supplied package names without user confirmation. In downstream consumers that pass attacker-controlled project configuration into this path, this can result in arbitrary package installation and code execution during CLI bootstrap.\n\nThe vulnerable method is `installLocalGenerators()`, which calls `repository.install()` directly without prompting the user.\n\n### Patches\n\nUpgrade to `yeoman-environment` `6.0.1`, which adds an interactive confirmation prompt before installation ([PR #753](https://github.com/yeoman/environment/pull/753)).\n\n### Workarounds\n\nNone.\n\n### Resources\n\n- [Fix commit 78d2af7](https://github.com/yeoman/environment/commit/78d2af7e60294784b8a8b3b3b5099c6874b6a1fa)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "yeoman-environment"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "6.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/yeoman/environment/security/advisories/GHSA-vv9j-gjw2-j8wp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/yeoman/environment/commit/78d2af7e60294784b8a8b3b3b5099c6874b6a1fa"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/yeoman/environment"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-829"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-26T23:10:38Z",
+    "nvd_published_at": null
+  }
+}
