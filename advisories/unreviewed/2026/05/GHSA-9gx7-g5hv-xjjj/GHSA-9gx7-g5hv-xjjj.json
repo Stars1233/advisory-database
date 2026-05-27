@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9gx7-g5hv-xjjj",
-  "modified": "2026-05-18T15:30:37Z",
+  "modified": "2026-05-27T06:31:34Z",
   "published": "2026-05-18T15:30:37Z",
   "aliases": [
     "CVE-2026-42009"
@@ -18,6 +18,14 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42009"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:13274"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20611"
     },
     {
       "type": "WEB",
