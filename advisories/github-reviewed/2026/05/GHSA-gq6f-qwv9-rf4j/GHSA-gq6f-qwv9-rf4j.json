@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gq6f-qwv9-rf4j",
-  "modified": "2026-05-13T18:30:46Z",
+  "modified": "2026-05-27T22:46:15Z",
   "published": "2026-05-12T18:30:41Z",
   "aliases": [
     "CVE-2026-31241"
   ],
+  "summary": "mem0 server lacks authentication and authorization controls for its memory deletion API endpoint",
   "details": "The mem0 1.0.0 server lacks authentication and authorization controls for its memory deletion API endpoint (DELETE /memories). The endpoint allows unauthenticated users to delete memory records by specifying arbitrary user identifiers (e.g., user_id, run_id, agent_id) in the request query parameters. A remote attacker can exploit this by sending unauthenticated DELETE requests to erase memory data for any user, leading to unauthorized data loss and denial of service.",
   "severity": [
     {
@@ -13,14 +14,34 @@
       "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "mem0ai"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31241"
     },
     {
-      "type": "WEB",
+      "type": "PACKAGE",
       "url": "https://github.com/mem0ai/mem0"
     },
     {
@@ -33,8 +54,8 @@
       "CWE-306"
     ],
     "severity": "MODERATE",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-27T22:46:15Z",
     "nvd_published_at": "2026-05-12T18:16:52Z"
   }
 }
