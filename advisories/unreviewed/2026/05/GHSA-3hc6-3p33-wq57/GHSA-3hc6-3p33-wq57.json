@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3hc6-3p33-wq57",
-  "modified": "2026-05-27T09:31:12Z",
+  "modified": "2026-05-27T18:31:37Z",
   "published": "2026-05-27T06:31:34Z",
   "aliases": [
     "CVE-2026-8450"
   ],
   "details": "HTTP::Daemon versions before 6.17 for Perl allow OS command injection via send_file().\n\nsend_file() opens its string argument with Perl's 2-arg open(). The 2-arg form interprets magic prefixes: '| cmd' and 'cmd |' open a pipe to a subprocess, '> path' and '>> path' open the path for write or append.\n\nUntrusted input passed to send_file() can run OS commands at the daemon process UID. The read-pipe form ('cmd |') also leaks subprocess stdout into the HTTP response body. The write-mode forms can create or truncate files at attacker chosen paths.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -35,7 +40,7 @@
     "cwe_ids": [
       "CWE-73"
     ],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T05:16:23Z"

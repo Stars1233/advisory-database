@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pg62-xhhc-55cc",
+  "modified": "2026-05-27T18:31:41Z",
+  "published": "2026-05-27T18:31:41Z",
+  "aliases": [
+    "CVE-2025-67903"
+  ],
+  "details": "Northern.tech Mender Client 5 before 5.0.4 allows a Cryptographic signature verification bypass.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67903"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mender.io/blog/cve-2025-67903-signature-verification-bypass-in-mender-client"
+    },
+    {
+      "type": "WEB",
+      "url": "https://northern.tech"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-27T18:16:21Z"
+  }
+}

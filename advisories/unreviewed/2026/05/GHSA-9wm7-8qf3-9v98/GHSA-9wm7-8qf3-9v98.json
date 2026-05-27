@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9wm7-8qf3-9v98",
-  "modified": "2026-05-27T15:33:27Z",
+  "modified": "2026-05-27T18:31:38Z",
   "published": "2026-05-27T15:33:27Z",
   "aliases": [
     "CVE-2026-48923"
   ],
   "details": "Jenkins AppSpider Plugin 1.0.17 and earlier does not perform a permission check in a method implementing form validation, allowing attackers with Overall/Read permission to connect to an attacker-specified URL.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-269"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T15:16:31Z"

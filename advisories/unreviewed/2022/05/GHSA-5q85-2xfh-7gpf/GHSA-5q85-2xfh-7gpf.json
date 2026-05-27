@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5q85-2xfh-7gpf",
-  "modified": "2022-05-02T03:19:32Z",
+  "modified": "2026-05-27T18:31:31Z",
   "published": "2022-05-02T03:19:32Z",
   "aliases": [
     "CVE-2009-0901"
   ],
   "details": "The Active Template Library (ATL) in Microsoft Visual Studio .NET 2003 SP1, Visual Studio 2005 SP1 and 2008 Gold, and Visual C++ 2005 SP1 and 2008 Gold and SP1; and Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP2, Vista Gold, SP1, and SP2, and Server 2008 Gold and SP2; does not prevent VariantClear calls on an uninitialized VARIANT, which allows remote attackers to execute arbitrary code via a malformed stream to an ATL (1) component or (2) control, related to ATL headers and error handling, aka \"ATL Uninitialized Object Vulnerability.\"",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -117,6 +122,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-457",
       "CWE-94"
     ],
     "severity": "HIGH",

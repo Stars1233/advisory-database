@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3q8x-6m7c-5p98",
-  "modified": "2022-05-14T00:59:36Z",
+  "modified": "2026-05-27T18:31:32Z",
   "published": "2022-05-14T00:59:36Z",
   "aliases": [
     "CVE-2015-0192"
   ],
   "details": "Unspecified vulnerability in IBM Java 8 before SR1, 7 R1 before SR2 FP11, 7 before SR9, 6 R1 before SR8 FP4, 6 before SR16 FP4, and 5.0 before SR16 FP10 allows remote attackers to gain privileges via unknown vectors related to the Java Virtual Machine.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -68,7 +73,9 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
+    "cwe_ids": [
+      "CWE-269"
+    ],
     "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,

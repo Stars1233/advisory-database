@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xrpm-74v3-f6fq",
-  "modified": "2022-05-02T03:35:49Z",
+  "modified": "2026-05-27T18:31:32Z",
   "published": "2022-05-02T03:35:49Z",
   "aliases": [
     "CVE-2009-2493"
   ],
   "details": "The Active Template Library (ATL) in Microsoft Visual Studio .NET 2003 SP1, Visual Studio 2005 SP1 and 2008 Gold and SP1, and Visual C++ 2005 SP1 and 2008 Gold and SP1; and Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP2, Vista Gold, SP1, and SP2, and Server 2008 Gold and SP2; does not properly restrict use of OleLoadFromStream in instantiating objects from data streams, which allows remote attackers to execute arbitrary code via a crafted HTML document with an ATL (1) component or (2) control, related to ATL headers and bypassing security policies, aka \"ATL COM Initialization Vulnerability.\"",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -160,7 +165,9 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
+    "cwe_ids": [
+      "CWE-94"
+    ],
     "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,

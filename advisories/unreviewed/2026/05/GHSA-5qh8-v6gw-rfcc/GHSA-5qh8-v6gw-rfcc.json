@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5qh8-v6gw-rfcc",
+  "modified": "2026-05-27T18:31:42Z",
+  "published": "2026-05-27T18:31:42Z",
+  "aliases": [
+    "CVE-2026-5509"
+  ],
+  "details": "An authenticated command injection vulnerability exists in the Archer BE450 v1 and BE7200 v1 router that allows an administrator to execute arbitrary system commands through the web management interface. After successfully authenticating to the admin interface, an attacker can leverage the browser’s developer console by supplying a crafted input that is passed to backend system commands without adequate sanitization. \n\nSuccessful exploitation enables execution of arbitrary commands with elevated privileges on the device, which may allow the attacker to start unauthorized services, modify system configuration, or otherwise fully compromise the router’s operating environment.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5509"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/en/support/download/archer-be450/#Firmware"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/jp/support/download/archer-be450/#Firmware"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/jp/support/download/archer-be7200/#Firmware"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/us/support/faq/5102"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-27T18:16:29Z"
+  }
+}

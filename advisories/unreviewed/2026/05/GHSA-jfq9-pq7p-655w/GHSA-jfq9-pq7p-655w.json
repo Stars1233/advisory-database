@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jfq9-pq7p-655w",
+  "modified": "2026-05-27T18:31:42Z",
+  "published": "2026-05-27T18:31:42Z",
+  "aliases": [
+    "CVE-2026-4392"
+  ],
+  "details": "A vulnerability was detected in TeamSpeak 3 Server up to 3.13.7. This issue affects some unknown processing of the component clientek Handshake Handler. Performing a manipulation of the argument proof results in reachable assertion. Remote exploitation of the attack is possible. Upgrading to version 3.13.8 is capable of addressing this issue. Upgrading the affected component is recommended.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4392"
+    },
+    {
+      "type": "WEB",
+      "url": "https://files.teamspeak-services.com/docs/security/TS-SA-2026-001.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://modzero.com/en/advisories/mz-26-01-teamspeak"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/366316"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/366316/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.teamspeak.com/en/downloads/#server"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-617"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-27T18:16:28Z"
+  }
+}

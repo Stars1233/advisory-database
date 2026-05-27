@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-w5p7-rvjw-v782",
-  "modified": "2026-05-26T21:32:00Z",
+  "modified": "2026-05-27T18:31:36Z",
   "published": "2026-05-26T21:32:00Z",
   "aliases": [
     "CVE-2026-36239"
   ],
   "details": "PbootCMS v.3.2.11 contains a code injection vulnerability in its site configuration functionality",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -28,8 +33,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-26T21:16:36Z"
