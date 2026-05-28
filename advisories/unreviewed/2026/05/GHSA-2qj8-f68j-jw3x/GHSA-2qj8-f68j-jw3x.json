@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2qj8-f68j-jw3x",
+  "modified": "2026-05-28T00:30:29Z",
+  "published": "2026-05-28T00:30:29Z",
+  "aliases": [
+    "CVE-2026-9208"
+  ],
+  "details": "Tanium addressed an unauthorized code execution vulnerability in Connect.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9208"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.tanium.com/TAN-2026-015"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-27T22:16:37Z"
+  }
+}
