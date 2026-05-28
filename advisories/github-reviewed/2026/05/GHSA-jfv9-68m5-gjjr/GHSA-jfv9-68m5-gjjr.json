@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jfv9-68m5-gjjr",
-  "modified": "2026-05-14T21:30:38Z",
+  "modified": "2026-05-28T19:13:30Z",
   "published": "2026-05-12T18:30:41Z",
   "aliases": [
     "CVE-2026-31240"
   ],
+  "summary": "mem0 server lacks authentication and authorization controls for its memory management API endpoints",
   "details": "The mem0 1.0.0 server lacks authentication and authorization controls for its memory management API endpoints. Critical functions such as updating memory records (PUT /memories/{memory_id}) are exposed without any verification of the requester's identity or permissions. A remote attacker can exploit this by sending unauthenticated requests to modify, overwrite, or delete arbitrary memory records, leading to unauthorized data manipulation and potential data loss.",
   "severity": [
     {
@@ -13,14 +14,34 @@
       "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "mem0ai"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31240"
     },
     {
-      "type": "WEB",
+      "type": "PACKAGE",
       "url": "https://github.com/mem0ai/mem0"
     },
     {
@@ -33,8 +54,8 @@
       "CWE-306"
     ],
     "severity": "HIGH",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-28T19:13:30Z",
     "nvd_published_at": "2026-05-12T18:16:52Z"
   }
 }
