@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8v8v-g73j-492j",
+  "modified": "2026-05-28T17:34:55Z",
+  "published": "2026-05-28T17:34:55Z",
+  "aliases": [
+    "CVE-2026-45756"
+  ],
+  "summary": "Symfony's JsonPath Evaluates Attacker-Controlled Regular Expressions in match()/search() Without Limits — ReDoS",
+  "details": "### Description\n\nThe `JsonPath` component's `match()` and `search()` filter functions compile a caller-supplied pattern straight into `preg_match()`:\n\n```php\n'match'  => @preg_match(\\sprintf('/^%s$/u', $this->transformJsonPathRegex($argList[1])), $value),\n'search' => @preg_match(\"/{$this->transformJsonPathRegex($argList[1])}/u\", $value),\n```\n\n`transformJsonPathRegex()` only performs cosmetic escaping: there is no length cap, no restriction to the RFC 9485 i-regexp subset, and no bound on backtracking. An application that evaluates an attacker-influenced JSONPath expression server-side (e.g. one taken from a query parameter or API field and passed to `JsonCrawler`) can therefore be made to run a catastrophic-backtracking pattern such as `$[?search(@, \"(a+)+$\")]`. Evaluated against a moderately sized document, this pins a CPU core for seconds per request, so a handful of concurrent requests exhausts the worker pool: a denial of service. Because the `preg_match()` calls are prefixed with `@`, the PCRE backtrack-limit errors that would otherwise surface are suppressed, leaving no log trace.\n\n### Conditions for exploitation\n\nAn application that evaluates an attacker-influenced JSONPath expression containing a `match()` / `search()` filter against any non-trivial JSON input.\n\n### Resolution\n\n`JsonCrawler` runs the `preg_match()` calls through a helper that lowers `pcre.backtrack_limit` to 10000 for the duration of the call (restoring the previous value afterwards), so a pathological pattern fails fast instead of stalling the worker.\n\nThe patch for this issue is available [here](https://github.com/symfony/symfony/commit/1ac2d47418ec23066112db1e6ca35be6fe123d14) for branch 7.4.\n\n### Credits\n\nSymfony would like to thank Himanshu Anand for reporting the issue and Alexandre Daubois for providing the fix.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "symfony/json-path"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.4.12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "symfony/json-path"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "symfony/symfony"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.4.12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "symfony/symfony"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/security/advisories/GHSA-8v8v-g73j-492j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/commit/1ac2d47418ec23066112db1e6ca35be6fe123d14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/json-path/CVE-2026-45756.yaml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2026-45756.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/symfony/symfony"
+    },
+    {
+      "type": "WEB",
+      "url": "https://symfony.com/cve-2026-45756"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1333",
+      "CWE-400"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-28T17:34:55Z",
+    "nvd_published_at": null
+  }
+}
