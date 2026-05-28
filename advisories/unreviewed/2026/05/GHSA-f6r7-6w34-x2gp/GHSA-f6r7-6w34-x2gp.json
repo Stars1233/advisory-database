@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f6r7-6w34-x2gp",
+  "modified": "2026-05-28T06:31:10Z",
+  "published": "2026-05-28T06:31:10Z",
+  "aliases": [
+    "CVE-2026-9801"
+  ],
+  "details": "A flaw was found in Keycloak. A remote attacker with high privileges, such as a realm administrator configuring a malicious Lightweight Directory Access Protocol (LDAP) server or an attacker compromising an upstream LDAP server, could exploit this vulnerability. By sending a malformed LDAP password policy response during a password authentication request, the attacker can trigger an OutOfMemoryError. This causes the Keycloak Java Virtual Machine (JVM) to terminate, leading to a denial of service (DoS) for all realms on the affected node.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9801"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-9801"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2482473"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T06:16:29Z"
+  }
+}

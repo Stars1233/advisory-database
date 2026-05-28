@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2xg8-969f-84gv",
+  "modified": "2026-05-28T06:31:09Z",
+  "published": "2026-05-28T06:31:09Z",
+  "aliases": [
+    "CVE-2026-3173"
+  ],
+  "details": "The Meta Field Block plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.5.1. This is due to the plugin allowing users to specify arbitrary object IDs and object types via block attributes without validating whether the authenticated user has permission to access the requested object's metadata. This makes it possible for authenticated attackers, with Contributor-level access and above, to read arbitrary user meta, post meta, and term meta data from any object in the database. On sites using plugins that store sensitive data in meta fields (e.g., WooCommerce billing/shipping information), this could lead to the exposure of Personally Identifiable Information (PII) including names, email addresses, phone numbers, and physical addresses.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3173"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/display-a-meta-field-as-block/trunk/meta-field-block.php#L206"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/display-a-meta-field-as-block/trunk/meta-field-block.php#L328"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3472303"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/247df9e2-0a63-49ad-86fa-cb4c6e62c4cf?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T06:16:26Z"
+  }
+}

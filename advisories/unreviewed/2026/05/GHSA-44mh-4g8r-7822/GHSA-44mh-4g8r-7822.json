@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-44mh-4g8r-7822",
+  "modified": "2026-05-28T06:31:09Z",
+  "published": "2026-05-28T06:31:09Z",
+  "aliases": [
+    "CVE-2026-9241"
+  ],
+  "details": "The FOX – Currency Switcher Professional for WooCommerce plugin for WordPress is vulnerable to Authorization Bypass Through User-Controlled Key in all versions up to and including 1.4.6. This is due to the `get_value()` function in `classes/fixed/fixed_user_role.php` trusting the attacker-controlled `$_REQUEST['wooc_order_user_roles']` parameter to determine the user's role context for role-based price resolution without any validation, allowing it to override the legitimate role data derived from the authenticated user's session object via `$user->roles`. This makes it possible for authenticated attackers, with Subscriber-level access and above, to impersonate higher-privileged roles — such as wholesale customer or administrator — and obtain discounted or otherwise restricted pricing that should not be available to their actual role. This vulnerability only has practical impact when the fixed user-role pricing feature is enabled and at least one product has a privileged-role price configured.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9241"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woocommerce-currency-switcher/trunk/classes/fixed/fixed_user_role.php#L228"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woocommerce-currency-switcher/trunk/classes/fixed/fixed_user_role.php#L229"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woocommerce-currency-switcher/trunk/classes/woocs.php#L2271"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3543524%40woocommerce-currency-switcher&new=3543524%40woocommerce-currency-switcher&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1c8c1fec-0e87-46f7-83c5-8f9e9aa97b4f?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T05:16:39Z"
+  }
+}

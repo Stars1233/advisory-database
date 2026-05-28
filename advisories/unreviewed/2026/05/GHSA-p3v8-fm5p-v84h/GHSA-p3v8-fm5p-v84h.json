@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p3v8-fm5p-v84h",
+  "modified": "2026-05-28T06:31:09Z",
+  "published": "2026-05-28T06:31:09Z",
+  "aliases": [
+    "CVE-2026-9793"
+  ],
+  "details": "A flaw was found in Keycloak. When a JSON Web Encryption (JWE) encrypted request object is submitted, Keycloak may incorrectly process unsigned claims if the decrypted content is raw JSON, bypassing the configured signature policy. This allows a remote attacker to submit unauthorized claims, leading to a compromise of data integrity within the OpenID Connect (OIDC) authorization flow. While a redirect URI allowlist acts as a compensating control, this vulnerability violates OIDC Core and Financial-grade API (FAPI) signing requirements.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9793"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-9793"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2482460"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-347"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T05:16:40Z"
+  }
+}

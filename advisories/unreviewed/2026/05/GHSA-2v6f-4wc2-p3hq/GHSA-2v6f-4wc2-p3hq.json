@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2v6f-4wc2-p3hq",
+  "modified": "2026-05-28T06:31:08Z",
+  "published": "2026-05-28T06:31:08Z",
+  "aliases": [
+    "CVE-2026-32995"
+  ],
+  "details": "The Rocket.Chat DDP method autoTranslate.translateMessage in versions <8.5.0, <8.4.2, <8.3.4, <8.2.4, <8.1.5, <8.0.5, <7.13.8, and <7.10.12 accepts a client-supplied IMessage object and passes it directly to translateMessage() without checking Meteor.userId() or verifying room membership. Any authenticated DDP user can read the content of any message by ID from any room (private channels, DMs, E2EE rooms) by calling this method.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32995"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/RocketChat/Rocket.Chat/pull/40528"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3734326"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T05:16:35Z"
+  }
+}
