@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3fwm-5x3q-64xf",
-  "modified": "2022-04-30T18:10:45Z",
+  "modified": "2026-05-28T18:30:23Z",
   "published": "2022-04-30T18:10:45Z",
   "aliases": [
     "CVE-1999-0511"
   ],
   "details": "IP forwarding is enabled on a machine which is not a router or firewall.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,7 +25,9 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
+    "cwe_ids": [
+      "CWE-200"
+    ],
     "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,

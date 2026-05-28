@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rqq4-2m8x-2xjv",
+  "modified": "2026-05-28T18:30:31Z",
+  "published": "2026-05-28T18:30:31Z",
+  "aliases": [
+    "CVE-2026-38704"
+  ],
+  "details": "A command injection vulnerability exists in the WireGuard VPN feature of InHand Networks IR302 firmware V3.5.108, IR305 firmware V1.0.118, IR315 firmware V1.0.118, IR615 firmware V1.0.118, and earlier versions. Attackers can exploit this vulnerability to obtain ROOT privileges on remote target devices.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38704"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.inhand.com/wp-content/uploads/InHand-PSA-2026-05_EN.pdf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T17:16:21Z"
+  }
+}

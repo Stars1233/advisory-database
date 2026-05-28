@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-49v5-h84x-33xp",
-  "modified": "2025-09-19T21:31:14Z",
+  "modified": "2026-05-28T18:30:24Z",
   "published": "2022-05-17T04:51:34Z",
   "aliases": [
     "CVE-2014-0759"
   ],
   "details": "Unquoted Windows search path vulnerability in Schneider Electric Floating License Manager 1.0.0 through 1.4.0 allows local users to gain privileges via a Trojan horse application with a name composed of an initial substring of a path that contains a space character.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {

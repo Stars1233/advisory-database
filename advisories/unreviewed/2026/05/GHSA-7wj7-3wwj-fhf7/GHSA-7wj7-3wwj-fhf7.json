@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7wj7-3wwj-fhf7",
-  "modified": "2026-05-04T15:31:14Z",
+  "modified": "2026-05-28T18:30:24Z",
   "published": "2026-05-04T15:31:14Z",
   "aliases": [
     "CVE-2025-58074"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2276"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.gendigital.com/us/en/contact-us/security-advisories"
     },
     {
       "type": "WEB",

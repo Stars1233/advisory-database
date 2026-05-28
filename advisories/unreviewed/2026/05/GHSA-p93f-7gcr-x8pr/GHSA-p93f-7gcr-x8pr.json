@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p93f-7gcr-x8pr",
+  "modified": "2026-05-28T18:30:32Z",
+  "published": "2026-05-28T18:30:32Z",
+  "aliases": [
+    "CVE-2026-34126"
+  ],
+  "details": "TP-Link has identified a vulnerability in Tapo L535E v1.0 and v3.0, Tapo P300 v1.0, and Tapo D100C v1.0, where Bluetooth communication during the initial setup phase is transmitted in cleartext without encryption.  Bluetooth is only used during initialization.\n\nAn attacker within the Bluetooth range could exploit this behavior using Bluetooth sniffing or man-in-the-middle techniques, which may allow eavesdropping on Bluetooth communication, manipulate transmitted setup data and potentially gain unauthorized control of the device during initialization. \n\n\nAn attacker\nwithin the Bluetooth range could exploit this behavior using Bluetooth sniffing\nor man-in-the-middle techniques, which may allow eavesdropping on Bluetooth\ncommunication, manipulate transmitted setup data and potentially gain\nunauthorized control of the device during initialization.\n\n\n\nD100C is the\nchime delivered with your Tapo camera, and it is delivered with the following\nTapo products:\n\n\n\n\n\n\n\n\n\nD130, D210, D235,\nD225, TD21, TDB21 and TD25",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34126"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/en/support/download/tapo-l535e/v3/#Firmware-Release-Notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/en/support/download/tapo-p300/#Firmware-Release-Notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/jp/support/download/tapo-l535e/#Firmware-Release-Notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/jp/support/download/tapo-p300/#Firmware-Release-Notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/us/support/download/tapo-l535e/#Firmware-Release-Notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/us/support/faq/5106"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-319"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T18:16:31Z"
+  }
+}

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-52r2-7jx8-c8gc",
-  "modified": "2022-05-17T03:06:08Z",
+  "modified": "2026-05-28T18:30:24Z",
   "published": "2022-05-17T03:06:08Z",
   "aliases": [
     "CVE-2014-2653"
   ],
   "details": "The verify_host_key function in sshconnect.c in the client in OpenSSH 6.6 and earlier allows remote servers to trigger the skipping of SSHFP DNS RR checking by presenting an unacceptable HostCertificate.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {

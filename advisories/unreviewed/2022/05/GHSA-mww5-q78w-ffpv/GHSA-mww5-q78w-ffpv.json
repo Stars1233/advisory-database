@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mww5-q78w-ffpv",
-  "modified": "2022-05-13T01:26:11Z",
+  "modified": "2026-05-28T18:30:24Z",
   "published": "2022-05-13T01:26:11Z",
   "aliases": [
     "CVE-2014-5455"
   ],
   "details": "Unquoted Windows search path vulnerability in the ptservice service prior to PrivateTunnel version 3.0 (Windows) and OpenVPN Connect version 3.1 (Windows) allows local users to gain privileges via a crafted program.exe file in the %SYSTEMDRIVE% folder.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {

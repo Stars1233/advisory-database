@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2m54-8m6g-qf93",
-  "modified": "2026-03-01T09:30:19Z",
+  "modified": "2026-05-28T18:30:24Z",
   "published": "2026-02-19T18:31:51Z",
   "aliases": [
     "CVE-2026-2704"
@@ -19,6 +19,10 @@
   ],
   "affected": [],
   "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbabel/openbabel/security/advisories/GHSA-6xw4-2g22-26h8"
+    },
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2704"
@@ -41,6 +45,10 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/openbabel/openbabel/releases/tag/openbabel-3-2-0"
+    },
+    {
+      "type": "WEB",
       "url": "https://vuldb.com/?ctiid.346650"
     },
     {
@@ -50,6 +58,18 @@
     {
       "type": "WEB",
       "url": "https://vuldb.com/?submit.754378"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/754378"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/346650"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/346650/cti"
     }
   ],
   "database_specific": {

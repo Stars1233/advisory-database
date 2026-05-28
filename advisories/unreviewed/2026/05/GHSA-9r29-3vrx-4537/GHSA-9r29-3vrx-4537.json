@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9r29-3vrx-4537",
-  "modified": "2026-05-28T15:39:50Z",
+  "modified": "2026-05-28T18:30:29Z",
   "published": "2026-05-28T15:39:50Z",
   "aliases": [
     "CVE-2026-42250"
@@ -25,7 +25,15 @@
     },
     {
       "type": "WEB",
+      "url": "https://inbox.sourceware.org/bzip2-devel/20260528145407.293768-1-mark@klomp.org"
+    },
+    {
+      "type": "WEB",
       "url": "https://sourceware.org/bzip2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sourceware.org/cgit/bzip2/commit/?id=35d122a3df8b0cc4082a4d89fdc6ee99f375fe67"
     }
   ],
   "database_specific": {

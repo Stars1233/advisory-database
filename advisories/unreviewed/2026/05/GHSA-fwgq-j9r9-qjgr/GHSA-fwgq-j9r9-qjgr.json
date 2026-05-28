@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fwgq-j9r9-qjgr",
+  "modified": "2026-05-28T18:30:32Z",
+  "published": "2026-05-28T18:30:32Z",
+  "aliases": [
+    "CVE-2026-9090"
+  ],
+  "details": "Casdoor versions 2.362.0 and earlier contain a vulnerability that allows an attacker to bypass authentication by supplying an arbitrary signing certificate. The buildSpCertificateStore function extracts the X.509 certificate directly from the incoming SAMLResponse instead of using the trusted pre-configured Identity Provider certificate, allowing an attacker to forge assertions signed with an attacker-controlled key.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9090"
+    },
+    {
+      "type": "WEB",
+      "url": "https://kb.cert.org/vuls/id/780781"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T17:16:33Z"
+  }
+}

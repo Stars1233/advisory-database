@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jcmp-phfm-38x8",
+  "modified": "2026-05-28T18:30:32Z",
+  "published": "2026-05-28T18:30:32Z",
+  "aliases": [
+    "CVE-2026-9095"
+  ],
+  "details": "Casdoor versions 2.362.0 and earlier map SAML assertions to user sessions without replay protection. The ParseSamlResponse() function in object/saml_sp.go calls sp.RetrieveAssertionInfo() and immediately maps the result to a user session. There is no assertion ID cache, OneTimeUse condition enforcement, or replay detection anywhere in the SAML SP code path. As a result, an attacker can replay a previously captured SAML assertion to obtain an authenticated session for the assertion’s subject, including administrator accounts, without needing the user’s password or MFA credentials.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9095"
+    },
+    {
+      "type": "WEB",
+      "url": "https://kb.cert.org/vuls/id/780781"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-294"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T17:16:34Z"
+  }
+}
