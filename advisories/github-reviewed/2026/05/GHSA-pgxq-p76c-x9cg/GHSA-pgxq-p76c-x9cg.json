@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pgxq-p76c-x9cg",
+  "modified": "2026-05-29T22:19:19Z",
+  "published": "2026-05-29T22:19:19Z",
+  "aliases": [
+    "CVE-2026-47266"
+  ],
+  "summary": "formie's unauthenticated front-end submission editing can overwrite existing submissions",
+  "details": "### Impact\nUnauthenticated users could modify existing submissions by posting a known or guessed submission ID to `formie/submissions/save-submission`.\n\n### Patches\n[2.2.21](https://github.com/verbb/formie/releases/tag/2.2.21), [3.1.26](https://github.com/verbb/formie/releases/tag/3.1.26)\n\n### Workarounds\nBlock unauthenticated access to `actions/formie/submissions/save-submission`, or disable/customize front-end submission editing until patched.\n\n### Credit\nformie extends many thanks to:\n- Florian (Cyber Security Engineer, arcade solutions ag)\n- Contact: [security@arcade.ch](mailto:security@arcade.ch)",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "verbb/formie"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.1.26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "verbb/formie"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.2.21"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/verbb/formie/security/advisories/GHSA-pgxq-p76c-x9cg"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47266"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/verbb/formie"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/verbb/formie/releases/tag/2.2.21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/verbb/formie/releases/tag/3.1.26"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-29T22:19:19Z",
+    "nvd_published_at": "2026-05-29T20:16:28Z"
+  }
+}

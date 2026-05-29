@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jjxg-hpm7-g95f",
-  "modified": "2022-05-13T01:43:20Z",
+  "modified": "2026-05-29T22:19:41Z",
   "published": "2022-05-13T01:43:20Z",
   "aliases": [
     "CVE-2017-14176"
   ],
+  "summary": "Bazaar allows remote attackers to execute arbitrary commands via a bzr+ssh URL with initial dash character in hostname",
   "details": "Bazaar through 2.7.0, when Subprocess SSH is used, allows remote attackers to execute arbitrary commands via a bzr+ssh URL with an initial dash character in the hostname, a related issue to CVE-2017-9800, CVE-2017-12836, CVE-2017-12976, CVE-2017-16228, CVE-2017-1000116, and CVE-2017-1000117.",
   "severity": [
     {
@@ -13,7 +14,27 @@
       "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "bzr"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
@@ -37,6 +58,10 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/bzr/PYSEC-2017-149.yaml"
+    },
+    {
+      "type": "WEB",
       "url": "https://www.debian.org/security/2017/dsa-4052"
     },
     {
@@ -51,8 +76,8 @@
   "database_specific": {
     "cwe_ids": [],
     "severity": "HIGH",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-05-29T22:19:41Z",
     "nvd_published_at": "2017-11-27T10:29:00Z"
   }
 }
