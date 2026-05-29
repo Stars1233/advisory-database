@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cgxr-jgj8-7wp2",
+  "modified": "2026-05-29T03:31:12Z",
+  "published": "2026-05-29T03:31:12Z",
+  "aliases": [
+    "CVE-2026-8070"
+  ],
+  "details": "Incorrect permission assignment for a critical resource in Armoury Crate allows a local user to bypass the driver’s validation mechanism, resulting in unauthorized read and write access to physical memory.Refer to the ' \nSecurity Update for Armoury Crate App   ' section on the ASUS Security Advisory for more information.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8070"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.asus.com/security-advisory"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-732"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T02:16:17Z"
+  }
+}
