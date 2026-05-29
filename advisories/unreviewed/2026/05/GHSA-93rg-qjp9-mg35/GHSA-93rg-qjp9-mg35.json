@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-93rg-qjp9-mg35",
-  "modified": "2026-05-29T00:38:33Z",
+  "modified": "2026-05-29T15:30:29Z",
   "published": "2026-05-29T00:38:33Z",
   "aliases": [
     "CVE-2026-10044"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/Usagi-org/ai-goofish-monitor/pull/489"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Usagi-org/ai-goofish-monitor/commit/f85d140b6b45029d9a0925feb96dad733b41396d"
     },
     {
       "type": "WEB",

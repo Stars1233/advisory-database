@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cr3f-ppw7-pmqf",
-  "modified": "2022-05-24T16:46:11Z",
+  "modified": "2026-05-29T15:30:21Z",
   "published": "2022-05-24T16:46:11Z",
   "aliases": [
     "CVE-2018-7821"
   ],
   "details": "An Environment (CWE-2) vulnerability exists in SoMachine Basic, all versions, and Modicon M221(all references, all versions prior to firmware V1.10.0.0) which could cause cycle time impact when flooding the M221 ethernet interface while the Ethernet/IP adapter is activated.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,6 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-400",
       "CWE-770"
     ],
     "severity": "HIGH",

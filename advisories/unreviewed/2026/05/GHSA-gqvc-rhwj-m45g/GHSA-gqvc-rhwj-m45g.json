@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gqvc-rhwj-m45g",
+  "modified": "2026-05-29T15:30:35Z",
+  "published": "2026-05-29T15:30:35Z",
+  "aliases": [
+    "CVE-2026-39292"
+  ],
+  "details": "Falco Solutions PHPPageBuilder v0.31.0 contains an unrestricted file upload vulnerability in the pagemanager/pagebuilder module that allows remote attackers to upload arbitrary files and achieve remote code execution. The vulnerability exists due to insufficient validation of uploaded file types and executable content.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39292"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/HansSchouten/PHPageBuilder"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/krishnadevpmelevila/CVE-2026-39292/tree/main"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T15:16:22Z"
+  }
+}

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-v7rc-q48q-f2p3",
-  "modified": "2026-04-18T09:30:17Z",
+  "modified": "2026-05-29T15:30:26Z",
   "published": "2026-03-25T12:30:22Z",
   "aliases": [
     "CVE-2026-23298"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ncan: ucan: Fix infinite loop from zero-length messages\n\nIf a broken ucan device gets a message with the message length field set\nto 0, then the driver will loop for forever in\nucan_read_bulk_callback(), hanging the system.  If the length is 0, just\nskip the message and go on to the next one.\n\nThis has been fixed in the kvaser_usb driver in the past in commit\n0c73772cd2b8 (\"can: kvaser_usb: leaf: Fix potential infinite loop in\ncommand parsers\"), so there must be some broken devices out there like\nthis somewhere.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-835"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-03-25T11:16:25Z"

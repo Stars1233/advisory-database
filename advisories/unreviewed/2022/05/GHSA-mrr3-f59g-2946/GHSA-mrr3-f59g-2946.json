@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mrr3-f59g-2946",
-  "modified": "2022-05-24T19:09:51Z",
+  "modified": "2026-05-29T15:30:24Z",
   "published": "2022-05-24T19:09:51Z",
   "aliases": [
     "CVE-2021-33485"
   ],
   "details": "CODESYS Control Runtime system before 3.5.17.10 has a Heap-based Buffer Overflow.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,6 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-122",
       "CWE-787"
     ],
     "severity": "CRITICAL",

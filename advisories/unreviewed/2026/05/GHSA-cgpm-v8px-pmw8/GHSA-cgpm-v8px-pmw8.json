@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cgpm-v8px-pmw8",
-  "modified": "2026-05-29T09:31:05Z",
+  "modified": "2026-05-29T15:30:32Z",
   "published": "2026-05-29T09:31:05Z",
   "aliases": [
     "CVE-2026-49322"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://cwe.mitre.org/data/definitions/1390.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.asrg.io/security-advisories/cve-2026-49322-indian-scout-infotainment-wcm-weak-authentication"
     }
   ],
   "database_specific": {

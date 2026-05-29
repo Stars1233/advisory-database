@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-ppc6-q8hw-556j",
-  "modified": "2022-05-13T01:04:03Z",
+  "modified": "2026-05-29T15:30:21Z",
   "published": "2022-05-13T01:04:03Z",
   "aliases": [
     "CVE-2018-7791"
@@ -30,6 +30,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-284",
       "CWE-287"
     ],
     "severity": "CRITICAL",

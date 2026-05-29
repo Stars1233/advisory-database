@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6x8x-4qf6-w7qg",
+  "modified": "2026-05-29T15:30:33Z",
+  "published": "2026-05-29T15:30:33Z",
+  "aliases": [
+    "CVE-2026-49324"
+  ],
+  "details": "Uncontrolled resource consumption in the Wireless Control Module (WCM) of the Indian Motorcycle Scout Bobber + Tech 2025 model year allows an adjacent-network attacker with write access to the in-vehicle network to permanently immobilize the motorcycle. The WCM enforces a brute-force lockout on the immobilizer authentication algorithm, but the lockout counter is reachable by any unauthenticated message, has no session binding, and does not reset on power cycle. An attacker can deliberately trip the lockout with a small number of crafted frames, leaving the bike un-startable until dealer service. Specific thresholds have been withheld pending vendor remediation.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:P/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49324"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.asrg.io/security-advisories/cve-2026-49324-indian-scout-wcm-bruteforce-lockout-dos"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-307"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T13:16:23Z"
+  }
+}

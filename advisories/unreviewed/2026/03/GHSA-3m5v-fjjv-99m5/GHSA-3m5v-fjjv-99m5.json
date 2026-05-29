@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3m5v-fjjv-99m5",
-  "modified": "2026-04-18T09:30:17Z",
+  "modified": "2026-05-29T15:30:26Z",
   "published": "2026-03-25T12:30:22Z",
   "aliases": [
     "CVE-2026-23291"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfc: pn533: properly drop the usb interface reference on disconnect\n\nWhen the device is disconnected from the driver, there is a \"dangling\"\nreference count on the usb interface that was grabbed in the probe\ncallback.  Fix this up by properly dropping the reference after we are\ndone with it.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -49,7 +54,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-03-25T11:16:24Z"

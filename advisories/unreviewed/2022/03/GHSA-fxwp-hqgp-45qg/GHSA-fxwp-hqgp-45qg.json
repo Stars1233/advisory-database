@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fxwp-hqgp-45qg",
-  "modified": "2022-03-19T00:01:37Z",
+  "modified": "2026-05-29T15:30:25Z",
   "published": "2022-03-10T00:00:30Z",
   "aliases": [
     "CVE-2022-0715"

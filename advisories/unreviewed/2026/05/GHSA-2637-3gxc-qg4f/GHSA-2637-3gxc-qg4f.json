@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2637-3gxc-qg4f",
-  "modified": "2026-05-29T07:20:06Z",
+  "modified": "2026-05-29T15:30:32Z",
   "published": "2026-05-29T07:20:06Z",
   "aliases": [
     "CVE-2026-6324"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://gitlab.gnome.org/GNOME/libsoup/-/issues/508"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.gnome.org/GNOME/libsoup/-/work_items/508"
     }
   ],
   "database_specific": {

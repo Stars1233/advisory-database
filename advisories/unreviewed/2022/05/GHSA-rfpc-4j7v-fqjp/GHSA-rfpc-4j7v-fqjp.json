@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rfpc-4j7v-fqjp",
-  "modified": "2022-05-24T17:05:44Z",
+  "modified": "2026-05-29T15:30:22Z",
   "published": "2022-05-24T17:05:44Z",
   "aliases": [
     "CVE-2019-6857"
   ],
   "details": "A CWE-754: Improper Check for Unusual or Exceptional Conditions vulnerability exists in Modicon M580, Modicon M340, Modicon Quantum, Modicon Premium (see security notification for specific versions) which could cause a Denial of Service of the controller when reading specific memory blocks using Modbus TCP.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {

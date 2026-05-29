@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-25r4-295r-fvqm",
-  "modified": "2022-05-24T16:56:24Z",
+  "modified": "2026-05-29T15:30:21Z",
   "published": "2022-05-24T16:56:24Z",
   "aliases": [
     "CVE-2019-6829"
   ],
   "details": "A CWE-248: Uncaught Exception vulnerability exists in Modicon M580 (firmware version prior to V2.90) and Modicon M340 (firmware version prior to V3.10), which could cause a possible denial of service when writing to specific memory addresses in the controller over Modbus.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,6 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-248",
       "CWE-755"
     ],
     "severity": "HIGH",

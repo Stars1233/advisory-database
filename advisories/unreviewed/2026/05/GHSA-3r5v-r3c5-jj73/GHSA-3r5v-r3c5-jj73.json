@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3r5v-r3c5-jj73",
+  "modified": "2026-05-29T15:30:35Z",
+  "published": "2026-05-29T15:30:35Z",
+  "aliases": [
+    "CVE-2026-4290"
+  ],
+  "details": "The WP Travel Pro plugin for WordPress is vulnerable to arbitrary user deletion via the /wp-json/wp-travel/v1/travel-guide/{user_id} REST API endpoint in all versions up to, and including, 10.6.0. This is due to the check_permission() callback unconditionally returning true and the Database::delete() method passing the user ID directly to wp_delete_user() without any role validation. This makes it possible for unauthenticated attackers to delete arbitrary user accounts, including those of administrators.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4290"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wptravel.io/wp-travel-pro"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/885dd550-4c80-4e36-8dae-cb47c1500ea5?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T15:16:24Z"
+  }
+}

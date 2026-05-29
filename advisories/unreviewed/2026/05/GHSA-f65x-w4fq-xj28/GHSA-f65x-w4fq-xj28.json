@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f65x-w4fq-xj28",
+  "modified": "2026-05-29T15:30:33Z",
+  "published": "2026-05-29T15:30:33Z",
+  "aliases": [
+    "CVE-2026-49323"
+  ],
+  "details": "Weak authentication between the Wireless Control Module (WCM) and the Engine Control Module (ECM) of the Indian Motorcycle Scout Bobber + Tech 2025 model year allows an adjacent-network attacker with read access to the in-vehicle network to recover the per-vehicle ECM immobilizer secret by passively observing a single seed/key exchange. The WCM derives its response using a reversible, non-cryptographic operation rather than a cryptographic challenge-response, so the persistent immobilizer secret can be reconstructed from one captured exchange. With this secret the attacker can authenticate to the ECM independently of the WCM and start the engine, defeating the immobilizer. Specific protocol details have been withheld pending vendor remediation.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:P/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:P/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49323"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.asrg.io/security-advisories/cve-2026-49323-indian-scout-wcm-ecm-weak-authentication"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-327"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T13:16:23Z"
+  }
+}

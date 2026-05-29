@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7w2v-5m57-6fj5",
-  "modified": "2022-05-13T01:04:04Z",
+  "modified": "2026-05-29T15:30:21Z",
   "published": "2022-05-13T01:04:04Z",
   "aliases": [
     "CVE-2018-7792"
@@ -30,6 +30,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-327",
       "CWE-862"
     ],
     "severity": "HIGH",
