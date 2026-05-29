@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fj59-ccrm-8h5w",
-  "modified": "2022-05-13T01:16:49Z",
+  "modified": "2026-05-29T21:31:13Z",
   "published": "2022-05-13T01:16:49Z",
   "aliases": [
     "CVE-2018-13785"
@@ -102,6 +102,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-190",
       "CWE-369"
     ],
     "severity": "MODERATE",

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4535-jc6h-8qx3",
+  "modified": "2026-05-29T21:31:22Z",
+  "published": "2026-05-29T21:31:22Z",
+  "aliases": [
+    "CVE-2026-49369"
+  ],
+  "details": "In JetBrains YouTrack before 2026.1.13162 information disclosure was possible on Users and Groups pages",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49369"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jetbrains.com/privacy-security/issues-fixed"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T19:16:26Z"
+  }
+}

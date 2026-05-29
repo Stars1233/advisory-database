@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5crp-hwj6-6www",
-  "modified": "2026-03-18T18:31:18Z",
+  "modified": "2026-05-29T21:31:16Z",
   "published": "2026-03-18T18:31:18Z",
   "aliases": [
     "CVE-2026-23260"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nregmap: maple: free entry on mas_store_gfp() failure\n\nregcache_maple_write() allocates a new block ('entry') to merge\nadjacent ranges and then stores it with mas_store_gfp().\nWhen mas_store_gfp() fails, the new 'entry' remains allocated and\nis never freed, leaking memory.\n\nFree 'entry' on the failure path; on success continue freeing the\nreplaced neighbor blocks ('lower', 'upper').",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-03-18T18:16:24Z"

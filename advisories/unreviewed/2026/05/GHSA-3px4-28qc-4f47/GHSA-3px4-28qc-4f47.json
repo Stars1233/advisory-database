@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3px4-28qc-4f47",
-  "modified": "2026-05-29T00:38:36Z",
+  "modified": "2026-05-29T21:31:19Z",
   "published": "2026-05-29T00:38:36Z",
   "aliases": [
     "CVE-2026-9911"
   ],
   "details": "Integer overflow in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: High)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-472"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T23:16:49Z"

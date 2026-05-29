@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pqp4-5r3j-578m",
-  "modified": "2026-03-18T18:31:18Z",
+  "modified": "2026-05-29T21:31:16Z",
   "published": "2026-03-18T18:31:18Z",
   "aliases": [
     "CVE-2026-23264"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nRevert \"drm/amd: Check if ASPM is enabled from PCIe subsystem\"\n\nThis reverts commit 7294863a6f01248d72b61d38478978d638641bee.\n\nThis commit was erroneously applied again after commit 0ab5d711ec74\n(\"drm/amd: Refactor `amdgpu_aspm` to be evaluated per device\")\nremoved it, leading to very hard to debug crashes, when used with a system with two\nAMD GPUs of which only one supports ASPM.\n\n(cherry picked from commit 97a9689300eb2b393ba5efc17c8e5db835917080)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-03-18T18:16:25Z"

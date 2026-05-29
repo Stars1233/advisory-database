@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-698m-3cpg-fhpm",
-  "modified": "2026-03-16T15:30:42Z",
+  "modified": "2026-05-29T21:31:16Z",
   "published": "2026-03-16T15:30:42Z",
   "aliases": [
     "CVE-2026-20994"
   ],
   "details": "URL redirection in Samsung Account prior to version 15.5.01.1 allows remote attackers to potentially get access token.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"

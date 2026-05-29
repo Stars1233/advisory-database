@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fp3q-76ww-6mv4",
-  "modified": "2022-05-24T17:44:16Z",
+  "modified": "2026-05-29T21:31:15Z",
   "published": "2022-05-24T17:44:16Z",
   "aliases": [
     "CVE-2021-22713"
   ],
   "details": "A CWE-119:Improper restriction of operations within the bounds of a memory buffer vulnerability exists in PowerLogic ION8650, ION8800, ION7650, ION7700/73xx, and ION83xx/84xx/85xx/8600 (see security notifcation for affected versions), which could cause the meter to reboot.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {

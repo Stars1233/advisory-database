@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qgjm-4mg2-6wm5",
+  "modified": "2026-05-29T21:31:24Z",
+  "published": "2026-05-29T21:31:24Z",
+  "aliases": [
+    "CVE-2026-4387"
+  ],
+  "details": "StrongDM Desktop Application before 23.74.0 (Desktop Client before 53.77.0) on Microsoft Windows stores authentication state, including a JSON Web Token and asymmetric key material, in cleartext in a per-user state file located at C:\\Users\\<username>\\.sdm\\state.kv. The file is protected only by default user-level NTFS permissions.\n\n\n\nExploitation requires local read access to the affected user's profile directory and additional deployment and execution conditions on the target host.\n\n\n\nThe condition was reported through coordinated disclosure by Hope Walker (SpecterOps).",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4387"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.strongdm.com/?tcuUid=56fde839-9388-4361-8d3b-9baa7b2de2ed"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-312"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T20:16:30Z"
+  }
+}

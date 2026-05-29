@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pqrm-v5f6-j44f",
+  "modified": "2026-05-29T21:31:22Z",
+  "published": "2026-05-29T21:31:22Z",
+  "aliases": [
+    "CVE-2026-49374"
+  ],
+  "details": "In JetBrains TeamCity before 2026.1 improper permission checks exposed build configuration parameters",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49374"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jetbrains.com/privacy-security/issues-fixed"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T19:16:27Z"
+  }
+}

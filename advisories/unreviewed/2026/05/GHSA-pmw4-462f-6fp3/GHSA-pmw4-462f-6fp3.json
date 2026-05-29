@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pmw4-462f-6fp3",
+  "modified": "2026-05-29T21:31:23Z",
+  "published": "2026-05-29T21:31:23Z",
+  "aliases": [
+    "CVE-2026-34127"
+  ],
+  "details": "A stored\ncross-site scripting (XSS) vulnerability has been identified in the web\nmanagement interface of TP-Link's TL-SG108PE v5 switch due to improper sanitation of the SYSNAM\nconfiguration parameter during configuration file import. An attacker with\nadministrator access can inject malicious script into the device configuration,\nwhich may be stored and executed in the administrator’s browser when the\naffected interface is viewed.    \n\n\n\n\n\nSuccessful\nexploitation may allow session cookie theft, unauthorized configuration\nchanges, or access to sensitive information exposed through the management\ninterface.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:P/VC:H/VI:L/VA:H/SC:L/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34127"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/en/support/download/tl-sg108pe/v5/#Firmware"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/us/support/download/tl-sg108pe/v5/#Firmware"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/us/support/faq/5110"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T20:16:22Z"
+  }
+}

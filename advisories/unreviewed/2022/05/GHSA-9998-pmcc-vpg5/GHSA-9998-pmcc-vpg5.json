@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9998-pmcc-vpg5",
-  "modified": "2022-05-17T04:52:15Z",
+  "modified": "2026-05-29T21:31:11Z",
   "published": "2022-05-17T04:52:15Z",
   "aliases": [
     "CVE-2011-4327"
   ],
   "details": "ssh-keysign.c in ssh-keysign in OpenSSH before 5.8p2 on certain platforms executes ssh-rand-helper with unintended open file descriptors, which allows local users to obtain sensitive key information via the ptrace system call.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {

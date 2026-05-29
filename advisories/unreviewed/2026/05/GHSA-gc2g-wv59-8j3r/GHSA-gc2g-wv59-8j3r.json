@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gc2g-wv59-8j3r",
+  "modified": "2026-05-29T21:31:23Z",
+  "published": "2026-05-29T21:31:23Z",
+  "aliases": [
+    "CVE-2026-49386"
+  ],
+  "details": "In JetBrains YouTrack before 2026.1.13570 improper access control allowed enumeration of restricted issues and articles on Planning Canvas",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49386"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jetbrains.com/privacy-security/issues-fixed"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T19:16:28Z"
+  }
+}

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qhc5-4jrr-hwc9",
-  "modified": "2026-05-29T00:38:37Z",
+  "modified": "2026-05-29T21:31:19Z",
   "published": "2026-05-29T00:38:37Z",
   "aliases": [
     "CVE-2026-9961"
   ],
   "details": "Use after free in SurfaceCapture in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-416"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T23:16:54Z"
