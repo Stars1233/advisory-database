@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xcq6-chp9-g954",
-  "modified": "2026-05-28T15:39:50Z",
+  "modified": "2026-05-29T00:38:32Z",
   "published": "2026-05-28T15:39:50Z",
   "aliases": [
     "CVE-2026-9658"
@@ -17,6 +17,10 @@
     {
       "type": "WEB",
       "url": "https://metacpan.org/release/RRWO/Plack-Middleware-Security-Simple-v0.13.1/changes"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/28/9"
     }
   ],
   "database_specific": {

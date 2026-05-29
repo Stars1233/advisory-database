@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q9wc-hhm5-fjq7",
+  "modified": "2026-05-29T00:38:39Z",
+  "published": "2026-05-29T00:38:39Z",
+  "aliases": [
+    "CVE-2026-6891"
+  ],
+  "details": "Improper handling of symbolic links in the installer of My Image Garden for macOS Version 3.6.8 or earlier may allow a local attacker with login privileges to exploit a specially crafted symbolic link during installation to modify permissions of files for which they would not normally have authorization.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6891"
+    },
+    {
+      "type": "WEB",
+      "url": "https://canon.jp/support/support-info/260528-2vulnerability-response"
+    },
+    {
+      "type": "WEB",
+      "url": "https://psirt.canon/advisory-information/cp2026-004"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.canon-europe.com/support/product-security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.usa.canon.com/support/canon-product-advisories/CPA2026-004-Vulnerability-Remediation-for-My-Image-Garden-for-macOS-and-CUPS-Printer-Driver-for-macOS"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-59"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T00:16:15Z"
+  }
+}

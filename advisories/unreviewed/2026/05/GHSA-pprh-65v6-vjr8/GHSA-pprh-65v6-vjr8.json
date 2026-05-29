@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pprh-65v6-vjr8",
+  "modified": "2026-05-29T00:38:36Z",
+  "published": "2026-05-29T00:38:36Z",
+  "aliases": [
+    "CVE-2026-9913"
+  ],
+  "details": "Inappropriate implementation in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9913"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/500046096"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T23:16:49Z"
+  }
+}

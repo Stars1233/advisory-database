@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g98w-p3r8-874w",
+  "modified": "2026-05-29T00:38:39Z",
+  "published": "2026-05-29T00:38:39Z",
+  "aliases": [
+    "CVE-2026-9994"
+  ],
+  "details": "Use after free in Core in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9994"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/513235131"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T23:16:57Z"
+  }
+}

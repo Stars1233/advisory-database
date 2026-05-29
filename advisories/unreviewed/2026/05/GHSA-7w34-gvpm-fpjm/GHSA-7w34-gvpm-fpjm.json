@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7w34-gvpm-fpjm",
+  "modified": "2026-05-29T00:38:37Z",
+  "published": "2026-05-29T00:38:37Z",
+  "aliases": [
+    "CVE-2026-9960"
+  ],
+  "details": "Integer overflow in PDFium in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted font file. (Chromium security severity: High)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9960"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_0877304591.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/504573260"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-472"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T23:16:54Z"
+  }
+}

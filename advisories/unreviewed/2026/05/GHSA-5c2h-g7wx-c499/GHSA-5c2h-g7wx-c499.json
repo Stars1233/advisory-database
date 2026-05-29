@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5c2h-g7wx-c499",
-  "modified": "2026-05-28T21:32:04Z",
+  "modified": "2026-05-29T00:38:32Z",
   "published": "2026-05-28T21:32:04Z",
   "aliases": [
     "CVE-2026-49129"
@@ -34,6 +34,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/MusicPlayerDaemon/MPD/releases/tag/v0.24.11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mstreet97.github.io/security-research/opensource/vulnerability-disclosure/cybersecurity/cve/2026/05/25/Four_Bugs_Reachable_nc.html"
     },
     {
       "type": "WEB",

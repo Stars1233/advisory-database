@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4p3p-7392-hjw4",
-  "modified": "2026-05-28T18:30:30Z",
+  "modified": "2026-05-29T00:38:32Z",
   "published": "2026-05-28T18:30:30Z",
   "aliases": [
     "CVE-2026-41565"
@@ -25,6 +25,10 @@
     {
       "type": "WEB",
       "url": "https://metacpan.org/release/MIK/CryptX-0.088_001"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/28/10"
     }
   ],
   "database_specific": {

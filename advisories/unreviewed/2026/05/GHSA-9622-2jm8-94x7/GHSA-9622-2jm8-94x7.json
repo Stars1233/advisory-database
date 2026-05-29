@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9622-2jm8-94x7",
+  "modified": "2026-05-29T00:38:34Z",
+  "published": "2026-05-29T00:38:34Z",
+  "aliases": [
+    "CVE-2026-5343"
+  ],
+  "details": "Improper Check for Unusual or Exceptional Conditions vulnerability in Drupal SAML SSO - Service Provider allows Privilege Escalation.\n\nThis issue affects SAML SSO - Service Provider: from 0.0.0 before 3.1.4.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5343"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-contrib-2026-031"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-754"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-28T23:16:44Z"
+  }
+}
