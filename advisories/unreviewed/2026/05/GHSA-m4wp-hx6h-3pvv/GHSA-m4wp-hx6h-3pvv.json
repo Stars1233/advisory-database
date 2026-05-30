@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m4wp-hx6h-3pvv",
+  "modified": "2026-05-30T18:31:00Z",
+  "published": "2026-05-30T18:31:00Z",
+  "aliases": [
+    "CVE-2018-25422"
+  ],
+  "details": "MOGG web simulator Script contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL commands by injecting malicious code through the id parameter. Attackers can send GET requests to play.php with crafted SQL payloads in the id parameter to extract sensitive database information including usernames and other data.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25422"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/spider312/mtgas"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45717"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/mogg-web-simulator-script-all-version-sql-injection-via-play-php"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-30T16:17:03Z"
+  }
+}

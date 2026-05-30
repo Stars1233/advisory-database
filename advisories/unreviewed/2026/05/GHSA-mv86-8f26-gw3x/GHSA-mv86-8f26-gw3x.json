@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mv86-8f26-gw3x",
+  "modified": "2026-05-30T18:31:00Z",
+  "published": "2026-05-30T18:31:00Z",
+  "aliases": [
+    "CVE-2018-25423"
+  ],
+  "details": "Arm Whois 3.11 contains a buffer overflow vulnerability that allows local attackers to crash the application by supplying an oversized input string. Attackers can paste a malicious buffer of 700 bytes into the IP address or domain input field to trigger a denial of service condition.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25423"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45762"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/arm-whois-denial-of-service-via-buffer-overflow"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.armcode.com"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.armcode.com/downloads/arm-whois.exe"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-120"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-30T16:17:03Z"
+  }
+}

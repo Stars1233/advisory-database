@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j699-2v84-mrr9",
+  "modified": "2026-05-30T18:30:59Z",
+  "published": "2026-05-30T18:30:59Z",
+  "aliases": [
+    "CVE-2018-25409"
+  ],
+  "details": "SIM-PKH 2.4.1 contains an arbitrary file upload vulnerability that allows authenticated attackers to upload malicious files by submitting PHP code through the fupload parameter. Attackers can upload PHP files via the aksi_pengurus.php endpoint with module=pengurus and act=update parameters, which are stored in the foto directory and executed as web scripts.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25409"
+    },
+    {
+      "type": "WEB",
+      "url": "https://simpkh.sourceforge.io"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sourceforge.net/projects/simpkh/files/latest/download"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45659"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/sim-pkh-arbitrary-file-upload-via-aksi-pengurus-php"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-30T16:17:01Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xfcf-wwr2-w555",
+  "modified": "2026-05-30T18:31:00Z",
+  "published": "2026-05-30T18:31:00Z",
+  "aliases": [
+    "CVE-2026-8594"
+  ],
+  "details": "Text::LineFold versions through 2019.001 for Perl duplicate the output based on the number of special break characters.\n\nText::LineFold splits the input string by specific line break characters (such as VT, FF and others) into segments, but applies the break function to the entire string, not just the segment.\n\nA side effect of this is that the full input can be duplicated for each segment.  Besides being incorrect, this can lead to unexpected resource consumption and possible denial of service.\n\nNote that Text::LineFold is part of the Unicode-LineBreak distribution, which may have a higher version number than the module.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8594"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hatukanezumi/Unicode-LineBreak/pull/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://metacpan.org/release/NEZUMI/Unicode-LineBreak-2019.001/source/lib/Text/LineFold.pm#L407-415"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.metacpan.org/patches/U/Unicode-LineBreak/2019.001/CVE-2026-8594-r1.patch"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-405"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-30T16:17:05Z"
+  }
+}
