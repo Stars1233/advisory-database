@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xfcf-wwr2-w555",
-  "modified": "2026-05-30T18:31:00Z",
+  "modified": "2026-05-30T21:30:21Z",
   "published": "2026-05-30T18:31:00Z",
   "aliases": [
     "CVE-2026-8594"
@@ -25,6 +25,10 @@
     {
       "type": "WEB",
       "url": "https://security.metacpan.org/patches/U/Unicode-LineBreak/2019.001/CVE-2026-8594-r1.patch"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/30/6"
     }
   ],
   "database_specific": {
