@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w637-mwv9-mchj",
+  "modified": "2026-05-30T00:30:31Z",
+  "published": "2026-05-30T00:30:31Z",
+  "aliases": [
+    "CVE-2026-9831"
+  ],
+  "details": "A race condition in the shared Extreme Platform\nONE IAM Gateway API-key authentication path could, under specific\nhigh-concurrency traffic conditions, intermittently allow requests\nauthenticated with an Extreme Platform ONE /IAM-issued API key to receive\nresponse data for another tenant. The issue was observed through ExtremeCloud\nIQ/XIQ API endpoints and validated against both XIQ/XAPI and Extreme Platform ONE\n/Common Services API paths. XIQ-native tokens and standard OAuth/Bearer JWT\nauthentication were not affected.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9831"
+    },
+    {
+      "type": "WEB",
+      "url": "https://community.extremenetworks.com/t5/security-advisories-formerly/sa-2026-048-extremecloud-iq-cross-tenant-data-exposure-via/ba-p/121851"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-362"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-29T22:16:23Z"
+  }
+}
