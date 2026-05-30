@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6gfw-vfv3-ggqr",
-  "modified": "2026-05-28T12:30:34Z",
+  "modified": "2026-05-30T12:30:26Z",
   "published": "2026-05-28T12:30:33Z",
   "aliases": [
     "CVE-2026-46232"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nHID: playstation: Clamp num_touch_reports\n\nA device would never lie about the number of touch reports would it?\n\nIf it does the loop in dualshock4_parse_report will read off the end of\nthe touch_reports array, up to about 2 KiB for the maximum number of 256\nloop iteraions. The data that is read is emitted via evdev if the\nDS4_TOUCH_POINT_INACTIVE bit happens to be set. Protect against this by\nclamping the num_touch_reports value provided by the device to the\nmaximum size of the touch_reports array.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:38Z"

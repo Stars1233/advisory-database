@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h697-4wx8-5625",
-  "modified": "2026-05-28T12:30:34Z",
+  "modified": "2026-05-30T12:30:26Z",
   "published": "2026-05-28T12:30:34Z",
   "aliases": [
     "CVE-2026-46240"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: iris: Fix use-after-free in iris_release_internal_buffers()\n\nThe recent change in commit 1dabf00ee206 (\"media: iris: gen1: Destroy\ninternal buffers after FW releases\") introduced a regression where\nsession_release_buf() may free the buffer. The caller,\niris_release_internal_buffers(), continued to access `buffer` after the\ncall, leading to a potential use-after-free.\n\nFix this by setting BUF_ATTR_PENDING_RELEASE before calling\nsession_release_buf(), and reverting the flag if the call fails. This\nensures no dereference occurs after potential freeing.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -29,7 +34,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:39Z"

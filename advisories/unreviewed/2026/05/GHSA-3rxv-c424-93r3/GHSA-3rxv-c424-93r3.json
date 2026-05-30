@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3rxv-c424-93r3",
-  "modified": "2026-05-28T12:30:34Z",
+  "modified": "2026-05-30T12:30:26Z",
   "published": "2026-05-28T12:30:34Z",
   "aliases": [
     "CVE-2026-46237"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdgpu/vcn3: Avoid overflow on msg bound check\n\nAs pointed out by SDL, the previous condition may be vulnerable to\noverflow.\n\n(cherry picked from commit db00257ac9e4a51eb2515aaea161a019f7125e10)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:39Z"

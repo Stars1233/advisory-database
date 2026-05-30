@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-233x-r9gj-mfg9",
-  "modified": "2026-05-21T15:34:08Z",
+  "modified": "2026-05-30T12:30:22Z",
   "published": "2026-05-21T15:34:08Z",
   "aliases": [
     "CVE-2026-43497"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nfbdev: udlfb: add vm_ops to dlfb_ops_mmap to prevent use-after-free\n\ndlfb_ops_mmap() uses remap_pfn_range() to map vmalloc framebuffer pages\nto userspace but sets no vm_ops on the VMA. This means the kernel cannot\ntrack active mmaps. When dlfb_realloc_framebuffer() replaces the backing\nbuffer via FBIOPUT_VSCREENINFO, existing mmap PTEs are not invalidated.\nOn USB disconnect, dlfb_ops_destroy() calls vfree() on the old pages\nwhile userspace PTEs still reference them, resulting in a use-after-free:\nthe process retains read/write access to freed kernel pages.\n\nAdd vm_operations_struct with open/close callbacks that maintain an\natomic mmap_count on struct dlfb_data. In dlfb_realloc_framebuffer(),\ncheck mmap_count and return -EBUSY if the buffer is currently mapped,\npreventing buffer replacement while userspace holds stale PTEs.\n\nTested with PoC using dummy_hcd + raw_gadget USB device emulation.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-21T13:16:19Z"

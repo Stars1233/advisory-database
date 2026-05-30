@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-vhmf-xjjg-5pxr",
-  "modified": "2026-05-28T12:30:34Z",
+  "modified": "2026-05-30T12:30:26Z",
   "published": "2026-05-28T12:30:34Z",
   "aliases": [
     "CVE-2026-46238"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbatman-adv: stop caching unowned originator pointers in BAT IV\n\nBAT IV keeps the last-hop neighbor address in each neigh_node, but some\npaths also cache an originator pointer derived from a temporary lookup.\nThat pointer is not owned by the neigh_node and may no longer refer to a\nlive originator entry after purge handling runs.\n\nStop storing the auxiliary originator pointer in the BAT IV neighbor\nstate. When BAT IV needs the neighbor originator data, resolve it from\nthe stored neighbor address and drop the reference again after use.\n\n[sven: avoid bonding logic for outgoing OGM]",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:39Z"

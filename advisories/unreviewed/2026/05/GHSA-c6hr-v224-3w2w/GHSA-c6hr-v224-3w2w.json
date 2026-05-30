@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c6hr-v224-3w2w",
-  "modified": "2026-05-28T12:30:28Z",
+  "modified": "2026-05-30T12:30:24Z",
   "published": "2026-05-28T12:30:28Z",
   "aliases": [
     "CVE-2026-46107"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndm-thin: fix metadata refcount underflow\n\nThere's a bug in dm-thin in the function rebalance_children. If the\ninternal btree node has one entry, the code tries to copy all btree\nentries from the node's child to the node itself and then decrement the\nchild's reference count.\n\nIf the child node is shared (it has reference count > 1), we won't free\nit, so there would be two pointers to each of the grandchildren nodes.\nBut the reference counts of the grandchildren is not increased, thus the\nreference count doesn't match the number of pointers that point to the\ngrandchildren. This results in \"device mapper: space map common: unable\nto decrement block\" errors.\n\nFix this bug by incrementing reference counts on the grandchildren if the\nbtree node is shared.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:26Z"

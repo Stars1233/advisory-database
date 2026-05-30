@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pqxf-3wq6-69f8",
-  "modified": "2026-05-28T12:30:31Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:31Z",
   "aliases": [
     "CVE-2026-46166"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mac80211: use safe list iteration in radar detect work\n\nThe call to ieee80211_dfs_cac_cancel can cause the iterated chanctx to\nbe freed and removed from the list. Guard against this to avoid a\nslab-use-after-free error.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -33,7 +38,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:32Z"

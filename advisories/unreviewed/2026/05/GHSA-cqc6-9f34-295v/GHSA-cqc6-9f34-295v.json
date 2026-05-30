@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cqc6-9f34-295v",
-  "modified": "2026-05-21T15:34:08Z",
+  "modified": "2026-05-30T12:30:22Z",
   "published": "2026-05-21T15:34:08Z",
   "aliases": [
     "CVE-2026-43499"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nrtmutex: Use waiter::task instead of current in remove_waiter()\n\nremove_waiter() is used by the slowlock paths, but it is also used for\nproxy-lock rollback in rt_mutex_start_proxy_lock() when invoked from\nfutex_requeue().\n\nIn the latter case waiter::task is not current, but remove_waiter()\noperates on current for the dequeue operation. That results in several\nproblems:\n\n  1) the rbtree dequeue happens without waiter::task::pi_lock being held\n\n  2) the waiter task's pi_blocked_on state is not cleared, which leaves a\n     dangling pointer primed for UAF around.\n\n  3) rt_mutex_adjust_prio_chain() operates on the wrong top priority waiter\n     task\n\nUse waiter::task instead of current in all related operations in\nremove_waiter() to cure those problems.\n\n[ tglx: Fixup rt_mutex_adjust_prio_chain(), add a comment and amend the\n  \tchangelog ]",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-21T13:16:19Z"

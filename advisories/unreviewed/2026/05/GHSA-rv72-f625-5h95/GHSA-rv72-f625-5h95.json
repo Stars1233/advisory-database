@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rv72-f625-5h95",
-  "modified": "2026-05-28T12:30:31Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:31Z",
   "aliases": [
     "CVE-2026-46164"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbtrfs: fix double free in create_space_info_sub_group() error path\n\nWhen kobject_init_and_add() fails, the call chain is:\n\ncreate_space_info_sub_group()\n-> btrfs_sysfs_add_space_info_type()\n-> kobject_init_and_add()\n-> failure\n-> kobject_put(&sub_group->kobj)\n-> space_info_release()\n-> kfree(sub_group)\n\nThen control returns to create_space_info_sub_group(), where:\n\nbtrfs_sysfs_add_space_info_type() returns error\n-> kfree(sub_group)\n\nThus, sub_group is freed twice.\n\nKeep parent->sub_group[index] = NULL for the failure path, but after\nbtrfs_sysfs_add_space_info_type() has called kobject_put(), let the\nkobject release callback handle the cleanup.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:32Z"

@@ -1,18 +1,39 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m5w6-2mrp-4227",
-  "modified": "2026-05-21T18:33:09Z",
+  "modified": "2026-05-30T12:30:22Z",
   "published": "2026-05-21T12:31:45Z",
   "aliases": [
     "CVE-2026-43494"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/rds: reset op_nents when zerocopy page pin fails\n\nWhen iov_iter_get_pages2() fails in rds_message_zcopy_from_user(),\nthe pinned pages are released with put_page(), and\nrm->data.op_mmp_znotifier is cleared.  But we fail to properly\nclear rm->data.op_nents.\n\nLater when rds_message_purge() is called from rds_sendmsg() the\ncleanup loop iterates over the incorrectly non zero number of\nop_nents and frees them again.\n\nFix this by properly resetting op_nents when it should be in\nrds_message_zcopy_from_user().",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43494"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/0bbbff00a15b1df2cac9014d6cf4b6890f473353"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/290e833d1acb1093bc121fcdc97f5e6161157479"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/640e37f58f991546a87540d067279c2c1fa9fe51"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9115669faedccdda100428e2d26fd0aac8c50799"
     },
     {
       "type": "WEB",
@@ -25,7 +46,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-21T12:16:19Z"

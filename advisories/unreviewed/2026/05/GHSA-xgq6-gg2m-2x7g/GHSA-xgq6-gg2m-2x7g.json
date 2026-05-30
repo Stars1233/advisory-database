@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xgq6-gg2m-2x7g",
-  "modified": "2026-05-28T12:30:31Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:31Z",
   "aliases": [
     "CVE-2026-46174"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nx86/CPU/AMD: Prevent improper isolation of shared resources in Zen2's op cache\n\nMake sure resources are not improperly shared in the op cache and\ncause instruction corruption this way.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -49,7 +54,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:33Z"

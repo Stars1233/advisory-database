@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xcff-q6mv-v46w",
-  "modified": "2026-05-28T12:30:31Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:31Z",
   "aliases": [
     "CVE-2026-46154"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nsched_ext: Read scx_root under scx_cgroup_ops_rwsem in cgroup setters\n\nscx_group_set_{weight,idle,bandwidth}() cache scx_root before acquiring\nscx_cgroup_ops_rwsem, so the pointer can be stale by the time the op runs.\nIf the loaded scheduler is disabled and freed (via RCU work) and another is\nenabled between the naked load and the rwsem acquire, the reader sees\nscx_cgroup_enabled=true (the new scheduler's) but dereferences the freed one\n- UAF on SCX_HAS_OP(sch, ...) / SCX_CALL_OP(sch, ...).\n\nscx_cgroup_enabled is toggled only under scx_cgroup_ops_rwsem write\n(scx_cgroup_{init,exit}), so reading scx_root inside the rwsem read section\ncorrelates @sch with the enabled snapshot.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -29,7 +34,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:31Z"

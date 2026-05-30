@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8p5g-g3v4-xpm6",
-  "modified": "2026-05-27T15:33:21Z",
+  "modified": "2026-05-30T12:30:24Z",
   "published": "2026-05-27T15:33:21Z",
   "aliases": [
     "CVE-2026-46039"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nrxgk: Fix potential integer overflow in length check\n\nFix potential integer overflow in rxgk_extract_token() when checking the\nlength of the ticket.  Rather than rounding up the value to be tested\n(which might overflow), round down the size of the available data.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -29,7 +34,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:23Z"

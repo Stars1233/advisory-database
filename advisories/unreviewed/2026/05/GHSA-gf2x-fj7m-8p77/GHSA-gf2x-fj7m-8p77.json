@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gf2x-fj7m-8p77",
-  "modified": "2026-05-28T12:30:33Z",
+  "modified": "2026-05-30T12:30:26Z",
   "published": "2026-05-28T12:30:33Z",
   "aliases": [
     "CVE-2026-46230"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdgpu/vcn3: Prevent OOB reads when parsing dec msg\n\nCheck bounds against the end of the BO whenever we access the msg.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:38Z"

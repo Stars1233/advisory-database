@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-prrp-jq4x-wwq4",
-  "modified": "2026-05-27T15:33:19Z",
+  "modified": "2026-05-30T12:30:23Z",
   "published": "2026-05-27T15:33:19Z",
   "aliases": [
     "CVE-2026-45988"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nrxrpc: Fix re-decryption of RESPONSE packets\n\nIf a RESPONSE packet gets a temporary failure during processing, it may end\nup in a partially decrypted state - and then get requeued for a retry.\n\nFix this by just discarding the packet; we will send another CHALLENGE\npacket and thereby elicit a further response.  Similarly, discard an\nincoming CHALLENGE packet if we get an error whilst generating a RESPONSE;\nthe server will send another CHALLENGE.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:16Z"

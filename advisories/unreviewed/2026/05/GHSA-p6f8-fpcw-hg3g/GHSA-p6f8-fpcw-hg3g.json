@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p6f8-fpcw-hg3g",
-  "modified": "2026-05-27T15:33:22Z",
+  "modified": "2026-05-30T12:30:24Z",
   "published": "2026-05-27T15:33:22Z",
   "aliases": [
     "CVE-2026-46053"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: rds: fix MR cleanup on copy error\n\n__rds_rdma_map() hands sg/pages ownership to the transport after\nget_mr() succeeds. If copying the generated cookie back to user space\nfails after that point, the error path must not free those resources\nagain before dropping the MR reference.\n\nRemove the duplicate unpin/free from the put_user() failure branch so\nthat MR teardown is handled only through the existing final cleanup\npath.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:24Z"

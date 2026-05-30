@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4cvx-h6xx-mj53",
-  "modified": "2026-05-27T15:33:17Z",
+  "modified": "2026-05-30T12:30:23Z",
   "published": "2026-05-27T15:33:17Z",
   "aliases": [
     "CVE-2026-45935"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/ntfs3: Fix slab-out-of-bounds read in DeleteIndexEntryRoot\n\nIn the 'DeleteIndexEntryRoot' case of the 'do_action' function, the\nentry size ('esize') is retrieved from the log record without adequate\nbounds checking.\n\nSpecifically, the code calculates the end of the entry ('e2') using:\n    e2 = Add2Ptr(e1, esize);\n\nIt then calculates the size for memmove using 'PtrOffset(e2, ...)',\nwhich subtracts the end pointer from the buffer limit. If 'esize' is\nmaliciously large, 'e2' exceeds the used buffer size. This results in\na negative offset which, when cast to size_t for memmove, interprets\nas a massive unsigned integer, leading to a heap buffer overflow.\n\nThis commit adds a check to ensure that the entry size ('esize') strictly\nfits within the remaining used space of the index header before performing\nmemory operations.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -45,7 +50,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:09Z"

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3qfg-xvm7-p66x",
-  "modified": "2026-05-28T12:30:33Z",
+  "modified": "2026-05-30T12:30:26Z",
   "published": "2026-05-28T12:30:33Z",
   "aliases": [
     "CVE-2026-46212"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbatman-adv: bla: prevent use-after-free when deleting claims\n\nWhen batadv_bla_del_backbone_claims() removes all claims for a backbone, it\ndoes this by dropping the link entry in the hash list. This list entry\nitself was one of the references which need to be dropped at the same time\nvia batadv_claim_put().\n\nBut the batadv_claim_put() must not be done before the last access to the\nclaim object in this function. Otherwise the claim might be freed already\nby the batadv_claim_release() function before the list entry was dropped.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:36Z"

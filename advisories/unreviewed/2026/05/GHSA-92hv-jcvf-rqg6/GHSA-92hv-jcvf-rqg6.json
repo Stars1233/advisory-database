@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-92hv-jcvf-rqg6",
-  "modified": "2026-05-28T12:30:29Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:29Z",
   "aliases": [
     "CVE-2026-46120"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nip6_gre: Use cached t->net in ip6erspan_changelink().\n\nAfter commit 5e72ce3e3980 (\"net: ipv6: Use link netns in newlink() of\nrtnl_link_ops\"), ip6erspan_newlink() correctly resolves the per-netns\nip6gre hash via link_net. ip6erspan_changelink() was not converted in\nthat series and still uses dev_net(dev), which diverges from the\ndevice's creation netns after IFLA_NET_NS_FD migration.\n\nThis re-inserts the tunnel into the wrong per-netns hash. The\noriginal netns keeps a stale entry. When that netns is later\ndestroyed, ip6gre_exit_rtnl_net() walks the stale entry, producing a\nslab-use-after-free reported by KASAN, followed by a kernel BUG at\nnet/core/dev.c (LIST_POISON1) in unregister_netdevice_many_notify().\n\nReachable from an unprivileged user namespace (unshare --user\n--map-root-user --net).\n\nip6gre_changelink() earlier in the same file already uses the cached\nt->net; only ip6erspan_changelink() has the wrong shape.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:27Z"

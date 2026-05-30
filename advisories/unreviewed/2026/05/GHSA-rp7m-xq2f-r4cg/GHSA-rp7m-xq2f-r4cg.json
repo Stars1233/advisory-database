@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rp7m-xq2f-r4cg",
-  "modified": "2026-05-28T12:30:32Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46195"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: validate dacloffset before building DACL pointers\n\nparse_sec_desc(), build_sec_desc(), and the chown path in\nid_mode_to_cifs_acl() all add the server-supplied dacloffset to pntsd\nbefore proving a DACL header fits inside the returned security\ndescriptor.\n\nOn 32-bit builds a malicious server can return dacloffset near\nU32_MAX, wrap the derived DACL pointer below end_of_acl, and then slip\npast the later pointer-based bounds checks. build_sec_desc() and\nid_mode_to_cifs_acl() can then dereference DACL fields from the wrapped\npointer in the chmod/chown rewrite paths.\n\nValidate dacloffset numerically before building any DACL pointer and\nreuse the same helper at the three DACL entry points.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:35Z"

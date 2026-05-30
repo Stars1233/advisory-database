@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qv25-8qcj-cc95",
-  "modified": "2026-05-28T12:30:33Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46205"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nstaging: media: atomisp: Disallow all private IOCTLs\n\nDisallow all private IOCTLs. These aren't quite as safe as one could\nassume of IOCTL handlers; disable them for now. Instead of removing the\ncode, return in the beginning of the function if cmd is non-zero in order\nto keep static checkers happy.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:36Z"

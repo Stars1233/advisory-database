@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-58qm-9wwf-x958",
-  "modified": "2026-05-27T12:31:24Z",
+  "modified": "2026-05-30T12:30:23Z",
   "published": "2026-05-27T12:31:23Z",
   "aliases": [
     "CVE-2026-45843"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nslip: bound decode() reads against the compressed packet length\n\nslhc_uncompress() parses a VJ-compressed TCP header by advancing a\npointer through the packet via decode() and pull16(). Neither helper\nbounds-checks against isize, and decode() masks its return with\n& 0xffff so it can never return the -1 that callers test for -- those\nerror paths are dead code.\n\nA short compressed frame whose change byte requests optional fields\nlets decode() read past the end of the packet. The over-read bytes\nare folded into the cached cstate and reflected into subsequent\nreconstructed packets.\n\nMake decode() and pull16() take the packet end pointer and return -1\nwhen exhausted. Add a bounds check before the TCP-checksum read.\nThe existing == -1 tests now do what they were always meant to.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T11:16:23Z"

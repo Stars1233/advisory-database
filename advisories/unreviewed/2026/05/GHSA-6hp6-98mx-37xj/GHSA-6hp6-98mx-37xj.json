@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6hp6-98mx-37xj",
-  "modified": "2026-05-27T15:33:21Z",
+  "modified": "2026-05-30T12:30:24Z",
   "published": "2026-05-27T15:33:21Z",
   "aliases": [
     "CVE-2026-46027"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/smc: avoid early lgr access in smc_clc_wait_msg\n\nA CLC decline can be received while the handshake is still in an early\nstage, before the connection has been associated with a link group.\n\nThe decline handling in smc_clc_wait_msg() updates link-group level sync\nstate for first-contact declines, but that state only exists after link\ngroup setup has completed. Guard the link-group update accordingly and\nkeep the per-socket peer diagnosis handling unchanged.\n\nThis preserves the existing sync_err handling for established link-group\ncontexts and avoids touching link-group state before it is available.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:21Z"

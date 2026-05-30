@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-38pr-68p2-9hqw",
-  "modified": "2026-05-28T12:30:32Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46197"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdkfd: validate SVM ioctl nattr against buffer size\n\nValidate nattr field against the buffer size, preventing\nout-of-bounds buffer access via user-controlled attribute count.\n\n(cherry picked from commit 5eca8bfdfa456c3304ca77523718fe24254c172f)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:35Z"

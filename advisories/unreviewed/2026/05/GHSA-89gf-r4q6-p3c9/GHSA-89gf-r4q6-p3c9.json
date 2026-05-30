@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-89gf-r4q6-p3c9",
-  "modified": "2026-05-28T12:30:32Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46185"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb/client: fix out-of-bounds read in symlink_data()\n\nSince smb2_check_message() returns success without length validation for\nthe symlink error response, in symlink_data() it is possible for\niov->iov_len to be smaller than sizeof(struct smb2_err_rsp). If the buffer\nonly contains the base SMB2 header (64 bytes), accessing\nerr->ErrorContextCount (at offset 66) or err->ByteCount later in\nsymlink_data() will cause an out-of-bounds read.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:34Z"

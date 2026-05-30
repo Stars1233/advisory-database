@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fmw3-m5fg-w74x",
-  "modified": "2026-05-27T15:33:21Z",
+  "modified": "2026-05-30T12:30:24Z",
   "published": "2026-05-27T15:33:21Z",
   "aliases": [
     "CVE-2026-46024"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nlibceph: Prevent potential null-ptr-deref in ceph_handle_auth_reply()\n\nIf a message of type CEPH_MSG_AUTH_REPLY contains a zero value for both\nprotocol and result, this is currently not treated as an error. In case\nof ac->negotiating == true and ac->protocol > 0, this leads to setting\nac->protocol = 0 and ac->ops = NULL. Thereafter, the check for\nac->protocol != protocol returns false, and init_protocol() is not\ncalled. Subsequently, ac->ops->handle_reply() is called, which leads to\na null pointer dereference, because ac->ops is still NULL.\n\nThis patch changes the check for ac->protocol != protocol to\n!ac->protocol, as this also includes the case when the protocol was set\nto zero in the message. This causes the message to be treated as\ncontaining a bad auth protocol.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:20Z"

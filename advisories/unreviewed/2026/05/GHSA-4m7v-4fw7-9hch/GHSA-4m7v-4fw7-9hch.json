@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4m7v-4fw7-9hch",
-  "modified": "2026-05-28T12:30:30Z",
+  "modified": "2026-05-30T12:30:25Z",
   "published": "2026-05-28T12:30:30Z",
   "aliases": [
     "CVE-2026-46129"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbtrfs: fix double free in create_space_info() error path\n\nWhen kobject_init_and_add() fails, the call chain is:\n\ncreate_space_info()\n-> btrfs_sysfs_add_space_info_type()\n-> kobject_init_and_add()\n-> failure\n-> kobject_put(&space_info->kobj)\n-> space_info_release()\n-> kfree(space_info)\n\nThen control returns to create_space_info():\n\nbtrfs_sysfs_add_space_info_type() returns error\n-> goto out_free\n-> kfree(space_info)\n\nThis causes a double free.\n\nKeep the direct kfree(space_info) for the earlier failure path, but\nafter btrfs_sysfs_add_space_info_type() has called kobject_put(), let\nthe kobject release callback handle the cleanup.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:28Z"
