@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hchg-qm84-cj9p",
+  "modified": "2026-05-31T12:30:25Z",
+  "published": "2026-05-31T12:30:25Z",
+  "aliases": [
+    "CVE-2026-10177"
+  ],
+  "details": "A security vulnerability has been detected in Aider-AI Aider 0.86.3. This affects the function requests.get of the file api_docs.py of the component AWS EC2 Metadata Endpoint. The manipulation leads to server-side request forgery. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used. It is suggested to install a patch to address this issue. The pull request to fix this issue awaits acceptance.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10177"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Aider-AI/aider/issues/5075"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Aider-AI/aider/pull/5137"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Aider-AI/aider"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10177"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/819911"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367458"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367458/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-05-31T11:16:46Z"
+  }
+}
