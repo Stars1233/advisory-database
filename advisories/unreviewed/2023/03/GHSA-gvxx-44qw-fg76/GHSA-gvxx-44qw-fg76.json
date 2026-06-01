@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gvxx-44qw-fg76",
-  "modified": "2023-03-13T15:30:18Z",
+  "modified": "2026-06-01T15:30:28Z",
   "published": "2023-03-01T15:30:29Z",
   "aliases": [
     "CVE-2023-1064"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1064"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-23-0115"
     },
     {
       "type": "WEB",

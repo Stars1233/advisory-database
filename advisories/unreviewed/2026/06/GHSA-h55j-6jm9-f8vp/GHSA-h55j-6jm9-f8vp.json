@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h55j-6jm9-f8vp",
+  "modified": "2026-06-01T15:30:40Z",
+  "published": "2026-06-01T15:30:40Z",
+  "aliases": [
+    "CVE-2026-9308"
+  ],
+  "details": "Firefox for iOS Reader View replaced page content in its HTML template before replacing other internal placeholders. A malicious page could include a placeholder string that was later substituted with JSON-LD data, potentially resulting in arbitrary JavaScript execution. This vulnerability was fixed in Firefox for iOS 151.2.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9308"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2039422"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-53"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T13:16:33Z"
+  }
+}

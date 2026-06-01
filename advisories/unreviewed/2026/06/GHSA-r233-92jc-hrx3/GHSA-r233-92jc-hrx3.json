@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r233-92jc-hrx3",
+  "modified": "2026-06-01T15:30:41Z",
+  "published": "2026-06-01T15:30:41Z",
+  "aliases": [
+    "CVE-2025-60485"
+  ],
+  "details": "A segmentation violation in the gf_isom_apple_set_tag_ex function (/isomedia/isom_write.c) of GPAC Project/MP4Box before 26.02.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted MP4 file.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60485"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/issues/3323"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/commit/4860a1a6f128ccc9ae37b4b738d22029f9672457"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/52/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://infosec.exchange/@sigdevel/116662498332150083"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T15:16:28Z"
+  }
+}

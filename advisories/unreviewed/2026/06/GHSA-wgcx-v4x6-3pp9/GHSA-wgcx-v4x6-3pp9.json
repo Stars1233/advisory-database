@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wgcx-v4x6-3pp9",
+  "modified": "2026-06-01T15:30:42Z",
+  "published": "2026-06-01T15:30:42Z",
+  "aliases": [
+    "CVE-2026-37220"
+  ],
+  "details": "FlexRIC v2.0.0 crashes when an SCTP association is closed before an E2_SETUP_REQUEST is sent. The near-RT RIC assumes a mapping between SCTP association and E2 node always exists in the cleanup path and enforces this via assert(). A remote unauthenticated attacker can crash the near-RT RIC (port 36421) by simply completing an SCTP handshake and immediately disconnecting, without sending any E2AP message.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37220"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37220.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.eurecom.fr/mosaic5g/flexric"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T15:16:34Z"
+  }
+}

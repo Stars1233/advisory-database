@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fm9c-4h23-gfgm",
-  "modified": "2025-09-16T15:32:33Z",
+  "modified": "2026-06-01T15:30:33Z",
   "published": "2025-09-16T15:32:33Z",
   "aliases": [
     "CVE-2024-12367"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12367"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0249"
     },
     {
       "type": "WEB",

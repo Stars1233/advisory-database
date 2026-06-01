@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7p84-xc3f-h4hf",
+  "modified": "2026-06-01T15:30:33Z",
+  "published": "2026-06-01T15:30:33Z",
+  "aliases": [
+    "CVE-2024-13065"
+  ],
+  "details": "Improper Enforcement of Behavioral Workflow, Uncontrolled Resource Consumption vulnerability in Akinsoft MyRezzta allows Input Data Manipulation, CAPEC - 125 - Flooding.\n\nThis issue affects MyRezzta: from s2.02.02 before v2.05.01.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13065"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0205"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.usom.gov.tr/bildirim/tr-25-0205"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2025-09-03T09:15:33Z"
+  }
+}

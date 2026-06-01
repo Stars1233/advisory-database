@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-48fx-2j4w-wmpx",
-  "modified": "2025-09-23T09:30:19Z",
+  "modified": "2026-06-01T15:30:32Z",
   "published": "2025-06-27T18:30:43Z",
   "aliases": [
     "CVE-2024-12364"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12364"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0140"
     },
     {
       "type": "WEB",

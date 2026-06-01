@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gwww-55j7-6p52",
-  "modified": "2024-04-04T04:05:18Z",
+  "modified": "2026-06-01T15:30:31Z",
   "published": "2023-05-15T12:30:16Z",
   "aliases": [
     "CVE-2023-23449"
   ],
-  "details": "\nObservable Response Discrepancy in SICK FTMg AIR FLOW SENSOR with Partnumbers 1100214, 1100215, 1100216, 1120114, 1120116, 1122524, 1122526 allows a remote attacker\nto gain information about valid usernames by analyzing challenge responses from the server via the\nREST interface.\n\n",
+  "details": "Observable Response Discrepancy in SICK FTMg AIR FLOW SENSOR with Partnumbers 1100214, 1100215, 1100216, 1120114, 1120116, 1122524, 1122526 allows a remote attacker\nto gain information about valid usernames by analyzing challenge responses from the server via the\nREST interface.",
   "severity": [
     {
       "type": "CVSS_V3",

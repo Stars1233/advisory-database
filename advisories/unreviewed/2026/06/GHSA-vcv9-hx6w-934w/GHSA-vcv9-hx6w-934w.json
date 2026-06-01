@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vcv9-hx6w-934w",
+  "modified": "2026-06-01T15:30:43Z",
+  "published": "2026-06-01T15:30:42Z",
+  "aliases": [
+    "CVE-2026-8931"
+  ],
+  "details": "A critical Remote Code Execution (RCE) vulnerability exists in Disig Web Signer versions 2.0.3 through 2.5.3.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8931"
+    },
+    {
+      "type": "WEB",
+      "url": "https://download.disigcdn.sk/cdn/products/websigner2/changelog.en.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://download.disigcdn.sk/cdn/products/websigner2/changelog.sk.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://qesportal.sk/Portal/en/Info/News#websigner255"
+    },
+    {
+      "type": "WEB",
+      "url": "https://qesportal.sk/Portal/sk/Info/News#websigner255"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.disig.sk/en/news/important-update-of-the-web-signer-application"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.disig.sk/sk/aktuality/dolezita-aktualizacia-aplikacie-web-signer"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T15:16:39Z"
+  }
+}

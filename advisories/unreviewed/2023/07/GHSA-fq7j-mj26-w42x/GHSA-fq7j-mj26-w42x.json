@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fq7j-mj26-w42x",
-  "modified": "2024-04-04T05:53:16Z",
+  "modified": "2026-06-01T15:30:31Z",
   "published": "2023-07-10T18:30:49Z",
   "aliases": [
     "CVE-2023-35699"
   ],
-  "details": "\nCleartext Storage on Disk in the SICK ICR890-4 could allow an unauthenticated attacker with local access to the device to disclose sensitive information by accessing a SD card.\n\n\n",
+  "details": "Cleartext Storage on Disk in the SICK ICR890-4 could allow an unauthenticated attacker with local access to the device to disclose sensitive information by accessing a SD card.",
   "severity": [
     {
       "type": "CVSS_V3",

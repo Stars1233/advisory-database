@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hmch-8qfm-f6mp",
-  "modified": "2025-01-06T12:30:33Z",
+  "modified": "2026-06-01T15:30:32Z",
   "published": "2025-01-06T12:30:33Z",
   "aliases": [
     "CVE-2024-12970"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12970"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1900"
     },
     {
       "type": "WEB",

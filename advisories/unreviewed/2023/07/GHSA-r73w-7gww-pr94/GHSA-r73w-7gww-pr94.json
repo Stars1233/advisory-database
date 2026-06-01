@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-r73w-7gww-pr94",
-  "modified": "2024-04-04T05:53:13Z",
+  "modified": "2026-06-01T15:30:31Z",
   "published": "2023-07-10T18:30:49Z",
   "aliases": [
     "CVE-2023-35697"
   ],
-  "details": "\nImproper Restriction of Excessive Authentication Attempts in the SICK ICR890-4\ncould allow a remote attacker to brute-force user credentials.\n\n",
+  "details": "Improper Restriction of Excessive Authentication Attempts in the SICK ICR890-4\ncould allow a remote attacker to brute-force user credentials.",
   "severity": [
     {
       "type": "CVSS_V3",

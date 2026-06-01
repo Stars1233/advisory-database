@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qxm8-6xvg-w483",
-  "modified": "2025-07-18T15:31:56Z",
+  "modified": "2026-06-01T15:30:32Z",
   "published": "2025-07-18T15:31:56Z",
   "aliases": [
     "CVE-2024-13175"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13175"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0159"
     },
     {
       "type": "WEB",

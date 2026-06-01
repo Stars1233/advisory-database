@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wfvx-j6wj-x7w9",
-  "modified": "2026-05-27T12:31:24Z",
+  "modified": "2026-06-01T15:30:34Z",
   "published": "2026-05-27T12:31:24Z",
   "aliases": [
     "CVE-2026-48906"
   ],
   "details": "The vulnerability in the Tassos Framework Plugin allows users to delete arbitrary files on the affected sites.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:X/RE:X/U:X"

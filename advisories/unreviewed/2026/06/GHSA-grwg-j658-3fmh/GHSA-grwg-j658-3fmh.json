@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-grwg-j658-3fmh",
+  "modified": "2026-06-01T15:30:41Z",
+  "published": "2026-06-01T15:30:41Z",
+  "aliases": [
+    "CVE-2025-60483"
+  ],
+  "details": "A NULL pointer dereference in the gf_ac4_pres_b_4_back_channels_present function (/media_tools/av_parsers.c) of GPAC Project/MP4Box before 26.02.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted AC4 file.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60483"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/issues/3302"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/commit/13eb5b76560aaf7813b865a2ad433258478e2695"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/49/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://infosec.exchange/@sigdevel/116659111520602254"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T15:16:28Z"
+  }
+}

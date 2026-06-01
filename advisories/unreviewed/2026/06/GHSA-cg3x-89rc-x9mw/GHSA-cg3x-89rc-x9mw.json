@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cg3x-89rc-x9mw",
-  "modified": "2026-06-01T09:31:14Z",
+  "modified": "2026-06-01T15:30:40Z",
   "published": "2026-06-01T09:31:14Z",
   "aliases": [
     "CVE-2026-42360"
   ],
   "details": "A bug in Apache Airflow's rendered-template field handling caused nested sensitive-key masking (e.g. nested `password` / `token` / `secret` / `api_key` keys inside a JSON template structure) to be bypassed when the rendered field exceeded `[core] max_templated_field_length`: Airflow stringified the structure before redaction, losing the nested key context, and persisted the plaintext value into `rendered_fields`. An authenticated UI/API user with permission to read rendered template fields could harvest secret values intended to be masked. Affects deployments where Dag authors pass structured JSON to operators with nested sensitive keys. This is a variant of `CWE-200` previously addressed for the user-registered `mask_secret()` patterns in CVE-2025-68438; that fix did not cover the nested sensitive-keyword allowlist. Users who already upgraded for CVE-2025-68438 should additionally upgrade to `apache-airflow` 3.2.2 or later to cover the nested-key path.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-200"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-01T09:16:19Z"

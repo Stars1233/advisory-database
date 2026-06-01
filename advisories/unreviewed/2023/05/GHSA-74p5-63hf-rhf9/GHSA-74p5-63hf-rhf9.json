@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-74p5-63hf-rhf9",
-  "modified": "2024-04-04T04:05:15Z",
+  "modified": "2026-06-01T15:30:31Z",
   "published": "2023-05-15T12:30:16Z",
   "aliases": [
     "CVE-2023-23447"
   ],
-  "details": "\nUncontrolled Resource Consumption in SICK FTMg AIR FLOW SENSOR with Partnumbers 1100214, 1100215, 1100216, 1120114, 1120116, 1122524, 1122526 allows an unprivileged\nremote attacker to influence the availability of the webserver by invocing several open file requests via\nthe REST interface.\n\n",
+  "details": "Uncontrolled Resource Consumption in SICK FTMg AIR FLOW SENSOR with Partnumbers 1100214, 1100215, 1100216, 1120114, 1120116, 1122524, 1122526 allows an unprivileged\nremote attacker to influence the availability of the webserver by invocing several open file requests via\nthe REST interface.",
   "severity": [
     {
       "type": "CVSS_V3",

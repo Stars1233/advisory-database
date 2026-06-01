@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9pr5-qq3c-fcv3",
-  "modified": "2024-04-04T04:05:12Z",
+  "modified": "2026-06-01T15:30:30Z",
   "published": "2023-05-15T12:30:16Z",
   "aliases": [
     "CVE-2023-23445"
   ],
-  "details": "\nImproper Access Control in SICK FTMg AIR FLOW SENSOR with Partnumbers\n1100214, 1100215, 1100216, 1120114, 1120116, 1122524, 1122526 allows an unprivileged remote\nattacker to gain unauthorized access to data fields by using a therefore unpriviledged account via the\nREST interface.\n\n",
+  "details": "Improper Access Control in SICK FTMg AIR FLOW SENSOR with Partnumbers\n1100214, 1100215, 1100216, 1120114, 1120116, 1122524, 1122526 allows an unprivileged remote\nattacker to gain unauthorized access to data fields by using a therefore unpriviledged account via the\nREST interface.",
   "severity": [
     {
       "type": "CVSS_V3",

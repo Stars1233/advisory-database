@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xj8g-rv83-qgcv",
-  "modified": "2025-09-29T15:30:35Z",
+  "modified": "2026-06-01T15:30:33Z",
   "published": "2025-09-29T15:30:35Z",
   "aliases": [
     "CVE-2024-13150"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13150"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0304"
     },
     {
       "type": "WEB",

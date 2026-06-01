@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-29xr-xpp4-5783",
-  "modified": "2024-04-04T05:53:39Z",
+  "modified": "2026-06-01T15:30:32Z",
   "published": "2023-07-10T18:30:49Z",
   "aliases": [
     "CVE-2023-3273"
   ],
-  "details": "\nImproper Access Control in the SICK ICR890-4 could allow an unauthenticated remote attacker to affect the availability of the device by changing settings of the device such as the IP\naddress based on missing access control.\n\n\n",
+  "details": "Improper Access Control in the SICK ICR890-4 could allow an unauthenticated remote attacker to affect the availability of the device by changing settings of the device such as the IP\naddress based on missing access control.",
   "severity": [
     {
       "type": "CVSS_V3",

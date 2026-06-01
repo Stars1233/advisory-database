@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6rg8-wqvx-ghg5",
-  "modified": "2025-03-10T15:30:48Z",
+  "modified": "2026-06-01T15:30:32Z",
   "published": "2025-03-10T15:30:48Z",
   "aliases": [
     "CVE-2024-12604"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://docs.tapandsign.com/tap-and-sign/tap-and-sign-v.1.025-surum-notlari"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0063"
     },
     {
       "type": "WEB",

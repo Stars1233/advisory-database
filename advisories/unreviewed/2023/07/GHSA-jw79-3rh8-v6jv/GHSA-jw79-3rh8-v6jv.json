@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jw79-3rh8-v6jv",
-  "modified": "2024-04-04T05:53:12Z",
+  "modified": "2026-06-01T15:30:31Z",
   "published": "2023-07-10T18:30:49Z",
   "aliases": [
     "CVE-2023-35696"
   ],
-  "details": "\nUnauthenticated endpoints in the SICK ICR890-4 could allow an unauthenticated\nremote attacker to retrieve sensitive information about the device via HTTP requests.\n\n",
+  "details": "Unauthenticated endpoints in the SICK ICR890-4 could allow an unauthenticated\nremote attacker to retrieve sensitive information about the device via HTTP requests.",
   "severity": [
     {
       "type": "CVSS_V3",

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-46rx-wmhr-cj2m",
+  "modified": "2026-06-01T15:30:42Z",
+  "published": "2026-06-01T15:30:42Z",
+  "aliases": [
+    "CVE-2026-37221"
+  ],
+  "details": "FlexRIC v2.0.0 crashes when receiving a RIC_SUBSCRIPTION_RESPONSE with an unknown ric_id that has no corresponding pending event. The near-RT RIC uses assert() to enforce the existence of a pending event during response processing. A remote unauthenticated attacker can send a forged RIC_SUBSCRIPTION_RESPONSE to the near-RT RIC (port 36421) to cause SIGABRT in Debug builds or NULL pointer dereference (SIGSEGV) in Release builds.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37221"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MinamiKotor1/oran-security-advisories-zhongnan-luo/blob/main/advisories/CVE-2026-37221.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.eurecom.fr/mosaic5g/flexric"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T15:16:34Z"
+  }
+}

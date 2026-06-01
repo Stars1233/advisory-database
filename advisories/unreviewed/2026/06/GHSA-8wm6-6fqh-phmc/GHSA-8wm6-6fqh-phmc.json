@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8wm6-6fqh-phmc",
-  "modified": "2026-06-01T09:31:14Z",
+  "modified": "2026-06-01T15:30:40Z",
   "published": "2026-06-01T09:31:14Z",
   "aliases": [
     "CVE-2026-42253"
   ],
   "details": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Apache ActiveMQ, Apache ActiveMQ Web.\n\nThe MessageServlet in the ActiveMQ web console API copies every JMS message\nproperty into an HTTP response header without any validation. This can allow overwriting and injecting security headers by setting them on JMS messages that are returned by the servlet.\n\nThis issue affects Apache ActiveMQ: before 5.19.7, from 6.0.0 before 6.2.6; Apache ActiveMQ Web: before 5.19.7, from 6.0.0 before 6.2.6.\n\nUsers are recommended to upgrade to version 5.19.7 or 6.2.6, which fixes the issue. The MessageServlet has now been deprecated and disabled by default.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-79"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-01T09:16:18Z"
