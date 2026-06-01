@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4j5r-6h7v-59cc",
+  "modified": "2026-06-01T12:30:31Z",
+  "published": "2026-06-01T12:30:31Z",
+  "aliases": [
+    "CVE-2026-10245"
+  ],
+  "details": "A flaw has been found in SourceCodester Pharmacy Sales and Inventory System 1.0. Affected by this issue is the function create_supplier of the file /ShowForm/create_supplier/main. Executing a manipulation of the argument company_name can lead to cross site scripting. The attack can be launched remotely. The exploit has been published and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10245"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/timeflies123/cve/issues/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10245"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/823937"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367523/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sourcecodester.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T11:16:23Z"
+  }
+}

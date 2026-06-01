@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g9gc-69gg-376j",
+  "modified": "2026-06-01T12:30:32Z",
+  "published": "2026-06-01T12:30:32Z",
+  "aliases": [
+    "CVE-2026-10247"
+  ],
+  "details": "A vulnerability was found in SourceCodester Pharmacy Sales and Inventory System 1.0. This vulnerability affects the function create_generic_name of the file /ShowForm/create_generic_name/main. The manipulation of the argument generic_name results in cross site scripting. The attack may be launched remotely. The exploit has been made public and could be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/timeflies123/cve/issues/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/823943"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367525"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367525/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sourcecodester.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T11:16:23Z"
+  }
+}

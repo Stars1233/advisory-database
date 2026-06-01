@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m272-v6vr-r4ff",
+  "modified": "2026-06-01T12:30:32Z",
+  "published": "2026-06-01T12:30:32Z",
+  "aliases": [
+    "CVE-2026-25599"
+  ],
+  "details": "Missing authentication and clear‑text transmission of data from the heat pumps to the control server, combined with the absence of input validation on aggregated data, can lead to stored XSS that enables theft of cookies from the pump’s web control interface. Older Orca heat pump devices communicating with the Orca server over an \nunencrypted and unauthenticated HTTP connection on a non-secure port specifically enable an\n attacker to impersonate a legitimate device and inject malicious \npayloads. This enables the insertion of harmful code directly\n into the Orca user portal, potentially compromising user accounts, \nexposing sensitive information, and allowing further unauthorized \nactions within the portal.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25599"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cert.si/en/cve-2026-25599"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T11:16:24Z"
+  }
+}
