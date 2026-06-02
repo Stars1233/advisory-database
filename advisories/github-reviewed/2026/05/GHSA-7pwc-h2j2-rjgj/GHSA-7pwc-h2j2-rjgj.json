@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7pwc-h2j2-rjgj",
-  "modified": "2026-05-08T19:19:58Z",
+  "modified": "2026-06-02T22:10:43Z",
   "published": "2026-05-05T09:31:55Z",
   "aliases": [
     "CVE-2026-43869"
@@ -28,11 +28,14 @@
               "introduced": "0"
             },
             {
-              "last_affected": "0.22.0"
+              "fixed": "0.23.0"
             }
           ]
         }
-      ]
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 0.22.0"
+      }
     }
   ],
   "references": [
