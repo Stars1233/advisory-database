@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vjg8-cqg5-hg64",
+  "modified": "2026-06-02T09:36:15Z",
+  "published": "2026-06-02T09:36:15Z",
+  "aliases": [
+    "CVE-2026-9234"
+  ],
+  "details": "The JTL-Connector for WooCommerce plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 2.4.1. This is due to missing capability checks and nonce verification on the admin_post_settings_save_woo-jtl-connector action (handled by JtlConnectorAdmin::save()) and on the wp_ajax_downloadJTLLogs and wp_ajax_clearJTLLogs AJAX actions (handled by the global downloadJTLLogs() and clearJTLLogs() functions). This makes it possible for authenticated attackers, with Subscriber-level access and above, to modify arbitrary plugin settings, download a ZIP archive of the connector's developer log files, and delete those log files.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9234"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woo-jtl-connector/tags/2.4.1/includes/JtlConnectorAdmin.php#L3007"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woo-jtl-connector/tags/2.4.1/includes/JtlConnectorAdmin.php#L574"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woo-jtl-connector/tags/2.4.1/woo-jtl-connector.php#L161"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woo-jtl-connector/tags/2.4.1/woo-jtl-connector.php#L221"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/woo-jtl-connector/tags/2.4.1/woo-jtl-connector.php#L92"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1475f3c4-b1ff-422c-a832-f6261361c240?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T09:16:17Z"
+  }
+}

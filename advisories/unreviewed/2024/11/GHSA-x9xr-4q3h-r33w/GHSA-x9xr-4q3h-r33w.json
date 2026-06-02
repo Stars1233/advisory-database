@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x9xr-4q3h-r33w",
-  "modified": "2024-11-18T15:33:20Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2024-11-18T15:33:20Z",
   "aliases": [
     "CVE-2024-8781"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8781"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1861"
     },
     {
       "type": "WEB",

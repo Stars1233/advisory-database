@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3v3x-mvj6-m5jc",
-  "modified": "2025-03-20T09:30:26Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2025-03-20T09:30:26Z",
   "aliases": [
     "CVE-2024-12016"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12016"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0072"
     },
     {
       "type": "WEB",

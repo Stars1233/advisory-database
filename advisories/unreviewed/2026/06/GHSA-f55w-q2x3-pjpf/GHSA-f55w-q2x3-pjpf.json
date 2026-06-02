@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f55w-q2x3-pjpf",
+  "modified": "2026-06-02T09:36:15Z",
+  "published": "2026-06-02T09:36:15Z",
+  "aliases": [
+    "CVE-2026-2425"
+  ],
+  "details": "The hiWeb Migration Simple plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'new_domain' parameter in all versions up to, and including, 2.0.0.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick an administrator into performing an action such as clicking on a link.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2425"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/hiweb-migration-simple/tags/2.0.0.1/template/force-re-migrate-confirm.php#L6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/hiweb-migration-simple/trunk/template/force-re-migrate-confirm.php#L6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/5817384f-1626-4393-a879-931fe7e551f1?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T09:16:15Z"
+  }
+}

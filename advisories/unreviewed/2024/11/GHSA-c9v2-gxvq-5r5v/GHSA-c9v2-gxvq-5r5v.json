@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c9v2-gxvq-5r5v",
-  "modified": "2024-11-22T09:33:04Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2024-11-22T09:33:04Z",
   "aliases": [
     "CVE-2024-7882"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7882"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1869"
     },
     {
       "type": "WEB",

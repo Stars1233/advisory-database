@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-vvw9-5fr8-629r",
-  "modified": "2025-03-05T15:30:56Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2025-03-05T15:30:56Z",
   "aliases": [
     "CVE-2024-11216"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11216"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0052"
     },
     {
       "type": "WEB",

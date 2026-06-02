@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3ch5-8236-6hmm",
+  "modified": "2026-06-02T09:36:12Z",
+  "published": "2024-09-25T03:30:36Z",
+  "aliases": [
+    "CVE-2024-9142"
+  ],
+  "details": "External Control of File Name or Path, : Incorrect Permission Assignment for Critical Resource vulnerability in Olgu Computer Systems e-Belediye allows Manipulating Web Input to File System Calls.This issue affects e-Belediye: before 2.0.642.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9142"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1527"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.usom.gov.tr/bildirim/tr-24-1527"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-73"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2024-09-25T01:15:49Z"
+  }
+}

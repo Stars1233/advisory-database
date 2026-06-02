@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-px3q-xqpv-v524",
-  "modified": "2025-06-27T18:30:43Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2025-06-27T18:30:43Z",
   "aliases": [
     "CVE-2024-11739"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11739"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0139"
     },
     {
       "type": "WEB",

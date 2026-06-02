@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-68w3-69rv-qrr7",
-  "modified": "2024-11-12T21:30:51Z",
+  "modified": "2026-06-02T09:36:13Z",
   "published": "2024-11-12T15:30:44Z",
   "aliases": [
     "CVE-2024-8074"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8074"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1847"
     },
     {
       "type": "WEB",

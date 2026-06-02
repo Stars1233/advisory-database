@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hx77-9fm9-jx6j",
-  "modified": "2024-11-19T21:31:31Z",
+  "modified": "2026-06-02T09:36:13Z",
   "published": "2024-11-15T12:31:45Z",
   "aliases": [
     "CVE-2024-10534"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10534"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1856"
     },
     {
       "type": "WEB",

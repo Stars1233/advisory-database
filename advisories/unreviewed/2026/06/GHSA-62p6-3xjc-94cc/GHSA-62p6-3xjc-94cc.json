@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-62p6-3xjc-94cc",
+  "modified": "2026-06-02T09:36:15Z",
+  "published": "2026-06-02T09:36:15Z",
+  "aliases": [
+    "CVE-2025-5085"
+  ],
+  "details": "The WP Nano AD plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘blogrole_link’ parameter in all versions up to, and including, 1.31 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level access, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5085"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cor.wordpress.org/plugins/wp-nano-ad"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/BFS-Lab/BFSDV/blob/main/WP%20Nano%20Ads%20XSS.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-nano-ad/trunk/add_links.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/350c23c6-6201-4dd5-9594-edb7d8ad926c?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T09:16:15Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qmrp-jx57-5mr7",
+  "modified": "2026-06-02T09:36:15Z",
+  "published": "2026-06-02T09:36:15Z",
+  "aliases": [
+    "CVE-2026-1784"
+  ],
+  "details": "The Route OpenShift resource allows to define routes to make pods reachable at a subdomain through HAProxy. It was found that the checks performed on the spec.path YAML stanza in a Route document was insufficient and could allow a controlled injection of the HAProxy configuration.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1784"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-1784"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2436075"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-15"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T09:16:15Z"
+  }
+}

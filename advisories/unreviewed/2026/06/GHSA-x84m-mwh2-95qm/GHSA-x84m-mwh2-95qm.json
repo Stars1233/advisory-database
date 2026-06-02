@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x84m-mwh2-95qm",
+  "modified": "2026-06-02T09:36:15Z",
+  "published": "2026-06-02T09:36:15Z",
+  "aliases": [
+    "CVE-2026-4081"
+  ],
+  "details": "The ZeM STL plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the [zemstl] shortcode in all versions up to and including 1.0. This is due to insufficient input sanitization and output escaping on user-supplied shortcode attributes, specifically the 'url', 'color', and 'bgcolor' parameters. These attribute values are directly interpolated into HTML attribute context without being passed through esc_attr() or any other escaping function. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4081"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/tags/1.0/zemstl.php#L103"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/tags/1.0/zemstl.php#L104"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/tags/1.0/zemstl.php#L107"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/tags/1.0/zemstl.php#L74"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/trunk/zemstl.php#L103"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/trunk/zemstl.php#L104"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/trunk/zemstl.php#L107"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/zem-stl-viewer/trunk/zemstl.php#L74"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/07e415f9-42f1-4c80-a023-38f460f634d3?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T09:16:16Z"
+  }
+}

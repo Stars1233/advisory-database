@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-75q8-cc48-hx9g",
-  "modified": "2024-10-09T15:32:20Z",
+  "modified": "2026-06-02T09:36:13Z",
   "published": "2024-10-09T15:32:20Z",
   "aliases": [
     "CVE-2024-9286"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9286"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1649"
     },
     {
       "type": "WEB",

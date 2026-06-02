@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-v6vx-4wqx-25c4",
-  "modified": "2025-02-27T15:31:51Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2025-02-27T15:31:51Z",
   "aliases": [
     "CVE-2024-9334"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9334"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0044"
     },
     {
       "type": "WEB",

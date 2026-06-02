@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-r29r-jxx6-7ff5",
-  "modified": "2024-11-16T00:31:50Z",
+  "modified": "2026-06-02T09:36:13Z",
   "published": "2024-11-13T15:31:38Z",
   "aliases": [
     "CVE-2024-9477"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1851"
     },
     {
       "type": "WEB",

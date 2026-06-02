@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8ggp-3pgj-q2gm",
-  "modified": "2025-03-04T15:31:50Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2025-03-04T15:31:50Z",
   "aliases": [
     "CVE-2024-9149"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9149"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0051"
     },
     {
       "type": "WEB",

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fv5f-r3j5-3jxv",
+  "modified": "2026-06-02T09:36:15Z",
+  "published": "2026-06-02T09:36:15Z",
+  "aliases": [
+    "CVE-2026-8422"
+  ],
+  "details": "The Remove meta boxes per user role plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.01. This is due to missing or incorrect nonce validation on the 'remove-meta-boxes-per-user-role' page. This makes it possible for unauthenticated attackers to modify or reset the plugin's per-role meta box visibility settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8422"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/remove-meta-boxes-per-user-role/tags/1.01/admin_pages/settings.php#L23"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/remove-meta-boxes-per-user-role/tags/1.01/admin_pages/settings.php#L26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/remove-meta-boxes-per-user-role/tags/1.01/remove-meta-boxes-per-role.php#L52"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/remove-meta-boxes-per-user-role/trunk/admin_pages/settings.php#L23"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/remove-meta-boxes-per-user-role/trunk/admin_pages/settings.php#L26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/remove-meta-boxes-per-user-role/trunk/remove-meta-boxes-per-role.php#L52"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/e456b08d-ccb9-40b8-9c36-d4b2f7f7fb91?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T09:16:16Z"
+  }
+}

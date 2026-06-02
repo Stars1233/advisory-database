@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p6w5-qf2c-m57m",
-  "modified": "2025-05-02T09:30:35Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2025-05-02T09:30:35Z",
   "aliases": [
     "CVE-2024-11142"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11142"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0098"
     },
     {
       "type": "WEB",

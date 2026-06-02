@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h3c8-cf53-m8j7",
-  "modified": "2024-12-09T15:31:37Z",
+  "modified": "2026-06-02T09:36:14Z",
   "published": "2024-12-09T15:31:37Z",
   "aliases": [
     "CVE-2024-8259"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8259"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1881"
     },
     {
       "type": "WEB",
