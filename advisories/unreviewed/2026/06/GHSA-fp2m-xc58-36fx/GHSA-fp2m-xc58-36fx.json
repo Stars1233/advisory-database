@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fp2m-xc58-36fx",
+  "modified": "2026-06-02T00:31:59Z",
+  "published": "2026-06-02T00:31:59Z",
+  "aliases": [
+    "CVE-2026-9050"
+  ],
+  "details": "The Slider Revolution plugin for WordPress in versions 6.0.0-6.7.55 and 7.0.0-7.0.14 is vulnerable to unauthorized modification of data. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with Contributor-level access and above, to deactivate any active plugin installed on the site.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9050"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sliderrevolution.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/3a036855-35e0-4efd-aa27-16189b3538e9?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T00:16:50Z"
+  }
+}

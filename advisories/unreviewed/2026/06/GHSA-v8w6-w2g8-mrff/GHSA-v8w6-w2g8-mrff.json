@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v8w6-w2g8-mrff",
+  "modified": "2026-06-02T00:31:54Z",
+  "published": "2026-06-02T00:31:54Z",
+  "aliases": [
+    "CVE-2018-25431"
+  ],
+  "details": "No-Cms 1.0 contains an SQL injection vulnerability in the order_by parameter of the manage_privilege export endpoint that allows authenticated attackers to manipulate database queries. Attackers can submit POST requests to /nocms/main/manage_privilege/index/export with malicious SQL code in the order_by[0] parameter to extract sensitive database information.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25431"
+    },
+    {
+      "type": "WEB",
+      "url": "https://codeload.github.com/goFrendiAsgard/No-CMS/zip/master"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goFrendiAsgard/No-CMS"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45903"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/no-cms-sql-injection-via-order-by-parameter"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T22:16:16Z"
+  }
+}

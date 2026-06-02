@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-758m-99jr-7j44",
+  "modified": "2026-06-02T00:31:56Z",
+  "published": "2026-06-02T00:31:56Z",
+  "aliases": [
+    "CVE-2026-0088"
+  ],
+  "details": "In getCallingAppLabel of CertInstaller.java, there is a possible way to hide a sensitive security dialogue due to misleading or insufficient UI. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T22:16:22Z"
+  }
+}

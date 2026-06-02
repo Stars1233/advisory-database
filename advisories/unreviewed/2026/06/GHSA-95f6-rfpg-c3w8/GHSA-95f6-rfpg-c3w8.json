@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-95f6-rfpg-c3w8",
+  "modified": "2026-06-02T00:31:57Z",
+  "published": "2026-06-02T00:31:57Z",
+  "aliases": [
+    "CVE-2026-10291"
+  ],
+  "details": "A security vulnerability has been detected in Enderfga claw-orchestrator up to 3.7.0. The impacted element is the function validateRegex of the file claw-orchestrator/src/embedded-server.ts of the component Session Grep Endpoint. The manipulation of the argument body.pattern leads to inefficient regular expression complexity. The attack may be initiated remotely. Upgrading to version 3.7.1 is sufficient to resolve this issue. The identifier of the patch is 3f970a974c65a94555c25af9f2796f11315e4584. It is recommended to upgrade the affected component.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10291"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Enderfga/claw-orchestrator/issues/64"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Enderfga/claw-orchestrator/issues/64#issuecomment-4421942196"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Enderfga/claw-orchestrator/commit/3f970a974c65a94555c25af9f2796f11315e4584"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Enderfga/claw-orchestrator"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Enderfga/claw-orchestrator/releases/tag/v3.7.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10291"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/826222"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367584"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367584/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T22:16:24Z"
+  }
+}

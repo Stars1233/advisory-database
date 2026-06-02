@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-46q9-xg35-6h5q",
-  "modified": "2025-12-08T21:30:21Z",
+  "modified": "2026-06-02T00:31:53Z",
   "published": "2025-12-08T18:30:43Z",
   "aliases": [
     "CVE-2025-48612"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://android.googlesource.com/platform/packages/apps/Settings/+/aa744e8988f0e7b77a71087edd4d2546b58d2f24"
+    },
+    {
+      "type": "WEB",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
     },
     {
       "type": "WEB",

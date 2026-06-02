@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-phhg-j5g3-4q79",
+  "modified": "2026-06-02T00:31:54Z",
+  "published": "2026-06-02T00:31:54Z",
+  "aliases": [
+    "CVE-2018-25427"
+  ],
+  "details": "Arm Whois 3.11 contains a stack-based buffer overflow vulnerability that allows remote attackers to execute arbitrary code by supplying oversized input to the IP address or domain field. Attackers can craft malicious input exceeding 658 bytes with shellcode to overwrite the structured exception handler and gain command execution when the application processes the input.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25427"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/45796"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/arm-whois-buffer-overflow-via-seh-overwrite"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.armcode.com"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.armcode.com/downloads/arm-whois.exe"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T22:16:14Z"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m4rp-8c25-g2hr",
-  "modified": "2025-12-08T21:30:21Z",
+  "modified": "2026-06-02T00:31:53Z",
   "published": "2025-12-08T18:30:43Z",
   "aliases": [
     "CVE-2025-48615"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://android.googlesource.com/platform/frameworks/base/+/a5795fc0cf1f21da88cf05ad06610d3653d1be0e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
     },
     {
       "type": "WEB",

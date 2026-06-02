@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q8r9-3c37-m77m",
+  "modified": "2026-06-02T00:31:56Z",
+  "published": "2026-06-02T00:31:56Z",
+  "aliases": [
+    "CVE-2026-0041"
+  ],
+  "details": "In multiple functions of ubsan_throwing_runtime.cpp, there is a possible UBSan failure due to an integer overflow. This could lead to remote denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0041"
+    },
+    {
+      "type": "WEB",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-190"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T22:16:19Z"
+  }
+}

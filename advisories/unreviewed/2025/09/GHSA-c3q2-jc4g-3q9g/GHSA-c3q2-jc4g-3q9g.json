@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c3q2-jc4g-3q9g",
-  "modified": "2025-11-18T06:30:25Z",
+  "modified": "2026-06-02T00:31:53Z",
   "published": "2025-09-04T21:31:38Z",
   "aliases": [
     "CVE-2025-48581"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://android.googlesource.com/platform/system/apex/+/5a33fa4202cb5f06d7f02f3a2b8d13780d7cb3f5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
     },
     {
       "type": "WEB",

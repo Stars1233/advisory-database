@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fc67-4f8m-6pmc",
+  "modified": "2026-06-02T00:31:58Z",
+  "published": "2026-06-02T00:31:58Z",
+  "aliases": [
+    "CVE-2026-10299"
+  ],
+  "details": "A weakness has been identified in code-projects Online Hospital Management System 1.0. This issue affects some unknown processing of the file viewdoctortimings.php. This manipulation of the argument delid causes improper control of resource identifiers. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10299"
+    },
+    {
+      "type": "WEB",
+      "url": "https://code-projects.org"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Carm3nc1ta/vuln-test/blob/main/Online%20Hospital%20Management%20System%20has%20IDOR%20vulnerability%20in%20viewdoctortimings_php.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10299"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/827505"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367592"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367592/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-99"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T23:16:19Z"
+  }
+}

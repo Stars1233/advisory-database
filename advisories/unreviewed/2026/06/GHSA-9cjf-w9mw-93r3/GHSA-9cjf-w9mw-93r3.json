@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9cjf-w9mw-93r3",
+  "modified": "2026-06-02T00:31:57Z",
+  "published": "2026-06-02T00:31:57Z",
+  "aliases": [
+    "CVE-2026-40964"
+  ],
+  "details": "Authentication Bypass in cf-auth-proxy in Cloud Foundry Foundation all installations allows an unauthenticated remote attacker to gain read access to every log and metric for every application and platform component via minting a JWT that the cf-auth-proxy accepts as a valid logs.admin token.\n\nAffected versions:\n- log-cache_release: all versions through v3.2.6 (inclusive); fixed in v3.2.7 or later\n- CF Deployment: all versions through v55.?.0 (inclusive); fixed in v55.?.0 or later (bundles log-cache_release v3.2.7)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40964"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cloudfoundry.org/blog/cve-2026-40964-read-access-to-cf-logs"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-287"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-01T22:16:25Z"
+  }
+}
