@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c2p9-cv2v-6744",
+  "modified": "2026-06-03T15:30:42Z",
+  "published": "2026-06-03T15:30:42Z",
+  "aliases": [
+    "CVE-2024-47273"
+  ],
+  "details": "An improper limitation of a pathname to a restricted directory ('Path Traversal') vulnerability in Backup Task functionality in Synology Hyper Backup before 4.1.2-4036 allows remote authenticated users to write specific files via unspecified vectors.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47273"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.synology.com/en-global/releaseNote/HyperBackup?model=DS224%2B&os=DSM&version=7_x_series"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-03T14:16:26Z"
+  }
+}

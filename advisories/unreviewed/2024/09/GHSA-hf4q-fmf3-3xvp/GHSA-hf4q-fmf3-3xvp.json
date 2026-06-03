@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hf4q-fmf3-3xvp",
-  "modified": "2024-09-19T15:30:49Z",
+  "modified": "2026-06-03T15:30:34Z",
   "published": "2024-09-13T09:30:33Z",
   "aliases": [
     "CVE-2024-6656"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6656"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1466"
     },
     {
       "type": "WEB",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-vvxm-2vxq-rhgq",
-  "modified": "2024-09-18T15:30:49Z",
+  "modified": "2026-06-03T15:30:34Z",
   "published": "2024-09-18T12:31:31Z",
   "aliases": [
     "CVE-2024-5682"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5682"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1496"
     },
     {
       "type": "WEB",

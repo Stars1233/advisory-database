@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-w4pv-qv3j-89ww",
-  "modified": "2024-09-23T09:30:46Z",
+  "modified": "2026-06-03T15:30:34Z",
   "published": "2024-09-09T15:30:41Z",
   "aliases": [
     "CVE-2024-7015"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://https://www.usom.gov.tr/bildirim/tr-24-1418"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1418"
     },
     {
       "type": "WEB",

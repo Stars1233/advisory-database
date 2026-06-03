@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fv26-9vg6-vgf3",
-  "modified": "2024-07-18T18:31:42Z",
+  "modified": "2026-06-03T15:30:33Z",
   "published": "2024-07-18T18:31:42Z",
   "aliases": [
     "CVE-2024-5620"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5620"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1010"
     },
     {
       "type": "WEB",

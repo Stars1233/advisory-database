@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5754-2m89-cvmg",
+  "modified": "2026-06-03T15:30:42Z",
+  "published": "2026-06-03T15:30:42Z",
+  "aliases": [
+    "CVE-2022-49036"
+  ],
+  "details": "An inclusion of functionality from untrusted control sphere vulnerability in OpenSSL configuration in Synology Active Backup for Business Recovery Media Creator before 2.5.0-2081 allows local users to execute arbitrary code via unspecified vectors.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-49036"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.synology.com/en-global/releaseNote/ActiveBackupRecoveryMediaCreator"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-829"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-03T14:16:24Z"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mvqc-wfv6-7764",
-  "modified": "2026-06-03T06:31:26Z",
+  "modified": "2026-06-03T15:30:37Z",
   "published": "2026-04-08T18:34:08Z",
   "aliases": [
     "CVE-2026-32590"
@@ -34,6 +34,10 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2026:22629"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:22840"
     },
     {
       "type": "WEB",

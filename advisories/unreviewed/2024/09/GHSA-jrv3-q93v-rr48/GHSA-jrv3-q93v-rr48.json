@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jrv3-q93v-rr48",
-  "modified": "2024-09-05T15:33:34Z",
+  "modified": "2026-06-03T15:30:34Z",
   "published": "2024-09-04T15:30:35Z",
   "aliases": [
     "CVE-2024-7076"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7076"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1396"
     },
     {
       "type": "WEB",

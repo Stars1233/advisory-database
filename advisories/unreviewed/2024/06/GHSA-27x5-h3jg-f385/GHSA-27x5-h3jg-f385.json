@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-27x5-h3jg-f385",
-  "modified": "2024-06-24T15:31:44Z",
+  "modified": "2026-06-03T15:30:33Z",
   "published": "2024-06-24T15:31:44Z",
   "aliases": [
     "CVE-2024-5862"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5862"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-0765"
     },
     {
       "type": "WEB",

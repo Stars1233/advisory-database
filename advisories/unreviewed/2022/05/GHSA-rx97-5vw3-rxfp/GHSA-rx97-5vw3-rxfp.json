@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rx97-5vw3-rxfp",
-  "modified": "2022-05-17T04:03:57Z",
+  "modified": "2026-06-03T15:30:31Z",
   "published": "2022-05-17T04:03:57Z",
   "aliases": [
     "CVE-2015-6490"
   ],
   "details": "Stack-based buffer overflow on Allen-Bradley MicroLogix 1100 devices before B FRN 15.000 and 1400 devices through B FRN 15.003 allows remote attackers to execute arbitrary code via unspecified vectors.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,7 +26,8 @@
   ],
   "database_specific": {
     "cwe_ids": [
-      "CWE-119"
+      "CWE-119",
+      "CWE-121"
     ],
     "severity": "HIGH",
     "github_reviewed": false,

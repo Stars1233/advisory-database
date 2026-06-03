@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x57q-r8qm-5vxr",
-  "modified": "2024-10-03T03:31:11Z",
+  "modified": "2026-06-03T15:30:35Z",
   "published": "2024-09-26T12:32:02Z",
   "aliases": [
     "CVE-2024-7107"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7107"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1549"
     },
     {
       "type": "WEB",

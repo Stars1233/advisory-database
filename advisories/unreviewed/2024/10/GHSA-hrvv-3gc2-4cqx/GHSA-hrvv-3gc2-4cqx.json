@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hrvv-3gc2-4cqx",
-  "modified": "2025-10-14T15:31:19Z",
+  "modified": "2026-06-03T15:30:35Z",
   "published": "2024-10-04T12:31:02Z",
   "aliases": [
     "CVE-2024-6400"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6400"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1611"
     },
     {
       "type": "WEB",

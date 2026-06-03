@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wpr4-69wr-rf9f",
-  "modified": "2025-01-09T15:31:51Z",
+  "modified": "2026-06-03T15:30:36Z",
   "published": "2025-01-09T15:31:51Z",
   "aliases": [
     "CVE-2024-7026"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7026"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1866"
     },
     {
       "type": "WEB",

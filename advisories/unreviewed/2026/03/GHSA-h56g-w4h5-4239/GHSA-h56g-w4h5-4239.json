@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h56g-w4h5-4239",
-  "modified": "2026-03-26T21:31:26Z",
+  "modified": "2026-06-03T15:30:36Z",
   "published": "2026-03-26T21:31:26Z",
   "aliases": [
     "CVE-2026-26213"
   ],
   "details": "thingino-firmware versions up to the firmware-2026-03-16 release contains an unauthenticated os command injection vulnerability in the WiFi captive portal CGI script that allows remote attackers to execute arbitrary commands as root by injecting malicious code through unsanitized HTTP parameter names. Attackers can exploit the eval function in parse_query() and parse_post() functions to achieve remote code execution and perform privileged configuration changes including root password reset and SSH authorized_keys modification, resulting in full persistent device compromise.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"

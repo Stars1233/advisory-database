@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pj36-9w4r-h2r4",
-  "modified": "2026-06-02T18:31:31Z",
+  "modified": "2026-06-03T15:30:39Z",
   "published": "2026-06-02T18:31:31Z",
   "aliases": [
     "CVE-2026-35716"
   ],
   "details": "A stack-based buffer overflow in the motion_privacy.cgi binary in VIVOTEK FD8136 firmware FD8136-VVTK-0300a allows authenticated remote attackers to execute arbitrary code as root via an oversized n1 parameter in a POST request to the /cgi-bin/admin/setpm.cgi, /cgi-bin/admin/setmd.cgi, or /cgi-bin/admin/setmd_profile.cgi endpoint (all symlinks to the same binary). The parameter value is copied into a fixed-size 0xa4-byte stack buffer without bounds checking, overwriting the saved link register. The binary is compiled without stack canaries.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -24,8 +29,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-02T16:16:37Z"

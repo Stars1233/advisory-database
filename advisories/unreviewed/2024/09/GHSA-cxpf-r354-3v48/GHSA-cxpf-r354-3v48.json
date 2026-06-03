@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cxpf-r354-3v48",
-  "modified": "2024-09-25T15:31:12Z",
+  "modified": "2026-06-03T15:30:35Z",
   "published": "2024-09-25T15:31:12Z",
   "aliases": [
     "CVE-2024-4657"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4657"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1536"
     },
     {
       "type": "WEB",

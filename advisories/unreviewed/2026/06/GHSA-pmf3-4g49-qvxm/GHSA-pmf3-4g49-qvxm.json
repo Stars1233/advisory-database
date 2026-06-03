@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pmf3-4g49-qvxm",
+  "modified": "2026-06-03T15:30:39Z",
+  "published": "2026-06-03T15:30:39Z",
+  "aliases": [
+    "CVE-2025-41259"
+  ],
+  "details": "SWUpdate before 2026.05 is affected by a time-of-check time-of-use (TOCTOU) race condition that allows local unprivileged attackers to escalate privileges to root or install untrusted contents using a signed update.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41259"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sbabic/swupdate/commit/f4bd64260e233e207354d68d572b1cbc3e63689d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sbabic/swupdate"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sbaresearch/advisories/tree/public/2025/SBA-ADV-20251206-01_SWUpdate_Untrusted_Script_Execution_via_Signed_Update_TOCTOU"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-367"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-03T13:16:18Z"
+  }
+}

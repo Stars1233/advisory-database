@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-j3h5-q35j-p5vv",
-  "modified": "2024-12-04T15:31:52Z",
+  "modified": "2026-06-03T15:30:36Z",
   "published": "2024-12-04T15:31:52Z",
   "aliases": [
     "CVE-2024-7488"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7488"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-1877"
     },
     {
       "type": "WEB",

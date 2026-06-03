@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-w665-2m7x-qm3j",
-  "modified": "2022-05-17T04:03:56Z",
+  "modified": "2026-06-03T15:30:31Z",
   "published": "2022-05-17T04:03:56Z",
   "aliases": [
     "CVE-2015-6492"
   ],
   "details": "Allen-Bradley MicroLogix 1100 devices before B FRN 15.000 and 1400 devices before B FRN 15.003 allow remote attackers to cause a denial of service (memory corruption and device crash) via a crafted HTTP request.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {

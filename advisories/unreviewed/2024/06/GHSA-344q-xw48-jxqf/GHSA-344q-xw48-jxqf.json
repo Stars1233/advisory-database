@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-344q-xw48-jxqf",
-  "modified": "2024-06-24T09:30:54Z",
+  "modified": "2026-06-03T15:30:33Z",
   "published": "2024-06-24T09:30:54Z",
   "aliases": [
     "CVE-2024-4754"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4754"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-24-0739"
     },
     {
       "type": "WEB",
