@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8x6r-g9mw-2r78",
+  "modified": "2026-06-03T21:05:17Z",
+  "published": "2026-06-03T21:05:17Z",
+  "aliases": [
+    "CVE-2026-42342"
+  ],
+  "summary": "React Router vulnerable to DoS via unbounded path expansion in __manifest endpoint",
+  "details": "There exists a potential DOS attack vector in React Router Framework Mode applications (as well as Remix v2.10.0 - 2.17.4).  Certain requests can be crafted to consume disproportionate resources on the server, resulting in response time degredation and/or service unavailability for end users.\n\n> [!NOTE]\n> This does not impact your React Router application if you are using [Declarative Mode](https://reactrouter.com/start/modes#declarative) (`<BrowserRouter>`) or [Data Mode](https://reactrouter.com/start/modes#data) (`createBrowserRouter`/`<RouterProvider>`).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "react-router"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.15.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@remix-run/server-runtime"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "fixed": "2.17.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/remix-run/react-router/security/advisories/GHSA-8x6r-g9mw-2r78"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42342"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/remix-run/react-router"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-03T21:05:17Z",
+    "nvd_published_at": "2026-06-02T20:16:36Z"
+  }
+}
