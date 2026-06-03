@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gh5q-rq4h-5vjq",
+  "modified": "2026-06-03T00:30:26Z",
+  "published": "2026-06-03T00:30:26Z",
+  "aliases": [
+    "CVE-2026-10717"
+  ],
+  "details": "Out of bounds write and reads in openSeaChest’s --showSCSIDefects in Seagate’s openSeaChest v25.05.3 on all supported platforms allows for writing defect information out of bounds for very large defects lists via a very bad drive with lots of defects or a maliciously crafted SCSI device’s defect response length.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:A/V:D/RE:L/U:Clear"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10717"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.seagate.com/product-security/#security-advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.seagate.com/support/software/seachest"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T23:16:34Z"
+  }
+}

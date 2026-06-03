@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5xx3-j724-wmx5",
+  "modified": "2026-06-03T00:30:27Z",
+  "published": "2026-06-03T00:30:27Z",
+  "aliases": [
+    "CVE-2026-10690"
+  ],
+  "details": "A vulnerability was identified in wonderwhy-er DesktopCommanderMCP 0.2.37. This affects the function readFileFromUrl of the file src/tools/filesystem.ts of the component read_file. Such manipulation of the argument url leads to server-side request forgery. The attack may be performed from remote. The exploit is publicly available and might be used. The name of the patch is 53699bebba9950047bca16ac4dc8f0568f596aaa. It is best practice to apply a patch to resolve this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10690"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP/issues/410"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sorlen008/DesktopCommanderMCP/commit/53699bebba9950047bca16ac4dc8f0568f596aaa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10690"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/830735"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/367959/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-03T00:16:30Z"
+  }
+}

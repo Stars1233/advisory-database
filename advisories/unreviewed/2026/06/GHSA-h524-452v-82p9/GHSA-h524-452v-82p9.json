@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h524-452v-82p9",
+  "modified": "2026-06-03T00:30:26Z",
+  "published": "2026-06-03T00:30:26Z",
+  "aliases": [
+    "CVE-2026-42504"
+  ],
+  "details": "Decoding a maliciously-crafted MIME header containing many invalid encoded-words can consume excessive CPU.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42504"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/774481"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/79217"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/tKs3rmcBcKw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-5038"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T23:16:37Z"
+  }
+}

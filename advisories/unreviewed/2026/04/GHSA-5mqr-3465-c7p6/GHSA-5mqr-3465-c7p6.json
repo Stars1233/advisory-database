@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5mqr-3465-c7p6",
-  "modified": "2026-06-02T12:31:25Z",
+  "modified": "2026-06-03T00:30:24Z",
   "published": "2026-04-23T18:33:03Z",
   "aliases": [
     "CVE-2026-34003"
@@ -18,10 +18,6 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34003"
-    },
-    {
-      "type": "WEB",
-      "url": "https://access.redhat.com/errata/RHSA-2026:10739"
     },
     {
       "type": "WEB",
@@ -77,11 +73,19 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:22456"
+    },
+    {
+      "type": "WEB",
       "url": "https://access.redhat.com/security/cve/CVE-2026-34003"
     },
     {
       "type": "WEB",
       "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2451113"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:10739"
     },
     {
       "type": "WEB",

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qw79-r33f-9pvj",
+  "modified": "2026-06-03T00:30:25Z",
+  "published": "2026-06-03T00:30:25Z",
+  "aliases": [
+    "CVE-2025-15653"
+  ],
+  "details": "Dräger Zeus Infinity Empowered (Zeus IE) and Zeus RS C500 anesthesia workstations contain a local security vulnerability that allows unauthorized individuals with physical access to compromise software integrity via USB interface manipulation. Attackers can exploit the unprotected USB interfaces to impair therapy functions, manipulate device-processed data, or leverage the device as a pivot point for broader network-based attacks when connected to a network or Dräger Service Connect.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15653"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.draeger.com/security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/dr-ger-zeus-ie-anesthesia-workstation-usb-interface-privilege-escalation"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-668"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T22:16:15Z"
+  }
+}

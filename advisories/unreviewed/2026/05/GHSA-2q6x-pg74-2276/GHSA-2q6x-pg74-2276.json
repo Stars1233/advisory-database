@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2q6x-pg74-2276",
-  "modified": "2026-06-02T12:31:25Z",
+  "modified": "2026-06-03T00:30:24Z",
   "published": "2026-05-05T18:33:24Z",
   "aliases": [
     "CVE-2026-34002"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/security/cve/CVE-2026-34002"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:22456"
     },
     {
       "type": "WEB",

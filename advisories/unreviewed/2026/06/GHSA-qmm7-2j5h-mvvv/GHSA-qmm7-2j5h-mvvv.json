@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qmm7-2j5h-mvvv",
+  "modified": "2026-06-03T00:30:26Z",
+  "published": "2026-06-03T00:30:26Z",
+  "aliases": [
+    "CVE-2026-10718"
+  ],
+  "details": "Out of bounds write in openSeaChest’s Trim/Unmap operation in Seagate’s openSeaChest v26.03.0 on all supported platforms allows for writing extra memory describing a range of LBAs to deallocate 16 bytes outside of the allocated space when running this operation.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:U/V:D/RE:L/U:Green"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10718"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.seagate.com/product-security/#security-advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.seagate.com/support/software/seachest"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T23:16:35Z"
+  }
+}

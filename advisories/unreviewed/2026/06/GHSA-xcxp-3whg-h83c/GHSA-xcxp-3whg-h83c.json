@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xcxp-3whg-h83c",
+  "modified": "2026-06-03T00:30:26Z",
+  "published": "2026-06-03T00:30:26Z",
+  "aliases": [
+    "CVE-2026-25861"
+  ],
+  "details": "QloApps through 1.7.0, fixed in commit 64e9722, contains a weak cryptographic algorithm vulnerability that allows attackers to compromise user credentials by exploiting the use of MD5 for password hashing in the Tools::encrypt() function within classes/Tools.php, which concatenates a static cookie key with the supplied password. Attackers can perform offline brute-force attacks against the MD5 hashes, with the risk compounded by auto-generated 8-character passwords assigned during guest-to-customer account conversion in classes/Customer.php, making credential recovery trivial.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Qloapps/QloApps/pull/1689"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Qloapps/QloApps/commit/64e9722e7e6a8fda77dd53964d988fb6b5c3d174"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/qloapps-weak-password-hashing-via-md5-in-tools-php"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-916"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-02T23:16:35Z"
+  }
+}
