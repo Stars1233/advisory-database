@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8646-j5j9-6r62",
+  "modified": "2026-06-03T20:33:32Z",
+  "published": "2026-06-03T20:33:32Z",
+  "aliases": [
+    "CVE-2026-33245"
+  ],
+  "summary": "React Router vulnerable to XSS in unstable RSC redirect handling via javascript: redirect targets",
+  "details": "When using React Router v7's unstable RSC APIs, there exists a potential client-side XSS issue in the RSC redirect handling if redirects are coming from untrusted sources\n\n> [!NOTE]\n> This only impacts your application if you are using the unstable RSC APIs in React Router.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "react-router"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.7.0"
+            },
+            {
+              "fixed": "7.13.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/remix-run/react-router/security/advisories/GHSA-8646-j5j9-6r62"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33245"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/remix-run/react-router"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-03T20:33:32Z",
+    "nvd_published_at": "2026-06-02T20:16:34Z"
+  }
+}
