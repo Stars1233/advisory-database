@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-766g-x59x-554c",
-  "modified": "2026-06-03T21:30:27Z",
+  "modified": "2026-06-04T00:30:25Z",
   "published": "2026-06-03T00:30:24Z",
   "aliases": [
     "CVE-2021-4481"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://static.draeger.com/security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://static.draeger.com/security/download/2021-267-01-Draeger-Protector-Software-vulnerabilities.pdf"
     },
     {
       "type": "WEB",

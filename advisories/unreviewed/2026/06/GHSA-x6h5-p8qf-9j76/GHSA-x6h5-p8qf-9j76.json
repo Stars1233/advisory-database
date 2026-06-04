@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x6h5-p8qf-9j76",
-  "modified": "2026-06-02T00:31:55Z",
+  "modified": "2026-06-04T00:30:24Z",
   "published": "2026-06-02T00:31:55Z",
   "aliases": [
     "CVE-2019-25716"
@@ -26,6 +26,14 @@
     {
       "type": "WEB",
       "url": "https://static.draeger.com/security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://static.draeger.com/security/download/2019-01-22-draeger-infinity-delta-vf10-1-security-advisory.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/dr-ger-infinity-delta-kappa-patient-monitor-dos-via-malformed-network-packet"
     }
   ],
   "database_specific": {

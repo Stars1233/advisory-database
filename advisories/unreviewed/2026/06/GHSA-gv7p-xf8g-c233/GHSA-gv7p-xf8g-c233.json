@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gv7p-xf8g-c233",
-  "modified": "2026-06-02T00:31:57Z",
+  "modified": "2026-06-04T00:30:25Z",
   "published": "2026-06-02T00:31:57Z",
   "aliases": [
     "CVE-2019-25718"
@@ -26,6 +26,14 @@
     {
       "type": "WEB",
       "url": "https://static.draeger.com/security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://static.draeger.com/security/download/2019-01-22-draeger-infinity-delta-vf10-1-security-advisory.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/dr-ger-infinity-explorer-c700-privilege-escalation-via-kiosk-mode-bypass"
     }
   ],
   "database_specific": {
