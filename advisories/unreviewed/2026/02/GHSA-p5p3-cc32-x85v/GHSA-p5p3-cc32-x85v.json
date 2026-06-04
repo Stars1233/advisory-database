@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p5p3-cc32-x85v",
-  "modified": "2026-02-27T15:34:19Z",
+  "modified": "2026-06-04T21:31:19Z",
   "published": "2026-02-27T15:34:18Z",
   "aliases": [
     "CVE-2025-11252"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11252"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0085"
     },
     {
       "type": "WEB",

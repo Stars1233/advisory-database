@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jvmm-jqv7-98vp",
-  "modified": "2026-02-27T12:31:25Z",
+  "modified": "2026-06-04T21:31:18Z",
   "published": "2026-02-27T12:31:25Z",
   "aliases": [
     "CVE-2025-11251"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11251"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0084"
     },
     {
       "type": "WEB",

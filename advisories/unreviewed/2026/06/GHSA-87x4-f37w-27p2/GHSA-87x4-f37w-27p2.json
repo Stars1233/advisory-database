@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-87x4-f37w-27p2",
+  "modified": "2026-06-04T21:31:22Z",
+  "published": "2026-06-04T21:31:22Z",
+  "aliases": [
+    "CVE-2026-36499"
+  ],
+  "details": "A missing upper-bound check in the udpif_set_threads() function of Open vSwitch v3.6.90 allows an attacker with OVSDB write access to request an excessive number of handler or revalidation threads. This can cause a denial of service (DoS) via resource exhaustion.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36499"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/majdlatah/OVS-Other-Config-Bug"
+    },
+    {
+      "type": "WEB",
+      "url": "http://open.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T19:16:28Z"
+  }
+}

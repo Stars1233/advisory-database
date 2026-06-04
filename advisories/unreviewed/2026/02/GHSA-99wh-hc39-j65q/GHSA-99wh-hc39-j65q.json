@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-99wh-hc39-j65q",
-  "modified": "2026-02-27T15:34:19Z",
+  "modified": "2026-06-04T21:31:19Z",
   "published": "2026-02-27T15:34:19Z",
   "aliases": [
     "CVE-2025-11950"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11950"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0086"
     },
     {
       "type": "WEB",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-vh7x-8rfm-rpf4",
-  "modified": "2025-10-24T15:31:26Z",
+  "modified": "2026-06-04T21:31:17Z",
   "published": "2025-10-24T15:31:26Z",
   "aliases": [
     "CVE-2025-11145"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11145"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0361"
     },
     {
       "type": "WEB",

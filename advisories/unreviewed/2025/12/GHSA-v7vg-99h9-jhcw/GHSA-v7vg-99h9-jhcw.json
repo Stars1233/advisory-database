@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-v7vg-99h9-jhcw",
-  "modified": "2026-01-02T21:30:26Z",
+  "modified": "2026-06-04T21:31:18Z",
   "published": "2025-12-11T21:31:33Z",
   "aliases": [
     "CVE-2025-66590"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66590"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-345-03.json"
     },
     {
       "type": "WEB",

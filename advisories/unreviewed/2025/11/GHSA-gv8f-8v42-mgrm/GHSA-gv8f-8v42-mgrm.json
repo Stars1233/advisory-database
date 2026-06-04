@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gv8f-8v42-mgrm",
-  "modified": "2025-11-11T15:31:21Z",
+  "modified": "2026-06-04T21:31:17Z",
   "published": "2025-11-11T15:31:21Z",
   "aliases": [
     "CVE-2025-11959"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0388"
     },
     {
       "type": "WEB",

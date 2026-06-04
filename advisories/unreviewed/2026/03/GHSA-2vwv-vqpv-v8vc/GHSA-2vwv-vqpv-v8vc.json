@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2vwv-vqpv-v8vc",
-  "modified": "2026-05-28T03:31:15Z",
+  "modified": "2026-06-04T21:31:19Z",
   "published": "2026-03-30T09:31:29Z",
   "aliases": [
     "CVE-2026-5121"
@@ -25,7 +25,7 @@
     },
     {
       "type": "WEB",
-      "url": "https://access.redhat.com/errata/RHSA-2026:10065"
+      "url": "https://access.redhat.com/errata/RHSA-2026:8510"
     },
     {
       "type": "WEB",
@@ -86,6 +86,10 @@
     {
       "type": "ADVISORY",
       "url": "https://github.com/advisories/GHSA-2vwv-vqpv-v8vc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:10065"
     },
     {
       "type": "WEB",
@@ -153,7 +157,7 @@
     },
     {
       "type": "WEB",
-      "url": "https://access.redhat.com/errata/RHSA-2026:8510"
+      "url": "https://access.redhat.com/errata/RHSA-2026:21690"
     }
   ],
   "database_specific": {

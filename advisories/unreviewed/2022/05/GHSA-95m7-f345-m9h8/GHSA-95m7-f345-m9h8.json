@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-95m7-f345-m9h8",
-  "modified": "2022-05-13T01:04:09Z",
+  "modified": "2026-06-04T21:31:16Z",
   "published": "2022-05-13T01:04:09Z",
   "aliases": [
     "CVE-2019-10953"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10953"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2019/icsa-19-106-03.json"
     },
     {
       "type": "WEB",

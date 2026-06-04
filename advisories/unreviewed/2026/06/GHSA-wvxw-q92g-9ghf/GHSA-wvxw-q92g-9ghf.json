@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wvxw-q92g-9ghf",
-  "modified": "2026-06-04T18:30:32Z",
+  "modified": "2026-06-04T21:31:21Z",
   "published": "2026-06-04T18:30:32Z",
   "aliases": [
     "CVE-2026-49941"
   ],
   "details": "Net::CIDR::Set versions through 0.20 for Perl did not validate IP addresses.\n\nThe add method called the _encode method to parse addresses. If the addresses did not look like netmasks or network ranges, then they were assumed to single IP addresses and passed back to itself as a 32-bit or 128-bit netmask.\n\nIf the argument was not a well-formed IP address, then this would lead to indefinite recursion.\n\nAn attacker could use this to cause a denial of service.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -17,13 +22,17 @@
     {
       "type": "WEB",
       "url": "https://metacpan.org/release/RRWO/Net-CIDR-Set-0.21/changes"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/04/11"
     }
   ],
   "database_specific": {
     "cwe_ids": [
       "CWE-674"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-04T17:16:33Z"

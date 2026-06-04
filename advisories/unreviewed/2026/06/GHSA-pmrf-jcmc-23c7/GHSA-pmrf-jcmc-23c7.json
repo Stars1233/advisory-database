@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pmrf-jcmc-23c7",
+  "modified": "2026-06-04T21:31:23Z",
+  "published": "2026-06-04T21:31:23Z",
+  "aliases": [
+    "CVE-2026-10870"
+  ],
+  "details": "A flaw has been found in Shibby Tomato 1.28.0000. This affects the function start_dhcpc of the file /sbin/rc of the component Web UI. This manipulation causes os command injection. It is possible to initiate the attack remotely. The exploit has been published and may be used. This project is superseded by FreshTomato.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10870"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/en/01-start_dhcpc.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitee.com/WH-YHUST/tomato-rc-nvram-cve/blob/master/gitee-cve-disclosure/advisories/zh/01-start_dhcpc.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10870"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/831856"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/368360"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/368360/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T21:16:30Z"
+  }
+}

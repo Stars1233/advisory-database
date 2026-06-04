@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7w3m-2pw9-mg8x",
-  "modified": "2026-06-03T21:30:31Z",
+  "modified": "2026-06-04T21:31:20Z",
   "published": "2026-06-03T21:30:31Z",
   "aliases": [
     "CVE-2026-8888"
   ],
   "details": "Version 3.0.7 of the Securly Chrome Extension downloads config.json over HTTP and compiles server-provided patterns as JavaScript regular expressions via new RegExp() without complexity validation. An on-path attacker can inject specific patterns to cause catastrophic backtracking, resulting in denial of service on all browsing.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-1333"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T19:16:39Z"

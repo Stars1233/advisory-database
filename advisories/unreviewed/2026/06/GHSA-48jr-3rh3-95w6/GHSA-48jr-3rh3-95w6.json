@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-48jr-3rh3-95w6",
-  "modified": "2026-06-03T21:30:31Z",
+  "modified": "2026-06-04T21:31:20Z",
   "published": "2026-06-03T21:30:31Z",
   "aliases": [
     "CVE-2026-26825"
   ],
   "details": "A use-of-uninitialized memory vulnerability exists in libxls 1.6.3 when parsing malformed XLS files. The issue is reachable via xls_parseWorkBook() and is triggered by uninitialized heap memory originating from the OLE layer (ole2_read). The flaw is detectable with MemorySanitizer (MSAN) and can lead to undefined behavior, incorrect parsing logic, or potential information disclosure.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-908"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T20:16:18Z"

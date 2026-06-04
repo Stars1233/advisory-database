@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mcvm-9xxc-24jx",
-  "modified": "2026-06-04T18:30:32Z",
+  "modified": "2026-06-04T21:31:21Z",
   "published": "2026-06-04T18:30:32Z",
   "aliases": [
     "CVE-2026-46741"
   ],
   "details": "Etsy::StatsD versions through 1.002002 for Perl allow metric injections.\n\nThe metric names and values are not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.\n\nNote that the git repository contains an unreleased version with the gauge and set methods that also do not check for potential metric injections.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-93"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-04T17:16:32Z"

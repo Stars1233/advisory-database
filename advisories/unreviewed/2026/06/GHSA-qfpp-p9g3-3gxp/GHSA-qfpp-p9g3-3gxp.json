@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qfpp-p9g3-3gxp",
+  "modified": "2026-06-04T21:31:21Z",
+  "published": "2026-06-04T21:31:21Z",
+  "aliases": [
+    "CVE-2025-65640"
+  ],
+  "details": "Cross Site Scripting (XSS) vulnerability in the \"Task in Progress / Recent\" page in Arket Globe Document Intelligence 5.0.0.559 due to improper sanitization of user input in text fields when creating a new document. Specifically, when an authenticated attacker submits data containing JavaScript code within these fields, the application fails to properly sanitize or escape the content. As a result, the injected script is executed when the page is rendered, allowing the attacker to execute arbitrary JavaScript in the context of other users' browsers who view the affected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65640"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/vincenzo-emanuele/CVE-2025-65640"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.arket.it"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T19:16:25Z"
+  }
+}

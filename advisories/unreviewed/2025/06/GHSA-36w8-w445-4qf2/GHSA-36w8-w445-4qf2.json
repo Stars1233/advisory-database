@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-36w8-w445-4qf2",
-  "modified": "2025-06-17T21:32:30Z",
+  "modified": "2026-06-04T21:31:16Z",
   "published": "2025-06-17T21:32:30Z",
   "aliases": [
     "CVE-2025-49848"
   ],
   "details": "An Out-of-bounds Write vulnerability exists within the parsing of PRJ files. The issues result from the lack of proper validation of user-supplied data, which can result in different memory corruption issues within the application, such as reading and writing past the end of allocated data structures.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
@@ -21,7 +25,15 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-168-02.json"
+    },
+    {
+      "type": "WEB",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-168-02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ls-electric.com/support"
     }
   ],
   "database_specific": {

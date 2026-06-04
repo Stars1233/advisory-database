@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fqgh-c6pc-p3m8",
-  "modified": "2025-10-24T09:31:58Z",
+  "modified": "2026-06-04T21:31:17Z",
   "published": "2025-10-24T09:31:58Z",
   "aliases": [
     "CVE-2025-11253"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11253"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0359"
     },
     {
       "type": "WEB",
