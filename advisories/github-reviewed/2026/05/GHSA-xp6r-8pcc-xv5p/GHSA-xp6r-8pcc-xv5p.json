@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xp6r-8pcc-xv5p",
-  "modified": "2026-05-20T15:35:23Z",
+  "modified": "2026-06-04T21:38:38Z",
   "published": "2026-05-19T18:32:11Z",
   "aliases": [
     "CVE-2026-31069"
   ],
+  "summary": "BillaBear is Vulnerable to SQL Injection in the EventRepository",
   "details": "BillaBear (all versions prior to Jan 2026) contains a SQL Injection vulnerability in the EventRepository. User-controlled input from metric filter names and aggregation properties is directly interpolated into SQL queries using sprintf() without proper sanitization or identifier quoting. Although filter values are parameterized, the filter identifiers (keys) are not. An authenticated attacker with ROLE_ACCOUNT_MANAGER permissions can exploit this to execute arbitrary SQL commands.",
   "severity": [
     {
@@ -13,7 +14,27 @@
       "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "billabear/billabear"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2025.01.03"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
@@ -28,8 +49,8 @@
       "url": "https://gist.github.com/nedlir/a50725b94650467f0593b8f4009ae19e"
     },
     {
-      "type": "WEB",
-      "url": "https://github.com/BillaBear/billabear"
+      "type": "PACKAGE",
+      "url": "https://github.com/billabear/billabear"
     }
   ],
   "database_specific": {
@@ -37,8 +58,8 @@
       "CWE-89"
     ],
     "severity": "HIGH",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-04T21:38:38Z",
     "nvd_published_at": "2026-05-19T16:16:20Z"
   }
 }
