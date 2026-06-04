@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2h6v-g45h-32xx",
-  "modified": "2026-06-02T15:32:13Z",
+  "modified": "2026-06-04T15:30:28Z",
   "published": "2026-06-02T15:32:13Z",
   "aliases": [
     "CVE-2026-7312"
@@ -25,7 +25,9 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
+    "cwe_ids": [
+      "CWE-522"
+    ],
     "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,

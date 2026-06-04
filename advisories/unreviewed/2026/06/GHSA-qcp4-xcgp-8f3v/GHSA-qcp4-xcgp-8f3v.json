@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qcp4-xcgp-8f3v",
+  "modified": "2026-06-04T15:30:40Z",
+  "published": "2026-06-04T15:30:40Z",
+  "aliases": [
+    "CVE-2026-10808"
+  ],
+  "details": "A vulnerability was identified in itsourcecode Fees Management System 1.0. This affects an unknown function of the file /manage_student.php. The manipulation of the argument ID leads to sql injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10808"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ltranquility/vuln_submit/issues/12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://itsourcecode.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-10808"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/831567"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/368256"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/368256/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T14:16:37Z"
+  }
+}

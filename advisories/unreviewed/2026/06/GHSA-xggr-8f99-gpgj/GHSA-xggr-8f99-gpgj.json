@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xggr-8f99-gpgj",
+  "modified": "2026-06-04T15:30:39Z",
+  "published": "2026-06-04T15:30:39Z",
+  "aliases": [
+    "CVE-2019-25734"
+  ],
+  "details": "Contact Form by WD 1.13.1 contains a cross-site request forgery vulnerability combined with local file inclusion that allows unauthenticated attackers to include arbitrary files by exploiting unsanitized action parameters. Attackers can craft malicious forms targeting the admin-ajax.php endpoint with directory traversal sequences in the GET action parameter to load files via CSRF, bypassing authentication on vulnerable AJAX actions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25734"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/plugins/contact-form-maker"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46661"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/contact-form-by-wd-csrf-to-local-file-inclusion"
+    },
+    {
+      "type": "WEB",
+      "url": "http://web-dorado.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T14:16:31Z"
+  }
+}

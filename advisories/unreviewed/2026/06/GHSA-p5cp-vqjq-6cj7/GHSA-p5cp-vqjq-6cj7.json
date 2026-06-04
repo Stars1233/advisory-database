@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p5cp-vqjq-6cj7",
-  "modified": "2026-06-02T21:30:43Z",
+  "modified": "2026-06-04T15:30:32Z",
   "published": "2026-06-02T21:30:43Z",
   "aliases": [
     "CVE-2026-48682"
   ],
   "details": "FastNetMon Community Edition through 1.2.9 contains an out-of-bounds read in the IPv4 packet parser. In src/simple_packet_parser_ng.cpp, after validating that the packet contains at least sizeof(ipv4_header_t) bytes (20 bytes), the code advances the local_pointer by '4 * ipv4_header->get_ihl()' (line 164) without validating that (a) IHL >= 5 (the minimum valid value per RFC 791), or (b) 4 * IHL bytes are actually available in the packet. The IHL field is 4 bits, allowing values 0-15, so the advance can be 0-60 bytes. An IHL value of 15 with only 20 bytes validated causes a 40-byte over-read. An IHL of 0-4 causes the pointer to not advance past the IP header, resulting in the TCP/UDP header being parsed from IP header data (type confusion). This vulnerability is reachable via any packet capture interface.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -29,9 +34,10 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-125",
       "CWE-843"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-02T20:16:38Z"

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9gjj-gmcx-6fhj",
+  "modified": "2026-06-04T15:30:40Z",
+  "published": "2026-06-04T15:30:40Z",
+  "aliases": [
+    "CVE-2026-10861"
+  ],
+  "details": "An open redirect vulnerability existed in MISP UsersController::routeafterlogin() because the value stored in the pre_login_requested_url session key was used as the post-login redirect destination without sufficiently enforcing that it was a local application path.\n\n\n\n\nAn unauthenticated remote attacker could craft a link that causes a victim to visit a trusted MISP instance and, after successful authentication, be redirected to an attacker-controlled external URL. This could be abused to increase the credibility of phishing attacks, redirect users to counterfeit login pages, or deliver attacker-controlled content from an untrusted domain. CWE-601 describes this weakness as accepting user-controlled input that specifies an external link and using it in a redirect, with phishing as a common consequence. \n\n\n\n\nThe patch mitigates the issue by decoding and parsing the URL, rejecting URLs with a scheme, host, user component, missing or non-local path, and protocol-relative forms such as //example.com and /\\example.com.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Green"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/ae760b7bf534f2798810d59a1f961b31adb3443e"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T14:16:38Z"
+  }
+}

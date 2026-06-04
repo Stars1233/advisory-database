@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4wqr-74mq-rfw2",
-  "modified": "2026-06-03T18:33:11Z",
+  "modified": "2026-06-04T15:30:32Z",
   "published": "2026-06-03T18:33:11Z",
   "aliases": [
     "CVE-2026-36616"
   ],
   "details": "Mercusys AC12G (EU) V1 with firmware AC12G(EU)_V1_200909 contains hardcoded WiFi driver credentials including a RADIUS shared secret, WPS test key, and default PSK embedded in the production firmware binary.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-798"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T18:16:22Z"

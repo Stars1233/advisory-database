@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hc3x-x9g3-2rqp",
+  "modified": "2026-06-04T15:30:39Z",
+  "published": "2026-06-04T15:30:39Z",
+  "aliases": [
+    "CVE-2019-25744"
+  ],
+  "details": "WordPress Popup Builder 3.49 contains a persistent cross-site scripting vulnerability that allows authenticated attackers to inject malicious scripts by breaking out of option tags in the post_title parameter. Attackers can submit crafted POST requests to the post.php endpoint with script payloads in the post_title field that execute when pages or posts display popup selections.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25744"
+    },
+    {
+      "type": "WEB",
+      "url": "https://popup-builder.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/plugins/popup-builder"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/47518"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/wordpress-popup-builder-persistent-cross-site-scripting"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T14:16:33Z"
+  }
+}

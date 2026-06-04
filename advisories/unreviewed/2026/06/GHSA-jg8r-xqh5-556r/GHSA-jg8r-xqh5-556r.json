@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jg8r-xqh5-556r",
-  "modified": "2026-06-03T21:30:31Z",
+  "modified": "2026-06-04T15:30:33Z",
   "published": "2026-06-03T21:30:31Z",
   "aliases": [
     "CVE-2026-8879"
   ],
   "details": "Version 3.0.7 of the Securly Chrome Extension dynamically registers content13.min.js as a content script via chrome.scripting.registerContentScripts() at runtime. This script is NOT declared in manifest.json and bypasses Chrome Web Store static security review. It runs on all URLs and immediately hides all page content, creates a full-page overlay, pauses all videos, and only restores content when the service worker confirms the page passes filtering. If Securly's servers are unreachable, pages remain indefinitely hidden.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-829"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T19:16:39Z"

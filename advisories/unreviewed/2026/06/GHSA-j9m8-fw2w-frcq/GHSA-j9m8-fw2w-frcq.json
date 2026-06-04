@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-j9m8-fw2w-frcq",
-  "modified": "2026-06-03T21:30:29Z",
+  "modified": "2026-06-04T15:30:32Z",
   "published": "2026-06-03T21:30:29Z",
   "aliases": [
     "CVE-2026-26378"
   ],
   "details": "Cross Site Scripting vulnerability in Koha 25.11 and before allows a remote attacker to execute arbitrary code via file upload function in Invoice features",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -28,8 +33,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T19:16:25Z"

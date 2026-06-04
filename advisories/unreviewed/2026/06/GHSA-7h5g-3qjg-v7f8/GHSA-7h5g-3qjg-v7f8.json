@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7h5g-3qjg-v7f8",
+  "modified": "2026-06-04T15:30:38Z",
+  "published": "2026-06-04T15:30:38Z",
+  "aliases": [
+    "CVE-2019-25731"
+  ],
+  "details": "Zuz Music 2.1 contains a persistent cross-site scripting vulnerability that allows unauthenticated attackers to inject malicious JavaScript by submitting crafted contact form data. Attackers can inject script code through the name, subject, and message parameters in POST requests to /gmusic/zuzconsole/___contact, which executes when administrators view messages in the inbox interface.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25731"
+    },
+    {
+      "type": "WEB",
+      "url": "https://codecanyon.net/item/zuz-music-advance-music-platform-system/21633476"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/46420"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/zuz-music-persistent-cross-site-scripting-via-zuzconsole-contact"
+    },
+    {
+      "type": "WEB",
+      "url": "https://zuz.host"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T14:16:31Z"
+  }
+}

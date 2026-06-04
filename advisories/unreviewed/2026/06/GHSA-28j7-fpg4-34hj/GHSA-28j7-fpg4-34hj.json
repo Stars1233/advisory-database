@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-28j7-fpg4-34hj",
-  "modified": "2026-06-02T15:32:13Z",
+  "modified": "2026-06-04T15:30:29Z",
   "published": "2026-06-02T15:32:13Z",
   "aliases": [
     "CVE-2026-7313"
@@ -25,7 +25,9 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
+    "cwe_ids": [
+      "CWE-522"
+    ],
     "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,

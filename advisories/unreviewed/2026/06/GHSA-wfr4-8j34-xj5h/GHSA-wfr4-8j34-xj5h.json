@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wfr4-8j34-xj5h",
+  "modified": "2026-06-04T15:30:39Z",
+  "published": "2026-06-04T15:30:39Z",
+  "aliases": [
+    "CVE-2025-46638"
+  ],
+  "details": "Dell BSAFE SSL-J contains an allocation of resources without limits or throttling vulnerability. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to a Denial of Service (DoS).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46638"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dell.com/support/kbdoc/en-us/000398976/dsa-2025-432-security-update-for-dell-bsafe-ssl-j-vulnerability"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-04T14:16:34Z"
+  }
+}
