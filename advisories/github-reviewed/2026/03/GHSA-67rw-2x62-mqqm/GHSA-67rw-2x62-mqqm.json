@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-67rw-2x62-mqqm",
-  "modified": "2026-03-12T14:22:46Z",
+  "modified": "2026-06-05T17:51:07Z",
   "published": "2026-03-12T14:22:46Z",
   "aliases": [
     "CVE-2026-32108"
@@ -47,6 +47,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/9001/copyparty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/copyparty/PYSEC-2026-31.yaml"
     }
   ],
   "database_specific": {
