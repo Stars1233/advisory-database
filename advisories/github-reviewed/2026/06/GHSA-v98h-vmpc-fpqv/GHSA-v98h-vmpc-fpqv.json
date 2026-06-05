@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v98h-vmpc-fpqv",
+  "modified": "2026-06-05T20:29:07Z",
+  "published": "2026-06-05T20:29:07Z",
+  "aliases": [
+    "CVE-2026-47762"
+  ],
+  "summary": "TinyMCE Cross-Site Scripting (XSS) vulnerability through `mce:protected` comments",
+  "details": "### Impact\nStored XSS vulnerability via forged mce:protected comments. Allows attackers to bypass sanitization and inject scripts that execute when content is restored. Impacts users who utilize the protect option.\n\n### Patches\nPatched by validating decoded mce:protected content against configured protect regex rules before restoring. Users should upgrade to the latest patched version.\n\n### Workarounds\nNo official workaround available.\n\n### Fix\nTo avoid this vulnerability:\n\nUpgrade to TinyMCE 8.5.1 or higher.\nUpgrade to TinyMCE 7.9.3 or higher.\nUpgrade to TinyMCE 5.11.1 LTS or higher for TinyMCE 5.x (only available as part of commercial [long-term support](https://www.tiny.cloud/long-term-support/) contract).\n\n### Acknowledgements\nTiny thanks [Ivan Babenko](https://github.com/he1d3n) for their help identifying this vulnerability.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "tinymce"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 5.11.1"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "tinymce"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "7.9.3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "tinymce"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.5.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "TinyMCE"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 5.11.1"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "TinyMCE"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "7.9.3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "TinyMCE"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.5.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "tinymce/tinymce"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "< 5.11.1"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "tinymce/tinymce"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "7.9.3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "tinymce/tinymce"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tinymce/tinymce/security/advisories/GHSA-v98h-vmpc-fpqv"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47762"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/tinymce/tinymce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tiny.cloud/docs/tinymce/7/7.9.3-release-notes/#overview"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tiny.cloud/docs/tinymce/8/8.5.1-release-notes/#overview"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-05T20:29:07Z",
+    "nvd_published_at": "2026-05-28T16:16:28Z"
+  }
+}
