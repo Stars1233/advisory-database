@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c3xq-266q-8gcx",
-  "modified": "2022-05-24T16:50:26Z",
+  "modified": "2026-06-05T21:31:48Z",
   "published": "2022-05-24T16:50:26Z",
   "aliases": [
     "CVE-2019-1010292"
   ],
   "details": "Linaro/OP-TEE OP-TEE Prior to version v3.4.0 is affected by: Boundary checks. The impact is: This could lead to corruption of any memory which the TA can access. The component is: optee_os. The fixed version is: v3.4.0.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,7 +26,8 @@
   ],
   "database_specific": {
     "cwe_ids": [
-      "CWE-119"
+      "CWE-119",
+      "CWE-787"
     ],
     "severity": "CRITICAL",
     "github_reviewed": false,

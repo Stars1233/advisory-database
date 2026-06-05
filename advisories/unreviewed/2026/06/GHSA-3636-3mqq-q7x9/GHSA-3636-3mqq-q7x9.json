@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3636-3mqq-q7x9",
-  "modified": "2026-06-04T15:30:40Z",
+  "modified": "2026-06-05T21:31:55Z",
   "published": "2026-06-04T15:30:40Z",
   "aliases": [
     "CVE-2026-10854"
   ],
   "details": "A visibility control issue in the event template creation workflow allowed non-site-admin users to access private galaxies belonging to other organisations. The event template builder loaded all enabled galaxies without applying organisation or distribution-based access restrictions, potentially exposing private galaxy metadata such as galaxy type and description to users who should not have visibility.\n\n\n\nThe issue has been fixed by restricting galaxy queries for non-site-admin users to galaxies owned by the user’s organisation or galaxies with a non-private distribution setting. Site administrators retain visibility of all enabled galaxies.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Green"

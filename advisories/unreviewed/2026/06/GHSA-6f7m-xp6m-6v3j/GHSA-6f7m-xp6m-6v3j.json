@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6f7m-xp6m-6v3j",
+  "modified": "2026-06-05T21:32:04Z",
+  "published": "2026-06-05T21:32:04Z",
+  "aliases": [
+    "CVE-2026-36785"
+  ],
+  "details": "Shenzhen Tenda Technology Co., Ltd Tenda FH451 V1.0.0.9 was discovered to contain a stack overflow in the page parameter of the fromDhcpListClient function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted HTTP request.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36785"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/xhh0124/SemVulLLM"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/xhh0124/SemVulLLM/tree/main/FH451/fromDhcpListClient_0"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-05T21:16:30Z"
+  }
+}

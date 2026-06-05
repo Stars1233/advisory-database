@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2wp5-pmpm-74rh",
-  "modified": "2026-06-05T00:31:44Z",
+  "modified": "2026-06-05T21:31:57Z",
   "published": "2026-06-05T00:31:44Z",
   "aliases": [
     "CVE-2026-11035"
   ],
   "details": "Inappropriate implementation in Custom Tabs in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to perform privilege escalation via a crafted XML file. (Chromium security severity: Medium)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-20"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-04T23:17:07Z"

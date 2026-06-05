@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5h7h-rxr9-2ccv",
+  "modified": "2026-06-05T21:32:04Z",
+  "published": "2026-06-05T21:32:04Z",
+  "aliases": [
+    "CVE-2026-25624"
+  ],
+  "details": "An administrative cross-site scripting (XSS) vulnerability exists in the web user interface dashboard layout of Arista Edge Threat Management - Arista Next Generation Firewall (NGFW). Unvalidated user-supplied variables are echoed back to administrative profiles, facilitating vector payload processing behavior controls.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:H/VI:L/VA:L/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25624"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/23399-security-advisory-0133"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-05T20:17:31Z"
+  }
+}

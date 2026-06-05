@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p88f-g9m7-hv9c",
-  "modified": "2022-01-26T00:03:45Z",
+  "modified": "2026-06-05T21:31:50Z",
   "published": "2022-01-14T00:02:18Z",
   "aliases": [
     "CVE-2021-40327"
   ],
   "details": "Trusted Firmware-M (TF-M) 1.4.0, when Profile Small is used, has incorrect access control. NSPE can access a secure key (held by the Crypto service) based solely on knowledge of its key ID. For example, there is no authorization check associated with the relationship between a caller and a key owner.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {

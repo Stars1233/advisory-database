@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hw98-4hg3-42jx",
-  "modified": "2026-06-05T00:31:54Z",
+  "modified": "2026-06-05T21:32:02Z",
   "published": "2026-06-05T00:31:54Z",
   "aliases": [
     "CVE-2026-11264"
   ],
   "details": "Policy bypass in Content Security Policy in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass content security policy via a crafted HTML page. (Chromium security severity: Low)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -24,8 +29,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-693"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-05T00:17:03Z"

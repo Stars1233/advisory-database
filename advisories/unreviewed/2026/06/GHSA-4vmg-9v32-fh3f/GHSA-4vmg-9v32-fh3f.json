@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4vmg-9v32-fh3f",
+  "modified": "2026-06-05T21:32:04Z",
+  "published": "2026-06-05T21:32:04Z",
+  "aliases": [
+    "CVE-2026-25622"
+  ],
+  "details": "A Captive Portal Custom Handler command injection vulnerability exists in Arista Edge Threat Management - Arista Next Generation Firewall (NGFW). On affected platforms, an administrative account logged into the user interface can exploit this input handling behavior to execute arbitrary platform shell commands.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:L/VA:L/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25622"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/23399-security-advisory-0133"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-05T20:17:30Z"
+  }
+}

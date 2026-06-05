@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-32x7-f6p3-x83q",
-  "modified": "2026-06-05T00:31:55Z",
+  "modified": "2026-06-05T21:32:03Z",
   "published": "2026-06-05T00:31:55Z",
   "aliases": [
     "CVE-2026-11290"
   ],
   "details": "Integer overflow in WebView in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to cause a denial of service via a malicious file. (Chromium security severity: Low)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -25,9 +30,10 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-190",
       "CWE-472"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-05T00:17:06Z"

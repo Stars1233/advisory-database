@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-93v7-558w-29j5",
-  "modified": "2026-06-05T00:31:54Z",
+  "modified": "2026-06-05T21:32:02Z",
   "published": "2026-06-05T00:31:54Z",
   "aliases": [
     "CVE-2026-11267"
   ],
   "details": "Insufficient policy enforcement in Extensions in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to bypass content security policy via a crafted Chrome Extension. (Chromium security severity: Low)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -24,8 +29,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-602"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-05T00:17:03Z"

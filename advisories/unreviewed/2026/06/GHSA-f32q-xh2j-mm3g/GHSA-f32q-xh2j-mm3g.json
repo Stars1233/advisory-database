@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f32q-xh2j-mm3g",
+  "modified": "2026-06-05T21:32:04Z",
+  "published": "2026-06-05T21:32:03Z",
+  "aliases": [
+    "CVE-2026-5415"
+  ],
+  "details": "The WP Captcha PRO (the premium version of the Advanced Google reCAPTCHA plugin, both have the same slug) plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 5.38. This is due to the ajax_run_tool() AJAX handler relying solely on a nonce check (check_ajax_referer) for security without performing any capability check, combined with the create_temporary_link tool allowing the generation of passwordless login links for arbitrary users, and the handle_temporary_links() function authenticating visitors via these links without any additional authorization validation. The required nonce is exposed to all authenticated backend users (including Subscribers) via wp_localize_script() on all non-settings admin pages when the plugin's welcome pointer has not been dismissed. This makes it possible for authenticated attackers, with Subscriber-level access and above, to bypass normal authentication and log in as any user, including Administrators, resulting in complete account takeover.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5415"
+    },
+    {
+      "type": "WEB",
+      "url": "https://getwpcaptcha.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/8731565f-4d8a-49e6-9c38-6d4f5e51d68c?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-288"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-05T19:16:35Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8mjc-gx82-2m9v",
+  "modified": "2026-06-05T21:32:04Z",
+  "published": "2026-06-05T21:32:04Z",
+  "aliases": [
+    "CVE-2026-11423"
+  ],
+  "details": "A path traversal vulnerability exists in the Altium Enterprise Server Collaboration Service due to improper handling of user-supplied filenames in the MCAD and Simulation file download flows. A regular authenticated user can submit a collaboration message containing a crafted filename, which is later used to construct the download path on the server without validation, allowing arbitrary files to be read from the server filesystem.\n\n\n\n\nBecause the readable files include the server's master configuration, which stores credentials for privileged accounts, exploitation can lead to authenticating as a system administrator and gaining full control of the server. Altium 365 cloud deployments are not affected.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11423"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.altium.com/platform/security-compliance/security-advisories"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-05T21:16:29Z"
+  }
+}

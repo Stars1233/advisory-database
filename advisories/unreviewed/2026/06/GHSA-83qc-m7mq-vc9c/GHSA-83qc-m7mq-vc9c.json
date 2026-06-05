@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-83qc-m7mq-vc9c",
-  "modified": "2026-06-05T00:31:42Z",
+  "modified": "2026-06-05T21:31:56Z",
   "published": "2026-06-05T00:31:42Z",
   "aliases": [
     "CVE-2026-10981"
   ],
   "details": "Insufficient validation of untrusted input in Codecs in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted video file. (Chromium security severity: High)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-20"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-04T23:17:01Z"

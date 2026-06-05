@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-94jw-hqvj-vw74",
-  "modified": "2026-06-05T15:32:25Z",
+  "modified": "2026-06-05T21:32:03Z",
   "published": "2026-06-05T15:32:25Z",
   "aliases": [
     "CVE-2026-37737"
   ],
   "details": "sanic-cors version 2.2.0 and prior contains an improper regular expression in the try_match() function in sanic_cors/core.py that uses re.match without end-anchoring. This allows an attacker to bypass CORS origin allowlists by registering a domain that begins with a trusted origin string, to gain unauthorized access to cross-origin requests for authenticated resources.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-346"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-05T15:16:51Z"
