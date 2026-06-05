@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6497-prx7-gpmq",
-  "modified": "2026-04-21T21:31:18Z",
+  "modified": "2026-06-05T17:56:23Z",
   "published": "2026-01-30T21:30:22Z",
   "aliases": [
     "CVE-2025-69662"
@@ -63,6 +63,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/geopandas/geopandas/releases/tag/v1.1.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/geopandas/PYSEC-2026-62.yaml"
     },
     {
       "type": "WEB",
