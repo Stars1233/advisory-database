@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h4mp-g9c6-xwph",
+  "modified": "2026-06-05T20:33:47Z",
+  "published": "2026-06-05T20:33:47Z",
+  "aliases": [
+    "CVE-2026-47742"
+  ],
+  "summary": "Shopper: Missing authorization on Product admin Livewire sub-form components",
+  "details": "## Impact\n\nSub-form Livewire components used in the product editor (`Edit`, `Inventory`, `Seo`, `Shipping`, `Files`) had no authorization on their `store()` method. Any authenticated panel user, regardless of role, could mutate any product's pricing, stock, SEO metadata, shipping dimensions, and attached media without holding `edit_products`.\n\nThe affected components accepted the product ID as a public Livewire property without `#[Locked]`, so an attacker could also target an arbitrary product by tampering with the wire payload from the client.\n\n## Patches\n\nFixed in `v2.8.0`. Each sub-form `store()` now authorizes against `edit_products` and the product binding is locked.\n\nUpgrade via:\n\n```bash\ncomposer require shopper/admin:^2.8\n```\n\n## Workarounds\n\nNone. Upgrade to `v2.8.0`.\n\n## References\n\n- Pull request: https://github.com/shopperlabs/shopper/pull/511\n- CWE-862 Missing Authorization",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "shopper/framework"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/shopperlabs/shopper/security/advisories/GHSA-h4mp-g9c6-xwph"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47742"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/shopperlabs/shopper/pull/511"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/shopperlabs/shopper"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-05T20:33:47Z",
+    "nvd_published_at": "2026-05-29T19:16:25Z"
+  }
+}

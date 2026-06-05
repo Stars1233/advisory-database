@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-45vw-wh46-2vx8",
-  "modified": "2026-05-21T21:31:08Z",
+  "modified": "2026-06-05T20:33:13Z",
   "published": "2026-05-21T21:31:08Z",
   "aliases": [
     "CVE-2026-46640"
@@ -47,6 +47,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/twigphp/Twig"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/vladko312/extras/blob/main/CVE-2026-46640.py"
     },
     {
       "type": "WEB",

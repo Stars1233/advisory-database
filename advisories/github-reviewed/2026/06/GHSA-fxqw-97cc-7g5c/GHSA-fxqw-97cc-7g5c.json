@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fxqw-97cc-7g5c",
+  "modified": "2026-06-05T20:34:31Z",
+  "published": "2026-06-05T20:34:31Z",
+  "aliases": [
+    "CVE-2026-47745"
+  ],
+  "summary": "Shopper: Missing per-action authorization on PaymentMethods, Currencies and Carriers admin tables",
+  "details": "## Impact\n\nThe admin tables for `PaymentMethods`, `Currencies` and `Carriers` exposed inline toggles and per-record actions (enable, disable, edit, delete) that were rendered for any authenticated panel user without checking the corresponding per-action permission. A low-privilege user could:\n\n- Disable every payment method on the store, blocking checkout.\n- Disable or alter the default currency, changing displayed prices and the exchange rate basis.\n- Disable carriers, breaking shipping rate computation at checkout.\n\nThe impact is a full denial of checkout and pricing integrity loss, reachable by any authenticated user.\n\n## Patches\n\nFixed in `v2.8.0`. Each toggle and per-record action now requires its matching permission (`edit_payment_methods`, `edit_currencies`, `edit_carriers`).\n\nUpgrade via:\n\n```bash\ncomposer require shopper/admin:^2.8\n```\n\n## Workarounds\n\nNone. Upgrade to `v2.8.0`.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "shopper/framework"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/shopperlabs/shopper/security/advisories/GHSA-fxqw-97cc-7g5c"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47745"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/shopperlabs/shopper/pull/511"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/shopperlabs/shopper"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-05T20:34:31Z",
+    "nvd_published_at": "2026-05-29T19:16:26Z"
+  }
+}
