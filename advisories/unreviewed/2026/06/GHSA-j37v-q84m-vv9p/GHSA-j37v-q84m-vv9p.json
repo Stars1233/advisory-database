@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-j37v-q84m-vv9p",
-  "modified": "2026-06-05T00:31:46Z",
+  "modified": "2026-06-05T18:31:34Z",
   "published": "2026-06-05T00:31:46Z",
   "aliases": [
     "CVE-2026-11079"
   ],
   "details": "Insufficient validation of untrusted input in Codecs in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to perform an out of bounds memory write via a crafted video file. (Chromium security severity: Medium)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-20"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-04T23:17:12Z"

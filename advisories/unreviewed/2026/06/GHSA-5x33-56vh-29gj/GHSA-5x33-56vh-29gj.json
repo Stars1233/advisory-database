@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5x33-56vh-29gj",
-  "modified": "2026-06-05T00:31:55Z",
+  "modified": "2026-06-05T18:31:39Z",
   "published": "2026-06-05T00:31:55Z",
   "aliases": [
     "CVE-2026-11301"
   ],
   "details": "Inappropriate implementation in LiveCaption in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform out of bounds memory access via malicious network traffic. (Chromium security severity: Low)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-125"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-05T00:17:07Z"

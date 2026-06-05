@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rwrf-5qh9-q8j8",
-  "modified": "2026-03-10T18:31:12Z",
+  "modified": "2026-06-05T18:31:31Z",
   "published": "2026-01-22T12:31:22Z",
   "aliases": [
     "CVE-2025-4764"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4764"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0001"
     },
     {
       "type": "WEB",

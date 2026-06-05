@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h9q5-44xj-9xmq",
+  "modified": "2026-06-05T18:31:40Z",
+  "published": "2026-06-05T18:31:40Z",
+  "aliases": [
+    "CVE-2026-11342"
+  ],
+  "details": "A vulnerability has been found in code-projects Hotel and Tourism Reservation System 1.0. This affects an unknown function of the file /details.php. Such manipulation of the argument room leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://code-projects.org"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/khanfyhhfgfe-cmyk/ht-sql/blob/main/ht_sql.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-11342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/832902"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/368883"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/368883/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-05T18:17:04Z"
+  }
+}

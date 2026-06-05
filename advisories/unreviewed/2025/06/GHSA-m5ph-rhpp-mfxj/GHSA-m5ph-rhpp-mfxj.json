@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m5ph-rhpp-mfxj",
-  "modified": "2025-06-26T21:31:09Z",
+  "modified": "2026-06-05T18:31:30Z",
   "published": "2025-06-26T21:31:09Z",
   "aliases": [
     "CVE-2025-4378"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4378"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0135"
     },
     {
       "type": "WEB",

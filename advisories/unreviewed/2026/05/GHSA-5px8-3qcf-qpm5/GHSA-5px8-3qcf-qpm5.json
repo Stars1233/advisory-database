@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5px8-3qcf-qpm5",
-  "modified": "2026-05-26T13:30:28Z",
+  "modified": "2026-06-05T18:31:31Z",
   "published": "2026-05-26T13:30:28Z",
   "aliases": [
     "CVE-2026-48829"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://codeberg.org/gsasl/gsasl/commit/da9b5ae2962b014879e4a406c3b38f25aa70e97a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2026/06/msg00007.html"
     },
     {
       "type": "WEB",

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-96m2-jm5m-f37f",
-  "modified": "2026-06-05T00:31:47Z",
+  "modified": "2026-06-05T18:31:35Z",
   "published": "2026-06-05T00:31:47Z",
   "aliases": [
     "CVE-2026-11089"
   ],
   "details": "Uninitialized Use in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -25,9 +30,10 @@
   ],
   "database_specific": {
     "cwe_ids": [
-      "CWE-457"
+      "CWE-457",
+      "CWE-908"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-04T23:17:13Z"

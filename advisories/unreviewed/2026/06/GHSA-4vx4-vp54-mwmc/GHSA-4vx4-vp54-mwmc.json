@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4vx4-vp54-mwmc",
-  "modified": "2026-06-04T15:30:41Z",
+  "modified": "2026-06-05T18:31:32Z",
   "published": "2026-06-04T15:30:41Z",
   "aliases": [
     "CVE-2026-28318"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://documentation.solarwinds.com/en/success_center/servu/content/release_notes/servu_15-5-4-hotfix-1_release_notes.htm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-28318"
     },
     {
       "type": "WEB",

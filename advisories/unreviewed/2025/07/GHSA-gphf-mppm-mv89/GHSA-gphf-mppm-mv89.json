@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gphf-mppm-mv89",
-  "modified": "2025-07-22T15:32:51Z",
+  "modified": "2026-06-05T18:31:31Z",
   "published": "2025-07-22T15:32:51Z",
   "aliases": [
     "CVE-2025-4294"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4294"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0169"
     },
     {
       "type": "WEB",
