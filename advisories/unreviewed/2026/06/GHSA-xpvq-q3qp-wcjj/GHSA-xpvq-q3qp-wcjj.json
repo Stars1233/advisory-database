@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xpvq-q3qp-wcjj",
+  "modified": "2026-06-06T00:31:39Z",
+  "published": "2026-06-06T00:31:39Z",
+  "aliases": [
+    "CVE-2026-6448"
+  ],
+  "details": "The Quiz and Survey Master (QSM) – Easy Quiz and Survey Maker plugin for WordPress is vulnerable to time-based blind SQL Injection via the 'order' parameter in all versions up to, and including, 11.1.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with admin-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. If the secret key is exposed, this can be exploited by lower-privileged users.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6448"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/tags/10.3.5/php/classes/class-qsm-quiz-api.php#L126"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/tags/10.3.5/php/classes/class-qsm-quiz-api.php#L131"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/tags/10.3.5/php/classes/class-qsm-quiz-api.php#L164"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/tags/10.3.5/php/classes/class-qsm-quiz-api.php#L243"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/tags/10.3.5/php/classes/class-qsm-quiz-api.php#L374"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/trunk/php/classes/class-qsm-quiz-api.php#L126"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/trunk/php/classes/class-qsm-quiz-api.php#L131"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/trunk/php/classes/class-qsm-quiz-api.php#L164"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/trunk/php/classes/class-qsm-quiz-api.php#L243"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/quiz-master-next/trunk/php/classes/class-qsm-quiz-api.php#L374"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3547016%40quiz-master-next&new=3547016%40quiz-master-next&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/d230b781-e208-4e66-b8ed-aba72db8d8dc?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-06T00:16:41Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qv33-m6vq-mqmr",
+  "modified": "2026-06-06T00:31:38Z",
+  "published": "2026-06-06T00:31:38Z",
+  "aliases": [
+    "CVE-2026-6240"
+  ],
+  "details": "A stack-based buffer overflow vulnerability exists in Tapo C520WS v2 in the ONVIF DeleteUsers service, due to insufficient boundary checks when handling multiple user deletion parameters. An authenticated attacker can send a  crafted malicious request containing an excessive number of identifiers to overflow stack memory.\n\nSuccessful exploitation may result in a service crash or deadlock, leading to DoS affecting device management and monitoring functionality.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6240"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/en/support/download/tapo-c520ws/#Firmware-Release-Notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/us/support/download/tapo-c520ws/#Firmware-Release-Notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tp-link.com/us/support/faq/5120"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-06T00:16:41Z"
+  }
+}
