@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jmh7-g254-2cq9",
-  "modified": "2026-03-01T01:29:31Z",
+  "modified": "2026-06-06T00:22:40Z",
   "published": "2026-03-01T01:29:31Z",
   "aliases": [
     "CVE-2026-28416"
@@ -55,6 +55,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/gradio-app/gradio/releases/tag/gradio%406.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/gradio/PYSEC-2026-66.yaml"
     }
   ],
   "database_specific": {

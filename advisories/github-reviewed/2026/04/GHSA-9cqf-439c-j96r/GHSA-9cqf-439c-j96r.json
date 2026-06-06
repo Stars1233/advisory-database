@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9cqf-439c-j96r",
-  "modified": "2026-04-07T17:04:40Z",
+  "modified": "2026-06-06T00:23:45Z",
   "published": "2026-04-03T03:48:48Z",
   "aliases": [
     "CVE-2026-35171"
@@ -47,6 +47,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/kedro-org/kedro"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/kedro/PYSEC-2026-72.yaml"
     }
   ],
   "database_specific": {
