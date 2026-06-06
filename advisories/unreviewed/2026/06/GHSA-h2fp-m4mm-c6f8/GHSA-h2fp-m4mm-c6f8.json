@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h2fp-m4mm-c6f8",
+  "modified": "2026-06-06T21:31:28Z",
+  "published": "2026-06-06T21:31:28Z",
+  "aliases": [
+    "CVE-2026-36229"
+  ],
+  "details": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36229"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-06T21:16:25Z"
+  }
+}
