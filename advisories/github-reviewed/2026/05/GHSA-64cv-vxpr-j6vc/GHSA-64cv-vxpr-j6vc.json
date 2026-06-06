@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-64cv-vxpr-j6vc",
-  "modified": "2026-05-13T14:17:59Z",
+  "modified": "2026-06-06T00:27:25Z",
   "published": "2026-05-05T17:51:50Z",
   "aliases": [
     "CVE-2026-42860"
@@ -50,6 +50,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/openedx/edx-enterprise"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/edx-enterprise/PYSEC-2026-58.yaml"
     }
   ],
   "database_specific": {

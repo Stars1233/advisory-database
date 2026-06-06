@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5hrc-gvxj-w55p",
-  "modified": "2026-05-08T22:15:17Z",
+  "modified": "2026-06-06T00:27:52Z",
   "published": "2026-05-05T18:33:26Z",
   "aliases": [
     "CVE-2026-6907"
@@ -70,6 +70,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/django/django"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2026-55.yaml"
     },
     {
       "type": "WEB",

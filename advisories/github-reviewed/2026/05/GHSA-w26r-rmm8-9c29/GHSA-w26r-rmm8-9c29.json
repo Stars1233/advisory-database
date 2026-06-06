@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-w26r-rmm8-9c29",
-  "modified": "2026-05-08T22:14:39Z",
+  "modified": "2026-06-06T00:27:41Z",
   "published": "2026-05-05T18:33:26Z",
   "aliases": [
     "CVE-2026-5766"
@@ -70,6 +70,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/django/django"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2026-54.yaml"
     },
     {
       "type": "WEB",
