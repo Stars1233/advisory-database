@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-v4v8-93mw-cjfm",
-  "modified": "2025-03-20T15:30:36Z",
+  "modified": "2026-06-06T09:31:11Z",
   "published": "2025-03-20T15:30:36Z",
   "aliases": [
     "CVE-2025-1496"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1496"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0075"
     },
     {
       "type": "WEB",

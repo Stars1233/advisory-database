@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g69f-2fw2-vv87",
-  "modified": "2026-03-10T18:31:22Z",
+  "modified": "2026-06-06T09:31:15Z",
   "published": "2026-03-10T18:31:22Z",
   "aliases": [
     "CVE-2026-2339"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2339"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0087"
     },
     {
       "type": "WEB",

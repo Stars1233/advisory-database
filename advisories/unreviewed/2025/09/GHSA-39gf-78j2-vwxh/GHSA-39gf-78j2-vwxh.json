@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-39gf-78j2-vwxh",
-  "modified": "2025-09-17T09:30:44Z",
+  "modified": "2026-06-06T09:31:13Z",
   "published": "2025-09-17T09:30:44Z",
   "aliases": [
     "CVE-2025-0419"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0419"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0260"
     },
     {
       "type": "WEB",

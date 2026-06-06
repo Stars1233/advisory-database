@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6cgp-c2gm-8g7j",
-  "modified": "2025-05-02T12:32:00Z",
+  "modified": "2026-06-06T09:31:12Z",
   "published": "2025-05-02T12:32:00Z",
   "aliases": [
     "CVE-2025-1301"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1301"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0100"
     },
     {
       "type": "WEB",

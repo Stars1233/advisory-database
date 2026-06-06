@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m9rm-p9p2-3vg9",
-  "modified": "2026-05-04T12:30:28Z",
+  "modified": "2026-06-06T09:31:16Z",
   "published": "2026-05-04T12:30:28Z",
   "aliases": [
     "CVE-2026-3120"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3120"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0155"
     },
     {
       "type": "WEB",

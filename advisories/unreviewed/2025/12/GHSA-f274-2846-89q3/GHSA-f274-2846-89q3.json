@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f274-2846-89q3",
-  "modified": "2025-12-10T09:30:25Z",
+  "modified": "2026-06-06T09:31:14Z",
   "published": "2025-12-10T09:30:25Z",
   "aliases": [
     "CVE-2025-1161"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1161"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0440"
     },
     {
       "type": "WEB",

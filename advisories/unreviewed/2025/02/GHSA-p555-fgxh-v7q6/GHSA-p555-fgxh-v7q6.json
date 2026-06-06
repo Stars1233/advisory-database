@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p555-fgxh-v7q6",
-  "modified": "2025-02-24T15:30:49Z",
+  "modified": "2026-06-06T09:31:11Z",
   "published": "2025-02-24T15:30:49Z",
   "aliases": [
     "CVE-2025-0545"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0545"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0041"
     },
     {
       "type": "WEB",

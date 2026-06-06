@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jhqw-cq3q-2p2g",
-  "modified": "2025-02-18T15:31:07Z",
+  "modified": "2026-06-06T09:31:11Z",
   "published": "2025-02-18T15:31:07Z",
   "aliases": [
     "CVE-2025-1269"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/limanmys/core/releases/tag/release.master.1010"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0038"
     },
     {
       "type": "WEB",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h2j5-qh4r-f6cm",
-  "modified": "2026-01-30T09:30:55Z",
+  "modified": "2026-06-06T09:31:15Z",
   "published": "2026-01-30T09:30:55Z",
   "aliases": [
     "CVE-2025-1395"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1395"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0009"
     },
     {
       "type": "WEB",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4p49-fwp8-38mv",
-  "modified": "2026-02-13T15:30:26Z",
+  "modified": "2026-06-06T09:31:15Z",
   "published": "2026-02-13T15:30:26Z",
   "aliases": [
     "CVE-2026-1618"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1618"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0065"
     },
     {
       "type": "WEB",

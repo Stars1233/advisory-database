@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cm7g-mx38-j9fx",
-  "modified": "2025-12-19T12:31:25Z",
+  "modified": "2026-06-06T09:31:14Z",
   "published": "2025-12-19T12:31:25Z",
   "aliases": [
     "CVE-2025-1927"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1927"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0469"
     },
     {
       "type": "WEB",

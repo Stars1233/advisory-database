@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-w2m3-h5qg-m4mx",
-  "modified": "2025-10-02T15:31:15Z",
+  "modified": "2026-06-06T09:31:14Z",
   "published": "2025-10-02T15:31:15Z",
   "aliases": [
     "CVE-2025-0642"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0642"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0309"
     },
     {
       "type": "WEB",

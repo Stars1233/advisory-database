@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wpfc-p26p-rwww",
-  "modified": "2025-10-03T12:33:14Z",
+  "modified": "2026-06-06T09:31:14Z",
   "published": "2025-10-03T12:33:14Z",
   "aliases": [
     "CVE-2025-0876"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0876"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0312"
     },
     {
       "type": "WEB",

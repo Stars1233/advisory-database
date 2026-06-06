@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-84g5-732r-258r",
-  "modified": "2026-04-29T15:30:39Z",
+  "modified": "2026-06-06T09:31:16Z",
   "published": "2026-04-29T15:30:39Z",
   "aliases": [
     "CVE-2026-5140"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5140"
+    },
+    {
+      "type": "WEB",
+      "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0131"
     },
     {
       "type": "WEB",
