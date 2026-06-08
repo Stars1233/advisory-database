@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2r69-34r8-6c68",
+  "modified": "2026-06-08T12:30:29Z",
+  "published": "2026-06-08T12:30:29Z",
+  "aliases": [
+    "CVE-2026-11502"
+  ],
+  "details": "A weakness has been identified in JeecgBoot up to 3.9.2. Impacted is the function HttpServletResponse.sendRedirect of the file jeecg-module-system/jeecg-system-biz/src/main/java/org/jeecg/modules/system/controller/ThirdLoginController.java of the component Third-Party Login. This manipulation of the argument state causes open redirect. The attack can be initiated remotely. A high degree of complexity is needed for the attack. The exploitability is considered difficult. The exploit has been made available to the public and could be used for attacks. The project replied: \"After evaluation, this vulnerability has low exploitability in real-world scenarios: 1) Exploiting this vulnerability requires attackers to use social engineering techniques to induce victims to actively click on an OAuth login link constructed by the attacker; it cannot be triggered passively. 2) Third-party login (DingTalk/WeChat, etc.) is an optional feature and may not be enabled in most projects.\"",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11502"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot/issues/9639"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot/issues/9639#issuecomment-4544271822"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-11502"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/835622"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/369122"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/369122/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-08T10:16:32Z"
+  }
+}

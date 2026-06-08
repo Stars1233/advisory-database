@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-738f-5qwc-292j",
+  "modified": "2026-06-08T12:30:28Z",
+  "published": "2026-06-08T12:30:28Z",
+  "aliases": [
+    "CVE-2024-56121"
+  ],
+  "details": "Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-56121"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-08T10:16:31Z"
+  }
+}

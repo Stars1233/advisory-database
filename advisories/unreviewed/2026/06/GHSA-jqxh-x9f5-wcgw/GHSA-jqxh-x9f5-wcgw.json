@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jqxh-x9f5-wcgw",
+  "modified": "2026-06-08T12:30:29Z",
+  "published": "2026-06-08T12:30:29Z",
+  "aliases": [
+    "CVE-2026-50751"
+  ],
+  "details": "A logic flow weakness in Remote Access and Mobile Access certificate validation in deprecated IKEv1 key exchange allows an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50751"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.checkpoint.com/results/sk/sk185033"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-287"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-08T12:16:32Z"
+  }
+}

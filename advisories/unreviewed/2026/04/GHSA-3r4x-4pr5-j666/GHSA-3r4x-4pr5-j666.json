@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3r4x-4pr5-j666",
-  "modified": "2026-04-10T06:31:38Z",
+  "modified": "2026-06-08T12:30:28Z",
   "published": "2026-04-10T06:31:38Z",
   "aliases": [
     "CVE-2026-4482"
   ],
   "details": "The installer certificate files in the …/bootstrap/common/ssl folder do not seem to have restricted permissions on Windows systems (users have read and execute access). For the client.key file in particular, this could potentially lead to exploits, as this exposes agent identity material to any locally authenticated standard user.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
