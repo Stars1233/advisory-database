@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-grgv-6hw6-v9g4",
-  "modified": "2026-05-14T20:42:07Z",
+  "modified": "2026-06-08T20:05:10Z",
   "published": "2026-05-05T21:12:37Z",
   "aliases": [
     "CVE-2026-42304"
@@ -50,6 +50,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/twisted/twisted/commit/e11cd82bdd79b3ebbb0e8635cbb9c76df2b5af09"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/twisted/PYSEC-2026-160.yaml"
     },
     {
       "type": "PACKAGE",
