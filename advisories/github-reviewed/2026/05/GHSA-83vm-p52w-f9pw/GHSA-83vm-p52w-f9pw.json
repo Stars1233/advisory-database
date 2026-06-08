@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-83vm-p52w-f9pw",
-  "modified": "2026-05-13T16:29:07Z",
+  "modified": "2026-06-08T19:52:35Z",
   "published": "2026-05-06T21:45:51Z",
   "aliases": [
     "CVE-2026-44223"
@@ -47,6 +47,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/vllm-project/vllm/pull/38610"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/vllm/PYSEC-2026-145.yaml"
     },
     {
       "type": "PACKAGE",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-838g-gr43-qqg9",
-  "modified": "2026-05-13T14:18:08Z",
+  "modified": "2026-06-08T19:48:40Z",
   "published": "2026-05-05T21:18:19Z",
   "aliases": [
     "CVE-2026-42315"
@@ -50,6 +50,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/pyload/pyload"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pyload-ng/PYSEC-2026-129.yaml"
     }
   ],
   "database_specific": {
