@@ -1,14 +1,19 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f7w7-6pjc-wwm6",
-  "modified": "2024-02-22T19:39:26Z",
+  "modified": "2026-06-08T23:46:14Z",
   "published": "2022-05-02T03:46:22Z",
   "aliases": [
     "CVE-2009-3555"
   ],
   "summary": "Apache Tomcat affected by vulnerability in TLS and SSL protocol",
   "details": "The TLS protocol, and the SSL protocol 3.0 and possibly earlier, as used in Microsoft Internet Information Services (IIS) 7.0, mod_ssl in the Apache HTTP Server 2.2.14 and earlier, OpenSSL before 0.9.8l, GnuTLS 2.8.5 and earlier, Mozilla Network Security Services (NSS) 3.12.4 and earlier, multiple Cisco products, and other products, does not properly associate renegotiation handshakes with an existing connection, which allows man-in-the-middle attackers to insert data into HTTPS sessions, and possibly other types of sessions protected by TLS or SSL, by sending an unauthenticated request that is processed retroactively by a server in a post-renegotiation context, related to a \"plaintext injection\" attack, aka the \"Project Mogul\" issue.\n\nApache Tomcat was affected by this issue and introduced a workaround in versions 7.0.10, 6.0.32, and 5.5.33.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [
     {
       "package": {
@@ -75,27 +80,7 @@
     },
     {
       "type": "WEB",
-      "url": "https://github.com/apache/tomcat/commit/14e4efd925da58b9fa63f20969fb7349b8a9c30d"
-    },
-    {
-      "type": "WEB",
-      "url": "https://github.com/apache/tomcat/commit/2d4ca03acc27cc883c404d1745d92f983b6fada3"
-    },
-    {
-      "type": "WEB",
-      "url": "https://github.com/apache/tomcat/commit/30af3f5630542a2340781f66553e734a6fd69701"
-    },
-    {
-      "type": "WEB",
-      "url": "https://github.com/apache/tomcat/commit/328a523cbb2a2d4cd55283180614d4e03e2f8f02"
-    },
-    {
-      "type": "WEB",
-      "url": "https://github.com/apache/tomcat/commit/3d315ac9dfaa2c03b4df82938d78bf5b755766b3"
-    },
-    {
-      "type": "WEB",
-      "url": "https://github.com/apache/tomcat/commit/56f67141e82e16f68a860c3af9b7342da35cbe7d"
+      "url": "https://github.com/apache/tomcat/commit/df9633116b5fec8f47f1f008fb89a6e9d5895cd0"
     },
     {
       "type": "WEB",
@@ -103,43 +88,79 @@
     },
     {
       "type": "WEB",
-      "url": "https://github.com/apache/tomcat/commit/df9633116b5fec8f47f1f008fb89a6e9d5895cd0"
+      "url": "https://github.com/apache/tomcat/commit/56f67141e82e16f68a860c3af9b7342da35cbe7d"
     },
     {
       "type": "WEB",
-      "url": "https://oval.cisecurity.org/repository/search/definition/oval:org.mitre.oval:def:11617"
+      "url": "https://github.com/apache/tomcat/commit/3d315ac9dfaa2c03b4df82938d78bf5b755766b3"
     },
     {
       "type": "WEB",
-      "url": "https://oval.cisecurity.org/repository/search/definition/oval:org.mitre.oval:def:11578"
+      "url": "https://github.com/apache/tomcat/commit/328a523cbb2a2d4cd55283180614d4e03e2f8f02"
     },
     {
       "type": "WEB",
-      "url": "https://oval.cisecurity.org/repository/search/definition/oval:org.mitre.oval:def:10088"
+      "url": "https://github.com/apache/tomcat/commit/30af3f5630542a2340781f66553e734a6fd69701"
     },
     {
       "type": "WEB",
-      "url": "https://lists.apache.org/thread.html/rf8e8c091182b45daa50d3557cad9b10bb4198e3f08cf8f1c66a1b08d@<dev.tomcat.apache.org>"
+      "url": "https://github.com/apache/tomcat/commit/2d4ca03acc27cc883c404d1745d92f983b6fada3"
     },
     {
       "type": "WEB",
-      "url": "https://lists.apache.org/thread.html/re3b72cbb13e1dfe85c4a06959a3b6ca6d939b407ecca80db12b54220@<dev.tomcat.apache.org>"
+      "url": "https://github.com/apache/tomcat/commit/14e4efd925da58b9fa63f20969fb7349b8a9c30d"
     },
     {
       "type": "WEB",
-      "url": "https://lists.apache.org/thread.html/f8e0814e11c7f21f42224b6de111cb3f5e5ab5c15b78924c516d4ec2@<dev.tomcat.apache.org>"
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A8535"
     },
     {
       "type": "WEB",
-      "url": "https://lists.apache.org/thread.html/ba661b0edd913b39ff129a32d855620dd861883ade05fd88a8ce517d@<dev.tomcat.apache.org>"
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A8366"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A7973"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A7478"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A7315"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11617"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11578"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/rf8e8c091182b45daa50d3557cad9b10bb4198e3f08cf8f1c66a1b08d%40%3Cdev.tomcat.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/re3b72cbb13e1dfe85c4a06959a3b6ca6d939b407ecca80db12b54220%40%3Cdev.tomcat.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/f8e0814e11c7f21f42224b6de111cb3f5e5ab5c15b78924c516d4ec2%40%3Cdev.tomcat.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/ba661b0edd913b39ff129a32d855620dd861883ade05fd88a8ce517d%40%3Cdev.tomcat.apache.org%3E"
     },
     {
       "type": "WEB",
       "url": "https://kb.bluecoat.com/index?page=content&id=SA50"
-    },
-    {
-      "type": "WEB",
-      "url": "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05150888"
     },
     {
       "type": "WEB",
@@ -172,6 +193,10 @@
     {
       "type": "WEB",
       "url": "https://www.redhat.com/archives/fedora-package-announce/2009-December/msg00428.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/10579"
     },
     {
       "type": "WEB",
@@ -214,8 +239,20 @@
       "url": "https://oval.cisecurity.org/repository/search/definition/oval:org.mitre.oval:def:7315"
     },
     {
-      "type": "PACKAGE",
-      "url": "https://github.com/apache/tomcat"
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval:org.mitre.oval:def:11617"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval:org.mitre.oval:def:11578"
+    },
+    {
+      "type": "WEB",
+      "url": "https://oval.cisecurity.org/repository/search/definition/oval:org.mitre.oval:def:10088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2010:0440"
     },
     {
       "type": "WEB",
@@ -287,6 +324,14 @@
     },
     {
       "type": "WEB",
+      "url": "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05150888"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/apache/tomcat"
+    },
+    {
+      "type": "WEB",
       "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/54158"
     },
     {
@@ -348,10 +393,6 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2010:0768"
-    },
-    {
-      "type": "WEB",
-      "url": "https://access.redhat.com/errata/RHSA-2010:0440"
     },
     {
       "type": "WEB",
@@ -544,6 +585,10 @@
     {
       "type": "WEB",
       "url": "http://security.gentoo.org/glsa/glsa-201406-32.xml"
+    },
+    {
+      "type": "WEB",
+      "url": "http://securitytracker.com/id?1023148"
     },
     {
       "type": "WEB",
@@ -867,6 +912,154 @@
     },
     {
       "type": "WEB",
+      "url": "http://www.securityfocus.com/archive/1/507952/100/0/threaded"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securityfocus.com/archive/1/508075/100/0/threaded"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securityfocus.com/archive/1/508130/100/0/threaded"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securityfocus.com/archive/1/515055/100/0/threaded"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securityfocus.com/archive/1/516397/100/0/threaded"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securityfocus.com/archive/1/522176"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securityfocus.com/bid/36935"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023163"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023204"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023205"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023206"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023207"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023208"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023209"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023210"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023211"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023212"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023213"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023214"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023215"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023216"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023217"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023218"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023219"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023224"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023243"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023270"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023271"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023272"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023273"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023274"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023275"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023411"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023426"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023427"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1023428"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securitytracker.com/id?1024789"
+    },
+    {
+      "type": "WEB",
       "url": "http://www.tombom.co.uk/blog/?p=85"
     },
     {
@@ -904,13 +1097,18 @@
     {
       "type": "WEB",
       "url": "http://www.vmware.com/support/vsphere4/doc/vsp_vc41_u1_rel_notes.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://xss.cx/examples/plesk-reports/plesk-parallels-controlpanel-psa.v.10.3.1_build1013110726.09%20os_redhat.el6-billing-system-plugin-javascript-injection-example-poc-report.html"
     }
   ],
   "database_specific": {
     "cwe_ids": [
-      "CWE-295"
+      "CWE-295",
+      "CWE-300"
     ],
-    "severity": "MODERATE",
+    "severity": "CRITICAL",
     "github_reviewed": true,
     "github_reviewed_at": "2024-02-22T19:39:23Z",
     "nvd_published_at": "2009-11-09T17:30:00Z"
