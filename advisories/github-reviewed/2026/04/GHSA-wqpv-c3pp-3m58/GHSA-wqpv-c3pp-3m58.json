@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wqpv-c3pp-3m58",
-  "modified": "2026-05-06T19:41:11Z",
+  "modified": "2026-06-08T20:07:35Z",
   "published": "2026-04-28T06:30:29Z",
   "aliases": [
     "CVE-2026-42510"
@@ -47,6 +47,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/openstack/ironic"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.openstack.org/ossa/OSSA-2026-008.html"
     },
     {
       "type": "WEB",
