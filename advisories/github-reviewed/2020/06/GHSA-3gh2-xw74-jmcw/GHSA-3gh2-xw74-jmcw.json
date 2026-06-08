@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3gh2-xw74-jmcw",
-  "modified": "2026-05-19T16:11:58Z",
+  "modified": "2026-06-08T20:17:40Z",
   "published": "2020-06-05T14:52:07Z",
   "aliases": [
     "CVE-2020-9402"
