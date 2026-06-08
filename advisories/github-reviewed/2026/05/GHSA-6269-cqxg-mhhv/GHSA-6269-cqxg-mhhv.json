@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6269-cqxg-mhhv",
-  "modified": "2026-05-14T16:36:12Z",
+  "modified": "2026-06-08T23:30:27Z",
   "published": "2026-05-14T16:36:12Z",
   "aliases": [
     "CVE-2026-44898"
@@ -44,6 +44,10 @@
       "url": "https://github.com/lepture/mistune/security/advisories/GHSA-6269-cqxg-mhhv"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44898"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/lepture/mistune/commit/04880a0"
     },
@@ -63,6 +67,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T16:36:12Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-26T21:16:39Z"
   }
 }

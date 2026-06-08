@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m9g3-3g99-mhpx",
-  "modified": "2026-05-08T20:49:40Z",
+  "modified": "2026-06-08T23:29:22Z",
   "published": "2026-05-08T20:49:40Z",
   "aliases": [
     "CVE-2026-44214"
@@ -44,6 +44,10 @@
       "url": "https://github.com/rexxars/eventsource-encoder/security/advisories/GHSA-m9g3-3g99-mhpx"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44214"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/rexxars/eventsource-encoder"
     },
@@ -60,6 +64,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-08T20:49:40Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-26T20:16:19Z"
   }
 }
