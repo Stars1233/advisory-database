@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3644-q5cj-c5c7",
-  "modified": "2026-05-13T15:29:30Z",
+  "modified": "2026-06-08T23:54:03Z",
   "published": "2026-05-13T15:29:30Z",
   "aliases": [
     "CVE-2026-45134"
@@ -98,6 +98,10 @@
       "url": "https://github.com/langchain-ai/langsmith-sdk/security/advisories/GHSA-3644-q5cj-c5c7"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45134"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/langchain-ai/langsmith-sdk"
     }
@@ -109,6 +113,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-13T15:29:30Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T20:16:38Z"
   }
 }

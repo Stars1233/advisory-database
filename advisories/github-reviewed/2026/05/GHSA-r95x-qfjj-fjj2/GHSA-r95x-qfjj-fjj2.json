@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-r95x-qfjj-fjj2",
-  "modified": "2026-05-13T01:36:03Z",
+  "modified": "2026-06-08T23:53:47Z",
   "published": "2026-05-13T01:36:03Z",
   "aliases": [
     "CVE-2026-44681"
@@ -66,6 +66,10 @@
       "url": "https://github.com/authlib/authlib/security/advisories/GHSA-r95x-qfjj-fjj2"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44681"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/authlib/authlib"
     },
@@ -76,6 +80,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/authlib/authlib/releases/tag/v1.7.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/authlib/PYSEC-2026-188.yaml"
     }
   ],
   "database_specific": {
@@ -86,6 +94,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-13T01:36:03Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T20:16:37Z"
   }
 }

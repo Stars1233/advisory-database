@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f3jg-756w-gm35",
-  "modified": "2026-05-11T21:20:04Z",
+  "modified": "2026-06-08T23:53:33Z",
   "published": "2026-05-11T21:20:04Z",
   "aliases": [
     "CVE-2026-45046"
@@ -44,6 +44,10 @@
       "url": "https://github.com/safedep/gryph/security/advisories/GHSA-f3jg-756w-gm35"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45046"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/safedep/gryph"
     },
@@ -59,6 +63,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-11T21:20:04Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T19:16:21Z"
   }
 }

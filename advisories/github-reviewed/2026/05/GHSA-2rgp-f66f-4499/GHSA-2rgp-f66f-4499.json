@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2rgp-f66f-4499",
-  "modified": "2026-05-13T15:33:24Z",
+  "modified": "2026-06-08T23:55:04Z",
   "published": "2026-05-13T15:33:24Z",
   "aliases": [
     "CVE-2026-45083"
@@ -41,8 +41,16 @@
       "url": "https://github.com/intranda/goobi-viewer-core/security/advisories/GHSA-2rgp-f66f-4499"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45083"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/intranda/goobi-viewer-core/commit/326980f24ce1e7cfabf658dd5f615934ca68ebbd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/intranda/goobi-viewer-core/commit/6bfb1cbd4250b0b347e84a80f38e8bf46acac705"
     },
     {
       "type": "PACKAGE",
@@ -60,6 +68,6 @@
     "severity": "CRITICAL",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-13T15:33:24Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T22:16:36Z"
   }
 }

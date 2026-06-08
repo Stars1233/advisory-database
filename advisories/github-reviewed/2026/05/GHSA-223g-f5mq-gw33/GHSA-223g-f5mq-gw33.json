@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-223g-f5mq-gw33",
-  "modified": "2026-05-13T01:39:04Z",
+  "modified": "2026-06-08T23:54:55Z",
   "published": "2026-05-13T01:39:04Z",
   "aliases": [
     "CVE-2026-44720"
@@ -41,6 +41,10 @@
       "url": "https://github.com/th30d4y/OpenLearnX/security/advisories/GHSA-223g-f5mq-gw33"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44720"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/th30d4y/OpenLearnX"
     },
@@ -57,6 +61,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-13T01:39:04Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T22:16:36Z"
   }
 }

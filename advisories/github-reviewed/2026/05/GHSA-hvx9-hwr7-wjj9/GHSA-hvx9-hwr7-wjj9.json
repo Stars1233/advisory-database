@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hvx9-hwr7-wjj9",
-  "modified": "2026-05-13T15:29:21Z",
+  "modified": "2026-06-08T23:53:59Z",
   "published": "2026-05-13T15:29:21Z",
   "aliases": [
     "CVE-2026-44724"
@@ -44,6 +44,10 @@
       "url": "https://github.com/sebhildebrandt/systeminformation/security/advisories/GHSA-hvx9-hwr7-wjj9"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44724"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/sebhildebrandt/systeminformation"
     },
@@ -59,6 +63,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-13T15:29:21Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T20:16:37Z"
   }
 }
