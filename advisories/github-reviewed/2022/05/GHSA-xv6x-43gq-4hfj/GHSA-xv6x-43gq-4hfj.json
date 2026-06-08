@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xv6x-43gq-4hfj",
-  "modified": "2024-02-08T21:31:52Z",
+  "modified": "2026-06-08T19:04:54Z",
   "published": "2022-05-02T03:40:08Z",
   "aliases": [
     "CVE-2009-2940"
@@ -68,6 +68,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/PyGreSQL/PyGreSQL"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pygresql/PYSEC-2009-18.yaml"
     },
     {
       "type": "WEB",
