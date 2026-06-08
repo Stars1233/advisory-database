@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-62hf-57xw-28j9",
-  "modified": "2026-05-05T00:34:32Z",
+  "modified": "2026-06-08T15:54:28Z",
   "published": "2026-05-05T00:34:32Z",
   "aliases": [
     "CVE-2026-42039"
@@ -71,8 +71,16 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42039"
     },
     {
+      "type": "WEB",
+      "url": "https://github.com/axios/axios/commit/85132ffba1a77609ea5d101c8a413dea7174932f"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/axios/axios"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/axios/axios/releases/tag/v1.15.1"
     }
   ],
   "database_specific": {
