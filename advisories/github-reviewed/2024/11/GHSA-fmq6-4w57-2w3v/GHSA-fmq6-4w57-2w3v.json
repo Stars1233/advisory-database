@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fmq6-4w57-2w3v",
-  "modified": "2024-11-18T21:26:09Z",
+  "modified": "2026-06-08T19:09:15Z",
   "published": "2024-11-09T00:30:42Z",
   "aliases": [
     "CVE-2024-27529"
@@ -97,6 +97,10 @@
     {
       "type": "WEB",
       "url": "https://gist.github.com/haruki3hhh/ac70bd83b9c0ed1de6289d818488da78"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pywasm3/PYSEC-2024-305.yaml"
     }
   ],
   "database_specific": {
