@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g4g6-g3hx-2f5w",
+  "modified": "2026-06-08T00:30:25Z",
+  "published": "2026-06-08T00:30:25Z",
+  "aliases": [
+    "CVE-2026-11464"
+  ],
+  "details": "A vulnerability was identified in JeecgBoot up to 3.9.2. Affected by this vulnerability is the function queryPageList of the file src\\main\\java\\org\\jeecg\\modules\\system\\controller\\SysUserController.java of the component User List Endpoint. The manipulation of the argument salt leads to information disclosure. The attack may be initiated remotely. The attack is considered to have high complexity. The exploitation appears to be difficult. The exploit is publicly available and might be used. A fix is planned for the upcoming release.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11464"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot/issues/9648"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot/issues/9648#issuecomment-4542297690"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jeecgboot/JeecgBoot"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-11464"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/833229"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/369084"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/369084/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-07T23:16:41Z"
+  }
+}

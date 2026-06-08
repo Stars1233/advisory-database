@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7v3v-cp44-vc8m",
+  "modified": "2026-06-08T00:30:25Z",
+  "published": "2026-06-08T00:30:25Z",
+  "aliases": [
+    "CVE-2026-11465"
+  ],
+  "details": "A security flaw has been discovered in songquanpeng one-api up to 0.6.11-preview.7. Affected by this issue is the function Redeem of the file model/redemption.go of the component Redemption Code Top-Up Endpoint. The manipulation results in business logic errors. The attack may be launched remotely. The attack requires a high level of complexity. The exploitation is known to be difficult. The exploit has been released to the public and may be used for attacks. The pull request to fix this issue awaits acceptance.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11465"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/songquanpeng/one-api/issues/2397"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/songquanpeng/one-api/pull/2399"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/songquanpeng/one-api"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-11465"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/833320"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/369085"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/369085/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-07T23:16:42Z"
+  }
+}
