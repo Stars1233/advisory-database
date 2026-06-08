@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fjj2-vrp3-84fv",
-  "modified": "2026-06-08T18:31:50Z",
+  "modified": "2026-06-08T21:31:50Z",
   "published": "2026-06-08T18:31:50Z",
   "aliases": [
     "CVE-2026-48913"
   ],
   "details": "Use After Free vulnerability in Apache HTTP Server module mod_http2 when file handles are already exhausted.\n\nThis issue affects Apache HTTP Server: from 2.4.55 through 2.4.67.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -23,7 +28,7 @@
     "cwe_ids": [
       "CWE-416"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-08T16:16:43Z"

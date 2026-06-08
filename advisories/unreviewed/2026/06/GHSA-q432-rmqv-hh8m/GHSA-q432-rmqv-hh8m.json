@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q432-rmqv-hh8m",
-  "modified": "2026-06-06T12:31:37Z",
+  "modified": "2026-06-08T21:31:49Z",
   "published": "2026-06-06T12:31:37Z",
   "aliases": [
     "CVE-2026-10725"
   ],
   "details": "Protocol::HTTP2 versions through 1.12 for Perl is vulnerable to a HTTP/2 Bomb.\n\nProtocol::HTTP2's inbound HPACK path has no header-list size limit, so a small HTTP/2 request can expand into large server memory (the \"HTTP/2 bomb\").\n\nThe headers_decode method materialises a full key+value copy per indexed reference with no running size check, and the stream_header_block_add method appends (since version 1.12) every CONTINUATION frame to the per-stream buffer unbounded.\n\nMAX_HEADER_LIST_SIZE (default 65536) is advertised in SETTINGS but never consulted on decode.  It is absent from the decoder and from the :limits export tag.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -35,7 +40,7 @@
     "cwe_ids": [
       "CWE-409"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-06T10:16:25Z"

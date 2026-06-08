@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3qgf-pp84-379f",
-  "modified": "2026-06-08T18:31:49Z",
+  "modified": "2026-06-08T21:31:49Z",
   "published": "2026-06-08T18:31:49Z",
   "aliases": [
     "CVE-2026-34355"
   ],
   "details": "A buffer overflow in mod_proxy_html in Apache HTTP Server 2.4.67 and earlier allows an attack by an untrusted backend.\nUsers are recommended to upgrade to version 2.4.68, which fixes this issue.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -23,7 +28,7 @@
     "cwe_ids": [
       "CWE-122"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-08T16:16:38Z"

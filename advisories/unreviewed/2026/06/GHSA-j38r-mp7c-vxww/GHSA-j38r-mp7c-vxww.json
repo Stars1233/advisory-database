@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-j38r-mp7c-vxww",
-  "modified": "2026-06-08T18:31:48Z",
+  "modified": "2026-06-08T21:31:49Z",
   "published": "2026-06-08T18:31:48Z",
   "aliases": [
     "CVE-2026-22164"
   ],
   "details": "Software installed and run as a non-privileged user may conduct improper GPU system calls to corrupt kernel heap memory.\n\n\n\nBy creating resources of certain types and presenting a set of parameters to the affected interface the exploit can be used to corrupt kernel memory.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -23,7 +28,7 @@
     "cwe_ids": [
       "CWE-122"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-08T16:16:37Z"

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qvqm-ccp5-gr98",
-  "modified": "2026-06-08T15:33:00Z",
+  "modified": "2026-06-08T21:31:49Z",
   "published": "2026-06-08T15:32:59Z",
   "aliases": [
     "CVE-2026-36789"
   ],
   "details": "Shenzhen Tenda Technology Co., Ltd Tenda AC1206 v15.03.06.23 was discovered to contain multiple stack overflows in the fromGstDhcpSetSer function via the username and password parameters. These vulnerabilities allow attackers to cause a Denial of Service (DoS) via a crafted HTTP request.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-08T15:16:45Z"

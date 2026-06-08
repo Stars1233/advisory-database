@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r2pw-9cxh-m8mr",
+  "modified": "2026-06-08T21:31:50Z",
+  "published": "2026-06-08T21:31:50Z",
+  "aliases": [
+    "CVE-2026-10786"
+  ],
+  "details": "Improper access control in the ticketing integration settings in Devolutions Server allows an authenticated low-privileged user to obtain cleartext credentials for configured ticketing integrations via a crafted API request.\n\nThis issue affects :\n\n  *  Devolutions Server 2026.2.4.0\n  *  Devolutions Server 2026.1.20.0 and earlier",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10786"
+    },
+    {
+      "type": "WEB",
+      "url": "https://devolutions.net/security/advisories/DEVO-2026-0015"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-312"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-08T19:16:34Z"
+  }
+}

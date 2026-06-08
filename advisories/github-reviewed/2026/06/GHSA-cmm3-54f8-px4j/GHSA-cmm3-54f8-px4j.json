@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cmm3-54f8-px4j",
+  "modified": "2026-06-08T22:59:43Z",
+  "published": "2026-06-08T22:59:43Z",
+  "aliases": [
+    "CVE-2026-44894"
+  ],
+  "summary": "Netty's Default QUIC token handler accepts any client-supplied token",
+  "details": "NoQuicTokenHandler is the tokenHandler used when the application does not set one. Its writeToken() returns false (server will not send Retry — acceptable), but validateToken() unconditionally `return 0`. In QuicheQuicServerCodec.handlePacket(), a non-negative return from validateToken() is interpreted as 'token is valid, ODCID starts at offset 0', causing the server to call quiche_accept as if the client's address had been validated by a Retry round-trip. Per RFC 9000 §8.1, a validated address lifts the 3× anti-amplification send limit. Thus any attacker who includes ANY non-empty token bytes in an Initial packet — with a spoofed victim source IP — causes the Netty server to treat the victim as validated and reflect full-size handshake flights (certificates, etc.) toward it without the 3× cap. The correct 'no token handler' semantics would be to return -1 (invalid) so the normal un-validated path and amplification limit apply.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-classes-quic"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0.Final"
+            },
+            {
+              "fixed": "4.2.15.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.2.14.Final"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/security/advisories/GHSA-cmm3-54f8-px4j"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/netty/netty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-940"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-08T22:59:43Z",
+    "nvd_published_at": null
+  }
+}

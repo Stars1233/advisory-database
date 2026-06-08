@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9jv8-9586-5r34",
-  "modified": "2026-06-08T18:31:49Z",
+  "modified": "2026-06-08T21:31:50Z",
   "published": "2026-06-08T18:31:49Z",
   "aliases": [
     "CVE-2026-44631"
   ],
   "details": "Buffer Underwrite vulnerability in Apache HTTP Server on crafted regular expressions in the configuration.\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -23,7 +28,7 @@
     "cwe_ids": [
       "CWE-124"
     ],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-08T16:16:40Z"

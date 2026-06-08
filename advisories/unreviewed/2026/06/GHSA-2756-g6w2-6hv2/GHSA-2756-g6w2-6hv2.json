@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2756-g6w2-6hv2",
-  "modified": "2026-06-08T18:31:49Z",
+  "modified": "2026-06-08T21:31:50Z",
   "published": "2026-06-08T18:31:49Z",
   "aliases": [
     "CVE-2026-44185"
   ],
   "details": "Buffer Over-read vulnerability in Apache HTTP Server via outbound OCSP requests to an attacker controlled OCSP server\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -23,7 +28,7 @@
     "cwe_ids": [
       "CWE-126"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-08T16:16:40Z"

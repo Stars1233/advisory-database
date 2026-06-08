@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4pgp-q8h4-9wxm",
+  "modified": "2026-06-08T21:31:50Z",
+  "published": "2026-06-08T21:31:50Z",
+  "aliases": [
+    "CVE-2026-40519"
+  ],
+  "details": "Nginx Proxy Manager versions 2.9.14 through 2.15.1, fixed in commit a5db5ed, contain an authenticated remote code execution vulnerability via OS command injection in the setupCertbotPlugins() function in backend/setup.js, allowing attackers with certificates:manage permission to execute arbitrary commands by storing a malicious payload in the dns_provider_credentials field. The user-controlled dns_provider_credentials value is interpolated directly into a shell command executed via child_process.exec() without sanitization or escaping, causing the injected command to execute upon backend restart.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40519"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/NginxProxyManager/nginx-proxy-manager/pull/5498"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/NginxProxyManager/nginx-proxy-manager/commit/a5db5ed156355e3088e7d1ceb0533d4bae922def"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/nginx-proxy-manager-authenticated-rce-via-setupcertbotplugins"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-08T20:17:00Z"
+  }
+}

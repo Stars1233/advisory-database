@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8vxw-prwx-j95w",
-  "modified": "2026-06-03T18:33:09Z",
+  "modified": "2026-06-08T21:31:47Z",
   "published": "2026-06-03T18:33:09Z",
   "aliases": [
     "CVE-2026-36574"
   ],
   "details": "A DLL hijacking vulnerability in Wassimulator (GitHub) CactusViewer v2.3.0 allows attackers to escalate privileges and execute arbitrary code via a crafted DLL.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-427"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T16:16:28Z"

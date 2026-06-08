@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jqxh-x9f5-wcgw",
-  "modified": "2026-06-08T18:31:46Z",
+  "modified": "2026-06-08T21:31:49Z",
   "published": "2026-06-08T12:30:29Z",
   "aliases": [
     "CVE-2026-50751"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://support.checkpoint.com/results/sk/sk185033"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-50751"
     }
   ],
   "database_specific": {
