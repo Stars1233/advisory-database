@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rpj4-7x2v-wjrf",
-  "modified": "2026-05-15T17:47:10Z",
+  "modified": "2026-06-08T23:50:33Z",
   "published": "2026-05-15T17:47:10Z",
   "aliases": [
     "CVE-2026-45548"
@@ -41,6 +41,10 @@
       "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-rpj4-7x2v-wjrf"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45548"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/Budibase/budibase"
     },
@@ -56,6 +60,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-15T17:47:10Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T18:16:25Z"
   }
 }

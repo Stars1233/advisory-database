@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rwww-x45w-p52w",
-  "modified": "2026-05-08T23:02:41Z",
+  "modified": "2026-06-08T23:48:31Z",
   "published": "2026-05-08T23:02:41Z",
   "aliases": [
     "CVE-2026-44330"
@@ -41,6 +41,10 @@
       "url": "https://github.com/free5gc/free5gc/security/advisories/GHSA-rwww-x45w-p52w"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44330"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/free5gc/free5gc/issues/862"
     },
@@ -56,6 +60,6 @@
     "severity": "CRITICAL",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-08T23:02:41Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T17:16:38Z"
   }
 }

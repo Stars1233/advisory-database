@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3p28-73q7-45xp",
-  "modified": "2026-05-08T22:58:59Z",
+  "modified": "2026-06-08T23:48:18Z",
   "published": "2026-05-08T22:58:59Z",
   "aliases": [
     "CVE-2026-44326"
@@ -41,6 +41,10 @@
       "url": "https://github.com/free5gc/free5gc/security/advisories/GHSA-3p28-73q7-45xp"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44326"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/free5gc/free5gc/issues/859"
     },
@@ -60,6 +64,6 @@
     "severity": "CRITICAL",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-08T22:58:59Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-27T17:16:38Z"
   }
 }
