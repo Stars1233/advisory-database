@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2cpp-j2fc-qhp7",
-  "modified": "2026-03-17T20:33:15Z",
+  "modified": "2026-06-08T23:15:15Z",
   "published": "2026-03-17T20:33:15Z",
   "aliases": [
     "CVE-2026-4270"
@@ -37,6 +37,25 @@
           ]
         }
       ]
+    },
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "awslabs-aws-api-mcp-server"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.2.14"
+            },
+            {
+              "fixed": "1.3.9"
+            }
+          ]
+        }
+      ]
     }
   ],
   "references": [
@@ -55,6 +74,10 @@
     {
       "type": "PACKAGE",
       "url": "https://github.com/awslabs/mcp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/awslabs-aws-api-mcp-server/PYSEC-2026-162.yaml"
     },
     {
       "type": "WEB",
