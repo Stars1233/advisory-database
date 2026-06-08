@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5pvg-856g-cp85",
+  "modified": "2026-06-08T23:02:48Z",
+  "published": "2026-06-08T23:02:48Z",
+  "aliases": [
+    "CVE-2026-47691"
+  ],
+  "summary": "Netty has Insufficient Bailiwick Validation for NS Records",
+  "details": "### Summary\nNetty's `DnsResolveContext` insufficiently validates the bailiwick of NS records, enabling DNS Cache Poisoning. An attacker controlling an authoritative name server for a subdomain can poison the cache for parent domains (like `.co.uk`).\n\n### Details\nIn `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameServerList#add` method accepts any NS record from the AUTHORITY section as long as the record's name is a suffix of the questionName.\n\nThis means if the resolver queries evil.co.uk., it will accept an NS record claiming authority over co.uk.. Subsequently, the `handleWithAdditional` method caches the associated A records from the ADDITIONAL section directly into the `authoritativeDnsServerCache` under the parent domain's key (co.uk.). This bypasses standard bailiwick rules, where a server authoritative for a subdomain should not be trusted to provide authoritative records for its parent. The poisoned cache is then used for all future resolutions under co.uk..\n\nThe `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameServerList#cache` method only prevents caching if the record is for the root zone (dots == 1).\n\n### Impact\nDNS Cache Poisoning. Any application using Netty's DNS resolver is impacted.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-resolver-dns"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0.Final"
+            },
+            {
+              "fixed": "4.2.15.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.2.14.Final"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-resolver-dns"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.135.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.134.Final"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/security/advisories/GHSA-5pvg-856g-cp85"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/netty/netty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-345"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-08T23:02:48Z",
+    "nvd_published_at": null
+  }
+}

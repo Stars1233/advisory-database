@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5x3r-wrvg-rp6q",
+  "modified": "2026-06-08T23:02:41Z",
+  "published": "2026-06-08T23:02:40Z",
+  "aliases": [
+    "CVE-2026-47244"
+  ],
+  "summary": "Netty HTTP/2: Advertised MAX_CONCURRENT_STREAMS are not enforced",
+  "details": "### Impact\nDefaultHttp2Connection.DefaultEndpoint initialises maxActiveStreams/maxStreams to Integer.MAX_VALUE, and Http2Settings never inserts SETTINGS_MAX_CONCURRENT_STREAMS by default (Http2Settings.java:305-307 only clamps a user-supplied value). Unless the application explicitly calls initialSettings().maxConcurrentStreams(n), a Netty HTTP/2 server advertises no limit and enforces none locally. Each open stream allocates a DefaultStream object, PropertyMap slots, flow-controller state and IntObjectHashMap entry; with ~2^30 permissible odd stream IDs a single TCP connection can create hundreds of thousands of long-lived stream objects. This is also the precondition for CVE-2023-44487-style Rapid-Reset amplification, where the absence of a low concurrent cap multiplies backend work.\n\n### Resources\nhttps://www.rfc-editor.org/rfc/rfc7540.html#section-6.5.2",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-http2"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0.Final"
+            },
+            {
+              "fixed": "4.2.15.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.2.14.Final"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-http2"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.135.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.134.Final"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/security/advisories/GHSA-5x3r-wrvg-rp6q"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/netty/netty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-08T23:02:40Z",
+    "nvd_published_at": null
+  }
+}

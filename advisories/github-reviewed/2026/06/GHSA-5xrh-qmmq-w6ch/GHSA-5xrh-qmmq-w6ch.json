@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5xrh-qmmq-w6ch",
+  "modified": "2026-06-08T23:02:33Z",
+  "published": "2026-06-08T23:02:33Z",
+  "aliases": [
+    "CVE-2026-46340"
+  ],
+  "summary": "Netty: SCTP reassembly nests buffers without bound",
+  "details": "For each non-complete SctpMessage fragment the handler does `fragments.put(streamId, Unpooled.wrappedBuffer(frag, byteBuf))`, wrapping the previous accumulator and the new slice into a *new* CompositeByteBuf every time. After N fragments the accumulator is an N-deep chain of composites, each holding references and component arrays; readableBytes()/getBytes() on the final buffer recurse N levels. There is no limit on N, on total bytes, or on the number of streamIdentifiers an attacker can open (each gets its own map entry). A peer that never sets the `complete` flag can grow this structure indefinitely from tiny 1-byte DATA chunks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-transport-sctp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0.Final"
+            },
+            {
+              "fixed": "4.2.15.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.2.14.Final"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-transport-sctp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.135.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.134.Final"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/security/advisories/GHSA-5xrh-qmmq-w6ch"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/netty/netty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-08T23:02:33Z",
+    "nvd_published_at": null
+  }
+}
