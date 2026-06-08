@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-w52v-v783-gw97",
-  "modified": "2026-05-12T13:31:00Z",
+  "modified": "2026-06-08T23:22:31Z",
   "published": "2026-02-18T21:50:23Z",
   "aliases": [
     "CVE-2026-26980"
@@ -47,6 +47,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/TryGhost/Ghost/commit/30868d632b2252b638bc8a4c8ebf73964592ed91"
+    },
+    {
+      "type": "WEB",
+      "url": "https://blog.xlab.qianxin.com/ghost-cms-page-poisoning-cve-2026-26980"
     },
     {
       "type": "PACKAGE",
