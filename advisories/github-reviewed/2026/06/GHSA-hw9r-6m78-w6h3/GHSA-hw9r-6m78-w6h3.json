@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hw9r-6m78-w6h3",
+  "modified": "2026-06-08T12:51:32Z",
+  "published": "2026-06-08T12:51:32Z",
+  "aliases": [
+    "CVE-2026-39922"
+  ],
+  "summary": "GeoNode contains a server-side request forgery vulnerability in the service registration endpoint",
+  "details": "GeoNode versions 4.4.5 and 5.0.2 (and prior within their respective releases) contain a server-side request forgery vulnerability in the service registration endpoint that allows authenticated attackers to trigger outbound network requests to arbitrary URLs by submitting a crafted service URL during form validation. Attackers can probe internal network targets including loopback addresses, RFC1918 private IP ranges, link-local addresses, and cloud metadata services by exploiting insufficient URL validation in the WMS service handler without private IP filtering or allowlist enforcement.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "geonode"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.4.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "geonode"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39922"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/GeoNode/geonode"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/GeoNode/geonode/releases/tag/4.4.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/GeoNode/geonode/releases/tag/5.0.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/geonode/PYSEC-2026-61.yaml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/geonode-ssrf-via-service-registration"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-08T12:51:32Z",
+    "nvd_published_at": null
+  }
+}
