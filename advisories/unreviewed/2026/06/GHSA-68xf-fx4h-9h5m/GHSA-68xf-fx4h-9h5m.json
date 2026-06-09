@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-68xf-fx4h-9h5m",
+  "modified": "2026-06-09T09:32:06Z",
+  "published": "2026-06-09T09:32:06Z",
+  "aliases": [
+    "CVE-2026-41981"
+  ],
+  "details": "Out-of-bounds write vulnerability in the IPC module. Impact: Successful exploitation of this vulnerability may affect availability.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41981"
+    },
+    {
+      "type": "WEB",
+      "url": "https://consumer.huawei.com/en/support/bulletin/2026/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://consumer.huawei.com/en/support/bulletinwearables/2026/6"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-122"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T08:16:28Z"
+  }
+}

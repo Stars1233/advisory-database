@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-988p-jh3p-gxwh",
+  "modified": "2026-06-09T09:32:06Z",
+  "published": "2026-06-09T09:32:06Z",
+  "aliases": [
+    "CVE-2026-41977"
+  ],
+  "details": "DoS vulnerability in the log service. Impact: Successful exploitation of this vulnerability may affect availability.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41977"
+    },
+    {
+      "type": "WEB",
+      "url": "https://consumer.huawei.com/en/support/bulletin/2026/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://consumer.huawei.com/en/support/bulletinvision/2026/6"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-190"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T08:16:27Z"
+  }
+}

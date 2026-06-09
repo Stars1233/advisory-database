@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7vxw-69v7-42x7",
-  "modified": "2026-05-26T18:31:42Z",
+  "modified": "2026-06-09T09:32:06Z",
   "published": "2026-05-26T18:31:42Z",
   "aliases": [
     "CVE-2026-25112"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://ressources.genetec.com/bulletins-de-securite/vulnerabilite-d-elevation-de-privileges-affectant-le-deploiement-de-rabbitmq-dans-les-produits-genetec"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2026/Jun/2"
     }
   ],
   "database_specific": {

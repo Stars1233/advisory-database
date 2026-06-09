@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j893-vcpr-rgfc",
+  "modified": "2026-06-09T09:32:07Z",
+  "published": "2026-06-09T09:32:07Z",
+  "aliases": [
+    "CVE-2026-6899"
+  ],
+  "details": "Check for certificate revocation only considers the first matching CRL and ignores other valid CRLs of the same CA in the CycloneCrypto cryptographic wrapper of S2OPC library. It might allow connection between an OPC UA client and server using a revoked certificate.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6899"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/systerel/S2OPC/-/work_items/1739"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-299"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T09:16:30Z"
+  }
+}

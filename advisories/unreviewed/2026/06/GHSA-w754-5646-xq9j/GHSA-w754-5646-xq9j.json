@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w754-5646-xq9j",
+  "modified": "2026-06-09T09:32:07Z",
+  "published": "2026-06-09T09:32:07Z",
+  "aliases": [
+    "CVE-2026-25699"
+  ],
+  "details": "Exposure of Private Personal Information to an Unauthorized Actor vulnerability in Apache Answer.\n\nThis issue affects Apache Answer: through 2.0.0.\n\nTimeline-related APIs lacked proper authorization checks, allowing regular authenticated users to access deleted, private, or unapproved content and its revision history.\nUsers are recommended to upgrade to version 2.0.1, which fixes the issue.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25699"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/c36k4hzwhncqo0qfn5fg57f1gkjhyfv8"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-359"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T09:16:28Z"
+  }
+}

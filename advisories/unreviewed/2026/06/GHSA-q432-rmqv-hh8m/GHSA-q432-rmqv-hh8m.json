@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q432-rmqv-hh8m",
-  "modified": "2026-06-08T21:31:49Z",
+  "modified": "2026-06-09T09:32:06Z",
   "published": "2026-06-06T12:31:37Z",
   "aliases": [
     "CVE-2026-10725"
@@ -21,6 +21,10 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/vlet/p5-Protocol-HTTP2/commit/822bf22224adbd662e8d0b865eeacb2b294d16cd.patch"
+    },
+    {
+      "type": "WEB",
       "url": "https://metacpan.org/release/CRUX/Protocol-HTTP2-1.12/source/lib/Protocol/HTTP2/HeaderCompression.pm#L133"
     },
     {
@@ -29,7 +33,15 @@
     },
     {
       "type": "WEB",
+      "url": "https://metacpan.org/release/CRUX/Protocol-HTTP2-1.13/changes"
+    },
+    {
+      "type": "WEB",
       "url": "https://security.metacpan.org/patches/P/Protocol-HTTP2/1.12/CVE-2026-10725-r1.patch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.metacpan.org/patches/P/Protocol-HTTP2/1.12/CVE-2026-10725-r2.patch"
     },
     {
       "type": "WEB",

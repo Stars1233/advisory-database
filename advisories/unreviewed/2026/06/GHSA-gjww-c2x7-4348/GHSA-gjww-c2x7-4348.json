@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gjww-c2x7-4348",
+  "modified": "2026-06-09T09:32:07Z",
+  "published": "2026-06-09T09:32:07Z",
+  "aliases": [
+    "CVE-2026-7542"
+  ],
+  "details": "The Slider Revolution plugin for WordPress is vulnerable to Sensitive Information Disclosure in versions up to and including 7.0.10. This is due to three compounding design flaws: (1) the plugin leaks a valid backend AJAX nonce (revslider_actions) to all authenticated users including Subscribers via the admin_footer hook; (2) the wordpress.create.image_from_url action is explicitly allowlisted in the $user_allowed array, bypassing the administrator-only access control; (3) the create_wordpress_image_from_url() function accepts an attacker-controlled url parameter that is passed to import_media(), where path_or_url_exists() explicitly accepts local filesystem paths (file_exists() && is_readable()) with no restriction to remote HTTP/HTTPS URLs, and @copy() physically copies those files into the publicly accessible /wp-content/uploads/revslider/ai/ directory. The MIME type check trusts the attacker-supplied content_type parameter to derive the destination extension without verifying actual file content, and the source extension blacklist does not block many sensitive types (.sql, .log, .json, .bak, .xml, .csv, .conf, .yml, .yaml, .pem, .key, .crt, .txt, .db, etc.). This makes it possible for authenticated attackers with Subscriber-level access and above to read the contents of server files with non-blacklisted extensions by having them copied to a publicly accessible URL.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7542"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sliderrevolution.com/changelog"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4f57cac9-5610-454b-affb-86384ea00881?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T09:16:30Z"
+  }
+}

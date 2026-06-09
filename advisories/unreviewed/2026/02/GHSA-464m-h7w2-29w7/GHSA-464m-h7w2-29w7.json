@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-464m-h7w2-29w7",
-  "modified": "2026-02-10T06:30:38Z",
+  "modified": "2026-06-09T09:32:06Z",
   "published": "2026-02-10T06:30:38Z",
   "aliases": [
     "CVE-2026-23687"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://url.sap/sapsecuritypatchday"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2026/Jun/1"
     }
   ],
   "database_specific": {
