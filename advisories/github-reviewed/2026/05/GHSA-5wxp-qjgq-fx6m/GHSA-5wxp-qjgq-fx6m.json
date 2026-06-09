@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5wxp-qjgq-fx6m",
-  "modified": "2026-05-14T14:54:28Z",
+  "modified": "2026-06-09T13:10:02Z",
   "published": "2026-05-14T14:54:28Z",
   "aliases": [
     "CVE-2026-42863"
@@ -44,6 +44,10 @@
       "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-5wxp-qjgq-fx6m"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42863"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/FlowiseAI/Flowise"
     },
@@ -61,6 +65,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T14:54:28Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-08T16:16:39Z"
   }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mq53-pc65-wjc4",
-  "modified": "2026-05-14T20:55:37Z",
+  "modified": "2026-06-09T13:10:53Z",
   "published": "2026-05-14T16:19:49Z",
   "aliases": [
     "CVE-2026-46479"
@@ -44,6 +44,10 @@
       "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-mq53-pc65-wjc4"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46479"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/FlowiseAI/Flowise/pull/6050"
     },
@@ -67,6 +71,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T16:19:49Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-08T16:16:42Z"
   }
 }

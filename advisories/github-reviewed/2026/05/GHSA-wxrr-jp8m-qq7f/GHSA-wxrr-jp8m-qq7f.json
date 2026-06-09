@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wxrr-jp8m-qq7f",
-  "modified": "2026-05-14T20:55:40Z",
+  "modified": "2026-06-09T13:10:58Z",
   "published": "2026-05-14T16:19:52Z",
   "aliases": [
     "CVE-2026-46480"
@@ -44,6 +44,10 @@
       "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-wxrr-jp8m-qq7f"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46480"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/FlowiseAI/Flowise/pull/6050"
     },
@@ -67,6 +71,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T16:19:52Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-08T16:16:42Z"
   }
 }

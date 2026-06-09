@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x5v6-pj28-cwwm",
-  "modified": "2026-05-14T14:52:40Z",
+  "modified": "2026-06-09T13:09:57Z",
   "published": "2026-05-14T14:52:40Z",
   "aliases": [
     "CVE-2026-42862"
@@ -44,6 +44,10 @@
       "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-x5v6-pj28-cwwm"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42862"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/FlowiseAI/Flowise"
     },
@@ -61,6 +65,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T14:52:40Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-08T16:16:39Z"
   }
 }
