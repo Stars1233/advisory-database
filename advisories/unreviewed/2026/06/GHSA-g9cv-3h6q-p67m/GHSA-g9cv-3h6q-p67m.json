@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g9cv-3h6q-p67m",
+  "modified": "2026-06-09T18:31:03Z",
+  "published": "2026-06-09T18:31:03Z",
+  "aliases": [
+    "CVE-2026-44275"
+  ],
+  "details": "Dell/Alienware Purchased Apps, versions prior to 1.1.32.0, contain an Improper Link Resolution Before File Access ('Link Following') vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Arbitrary File Write",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44275"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dell.com/support/kbdoc/en-us/000472463/dsa-2026-250"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-59"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T18:16:49Z"
+  }
+}

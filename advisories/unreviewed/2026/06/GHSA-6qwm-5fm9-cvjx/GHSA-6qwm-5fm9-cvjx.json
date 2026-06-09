@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6qwm-5fm9-cvjx",
-  "modified": "2026-06-09T12:32:03Z",
+  "modified": "2026-06-09T18:30:37Z",
   "published": "2026-06-09T09:32:07Z",
   "aliases": [
     "CVE-2026-34033"
   ],
   "details": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Apache Answer.\n\nThis issue affects Apache Answer: through 2.0.0.\n\nUser-supplied content was included in notification emails without proper escaping, allowing authenticated users to inject arbitrary HTML into emails sent to other users.\nUsers are recommended to upgrade to version 2.0.1, which fixes the issue.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-80"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-09T09:16:29Z"

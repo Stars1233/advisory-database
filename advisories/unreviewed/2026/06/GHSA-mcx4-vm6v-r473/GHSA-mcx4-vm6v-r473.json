@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mcx4-vm6v-r473",
-  "modified": "2026-06-08T15:32:49Z",
+  "modified": "2026-06-09T18:30:34Z",
   "published": "2026-06-05T18:31:40Z",
   "aliases": [
     "CVE-2026-7473"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24005-security-advisory-0137"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7473"
     }
   ],
   "database_specific": {

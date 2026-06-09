@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cx87-mv7w-77j9",
+  "modified": "2026-06-09T18:30:51Z",
+  "published": "2026-06-09T18:30:51Z",
+  "aliases": [
+    "CVE-2026-45588"
+  ],
+  "details": "Protection mechanism failure in Windows Secure Boot allows an authorized attacker to bypass a security feature locally.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45588"
+    },
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45588"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-693"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T17:17:26Z"
+  }
+}

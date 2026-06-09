@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-36fg-ffjj-h5p6",
-  "modified": "2026-05-07T18:30:40Z",
+  "modified": "2026-06-09T18:30:34Z",
   "published": "2026-05-07T18:30:40Z",
   "aliases": [
     "CVE-2026-6973"
@@ -25,11 +25,16 @@
     },
     {
       "type": "WEB",
+      "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2026-6973-CVE-2026-10727?language=en_US"
+    },
+    {
+      "type": "WEB",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-6973"
     }
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-15",
       "CWE-20"
     ],
     "severity": "HIGH",

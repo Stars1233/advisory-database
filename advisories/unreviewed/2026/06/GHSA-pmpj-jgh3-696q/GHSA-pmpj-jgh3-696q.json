@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pmpj-jgh3-696q",
+  "modified": "2026-06-09T18:31:02Z",
+  "published": "2026-06-09T18:31:02Z",
+  "aliases": [
+    "CVE-2026-28237"
+  ],
+  "details": "Unrestricted resource allocation in AMD uProf may be exploitable to consume excessive system resources, potentially leading to a loss of availability.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28237"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-9025.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T18:16:37Z"
+  }
+}

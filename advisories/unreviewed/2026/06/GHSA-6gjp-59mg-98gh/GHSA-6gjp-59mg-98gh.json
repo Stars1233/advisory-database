@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6gjp-59mg-98gh",
+  "modified": "2026-06-09T18:30:48Z",
+  "published": "2026-06-09T18:30:48Z",
+  "aliases": [
+    "CVE-2026-45456"
+  ],
+  "details": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45456"
+    },
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45456"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-843"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T17:17:19Z"
+  }
+}

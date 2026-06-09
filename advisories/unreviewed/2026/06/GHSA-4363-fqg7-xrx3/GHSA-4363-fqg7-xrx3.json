@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4363-fqg7-xrx3",
+  "modified": "2026-06-09T18:30:53Z",
+  "published": "2026-06-09T18:30:53Z",
+  "aliases": [
+    "CVE-2026-45649"
+  ],
+  "details": "Improper access control in Office for Android allows an unauthorized attacker to perform spoofing locally.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45649"
+    },
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45649"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T17:17:32Z"
+  }
+}

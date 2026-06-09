@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hwrm-xj23-7cff",
+  "modified": "2026-06-09T18:30:40Z",
+  "published": "2026-06-09T18:30:40Z",
+  "aliases": [
+    "CVE-2026-0416"
+  ],
+  "details": "Authenticated administrators connected to the local network can modify router functionality beyond what is intended through the standard management interface.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:D/RE:L/U:Amber"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0416"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/raxe450"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/raxe500"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T17:16:59Z"
+  }
+}

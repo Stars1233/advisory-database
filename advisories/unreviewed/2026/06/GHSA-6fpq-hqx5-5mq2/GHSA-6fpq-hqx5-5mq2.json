@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6fpq-hqx5-5mq2",
+  "modified": "2026-06-09T18:30:39Z",
+  "published": "2026-06-09T18:30:39Z",
+  "aliases": [
+    "CVE-2026-24064"
+  ],
+  "details": "Waves Central for macOS versions 13.0.9 through 16.5.5 contain a local privilege escalation vulnerability. A trusted XPC client component included with the product is signed with hardened runtime entitlements that permit dynamic library injection. A local attacker can set the DYLD_INSERT_LIBRARIES environment variable to inject an attacker-controlled dynamic library into the trusted client process at launch. The injected code runs within the signed process and can connect to the product's privileged helper service to invoke privileged operations, resulting in arbitrary code execution as root. The issue is fixed in version 16.6.2.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24064"
+    },
+    {
+      "type": "WEB",
+      "url": "https://r.sec-consult.com/waves"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-426"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T16:16:39Z"
+  }
+}

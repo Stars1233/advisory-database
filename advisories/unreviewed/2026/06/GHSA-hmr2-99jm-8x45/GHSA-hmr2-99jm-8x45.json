@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hmr2-99jm-8x45",
-  "modified": "2026-06-09T12:32:03Z",
+  "modified": "2026-06-09T18:30:36Z",
   "published": "2026-06-09T09:32:07Z",
   "aliases": [
     "CVE-2026-25688"
   ],
   "details": "Improper Neutralization of Alternate XSS Syntax vulnerability in Apache Answer.\n\nThis issue affects Apache Answer: through 2.0.0.\n\nAI-generated response content was rendered in the browser without proper sanitization, allowing malicious scripts to be executed when the content was viewed.\nUsers are recommended to upgrade to version 2.0.1, which fixes the issue.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -27,7 +32,7 @@
     "cwe_ids": [
       "CWE-87"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-09T09:16:28Z"

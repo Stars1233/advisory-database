@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gp45-6q59-r2fj",
+  "modified": "2026-06-09T18:30:41Z",
+  "published": "2026-06-09T18:30:40Z",
+  "aliases": [
+    "CVE-2026-0417"
+  ],
+  "details": "Insufficient input validation vulnerability in NETGEAR devices allows\nauthenticated administrators connected to the local network to tamper with\nthe router's integrity.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:D/RE:L/U:Amber"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0417"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/mr60"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/mr70"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/mr80"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/ms60"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/ms70"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/ms80"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r6400v2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r6700v3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r6900p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r7000"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r7000p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r7960p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r8000p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/r8500"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax35v2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax40v2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax41"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax42"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax43"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax45"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax48"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax50"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rax50s"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/raxe450"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/raxe500"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/xr1000"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T17:16:59Z"
+  }
+}

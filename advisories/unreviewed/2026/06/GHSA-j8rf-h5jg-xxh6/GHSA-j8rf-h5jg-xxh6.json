@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j8rf-h5jg-xxh6",
+  "modified": "2026-06-09T18:30:40Z",
+  "published": "2026-06-09T18:30:40Z",
+  "aliases": [
+    "CVE-2026-0411"
+  ],
+  "details": "An information disclosure vulnerability in the NETGEAR Orbi satellites could allow a user connected to your network to gain administrator access to the Orbi router. The listed NETGEAR models are affected by this vulnerability.\n\n\nOrbi WiFi Systems without satellite devices are not impacted by this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0411"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rbe970"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rbr350"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rbr760"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rbs350"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netgear.com/support/product/rbs760"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T17:16:58Z"
+  }
+}

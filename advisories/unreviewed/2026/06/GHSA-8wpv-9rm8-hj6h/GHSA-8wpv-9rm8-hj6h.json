@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8wpv-9rm8-hj6h",
+  "modified": "2026-06-09T18:30:48Z",
+  "published": "2026-06-09T18:30:48Z",
+  "aliases": [
+    "CVE-2026-45460"
+  ],
+  "details": "Out-of-bounds read in Microsoft Office allows an unauthorized attacker to disclose information locally.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45460"
+    },
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45460"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-126"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T17:17:20Z"
+  }
+}
