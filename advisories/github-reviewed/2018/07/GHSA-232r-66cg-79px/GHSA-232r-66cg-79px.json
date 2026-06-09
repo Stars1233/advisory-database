@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-232r-66cg-79px",
-  "modified": "2024-10-09T19:47:17Z",
+  "modified": "2026-06-09T12:59:24Z",
   "published": "2018-07-12T20:29:30Z",
   "aliases": [
     "CVE-2018-7750"
@@ -252,6 +252,10 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2018:0591"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.securityfocus.com/bid/103713"
     }
   ],
   "database_specific": {
