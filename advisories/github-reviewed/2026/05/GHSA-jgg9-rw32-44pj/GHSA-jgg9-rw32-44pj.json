@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jgg9-rw32-44pj",
-  "modified": "2026-05-14T20:15:42Z",
+  "modified": "2026-06-09T10:19:27Z",
   "published": "2026-05-14T20:15:42Z",
   "aliases": [
     "CVE-2026-45058"
@@ -41,6 +41,10 @@
       "url": "https://github.com/electerm/electerm/security/advisories/GHSA-jgg9-rw32-44pj"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45058"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/electerm/electerm"
     }
@@ -55,6 +59,6 @@
     "severity": "CRITICAL",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T20:15:42Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-28T18:16:34Z"
   }
 }

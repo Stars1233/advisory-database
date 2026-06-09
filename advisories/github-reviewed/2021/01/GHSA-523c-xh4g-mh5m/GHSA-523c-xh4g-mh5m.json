@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-523c-xh4g-mh5m",
-  "modified": "2022-11-17T20:57:31Z",
+  "modified": "2026-06-09T10:20:57Z",
   "published": "2021-01-14T19:18:22Z",
   "aliases": [
     "CVE-2017-12626"
@@ -50,7 +50,15 @@
     },
     {
       "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/453d9af5dbabaccd9afb58d27279a9dbfe8e35f4e5ea1645ddd6960b%40%3Cdev.poi.apache.org%3E"
+    },
+    {
+      "type": "WEB",
       "url": "https://lists.apache.org/thread.html/453d9af5dbabaccd9afb58d27279a9dbfe8e35f4e5ea1645ddd6960b@%3Cdev.poi.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/708d94141126eac03011144a971a6411fcac16d9c248d1d535a39451%40%3Csolr-user.lucene.apache.org%3E"
     },
     {
       "type": "WEB",

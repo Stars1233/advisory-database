@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-88gh-2526-gfrr",
-  "modified": "2026-05-14T20:29:48Z",
+  "modified": "2026-06-09T10:19:56Z",
   "published": "2026-05-14T20:29:48Z",
   "aliases": [
     "CVE-2026-45373"
@@ -38,11 +38,23 @@
   "references": [
     {
       "type": "WEB",
+      "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-88gh-2526-gfrr"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/Hmbown/DeepSeek-TUI/security/advisories/GHSA-88gh-2526-gfrr"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45373"
     },
     {
       "type": "PACKAGE",
       "url": "https://github.com/Hmbown/DeepSeek-TUI"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Hmbown/DeepSeek-TUI/blob/15f62e3e93d842f30b428877819ebc1c8cb96814/crates/tui/src/tools/fetch_url.rs#L321"
     },
     {
       "type": "WEB",
@@ -56,6 +68,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T20:29:48Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-28T18:16:35Z"
   }
 }

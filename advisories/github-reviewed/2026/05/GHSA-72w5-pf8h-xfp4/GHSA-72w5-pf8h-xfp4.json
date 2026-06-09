@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-72w5-pf8h-xfp4",
-  "modified": "2026-05-14T20:29:52Z",
+  "modified": "2026-06-09T10:20:02Z",
   "published": "2026-05-14T20:29:52Z",
   "aliases": [
     "CVE-2026-45374"
@@ -38,7 +38,15 @@
   "references": [
     {
       "type": "WEB",
+      "url": "https://github.com/Hmbown/CodeWhale/security/advisories/GHSA-72w5-pf8h-xfp4"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/Hmbown/DeepSeek-TUI/security/advisories/GHSA-72w5-pf8h-xfp4"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45374"
     },
     {
       "type": "PACKAGE",
@@ -56,6 +64,6 @@
     "severity": "CRITICAL",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T20:29:52Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-28T18:16:35Z"
   }
 }
