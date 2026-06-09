@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p9wc-4pjv-rg82",
+  "modified": "2026-06-09T00:02:11Z",
+  "published": "2026-05-15T21:31:32Z",
+  "withdrawn": "2026-06-09T00:02:11Z",
+  "aliases": [],
+  "summary": "Duplicate Advisory: phpMyFAQ has SQL Injection in CurrentUser::setTokenData through unescaped OAuth token fields",
+  "details": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-pm8c-3qq3-72w7. This link is maintained to preserve external references.\n\n### Original Description\nphpMyFAQ before 4.1.2 contains a sql injection vulnerability in CurrentUser::setTokenData that allows authenticated attackers to execute arbitrary SQL by injecting malicious OAuth token claims. Attackers with Azure AD accounts containing SQL metacharacters in display names or JWT claims can break out of string literals and execute arbitrary database queries.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "thorsten/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "phpmyfaq/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-pm8c-3qq3-72w7"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46359"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/phpmyfaq-sql-injection-in-currentuser-settokendata-via-unescaped-oauth-token-fields"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-09T00:02:11Z",
+    "nvd_published_at": "2026-05-15T19:17:03Z"
+  }
+}

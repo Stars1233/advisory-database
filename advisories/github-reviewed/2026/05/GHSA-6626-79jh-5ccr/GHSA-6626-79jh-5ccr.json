@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6626-79jh-5ccr",
+  "modified": "2026-06-09T00:00:12Z",
+  "published": "2026-05-15T21:31:32Z",
+  "withdrawn": "2026-06-09T00:00:12Z",
+  "aliases": [],
+  "summary": "Duplicate Advisory: phpMyFAQ enables unauthenticated 2FA brute-force attack via /admin/check acceptance of arbitrary user-id",
+  "details": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-9pq7-mfwh-xx2j. This link is maintained to preserve external references.\n\n### Original Description\nphpMyFAQ before 4.1.2 contains an improper restriction of excessive authentication attempts vulnerability in the /admin/check endpoint, which accepts arbitrary user-id parameters without session binding or rate limiting. Unauthenticated attackers can brute-force any user's six-digit TOTP code by submitting POST requests with sequential token values, bypassing two-factor authentication to gain full administrative access.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "thorsten/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "phpmyfaq/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9pq7-mfwh-xx2j"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45010"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/phpmyfaq-unauthenticated-two-factor-authentication-brute-force-via-admin-check-endpoint"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-307"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-09T00:00:12Z",
+    "nvd_published_at": "2026-05-15T19:17:01Z"
+  }
+}
