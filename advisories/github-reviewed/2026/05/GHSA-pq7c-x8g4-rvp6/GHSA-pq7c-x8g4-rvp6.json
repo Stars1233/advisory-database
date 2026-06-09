@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pq7c-x8g4-rvp6",
-  "modified": "2026-05-18T20:22:07Z",
+  "modified": "2026-06-09T10:58:12Z",
   "published": "2026-05-18T20:22:07Z",
   "aliases": [
     "CVE-2026-45554"
@@ -44,8 +44,16 @@
       "url": "https://github.com/zauberzeug/nicegui/security/advisories/GHSA-pq7c-x8g4-rvp6"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45554"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/zauberzeug/nicegui"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/zauberzeug/nicegui/releases/tag/v3.12.0"
     }
   ],
   "database_specific": {
@@ -56,6 +64,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-18T20:22:07Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-02T16:16:41Z"
   }
 }

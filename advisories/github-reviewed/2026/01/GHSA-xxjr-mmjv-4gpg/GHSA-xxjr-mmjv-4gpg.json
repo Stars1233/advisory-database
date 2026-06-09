@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xxjr-mmjv-4gpg",
-  "modified": "2026-01-21T23:01:22Z",
+  "modified": "2026-06-09T10:56:34Z",
   "published": "2026-01-21T23:01:22Z",
   "aliases": [
     "CVE-2025-13465"
@@ -117,6 +117,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/lodash/lodash/commit/edadd452146f7e4bad4ea684e955708931d84d81"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html"
     },
     {
       "type": "PACKAGE",
