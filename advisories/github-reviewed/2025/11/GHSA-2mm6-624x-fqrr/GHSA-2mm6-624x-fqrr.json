@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2mm6-624x-fqrr",
+  "modified": "2026-06-09T16:12:34Z",
+  "published": "2025-11-27T12:30:28Z",
+  "aliases": [
+    "CVE-2025-13742"
+  ],
+  "summary": "pretix has Email Content Injection Through Maliciously Formatted Names",
+  "details": "Emails sent by pretix can utilize placeholders that will be filled with customer data. For example, when {name} is used in an email template, it will be replaced with the buyer's name for the final email. If the name of the attendee contained HTML or Markdown formatting, this was rendered as HTML in the resulting email. This way, a user could inject links or other formatted text through a maliciously formatted name. Since pretix applies a strict allow list approach to allowed HTML tags, this could not be abused for XSS or similarly dangerous attack chains. However, it can be used to manipulate emails in a way that makes user-provided content appear in a trustworthy and credible way, which can be abused for phishing.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:L/VA:L/SC:N/SI:L/SA:L/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "pretix"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "2025.7.3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "pretix"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2025.8.0"
+            },
+            {
+              "fixed": "2025.8.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "pretix"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2025.9.0"
+            },
+            {
+              "fixed": "2025.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13742"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/pretix/pretix"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pretix/PYSEC-2025-154.yaml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pretix.eu/about/en/blog/20251126-release-2025-9-1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pretix.eu/about/en/security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://web.archive.org/web/20251129201933/https://pretix.eu/about/en/blog/20251127-release-2025-9-2"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-116"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-09T16:12:33Z",
+    "nvd_published_at": "2025-11-27T11:15:47Z"
+  }
+}
