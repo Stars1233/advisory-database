@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qjp4-4jvr-xqg3",
-  "modified": "2026-05-18T13:29:29Z",
+  "modified": "2026-06-09T10:29:26Z",
   "published": "2026-05-18T13:29:29Z",
   "aliases": [
     "CVE-2026-45609"
@@ -41,6 +41,10 @@
       "url": "https://github.com/spring-ai-community/mcp-security/security/advisories/GHSA-qjp4-4jvr-xqg3"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45609"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/spring-ai-community/mcp-security/pull/68"
     },
@@ -64,6 +68,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-18T13:29:29Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-29T15:16:23Z"
   }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f3rg-xqjj-cj9w",
-  "modified": "2026-05-18T13:26:51Z",
+  "modified": "2026-06-09T10:27:22Z",
   "published": "2026-05-18T13:26:51Z",
   "aliases": [
     "CVE-2026-45582"
@@ -41,6 +41,10 @@
       "url": "https://github.com/czlonkowski/n8n-mcp/security/advisories/GHSA-f3rg-xqjj-cj9w"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45582"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/czlonkowski/n8n-mcp/pull/782"
     },
@@ -64,6 +68,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-18T13:26:51Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-29T14:16:30Z"
   }
 }

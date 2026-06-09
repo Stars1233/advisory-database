@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-87f9-hvmw-gh4p",
-  "modified": "2026-05-11T19:37:00Z",
+  "modified": "2026-06-09T10:29:18Z",
   "published": "2026-05-11T19:37:00Z",
   "aliases": [
     "CVE-2026-41159"
@@ -66,8 +66,16 @@
       "url": "https://github.com/mermaid-js/mermaid/security/advisories/GHSA-87f9-hvmw-gh4p"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41159"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/mermaid-js/mermaid/commit/64769738d5b59211e1decb471ffbaca8afec51aa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mermaid-js/mermaid/commit/64769738d5b59211e1decb471ffbaca8afec51aahttps://github.com/mermaid-js/mermaid/commit/a9d9f0d8eb790349121508688cd338253fd80d76"
     },
     {
       "type": "WEB",
@@ -83,6 +91,10 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/mermaid-js/mermaid/releases/tag/mermaid@11.15.0"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6"
     }
   ],
@@ -93,6 +105,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-11T19:37:00Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-05-29T15:16:22Z"
   }
 }
