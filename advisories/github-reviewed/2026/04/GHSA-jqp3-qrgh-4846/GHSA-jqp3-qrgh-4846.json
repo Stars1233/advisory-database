@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jqp3-qrgh-4846",
-  "modified": "2026-04-28T21:36:13Z",
+  "modified": "2026-06-09T20:32:55Z",
   "published": "2026-04-28T21:36:12Z",
   "aliases": [
     "CVE-2026-24178"
   ],
+  "summary": "NVIDIA NVFlare Dashboard: Authorization bypass through user-controlled key via user management and authentication system",
   "details": "NVIDIA NVFlare Dashboard contains a vulnerability in the user management and authentication system where an unauthenticated attacker may cause authorization bypass through user-controlled key. A successful exploit of this vulnerability may lead to privilege escalation, data tampering, information disclosure, code execution, and denial of service.",
   "severity": [
     {
@@ -13,11 +14,39 @@
       "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "nvflare"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24178"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/NVIDIA/NVFlare"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/nvflare/PYSEC-2026-100.yaml"
     },
     {
       "type": "WEB",
@@ -33,8 +62,8 @@
       "CWE-639"
     ],
     "severity": "CRITICAL",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-09T20:32:55Z",
     "nvd_published_at": "2026-04-28T19:36:45Z"
   }
 }
