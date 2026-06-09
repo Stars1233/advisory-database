@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mq5v-pxpm-8jw2",
-  "modified": "2026-05-29T15:40:23Z",
+  "modified": "2026-06-09T11:54:22Z",
   "published": "2026-05-29T15:40:23Z",
   "aliases": [
     "CVE-2026-41236"
@@ -44,8 +44,16 @@
       "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-mq5v-pxpm-8jw2"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41236"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/froxlor/froxlor"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/froxlor/froxlor/releases/tag/2.3.7"
     }
   ],
   "database_specific": {
@@ -55,6 +63,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-29T15:40:23Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-04T19:16:29Z"
   }
 }

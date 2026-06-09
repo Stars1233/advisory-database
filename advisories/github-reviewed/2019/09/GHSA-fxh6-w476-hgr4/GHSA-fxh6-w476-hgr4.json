@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fxh6-w476-hgr4",
-  "modified": "2021-08-17T22:21:47Z",
+  "modified": "2026-06-09T11:55:21Z",
   "published": "2019-09-11T22:59:57Z",
   "aliases": [
     "CVE-2018-1002206"
@@ -37,8 +37,32 @@
   ],
   "references": [
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1002206"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/adamhathcock/sharpcompress/pull/374"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/adamhathcock/sharpcompress/commit/42b1205fb435de523e6ef8ac5b7bafbe712997f6"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/adamhathcock/sharpcompress/commit/80ceb1c375fdb1b4ffba16528c99089e804ce61f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/snyk/zip-slip-vulnerability"
+    },
+    {
+      "type": "WEB",
+      "url": "https://snyk.io/research/zip-slip-vulnerability"
+    },
+    {
+      "type": "WEB",
+      "url": "https://snyk.io/vuln/SNYK-DOTNET-SHARPCOMPRESS-60246"
     }
   ],
   "database_specific": {
@@ -48,6 +72,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2019-09-03T22:22:18Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2018-07-25T17:29:01Z"
   }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q58j-g3f4-h26h",
-  "modified": "2026-05-14T13:18:16Z",
+  "modified": "2026-06-09T11:55:16Z",
   "published": "2026-05-14T13:18:16Z",
   "aliases": [
     "CVE-2026-41249"
@@ -31,8 +31,20 @@
       "url": "https://github.com/coreshop/CoreShop/security/advisories/GHSA-q58j-g3f4-h26h"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41249"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/coreshop/CoreShop/commit/cc1e3f547228ec5ebfc1dc0472f9a3cc5f4137a4"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/coreshop/CoreShop"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/coreshop/CoreShop/blob/5.1.0-beta.1/.github/workflows/static.yml#L14"
     }
   ],
   "database_specific": {
@@ -42,6 +54,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T13:18:16Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-04T20:16:57Z"
   }
 }

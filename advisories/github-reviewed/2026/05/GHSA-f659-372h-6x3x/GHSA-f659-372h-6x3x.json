@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f659-372h-6x3x",
-  "modified": "2026-05-26T23:08:27Z",
+  "modified": "2026-06-09T11:53:42Z",
   "published": "2026-05-26T23:08:26Z",
   "aliases": [
     "CVE-2026-41207"
@@ -41,6 +41,14 @@
       "url": "https://github.com/netty/netty-incubator-codec-ohttp/security/advisories/GHSA-f659-372h-6x3x"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41207"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty-incubator-codec-ohttp/commit/3d3b4e527fc82ad0fe3db1af951ffd0ec9a10680"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/netty/netty-incubator-codec-ohttp"
     }
@@ -52,6 +60,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-26T23:08:26Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-04T18:16:30Z"
   }
 }

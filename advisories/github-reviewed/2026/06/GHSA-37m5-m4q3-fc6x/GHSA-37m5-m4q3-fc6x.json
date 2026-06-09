@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-37m5-m4q3-fc6x",
-  "modified": "2026-06-03T21:02:12Z",
+  "modified": "2026-06-09T11:54:17Z",
   "published": "2026-06-03T21:02:12Z",
   "aliases": [
     "CVE-2026-41234"
@@ -45,6 +45,10 @@
     },
     {
       "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41234"
+    },
+    {
+      "type": "ADVISORY",
       "url": "https://github.com/advisories/GHSA-x6w6-2xwp-3jh6"
     },
     {
@@ -63,6 +67,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-06-03T21:02:12Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-04T19:16:28Z"
   }
 }

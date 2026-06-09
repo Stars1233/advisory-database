@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gcv3-5v9q-fmhh",
-  "modified": "2026-05-29T15:36:27Z",
+  "modified": "2026-06-09T11:54:54Z",
   "published": "2026-05-29T15:36:26Z",
   "aliases": [
     "CVE-2026-41235"
@@ -12,6 +12,10 @@
     {
       "type": "CVSS_V3",
       "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P"
     }
   ],
   "affected": [
@@ -44,8 +48,16 @@
       "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-gcv3-5v9q-fmhh"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41235"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/froxlor/froxlor"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/froxlor/froxlor/releases/tag/2.3.7"
     }
   ],
   "database_specific": {
@@ -55,6 +67,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-29T15:36:26Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-04T19:16:29Z"
   }
 }
