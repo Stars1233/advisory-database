@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5qrq-9645-g5g2",
-  "modified": "2026-05-14T19:04:14Z",
+  "modified": "2026-06-09T13:12:19Z",
   "published": "2026-05-14T19:04:14Z",
   "aliases": [
     "CVE-2026-44541"
@@ -41,6 +41,10 @@
       "url": "https://github.com/ethyca/fides/security/advisories/GHSA-5qrq-9645-g5g2"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44541"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/ethyca/fides/commit/67e43b10b1096c7f84d5c0eeba08ee3b7846b7cd"
     },
@@ -60,6 +64,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-14T19:04:14Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-08T21:16:45Z"
   }
 }
