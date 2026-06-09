@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rrmw-gv85-w824",
-  "modified": "2025-06-19T18:31:47Z",
+  "modified": "2026-06-09T19:09:31Z",
   "published": "2025-06-19T18:31:47Z",
   "aliases": [
     "CVE-2025-6272"
   ],
+  "summary": "pywasm3 has Improper Restriction of Operations within the Bounds of a Memory Buffer",
   "details": "A vulnerability has been found in wasm3 0.5.0 and classified as problematic. This vulnerability affects the function MarkSlotAllocated of the file source/m3_compile.c. The manipulation leads to out-of-bounds write. An attack has to be approached locally. The exploit has been disclosed to the public and may be used.",
   "severity": [
     {
@@ -14,10 +15,30 @@
     },
     {
       "type": "CVSS_V4",
-      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "pywasm3"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "0.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
@@ -29,7 +50,19 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pywasm3/PYSEC-2025-186.yaml"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/user-attachments/files/19516600/wasm3_crash.txt"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/wasm3/pywasm3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/wasm3/pywasm3/blob/main/wasm3/m3_compile.c#L333"
     },
     {
       "type": "WEB",
@@ -48,9 +81,9 @@
     "cwe_ids": [
       "CWE-119"
     ],
-    "severity": "MODERATE",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-09T19:09:31Z",
     "nvd_published_at": "2025-06-19T18:15:22Z"
   }
 }
