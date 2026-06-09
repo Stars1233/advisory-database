@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m6vc-f87m-cc2h",
-  "modified": "2026-06-04T14:37:11Z",
+  "modified": "2026-06-09T11:57:55Z",
   "published": "2026-06-04T14:37:11Z",
   "aliases": [
     "CVE-2026-44476"
@@ -50,6 +50,14 @@
     {
       "type": "WEB",
       "url": "https://github.com/doorkeeper-gem/doorkeeper-openid_connect/releases/tag/v1.10.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/doorkeeper-openid_connect/CVE-2026-44476.yml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-44476"
     }
   ],
   "database_specific": {

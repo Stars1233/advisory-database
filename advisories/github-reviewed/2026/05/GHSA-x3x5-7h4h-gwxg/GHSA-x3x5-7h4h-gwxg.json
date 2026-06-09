@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x3x5-7h4h-gwxg",
-  "modified": "2026-05-19T14:47:03Z",
+  "modified": "2026-06-09T11:56:58Z",
   "published": "2026-05-19T14:47:03Z",
   "aliases": [
     "CVE-2026-46511"
@@ -44,6 +44,10 @@
       "url": "https://github.com/haxtheweb/issues/security/advisories/GHSA-x3x5-7h4h-gwxg"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46511"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/haxtheweb/issues"
     }
@@ -57,6 +61,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-19T14:47:03Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-05T19:16:34Z"
   }
 }

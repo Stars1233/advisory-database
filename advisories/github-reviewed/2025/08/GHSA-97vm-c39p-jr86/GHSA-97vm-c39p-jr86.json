@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-97vm-c39p-jr86",
-  "modified": "2026-01-13T20:33:40Z",
+  "modified": "2026-06-09T11:56:05Z",
   "published": "2025-08-13T21:30:30Z",
   "aliases": [
     "CVE-2011-10019"

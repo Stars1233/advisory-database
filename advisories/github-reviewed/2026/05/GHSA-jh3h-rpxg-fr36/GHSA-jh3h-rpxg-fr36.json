@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jh3h-rpxg-fr36",
-  "modified": "2026-05-19T14:46:47Z",
+  "modified": "2026-06-09T11:56:54Z",
   "published": "2026-05-19T14:46:47Z",
   "aliases": [
     "CVE-2026-46396"
@@ -88,6 +88,10 @@
       "url": "https://github.com/haxtheweb/issues/security/advisories/GHSA-jh3h-rpxg-fr36"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46396"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/haxtheweb/issues"
     }
@@ -99,6 +103,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-19T14:46:47Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-05T19:16:33Z"
   }
 }

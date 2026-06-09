@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q862-gcgq-5m6g",
-  "modified": "2026-05-19T14:44:20Z",
+  "modified": "2026-06-09T11:56:33Z",
   "published": "2026-05-19T14:44:20Z",
   "aliases": [
     "CVE-2026-46393"
@@ -44,6 +44,10 @@
       "url": "https://github.com/haxtheweb/issues/security/advisories/GHSA-q862-gcgq-5m6g"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46393"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/haxtheweb/issues"
     }
@@ -55,6 +59,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-19T14:44:20Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-05T19:16:33Z"
   }
 }
