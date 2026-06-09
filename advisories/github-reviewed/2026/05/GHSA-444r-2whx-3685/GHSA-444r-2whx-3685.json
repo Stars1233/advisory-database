@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-444r-2whx-3685",
+  "modified": "2026-06-09T20:49:59Z",
+  "published": "2026-05-10T15:31:19Z",
+  "aliases": [
+    "CVE-2021-47935"
+  ],
+  "summary": "Sentry: Superusers can execute arbitrary commands by injecting malicious pickle-serialized objects through audit log entry data parameter",
+  "details": "Sentry 8.2.0 contains a remote code execution vulnerability that allows authenticated superusers to execute arbitrary commands by injecting malicious pickle-serialized objects through the audit log entry data parameter. Attackers can submit crafted POST requests to the admin audit log endpoint with base64-encoded compressed pickle payloads in the data field to achieve code execution with application privileges.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "sentry"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.1.4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "sentry"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47935"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/getsentry/sentry/commit/19a0ba63d9ffb6aff79c7b78e2fa951a94edd61a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/getsentry/sentry/commit/1f6090dc64b237c3da22bf35a5863a7136ac4669"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/getsentry/sentry"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/sentry/PYSEC-2026-131.yaml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sentry.io/welcome"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/50318"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/sentry-remote-code-execution-via-pickle-deserialization"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-09T20:49:59Z",
+    "nvd_published_at": "2026-05-10T13:16:29Z"
+  }
+}
