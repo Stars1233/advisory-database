@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q53q-5r4j-5729",
-  "modified": "2026-06-01T14:15:31Z",
+  "modified": "2026-06-09T11:52:08Z",
   "published": "2026-06-01T14:15:31Z",
   "aliases": [
     "CVE-2026-47425"
@@ -33,6 +33,28 @@
           ]
         }
       ]
+    },
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "py-rattler"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.24.0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 0.23.2"
+      }
     }
   ],
   "references": [
