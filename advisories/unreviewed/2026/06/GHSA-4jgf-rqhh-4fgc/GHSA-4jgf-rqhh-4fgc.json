@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4jgf-rqhh-4fgc",
+  "modified": "2026-06-09T21:32:36Z",
+  "published": "2026-06-09T21:32:36Z",
+  "aliases": [
+    "CVE-2026-39170"
+  ],
+  "details": "SemCms 5.0 is vulnerable to Cross Site Request Forgery (CSRF) via crafted POST request to /admin/semcms_user.php.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39170"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/ql288470-pixel/41e01787357416458212dbbfd06c6d73"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:48Z"
+  }
+}

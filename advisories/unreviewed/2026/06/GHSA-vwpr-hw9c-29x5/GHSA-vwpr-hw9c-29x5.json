@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vwpr-hw9c-29x5",
+  "modified": "2026-06-09T21:32:33Z",
+  "published": "2026-06-09T21:32:33Z",
+  "aliases": [
+    "CVE-2026-30141"
+  ],
+  "details": "An issue was discovered in bitbank2 AnimatedGIF v2.2.0. A buffer overflow in the DecodeLZW function allows remote attackers to cause a denial of service (crash) or potentially execute arbitrary code via a crafted GIF file.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30141"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/bitbank2/AnimatedGIF/issues/115"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:32Z"
+  }
+}

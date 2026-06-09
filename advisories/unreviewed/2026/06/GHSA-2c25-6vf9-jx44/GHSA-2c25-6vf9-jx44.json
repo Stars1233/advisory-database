@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2c25-6vf9-jx44",
+  "modified": "2026-06-09T21:32:36Z",
+  "published": "2026-06-09T21:32:36Z",
+  "aliases": [
+    "CVE-2026-47906"
+  ],
+  "details": "Dreamweaver Desktop versions 21.7 and earlier are affected by a Dependency on Vulnerable Third-Party Component vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47906"
+    },
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/dreamweaver/apsb26-62.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T20:16:59Z"
+  }
+}

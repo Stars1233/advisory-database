@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c9pp-c247-8xgh",
-  "modified": "2026-06-03T18:33:13Z",
+  "modified": "2026-06-09T21:32:21Z",
   "published": "2026-06-03T18:33:13Z",
   "aliases": [
     "CVE-2026-46267"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfc: hci: shdlc: Stop timers and work before freeing context\n\nllc_shdlc_deinit() purges SHDLC skb queues and frees the llc_shdlc\nstructure while its timers and state machine work may still be active.\n\nTimer callbacks can schedule sm_work, and sm_work accesses SHDLC state\nand the skb queues. If teardown happens in parallel with a queued/running\nwork item, it can lead to UAF and other shutdown races.\n\nStop all SHDLC timers and cancel sm_work synchronously before purging the\nqueues and freeing the context.\n\nFound by Linux Verification Center (linuxtesting.org) with SVACE.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -44,8 +49,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T18:16:28Z"

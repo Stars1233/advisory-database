@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-86fj-8698-3qp6",
-  "modified": "2026-06-03T18:33:12Z",
+  "modified": "2026-06-09T21:32:21Z",
   "published": "2026-06-03T18:33:12Z",
   "aliases": [
     "CVE-2026-46261"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nspi: wpcm-fiu: Fix potential NULL pointer dereference in wpcm_fiu_probe()\n\nplatform_get_resource_byname() can return NULL, which would cause a crash\nwhen passed the pointer to resource_size().\n\nMove the fiu->memory_size assignment after the error check for\ndevm_ioremap_resource() to prevent the potential NULL pointer dereference.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -36,8 +41,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T18:16:27Z"

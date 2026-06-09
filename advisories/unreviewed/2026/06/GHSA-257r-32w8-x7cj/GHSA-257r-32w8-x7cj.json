@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-257r-32w8-x7cj",
+  "modified": "2026-06-09T21:32:38Z",
+  "published": "2026-06-09T21:32:38Z",
+  "aliases": [
+    "CVE-2026-25557"
+  ],
+  "details": "Evoluted PHP Directory Listing Script through 4.0.5 contains a reflected cross-site scripting vulnerability in index.php where the dir parameter value is reflected without HTML encoding inside the HTML title element and inside anchor href attributes in the breadcrumb navigation. Attackers can inject arbitrary JavaScript via crafted dir parameter values by breaking out of the title context or injecting event handlers into breadcrumb anchor attributes to execute malicious scripts in a victim's browser.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25557"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/cyberinforepo/d62cf53ef42ff703ca67792d49bf6780"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.evoluted.net/blog/development/php-directory-listing-script"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/evoluted-php-directory-listing-script-reflected-xss-via-dir-parameter"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T21:17:04Z"
+  }
+}

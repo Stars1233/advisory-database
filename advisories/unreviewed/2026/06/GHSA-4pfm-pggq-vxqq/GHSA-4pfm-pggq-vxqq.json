@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4pfm-pggq-vxqq",
+  "modified": "2026-06-09T21:32:37Z",
+  "published": "2026-06-09T21:32:37Z",
+  "aliases": [
+    "CVE-2026-47910"
+  ],
+  "details": "Dreamweaver Desktop versions 21.7 and earlier are affected by an Incorrect Authorization vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47910"
+    },
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/dreamweaver/apsb26-62.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T20:17:00Z"
+  }
+}

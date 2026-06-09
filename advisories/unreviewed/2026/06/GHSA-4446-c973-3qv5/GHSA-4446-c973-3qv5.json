@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4446-c973-3qv5",
+  "modified": "2026-06-09T21:32:39Z",
+  "published": "2026-06-09T21:32:39Z",
+  "aliases": [
+    "CVE-2026-47937"
+  ],
+  "details": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by an Uncontrolled Search Path Element vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47937"
+    },
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/acrobat/apsb26-63.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-427"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T21:17:23Z"
+  }
+}

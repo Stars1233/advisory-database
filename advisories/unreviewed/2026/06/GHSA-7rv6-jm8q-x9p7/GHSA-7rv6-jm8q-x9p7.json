@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7rv6-jm8q-x9p7",
-  "modified": "2026-06-03T18:33:11Z",
+  "modified": "2026-06-09T21:32:20Z",
   "published": "2026-06-03T18:33:11Z",
   "aliases": [
     "CVE-2025-71314"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/panthor: Recover from panthor_gpu_flush_caches() failures\n\nWe have seen a few cases where the whole memory subsystem is blocked\nand flush operations never complete. When that happens, we want to:\n\n- schedule a reset, so we can recover from this situation\n- in the reset path, we need to reset the pending_reqs so we can send\n  new commands after the reset\n- if more panthor_gpu_flush_caches() operations are queued after\n  the timeout, we skip them and return -EIO directly to avoid needless\n  waits (the memory block won't miraculously work again)\n\nNote that we drop the WARN_ON()s because these hangs can be triggered\nwith buggy GPU jobs created by the UMD, and there's no way we can\nprevent it. We do keep the error messages though.\n\nv2:\n- New patch\n\nv3:\n- Collect R-b\n- Explicitly mention the fact we dropped the WARN_ON()s in the commit\n  message\n\nv4:\n- No changes",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -33,7 +38,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T18:16:19Z"

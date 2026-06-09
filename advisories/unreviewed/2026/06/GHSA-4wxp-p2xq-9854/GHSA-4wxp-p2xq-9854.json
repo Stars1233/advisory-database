@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4wxp-p2xq-9854",
+  "modified": "2026-06-09T21:32:33Z",
+  "published": "2026-06-09T21:32:33Z",
+  "aliases": [
+    "CVE-2025-55651"
+  ],
+  "details": "A NULL pointer dereference in the gf_isom_get_user_data_count function (isomedia/isom_read.c) of GPAC MP4Box v2.4 allows attackers to cause a Denial of Service (DoS) via supplying a crafted MP4 file.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55651"
+    },
+    {
+      "type": "WEB",
+      "url": "https://infosec.exchange/@sigdevel/116710512103919834"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:31Z"
+  }
+}

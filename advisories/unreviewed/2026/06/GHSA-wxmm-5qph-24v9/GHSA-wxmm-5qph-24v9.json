@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wxmm-5qph-24v9",
+  "modified": "2026-06-09T21:32:32Z",
+  "published": "2026-06-09T21:32:32Z",
+  "aliases": [
+    "CVE-2025-52293"
+  ],
+  "details": "A segmentation violaton in the gf_hevc_read_sps_bs_internal function (media_tools/av_parsers.c) of GPAC MP4Box v2.4 allows attackers to cause a Denial of Service (DoS) via supplying crafted HEVC SPS data.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52293"
+    },
+    {
+      "type": "WEB",
+      "url": "https://infosec.exchange/@sigdevel/116710484148913883"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:31Z"
+  }
+}

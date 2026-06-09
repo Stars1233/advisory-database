@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rwx9-m3pj-2mv2",
-  "modified": "2026-06-05T09:33:46Z",
+  "modified": "2026-06-09T21:32:20Z",
   "published": "2026-06-03T18:33:12Z",
   "aliases": [
     "CVE-2026-46253"
@@ -53,7 +53,9 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
+    "cwe_ids": [
+      "CWE-787"
+    ],
     "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,

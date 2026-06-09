@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h4c6-cm2m-h5f6",
-  "modified": "2026-06-05T00:31:52Z",
+  "modified": "2026-06-09T21:32:21Z",
   "published": "2026-06-05T00:31:52Z",
   "aliases": [
     "CVE-2026-20245"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20245"
     }
   ],
   "database_specific": {

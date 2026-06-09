@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3vw3-v7g3-hrqq",
+  "modified": "2026-06-09T21:32:35Z",
+  "published": "2026-06-09T21:32:35Z",
+  "aliases": [
+    "CVE-2026-36784"
+  ],
+  "details": "Shenzhen Tenda Technology Co., Ltd Tenda O3 Wireless Router v1.0.0.5(4180) was discovered to contain a stack overflow in the ip parameter of the fromNetToolGet function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a HTTP request.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36784"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/xhh0124/SemVulLLM/tree/main/O3/fromNetToolGet_ip"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:44Z"
+  }
+}

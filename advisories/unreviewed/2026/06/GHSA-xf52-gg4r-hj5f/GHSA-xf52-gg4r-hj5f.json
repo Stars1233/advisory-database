@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xf52-gg4r-hj5f",
-  "modified": "2026-06-03T18:33:12Z",
+  "modified": "2026-06-09T21:32:21Z",
   "published": "2026-06-03T18:33:12Z",
   "aliases": [
     "CVE-2026-46258"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ngpio: cdev: Avoid NULL dereference in linehandle_create()\n\nIn linehandle_create(), there is a statement like this:\n  retain_and_null_ptr(lh);\n\nSoon after, there is a debug printout that dereferences \"lh\", which\nwill crash things.\n\nAvoid the crash by using handlereq.lines, which is the same value.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -24,8 +29,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-03T18:16:26Z"

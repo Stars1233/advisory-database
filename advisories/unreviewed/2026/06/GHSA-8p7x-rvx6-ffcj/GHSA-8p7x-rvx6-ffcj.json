@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8p7x-rvx6-ffcj",
+  "modified": "2026-06-09T21:32:35Z",
+  "published": "2026-06-09T21:32:35Z",
+  "aliases": [
+    "CVE-2026-36792"
+  ],
+  "details": "Shenzhen Tenda Technology Co., Ltd Tenda W3 Wireless Router v1.0.0.3(2204) was discovered to contain a stack overflow in the wl_radio parameter of the formWifiRadioSet function. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted HTTP request.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36792"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/xhh0124/SemVulLLM/tree/main/W3/formWifiRadioSet"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:44Z"
+  }
+}

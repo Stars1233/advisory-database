@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j4g2-pj6c-fhp6",
+  "modified": "2026-06-09T21:32:33Z",
+  "published": "2026-06-09T21:32:33Z",
+  "aliases": [
+    "CVE-2026-36722"
+  ],
+  "details": "An authenticated arbitrary file upload vulnerability in the /api/create-car-image component of bookcars v8.3 allows attackers to execute arbitrary code via uploading a crafted file.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36722"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/bookcars/vulnerability-16"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:42Z"
+  }
+}

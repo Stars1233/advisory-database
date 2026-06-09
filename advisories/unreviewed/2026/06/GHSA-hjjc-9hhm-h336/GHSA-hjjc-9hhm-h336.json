@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hjjc-9hhm-h336",
+  "modified": "2026-06-09T21:32:33Z",
+  "published": "2026-06-09T21:32:33Z",
+  "aliases": [
+    "CVE-2026-36721"
+  ],
+  "details": "A lack of cryptographic signature verification in the validateAccessToken function of bookcars v8.3 allows attackers to bypass authentication via a forged JWT token.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36721"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/bookcars/vulnerability-2"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-09T19:17:42Z"
+  }
+}
