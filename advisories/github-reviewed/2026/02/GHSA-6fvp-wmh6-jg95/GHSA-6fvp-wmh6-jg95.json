@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6fvp-wmh6-jg95",
-  "modified": "2026-02-03T15:30:22Z",
+  "modified": "2026-06-10T18:49:15Z",
   "published": "2026-02-03T00:30:18Z",
   "aliases": [
     "CVE-2025-70960"
   ],
+  "summary": "Tendenci CMS contains a stored Cross-site Scripting (XSS) vulnerability in the Forums module",
   "details": "A stored cross-site scripting (XSS) vulnerability in the Forums module of Tendenci CMS v15.3.7 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload.",
   "severity": [
     {
@@ -13,7 +14,27 @@
       "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "tendenci"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "16.14"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
@@ -22,6 +43,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/emirhanyucelll/tendenci/blob/main/Readme.md"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/tendenci/tendenci"
     }
   ],
   "database_specific": {
@@ -29,8 +54,8 @@
       "CWE-79"
     ],
     "severity": "MODERATE",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-10T18:49:14Z",
     "nvd_published_at": "2026-02-02T23:16:02Z"
   }
 }
