@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q278-422p-x5h7",
+  "modified": "2026-06-10T09:31:57Z",
+  "published": "2026-06-10T09:31:57Z",
+  "aliases": [
+    "CVE-2026-9060"
+  ],
+  "details": "The Store Locator WordPress plugin before 1.6.6 does not sanitize and escape one of its settings before storing it and outputting it on the Store Locator WordPress plugin before 1.6.6 admin page, allowing high-privileged users such as administrators to perform Stored Cross-Site Scripting attacks even when the `unfiltered_html` capability is disallowed (e.g. in a multisite network where the super admin visits the page).",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9060"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wpscan.com/vulnerability/1ed01413-09a2-4a2e-be5b-375f2a327d0d"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-10T07:16:25Z"
+  }
+}

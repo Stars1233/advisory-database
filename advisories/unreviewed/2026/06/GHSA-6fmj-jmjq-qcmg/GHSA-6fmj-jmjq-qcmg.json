@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6fmj-jmjq-qcmg",
-  "modified": "2026-06-09T21:32:27Z",
+  "modified": "2026-06-10T09:31:57Z",
   "published": "2026-06-09T18:30:43Z",
   "aliases": [
     "CVE-2026-42771"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42771"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/6cd187689f8180c1f8a3acde21f88190c4a20de7"
     },
     {
       "type": "WEB",

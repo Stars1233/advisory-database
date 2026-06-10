@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cwcg-79p4-f24h",
+  "modified": "2026-06-10T09:31:57Z",
+  "published": "2026-06-10T09:31:57Z",
+  "aliases": [
+    "CVE-2026-9067"
+  ],
+  "details": "The Schema & Structured Data for WP & AMP WordPress plugin before 1.60 does not check user capabilities on its frontend AJAX file-upload handlers and does not validate the actual content of uploaded files against the endpoint's intended media type, allowing unauthenticated users to upload any file type accepted by WordPress's media library through endpoints that should only accept images or videos.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9067"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wpscan.com/vulnerability/7fac98eb-f82c-4705-a956-aba650945826"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-10T07:16:25Z"
+  }
+}

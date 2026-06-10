@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jqmp-cmj4-fv28",
+  "modified": "2026-06-10T09:31:57Z",
+  "published": "2026-06-10T09:31:57Z",
+  "aliases": [
+    "CVE-2026-8071"
+  ],
+  "details": "The Anti-Spam by CleanTalk. Spam protection WordPress plugin before 6.79 does not properly sanitize content within a custom shortcode used in its email-encoding feature, allowing unauthenticated attackers to inject arbitrary web scripts into approved comments that will execute when any user (including administrators) views the post.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8071"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wpscan.com/vulnerability/0d4635b5-2d79-4337-a1ad-6b8d02cfd64b"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-10T07:16:25Z"
+  }
+}

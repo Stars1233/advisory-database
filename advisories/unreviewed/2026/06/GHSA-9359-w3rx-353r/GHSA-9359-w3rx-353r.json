@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9359-w3rx-353r",
+  "modified": "2026-06-10T09:31:57Z",
+  "published": "2026-06-10T09:31:57Z",
+  "aliases": [
+    "CVE-2026-29114"
+  ],
+  "details": "A vulnerability has been found in some Dahua products. An attacker\nmay obtain the device’s CA root certificate. If that CA is installed and\ntrusted on client systems, the attacker could issue fraudulent certificates\ntrusted by those clients and undermine the certificate trust chain.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29114"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dahuasecurity.com/about-dahua/trust-center/dahua-psirt/dhcc-sa-202606-001:-security-advisory-%E2%80%93-vulnerabilities-found-in-some-dahua-products"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-538"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-10T07:16:24Z"
+  }
+}

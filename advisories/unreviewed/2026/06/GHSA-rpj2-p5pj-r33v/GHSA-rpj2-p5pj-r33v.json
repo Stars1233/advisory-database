@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rpj2-p5pj-r33v",
-  "modified": "2026-06-09T21:32:26Z",
+  "modified": "2026-06-10T09:31:57Z",
   "published": "2026-06-09T18:30:43Z",
   "aliases": [
     "CVE-2026-42769"
@@ -18,6 +18,22 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42769"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/54d0989997e5fc26057009a9782c3441ce3842fb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/777b363b16fcf2153bb3ded39dc3838713667c44"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/d35cd473a271bf3ce7bf3d32af53217fb83ae92c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/d531f21c0fe99067a66fc0ff1161ef127f9cd70b"
     },
     {
       "type": "WEB",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5m8f-m8jv-3rp3",
-  "modified": "2026-06-09T21:32:26Z",
+  "modified": "2026-06-10T09:31:57Z",
   "published": "2026-06-09T18:30:43Z",
   "aliases": [
     "CVE-2026-42768"
@@ -18,6 +18,22 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42768"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/a2ca7b2d73e0ffc1eae183fe6e1741dac767cb4f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/bbb151a83041705d9d001ed2f9c12f5523e1b54d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/dd68364107a58841c0a2546812518b65d3a23abd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/f04b377be3d821741c86d1f4bf84dee09f3d5c3e"
     },
     {
       "type": "WEB",

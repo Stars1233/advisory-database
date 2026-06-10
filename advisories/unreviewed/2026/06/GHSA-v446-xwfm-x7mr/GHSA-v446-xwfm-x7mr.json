@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-v446-xwfm-x7mr",
-  "modified": "2026-06-09T21:32:27Z",
+  "modified": "2026-06-10T09:31:57Z",
   "published": "2026-06-09T18:30:48Z",
   "aliases": [
     "CVE-2026-45445"
@@ -18,6 +18,26 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45445"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/323f0b6e7d530a4cb4336d50c88cb70f3ac2a451"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/787a6dfba81b7b09c1e05ab31396c0cd7c36b3f7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/7ac4715234ee72d9f3c93426a2c08554b5b771af"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/843c9b94ca9c2ed248bb30127bb4f3d7af0d607c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openssl/openssl/commit/983d54b5cce8d16147548ed1a37892d1720bbab6"
     },
     {
       "type": "WEB",
