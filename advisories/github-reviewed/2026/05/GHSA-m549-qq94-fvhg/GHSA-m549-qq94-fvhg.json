@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m549-qq94-fvhg",
-  "modified": "2026-05-21T17:30:57Z",
+  "modified": "2026-06-10T13:41:08Z",
   "published": "2026-05-21T17:30:57Z",
   "aliases": [
     "CVE-2026-46432"
@@ -41,6 +41,10 @@
       "url": "https://github.com/InternLM/lmdeploy/security/advisories/GHSA-m549-qq94-fvhg"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46432"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/InternLM/lmdeploy/pull/4511"
     },
@@ -56,6 +60,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-21T17:30:57Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-10T00:16:53Z"
   }
 }

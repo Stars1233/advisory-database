@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h9cc-w26m-j342",
-  "modified": "2026-05-21T19:45:08Z",
+  "modified": "2026-06-10T13:41:32Z",
   "published": "2026-05-21T19:45:08Z",
   "aliases": [
     "CVE-2026-46542"
@@ -41,6 +41,10 @@
       "url": "https://github.com/nimiq/core-rs-albatross/security/advisories/GHSA-h9cc-w26m-j342"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46542"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/nimiq/core-rs-albatross/pull/3713"
     },
@@ -64,6 +68,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-21T19:45:08Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-10T00:16:54Z"
   }
 }
