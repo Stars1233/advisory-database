@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3g8v-8r37-cgjm",
-  "modified": "2026-05-15T17:09:46Z",
+  "modified": "2026-06-10T18:41:15Z",
   "published": "2026-05-15T17:09:46Z",
   "aliases": [
     "CVE-2026-45062"
@@ -44,12 +44,20 @@
       "url": "https://github.com/php/frankenphp/security/advisories/GHSA-3g8v-8r37-cgjm"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45062"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/php/frankenphp/commit/2d0f480329a02571d6f635dad9fdb066e1a11e81"
     },
     {
       "type": "PACKAGE",
       "url": "https://github.com/php/frankenphp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/frankenphp/releases/tag/v1.12.3"
     }
   ],
   "database_specific": {
@@ -61,6 +69,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-15T17:09:46Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-10T18:16:57Z"
   }
 }
