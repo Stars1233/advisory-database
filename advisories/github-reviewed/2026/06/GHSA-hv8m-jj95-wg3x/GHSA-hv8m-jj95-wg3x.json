@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hv8m-jj95-wg3x",
+  "modified": "2026-06-11T20:34:10Z",
+  "published": "2026-06-11T20:34:10Z",
+  "aliases": [
+    "CVE-2026-48109"
+  ],
+  "summary": " MessagePack's LZ4 decompression may fail with AccessViolationException after dereferencing memory from bad input",
+  "details": "### Impact\n\nA vulnerability exists in the optional LZ4 decompression path used by MessagePack compression modes `Lz4Block` and `Lz4BlockArray`.\n\nThe decoder implementation is based on a deprecated fast-decompression algorithm that does not take a source-length bound. A remote attacker can send a crafted MessagePack payload with manipulated LZ4 token/length fields to force out-of-bounds reads from the compressed input buffer. In affected environments, this can trigger an `AccessViolationException` during decompression, causing process termination (denial of service). Under some conditions, limited unintended memory disclosure from over-read data may also be possible before failure.\n\nThis issue affects applications that deserialize untrusted data while LZ4 compression is enabled.\n\n### Patches\n\nThe v2 versions are patched as of 2.5.301.\nThe v3 versions are patched as of 3.1.7.\n\n### Workarounds\n\nInstead of upgrading, an application may take the following precautions:\n\n1. Disable LZ4 compression for untrusted input paths (`Lz4Block`, `Lz4BlockArray`).\n2. Only accept compressed payloads from strongly trusted producers.\n3. Isolate deserialization in a separate process/container with restart supervision to limit availability impact.\n\n### Resources\n\n- MESSAGEPACKCSHARP-010",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "MessagePack"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.301"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "MessagePack"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.214-rc.1"
+            },
+            {
+              "fixed": "3.1.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-hv8m-jj95-wg3x"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-11T20:34:10Z",
+    "nvd_published_at": null
+  }
+}
