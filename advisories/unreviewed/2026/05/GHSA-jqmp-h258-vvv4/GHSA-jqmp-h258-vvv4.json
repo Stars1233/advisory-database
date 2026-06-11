@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jqmp-h258-vvv4",
-  "modified": "2026-05-28T12:30:32Z",
+  "modified": "2026-06-11T03:30:23Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46188"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nocteon_ep_vf: add NULL check for napi_build_skb()\n\nnapi_build_skb() can return NULL on allocation failure. In\n__octep_vf_oq_process_rx(), the result is used directly without a NULL\ncheck in both the single-buffer and multi-fragment paths, leading to a\nNULL pointer dereference.\n\nAdd NULL checks after both napi_build_skb() calls, properly advancing\ndescriptors and consuming remaining fragments on failure.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:34Z"

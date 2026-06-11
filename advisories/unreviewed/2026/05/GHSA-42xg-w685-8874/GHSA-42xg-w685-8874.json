@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-42xg-w685-8874",
-  "modified": "2026-06-01T18:31:40Z",
+  "modified": "2026-06-11T03:30:23Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46184"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nsound: ua101: fix division by zero at probe\n\nAdd a missing sanity check for bNrChannels in detect_usb_format()\nto prevent a division by zero in playback_urb_complete() and\ncapture_urb_complete().\n\nUSB core does not validate class-specific descriptor fields such\nas bNrChannels, so drivers must verify them before use. If a\ndevice provides bNrChannels = 0, frame_bytes becomes zero and is\nlater used as a divisor in the URB completion handlers, leading\nto a kernel crash.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-369"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:34Z"

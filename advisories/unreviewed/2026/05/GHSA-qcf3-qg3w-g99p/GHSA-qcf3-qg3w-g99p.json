@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qcf3-qg3w-g99p",
-  "modified": "2026-06-01T18:31:41Z",
+  "modified": "2026-06-11T03:30:23Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46187"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: rsi: fix kthread lifetime race between self-exit and external-stop\n\nRSI driver use both self-exit(kthread_complete_and_exit) and external-stop\n(kthread_stop) when killing a kthread. Generally, kthread_stop() is called\nfirst, and in this case, no particular issues occur.\n\nHowever, in rare instances where kthread_complete_and_exit() is called\nfirst and then kthread_stop() is called, a UAF occurs because the kthread\nobject, which has already exited and been freed, is accessed again.\n\nTherefore, to prevent this with minimal modification, you must remove\nkthread_stop() and change the code to wait until the self-exit operation\nis completed.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-362"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:34Z"

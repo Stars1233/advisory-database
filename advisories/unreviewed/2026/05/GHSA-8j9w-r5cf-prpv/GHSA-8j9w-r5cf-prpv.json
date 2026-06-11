@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8j9w-r5cf-prpv",
-  "modified": "2026-05-28T12:30:32Z",
+  "modified": "2026-06-11T03:30:23Z",
   "published": "2026-05-28T12:30:32Z",
   "aliases": [
     "CVE-2026-46191"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nfbcon: Avoid OOB font access if console rotation fails\n\nClear the font buffer if the reallocation during console rotation fails\nin fbcon_rotate_font(). The putcs implementations for the rotated buffer\nwill return early in this case. See [1] for an example.\n\nCurrently, fbcon_rotate_font() keeps the old buffer, which is too small\nfor the rotated font. Printing to the rotated console with a high-enough\ncharacter code will overflow the font buffer.\n\nv2:\n- fix typos in commit message",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -36,8 +41,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:34Z"
