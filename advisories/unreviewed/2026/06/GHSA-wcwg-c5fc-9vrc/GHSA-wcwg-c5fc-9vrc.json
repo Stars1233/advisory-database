@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wcwg-c5fc-9vrc",
+  "modified": "2026-06-11T12:32:44Z",
+  "published": "2026-06-11T12:32:44Z",
+  "aliases": [
+    "CVE-2026-5497"
+  ],
+  "details": "vLLM versions 0.8.0 and later are vulnerable to an Out-of-Memory (OOM) Denial of Service (DoS) attack due to unbounded frame count processing in the `VideoMediaIO.load_base64()` method. When processing `video/jpeg` data URLs, the method splits the base64 data string on commas to extract individual JPEG frames without enforcing a frame count limit. An attacker can exploit this by crafting a single API request containing thousands of comma-separated base64-encoded JPEG frames in a data URL, causing the server to decode all frames into memory and crash due to excessive memory consumption. This vulnerability is reachable via the OpenAI-compatible chat completions API and does not require authentication.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5497"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/vllm-project/vllm/commit/58ee61422169ce17e08248f8efa1e9df434fe395"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/7bd92629-b396-4449-8f88-6c0092530eb4"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T10:16:21Z"
+  }
+}

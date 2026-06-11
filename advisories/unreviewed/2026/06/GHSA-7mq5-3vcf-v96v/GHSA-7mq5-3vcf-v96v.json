@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7mq5-3vcf-v96v",
+  "modified": "2026-06-11T12:32:45Z",
+  "published": "2026-06-11T12:32:45Z",
+  "aliases": [
+    "CVE-2026-6976"
+  ],
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.9 before 18.10.8, 18.11 before 18.11.5, and 19.0 before 19.0.2 that under certain conditions could have allowed an authenticated user with developer-role permissions to hide changes from merge request diff views due to improper input handling of file names.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6976"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3638136"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/06/10/patch-release-gitlab-19-0-2-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/598165"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T12:16:32Z"
+  }
+}

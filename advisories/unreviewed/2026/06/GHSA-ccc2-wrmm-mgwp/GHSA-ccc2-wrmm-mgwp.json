@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-ccc2-wrmm-mgwp",
+  "modified": "2026-06-11T12:32:44Z",
+  "published": "2026-06-11T12:32:44Z",
+  "aliases": [
+    "CVE-2026-53911"
+  ],
+  "details": "Cerebrate before version 1.37 allowed the id primary key field to be supplied through request input during CRUD edit operations and certain custom entity patching flows. In affected entities that did not explicitly mark id as inaccessible, an authenticated attacker could submit a crafted edit request containing the id of another record, causing the save operation to update that unrelated record instead of the record identified by the route parameter. The issue affected several entity types inheriting permissive mass-assignment defaults, including User, Role, UserSetting, LocalTool, PermissionLimitation, and EnumerationCollection. Since UserSettings edit functionality was reachable by any authenticated user, exploitation could allow unauthorized modification of records within the same entity type, with impact depending on the affected endpoint and writable fields. Cerebrate 1.37 fixes this by stripping id from request input after marshalling callbacks and by globally marking id as inaccessible in the base AppModel entity.\n\nThe discovery of those potential vulnerabilities are inherited from initial finding from Jeroen Pinoy additional support from AI-Assisted Optus 4.8 (the commit wrongly assign Claude Fable 5 as the model switched) and coordinated by Andras Iklody.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53911"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cerebrate-project/cerebrate/commit/b3c8f951b0634f05691339512ef06cc261afecaf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T10:16:21Z"
+  }
+}

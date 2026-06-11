@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-88x3-39g9-9frv",
+  "modified": "2026-06-11T12:32:45Z",
+  "published": "2026-06-11T12:32:44Z",
+  "aliases": [
+    "CVE-2026-53912"
+  ],
+  "details": "Cerebrate before version 1.37 exposed credential material from self-registration requests. The self-registration workflow stored the registrant’s hashed password in the inbox message data payload. This payload was returned unredacted through inbox index and view responses, including HTML, JSON, and CSV outputs, and could also be written unredacted into audit log entries for the inbox message.\n\nAn authenticated user with sufficient privileges to access inbox entries or related audit logs could retrieve password hashes associated with pending self-registration requests. Although the exposed value is a password hash rather than a plaintext password, disclosure of password hashes may enable offline password-cracking attempts and could increase risk where users reuse passwords across systems.\n\nCerebrate 1.37 fixes the issue by redacting sensitive password and authkey fields from inbox display/API output and recursively redacting those fields from JSON values written to audit logs, while leaving the stored registration payload intact for account creation processing.\n\n\n\nAffected component: Inbox self-registration request handling and audit logging\n\nFixed version: Cerebrate 1.37",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:X/R:X/V:X/RE:X/U:Green"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53912"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cerebrate-project/cerebrate/commit/02da6d708d610c8509a1aab3f58f53f0a91d8a04."
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T12:16:31Z"
+  }
+}

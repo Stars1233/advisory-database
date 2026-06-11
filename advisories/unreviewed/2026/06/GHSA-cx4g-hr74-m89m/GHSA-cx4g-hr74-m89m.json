@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cx4g-hr74-m89m",
+  "modified": "2026-06-11T12:32:45Z",
+  "published": "2026-06-11T12:32:45Z",
+  "aliases": [
+    "CVE-2026-7250"
+  ],
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 12.10 before 18.10.8, 18.11 before 18.11.5, and 19.0 before 19.0.2 that under certain conditions could have allowed an unauthenticated user to cause denial of service due to improper input validation in the API request parsing middleware.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7250"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3671995"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/06/10/patch-release-gitlab-19-0-2-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/598311"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T12:16:32Z"
+  }
+}
