@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hq3q-62v8-pp48",
-  "modified": "2025-12-28T09:30:27Z",
+  "modified": "2026-06-11T09:31:55Z",
   "published": "2025-12-28T09:30:27Z",
   "aliases": [
     "CVE-2025-15128"
@@ -38,6 +38,26 @@
     {
       "type": "WEB",
       "url": "https://vuldb.com/?submit.711813"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2025-15128"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/711813"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/338506"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/338506/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.zkteco.com/en/Security_Bulletinsibs/24"
     }
   ],
   "database_specific": {

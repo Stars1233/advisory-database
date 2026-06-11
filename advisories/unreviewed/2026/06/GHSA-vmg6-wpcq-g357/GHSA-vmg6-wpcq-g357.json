@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vmg6-wpcq-g357",
+  "modified": "2026-06-11T09:31:56Z",
+  "published": "2026-06-11T09:31:56Z",
+  "aliases": [
+    "CVE-2023-40200"
+  ],
+  "details": "Authorization bypass through User-Controlled key vulnerability in Essential Plugin WP Logo Showcase Responsive Slider and Carousel allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects WP Logo Showcase Responsive Slider and Carousel: from n/a through 3.6.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-40200"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/wp-logo-showcase-responsive-slider-slider/vulnerability/wordpress-wp-logo-showcase-responsive-slider-and-carousel-plugin-3-6-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T09:16:25Z"
+  }
+}
