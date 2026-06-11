@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mj44-8qq5-6386",
+  "modified": "2026-06-11T15:31:34Z",
+  "published": "2026-06-11T15:31:34Z",
+  "aliases": [
+    "CVE-2026-6338"
+  ],
+  "details": "A HTTP request smuggling and desynchronization vulnerability affects Kong Gateway Enterprise 3.4, 3.10, 3.11, 3.12, 3.13, and 3.14 series. The vulnerability is caused by a parsing flaw in Kong’s HTTP request processing pipeline when handling untrusted HTTP/1.1 traffic.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:A/V:X/RE:M/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6338"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.konghq.com/support/s/article/CVE-2026-6338"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-444"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T14:16:32Z"
+  }
+}

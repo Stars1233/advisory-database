@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wwqf-6p54-3cfq",
+  "modified": "2026-06-11T15:31:32Z",
+  "published": "2026-06-11T15:31:32Z",
+  "aliases": [
+    "CVE-2026-11956"
+  ],
+  "details": "A vulnerability was determined in TwiN gatus 5.36.0. Impacted is the function setSessionCookie of the file security/oidc.go of the component OIDC Session Cookie Handler. Executing a manipulation can lead to sensitive cookie without secure attribute. The attack can be launched remotely. This attack is characterized by high complexity. The exploitability is considered difficult. The reported GitHub issue was closed with the label \"not planned\".",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11956"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TwiN/gatus/issues/1689"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TwiN/gatus"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-11956"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/836328"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370343"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370343/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-614"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-11T13:16:32Z"
+  }
+}
