@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cr6r-hmj8-pr7r",
-  "modified": "2026-05-18T17:48:14Z",
+  "modified": "2026-06-11T13:30:39Z",
   "published": "2026-05-18T17:48:14Z",
   "aliases": [
     "CVE-2026-45358"
@@ -364,6 +364,10 @@
       "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-cr6r-hmj8-pr7r"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45358"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/ImageMagick/ImageMagick"
     }
@@ -376,6 +380,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-18T17:48:14Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-10T22:16:57Z"
   }
 }
