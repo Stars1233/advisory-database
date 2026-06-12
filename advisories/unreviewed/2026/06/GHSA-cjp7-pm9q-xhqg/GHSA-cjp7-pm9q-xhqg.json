@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cjp7-pm9q-xhqg",
+  "modified": "2026-06-12T21:31:46Z",
+  "published": "2026-06-12T21:31:46Z",
+  "aliases": [
+    "CVE-2026-54362"
+  ],
+  "details": "An incorrect visibility condition in the MISP event template builder allowed authenticated non-site-admin users to view galaxies that should not have been visible to their organisation. The custom access-control condition intended to restrict galaxies to those owned by the user’s organisation or distributed beyond it used a PHP comparison expression instead of a query condition. As a result, enabled galaxies, including organisation-only custom galaxies belonging to other organisations, could be exposed in the template builder galaxy list. This could disclose metadata about private galaxy definitions to unauthorised users.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54362"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/8aa2bb6d1af6e8c57c8d8437cf203acb8bce7a53"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T21:16:24Z"
+  }
+}

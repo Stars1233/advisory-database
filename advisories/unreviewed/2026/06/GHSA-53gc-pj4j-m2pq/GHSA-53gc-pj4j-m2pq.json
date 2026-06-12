@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-53gc-pj4j-m2pq",
+  "modified": "2026-06-12T21:31:46Z",
+  "published": "2026-06-12T21:31:46Z",
+  "aliases": [
+    "CVE-2026-54395"
+  ],
+  "details": "MISP contains a reflected cross-site scripting vulnerability in the UiBeta event index view. The urlparams value is inserted into an inline JavaScript handler using HTML escaping inside a single-quoted JavaScript string. Because browsers HTML-decode attribute values before JavaScript parsing, a crafted searcheventinfo value can restore encoded quote characters and break out of the JavaScript string. An attacker could craft a malicious URL that, when opened by a victim using the UiBeta event index, executes arbitrary JavaScript in the victim’s browser in the context of the MISP instance. The issue is fixed by encoding the value as a JavaScript string literal with json_encode() before applying HTML escaping at the attribute layer.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54395"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/b865deb036ca82dab272be260798f562034ba9ae"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T21:16:25Z"
+  }
+}

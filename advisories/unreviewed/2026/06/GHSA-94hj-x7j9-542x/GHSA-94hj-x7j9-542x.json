@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-94hj-x7j9-542x",
+  "modified": "2026-06-12T21:31:45Z",
+  "published": "2026-06-12T21:31:45Z",
+  "aliases": [
+    "CVE-2026-54361"
+  ],
+  "details": "MISP contained multiple mass assignment vulnerabilities in the handling of collections, tag collections, event delegations, and shadow attributes. Several controller actions accepted user-supplied fields that should have remained server-controlled, including record identifiers and ownership-related fields such as id, org_id, orgc_id, and user_id.\n\nAn authenticated attacker with access to the affected endpoints could craft requests containing protected fields in order to alter object ownership, redirect an update to another record, overwrite existing event delegation requests, or modify shadow attribute proposals belonging to another organization. This could result in unauthorized modification of MISP objects and, depending on object visibility and sharing configuration, unauthorized access to or transfer of sensitive threat intelligence data.\n\nThe issue was fixed by explicitly pinning ownership and identity fields to their stored values during edit operations and by removing user-supplied primary keys from create-only save paths.\n\nAffected components:\n\n  *  CollectionsController::edit()\n  *  EventDelegationsController::delegateEvent()\n  *  ShadowAttributesController::edit()\n  *  TagCollectionsController::edit()915\n  *  TagCollectionsController::editWithTags()\n\n\nAttack requirements:\nThe attacker must be authenticated and able to reach the affected MISP endpoints. No user interaction is required.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54361"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/9341690e9b6dde7f0605edea5533e05ba7362e35"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T20:16:48Z"
+  }
+}

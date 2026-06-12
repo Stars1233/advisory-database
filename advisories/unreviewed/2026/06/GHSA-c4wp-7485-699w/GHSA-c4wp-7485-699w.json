@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c4wp-7485-699w",
+  "modified": "2026-06-12T21:31:46Z",
+  "published": "2026-06-12T21:31:46Z",
+  "aliases": [
+    "CVE-2026-54394"
+  ],
+  "details": "MISP contains a path traversal vulnerability in OrganisationsController::getOrgLogo. The vulnerable code builds organisation logo file paths using organisation-controlled fields such as id, name, and uuid without ensuring that the resolved file remains inside the intended APP/files/img/orgs/ directory. An attacker able to influence an organisation field, for example the organisation name, could use path traversal sequences to cause MISP to return arbitrary readable .png or .svg files from outside the organisation logo directory. The issue is fixed by resolving candidate paths with realpath() and verifying that they remain under the expected base directory before serving the file.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Green"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54394"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/b865deb036ca82dab272be260798f562034ba9ae"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T21:16:25Z"
+  }
+}

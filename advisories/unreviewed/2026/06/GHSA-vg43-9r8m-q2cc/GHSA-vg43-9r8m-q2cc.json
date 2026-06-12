@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vg43-9r8m-q2cc",
+  "modified": "2026-06-12T21:31:42Z",
+  "published": "2026-06-12T21:31:42Z",
+  "aliases": [
+    "CVE-2026-10715"
+  ],
+  "details": "Camaleon CMS 2.9.2 contains an improper authorization vulnerability in the administrator draft autosave endpoint. A low-privileged authenticated user can send an arbitrary post_id to POST /admin/post_type/<POST_TYPE_ID>/drafts and overwrite the draft associated with another user's post.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10715"
+    },
+    {
+      "type": "WEB",
+      "url": "https://fluidattacks.com/es/advisories/billie"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owen2345/camaleon-cms"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T19:16:25Z"
+  }
+}

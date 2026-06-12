@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g8rg-9w6v-v9gv",
+  "modified": "2026-06-12T21:31:45Z",
+  "published": "2026-06-12T21:31:45Z",
+  "aliases": [
+    "CVE-2026-54359"
+  ],
+  "details": "MISP contains an insecure default configuration in which the Security.check_sec_fetch_site_header control is disabled. When this setting is disabled, state-changing requests such as POST, PUT, or AJAX requests are not restricted based on the browser-provided Sec-Fetch-Site header. A remote unauthenticated attacker could craft a malicious web page that causes an authenticated MISP user’s browser to issue cross-site requests to MISP automation endpoints. If successful, the forged requests may be processed with the privileges of the victim user, potentially allowing unauthorized modification of MISP data or configuration. Enabling Security.check_sec_fetch_site_header mitigates this issue, although operators of multi-homed MISP deployments should validate the setting before enforcing it.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54359"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/b82db1bcaa550689c05e1ed175e81f25a8d97b91"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T20:16:47Z"
+  }
+}

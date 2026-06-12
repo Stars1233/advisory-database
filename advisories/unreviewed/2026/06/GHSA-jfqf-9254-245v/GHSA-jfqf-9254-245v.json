@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jfqf-9254-245v",
+  "modified": "2026-06-12T21:31:45Z",
+  "published": "2026-06-12T21:31:45Z",
+  "aliases": [
+    "CVE-2026-54357"
+  ],
+  "details": "An improper authorization vulnerability in MISP allowed an authenticated organization administrator to access or modify user settings belonging to site administrator accounts within the same organization. The affected access-control checks scoped administrative actions by organization membership but did not exclude higher-privileged site administrator users. As a result, an organization administrator could potentially view or alter site administrator user settings and related login profile information, crossing the intended privilege boundary between organization administration and site-wide administration.\n\nThe patch hardens the ACL logic by excluding site administrator accounts from organization administrator–managed user sets, adding explicit authorization failure when a target user is not administrable, and ensuring user setting and login profile operations fail closed.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54357"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/ed3d9b862dea4c8c8e9b620a5ad99ce0c2c82154"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T20:16:47Z"
+  }
+}

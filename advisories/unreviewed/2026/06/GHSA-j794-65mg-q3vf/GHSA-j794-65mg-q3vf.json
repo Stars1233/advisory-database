@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j794-65mg-q3vf",
+  "modified": "2026-06-12T21:31:45Z",
+  "published": "2026-06-12T21:31:45Z",
+  "aliases": [
+    "CVE-2026-54360"
+  ],
+  "details": "A mass assignment vulnerability exists in MISP’s sharing group creation endpoint. When creating a new sharing group, the controller did not remove a user-supplied id field before saving the submitted data. In CakePHP, supplying a primary key in the save data can cause a create() followed by save() operation to update an existing record instead of creating a new one.\n\nAn authenticated user with permission to add sharing groups could therefore submit the identifier of an existing sharing group and modify that sharing group without passing the normal edit access-control checks. This may allow the attacker to take over or alter sharing groups they do not otherwise have access to, potentially affecting the confidentiality and integrity of information shared through those groups.\n\nAffected component:\napp/Controller/SharingGroupsController.php, add() action",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54360"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/MISP/MISP/commit/687e7cb530ae0e2faaadf5e3e44712258fb3ef1b"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T20:16:47Z"
+  }
+}
