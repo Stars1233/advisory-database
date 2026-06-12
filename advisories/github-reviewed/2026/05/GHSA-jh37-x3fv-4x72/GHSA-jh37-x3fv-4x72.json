@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jh37-x3fv-4x72",
-  "modified": "2026-05-23T00:11:53Z",
+  "modified": "2026-06-12T19:25:40Z",
   "published": "2026-05-23T00:11:53Z",
   "aliases": [
     "CVE-2026-47157"
@@ -41,8 +41,24 @@
       "url": "https://github.com/subzeroid/aiograpi/security/advisories/GHSA-jh37-x3fv-4x72"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47157"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/subzeroid/aiograpi/pull/274"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/subzeroid/aiograpi/commit/9c24151916beca622e588bfb3167c98711ff744f"
+    },
+    {
       "type": "PACKAGE",
       "url": "https://github.com/subzeroid/aiograpi"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/subzeroid/aiograpi/releases/tag/0.9.10"
     }
   ],
   "database_specific": {
@@ -52,6 +68,6 @@
     "severity": "MODERATE",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-23T00:11:53Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-11T18:16:26Z"
   }
 }
