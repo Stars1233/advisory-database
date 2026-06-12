@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7j2f-6h2r-6cqc",
-  "modified": "2026-05-29T19:56:06Z",
+  "modified": "2026-06-12T22:01:12Z",
   "published": "2026-05-29T19:56:06Z",
   "aliases": [
     "CVE-2026-47260"
@@ -44,6 +44,10 @@
       "url": "https://github.com/koel/koel/security/advisories/GHSA-7j2f-6h2r-6cqc"
     },
     {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47260"
+    },
+    {
       "type": "WEB",
       "url": "https://github.com/koel/koel/commit/8708f077efd7d8a332b32e954d65bc837f3a413a"
     },
@@ -63,6 +67,6 @@
     "severity": "HIGH",
     "github_reviewed": true,
     "github_reviewed_at": "2026-05-29T19:56:06Z",
-    "nvd_published_at": null
+    "nvd_published_at": "2026-06-12T20:16:46Z"
   }
 }
