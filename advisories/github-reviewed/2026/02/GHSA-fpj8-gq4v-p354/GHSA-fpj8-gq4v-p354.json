@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-fpj8-gq4v-p354",
-  "modified": "2026-03-11T20:38:06Z",
+  "modified": "2026-06-12T19:45:06Z",
   "published": "2026-02-17T21:31:13Z",
   "aliases": [
     "CVE-2025-66614"
@@ -136,7 +136,7 @@
     {
       "package": {
         "ecosystem": "Maven",
-        "name": "org.apache.tomcat:tomcat-catalina"
+        "name": "org.apache.tomcat:tomcat-coyote"
       },
       "ranges": [
         {
@@ -155,7 +155,7 @@
     {
       "package": {
         "ecosystem": "Maven",
-        "name": "org.apache.tomcat:tomcat-catalina"
+        "name": "org.apache.tomcat:tomcat-coyote"
       },
       "ranges": [
         {
@@ -174,7 +174,7 @@
     {
       "package": {
         "ecosystem": "Maven",
-        "name": "org.apache.tomcat:tomcat-catalina"
+        "name": "org.apache.tomcat:tomcat-coyote"
       },
       "ranges": [
         {
