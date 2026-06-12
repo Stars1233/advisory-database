@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c78m-c52x-jgwp",
+  "modified": "2026-06-12T19:09:27Z",
+  "published": "2026-06-12T19:09:26Z",
+  "aliases": [
+    "CVE-2026-49740"
+  ],
+  "summary": "TYPO3 CMS has Insecure Deserialization via Core API",
+  "details": "### Problem\nTYPO3's cache frontend (`VariableFrontend`) and persistent key-value store (`Registry`) deserialized PHP payloads without integrity validation or class restrictions. An attacker with write access to the underlying storage backend (cache store or sys_registry database table) could inject a crafted serialized payload to trigger PHP Object Injection, potentially exploiting a gadget chain to achieve Remote Code Execution or other high-impact effects.\n\nExploiting this vulnerability requires direct local write access to the storage, such as the SQL database or file system.\n\n### Solution\nUpdate to TYPO3 versions 10.4.57 ELTS, 11.5.51 ELTS, 12.4.46 ELTS, 13.4.31 LTS, 14.3.3 LTS that fix the problem described.\n\n### Credits\nTYPO3 CMS thanks “z3rco”, Chowdhury Faizal Ahammed, Rick Larabee, Vitaly Simonovich, Nozomu Sasaki, Mert Akdag, “tikket”, Shafi Almutairi for reporting this issue, and to TYPO3 core & security team member Oliver Hader for fixing it.\n\n### Resources\n* [TYPO3-CORE-SA-2026-018](https://typo3.org/security/advisory/typo3-core-sa-2026-018)",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:H/SI:H/SA:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "typo3/cms-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "10.4.57"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "typo3/cms-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.5.51"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "typo3/cms-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.4.46"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "typo3/cms-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.4.31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "typo3/cms-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/security/advisories/GHSA-c78m-c52x-jgwp"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49740"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/commit/48bcf24f31f52cc0b43d3bea4984634bd2cf85c7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/commit/87cd7c5b710c44d3606fed277b040a75dc6a9c02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/typo3/cms-core/CVE-2026-49740.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/TYPO3/typo3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2026-018"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-12T19:09:26Z",
+    "nvd_published_at": "2026-06-09T11:16:53Z"
+  }
+}
