@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hc5c-8r54-29r3",
-  "modified": "2026-06-09T06:31:59Z",
+  "modified": "2026-06-12T18:31:48Z",
   "published": "2026-06-09T06:31:59Z",
   "aliases": [
     "CVE-2026-41539"
   ],
   "details": "A cross-site scripting (XSS) vulnerability has been reported to affect several QNAP operating system versions. The remote attackers can then exploit the vulnerability to bypass security mechanisms or read application data.\n\nWe have already fixed the vulnerability in the following versions:\nQTS 5.2.9.3492 build 20260507 and later\nQuTS hero h5.2.9.3499 build 20260514 and later\nQuTS hero h5.3.4.3500 build 20260520 and later\nQuTS hero h6.0.0.3500 build 20260520 and later",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"

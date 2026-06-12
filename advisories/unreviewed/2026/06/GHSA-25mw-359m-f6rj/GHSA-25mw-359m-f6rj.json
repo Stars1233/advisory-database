@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-25mw-359m-f6rj",
-  "modified": "2026-06-11T06:30:28Z",
+  "modified": "2026-06-12T18:31:50Z",
   "published": "2026-06-11T06:30:28Z",
   "aliases": [
     "CVE-2026-35273"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35273"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-35273"
     },
     {
       "type": "WEB",

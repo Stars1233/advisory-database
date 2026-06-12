@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-789h-4f4q-2gq6",
+  "modified": "2026-06-12T18:32:00Z",
+  "published": "2026-06-12T18:32:00Z",
+  "aliases": [
+    "CVE-2026-53406"
+  ],
+  "details": "Insufficient Verification of Data Authenticity in Remote Control for Zoom Contact Center for Windows before version 7.0.0 may allow an authenticated user to enable an escalation of privilege via local access.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53406"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.zoom.com/en/trust/security-bulletin/zsb-26009"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-345"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T18:16:35Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c28q-m4gf-vg4q",
+  "modified": "2026-06-12T18:31:59Z",
+  "published": "2026-06-12T18:31:59Z",
+  "aliases": [
+    "CVE-2026-6689"
+  ],
+  "details": "Mattermost versions 11.6.x <= 11.6.1, 11.5.x <= 11.5.4, 10.11.x <= 10.11.15, 10.11.x <= 10.11.16 Fail to enforce PermissionInviteUser when setting AllowOpenInvite or AllowedDomains during team creation (the check was only applied on update/patch), which allows an authenticated user holding PermissionCreateTeam but not PermissionInviteUser on the resulting team to configure invite-controlled team settings (make the team publicly joinable via open invite and/or constrain membership via allowed domains) that they are not permitted to set on an existing team via POST /api/v4/teams with allow_open_invite: true and/or a non-empty allowed_domains in the request body.. Mattermost Advisory ID: MMSA-2026-00655",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6689"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T17:16:27Z"
+  }
+}

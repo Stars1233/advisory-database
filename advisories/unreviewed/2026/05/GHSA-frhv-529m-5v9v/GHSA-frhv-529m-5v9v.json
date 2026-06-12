@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-frhv-529m-5v9v",
-  "modified": "2026-05-28T21:32:03Z",
+  "modified": "2026-06-12T18:31:48Z",
   "published": "2026-05-28T21:32:03Z",
   "aliases": [
     "CVE-2026-33590"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://intwave.com/blog/2026/02/26/improving-portainer-security.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/12/2"
     }
   ],
   "database_specific": {

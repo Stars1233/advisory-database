@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c3gw-qw4g-hx8g",
-  "modified": "2026-06-12T15:30:34Z",
+  "modified": "2026-06-12T18:31:53Z",
   "published": "2026-06-12T15:30:34Z",
   "aliases": [
     "CVE-2026-12065"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://drive.google.com/drive/folders/1r9t4AuG747PmRbgLmY2CztsX5PTjQL19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/honestcorrupt/CVE-req-Groww-Android-Application-Unsafe-WebView-URL-Handling-Weak-Client-Side-App-Lock-Enforcement"
     },
     {
       "type": "WEB",

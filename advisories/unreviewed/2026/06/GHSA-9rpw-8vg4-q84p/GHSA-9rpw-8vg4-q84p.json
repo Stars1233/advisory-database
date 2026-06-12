@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9rpw-8vg4-q84p",
+  "modified": "2026-06-12T18:31:58Z",
+  "published": "2026-06-12T18:31:58Z",
+  "aliases": [
+    "CVE-2026-50082"
+  ],
+  "details": "The Aqara Cloud Developer Portal (developer.aqara.com) issued a developer token to any email address supplied by the attacker. This is an instance of \"CWE-306: Missing Authentication for Critical Function\" with an estimated CVSS of CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N (6.5 Medium). When combined with CVE-2026-50083, CVE-2026-50084, and CVE-2026-50085, any otherwise-unauthenticated attacker could execute a full takeover of affected devices.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50082"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/xn0tsa/theres-no-place-like-home"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.runzero.com/advisories/aqara-dev-portal-auth-token-2026-50082"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T16:16:31Z"
+  }
+}

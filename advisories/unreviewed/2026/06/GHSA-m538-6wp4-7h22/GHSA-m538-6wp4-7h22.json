@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m538-6wp4-7h22",
-  "modified": "2026-06-12T15:30:34Z",
+  "modified": "2026-06-12T18:31:53Z",
   "published": "2026-06-12T15:30:34Z",
   "aliases": [
     "CVE-2017-20240"
   ],
   "details": "Crypt::PBKDF2 versions before 0.261630 for Perl are vulnerable to timing attacks.\n\nThese versions use Perl's built-in eq comparison. Discrepancies in timing could be used to guess the underlying derived-key.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -25,13 +30,17 @@
     {
       "type": "WEB",
       "url": "https://metacpan.org/release/ARODLAND/Crypt-PBKDF2-0.261630/changes"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/12/3"
     }
   ],
   "database_specific": {
     "cwe_ids": [
       "CWE-208"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-12T14:16:28Z"

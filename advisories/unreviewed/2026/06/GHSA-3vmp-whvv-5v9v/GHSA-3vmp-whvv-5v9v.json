@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3vmp-whvv-5v9v",
+  "modified": "2026-06-12T18:31:59Z",
+  "published": "2026-06-12T18:31:59Z",
+  "aliases": [
+    "CVE-2026-6046"
+  ],
+  "details": "Mattermost versions 11.6.x <= 11.6.1, 11.5.x <= 11.5.4, 10.11.x <= 10.11.15, 10.11.x <= 10.11.16 fail to validate that a username returned during bot registration belongs to a bot account, which allows an unprivileged attacker to intercept private messages sent by plugins via direct message channels by pre-registering a user account with a predictable plugin bot username.. Mattermost Advisory ID: MMSA-2026-00649",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6046"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T17:16:26Z"
+  }
+}
