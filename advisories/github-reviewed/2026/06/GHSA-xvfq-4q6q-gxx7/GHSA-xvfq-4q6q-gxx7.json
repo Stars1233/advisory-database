@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xvfq-4q6q-gxx7",
+  "modified": "2026-06-12T21:51:01Z",
+  "published": "2026-06-10T00:31:52Z",
+  "aliases": [
+    "CVE-2026-41726"
+  ],
+  "summary": "In Spring for Apache Kafka, unbounded delegate cache keyed on user-controlled, potentially malicious selector header",
+  "details": "When an application opts into DelegatingDeserializer, a producer can grow the consumer's heap without bound by sending records with unique random spring.kafka.serialization.selector header values, eventually causing GC thrash and OutOfMemoryError.\n\nAffected versions:\nSpring for Apache Kafka 4.0.0 through 4.0.5; 3.3.0 through 3.3.15; 3.2.0 through 3.2.13; 2.9.0 through 2.9.13; 2.8.0 through 2.8.11.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.kafka:spring-kafka"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.6"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.0.5"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.kafka:spring-kafka"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.3.0"
+            },
+            {
+              "fixed": "3.3.16"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.3.15"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.kafka:spring-kafka"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.2.0"
+            },
+            {
+              "last_affected": "3.2.13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.kafka:spring-kafka"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "last_affected": "2.9.13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.springframework.kafka:spring-kafka"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2.8.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41726"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/spring-projects/spring-kafka/issues/4489"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/spring-projects/spring-kafka/commit/ca2337ba789c5778a10197bda17a62915247ff6c"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/spring-projects/spring-kafka"
+    },
+    {
+      "type": "WEB",
+      "url": "https://spring.io/security/cve-2026-41726"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-12T21:51:01Z",
+    "nvd_published_at": "2026-06-10T00:16:52Z"
+  }
+}
