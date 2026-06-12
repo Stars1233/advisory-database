@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p5j5-4j3q-8mq8",
+  "modified": "2026-06-12T20:07:46Z",
+  "published": "2026-06-12T20:07:46Z",
+  "aliases": [
+    "CVE-2026-47345"
+  ],
+  "summary": "TYPO3 HTML Sanitizer allows Cross-site Scripting",
+  "details": "Namespace attributes are not encoded correctly during HTML serialization. This allows bypassing the cross-site scripting prevention mechanism of `typo3/html-sanitizer` before version 2.3.2.\n\nCredits to Doyensec in collaboration with Claude and Anthropic Research for reporting this vulnerability.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "typo3/html-sanitizer"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/html-sanitizer/security/advisories/GHSA-p5j5-4j3q-8mq8"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47345"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/html-sanitizer/commit/8b5d0be44ded457ca993ec9ca93d859941c63764"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/typo3/html-sanitizer/CVE-2026-47345.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/TYPO3/html-sanitizer"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2026-006"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-12T20:07:46Z",
+    "nvd_published_at": "2026-06-08T20:17:01Z"
+  }
+}
