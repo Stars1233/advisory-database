@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f8mc-8mhv-jcrc",
+  "modified": "2026-06-12T06:33:20Z",
+  "published": "2026-06-12T06:33:20Z",
+  "aliases": [
+    "CVE-2026-47366"
+  ],
+  "details": "Improper verification of access permissions when modifying permissions through the Administration Control Panel (ACP) allowed an authenticated administrator to grant permissions beyond the level authorized for their account, resulting in privilege escalation within the administrative interface.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47366"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.phpbb.com/community/viewtopic.php?t=2672170"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T04:17:05Z"
+  }
+}

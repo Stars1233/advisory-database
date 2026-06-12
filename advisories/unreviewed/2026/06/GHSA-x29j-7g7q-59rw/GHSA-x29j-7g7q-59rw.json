@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x29j-7g7q-59rw",
+  "modified": "2026-06-12T06:33:20Z",
+  "published": "2026-06-12T06:33:20Z",
+  "aliases": [
+    "CVE-2026-48613"
+  ],
+  "details": "SQL injection vulnerability in phpBB profile field migration due to improper handling of user-supplied profile field data during migration, allowing execution of arbitrary SQL queries. Only applies to phpBB forums that had been updated from versions prior to phpBB 3.3.8 and have not been updated to 3.3.11 or newer yet.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48613"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.phpbb.com/community/viewtopic.php?t=2672170"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T04:17:11Z"
+  }
+}

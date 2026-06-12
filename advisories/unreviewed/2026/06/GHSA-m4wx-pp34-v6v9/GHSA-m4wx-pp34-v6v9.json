@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m4wx-pp34-v6v9",
+  "modified": "2026-06-12T06:33:19Z",
+  "published": "2026-06-12T06:33:19Z",
+  "aliases": [
+    "CVE-2026-20746"
+  ],
+  "details": "Virtual attribute handling in Ping Identity PingDirectory in affected versions allows only authorized users to exhaust java memory heap when recent login history is enabled and copying virtual attributes that reference ds-privilege-name values.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:L/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:U/V:X/RE:M/U:Amber"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20746"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.pingidentity.com/pingdirectory/11.0/release_notes/pd_release_notes.html#pingdirectory-suite-of-products-11-0-0-1-march-2026"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.pingidentity.com/s/article/SECADV052-Denial-of-Service-via-copying-virtual-attributes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.pingidentity.com/en/resources/downloads/pingdirectory-downloads.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-12T04:17:04Z"
+  }
+}
