@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xwgf-8969-9fm2",
+  "modified": "2026-06-14T09:31:30Z",
+  "published": "2026-06-14T09:31:30Z",
+  "aliases": [
+    "CVE-2025-15546"
+  ],
+  "details": "The Iptanus File Upload WordPress plugin before 5.1.7 does not implement proper file handling when the duplicatepolicy setting is configured to \"maintain both.\" Due to a Time-of-Check to Time-of-Use (TOCTOU) race condition between the file existence check and the actual file write operation, an authenticated attacker can overwrite files uploaded by other users.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15546"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wpscan.com/vulnerability/06e33418-1644-49a1-b012-122046604109"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-14T08:16:17Z"
+  }
+}
