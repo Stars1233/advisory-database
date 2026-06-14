@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-28cw-rpqc-wqqj",
+  "modified": "2026-06-14T18:32:36Z",
+  "published": "2026-06-14T18:32:36Z",
+  "aliases": [
+    "CVE-2026-54412"
+  ],
+  "details": "LiamBindle MQTT-C through version 1.1.6 contains a heap-based out-of-bounds read and integer underflow in the mqtt_unpack_publish_response() function in src/mqtt.c that allows a remote unauthenticated attacker controlling an MQTT broker - or able to inject MQTT traffic into an unencrypted session - to crash a subscribed MQTT-C client and potentially disclose adjacent heap memory by sending a single crafted PUBLISH packet. The function validates only that the fixed-header remaining_length is at least 4, then reads the 16-bit topic_name_size field from the broker-controlled packet and advances the parse pointer by that value without verifying that topic_name_size plus the surrounding overhead fits within remaining_length; it subsequently computes application_message_size as remaining_length - topic_name_size - 2 (QoS 0) or - 4 (QoS greater than 0) in unsigned arithmetic, producing an integer underflow that is then passed to memmove(). A PUBLISH packet with topic_name_size = 0xFFFF and remaining_length = 7 advances the parse pointer 65535 bytes past the receive buffer (out-of-bounds read) and causes an application_message_size near 2^32, crashing the process when the resulting memmove() is executed.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:D/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54412"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cwe.mitre.org/data/definitions/125.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cwe.mitre.org/data/definitions/191.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/LiamBindle/MQTT-C"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/LiamBindle/MQTT-C/blob/v1.1.6/src/mqtt.c#L1334"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-14T18:17:20Z"
+  }
+}
