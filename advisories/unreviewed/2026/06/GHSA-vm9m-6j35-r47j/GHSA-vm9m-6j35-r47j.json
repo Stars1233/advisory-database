@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vm9m-6j35-r47j",
+  "modified": "2026-06-15T00:31:50Z",
+  "published": "2026-06-15T00:31:50Z",
+  "aliases": [
+    "CVE-2026-12190"
+  ],
+  "details": "A vulnerability has been found in Genspark AI Workspace App 2.8.4 on Android. This vulnerability affects unknown code of the component ai.mainfunc.genspark. The manipulation leads to improper authorization in handler for custom url scheme. The attack can only be performed from a local environment. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12190"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/actuator/ai.mainfunc.genspark"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-12190"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/825558"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370836"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370836/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-285"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-14T23:16:35Z"
+  }
+}

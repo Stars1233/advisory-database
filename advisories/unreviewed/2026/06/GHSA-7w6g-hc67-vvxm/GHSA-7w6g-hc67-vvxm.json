@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7w6g-hc67-vvxm",
+  "modified": "2026-06-15T00:31:50Z",
+  "published": "2026-06-15T00:31:50Z",
+  "aliases": [
+    "CVE-2026-12193"
+  ],
+  "details": "A vulnerability was identified in VS Revo RevoUninstaller 2.5.x/2.6.x. The affected element is the function IOCtl_Handler in the library RevoDetector.sys of the component IOCTL Handler. Such manipulation leads to heap-based buffer overflow. The attack must be carried out locally. The exploit is publicly available and might be used. Upgrading to version 2.7.0 is sufficient to fix this issue. It is recommended to upgrade the affected component.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12193"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Kalagious/RevoDetectorExploit/tree/master"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jordanhiggins.blog/revouninstaller-pool-overflow-exploit"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vandalsuidaho-my.sharepoint.com/:w:/g/personal/higg2059_vandals_uidaho_edu/IQAMHgdfpRAkSqDsoFVswIYNAXjPVFz-admcJyl5ITzYhu0?e=4Ywwza"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-12193"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/829132"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/829133"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370839"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370839/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.revouninstaller.com/start-freeware-download"
+    },
+    {
+      "type": "WEB",
+      "url": "https://youtu.be/JR0KPjWRTns?si=Ff2bUDvv3butJyfP"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-15T00:16:43Z"
+  }
+}

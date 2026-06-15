@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rm6x-6fv3-45m8",
+  "modified": "2026-06-15T00:31:50Z",
+  "published": "2026-06-15T00:31:50Z",
+  "aliases": [
+    "CVE-2026-12192"
+  ],
+  "details": "A vulnerability was determined in GALAYOU Y4 1.0.0. Impacted is an unknown function of the component Web Server. This manipulation causes buffer overflow. The attack is only possible within the local network. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12192"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-12192"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/825801"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370838"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370838/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-15T00:16:43Z"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hx22-9fx3-xg77",
-  "modified": "2026-06-14T12:30:26Z",
+  "modified": "2026-06-15T00:31:49Z",
   "published": "2026-06-14T12:30:26Z",
   "aliases": [
     "CVE-2026-11526"
@@ -21,6 +21,10 @@
     {
       "type": "WEB",
       "url": "https://metacpan.org/release/RURBAN/GD-2.86/changes"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/14/4"
     }
   ],
   "database_specific": {
