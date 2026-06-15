@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-537c-gmf6-5ccf",
+  "modified": "2026-06-15T20:12:27Z",
+  "published": "2026-06-15T20:12:27Z",
+  "aliases": [],
+  "summary": "Vulnerable OpenSSL included in cryptography wheels",
+  "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in wheels prior to cryptograph 48.01 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://openssl-library.org/news/secadv/20260609.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "cryptography"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.5.0"
+            },
+            {
+              "fixed": "48.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-537c-gmf6-5ccf"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/pyca/cryptography"
+    },
+    {
+      "type": "WEB",
+      "url": "https://openssl-library.org/news/secadv/20260609.txt"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125",
+      "CWE-1395"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:12:27Z",
+    "nvd_published_at": null
+  }
+}
