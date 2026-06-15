@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-563q-j3cm-6jxm",
+  "modified": "2026-06-15T20:46:56Z",
+  "published": "2026-06-15T20:46:56Z",
+  "aliases": [
+    "CVE-2026-50560"
+  ],
+  "summary": "Netty susceptible to HTTP/2 Reset Attack with different on-the-wire signature",
+  "details": "### Summary\n\nNetty HTTP/2 max header size handling produces attack similar to HTTP/2 Rapid Reset.\n\n### Details\n\nThere is a setting in the http2 specification called `SETTINGS_MAX_HEADER_LIST_SIZE`. According to[ the RFC](https://www.rfc-editor.org/rfc/rfc9113.html#name-defined-settings): “This advisory setting informs a peer of the maximum field section size that the sender is prepared to accept, in units of octets.”\n\nWhen a client sends that setting to Netty, it appears that Netty will behave as follows:\n\n- Read the request\n- Proxy the request to the origin\n- Attempt to produce a response\n- Create an exception while writing the headers for the response\n\nFunctionally, this should be similar to the http2 reset attack, but with a different on-the-wire signature.\n\n## Remediation\n\nWhen speaking with clients, Netty should potentially treat this as “advisory” and ignore it.  It would be best to ignore the SETTINGS_MAX_HEADER_LIST_SIZE setting from clients (or ignore it when sending to clients). According to the spec, a server does not need to honor this advisory setting, and it appears that other http/2 implementations ignore it when acting as a server.\n\n### Impact\n\nThis is a DDoS attack similar to the HTTP/2 Rapid Reset Attack.\n\n## Credit\nJonathan Looney (Engineering, Netflix)\n\n## Contact\nAshley Tolbert (Security, Netflix) - artolbert@netflix.com",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-http2"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0.Final"
+            },
+            {
+              "fixed": "4.2.15.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.2.14.Final"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-http2"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.135.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.134.Final"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/security/advisories/GHSA-563q-j3cm-6jxm"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50560"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/netty/netty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.rfc-editor.org/rfc/rfc9113.html#name-defined-settings"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:46:56Z",
+    "nvd_published_at": "2026-06-12T16:16:32Z"
+  }
+}

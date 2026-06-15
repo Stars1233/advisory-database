@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5w86-c3rq-vjj7",
+  "modified": "2026-06-15T20:46:16Z",
+  "published": "2026-06-15T20:46:16Z",
+  "aliases": [
+    "CVE-2026-50011"
+  ],
+  "summary": "Netty: Unbounded pre-allocation in RedisArrayAggregator from RESP array length",
+  "details": "### Summary\nRedisArrayAggregator pre-allocates ArrayList with initial capacity equal to the RESP array element count declared in an array header. That count is taken from the wire before the corresponding child messages exist. A small malicious header can claim a huge initial capacity.\n\n### Details\nThe aggregator starts a new aggregation level when it receives an ArrayHeaderRedisMessage. For positive lengths it pushes AggregateState, whose constructor runs `new ArrayList<>(length)`. No configurable maximum is applied in this handler, and the peer does not need to supply the array elements for the backing array allocation to occur.\n\nIn the same pipeline, RedisDecoder enforces RedisConstants.REDIS_MESSAGE_MAX_LENGTH for bulk string lengths but does not apply that cap to array header lengths. Declared array sizes can therefore be extremely large while still passing decoding, and the aggregator immediately attempts Object[] reservation.\n\nio.netty.handler.codec.redis.RedisDecoder#decodeLength\nio.netty.handler.codec.redis.RedisArrayAggregator#decodeRedisArrayHeader\n\n### Impact\nAvailability / resource exhaustion via unbounded pre-allocation from untrusted RESP array headers.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-redis"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0.Final"
+            },
+            {
+              "fixed": "4.2.15.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.2.14.Final"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-redis"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.135.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.134.Final"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/security/advisories/GHSA-5w86-c3rq-vjj7"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50011"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/netty/netty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-400",
+      "CWE-770"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:46:16Z",
+    "nvd_published_at": "2026-06-12T16:16:31Z"
+  }
+}

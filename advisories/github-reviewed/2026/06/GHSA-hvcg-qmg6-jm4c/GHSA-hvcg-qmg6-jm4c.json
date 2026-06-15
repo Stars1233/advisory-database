@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hvcg-qmg6-jm4c",
+  "modified": "2026-06-15T20:46:36Z",
+  "published": "2026-06-15T20:46:36Z",
+  "aliases": [
+    "CVE-2026-50020"
+  ],
+  "summary": "Netty: HttpObjectDecoder skips arbitrary initial control characters when only initial CRLF characters are permitted",
+  "details": "## Summary\n\nBefore reading the first request-line, `HttpObjectDecoder` skips every byte for which\n`Character.isISOControl(b)` is `true` (0x00–0x1F and 0x7F) as well as all whitespace.\nRFC 9112 §2.2 only asks servers to ignore **empty CRLF lines** preceding the request-line —\na carefully scoped robustness allowance intended to handle HTTP/1.0 POST workarounds.\nSilently absorbing NUL bytes, SOH, STX, and other non-CRLF control characters goes\nsignificantly beyond this, and can be exploited for request-boundary confusion in pipelined\nor multiplexed transports where a front-end component treats those bytes differently.\n\n## Affected Code\n\n| File | Lines | Role |\n|------|-------|------|\n| `codec-http/src/main/java/io/netty/handler/codec/http/HttpObjectDecoder.java` | 1298–1313 | `ISO_CONTROL_OR_WHITESPACE` static initialiser — marks all ISO control chars |\n| `codec-http/src/main/java/io/netty/handler/codec/http/HttpObjectDecoder.java` | 1307–1313 | `SKIP_CONTROL_CHARS_BYTES` `ByteProcessor` — skips the entire set |\n| `codec-http/src/main/java/io/netty/handler/codec/http/HttpObjectDecoder.java` | 1275–1289 | `LineParser.skipControlChars` — advances `readerIndex` past all matching bytes |\n\n## Specification Analysis\n\n### RFC 9112 §2.2 — Message Parsing\n\n> In the interest of robustness, a server that is expecting to receive and parse a\n> request-line **SHOULD ignore at least one empty line (CRLF)** received prior to the\n> request-line.\n\n> An HTTP/1.1 user agent **MUST NOT** preface or follow a request with an extra CRLF.\n\n### Deviation\n\nThe RFC names a single permitted exception: an **empty line** (bare CRLF, i.e. the two-byte\nsequence `\\r\\n`).  The `ISO_CONTROL_OR_WHITESPACE` table is initialised as:\n\n```java\nfor (byte b = Byte.MIN_VALUE; b < Byte.MAX_VALUE; b++) {\n    ISO_CONTROL_OR_WHITESPACE[128 + b] =\n        Character.isISOControl(b) || isWhitespace(b);\n}\n```\n\n`Character.isISOControl` returns `true` for `0x00`–`0x1F` and `0x7F`.  This includes NUL\n(`0x00`), SOH (`0x01`), STX (`0x02`), BEL (`0x07`), DEL (`0x7F`), and every other non-CRLF\ncontrol character.  The `SKIP_CONTROL_CHARS` state runs this scan unconditionally before the\nfirst `READ_INITIAL`, meaning any sequence of such bytes prepended to a request is silently\nconsumed.\n\nA load balancer or TLS terminator that does not perform the same scan sees a different\nmessage boundary than Netty does, which is the basis of a request-desync / smuggling attack.\n\n## Suggested Unit Test\n\nAdd to `HttpRequestDecoderTest.java`.\n\n```java\n@Test\npublic void testNonCrlfControlBytesPrecedingRequestLineAreRejected() {\n    // RFC 9112 §2.2: servers SHOULD ignore \"at least one empty line (CRLF)\" before the\n    // request-line.  Non-CRLF control bytes are not part of this robustness allowance\n    // and must not be silently swallowed.\n    EmbeddedChannel channel = new EmbeddedChannel(new HttpRequestDecoder());\n\n    ByteBuf buf = Unpooled.buffer();\n    buf.writeByte(0x00);   // NUL  — not an empty CRLF line\n    buf.writeByte(0x01);   // SOH  — not an empty CRLF line\n    buf.writeCharSequence(\n            \"GET / HTTP/1.1\\r\\nHost: example.com\\r\\n\\r\\n\",\n            CharsetUtil.US_ASCII);\n\n    channel.writeInbound(buf);\n    HttpRequest req = channel.readInbound();\n\n    // Current behaviour: NUL and SOH are in ISO_CONTROL_OR_WHITESPACE, so they are\n    // silently skipped; the request decodes successfully and isFailure() == false.\n    //\n    // RFC-correct behaviour: only empty CRLF lines should be ignored; NUL/SOH must\n    // cause a parse error — isFailure() == true.\n    assertTrue(\n            req.decoderResult().isFailure(),\n            \"Non-CRLF control bytes before the request-line must not be silently skipped \" +\n            \"(RFC 9112 §2.2 allows only empty CRLF lines)\");\n\n    assertFalse(channel.finish());\n}\n```\n\n**Current behaviour (unfixed):** `skipControlChars` advances past `0x00` and `0x01` because\nboth are in `ISO_CONTROL_OR_WHITESPACE`; the request parses normally, `isFailure()` is\n`false` → test **fails**.\n\n**Expected behaviour after fix:** only CRLF empty lines are tolerated; non-CRLF control\nbytes produce an error, `isFailure()` is `true` → test **passes**.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-http"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0.Final"
+            },
+            {
+              "fixed": "4.2.15.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.2.14.Final"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "io.netty:netty-codec-http"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.135.Final"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.1.134.Final"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/security/advisories/GHSA-hvcg-qmg6-jm4c"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50020"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/netty/netty"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.1.135.Final"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/netty/netty/releases/tag/netty-4.2.15.Final"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-444"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:46:36Z",
+    "nvd_published_at": "2026-06-12T16:16:31Z"
+  }
+}
