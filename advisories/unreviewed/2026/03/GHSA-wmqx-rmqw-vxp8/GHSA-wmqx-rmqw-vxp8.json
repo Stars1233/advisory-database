@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wmqx-rmqw-vxp8",
-  "modified": "2026-05-20T06:31:52Z",
+  "modified": "2026-06-15T03:30:31Z",
   "published": "2026-03-26T15:30:39Z",
   "aliases": [
     "CVE-2026-4887"
@@ -30,6 +30,34 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2026:19362"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20552"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20553"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20554"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20691"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25899"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25901"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25907"
     },
     {
       "type": "WEB",

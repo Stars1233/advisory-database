@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-64mj-fhhf-6gmf",
+  "modified": "2026-06-15T03:30:32Z",
+  "published": "2026-06-15T03:30:32Z",
+  "aliases": [
+    "CVE-2026-12211"
+  ],
+  "details": "A flaw has been found in Intelbras iNVU 7016 FT 3.004.00IB000.0.T Build 2025-09-26. This impacts an unknown function of the file /RPC2_Loadfile/syslog/ of the component Web Interface. Executing a manipulation can lead to path traversal. The attack can be launched remotely. The exploit has been published and may be used. It is recommended to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12211"
+    },
+    {
+      "type": "WEB",
+      "url": "https://coaglio.com/writeups/lfi-intelbras-invu.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-12211"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/832544"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370853"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370853/cti"
+    },
+    {
+      "type": "WEB",
+      "url": "http://api-cronos.intelbras.com.br/download/INVU/INVU7016FT/prod/INVU7016FT-2026.05.29-712953bf2bb2af7e72d0577ad5ef6455.260527.BIN"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-15T03:16:24Z"
+  }
+}

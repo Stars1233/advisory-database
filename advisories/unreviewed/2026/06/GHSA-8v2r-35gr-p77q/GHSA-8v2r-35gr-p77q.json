@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8v2r-35gr-p77q",
+  "modified": "2026-06-15T03:30:32Z",
+  "published": "2026-06-15T03:30:32Z",
+  "aliases": [
+    "CVE-2026-12203"
+  ],
+  "details": "A vulnerability was found in HKUDS AI-Trader up to 74caf996f78dcc0c657df8365c8544678a16e215. This affects an unknown part of the file /api/research/agents.csv of the component Research Export. Performing a manipulation results in information disclosure. Remote exploitation of the attack is possible. The exploit has been made public and could be used. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The patch is named 91a31aac1b0f4dbc6b8bef9f6eff0b7912e0bc65. Applying a patch is the recommended action to fix this issue. The vendor confirms: \"Research export endpoints now require an authenticated agent with the research_exports capability\".",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/HKUDS/AI-Trader/issues/242"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/HKUDS/AI-Trader/pull/227"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/HKUDS/AI-Trader/commit/91a31aac1b0f4dbc6b8bef9f6eff0b7912e0bc65"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Dave-gilmore-aus/security-advisories/blob/main/AI-Trader-Unauthenticated%20Sensitive%20Data%20Exposure%20in%20Research%20Export%20(CVE-Pending).md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/HKUDS/AI-Trader"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-12203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/830273"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370846"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/370846/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-15T02:16:12Z"
+  }
+}
