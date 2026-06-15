@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v4rm-3378-9vff",
+  "modified": "2026-06-15T12:32:44Z",
+  "published": "2026-06-15T12:32:44Z",
+  "aliases": [
+    "CVE-2026-34023"
+  ],
+  "details": "The Wertheim SafeController Software, AssemblyVersion 6.15.8328.28014, contains an incorrect authorization vulnerability in the WebSocket communication used by the SafeController WebMessageBroker. An authenticated attacker with valid low-privileged branch user credentials can manipulate WebSocket messages by specifying controller identifiers belonging to other branches. This allows the attacker to access restricted functions and resources in other branches, including activating boxes outside of the user's authorized branch.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34023"
+    },
+    {
+      "type": "WEB",
+      "url": "https://r.sec-consult.com/wertheim"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wertheim-safes.com/safe-deposit-box-management"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-15T12:16:24Z"
+  }
+}

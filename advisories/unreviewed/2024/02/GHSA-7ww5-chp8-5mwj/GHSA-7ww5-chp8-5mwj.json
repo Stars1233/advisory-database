@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7ww5-chp8-5mwj",
-  "modified": "2024-12-06T18:30:44Z",
+  "modified": "2026-06-15T12:32:44Z",
   "published": "2024-02-28T09:30:36Z",
   "aliases": [
     "CVE-2020-36785"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-36785"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/51b8dc5163d2ff2bf04019f8bf7e3bd0e75bb654"
     },
     {
       "type": "WEB",

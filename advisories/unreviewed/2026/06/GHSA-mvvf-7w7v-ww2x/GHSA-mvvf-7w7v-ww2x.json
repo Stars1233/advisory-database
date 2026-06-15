@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mvvf-7w7v-ww2x",
+  "modified": "2026-06-15T12:32:45Z",
+  "published": "2026-06-15T12:32:45Z",
+  "aliases": [
+    "CVE-2026-34030"
+  ],
+  "details": "The Wertheim SafeController Software, AssemblyVersion 6.15.8328.28014, does not sufficiently validate the branch code when a new branch is created. The branch code is later used in multiple application functions, including filesystem path generation for uploaded files, profile pictures, and settings. An authenticated attacker with the settings_branches_manage privilege can include path traversal sequences in the branch code and influence the final filesystem location used by affected file operations. This can allow files to be stored in unintended locations, subject to service-account write permissions and branch-code length restrictions.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34030"
+    },
+    {
+      "type": "WEB",
+      "url": "https://r.sec-consult.com/wertheim"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wertheim-safes.com/safe-deposit-box-management"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-73"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-15T12:16:25Z"
+  }
+}
