@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g3cq-j2xw-wf74",
+  "modified": "2026-06-15T20:09:51Z",
+  "published": "2026-06-15T20:09:51Z",
+  "aliases": [
+    "CVE-2026-54278"
+  ],
+  "summary": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup",
+  "details": "### Summary\n\nDuring cleanup it is possible for a compressed request body to be decompressed into memory in one chunk.\n\n### Impact\n\nAn attacker may be able to send a compressed payload in specific situations that could be decompressed into memory, potentially leading to DoS (a zip bomb edge case).\n\n### Workaround\n\nDisable compression if unable to upgrade.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/4f7480e474cccc6a8cc2c92ad3f17a31dedf8232",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "aiohttp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.14.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-g3cq-j2xw-wf74"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/aio-libs/aiohttp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-409"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:09:51Z",
+    "nvd_published_at": null
+  }
+}

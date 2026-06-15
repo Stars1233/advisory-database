@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2fqr-mr3j-6wp8",
+  "modified": "2026-06-15T20:08:51Z",
+  "published": "2026-06-15T20:08:51Z",
+  "aliases": [
+    "CVE-2026-54279"
+  ],
+  "summary": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence",
+  "details": "### Summary\n\nHost-only cookies that are saved with ``CookieJar.save()`` and then restored later with ``CookieJar.load()`` lose their host-only status.\n\n### Impact\n\nHost-only cookies that have been loaded from disk may get sent to subdomains that previously should have been disallowed.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/a329a7aacad5284f087af36103aff778746da0f2",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "aiohttp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.14.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-2fqr-mr3j-6wp8"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/aio-libs/aiohttp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-665"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:08:51Z",
+    "nvd_published_at": null
+  }
+}

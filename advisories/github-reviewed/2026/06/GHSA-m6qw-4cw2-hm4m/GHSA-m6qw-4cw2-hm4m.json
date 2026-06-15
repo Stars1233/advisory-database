@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m6qw-4cw2-hm4m",
+  "modified": "2026-06-15T20:07:26Z",
+  "published": "2026-06-15T20:07:26Z",
+  "aliases": [
+    "CVE-2026-50269"
+  ],
+  "summary": "aiohttp: CRLF injection in multipart headers",
+  "details": "### Summary\n\nAttacker-controlled input included into multipart/payload headers can be used to modify a request to inject additional headers or similar.\n\n### Impact\n\nIn the unlikely situation that an application is passing user-controlled strings into `MultipartWriter.append(headers=...)` or `Payload.headers`, then an attacker may be able to modify the request to inject headers or change the contents of the request.\n\n### Workaround\n\nSanitise such user input.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/bf88077ebb14f4c29924b8e8904cba20c55c28b8",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "aiohttp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.13.5"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-m6qw-4cw2-hm4m"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/commit/bf88077ebb14f4c29924b8e8904cba20c55c28b8"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/aio-libs/aiohttp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-113",
+      "CWE-93"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:07:26Z",
+    "nvd_published_at": null
+  }
+}

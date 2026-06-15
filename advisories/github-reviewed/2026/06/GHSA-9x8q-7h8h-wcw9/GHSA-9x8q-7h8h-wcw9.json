@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9x8q-7h8h-wcw9",
+  "modified": "2026-06-15T20:10:44Z",
+  "published": "2026-06-15T20:10:44Z",
+  "aliases": [
+    "CVE-2026-54280"
+  ],
+  "summary": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect",
+  "details": "### Summary\n\nPayload resources are not closed correctly when a client disconnects in the middle of a write.\n\n### Impact\n\nIf a payload is using an open file or similar limited resource, then an attacker may be able to cause resource starvation temporarily until garbage collection or similar closes the file.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/a762eda5242f6490d6ba667533193f8b473ad587",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "aiohttp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.14.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-9x8q-7h8h-wcw9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/commit/a762eda5242f6490d6ba667533193f8b473ad587"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/aio-libs/aiohttp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-404"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:10:44Z",
+    "nvd_published_at": null
+  }
+}

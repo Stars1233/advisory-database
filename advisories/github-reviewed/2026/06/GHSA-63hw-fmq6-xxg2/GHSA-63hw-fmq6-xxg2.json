@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-63hw-fmq6-xxg2",
+  "modified": "2026-06-15T20:09:16Z",
+  "published": "2026-06-15T20:09:16Z",
+  "aliases": [
+    "CVE-2026-54277"
+  ],
+  "summary": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines",
+  "details": "### Summary\n\nIt is possible to bypass the max_line_size check in parts of an HTTP request in the C parser.\n\n### Impact\n\nIf using the optimised C parser (the default in pre-built wheels), then an attacker may be able to send oversized lines through the HTTP parser and use an excessive amount of memory, potentially leading to DoS.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/5ab61bb4cd88f19b712f12c7c9295fe262bf804d",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "aiohttp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.14.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-63hw-fmq6-xxg2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/aio-libs/aiohttp/commit/5ab61bb4cd88f19b712f12c7c9295fe262bf804d"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/aio-libs/aiohttp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-15T20:09:16Z",
+    "nvd_published_at": null
+  }
+}
