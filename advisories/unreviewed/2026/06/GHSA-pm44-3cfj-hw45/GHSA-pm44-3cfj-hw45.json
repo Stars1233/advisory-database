@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pm44-3cfj-hw45",
-  "modified": "2026-06-16T18:32:36Z",
+  "modified": "2026-06-16T21:31:55Z",
   "published": "2026-06-16T15:33:48Z",
   "aliases": [
     "CVE-2026-12301"
   ],
   "details": "Memory safety bug fixed in Firefox 152. This vulnerability was fixed in Firefox 152.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -28,8 +33,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-119"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-16T13:16:30Z"

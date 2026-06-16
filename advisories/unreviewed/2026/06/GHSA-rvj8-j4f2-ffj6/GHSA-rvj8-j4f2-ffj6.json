@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rvj8-j4f2-ffj6",
+  "modified": "2026-06-16T21:32:01Z",
+  "published": "2026-06-16T21:32:01Z",
+  "aliases": [
+    "CVE-2026-22313"
+  ],
+  "details": "The device has a webserver that exposes a REST API authenticated with a token on the management network. By exploiting an OS command injection vulnerability an authenticated attacker can send\narbitrary commands to the device that are executed with administrative permissions by the underlying operating system.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22313"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cvcn.gov.it/cvcn/cve/CVE-2026-22313"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T20:16:28Z"
+  }
+}

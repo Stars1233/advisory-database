@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-235f-qxww-6764",
-  "modified": "2026-06-15T21:30:39Z",
+  "modified": "2026-06-16T21:31:54Z",
   "published": "2026-06-15T21:30:39Z",
   "aliases": [
     "CVE-2026-38063"
   ],
   "details": "Tenda 5G03 V05.03.02.04 (Version 1.0) is vulnerable to Command injection in the function action_radio_on_with_ia_apn via the ia parameter.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:26Z"

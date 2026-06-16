@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pv8r-8r75-69wf",
+  "modified": "2026-06-16T21:32:01Z",
+  "published": "2026-06-16T21:32:01Z",
+  "aliases": [
+    "CVE-2026-12105"
+  ],
+  "details": "Improper access control in Devolutions Server 2026.2.5, 2026.1.21 allows\n an authenticated user to access attachments via folder duplication with\n inherited permissions.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12105"
+    },
+    {
+      "type": "WEB",
+      "url": "https://devolutions.net/security/advisories/DEVO-2026-0017"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T20:16:27Z"
+  }
+}

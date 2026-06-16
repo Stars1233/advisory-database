@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8qv9-6423-m39w",
-  "modified": "2026-06-15T21:30:42Z",
+  "modified": "2026-06-16T21:31:55Z",
   "published": "2026-06-15T21:30:42Z",
   "aliases": [
     "CVE-2026-50892"
   ],
   "details": "Incorrect access control in the \"Let's Encrypt\" certificate download endpoint of Nginx Proxy Manager v2.14.0 allows authenticated attackers to obtain the TLS private key material via a crafted GET request.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:32Z"

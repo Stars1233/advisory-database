@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f64f-jmg7-95mg",
-  "modified": "2026-06-15T21:30:41Z",
+  "modified": "2026-06-16T21:31:54Z",
   "published": "2026-06-15T21:30:41Z",
   "aliases": [
     "CVE-2026-50881"
   ],
   "details": "Incorrect access control in the impworks Bonsai v6.0 allows authenticated attackers with Editor privileges to escalate privileges to Administrator and execute unauthorized account, password, and configuration changes.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:31Z"
