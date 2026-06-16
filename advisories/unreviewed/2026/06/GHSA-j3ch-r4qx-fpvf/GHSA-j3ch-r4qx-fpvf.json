@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j3ch-r4qx-fpvf",
+  "modified": "2026-06-16T15:33:47Z",
+  "published": "2026-06-16T15:33:47Z",
+  "aliases": [
+    "CVE-2026-12294"
+  ],
+  "details": "Sandbox escape in the DOM: Workers component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, and Firefox ESR 115.37.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12294"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2039873"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-57"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-58"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-59"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T13:16:29Z"
+  }
+}

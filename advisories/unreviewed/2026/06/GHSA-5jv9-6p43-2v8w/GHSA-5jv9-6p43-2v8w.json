@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5jv9-6p43-2v8w",
-  "modified": "2026-06-15T21:30:37Z",
+  "modified": "2026-06-16T15:33:43Z",
   "published": "2026-06-15T21:30:37Z",
   "aliases": [
     "CVE-2025-68713"
   ],
   "details": "An issue was discovered in Rakuten Send Anywhere (File Transfer) for Android (com.estmob.android.sendanywhere) 23.2.9. The vulnerability allows untrusted applications (with no permissions) to force arbitrary file downloads into the app's scoped storage. The resulting files appear in the application's trusted Received interface. These conditions establish a vector for arbitrary code execution if the payload is an APK file, or a denial-of-service condition through resource exhaustion from oversized transfers.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-926"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:24Z"

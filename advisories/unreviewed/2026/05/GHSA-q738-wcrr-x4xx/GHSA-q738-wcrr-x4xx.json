@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q738-wcrr-x4xx",
-  "modified": "2026-05-27T15:33:22Z",
+  "modified": "2026-06-16T15:33:41Z",
   "published": "2026-05-27T15:33:22Z",
   "aliases": [
     "CVE-2026-46057"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nlandlock: Fix LOG_SUBDOMAINS_OFF inheritance across fork()\n\nhook_cred_transfer() only copies the Landlock security blob when the\nsource credential has a domain.  This is inconsistent with\nlandlock_restrict_self() which can set LOG_SUBDOMAINS_OFF on a\ncredential without creating a domain (via the ruleset_fd=-1 path): the\nfield is committed but not preserved across fork() because the child's\nprepare_creds() calls hook_cred_transfer() which skips the copy when\ndomain is NULL.\n\nThis breaks the documented use case where a process mutes subdomain logs\nbefore forking sandboxed children: the children lose the muting and\ntheir domains produce unexpected audit records.\n\nFix this by unconditionally copying the Landlock credential blob.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -29,7 +34,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "LOW",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:25Z"

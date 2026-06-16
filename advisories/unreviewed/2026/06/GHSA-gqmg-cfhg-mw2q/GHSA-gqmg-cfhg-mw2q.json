@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gqmg-cfhg-mw2q",
-  "modified": "2026-06-15T21:30:40Z",
+  "modified": "2026-06-16T15:33:47Z",
   "published": "2026-06-15T21:30:40Z",
   "aliases": [
     "CVE-2026-50872"
   ],
   "details": "An issue in the loopback request handling component of fossar selfoss v2.20-SNAPSHOT allows attackers to execute arbitrary commands and obtain sensitive information via supplying a crafted HTTP request.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:29Z"

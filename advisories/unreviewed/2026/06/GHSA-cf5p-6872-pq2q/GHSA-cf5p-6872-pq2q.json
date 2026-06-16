@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cf5p-6872-pq2q",
-  "modified": "2026-06-15T21:30:38Z",
+  "modified": "2026-06-16T15:33:45Z",
   "published": "2026-06-15T21:30:38Z",
   "aliases": [
     "CVE-2026-36213"
   ],
   "details": "An issue in Microvirt MEmu Android Emulator 9.2.7.0 allows a local attacker to escalate privileges via the MemuService.exe component.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-269"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:25Z"

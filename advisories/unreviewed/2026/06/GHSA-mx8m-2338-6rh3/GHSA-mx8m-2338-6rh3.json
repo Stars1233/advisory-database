@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mx8m-2338-6rh3",
+  "modified": "2026-06-16T15:33:48Z",
+  "published": "2026-06-16T15:33:48Z",
+  "aliases": [
+    "CVE-2026-12303"
+  ],
+  "details": "Information disclosure due to incorrect boundary conditions in the Graphics: WebGPU component. This vulnerability was fixed in Firefox 152.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12303"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2034608"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-57"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T13:16:30Z"
+  }
+}

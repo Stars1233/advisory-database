@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x97m-f58v-9cwg",
-  "modified": "2026-06-12T18:31:56Z",
+  "modified": "2026-06-16T15:33:43Z",
   "published": "2026-06-12T18:31:56Z",
   "aliases": [
     "CVE-2026-45832"
   ],
   "details": "All V1 collection-level endpoints in ChromaDB's Python project pass None for the tenant and database to the authorization layer, allowing attackers to bypass authorization controls by using the V1 endpoints.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"

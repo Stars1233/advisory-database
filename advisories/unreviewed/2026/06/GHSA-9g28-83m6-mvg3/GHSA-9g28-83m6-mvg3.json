@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9g28-83m6-mvg3",
-  "modified": "2026-06-15T21:30:38Z",
+  "modified": "2026-06-16T15:33:44Z",
   "published": "2026-06-15T21:30:38Z",
   "aliases": [
     "CVE-2025-70102"
   ],
   "details": "A NULL pointer dereference occurs in Roy Marples NetworkConfiguration/dhcpcd 10.3.0 while parsing configuration options. In parse_option() (src/if-options.c:1886), the code performs a member access on a NULL pointer of type 'struct dhcp_opt' when an unexpected/invalid option token or parsing state causes the lookup to yield NULL. The instrumented fuzzing build reports 'runtime error: member access within null pointer of type struct dhcp_opt' and aborts.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-476"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:24Z"

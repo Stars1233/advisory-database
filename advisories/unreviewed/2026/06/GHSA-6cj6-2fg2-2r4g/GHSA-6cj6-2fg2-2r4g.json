@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6cj6-2fg2-2r4g",
+  "modified": "2026-06-16T15:33:50Z",
+  "published": "2026-06-16T15:33:50Z",
+  "aliases": [
+    "CVE-2026-9507"
+  ],
+  "details": "A session fixation vulnerability has been identified in osTicket v1.18.2. This security flaw allows an attacker to hijack a victim’s account by keeping the initial session identifier (OSTSESSID) active after a successful login.\n\n\n\nThe issue lies in the fact that the application does not invalidate the pre-authentication cookie or generate a new identifier for the authenticated context. As a result, if an attacker manages to set a known session identifier in the victim’s browser, they will be able to maintain unauthorised access to the account once the victim has authenticated.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9507"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/session-fixation-vulnerability-enhancesofts-osticket"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-38"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T13:16:38Z"
+  }
+}

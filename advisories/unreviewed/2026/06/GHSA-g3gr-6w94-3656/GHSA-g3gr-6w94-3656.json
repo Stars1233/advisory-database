@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g3gr-6w94-3656",
+  "modified": "2026-06-16T15:33:47Z",
+  "published": "2026-06-16T15:33:47Z",
+  "aliases": [
+    "CVE-2026-12290"
+  ],
+  "details": "Memory safety bug fixed in Firefox 152. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, and Firefox ESR 115.37.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12290"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2024852"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-57"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-58"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-59"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T13:16:29Z"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xgm5-jh99-wc4v",
-  "modified": "2026-06-10T18:31:46Z",
+  "modified": "2026-06-16T15:33:42Z",
   "published": "2026-06-10T18:31:46Z",
   "aliases": [
     "CVE-2026-20253"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://advisory.splunk.com/advisories/SVD-2026-0603"
+    },
+    {
+      "type": "WEB",
+      "url": "https://labs.watchtowr.com/why-use-app-level-auth-when-every-database-has-auth-splunk-enterprise-cve-2026-20253-pre-auth-rce"
     }
   ],
   "database_specific": {

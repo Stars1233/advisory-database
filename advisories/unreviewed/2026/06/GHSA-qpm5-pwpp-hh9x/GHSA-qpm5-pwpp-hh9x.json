@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qpm5-pwpp-hh9x",
-  "modified": "2026-06-16T09:32:42Z",
+  "modified": "2026-06-16T15:33:47Z",
   "published": "2026-06-16T09:32:42Z",
   "aliases": [
     "CVE-2025-9912"
   ],
   "details": "Nokia SR Linux is vulnerable to a local privilege escalation vulnerability. Successful exploitation of this vulnerability may allow an authenticated user to execute arbitrary commands with superuser privilege.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-269"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-16T08:16:23Z"

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g6pc-6676-c23j",
-  "modified": "2026-06-15T21:30:38Z",
+  "modified": "2026-06-16T15:33:44Z",
   "published": "2026-06-15T21:30:38Z",
   "aliases": [
     "CVE-2026-30121"
   ],
   "details": "remotion-dev remotion v4.0.409 was discovered to contain an arbitrary file write vulnerability.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-123"
+    ],
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:25Z"

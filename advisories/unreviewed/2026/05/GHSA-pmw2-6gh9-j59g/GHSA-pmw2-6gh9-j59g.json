@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pmw2-6gh9-j59g",
-  "modified": "2026-05-27T15:33:22Z",
+  "modified": "2026-06-16T15:33:41Z",
   "published": "2026-05-27T15:33:21Z",
   "aliases": [
     "CVE-2026-46042"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/mempolicy: fix memory leaks in weighted_interleave_auto_store()\n\nweighted_interleave_auto_store() fetches old_wi_state inside the if\n(!input) block only.  This causes two memory leaks:\n\n1. When a user writes \"false\" and the current mode is already manual,\n   the function returns early without freeing the freshly allocated\n   new_wi_state.\n\n2. When a user writes \"true\", old_wi_state stays NULL because the\n   fetch is skipped entirely. The old state is then overwritten by\n   rcu_assign_pointer() but never freed, since the cleanup path is\n   gated on old_wi_state being non-NULL. A user can trigger this\n   repeatedly by writing \"1\" in a loop.\n\nFix both leaks by moving the old_wi_state fetch before the input check,\nmaking it unconditional.  This also allows a unified early return for both\n\"true\" and \"false\" when the requested mode matches the current mode.\n\nReviewed by: Donet Tom <donettom@linux.ibm.com>",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -28,8 +33,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:23Z"

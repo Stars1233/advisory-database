@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vhq6-x73f-hjjx",
+  "modified": "2026-06-16T15:33:51Z",
+  "published": "2026-06-16T15:33:51Z",
+  "aliases": [
+    "CVE-2026-0647"
+  ],
+  "details": "An improper authentication security issue exists within the 1794-AENTR adapter's embedded web server. The vulnerability allows an unauthenticated attacker to change the device's web interface password by sending a crafted HTTP GET request to a specific endpoint, without any prior authentication being required. If exploited, this could lead to unauthorized access, account takeover, and loss of the device’s embedded web server’s availability.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0647"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1775.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T15:16:33Z"
+  }
+}

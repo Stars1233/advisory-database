@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gpr8-p742-hw62",
+  "modified": "2026-06-16T15:33:51Z",
+  "published": "2026-06-16T15:33:51Z",
+  "aliases": [
+    "CVE-2026-9307"
+  ],
+  "details": "A sensitive information disclosure security issue exists within the affected CompactLogix controllers. The controller's web server exposes CIP Connection IDs on the diagnostics webpage, which are accessible to any unauthenticated user on the network. This information can be leveraged by an attacker to construct malicious packets, leading to Denial-of-Service.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9307"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1776.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-497"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T15:16:45Z"
+  }
+}

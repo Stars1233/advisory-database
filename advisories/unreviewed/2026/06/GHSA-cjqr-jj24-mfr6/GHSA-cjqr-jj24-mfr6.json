@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cjqr-jj24-mfr6",
-  "modified": "2026-06-15T21:30:38Z",
+  "modified": "2026-06-16T15:33:45Z",
   "published": "2026-06-15T21:30:38Z",
   "aliases": [
     "CVE-2026-36537"
   ],
   "details": "ThingsBoard v4.3.0.1 is vulnerable to an authentication bypass during the OAuth authorization code exchange. The application improperly trusts user-supplied identity data within the user parameter of the /login/oauth2/code/ endpoint. By manipulating the email address in this JSON object, a remote attacker can bypass authentication and gain full access to any existing user account on the platform without possessing the target user's credentials. This results in a complete account takeover.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-290"
+    ],
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:25Z"

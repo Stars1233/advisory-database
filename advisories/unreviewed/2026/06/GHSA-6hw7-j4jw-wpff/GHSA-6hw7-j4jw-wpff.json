@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6hw7-j4jw-wpff",
+  "modified": "2026-06-16T15:33:51Z",
+  "published": "2026-06-16T15:33:51Z",
+  "aliases": [
+    "CVE-2026-12398"
+  ],
+  "details": "A command injection vulnerability was found in galaxy_ng. The do_git_checkout() function in the legacy role import API (v1) interpolates unsanitized git ref names (branch/tag names) into shell commands executed via subprocess.run() with shell=True. An authenticated user who controls a git repository can create a branch or tag with shell metacharacters in the name to achieve remote code execution on the pulp worker. The vulnerable endpoint is only reachable when GALAXY_ENABLE_LEGACY_ROLES is set to True, which is not the default configuration.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12398"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-12398"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2489180"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T15:16:36Z"
+  }
+}

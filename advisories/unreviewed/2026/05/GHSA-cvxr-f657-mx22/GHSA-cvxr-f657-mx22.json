@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cvxr-f657-mx22",
-  "modified": "2026-06-01T18:31:35Z",
+  "modified": "2026-06-16T15:33:41Z",
   "published": "2026-05-27T15:33:22Z",
   "aliases": [
     "CVE-2026-46049"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nALSA: ctxfi: Add fallback to default RSR for S/PDIF\n\nspdif_passthru_playback_get_resources() uses atc->pll_rate as the RSR\nfor the MSR calculation loop. However, pll_rate is only updated in\natc_pll_init() and not in hw_pll_init(), so it remains 0 after the\ncard init.\n\nWhen spdif_passthru_playback_setup() skips atc_pll_init() for\n32000 Hz, (rsr * desc.msr) always becomes 0, causing the loop to spin\nindefinitely.\n\nAdd fallback to use atc->rsr when atc->pll_rate is 0. This reflects\nthe hardware state, since hw_card_init() already configures the PLL\nto the default RSR.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -49,7 +54,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:24Z"

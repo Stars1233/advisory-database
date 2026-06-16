@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-ff85-hq6w-7g2w",
-  "modified": "2026-06-01T18:31:34Z",
+  "modified": "2026-06-16T15:33:41Z",
   "published": "2026-05-27T15:33:20Z",
   "aliases": [
     "CVE-2026-46019"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: atmel-aes - Fix 3-page memory leak in atmel_aes_buff_cleanup\n\natmel_aes_buff_init() allocates 4 pages using __get_free_pages() with\nATMEL_AES_BUFFER_ORDER, but atmel_aes_buff_cleanup() frees only the\nfirst page using free_page(), leaking the remaining 3 pages. Use\nfree_pages() with ATMEL_AES_BUFFER_ORDER to fix the memory leak.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:20Z"

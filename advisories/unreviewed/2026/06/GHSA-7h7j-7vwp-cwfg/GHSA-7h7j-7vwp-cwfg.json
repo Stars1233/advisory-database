@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7h7j-7vwp-cwfg",
-  "modified": "2026-06-15T21:30:39Z",
+  "modified": "2026-06-16T15:33:46Z",
   "published": "2026-06-15T21:30:39Z",
   "aliases": [
     "CVE-2026-39006"
   ],
   "details": "An issue in SNMP4J-Agent 3.8.3 allows a remote attacker to execute arbitrary code via the snmp4jCfgStoragePath component.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-73"
+    ],
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-15T20:16:27Z"

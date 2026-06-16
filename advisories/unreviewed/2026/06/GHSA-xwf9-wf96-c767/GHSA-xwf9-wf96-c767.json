@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xwf9-wf96-c767",
-  "modified": "2026-06-16T03:30:35Z",
+  "modified": "2026-06-16T15:33:47Z",
   "published": "2026-06-16T03:30:35Z",
   "aliases": [
     "CVE-2026-12162"
   ],
   "details": "Improper host validation in the social login autofill feature in \nDevolutions Remote Desktop Manager 2026.2.8 allows an attacker to \ndisclose stored social login credentials via a crafted web entry \npointing to a provider lookalike domain.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-297"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-16T01:16:23Z"

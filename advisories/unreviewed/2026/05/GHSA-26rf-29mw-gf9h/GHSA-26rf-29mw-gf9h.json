@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-26rf-29mw-gf9h",
-  "modified": "2026-05-27T15:33:19Z",
+  "modified": "2026-06-16T15:33:39Z",
   "published": "2026-05-27T15:33:19Z",
   "aliases": [
     "CVE-2026-45989"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nof: unittest: fix use-after-free in testdrv_probe()\n\nThe function testdrv_probe() retrieves the device_node from the PCI\ndevice, applies an overlay, and then immediately calls of_node_put(dn).\nThis releases the reference held by the PCI core, potentially freeing\nthe node if the reference count drops to zero. Later, the same freed\npointer 'dn' is passed to of_platform_default_populate(), leading to a\nuse-after-free.\n\nThe reference to pdev->dev.of_node is owned by the device model and\nshould not be released by the driver. Remove the erroneous of_node_put()\nto prevent premature freeing.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -36,8 +41,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:16Z"

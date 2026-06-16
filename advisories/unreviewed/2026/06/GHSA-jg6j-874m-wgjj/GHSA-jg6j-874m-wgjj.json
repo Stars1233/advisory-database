@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jg6j-874m-wgjj",
-  "modified": "2026-06-04T18:30:30Z",
+  "modified": "2026-06-16T15:33:42Z",
   "published": "2026-06-03T18:33:09Z",
   "aliases": [
     "CVE-2026-3276"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/python/cpython/commit/6b505d1f41f8f3ea0fe5a4786d3a8fff1875cfc0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/90748760d38ca3ac5fc6788a69becab905c95598"
     },
     {
       "type": "WEB",

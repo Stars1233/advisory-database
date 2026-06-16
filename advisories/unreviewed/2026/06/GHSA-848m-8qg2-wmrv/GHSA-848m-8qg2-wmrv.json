@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-848m-8qg2-wmrv",
+  "modified": "2026-06-16T15:33:50Z",
+  "published": "2026-06-16T15:33:50Z",
+  "aliases": [
+    "CVE-2026-53899"
+  ],
+  "details": "Firefox for iOS used partial domain matching when attaching cookies to PDF requests, allowing a malicious site on a suffix domain to receive cookies belonging to the target site. This vulnerability was fixed in Firefox for iOS 152.0.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53899"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2042909"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mozilla.org/security/advisories/mfsa2026-56"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-16T13:16:37Z"
+  }
+}
