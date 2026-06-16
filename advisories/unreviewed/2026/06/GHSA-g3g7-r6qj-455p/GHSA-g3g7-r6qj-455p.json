@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g3g7-r6qj-455p",
-  "modified": "2026-06-11T21:31:56Z",
+  "modified": "2026-06-16T00:34:24Z",
   "published": "2026-06-11T21:31:56Z",
   "aliases": [
     "CVE-2026-48547"
@@ -22,6 +22,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48547"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lingdojo/kana-dojo/commit/31b85a5d7c4b323ddeba3b2dc5e7807558710544"
     },
     {
       "type": "WEB",

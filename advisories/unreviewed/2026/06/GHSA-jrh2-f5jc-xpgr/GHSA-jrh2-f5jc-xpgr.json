@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jrh2-f5jc-xpgr",
-  "modified": "2026-06-04T06:30:25Z",
+  "modified": "2026-06-16T00:34:24Z",
   "published": "2026-06-04T00:30:25Z",
   "aliases": [
     "CVE-2026-46447"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2026/06/03/11"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/15/9"
     }
   ],
   "database_specific": {
