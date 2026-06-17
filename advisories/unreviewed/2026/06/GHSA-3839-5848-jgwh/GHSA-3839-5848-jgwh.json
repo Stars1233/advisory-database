@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3839-5848-jgwh",
+  "modified": "2026-06-17T18:35:54Z",
+  "published": "2026-06-17T18:35:54Z",
+  "aliases": [
+    "CVE-2025-69106"
+  ],
+  "details": "Unauthenticated Local File Inclusion in Imba <= 1.5.0 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69106"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/imba/vulnerability/wordpress-imba-theme-1-5-0-local-file-inclusion-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-98"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T14:17:31Z"
+  }
+}

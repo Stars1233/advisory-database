@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g459-w77r-8p3g",
+  "modified": "2026-06-17T18:35:45Z",
+  "published": "2026-06-17T18:35:45Z",
+  "aliases": [
+    "CVE-2026-12441"
+  ],
+  "details": "Use after free in File Input in Google Chrome on Linux prior to 149.0.7827.155 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Critical)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12441"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_01750511403.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/520157118"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:59Z"
+  }
+}

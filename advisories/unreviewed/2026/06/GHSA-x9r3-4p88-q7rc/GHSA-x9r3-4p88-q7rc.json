@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x9r3-4p88-q7rc",
+  "modified": "2026-06-17T18:35:57Z",
+  "published": "2026-06-17T18:35:57Z",
+  "aliases": [
+    "CVE-2026-20220"
+  ],
+  "details": "A vulnerability in the web-based management interface of Cisco Crosswork Network Controller could allow an&nbsp;authenticated, remote attacker to execute arbitrary commands on an affected device.\n\nThis vulnerability is due to insufficient input validation in the configuration&nbsp;template engine of the web-based management interface. An attacker could exploit this vulnerability by sending a crafted request to the affected device. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system in limited areas of the file system. This vulnerability affects only areas of the operating system for which the template user has write permissions.&nbsp;\nTo exploit this vulnerability, the attacker must have valid template user credentials with write permissions. Template users with read permissions cannot exploit this vulnerability.&nbsp;",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20220"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cnc-inj-QNMeEmxk"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T17:16:43Z"
+  }
+}

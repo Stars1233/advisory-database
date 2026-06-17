@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fgjp-hxx6-j7jx",
+  "modified": "2026-06-17T18:35:51Z",
+  "published": "2026-06-17T18:35:51Z",
+  "aliases": [
+    "CVE-2026-48616"
+  ],
+  "details": "Rocket.Chat versions <8.5.1, 8.4.4, 8.3.6, 8.2.6, 8.1.6, 8.0.7, 7.13.9, 7.10.13 has an access control vulnerability in Livechat files. Protected file downloads at /file-upload/:fileId/:name authorize livechat access using rc_room_type=l with rc_rid+rc_token, but the authorization path does not verify that rc_rid matches the requested file's rid. Furthermore, :fileId is predictable via sequential MongoDB IDs, and :name can be anything, allowing unauthenticated discovery of all uploaded files.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48616"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/RocketChat/Rocket.Chat/pull/40889"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3687142"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:42Z"
+  }
+}

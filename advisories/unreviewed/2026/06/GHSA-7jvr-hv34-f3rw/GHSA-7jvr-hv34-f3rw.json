@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7jvr-hv34-f3rw",
+  "modified": "2026-06-17T18:35:45Z",
+  "published": "2026-06-17T18:35:45Z",
+  "aliases": [
+    "CVE-2026-12199"
+  ],
+  "details": "A vulnerability in `nltk.app.wordnet_app` up to version 3.9.3 allows unauthenticated remote shutdown of the local WordNet Browser HTTP server when started in its default mode. The server listens on all interfaces and processes a specific unauthenticated GET request (`/SHUTDOWN%20THE%20SERVER`) to terminate the process immediately via `os._exit(0)`. This results in a denial of service, impacting service availability. The issue arises due to insufficient authentication and protection mechanisms for critical server functions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12199"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/cee4ca6a-d17f-4746-abad-c68119633d37"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:57Z"
+  }
+}

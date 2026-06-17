@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7cwp-f67q-c45v",
+  "modified": "2026-06-17T18:35:47Z",
+  "published": "2026-06-17T18:35:47Z",
+  "aliases": [
+    "CVE-2026-24610"
+  ],
+  "details": "Subscriber Broken Access Control in MetForm Pro <= 3.9.1 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24610"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/metform-pro/vulnerability/wordpress-metform-pro-plugin-3-9-1-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:10Z"
+  }
+}

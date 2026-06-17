@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-48qw-x3w8-j666",
+  "modified": "2026-06-17T18:35:44Z",
+  "published": "2026-06-17T18:35:44Z",
+  "aliases": [
+    "CVE-2025-69135"
+  ],
+  "details": "Subscriber SQL Injection in Events Schedule - WordPress Events Calendar Plugin <= 2.7.2 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69135"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/weekly-class/vulnerability/wordpress-events-schedule-wordpress-events-calendar-plugin-plugin-2-7-2-sql-injection-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:18Z"
+  }
+}

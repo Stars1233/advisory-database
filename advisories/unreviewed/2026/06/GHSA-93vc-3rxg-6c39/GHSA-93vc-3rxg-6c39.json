@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-93vc-3rxg-6c39",
+  "modified": "2026-06-17T18:35:54Z",
+  "published": "2026-06-17T18:35:54Z",
+  "aliases": [
+    "CVE-2025-69128"
+  ],
+  "details": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in EMV JobCareer allows Path Traversal.\n\nThis issue affects JobCareer: from n/a through 7.3.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69128"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/jobcareer/vulnerability/wordpress-jobcareer-theme-7-3-arbitrary-file-deletion-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T14:17:33Z"
+  }
+}

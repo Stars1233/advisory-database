@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5gqc-wqm6-m85x",
+  "modified": "2026-06-17T18:35:55Z",
+  "published": "2026-06-17T18:35:55Z",
+  "aliases": [
+    "CVE-2026-49108"
+  ],
+  "details": "Unauthenticated PHP Object Injection in Moderno < 1.43 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49108"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/moderno/vulnerability/wordpress-moderno-theme-1-43-php-object-injection-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T14:17:56Z"
+  }
+}

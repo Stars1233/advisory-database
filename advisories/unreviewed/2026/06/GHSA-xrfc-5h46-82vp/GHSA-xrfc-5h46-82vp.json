@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xrfc-5h46-82vp",
+  "modified": "2026-06-17T18:35:57Z",
+  "published": "2026-06-17T18:35:57Z",
+  "aliases": [
+    "CVE-2026-32652"
+  ],
+  "details": "Dell AIOps Collector versions prior to 1.18.3 contain a \"Use of Default Credentials\" vulnerability. A low privileged attacker with console access could potentially exploit this vulnerability to gain Filesystem access. This vulnerability only affects fresh installations of Collector versions earlier than 1.18.3. Systems that have been upgraded (either manually or automatically) to version 1.18.3 or later are not impacted, even if they were originally installed on an earlier version.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32652"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dell.com/support/kbdoc/en-in/000477931/dsa-2026-231-security-update-for-dell-aiops-collector-for-default-credential-vulnerability"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1392"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T17:16:45Z"
+  }
+}

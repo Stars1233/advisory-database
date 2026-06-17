@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7r6c-qx7f-5jfc",
+  "modified": "2026-06-17T18:35:44Z",
+  "published": "2026-06-17T18:35:43Z",
+  "aliases": [
+    "CVE-2025-69129"
+  ],
+  "details": "Unauthenticated Arbitrary File Upload in WordPress & WooCommerce Scraper Plugin, Import Data from Any Site <= 1.0.7 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69129"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/wp_scraper/vulnerability/wordpress-wordpress-woocommerce-scraper-plugin-import-data-from-any-site-plugin-1-0-7-arbitrary-file-upload-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:18Z"
+  }
+}

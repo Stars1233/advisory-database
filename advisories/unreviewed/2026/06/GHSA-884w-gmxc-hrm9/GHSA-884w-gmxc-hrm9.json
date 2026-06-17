@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-884w-gmxc-hrm9",
+  "modified": "2026-06-17T18:35:52Z",
+  "published": "2026-06-17T18:35:52Z",
+  "aliases": [
+    "CVE-2026-54802"
+  ],
+  "details": "Unauthenticated Broken Authentication in SMS Alert Order Notifications <= 3.9.3 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54802"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/sms-alert/vulnerability/wordpress-sms-alert-order-notifications-plugin-3-9-3-broken-authentication-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:51Z"
+  }
+}

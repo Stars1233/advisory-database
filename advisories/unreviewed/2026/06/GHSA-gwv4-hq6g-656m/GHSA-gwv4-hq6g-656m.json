@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gwv4-hq6g-656m",
+  "modified": "2026-06-17T18:35:38Z",
+  "published": "2026-06-17T18:35:38Z",
+  "aliases": [
+    "CVE-2026-46932"
+  ],
+  "details": "Vulnerability in the Oracle Enterprise Asset Management product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Enterprise Asset Management.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Enterprise Asset Management accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Enterprise Asset Management. CVSS 3.1 Base Score 7.1 (Confidentiality and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46932"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cspujun2026.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T10:54:12Z"
+  }
+}

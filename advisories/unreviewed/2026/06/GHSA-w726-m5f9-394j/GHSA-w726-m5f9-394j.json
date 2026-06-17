@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w726-m5f9-394j",
+  "modified": "2026-06-17T18:35:53Z",
+  "published": "2026-06-17T18:35:53Z",
+  "aliases": [
+    "CVE-2025-60230"
+  ],
+  "details": "Deserialization of Untrusted Data vulnerability in Themeton The Barber Shop allows Object Injection.\n\nThis issue affects The Barber Shop: from n/a through 1.9.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60230"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/nrgbarbershop/vulnerability/wordpress-the-barber-shop-theme-1-9-php-object-injection-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T14:17:31Z"
+  }
+}

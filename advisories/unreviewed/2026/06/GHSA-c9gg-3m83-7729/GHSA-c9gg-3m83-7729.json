@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c9gg-3m83-7729",
+  "modified": "2026-06-17T18:35:47Z",
+  "published": "2026-06-17T18:35:47Z",
+  "aliases": [
+    "CVE-2026-24575"
+  ],
+  "details": "Subscriber Broken Access Control in WishList Member X <= 3.29.0 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24575"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/wishlist-member-x/vulnerability/wordpress-wishlist-member-x-plugin-3-29-0-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:10Z"
+  }
+}

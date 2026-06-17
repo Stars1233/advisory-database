@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vw52-q33v-g8pp",
+  "modified": "2026-06-17T18:35:55Z",
+  "published": "2026-06-17T18:35:55Z",
+  "aliases": [
+    "CVE-2026-54809"
+  ],
+  "details": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in VillaTheme GIFT4U allows Blind SQL Injection.\n\nThis issue affects GIFT4U: from n/a through 1.0.10.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54809"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/gift4u-gift-cards-all-in-one-for-woo/vulnerability/wordpress-gift4u-plugin-1-0-10-sql-injection-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T14:17:58Z"
+  }
+}

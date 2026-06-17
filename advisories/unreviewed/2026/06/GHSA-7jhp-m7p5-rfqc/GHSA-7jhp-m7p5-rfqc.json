@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7jhp-m7p5-rfqc",
+  "modified": "2026-06-17T18:35:44Z",
+  "published": "2026-06-17T18:35:43Z",
+  "aliases": [
+    "CVE-2025-69141"
+  ],
+  "details": "Unauthenticated Local File Inclusion in Kelly Young <= 1.1.0 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69141"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/kelly-young/vulnerability/wordpress-kelly-young-theme-1-1-0-local-file-inclusion-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-98"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:19Z"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rrgf-j5xj-h9hc",
+  "modified": "2026-06-17T18:35:52Z",
+  "published": "2026-06-17T18:35:52Z",
+  "aliases": [
+    "CVE-2026-55706"
+  ],
+  "details": "sppp_pap_input in sys/net/if_spppsubr.c in OpenBSD before 076e2b1 allows authentication bypass via certain zero values for lengths.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55706"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbsd/src/commit/076e2b1c1fc4ac0883a72d3544131ad5cee7adf8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://blog.argus-systems.ai/blog/openbsd-pap-27-year-auth-bypass.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://blog.argus-systems.ai/blog/poc-001-pap-bypass.py"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.openwall.com/lists/oss-security/2026/06/16/9"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:52Z"
+  }
+}

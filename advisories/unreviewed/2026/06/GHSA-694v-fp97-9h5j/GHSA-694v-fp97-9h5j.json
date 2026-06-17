@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-694v-fp97-9h5j",
+  "modified": "2026-06-17T18:35:51Z",
+  "published": "2026-06-17T18:35:51Z",
+  "aliases": [
+    "CVE-2026-45436"
+  ],
+  "details": "Subscriber Broken Access Control in WPBakery Page Builder <= 8.7.2 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45436"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/js_composer/vulnerability/wordpress-wpbakery-page-builder-plugin-8-7-2-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:40Z"
+  }
+}

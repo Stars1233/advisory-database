@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6gg7-jg4m-rf53",
+  "modified": "2026-06-17T18:35:51Z",
+  "published": "2026-06-17T18:35:51Z",
+  "aliases": [
+    "CVE-2026-49778"
+  ],
+  "details": "Unauthenticated Cross Site Scripting (XSS) in WPFunnels Pro <= 2.9.4 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/wpfunnels-pro/vulnerability/wordpress-wpfunnels-pro-plugin-2-9-4-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:46Z"
+  }
+}

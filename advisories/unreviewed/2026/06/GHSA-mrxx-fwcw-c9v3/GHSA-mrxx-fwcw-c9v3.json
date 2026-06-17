@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mrxx-fwcw-c9v3",
+  "modified": "2026-06-17T18:35:41Z",
+  "published": "2026-06-17T18:35:41Z",
+  "aliases": [
+    "CVE-2026-46979"
+  ],
+  "details": "Vulnerability in the PeopleSoft Enterprise CS Campus Community product of Oracle PeopleSoft (component: Integration and Interfaces).   The supported version that is affected is 9.2.38. Easily exploitable vulnerability allows high privileged attacker with network access via HTTPS to compromise PeopleSoft Enterprise CS Campus Community.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all PeopleSoft Enterprise CS Campus Community accessible data as well as  unauthorized access to critical data or complete access to all PeopleSoft Enterprise CS Campus Community accessible data. CVSS 3.1 Base Score 6.5 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46979"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cspujun2026.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T10:54:16Z"
+  }
+}

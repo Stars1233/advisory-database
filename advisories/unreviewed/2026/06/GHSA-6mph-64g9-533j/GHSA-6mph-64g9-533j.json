@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6mph-64g9-533j",
+  "modified": "2026-06-17T18:35:48Z",
+  "published": "2026-06-17T18:35:48Z",
+  "aliases": [
+    "CVE-2026-27870"
+  ],
+  "details": "An attacker with access via network to the Regesta Smart HD-PLC of the provider Teldat (in this case, registration action IS required) who has the vulnerable software could, introduce arbitrary JavaScript by injecting a Cross-site Scripting (XSS)  payload into the 'Hostname' field of the configuration file resulting in a XSS in the path /upgrade/query.php?cmd=p+3%3Bversion. This issue affects Regesta Smart HD-PLC - TLDPH16D2: \n11.02.05.10.02.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27870"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.teldat.com/images/content/docs/Teldat_dm1087_regesta_smart_nessum_series_installation(1).pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.teldat.com/portal/supportcontent?page=cgs-customer-global-support&none=true&language=en-US"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.hackrtu.com/blog/CNA-CVE-2026-27870"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.hackrtu.com/blog/CNA-HRTU-0002"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.teldat.com/es"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:13Z"
+  }
+}

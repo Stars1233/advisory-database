@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h7m3-q936-j338",
+  "modified": "2026-06-17T18:35:44Z",
+  "published": "2026-06-17T18:35:44Z",
+  "aliases": [
+    "CVE-2025-69150"
+  ],
+  "details": "Unauthenticated Local File Inclusion in Medeus <= 1.14 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69150"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/medeus/vulnerability/wordpress-medeus-theme-1-14-local-file-inclusion-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-98"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:21Z"
+  }
+}

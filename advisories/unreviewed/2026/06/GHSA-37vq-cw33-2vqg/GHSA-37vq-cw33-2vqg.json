@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-37vq-cw33-2vqg",
+  "modified": "2026-06-17T18:35:39Z",
+  "published": "2026-06-17T18:35:39Z",
+  "aliases": [
+    "CVE-2026-46949"
+  ],
+  "details": "Vulnerability in the Oracle Advanced Outbound Telephony product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Advanced Outbound Telephony.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Advanced Outbound Telephony accessible data as well as  unauthorized access to critical data or complete access to all Oracle Advanced Outbound Telephony accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46949"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cspujun2026.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T10:54:14Z"
+  }
+}

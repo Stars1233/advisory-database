@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7rvr-jr77-2v6x",
+  "modified": "2026-06-17T18:35:57Z",
+  "published": "2026-06-17T18:35:57Z",
+  "aliases": [
+    "CVE-2026-35069"
+  ],
+  "details": "Dell PowerFlex Manager, version(s) [Versions], contain(s) an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A low privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Script injection.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35069"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T17:16:46Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vfmj-48r5-54j4",
+  "modified": "2026-06-17T18:35:55Z",
+  "published": "2026-06-17T18:35:55Z",
+  "aliases": [
+    "CVE-2026-54817"
+  ],
+  "details": "Authentication Bypass Using an Alternate Path or Channel vulnerability in FluxBuilder MStore API allows Password Recovery Exploitation.\n\nThis issue affects MStore API: from n/a through 4.18.4.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54817"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/mstore-api/vulnerability/wordpress-mstore-api-plugin-4-18-4-broken-authentication-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-288"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T14:17:59Z"
+  }
+}

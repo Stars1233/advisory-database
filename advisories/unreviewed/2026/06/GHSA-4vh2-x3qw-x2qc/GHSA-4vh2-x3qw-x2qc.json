@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4vh2-x3qw-x2qc",
+  "modified": "2026-06-17T18:35:57Z",
+  "published": "2026-06-17T18:35:57Z",
+  "aliases": [
+    "CVE-2026-20246"
+  ],
+  "details": "A vulnerability in the vmadmin CLI of Cisco Umbrella Virtual Appliance could allow an authenticated, local attacker to elevate privileges on an affected device.\n\nThis vulnerability is due to insufficient validation of user-supplied commands. An attacker with vmadmin privileges could exploit this vulnerability by using certain commands at the CLI. A successful exploit could allow the attacker to elevate privileges to root.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20246"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-umbrella-priv-esc-F4wJB7AU"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-269"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T17:16:43Z"
+  }
+}

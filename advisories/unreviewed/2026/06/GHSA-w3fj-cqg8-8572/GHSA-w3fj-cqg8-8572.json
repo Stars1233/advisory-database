@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w3fj-cqg8-8572",
+  "modified": "2026-06-17T18:35:55Z",
+  "published": "2026-06-17T18:35:55Z",
+  "aliases": [
+    "CVE-2026-54417"
+  ],
+  "details": "An integer overflow in the mtar_next() function in src/microtar.c in rxi microtar 0.1.0 allows a remote attacker to cause a denial of service (uncontrolled CPU consumption / infinite loop) via a crafted tar archive. mtar_next() computes the offset to the next record as round_up(h.size, 512) + sizeof(mtar_raw_header_t) using 32-bit arithmetic. When the header size field is a multiple of 512 in the range 0xFFFFFC01-0xFFFFFE00 (e.g. 0xFFFFFE00), the addition wraps to 0, so mtar_next() seeks to the current record position instead of advancing. As a result, mtar_find() and any loop that iterates entries with mtar_next() repeat indefinitely over the same record, hanging the process at 100% CPU with no recovery.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54417"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rxi/microtar"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rxi/microtar/blob/master/src/microtar.c#L239"
+    },
+    {
+      "type": "WEB",
+      "url": "https://raw.githubusercontent.com/rxi/microtar/master/src/microtar.c"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-190"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T14:17:58Z"
+  }
+}

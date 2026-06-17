@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jf67-82h5-mx67",
+  "modified": "2026-06-17T18:35:53Z",
+  "published": "2026-06-17T18:35:53Z",
+  "aliases": [
+    "CVE-2026-9570"
+  ],
+  "details": "The Taskbuilder  WordPress plugin before 5.0.8 does not properly sanitise a URL parameter before echoing it into inline JavaScript on a frontend page containing one of its shortcodes, leading to a Reflected Cross-Site Scripting vulnerability that can be triggered against any logged-in user.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9570"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wpscan.com/vulnerability/e9abd7eb-39f1-49d7-a70e-b07cf3680399"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:21:34Z"
+  }
+}

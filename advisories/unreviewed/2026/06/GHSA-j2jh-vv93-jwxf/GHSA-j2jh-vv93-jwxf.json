@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j2jh-vv93-jwxf",
+  "modified": "2026-06-17T18:35:52Z",
+  "published": "2026-06-17T18:35:52Z",
+  "aliases": [
+    "CVE-2026-52698"
+  ],
+  "details": "Subscriber Sensitive Data Exposure in PushEngage – Web Push Notifications, eCommerce Automation &amp; Chat Widget <= 4.2.3 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52698"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/pushengage/vulnerability/wordpress-pushengage-web-push-notifications-ecommerce-automation-chat-widget-plugin-4-2-3-sensitive-data-exposure-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-201"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:20:49Z"
+  }
+}

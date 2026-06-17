@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jq54-839p-hjhg",
+  "modified": "2026-06-17T18:35:41Z",
+  "published": "2026-06-17T18:35:41Z",
+  "aliases": [
+    "CVE-2026-48294"
+  ],
+  "details": "Adobe Acrobat PDF Extension (Chrome) versions 26.5.2.2 and earlier are affected by a UXSS-class cross-origin data disclosure vulnerability. An attacker could exploit this vulnerability to gain access to data regarding the victim's session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48294"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromewebstore.google.com/detail/adobe-acrobat-pdf-edit-co/efaidnbmnnnibpcajpcglclefindmkaj"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T10:55:01Z"
+  }
+}

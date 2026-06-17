@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x569-m75g-6pr8",
-  "modified": "2026-05-05T21:31:16Z",
+  "modified": "2026-06-17T18:35:13Z",
   "published": "2026-04-22T15:31:41Z",
   "aliases": [
     "CVE-2026-31456"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31456"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/138ada1337b47cc5efb08e517674d46f86268274"
     },
     {
       "type": "WEB",

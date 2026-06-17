@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jv52-q48w-cm7j",
+  "modified": "2026-06-17T18:35:42Z",
+  "published": "2026-06-17T18:35:42Z",
+  "aliases": [
+    "CVE-2025-15641"
+  ],
+  "details": "Netskope was notified about a potential gap in its Netskope Client for Windows systems where a malicious insider with administrative privileges can potentially tamper with the customer IOCTL by sending crafted IOCTL requests to the driver. A successful exploit can result in the bypassing of all anti-tampering protections for the NSClient.Affected Product(s) and Version(s)\n  *  Product Name: Netskope Client\n  *  Affected Platform: Windows\n  *  Affected Version: All version below R138",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15641"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.netskope.com/resources/netskope-resources/netskope-security-advisory-nskpsa-2025-007"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-782"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:13Z"
+  }
+}

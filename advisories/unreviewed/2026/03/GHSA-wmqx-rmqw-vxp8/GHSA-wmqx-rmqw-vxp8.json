@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wmqx-rmqw-vxp8",
-  "modified": "2026-06-15T03:30:31Z",
+  "modified": "2026-06-17T18:35:11Z",
   "published": "2026-03-26T15:30:39Z",
   "aliases": [
     "CVE-2026-4887"
@@ -58,6 +58,10 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2026:25907"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:26168"
     },
     {
       "type": "WEB",

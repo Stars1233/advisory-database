@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-32hf-5r4g-fq65",
+  "modified": "2026-06-17T18:35:45Z",
+  "published": "2026-06-17T18:35:45Z",
+  "aliases": [
+    "CVE-2026-12360"
+  ],
+  "details": "The JetEngine plugin for WordPress is vulnerable to SQL injection in all versions up to and including 3.8.10.1. The listing_load_more AJAX handler accepts a filtered_query parameter that is intentionally excluded from the HMAC query signature check to support front-end filter integration. However, meta_query row values within filtered_query are not sanitized before being merged into SQL construction. This makes it possible for unauthenticated attackers to perform time-based or boolean blind SQL injection by appending a malicious meta_query value to a Load More AJAX request captured from any public Listing Grid page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12360"
+    },
+    {
+      "type": "WEB",
+      "url": "https://crocoblock.com/changelog/?plugin=jet-engine"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jet-engine/trunk/includes/components/listings/ajax-handlers.php#L195"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jet-engine/trunk/includes/components/listings/ajax-handlers.php#L256"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jet-engine/trunk/includes/components/listings/ajax-handlers.php#L328"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/jet-engine/trunk/includes/components/query-builder/queries/traits/meta-query.php#L98"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/fd839b20-69d1-4cad-80fc-3e7b9940fd30?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:58Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cpx8-9h9w-wcx7",
+  "modified": "2026-06-17T18:35:42Z",
+  "published": "2026-06-17T18:35:42Z",
+  "aliases": [
+    "CVE-2025-58924"
+  ],
+  "details": "Unauthenticated Local File Inclusion in Geya <= 1.15 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58924"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/geya/vulnerability/wordpress-geya-theme-1-15-local-file-inclusion-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-98"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:14Z"
+  }
+}

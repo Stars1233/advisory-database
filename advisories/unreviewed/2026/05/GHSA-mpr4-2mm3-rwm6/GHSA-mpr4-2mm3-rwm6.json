@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mpr4-2mm3-rwm6",
-  "modified": "2026-06-01T18:31:39Z",
+  "modified": "2026-06-17T18:35:14Z",
   "published": "2026-05-28T12:30:31Z",
   "aliases": [
     "CVE-2026-46173"
@@ -42,6 +42,10 @@
     {
       "type": "WEB",
       "url": "https://git.kernel.org/stable/c/c1fa0bb633e4a6b11e83ffc57fa5abe8ebb87891"
+    },
+    {
+      "type": "WEB",
+      "url": "https://project-zero.issues.chromium.org/issues/510793286"
     }
   ],
   "database_specific": {

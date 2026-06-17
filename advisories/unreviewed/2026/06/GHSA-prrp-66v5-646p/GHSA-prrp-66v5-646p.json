@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-prrp-66v5-646p",
+  "modified": "2026-06-17T18:35:55Z",
+  "published": "2026-06-17T18:35:55Z",
+  "aliases": [
+    "CVE-2024-47477"
+  ],
+  "details": "Dell PowerFlex Manager, versions prior to 4.5.1.1, contain an improper certificate validation vulnerability. A remote unauthenticated attacker could potentially exploit this vulnerability leading to man-in-the-middle attack in tandem with DNS cache poisoning.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.dell.com/support/kbdoc/en-us/000477538/dsa-2026-066-security-update-for-powerflex-software-multiple-vulnerabilities"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-295"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T15:16:34Z"
+  }
+}

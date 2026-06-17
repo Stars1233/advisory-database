@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-76v8-3vp7-9g3p",
+  "modified": "2026-06-17T18:35:41Z",
+  "published": "2026-06-17T18:35:41Z",
+  "aliases": [
+    "CVE-2024-33909"
+  ],
+  "details": "Missing Authorization vulnerability in Avirtum iPages Flipbook allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects iPages Flipbook: from n/a through 1.5.1.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-33909"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/ipages-flipbook/vulnerability/wordpress-ipages-flipbook-plugin-1-5-1-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T13:19:11Z"
+  }
+}
