@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8fq9-273g-6mrg",
+  "modified": "2026-06-17T18:49:11Z",
+  "published": "2026-06-17T18:49:11Z",
+  "aliases": [
+    "CVE-2026-55518"
+  ],
+  "summary": "Avo: Missing Authorization in Avo Association Attach Endpoint Allows Unauthorized Relationship Manipulation and Privilege Escalation",
+  "details": "## Summary\n\nA critical missing authorization flaw exists in Avo's association attach workflow. The UI and `GET /resources/:resource/:id/:related/new` path can check `attach_<association>?`, but the actual write endpoint, `POST /resources/:resource/:id/:related`, does not run the same authorization check before mutating the association.\n\nAs a result, an authenticated low-privileged Avo user can bypass hidden/disabled attach controls and directly attach related records to a parent record by sending a crafted POST request. In applications where associations represent teams, tenants, roles, projects, users, memberships, ownership, or other authorization-bearing relationships, this can lead to privilege escalation and cross-tenant data exposure.\n\n## Details\n\nThe association attach route writes relationships through `Avo::AssociationsController#create`:\n\n```ruby\n# config/routes.rb\npost \"/:resource_name/:id/:related_name\", to: \"associations#create\", as: \"associations_create\"\n```\n\nThe controller registers an attach authorization callback only for `new`, not for `create`:\n\n```ruby\n# app/controllers/avo/associations_controller.rb\nbefore_action :set_attachment_record, only: [:create, :destroy]\nbefore_action :authorize_index_action, only: :index\nbefore_action :authorize_attach_action, only: :new\nbefore_action :authorize_detach_action, only: :destroy\n```\n\nThe `new` action is only the form-rendering step. The actual mutation happens in `create`:\n\n```ruby\ndef create\n  if create_association\n    create_success_action\n  else\n    create_fail_action\n  end\nend\n```\n\n`create_association` then attaches the attacker-supplied related record to the parent:\n\n```ruby\ndef create_association\n  association_name = BaseResource.valid_association_name(@record, association_from_params)\n\n  perform_action_and_record_errors do\n    if through_reflection? && additional_params.present?\n      new_join_record.save\n    elsif has_many_reflection? || through_reflection?\n      @record.send(association_name) << @attachment_record\n    else\n      @record.send(:\"#{association_name}=\", @attachment_record)\n      @record.save!\n    end\n  end\nend\n```\n\nThe only attach-specific authorization helper is:\n\n```ruby\ndef authorize_attach_action\n  authorize_if_defined \"attach_#{@field.id}?\"\nend\n```\n\nBecause this helper is bound only to `new`, a policy that denies `attach_users?`, `attach_teams?`, `attach_roles?`, or similar methods blocks the UI/form path but does not protect the write path.\n\nThis is inconsistent with the detach path, which does authorize the mutating `destroy` action:\n\n```ruby\nbefore_action :authorize_detach_action, only: :destroy\n```\n\nThe bug is especially dangerous because Avo already treats association authorization as an access-control boundary in UI components:\n\n```ruby\n# lib/avo/concerns/checks_assoc_authorization.rb\nmethod_name = :\"#{policy_method}_#{association_name}?\".to_sym\n\nif service.has_method?(method_name, raise_exception: false)\n  service.authorize_action(method_name, record:, raise_exception: false)\nelse\n  !Avo.configuration.explicit_authorization\nend\n```\n\nHowever, server-side enforcement is missing on the actual attach POST endpoint.\n\n## Proof of Concept\n\nPrerequisites:\n\n1. A Rails application mounts Avo, for example at `/admin`.\n2. Avo authorization is enabled.\n3. A low-privileged user can authenticate to Avo.\n4. A parent record and a related record are both reachable by ID.\n5. The relevant policy denies attaching the relationship, for example:\n\n```ruby\ndef attach_users?\n  false\nend\n```\n\nExample target scenario:\n\n- Parent resource: `projects`\n- Parent ID: `1`\n- Related association: `users`\n- Related user ID to attach: `42`\n- Expected policy: low-privileged users must not be able to attach users to projects.\n\nThe UI/form request may be blocked:\n\n```http\nGET /admin/resources/projects/1/users/new\n```\n\nBut the direct write endpoint can still be invoked:\n\n```http\nPOST /admin/resources/projects/1/users\nContent-Type: application/x-www-form-urlencoded\n\nauthenticity_token=<CSRF>&fields[related_id]=42\n```\n\nRun the attached PoC:\n\n```bash\npython poc_avo_association_attach_bypass.py \\\n  --base-url http://localhost:3000 \\\n  --avo-root /admin \\\n  --cookie \"_app_session=<LOW_PRIVILEGED_SESSION_COOKIE>\" \\\n  --parent-resource projects \\\n  --parent-id 1 \\\n  --related-name users \\\n  --related-id 42 \\\n  --check-new\n```\n\nIf `GET /new` is forbidden or redirected but the direct POST succeeds, the authorization bypass is confirmed.\n\nTo perform the actual attach:\n\n```bash\npython poc_avo_association_attach_bypass.py \\\n  --base-url http://localhost:3000 \\\n  --avo-root /admin \\\n  --cookie \"_app_session=<LOW_PRIVILEGED_SESSION_COOKIE>\" \\\n  --parent-resource projects \\\n  --parent-id 1 \\\n  --related-name users \\\n  --related-id 42 \\\n  --confirm-attach\n```\n\nExpected vulnerable result:\n\n- The low-privileged user can attach the related record despite `attach_<association>?` being denied.\n- The parent record now includes the related record.\n\n## Impact\n\nThis vulnerability allows unauthorized relationship manipulation through Avo.\n\nDepending on the affected association, the impact can include:\n\n- Privilege escalation by attaching a user to an admin group, privileged project, tenant, organization, role, or membership record.\n- Cross-tenant data exposure when tenant/user/project membership determines record visibility.\n- Integrity loss by changing ownership, assignment, access-control relationships, or business workflow state.\n- Policy bypass even when Avo UI controls correctly hide the attach button or deny the attach form.\n\n## Recommended Fix\n\nEnforce attach authorization on the mutating endpoint.\n\nAt minimum:\n\n```ruby\nbefore_action :authorize_attach_action, only: [:new, :create]\n```\n\nAdditionally:\n\n1. Authorize against the parent record and the selected related record before writing the relationship.\n2. Ensure `create` fails closed when `attach_<association>?` is missing and `explicit_authorization` is enabled.\n3. Add regression tests that directly POST to `/resources/:resource_name/:id/:related_name` while `attach_<association>?` returns `false`.\n4. Verify `has_many`, `has_one`, `has_many :through`, and `has_and_belongs_to_many` association paths all enforce the same server-side authorization.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "RubyGems",
+        "name": "avo"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.32.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.32.0"
+      }
+    },
+    {
+      "package": {
+        "ecosystem": "RubyGems",
+        "name": "avo"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0.beta.1"
+            },
+            {
+              "fixed": "4.0.0.beta.51"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/avo-hq/avo/security/advisories/GHSA-8fq9-273g-6mrg"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/avo-hq/avo"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639",
+      "CWE-862",
+      "CWE-863"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-17T18:49:11Z",
+    "nvd_published_at": null
+  }
+}
