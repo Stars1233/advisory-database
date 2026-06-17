@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hhpq-7wg4-36jm",
+  "modified": "2026-06-17T18:52:09Z",
+  "published": "2026-06-17T18:52:09Z",
+  "aliases": [
+    "CVE-2026-55590"
+  ],
+  "summary": "CakePHP Authentication: Open redirect weakness via backslash bypass",
+  "details": "### Impact\nThe `getLoginRedirect()` method contains a weakness to backslash bypasses allowing redirect targets with attacker controlled hostnames.\n\n### Patches\n3.3.6 and 4.1.1 contain a fix for this issue.\n\n### Workarounds\nIf you are unable to upgrade, you should consider adding application validation to the redirect query string parameter to mitigate this vulnerability.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "cakephp/authentication"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "cakephp/authentication"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cakephp/authentication/security/advisories/GHSA-hhpq-7wg4-36jm"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/cakephp/authentication"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-17T18:52:09Z",
+    "nvd_published_at": null
+  }
+}
