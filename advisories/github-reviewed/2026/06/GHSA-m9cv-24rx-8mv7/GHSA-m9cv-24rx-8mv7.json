@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-m9cv-24rx-8mv7",
+  "modified": "2026-06-17T18:41:12Z",
+  "published": "2026-06-17T18:41:12Z",
+  "aliases": [
+    "CVE-2026-55409"
+  ],
+  "summary": "Filament: Disabled RichEditor field state can be used for XSS",
+  "details": "In Filament v3, a disabled `RichEditor` field rendered its raw state without sanitizing HTML. Where the data stored in this field's state isn't sanitized already when the form state was filled, an attacker could plant malicious HTML or JavaScript and achieve XSS that executes for users who view the form.\n\nPlease note that Filament v4 and above does not use the same mechanism for rendering a disabled `RichEditor` so this advisory does not apply.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "filament/forms"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.3.53"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.3.52"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/filamentphp/filament/security/advisories/GHSA-m9cv-24rx-8mv7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/filamentphp/filament/pull/20029"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/filamentphp/filament"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/filamentphp/filament/releases/tag/v3.3.53"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-17T18:41:12Z",
+    "nvd_published_at": null
+  }
+}
