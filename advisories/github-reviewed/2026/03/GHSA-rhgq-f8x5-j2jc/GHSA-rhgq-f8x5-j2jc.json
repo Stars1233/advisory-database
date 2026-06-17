@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rhgq-f8x5-j2jc",
-  "modified": "2026-04-13T17:55:01Z",
+  "modified": "2026-06-17T20:43:08Z",
   "published": "2026-03-23T12:30:30Z",
   "aliases": [
     "CVE-2026-4633"
   ],
-  "summary": "Keycloak's  identity-first login flow  exposes user information",
+  "summary": "Keycloak's identity-first login flow exposes user information",
   "details": "A flaw was found in Keycloak. A remote attacker can exploit differential error messages during the identity-first login flow when Organizations are enabled. This vulnerability allows an attacker to determine the existence of users, leading to information disclosure through user enumeration.",
   "severity": [
     {
@@ -28,14 +28,11 @@
               "introduced": "26.5.0"
             },
             {
-              "fixed": "26.6.0"
+              "fixed": "26.6.1"
             }
           ]
         }
-      ],
-      "database_specific": {
-        "last_known_affected_version_range": "<= 26.5.6"
-      }
+      ]
     },
     {
       "package": {
@@ -50,7 +47,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "26.4.7"
+              "fixed": "26.4.12"
             }
           ]
         }
@@ -65,6 +62,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/keycloak/keycloak/issues/47619"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/keycloak/keycloak/pull/47635"
     },
     {
       "type": "WEB",
