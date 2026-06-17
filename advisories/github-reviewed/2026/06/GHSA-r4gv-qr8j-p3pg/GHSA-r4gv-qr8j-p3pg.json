@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r4gv-qr8j-p3pg",
+  "modified": "2026-06-17T18:42:09Z",
+  "published": "2026-06-17T18:42:09Z",
+  "aliases": [
+    "CVE-2026-55760"
+  ],
+  "summary": "handlebars.java FileTemplateLoader Path Traversal",
+  "details": "### Impact\nAny application that passes user-controlled input to Handlebars.compile() using a FileTemplateLoader (or ClassPathTemplateLoader) is vulnerable to arbitrary file read. This is a realistic attack surface for web applications that use template names from URL path parameters, request parameters, or other user-controlled sources.\n\n### Patches\ncom.github.jknack:handlebars:4.5.2\n\n### Workarounds\n\nValidate template name is derived from user input. \n\n```java\nif (!file.getPath().startsWith(new File(prefix).getCanonicalPath())) {\n        throw new IOException(\"Path traversal attempt detected: \" + location);\n}\n```",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "com.github.jknack:handlebars"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jknack/handlebars.java/security/advisories/GHSA-r4gv-qr8j-p3pg"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/jknack/handlebars.java"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-17T18:42:09Z",
+    "nvd_published_at": null
+  }
+}
