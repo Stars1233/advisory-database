@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9667-7p67-2364",
+  "modified": "2026-06-17T21:34:39Z",
+  "published": "2026-06-17T21:34:39Z",
+  "aliases": [
+    "CVE-2026-54387"
+  ],
+  "details": "Tinyproxy through 1.11.3, fixed in commit ff45d3b, fails to reconcile conflicting Content-Length and Transfer-Encoding: chunked headers, forwarding both verbatim to the backend while using Content-Length to determine how many request body bytes to consume. Remote attackers can desynchronize the proxy and backend parser state, allowing injection of arbitrary HTTP requests to the backend to enable cache poisoning, access control bypass, and request hijacking.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54387"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tinyproxy/tinyproxy/issues/609"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tinyproxy/tinyproxy/pull/610"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tinyproxy/tinyproxy/commit/ff45d3bf0e61d0f8ed97ab379d3047f04eb67521"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/tinyproxy-http-request-smuggling-via-cl-te-desynchronization"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-444"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-17T20:17:27Z"
+  }
+}
