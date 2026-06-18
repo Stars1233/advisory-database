@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7gm6-w7mx-58cr",
+  "modified": "2026-06-18T20:07:10Z",
+  "published": "2026-05-04T09:31:09Z",
+  "aliases": [
+    "CVE-2026-29199"
+  ],
+  "summary": "phpBB has Password Reset Link Poisoning via Host Header injection",
+  "details": "phpBB before 3.3.16 is vulnerable to Host Header Injection that can lead to password rest link poisoning. When force_server_vars is disabled, the servers hostname may be extracted from the HTTP Host header which is used to generate the password reset link URL. An attacker who can manipulate the Host header (e.g. through misconfigured host setup or missing header validation by the webserver) can cause password reset emails to contain a link pointing to an attacker-controlled domain, potentially leading to account takeover.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "phpbb/phpbb"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.3.16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "phpbb/phpbb"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0-a1"
+            },
+            {
+              "fixed": "4.0.0-a2"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        "4.0.0-a1"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29199"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3543246"
+    },
+    {
+      "type": "WEB",
+      "url": "https://blog.phpbb.com/2026/04/27/phpbb-4-0-0-a2-release"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/phpbb/phpbb-app"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.phpbb.com/community/viewtopic.php?t=2671024"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-640"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-18T20:07:10Z",
+    "nvd_published_at": "2026-05-04T07:15:59Z"
+  }
+}
