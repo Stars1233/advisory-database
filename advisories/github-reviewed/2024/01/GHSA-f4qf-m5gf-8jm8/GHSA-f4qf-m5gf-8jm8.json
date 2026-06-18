@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f4qf-m5gf-8jm8",
-  "modified": "2025-11-03T22:32:12Z",
+  "modified": "2026-06-18T23:16:08Z",
   "published": "2024-01-19T12:30:18Z",
   "aliases": [
     "CVE-2024-21733"
@@ -48,6 +48,63 @@
             },
             {
               "fixed": "8.5.64"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat.embed:tomcat-embed-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "9.0.0-M11"
+            },
+            {
+              "fixed": "9.0.44"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat:tomcat-coyote"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "8.5.7"
+            },
+            {
+              "fixed": "8.5.64"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.tomcat.experimental:tomcat-embed-programmatic"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "9.0.43"
+            },
+            {
+              "fixed": "9.0.44"
             }
           ]
         }
