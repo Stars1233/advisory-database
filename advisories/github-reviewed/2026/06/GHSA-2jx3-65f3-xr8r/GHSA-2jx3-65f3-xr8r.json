@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2jx3-65f3-xr8r",
+  "modified": "2026-06-18T21:07:41Z",
+  "published": "2026-06-18T21:07:41Z",
+  "aliases": [],
+  "summary": "spomky-labs/otphp: Mass-assignment in Factory::loadFromProvisioningUri lets a hostile provisioning URI corrupt OTP state or leak an uncaught TypeError",
+  "details": "## Summary\n\n`OTPHP\\Factory::loadFromProvisioningUri()` parses an attacker-supplied `otpauth://` URI and forwards **every** query key to `OTP::setParameter($key, $value)`. `setParameter()` resolves the name with `property_exists($this, $parameter)` and performs a dynamic write `$this->{$parameter} = $value` (`src/OTP.php:196-197`). Because the query keys are entirely controlled by whoever produced the URI, a URI can target the internal properties of the OTP object that are not meant to be set from a URI: `parameters`, `issuer`, `label`, `issuer_included_as_parameter`, and (on TOTP) the readonly `clock`. This is an instance of object property mass-assignment (CWE-915).\n\n## Impact\n\nThe `Factory` is documented as the entry point for third-party provisioning URIs (e.g. QR codes from Microsoft 365 / Google Authenticator). An application that loads such a URI is exposed to:\n\n- **State corruption.** A URI such as `otpauth://totp/Alice?secret=JBSWY3DPEHPK3PXP&parameters[foo]=bar` overwrites the whole internal `$parameters` array that `createFromSecret()` primed (`period`, `algorithm`, `digits`, `epoch`). The resulting object is silently unusable: `getProvisioningUri()`, `getDigits()`, `at()`, `verify()` then throw `ParameterNotFoundException`.\n- **Uncaught TypeError escaping the documented exception type.** A URI such as `otpauth://totp/Alice?secret=JBSWY3DPEHPK3PXP&issuer_included_as_parameter=notabool` assigns a string to a typed `bool` property and raises a `TypeError`. The `try/catch` in `loadFromProvisioningUri()` only wraps `Url::fromString()`; `createOTP()` and `populateOTP()` run outside it, so the `TypeError` (and `Error` on the readonly `clock`) escapes past the documented `InvalidProvisioningUriException`, breaking callers that catch only the documented type.\n- **Label/issuer validation bypass.** `parameters[label]=hijacked` stores a label into the parameters array without running the `label` validation callback (keyed on `label`, not `parameters`). `getLabel()` and `getParameter('label')` then disagree — a confused-deputy risk.\n\n## Affected component\n\n- `src/OTP.php:187-201` — `setParameter()` dynamic property write\n- `src/Factory.php:50-55` — `populateParameters()` forwarding all query keys\n\n## Proof of concept\n\n```php\nuse OTPHP\\Factory;\n\n// State corruption\n$otp = Factory::loadFromProvisioningUri(\n    'otpauth://totp/Alice?secret=JBSWY3DPEHPK3PXP&parameters[foo]=bar',\n    $clock\n);\n$otp->getProvisioningUri(); // ParameterNotFoundException: Parameter \"period\" does not exist\n\n// Uncaught TypeError\nFactory::loadFromProvisioningUri(\n    'otpauth://totp/Alice?secret=JBSWY3DPEHPK3PXP&issuer_included_as_parameter=notabool',\n    $clock\n); // TypeError escapes InvalidProvisioningUriException\n```\n\n## Remediation\n\nRestrict the keys accepted from a provisioning URI to a known allow-list of public OTP parameters, and never let a URI key resolve to an internal object property via `property_exists`. Route all URI-sourced values through the validated parameter map only.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "spomky-labs/otphp"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "11.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Spomky-Labs/otphp/security/advisories/GHSA-2jx3-65f3-xr8r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/spomky-labs/otphp/GHSA-2jx3-65f3-xr8r.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/Spomky-Labs/otphp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-915"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-18T21:07:41Z",
+    "nvd_published_at": null
+  }
+}
