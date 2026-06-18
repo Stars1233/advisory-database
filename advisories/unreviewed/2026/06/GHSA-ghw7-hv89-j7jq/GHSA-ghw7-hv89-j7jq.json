@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-ghw7-hv89-j7jq",
+  "modified": "2026-06-18T06:32:20Z",
+  "published": "2026-06-18T06:32:20Z",
+  "aliases": [
+    "CVE-2026-10623"
+  ],
+  "details": "The PressPrimer Quiz – AI Quiz Maker, Exam Builder & LMS Assessment Plugin plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.3.0 via the 'rule_id' parameter due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with custom-level access and above, to modify or delete quiz rules belonging to other teachers, resulting in unauthorized tampering of another user's quiz structure.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10623"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PressPrimer/pressprimer-quiz/commit/1795687"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/150ac796-d77b-4915-8bbf-9f9b54be8eaf?source=cve"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.2.2/includes/api/class-ppq-rest-controller.php#L434"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.2.2/includes/api/class-ppq-rest-controller.php#L1963"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.2.2/includes/api/class-ppq-rest-controller.php#L1923"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.2.2/includes/api/class-ppq-rest-controller.php#L1860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.2.2/includes/api/class-ppq-rest-controller.php#L1813"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.2.2/includes/api/class-ppq-rest-controller.php#L1786"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.2.2/includes/api/class-ppq-rest-controller.php#L1703"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.1.0/includes/api/class-ppq-rest-controller.php#L434"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.1.0/includes/api/class-ppq-rest-controller.php#L1963"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.1.0/includes/api/class-ppq-rest-controller.php#L1923"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.1.0/includes/api/class-ppq-rest-controller.php#L1860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.1.0/includes/api/class-ppq-rest-controller.php#L1813"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.1.0/includes/api/class-ppq-rest-controller.php#L1786"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/pressprimer-quiz/tags/2.1.0/includes/api/class-ppq-rest-controller.php#L1703"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-18T06:16:56Z"
+  }
+}
