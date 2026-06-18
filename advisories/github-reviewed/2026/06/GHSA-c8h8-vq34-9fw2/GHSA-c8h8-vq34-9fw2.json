@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-c8h8-vq34-9fw2",
-  "modified": "2026-06-04T18:46:31Z",
+  "modified": "2026-06-04T18:48:22Z",
   "published": "2026-06-04T18:46:31Z",
   "aliases": [
     "CVE-2026-47694"
@@ -43,6 +43,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47694"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/WWBN/AVideo/commit/6a6ff1f5bff1904f91f612db9f0da083295392b1"
     },
     {
       "type": "PACKAGE",
