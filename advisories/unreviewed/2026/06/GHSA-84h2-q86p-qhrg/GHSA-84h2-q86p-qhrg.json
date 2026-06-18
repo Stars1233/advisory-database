@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-84h2-q86p-qhrg",
+  "modified": "2026-06-18T12:40:25Z",
+  "published": "2026-06-18T12:40:25Z",
+  "aliases": [
+    "CVE-2026-12136"
+  ],
+  "details": "The Customize My Account For Woocommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'sysbasics_user_avatar' shortcode in versions up to, and including, 4.3.6. This is due to insufficient input sanitization and output escaping on user supplied attributes (min_height, min_width, max_height, max_width) in the wcmamtx_get_avatar_default() function, which are concatenated unescaped into the get_avatar() extra_attr style attribute. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12136"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customize-my-account-for-woocommerce/tags/4.3.6/include/sysbasics-avatar-upload.php#L524"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customize-my-account-for-woocommerce/tags/4.3.6/include/sysbasics-avatar-upload.php#L573"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/customize-my-account-for-woocommerce/tags/4.3.6/include/wcmamtx_extra_functions.php#L163"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3571110%40customize-my-account-for-woocommerce&new=3571110%40customize-my-account-for-woocommerce&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/44d041ca-caa6-410d-b2d1-7a63208cc512?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-18T08:16:33Z"
+  }
+}

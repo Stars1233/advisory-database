@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-crv8-pwhc-5w5p",
+  "modified": "2026-06-18T12:40:25Z",
+  "published": "2026-06-18T12:40:25Z",
+  "aliases": [
+    "CVE-2026-12102"
+  ],
+  "details": "The UsersWP – Front-end login form, User Registration, User Profile & Members Directory plugin for WP plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.2.63 via the 'user_id' parameter due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with editor-level access and above, to reset and permanently delete the avatar or banner image of any arbitrary user, including administrators, by clearing their avatar_thumb or banner_thumb metadata in the uwp_usermeta table.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12102"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/AyeCode/userswp/commit/0e69f967578904cc26fadd0206270d50b7420298"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.61/includes/class-forms.php#L371"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.61/includes/class-forms.php#L389"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.61/includes/class-forms.php#L89"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.61/includes/class-profile.php#L1739"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.61/includes/class-userswp.php#L574"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.63/includes/class-forms.php#L371"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.63/includes/class-forms.php#L389"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.63/includes/class-forms.php#L89"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.63/includes/class-profile.php#L1739"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/userswp/tags/1.2.63/includes/class-userswp.php#L574"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7115756e-69fa-42fe-bde3-a36e34d4bae3?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-18T08:16:33Z"
+  }
+}
