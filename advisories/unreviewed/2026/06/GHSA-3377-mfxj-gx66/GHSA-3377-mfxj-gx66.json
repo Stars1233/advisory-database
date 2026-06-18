@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3377-mfxj-gx66",
-  "modified": "2026-06-18T18:35:23Z",
+  "modified": "2026-06-18T21:32:33Z",
   "published": "2026-06-18T18:35:23Z",
   "aliases": [
     "CVE-2026-38714"
   ],
   "details": "InHand Networks IR912 V1.0.0.r20042 and IR915 V1.0.0.r20042 (including earlier versions) were discovered to contain a command injection vulnerability in the Python configuration function. This vulnerability allows remote attackers to execute arbitrary commands as root via a crafted input.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-18T17:16:30Z"

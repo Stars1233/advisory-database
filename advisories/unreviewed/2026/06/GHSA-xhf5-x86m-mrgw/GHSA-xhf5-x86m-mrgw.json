@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xhf5-x86m-mrgw",
+  "modified": "2026-06-18T21:32:34Z",
+  "published": "2026-06-18T21:32:34Z",
+  "aliases": [
+    "CVE-2026-47833"
+  ],
+  "details": "setupBpmLogs follows symlink for bpm.log open and chown — container-to-host privilege escalation via /etc/shadow. A compromised process inside a bpm container can cause root to chown an arbitrary host file to vcap and append bpm JSON log lines to it. The chown alone lets the attacker take ownership of /etc/shadow and read every password hash on the host via the read-only /etc bind mount. This is a container-to-host confidentiality break affecting every bpm-managed job.\n\nAffected versions: bpm-release, all versions prior to v1.4.30.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47833"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cloudfoundry.org/blog/cve-2026-47833-symlink-vulnerability-in-setupbpmlogs-allows-container-to-host-privilege-escalation-via-etc-shadow"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-59"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-18T19:16:23Z"
+  }
+}

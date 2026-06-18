@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6qv5-f6m3-44g8",
+  "modified": "2026-06-18T21:32:35Z",
+  "published": "2026-06-18T21:32:35Z",
+  "aliases": [
+    "CVE-2026-56099"
+  ],
+  "details": "OpenBSD before commit 6a23123 (2026-06-18) contains an out-of-bounds read vulnerability in the mpls_do_error function within sys/netmpls/mpls_input.c that allows remote attackers to disclose kernel stack memory by sending crafted MPLS frames with 16 labels and no Bottom-of-Stack bit set.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56099"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbsd/src/commit/6a23123ec05f1eb29cfcaae0f3a468b2e1983cfd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pop.argus-systems.ai/advisory/adv-040.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/openbsd-mpls-do-error-kernel-stack-memory-disclosure-via-mpls-input"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-18T20:16:15Z"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mhw6-p52x-6vxv",
-  "modified": "2026-05-30T12:30:22Z",
+  "modified": "2026-06-18T21:32:32Z",
   "published": "2026-05-21T15:34:08Z",
   "aliases": [
     "CVE-2026-43495"
@@ -38,6 +38,10 @@
     {
       "type": "WEB",
       "url": "https://git.kernel.org/stable/c/f94450ce5053b36002995b72d1fa1db3bb08c5bf"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/18/1"
     }
   ],
   "database_specific": {
