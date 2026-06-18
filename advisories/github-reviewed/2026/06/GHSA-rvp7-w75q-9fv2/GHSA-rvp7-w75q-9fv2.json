@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rvp7-w75q-9fv2",
+  "modified": "2026-06-18T15:04:00Z",
+  "published": "2026-06-18T15:04:00Z",
+  "aliases": [
+    "CVE-2026-12567"
+  ],
+  "summary": "BBOT: Symlink-Following Arbitrary Write via github_workflows Module",
+  "details": "The `github_workflows` module constructs local directory paths from user-controlled repository names without validating for symlinks. A local attacker sharing the scan directory can plant a symlink at the predictable output path, causing workflow data to be written to an attacker-chosen location.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "bbot"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.8.5"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 2.8.4"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/blacklanternsecurity/bbot/security/advisories/GHSA-rvp7-w75q-9fv2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12567"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/blacklanternsecurity/bbot/commit/16d9c42b6"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/blacklanternsecurity/bbot"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22",
+      "CWE-59"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-18T15:04:00Z",
+    "nvd_published_at": "2026-06-17T23:17:03Z"
+  }
+}
