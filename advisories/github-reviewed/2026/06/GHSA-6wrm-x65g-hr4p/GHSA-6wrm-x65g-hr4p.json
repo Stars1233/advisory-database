@@ -1,11 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6wrm-x65g-hr4p",
-  "modified": "2026-06-17T18:35:56Z",
+  "modified": "2026-06-18T14:37:28Z",
   "published": "2026-06-17T18:35:56Z",
   "aliases": [
     "CVE-2026-55748"
   ],
+  "summary": "OpenStack Horizon RC file generation does not escape special characters in project names",
   "details": "OpenStack Horizon before 25.7.4 produces scripts for OpenStack RC file downloading that may have a crafted project name with shell metacharacters. NOTE: some parties consider this a security hardening opportunity to address certain types of user error, not a vulnerability.",
   "severity": [
     {
@@ -13,11 +14,35 @@
       "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:L"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "horizon"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "25.7.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55748"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/openstack/horizon"
     },
     {
       "type": "WEB",
@@ -33,8 +58,8 @@
       "CWE-78"
     ],
     "severity": "MODERATE",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-18T14:37:28Z",
     "nvd_published_at": "2026-06-17T15:17:02Z"
   }
 }
