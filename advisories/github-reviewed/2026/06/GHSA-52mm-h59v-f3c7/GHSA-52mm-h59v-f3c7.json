@@ -1,19 +1,40 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-52mm-h59v-f3c7",
-  "modified": "2026-06-17T18:35:58Z",
+  "modified": "2026-06-18T14:47:16Z",
   "published": "2026-06-17T18:35:58Z",
   "aliases": [
     "CVE-2026-48591"
   ],
+  "summary": "earmark: Stored XSS via unescaped HTML attribute values",
   "details": "Improper Neutralization of Script in Attributes in a Web Page vulnerability in pragdave earmark allows stored cross-site scripting via unescaped HTML attribute values.\n\n'Elixir.Earmark.Transform':_make_att1/2 in lib/earmark/transform.ex splices attribute values verbatim between two literal \" bytes: [\" \", name, \"=\\\"\", value, \"\\\"\"]. Text nodes are routed through the existing escape function which encodes \" as &quot;, but attribute values never visit that path. A markdown link whose URL or title contains a bare \" closes the attribute early and lets the trailing bytes be parsed by the browser as fresh HTML attributes. For example, [click](http://example.com/?a=x\" onerror=\"alert(1)) renders as <a href=\"http://example.com/?a=x\" onerror=\"alert(1)\">click</a>, executing arbitrary JavaScript in the victim's browser.\n\nThe earmark library is no longer maintained and has been retired on Hex. No patched version will be released. All releases from 1.4.1 onward are affected, and users should migrate to a maintained Markdown library such as MDEx.\n\nThis issue affects earmark from 1.4.1 onward.",
   "severity": [
     {
       "type": "CVSS_V4",
-      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N"
     }
   ],
-  "affected": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Hex",
+        "name": "earmark"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.4.1"
+            },
+            {
+              "last_affected": "1.5.0-pre1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "type": "ADVISORY",
@@ -24,17 +45,22 @@
       "url": "https://cna.erlef.org/cves/CVE-2026-48591.html"
     },
     {
+      "type": "PACKAGE",
+      "url": "https://github.com/pragdave/earmark"
+    },
+    {
       "type": "WEB",
       "url": "https://osv.dev/vulnerability/EEF-CVE-2026-48591"
     }
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-79",
       "CWE-83"
     ],
     "severity": "MODERATE",
-    "github_reviewed": false,
-    "github_reviewed_at": null,
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-18T14:47:16Z",
     "nvd_published_at": "2026-06-17T18:18:04Z"
   }
 }
