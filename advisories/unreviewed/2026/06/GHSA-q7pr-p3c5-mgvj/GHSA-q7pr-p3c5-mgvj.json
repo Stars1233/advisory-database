@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q7pr-p3c5-mgvj",
+  "modified": "2026-06-19T12:30:27Z",
+  "published": "2026-06-19T12:30:27Z",
+  "aliases": [
+    "CVE-2026-34192"
+  ],
+  "details": "Software installed and run as a non-privileged user may conduct improper GPU system calls to cause an error path leading to UAF of GPU page tables.\n\n\n\nThe vulnerability allows physical memory allocated for MMU page tables to be used after being freed. This was caused by an error path that would not cleanup properly before freeing the physical allocation.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34192"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.imaginationtech.com/gpu-driver-vulnerabilities"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T10:16:11Z"
+  }
+}

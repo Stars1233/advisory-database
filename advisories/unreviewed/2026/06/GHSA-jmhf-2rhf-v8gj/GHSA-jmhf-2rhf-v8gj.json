@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jmhf-2rhf-v8gj",
+  "modified": "2026-06-19T12:30:28Z",
+  "published": "2026-06-19T12:30:28Z",
+  "aliases": [
+    "CVE-2026-56138"
+  ],
+  "details": "AIL framework contains a path traversal vulnerability in the /objects/item/diff endpoint. The endpoint accepts item identifiers through the s1 and s2 query parameters and, prior to the fix, attempted to retrieve and compare item contents without first verifying that both referenced items existed as valid AIL objects.\n\nAn authenticated AIL user could craft malicious item identifiers containing path traversal sequences to cause the application to read gzip-compressed files accessible to the AIL process. This could result in unauthorized disclosure of local file contents, limited to files readable by the application and compatible with the expected gzip-compressed item format.\n\nThe issue was fixed by validating that both requested items exist before their contents are accessed.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56138"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ail-project/ail-framework/commit/074f9a432702d39d7f8db07ece3a11502cf36d73"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T10:16:11Z"
+  }
+}
