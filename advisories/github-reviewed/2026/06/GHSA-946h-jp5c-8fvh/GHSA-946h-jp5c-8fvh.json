@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-946h-jp5c-8fvh",
+  "modified": "2026-06-19T19:34:53Z",
+  "published": "2026-06-19T19:34:53Z",
+  "aliases": [
+    "CVE-2026-49211"
+  ],
+  "summary": "symfony/ux-autocomplete: Information exposure via unescaped LIKE wildcards in EntitySearchUtil",
+  "details": "### Description\n\n`Symfony\\UX\\Autocomplete\\Doctrine\\EntitySearchUtil::addSearchClause()` builds the `LIKE` expression used by the autocomplete endpoint by wrapping the client-supplied query in `%...%` without escaping the SQL `LIKE` wildcards (`%`, `_`, `\\`). The value is passed as a bound parameter, so this is not SQL injection, but a client can send `%` to match every row or use `_` as a single-character wildcard.\n\nBecause `searchable_fields` defaults to every property of the entity and the autocomplete endpoint is public by default (`BaseEntityAutocompleteType` ships with `security => false`), an unauthenticated user can turn the endpoint into a broad matcher or a blind boolean oracle against every column of the entity, including columns the application never intended to expose.\n\n### Resolution\n\n`EntitySearchUtil` now escapes `\\`, `%`, and `_` in the user-supplied query with `addcslashes()` and appends an explicit `ESCAPE '\\'` clause to the generated `LIKE` expression, so those characters are matched literally. The exact-match `words_query` `IN()` branch is unchanged.\n\nThe patch for this issue is available [here](https://github.com/symfony/ux/commit/725ab3d40689c91ff19ad2d01940a30007769214) for branch 2.x (and forward-ported to 3.x).\n\n### Credits\n\nSymfony would like to thank Pascal Cescon for reporting the issue and providing the fix.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "symfony/ux-autocomplete"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.2.0"
+            },
+            {
+              "fixed": "2.36.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "symfony/ux-autocomplete"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/ux/security/advisories/GHSA-946h-jp5c-8fvh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/ux/commit/725ab3d40689c91ff19ad2d01940a30007769214"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/ux-autocomplete/CVE-2026-49211.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/symfony/ux"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-19T19:34:53Z",
+    "nvd_published_at": null
+  }
+}
