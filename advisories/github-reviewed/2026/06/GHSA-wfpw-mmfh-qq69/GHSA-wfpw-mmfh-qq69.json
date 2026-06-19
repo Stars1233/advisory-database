@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wfpw-mmfh-qq69",
+  "modified": "2026-06-19T16:37:25Z",
+  "published": "2026-06-19T16:37:25Z",
+  "aliases": [],
+  "summary": "Nokogiri: Possible Use-After-Free in XInclude Processing",
+  "details": "### Summary\n\nXInclude substitution performed by `Nokogiri::XML::Node#do_xinclude` replaced each `<xi:include>` in place, freeing the include node along with its children (such as `<xi:fallback>` and its descendants) and any namespaces declared on them. If an application had already exposed one of those nodes or namespaces to Ruby, the corresponding Ruby object was left pointing at freed memory. Using the object could result in invalid reads or writes to memory.\n\nNokogiri 1.19.4 substitutes each `<xi:include>` on a defensive copy by default, so the structures libxml2 frees are never the ones bound to live Ruby objects.\n\nOnly the CRuby implementation is affected; JRuby is not affected.\n\n### Severity\n\nThe Nokogiri maintainers have evaluated this as low severity. Reaching it requires an unusual API-usage pattern that does not arise during normal use. The application must parse a document without XInclude, traverse into an `<xi:include>` subtree to expose its nodes or namespaces to Ruby, and only then invoke XInclude processing. The common case, requesting XInclude at parse time, operates on a freshly parsed document whose nodes are not yet exposed to Ruby and is not affected. Nokogiri 1.19.4 makes this pattern safe by default and requires no change to application code.\n\n### Mitigation\n\nUpgrade to Nokogiri 1.19.4 or later.\n\nAs a workaround for earlier versions, perform XInclude substitution at parse time (with the `xinclude` parse option) rather than calling `#do_xinclude` on a document that has already been traversed. A freshly parsed document has no nodes exposed to Ruby, so the substitution is safe.\n\n### Credit\n\nThis issue was responsibly reported by Zheng Yu from depthfirst.com.",
+  "severity": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "RubyGems",
+        "name": "nokogiri"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-wfpw-mmfh-qq69"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/sparklemotion/nokogiri"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-19T16:37:25Z",
+    "nvd_published_at": null
+  }
+}

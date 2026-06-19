@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-phwj-rprq-35pp",
+  "modified": "2026-06-19T16:37:46Z",
+  "published": "2026-06-19T16:37:46Z",
+  "aliases": [],
+  "summary": "Nokogiri: Possible Use-After-Free when setting an attribute value via `Nokogiri::XML::Attr#value=` or `#content=`",
+  "details": "### Summary\n\nNokogiri’s CRuby native extension could leave a Ruby wrapper pointing to freed memory when replacing the value of an XML attribute. If Ruby code had already accessed an attribute child node, `Nokogiri::XML::Attr#value=` could free the underlying native child node while the wrapper remained reachable through the document node cache. A later use of the freed child node or a Ruby GC mark could dereference an invalid pointer, causing an invalid read and a possible segfault.\n\nNokogiri 1.19.4 preserves any already-wrapped attribute child nodes before replacing the attribute value.\n\nJRuby is not affected.\n\n### Severity\n\nThe Nokogiri maintainers have evaluated this as low severity. Reaching it requires an unusual API-usage pattern that does not arise during normal use. The application must directly access an attribute's child node and then replace that same attribute's value via `Attr#value=` or `#content=`. Nokogiri 1.19.4 makes this pattern safe with no change to the public API. Already-wrapped attribute child nodes are preserved before the value is replaced.\n\n### Mitigation\n\nUpgrade to Nokogiri 1.19.4 or later.\n\nAs a workaround, avoid accessing attribute child nodes directly via `Attr#child` or similar before mutating the same attribute’s value.\n\n### Credit\n\nThis issue was responsibly reported by Zheng Yu from depthfirst.com.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "RubyGems",
+        "name": "nokogiri"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-phwj-rprq-35pp"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/sparklemotion/nokogiri"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416",
+      "CWE-825"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-19T16:37:46Z",
+    "nvd_published_at": null
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p67v-3w7g-wjg7",
+  "modified": "2026-06-19T16:37:13Z",
+  "published": "2026-06-19T16:37:13Z",
+  "aliases": [],
+  "summary": "Nokogiri: Possible Use-After-Free when directly using `NokogirI::XML::XPathContext` beyond document lifetime",
+  "details": "### Summary\n\n`Nokogiri::XML::XPathContext` did not keep its source document alive for garbage collection. If an `XPathContext` outlived its document and the document was collected, evaluating an XPath expression could read invalid memory and potentially segfault.\n\nThis is only reachable when application code constructs an `XPathContext` directly and lets the document become unreachable while continuing to use the context. The normal `Document#xpath`, `#css`, and related search methods are not affected, and it is not triggerable by malicious document input.\n\nNokogiri 1.19.4 makes `XPathContext` keep its source document alive for as long as the context exists.\n\nOnly the CRuby implementation is affected. JRuby is not affected.\n\n### Severity\n\nThe Nokogiri maintainers have evaluated this as low severity. Reaching it requires an unusual API-usage pattern that does not arise during normal use. The application must construct an `XML::XPathContext` directly and continue using it after allowing its source document to be garbage-collected. Nokogiri 1.19.4 makes this pattern safe with no change to the public API. The context now keeps its source document alive for as long as it exists.\n\n### Mitigation\n\nUpgrade to Nokogiri 1.19.4 or later.\n\nAs a workaround, ensure the source document remains referenced for as long as any `XPathContext` created from it is in use. The standard `Document#xpath`, `#css`, and related search methods already do this and are unaffected.\n\n### Credit\n\nThis issue was responsibly reported by Zheng Yu from depthfirst.com.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U/U:Clear"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "RubyGems",
+        "name": "nokogiri"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-p67v-3w7g-wjg7"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/sparklemotion/nokogiri"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-19T16:37:13Z",
+    "nvd_published_at": null
+  }
+}

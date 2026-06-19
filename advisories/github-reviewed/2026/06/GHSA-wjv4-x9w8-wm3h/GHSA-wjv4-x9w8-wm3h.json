@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wjv4-x9w8-wm3h",
+  "modified": "2026-06-19T16:36:59Z",
+  "published": "2026-06-19T16:36:59Z",
+  "aliases": [],
+  "summary": "Nokogiri: Possible Use-After-Free when setting `Document#root=` to an invalid node type",
+  "details": "### Summary\n\n`Nokogiri::XML::Document#root=` validated only that the new root was a `Nokogiri::XML::Node`, allowing a DTD node to be set as the document root. The result is a heap use-after-free during garbage collection or finalization, leading to an invalid memory read or potentially a segfault.\n\nNokogiri 1.19.4 restricts `Document#root=` to element nodes, raising `TypeError` for any other node type.\n\nThis memory-safety issue affects only the CRuby implementation (libxml2). The JRuby implementation was not affected; the same input validation was added there for behavioral parity.\n\n### Severity\n\nThe Nokogiri maintainers have evaluated this as low severity. This is only triggered by a programming error. It requires application code to assign a non-element node such as a DTD as the document root via `Document#root=`. Nokogiri 1.19.4 now raises `TypeError` instead of allowing a use-after-free. It cannot be triggered by untrusted input or through normal use of the public API.\n\n### Mitigation\n\nUpgrade to Nokogiri 1.19.4 or later.\n\nAs a workaround, applications that cannot upgrade should avoid assigning a DTD (or any non-element node) via `Document#root=`.\n\n### Credit\n\nThis issue was responsibly reported by Zheng Yu from depthfirst.com.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "RubyGems",
+        "name": "nokogiri"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-wjv4-x9w8-wm3h"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/sparklemotion/nokogiri"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-19T16:36:59Z",
+    "nvd_published_at": null
+  }
+}
