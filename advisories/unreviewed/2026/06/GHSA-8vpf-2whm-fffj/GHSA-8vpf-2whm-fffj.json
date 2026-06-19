@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8vpf-2whm-fffj",
+  "modified": "2026-06-19T03:31:27Z",
+  "published": "2026-06-19T03:31:27Z",
+  "aliases": [
+    "CVE-2026-8806"
+  ],
+  "details": "Expected Behavior Violation vulnerability in Mitsubishi Electric MELSEC iQ-F Series FX5-ENET/IP Ethernet Module FX5-ENET/IP all versions allows a remote attacker to cause a denial-of-service (DoS) condition in the affected product by continuously sending a large number of communication packets to the Ethernet port of the product in a short period of time, increasing the processing load of the product, preventing the internal anomaly-detection processing from being performed, and causing the communication function to stop.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8806"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jvn.jp/vu/JVNVU97140216"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-06"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2026-003_en.pdf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-440"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T03:16:15Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hc5r-cmjq-47w9",
+  "modified": "2026-06-19T03:31:27Z",
+  "published": "2026-06-19T03:31:27Z",
+  "aliases": [
+    "CVE-2026-8805"
+  ],
+  "details": "Integer Overflow or Wraparound vulnerability in the EtherNet/IP function of Mitsubishi Electric MELSEC iQ-F Series FX5-EIP EtherNet/IP module FX5-EIP versions 1.000 and prior allows a remote attacker to cause a denial-of-service (DoS) condition in the affected product by rapidly establishing a large number of TCP connections to it, resulting in an inconsistency in the product's internal connection management process and triggering improper memory access.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8805"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jvn.jp/vu/JVNVU97140216"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-05"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2026-002_en.pdf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-190"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T03:16:14Z"
+  }
+}
