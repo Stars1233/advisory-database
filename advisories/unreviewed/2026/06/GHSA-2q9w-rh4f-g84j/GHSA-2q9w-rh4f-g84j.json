@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2q9w-rh4f-g84j",
+  "modified": "2026-06-19T00:31:37Z",
+  "published": "2026-06-19T00:31:37Z",
+  "aliases": [
+    "CVE-2026-8668"
+  ],
+  "details": "A static credential embedded in Chef 360 prior to v1.7.0 permitted unauthenticated access to internal message queues.  Queue messages contained tenant-specific identifiers.  The credential has been rotated and replaced with per-tenant access in subsequent versions, eliminating this access method entirely.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:N/VA:L/SC:H/SI:N/SA:L/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:X/V:X/RE:L/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8668"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.chef.io/release_notes/360"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-523"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-18T22:16:32Z"
+  }
+}
