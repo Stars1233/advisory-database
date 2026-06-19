@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2xg7-x64v-q25q",
+  "modified": "2026-06-19T18:32:31Z",
+  "published": "2026-06-19T18:32:31Z",
+  "aliases": [
+    "CVE-2017-20252"
+  ],
+  "details": "Joomla NextGen Editor 2.1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL commands through the plname parameter. Attackers can send GET requests to index.php with option=com_nge&view=config and inject malicious SQL code in the plname parameter to extract sensitive database information.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20252"
+    },
+    {
+      "type": "WEB",
+      "url": "https://extensions.joomla.org/extension/nextgen-editor"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/43365"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/joomla-nextgen-editor-sql-injection-via-plname-parameter"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T16:16:13Z"
+  }
+}

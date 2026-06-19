@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q83q-ghhm-p7g4",
-  "modified": "2026-06-11T21:31:50Z",
+  "modified": "2026-06-19T18:32:30Z",
   "published": "2026-06-10T21:31:38Z",
   "aliases": [
     "CVE-2026-50637"
@@ -34,6 +34,14 @@
     {
       "type": "WEB",
       "url": "https://www.cve.org/CVERecord?id=CVE-2026-46739"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-50638"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-50639"
     }
   ],
   "database_specific": {

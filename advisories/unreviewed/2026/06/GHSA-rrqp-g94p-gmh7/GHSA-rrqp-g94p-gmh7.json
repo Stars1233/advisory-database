@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rrqp-g94p-gmh7",
-  "modified": "2026-06-19T15:33:17Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-19T15:33:17Z",
   "aliases": [
     "CVE-2026-49871"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/1ozsnss0lof4gpwq763d66oxwxt3sycp"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/14"
     }
   ],
   "database_specific": {

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q562-qrm6-7p84",
-  "modified": "2026-06-19T15:33:17Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-19T15:33:17Z",
   "aliases": [
     "CVE-2026-48895"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/yo1kq93ds69zbgjjopop7dmzm7zhj1gq"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/11"
     }
   ],
   "database_specific": {

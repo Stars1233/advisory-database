@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6qv5-f6m3-44g8",
-  "modified": "2026-06-18T21:32:35Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-18T21:32:35Z",
   "aliases": [
     "CVE-2026-56099"
@@ -34,6 +34,10 @@
     {
       "type": "WEB",
       "url": "https://www.vulncheck.com/advisories/openbsd-mpls-do-error-kernel-stack-memory-disclosure-via-mpls-input"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/3"
     }
   ],
   "database_specific": {

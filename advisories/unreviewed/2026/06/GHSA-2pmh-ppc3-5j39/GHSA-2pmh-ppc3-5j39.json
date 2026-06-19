@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2pmh-ppc3-5j39",
-  "modified": "2026-06-19T15:33:16Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-19T15:33:16Z",
   "aliases": [
     "CVE-2026-44915"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/2syk2kkzjnpzrdh98plbzj8os7wn521c"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/8"
     }
   ],
   "database_specific": {

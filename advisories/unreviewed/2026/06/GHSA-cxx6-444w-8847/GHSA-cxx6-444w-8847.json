@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cxx6-444w-8847",
-  "modified": "2026-06-19T15:33:17Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-19T15:33:17Z",
   "aliases": [
     "CVE-2026-49872"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/bzjpo60ygxo7kxdqf7vw3l5zw2lh6m5k"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/15"
     }
   ],
   "database_specific": {

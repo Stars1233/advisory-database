@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9hp8-p9xx-frx5",
-  "modified": "2026-06-19T15:33:16Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-19T15:33:16Z",
   "aliases": [
     "CVE-2026-47341"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/ob6ng9x2hxtyfojs839hs1n0v18xxzf2"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/10"
     }
   ],
   "database_specific": {

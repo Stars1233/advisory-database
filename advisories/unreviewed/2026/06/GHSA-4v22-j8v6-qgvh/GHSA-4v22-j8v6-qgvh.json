@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4v22-j8v6-qgvh",
-  "modified": "2026-06-19T15:33:16Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-19T15:33:16Z",
   "aliases": [
     "CVE-2026-44087"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/72ryrgdssk6s2x9d6xn14bxyyl878xfm"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/7"
     }
   ],
   "database_specific": {

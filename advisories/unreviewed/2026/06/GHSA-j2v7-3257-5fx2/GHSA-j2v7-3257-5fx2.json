@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j2v7-3257-5fx2",
+  "modified": "2026-06-19T18:32:32Z",
+  "published": "2026-06-19T18:32:32Z",
+  "aliases": [
+    "CVE-2017-20256"
+  ],
+  "details": "Joomla Survey Force Deluxe 3.2.4 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the invite parameter. Attackers can send GET requests to the component with crafted SQL payloads in the invite parameter to extract sensitive database information.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20256"
+    },
+    {
+      "type": "WEB",
+      "url": "https://extensions.joomla.org/extensions/extension/contacts-and-feedback/surveys/survey-force-deluxe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/42606"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/joomla-survey-force-deluxe-sql-injection-via-invite-parameter"
+    },
+    {
+      "type": "WEB",
+      "url": "http://joomplace.com"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T16:16:15Z"
+  }
+}

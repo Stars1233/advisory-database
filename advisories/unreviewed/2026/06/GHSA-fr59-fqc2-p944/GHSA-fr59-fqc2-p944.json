@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fr59-fqc2-p944",
+  "modified": "2026-06-19T18:32:33Z",
+  "published": "2026-06-19T18:32:33Z",
+  "aliases": [
+    "CVE-2017-20272"
+  ],
+  "details": "Joomla Ultimate Property Listing 1.0.2 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the sf_selectuser_id parameter. Attackers can send GET requests to index.php with the option=com_upl and view=propertylisting parameters to extract sensitive database information including table names and column structures.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20272"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/42417"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/joomla-ultimate-property-listing-sql-injection-via-sf-selectuser-id"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T17:16:15Z"
+  }
+}

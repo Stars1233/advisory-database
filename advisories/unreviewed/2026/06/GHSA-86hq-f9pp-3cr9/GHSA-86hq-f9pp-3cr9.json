@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-86hq-f9pp-3cr9",
-  "modified": "2026-06-19T15:33:16Z",
+  "modified": "2026-06-19T18:32:31Z",
   "published": "2026-06-19T15:33:16Z",
   "aliases": [
     "CVE-2026-39998"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/vgkvy396010d7g6m0jrn4d3hjf2svlvv"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/4"
     }
   ],
   "database_specific": {
