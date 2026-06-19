@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hcf9-p628-6437",
+  "modified": "2026-06-19T06:31:56Z",
+  "published": "2026-06-19T06:31:56Z",
+  "aliases": [
+    "CVE-2026-12157"
+  ],
+  "details": "The BetterDocs - Knowledge Base Docs & FAQ Solution for Elementor & Block Editor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the blockId attribute of the betterdocs/category-slate-layout Gutenberg block in versions up to, and including, 4.5.3. This is due to insufficient input sanitization and output escaping in the CategorySlateLayout::render() method, which echoes the blockId block attribute directly into an HTML class attribute without esc_attr(). This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12157"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/betterdocs/tags/4.3.12/includes/Editors/BlockEditor/Blocks/CategorySlateLayout.php#L66"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/betterdocs/tags/4.3.12/includes/Editors/BlockEditor/Blocks/CategorySlateLayout.php#L97"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/betterdocs/tags/4.5.3/includes/Editors/BlockEditor/Blocks/CategorySlateLayout.php#L66"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/betterdocs/tags/4.5.3/includes/Editors/BlockEditor/Blocks/CategorySlateLayout.php#L97"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3576713%40betterdocs&new=3576713%40betterdocs&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/81f61ef0-b3c7-4c69-bd18-5e5f0ea09abc?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T06:17:01Z"
+  }
+}

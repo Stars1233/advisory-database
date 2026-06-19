@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-425r-vwq2-26qv",
+  "modified": "2026-06-19T06:31:56Z",
+  "published": "2026-06-19T06:31:56Z",
+  "aliases": [
+    "CVE-2026-56132"
+  ],
+  "details": "In libexpat before 2.8.2, there is a heap-based buffer overflow in doProlog in xmlparse.c because scaffold backing array reallocation is mishandled when there is data-structure sharing across parsers.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56132"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/libexpat/libexpat/pull/1272"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-821"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T06:17:10Z"
+  }
+}

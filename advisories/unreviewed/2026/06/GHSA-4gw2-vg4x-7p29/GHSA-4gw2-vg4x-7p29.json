@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4gw2-vg4x-7p29",
-  "modified": "2026-06-10T18:31:45Z",
+  "modified": "2026-06-19T06:31:54Z",
   "published": "2026-06-10T18:31:45Z",
   "aliases": [
     "CVE-2026-25700"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/ftw52mlxknjm29vo1mnqovj53z2kh96y"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/10/10"
     }
   ],
   "database_specific": {
