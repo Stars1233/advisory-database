@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q28q-5xw5-9f2r",
+  "modified": "2026-06-20T00:34:08Z",
+  "published": "2026-06-20T00:34:08Z",
+  "aliases": [
+    "CVE-2026-56080"
+  ],
+  "details": "Capgo before 12.128.2 contains a flaw in the Enforce Password Policy feature: after a Super Admin enables the policy and successfully changes their password to a compliant one, the backend does not update the password-compliance state. As a result, the backend continues to treat the account as non-compliant and repeatedly forces password-reset prompts, permanently locking the Super Admin out of organization access (organization lockout / denial of service) despite valid authentication.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-78rv-3cqj-36xq"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56080"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/cap-go-authentication-logic-flaw-in-enforce-password-policy"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-287"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-19T22:16:17Z"
+  }
+}
