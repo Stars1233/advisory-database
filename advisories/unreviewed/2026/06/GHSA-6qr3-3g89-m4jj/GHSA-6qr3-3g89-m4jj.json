@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6qr3-3g89-m4jj",
-  "modified": "2026-06-21T03:30:24Z",
+  "modified": "2026-06-21T06:32:07Z",
   "published": "2026-06-21T03:30:24Z",
   "aliases": [
     "CVE-2026-12770"
@@ -25,7 +25,15 @@
     },
     {
       "type": "WEB",
+      "url": "https://github.com/BerriAI/litellm/pull/23781"
+    },
+    {
+      "type": "WEB",
       "url": "https://gist.github.com/YLChen-007/993c68152b2c770d53590f1684c755d4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/BerriAI/litellm"
     },
     {
       "type": "WEB",
