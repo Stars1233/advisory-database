@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2vg8-q4c2-5cw3",
+  "modified": "2026-06-22T19:59:33Z",
+  "published": "2026-06-22T19:59:33Z",
+  "aliases": [
+    "CVE-2026-41573"
+  ],
+  "summary": "OpenAM has LDAP Injection via `_queryId` Parameter",
+  "details": "OpenAM (Open Identity Platform) is an open-source IAM platform providing SSO, OAuth2, SAML, and OpenID Connect capabilities. The CREST REST API layer exposes user query endpoints under `/json/{realm}/users`. In `IdentityResourceV1.queryCollection()`, the HTTP query parameter `_queryId` is passed to a `CrestQuery` object with `escapeQueryId` **explicitly set to `false`**, bypassing the escape protection introduced as part of the CVE-2021-29156 fix. The unescaped value flows directly to `DJLDAPv3Repo.getFilter()` where it is concatenated into an LDAP filter string without sanitization, enabling authenticated attackers to inject arbitrary LDAP metacharacters for user enumeration and blind LDAP injection.\n\n\n## Affected Endpoint\n\n| Endpoint | Auth Required | Injection Parameter |\n|----------|--------------|---------------------|\n| `GET /openam/json/{realm}/users?_queryId=<INJECTION>` | SSO Token | `_queryId` |\n| `GET /openam/json/{realm}/groups?_queryId=<INJECTION>` | SSO Token (TBD) | `_queryId` |\n\n## Background: CVE-2021-29156\n\nCVE-2021-29156 was a pre-authentication LDAP injection in OpenAM's Webfinger endpoint, where user-supplied input reached `DJLDAPv3Repo.getFilter()` unescaped. The fix introduced the `escapeQueryId` flag in `CrestQuery` (defaulting to `true`) and added `Filter.escapeAssertionValue()` in the filter-building path:\n\n## Credit\n\nDiscovered by **JD-Security SHENYI Team**",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.openidentityplatform.openam:openam-core-rest"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "16.1.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 16.0.6"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-2vg8-q4c2-5cw3"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/OpenIdentityPlatform/OpenAM"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/OpenIdentityPlatform/OpenAM/releases/tag/16.1.1"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/advisories/GHSA-8984-9gww-h52x"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-74"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-22T19:59:33Z",
+    "nvd_published_at": null
+  }
+}
