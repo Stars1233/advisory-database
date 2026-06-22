@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-64mm-vxmg-q3vj",
-  "modified": "2026-06-18T13:06:11Z",
+  "modified": "2026-06-22T15:59:21Z",
   "published": "2026-06-18T13:06:11Z",
   "aliases": [
     "CVE-2026-55602"
@@ -25,7 +25,7 @@
           "type": "ECOSYSTEM",
           "events": [
             {
-              "introduced": "0.16.0"
+              "introduced": "3.0.0"
             },
             {
               "fixed": "3.0.6"
@@ -52,6 +52,25 @@
           ]
         }
       ]
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "http-proxy-middleware"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.16.0"
+            },
+            {
+              "fixed": "2.0.10"
+            }
+          ]
+        }
+      ]
     }
   ],
   "references": [
@@ -66,8 +85,8 @@
   ],
   "database_specific": {
     "cwe_ids": [
-      "CWE-187",
-      "CWE-20"
+      "CWE-20",
+      "CWE-187"
     ],
     "severity": "MODERATE",
     "github_reviewed": true,
