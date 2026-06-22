@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4mvw-j8r9-xcgc",
+  "modified": "2026-06-22T16:43:24Z",
+  "published": "2026-06-22T16:43:24Z",
+  "aliases": [
+    "CVE-2024-37155"
+  ],
+  "summary": "OpenCTI May Bypass Introspection Restriction",
+  "details": "### Summary\n\nThe regex validation used to prevent Introspection queries can be bypassed by removing the extra whitespace, carriage return, and line feed characters from the query.\n\n### Details\n\nGraphQL Queries in OpenCTI can be validated using the `secureIntrospectionPlugin`.\n\n### Impact\nBypassing this restriction allows the attacker to gather a wealth of information about the GraphQL endpoint functionality that can be used to perform actions and/or read data without authorization.  These queries can also be weaponized to conduct a Denial of Service (DoS) attack if sent repeatedly.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "pycti"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.1.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/OpenCTI-Platform/opencti/security/advisories/GHSA-4mvw-j8r9-xcgc"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-37155"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/OpenCTI-Platform/opencti/commit/f87d96918c63b0c3d3ebfbea6c789d48e2f56ad5"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/OpenCTI-Platform/opencti"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/OpenCTI-Platform/opencti/blob/6343b82b0b0a5d3ded3b30d08ce282328a556268/opencti-platform/opencti-graphql/src/graphql/graphql.js#L83-L94"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pycti/PYSEC-2024-313.yaml"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-284"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-22T16:43:24Z",
+    "nvd_published_at": "2024-11-18T15:15:06Z"
+  }
+}
