@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g5vr-6pgg-74qv",
+  "modified": "2026-06-22T15:30:46Z",
+  "published": "2026-06-22T15:30:46Z",
+  "aliases": [
+    "CVE-2026-8074"
+  ],
+  "details": "Mattermost versions 11.7.x <= 11.7.0, 10.11.x <= 10.11.17 fail to enforce bot-specific permission checks on the user active status endpoint, which allows a User Manager with user management write access but no Integrations access to deactivate bot accounts via the PUT /api/v4/users/{id}/active API endpoint.. Mattermost Advisory ID: MMSA-2026-00667",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8074"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T14:17:53Z"
+  }
+}

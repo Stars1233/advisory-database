@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9493-h4f5-633x",
+  "modified": "2026-06-22T15:30:43Z",
+  "published": "2026-06-22T15:30:43Z",
+  "aliases": [
+    "CVE-2026-10601"
+  ],
+  "details": "The Tempo and Loki datasource plugins construct backend HTTP requests by interpolating user-supplied input into URL paths without sanitization, enabling path traversal. A Viewer-role user can: (1) capture admin-configured datasource credentials (secureJsonData custom headers) by traversing to an attacker-controlled endpoint, (2) invoke state-changing admin endpoints on Tempo (e.g. /flush, /shutdown), and (3) exfiltrate internal service data via Loki's CallResource which returns full HTTP response bodies.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10601"
+    },
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-10601"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T14:16:25Z"
+  }
+}
