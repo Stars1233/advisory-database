@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xmfh-3ccg-c9fx",
+  "modified": "2026-06-22T18:34:16Z",
+  "published": "2026-06-22T18:34:16Z",
+  "aliases": [
+    "CVE-2026-8823"
+  ],
+  "details": "Mattermost versions 11.7.x <= 11.7.0, 10.11.x <= 10.11.17 fail to validate bot targets when demoting users to guests which allows a lower-privileged administrator to degrade arbitrary bot accounts via the standard demote-user API.. Mattermost Advisory ID: MMSA-2026-00669",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8823"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T16:16:42Z"
+  }
+}

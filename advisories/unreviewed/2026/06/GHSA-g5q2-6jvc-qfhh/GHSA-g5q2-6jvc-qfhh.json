@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g5q2-6jvc-qfhh",
-  "modified": "2026-06-22T12:32:02Z",
+  "modified": "2026-06-22T18:34:11Z",
   "published": "2026-06-22T12:32:02Z",
   "aliases": [
     "CVE-2026-11373"
   ],
   "details": "Net::Statsite::Client versions through 1.1.0 for Perl allow metric injections.\n\nNet::Statsite::Client is a client for the statsite protocol, which is a variant of statsd.\n\nNewlines are not removed from metric names, allowing metric injections.\n\nValues are not sanitised for newlines or other protocol control characters such as colons or pipes, allowing metric injections.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -43,7 +48,7 @@
     "cwe_ids": [
       "CWE-93"
     ],
-    "severity": null,
+    "severity": "CRITICAL",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-22T12:16:24Z"

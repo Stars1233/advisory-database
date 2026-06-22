@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g4v8-q2mr-m933",
-  "modified": "2026-06-21T21:31:03Z",
+  "modified": "2026-06-22T18:34:11Z",
   "published": "2026-06-21T21:31:03Z",
   "aliases": [
     "CVE-2026-12804"
@@ -22,6 +22,14 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12804"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/merge_requests/979"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/work_items/3619"
     },
     {
       "type": "WEB",

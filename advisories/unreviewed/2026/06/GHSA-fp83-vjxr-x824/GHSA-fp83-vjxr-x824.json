@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fp83-vjxr-x824",
+  "modified": "2026-06-22T18:34:16Z",
+  "published": "2026-06-22T18:34:16Z",
+  "aliases": [
+    "CVE-2026-10789"
+  ],
+  "details": "A maliciously crafted webpage, when visited by a user with Autodesk Fusion Desktop running and the MCP extension enabled, can trigger a vulnerability in the MCP extension that could allow arbitrary code execution. A successful exploit may allow code to execute with the privileges of the current user.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10789"
+    },
+    {
+      "type": "WEB",
+      "url": "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.dmg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.exe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.autodesk.com/trust/security-advisories/adsk-sa-2026-0008"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T18:16:30Z"
+  }
+}

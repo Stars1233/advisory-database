@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hv63-qc47-8j8h",
+  "modified": "2026-06-22T18:34:14Z",
+  "published": "2026-06-22T18:34:14Z",
+  "aliases": [
+    "CVE-2026-12725"
+  ],
+  "details": "A heap-based buffer overflow was found in dnsmasq. When DNSSEC validation and\nquery logging are both enabled, logging of DS or DNSKEY replies containing\nunsupported algorithm or digest types can cause dnsmasq to write past the end\nof an internal logging buffer. A remote attacker able to supply such a DNS\nresponse may crash the dnsmasq process, resulting in denial of service.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12725"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-12725"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2490763"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-122"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T16:16:34Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3hfq-9fxf-h35p",
+  "modified": "2026-06-22T18:34:14Z",
+  "published": "2026-06-22T18:34:14Z",
+  "aliases": [
+    "CVE-2026-41046"
+  ],
+  "details": "A path traversal attack when using a \"configName\" parameter in qSnapper before version 1.3.3 allowed a local attacker to use malicious config files for snapper and so cause a denial of service or potentially escalate privileges to root.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41046"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.suse.com/show_bug.cgi?id=1261889"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/presire/qSnapper/releases/tag/v1.3.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.opensuse.org/2026/05/26/qsnapper-dbus-issues.html#issue-path-traversal"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-23"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T16:16:35Z"
+  }
+}

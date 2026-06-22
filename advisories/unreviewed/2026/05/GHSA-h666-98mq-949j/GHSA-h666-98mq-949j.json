@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h666-98mq-949j",
-  "modified": "2026-05-18T15:30:38Z",
+  "modified": "2026-06-22T18:34:00Z",
   "published": "2026-05-18T15:30:38Z",
   "aliases": [
     "CVE-2026-41948"
@@ -34,6 +34,10 @@
     {
       "type": "WEB",
       "url": "https://www.vulncheck.com/advisories/dify-path-traversal-via-plugin-daemon-internal-api-access"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.zafran.io/resources/difytap-zafran-discovers-how-attackers-can-silently-wiretap-ai-data-across-tenants-on-a-platform-powering-1m-apps"
     }
   ],
   "database_specific": {

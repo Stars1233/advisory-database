@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5xr4-qrm5-m2w8",
+  "modified": "2026-06-22T18:34:16Z",
+  "published": "2026-06-22T18:34:16Z",
+  "aliases": [
+    "CVE-2026-8934"
+  ],
+  "details": "A Missing Authorization vulnerability in a GraphQL private API operation of the Google App Engine section of the Cloud Console allows an unauthenticated remote attacker to leak sensitive App Engine request logs from other projects using a specially crafted request.\n\nThis vulnerability was patched on 7 April 2026, and no customer action is needed.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Clear"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8934"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.cloud.google.com/support/bulletins#gcp-2026-038"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T16:16:43Z"
+  }
+}

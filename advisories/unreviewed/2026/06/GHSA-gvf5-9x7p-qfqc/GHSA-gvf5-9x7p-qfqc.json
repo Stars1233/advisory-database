@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gvf5-9x7p-qfqc",
-  "modified": "2026-06-11T21:31:56Z",
+  "modified": "2026-06-22T18:34:00Z",
   "published": "2026-06-11T21:31:56Z",
   "aliases": [
     "CVE-2026-45178"
   ],
   "details": "Idira Secrets Manager Self-Hosted versions 13.8.0 and lower exhibit improper access control within internal cluster endpoints. A remote, authenticated attacker possessing standard node-level credentials could leverage these endpoints to potentially retrieve unauthorized secrets or cause a denial of service (DoS). CyberArk Security Bulletin: CA26-20",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:L/SC:H/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Amber"

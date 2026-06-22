@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3777-v3gr-3jr3",
+  "modified": "2026-06-22T18:34:17Z",
+  "published": "2026-06-22T18:34:17Z",
+  "aliases": [
+    "CVE-2026-11994"
+  ],
+  "details": "Akaunting 3.1.21 contains an authenticated stored Cross-Site Scripting vulnerability in the report management workflow. A user with permission to create or update reports can store arbitrary HTML/JavaScript in the description field of a report.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11994"
+    },
+    {
+      "type": "WEB",
+      "url": "https://fluidattacks.com/es/advisories/believer"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/akaunting/akaunting"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T18:16:31Z"
+  }
+}
