@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fpgm-v536-ccc8",
+  "modified": "2026-06-22T00:31:37Z",
+  "published": "2026-06-22T00:31:37Z",
+  "aliases": [
+    "CVE-2026-12811"
+  ],
+  "details": "A weakness has been identified in kortix-ai suna up to 0.8.38. Affected by this issue is the function router.replace/router.push of the file apps/frontend/src/app/auth/page.tsx of the component Auth Endpoint. Executing a manipulation of the argument returnURL can lead to cross site scripting. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 0.8.39 can resolve this issue. This patch is called f5dec7aa0c1b8fa0125938f292c0f2430ca75f6c. It is advisable to upgrade the affected component. The researcher explains: \"The issue was fixed in v0.8.39 without notifying the wider user base via a security disclosure.\"",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12811"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kortix-ai/suna/commit/f5dec7aa0c1b8fa0125938f292c0f2430ca75f6c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/TrebledJ/fe7241910ac0aaeff86243fc88e9ffed"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kortix-ai/suna"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kortix-ai/suna/releases/tag/v0.8.39"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-12811"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/837175"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/372605"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/372605/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-21T23:16:42Z"
+  }
+}

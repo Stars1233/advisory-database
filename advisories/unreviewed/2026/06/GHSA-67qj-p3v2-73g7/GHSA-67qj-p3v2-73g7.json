@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-67qj-p3v2-73g7",
+  "modified": "2026-06-22T00:31:38Z",
+  "published": "2026-06-22T00:31:38Z",
+  "aliases": [
+    "CVE-2026-12821"
+  ],
+  "details": "A vulnerability was determined in FlowiseAI Flowise up to 3.1.2. The impacted element is an unknown function of the file packages/components/nodes/documentloaders/S3/S3.ts of the component S3 Document Loader. Executing a manipulation can lead to path traversal. It is possible to launch the attack remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12821"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/dxz0069/softwareoverflow/blob/main/flowise_s3_loader_object_key_path_traversal_vulndb.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-12821"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/837578"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/372611"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/372611/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-22T00:16:41Z"
+  }
+}
