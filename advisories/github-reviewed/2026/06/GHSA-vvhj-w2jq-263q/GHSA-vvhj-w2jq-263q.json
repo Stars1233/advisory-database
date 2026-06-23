@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vvhj-w2jq-263q",
+  "modified": "2026-06-23T17:33:00Z",
+  "published": "2026-06-23T17:33:00Z",
+  "aliases": [
+    "CVE-2026-45048"
+  ],
+  "summary": "OpenAM Authenticated Privilege Escalation via Raw Token Disclosure Session RPC",
+  "details": "## Summary\n\nDescription\n\nAn insufficient authorization (CWE-285) and information exposure (CWE-200) issue in OpenAM's session management endpoint allows a low-privileged authenticated user to retrieve active session credentials belonging to other users, including those with higher privileges. This affects OpenAM Community Edition through version 16.0.6 and was patched in version 16.1.1.\n\nThis may be related to CVE-2021-4201, a similar issue patched in ForgeRock Access Management, a separate product sharing a common codebase ancestry.\n\n## Impact\n\nOpenAM Community Edition deployments through version 16.0.6 using stateful session storage and exposing the session management endpoint are potentially affected. The endpoint does not enforce ownership or privilege checks when querying session information, meaning an authenticated user may retrieve active session credentials for arbitrary users. Successful exploitation requires a valid low-privilege session and knowledge of a target user's identity identifier, which may be obtainable through normal platform functionality.\n\nIf credentials belonging to a highly privileged account are obtained, this could enable further administrative actions within the platform\n\n## Patch\n\nThis has been patched in OpenAM Community Edition version 16.1.1. Users are encouraged to update to the latest release.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.openidentityplatform.openam:openam-core"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "16.1.1"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 16.0.6"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-vvhj-w2jq-263q"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/OpenIdentityPlatform/OpenAM"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-200",
+      "CWE-285"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-23T17:33:00Z",
+    "nvd_published_at": null
+  }
+}
