@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xpqg-5hj3-ggmh",
+  "modified": "2026-06-23T12:31:35Z",
+  "published": "2026-06-23T12:31:35Z",
+  "aliases": [
+    "CVE-2026-4983"
+  ],
+  "details": "Open VSX Registry does not sanitize SVG files uploaded as extension icons prior to storage, and serves them with Content-Type: image/svg+xml without security headers such as Content-Security-Policy or Content-Disposition: attachment. This allows an attacker to publish an extension with a malicious SVG icon and achieve stored cross-site scripting (XSS) when a user navigates directly to the icon URL.\n\n\n\n\nOn deployments using local storage, script execution occurs within the Open VSX application origin, enabling session hijacking, authentication token theft, and unauthorized extension publishing. On deployments backed by external storage (such as open-vsx.org with an S3-backed CDN), execution is confined to the storage origin, reducing impact but still permitting phishing attacks and credential harvesting through attacker-crafted pages.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4983"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.eclipse.org/security/cve-assignment/-/work_items/91"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-23T12:16:26Z"
+  }
+}

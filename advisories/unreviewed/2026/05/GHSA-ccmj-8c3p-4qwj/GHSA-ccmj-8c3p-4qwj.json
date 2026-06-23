@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-ccmj-8c3p-4qwj",
-  "modified": "2026-06-23T09:32:23Z",
+  "modified": "2026-06-23T12:31:34Z",
   "published": "2026-05-29T12:31:25Z",
   "aliases": [
     "CVE-2026-46579"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46579"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:27009"
     },
     {
       "type": "WEB",
