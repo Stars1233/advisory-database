@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8c6h-7g6x-m5x4",
+  "modified": "2026-06-23T22:27:34Z",
+  "published": "2026-06-23T22:27:34Z",
+  "aliases": [
+    "CVE-2026-49205"
+  ],
+  "summary": "phpMyFAQ: Missing userHasPermission() in 4 API write endpoints (CVE-2026-24421 Incomplete Fix)",
+  "details": "Missing Authorization in API CategoryController —  CVE-2026-24421 fixed BackupController by adding userHasPermission(PermissionType::BACKUP). The same fix was NOT applied to 4 other write endpoints in the public API.  All 4 only call hasValidToken() (shared API key) but never call userHasPermission(), allowing any API token holder to perform admin operations regardless of their user permissions.\n\n## Summary\n\nCVE-2026-24421 fixed BackupController by adding: $this->userHasPermission(PermissionType::BACKUP);\n\nThe same fix was NOT applied to 4 other write endpoints in the public API. All 4 only call $this->hasValidToken() — which checks a shared API key header, NOT the individual user's role permissions.\n\n## Affected Endpoints\n\n1. src/phpMyFAQ/Controller/Api/CategoryController.php → create()  POST /api/v4.0/category\nMissing: userHasPermission(PermissionType::CATEGORY_ADD)\nAny API token holder can create categories regardless of user role.\n\n2. src/phpMyFAQ/Controller/Api/FaqController.php → create()  POST /api/v4.0/faq\n   Missing: userHasPermission(PermissionType::FAQ_ADD)\n   Any API token holder can create FAQ entries regardless of user role.\n\n3. src/phpMyFAQ/Controller/Api/FaqController.php → update()  PUT /api/v4.0/faq\n   Missing: userHasPermission(PermissionType::FAQ_EDIT)\n   Any API token holder can update any FAQ entry regardless of user role.\n\n4. src/phpMyFAQ/Controller/Api/QuestionController.php → create() POST /api/v4.0/question\n   Missing: permission check\n   Any API token holder can create questions regardless of user role.\n\n## Root Cause\n\nAll 4 methods only call:\n    $this->hasValidToken();   ← shared API key, not per-user\n\nThe fixed BackupController correctly calls:\n    $this->userHasPermission(PermissionType::BACKUP);  \n\nPermissionType::CATEGORY_ADD, FAQ_ADD, FAQ_EDIT all exist in src/phpMyFAQ/Enums/PermissionType.php — they just are not being used.\n\n## Fix\n\nAdd userHasPermission() before the logic in each method:\n\n    // CategoryController.create()\n    $this->userHasPermission(PermissionType::CATEGORY_ADD);\n\n    // FaqController.create()\n    $this->userHasPermission(PermissionType::FAQ_ADD);\n\n    // FaqController.update()\n    $this->userHasPermission(PermissionType::FAQ_EDIT);\n\n## Reporter\n\nCONTACT\nSanthoshini Ganta\nGithub:@santhoshinipayload\nEmail: santhoshinive75@gmail.com\nLinkedIn: http://linkedin.com/in/santhoshini-g-1440621ba",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "thorsten/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "phpmyfaq/phpmyfaq"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-8c6h-7g6x-m5x4"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49205"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/thorsten/phpMyFAQ/commit/d5c195b1ecf5dc30fb825d7eb50d22481c24cb07"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/thorsten/phpMyFAQ"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-23T22:27:34Z",
+    "nvd_published_at": "2026-06-18T22:16:31Z"
+  }
+}
