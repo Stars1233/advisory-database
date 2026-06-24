@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j94v-j96m-m8j5",
+  "modified": "2026-06-24T06:31:44Z",
+  "published": "2026-06-24T06:31:44Z",
+  "aliases": [
+    "CVE-2026-11614"
+  ],
+  "details": "The Xpro Addons — 140+ Widgets for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'custom_attributes' parameter in all versions up to, and including, 1.7.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11614"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/tags/1.7.3/inc/helper-functions.php#L1069"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/tags/1.7.3/widgets/image-scroller/layout/frontend.php#L8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/inc/helper-functions.php#L778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/animated-link/layout/frontend.php#L21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/author-box/layout/frontend.php#L59"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/button/layout/frontend.php#L36"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/hero-slider/layout/frontend.php#L65"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/hot-spot/layout/frontend.php#L35"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/icon-box/layout/frontend.php#L12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/icon-box/layout/frontend.php#L28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/image-scroller/layout/frontend.php#L14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/image-scroller/layout/frontend.php#L28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/info-list/layout/frontend.php#L15"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/pricing/layout/frontend.php#L16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/promo-box/layout/frontend.php#L51"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/site-logo/layout/frontend.php#L35"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/site-title/layout/frontend.php#L28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/xpro-elementor-addons/trunk/widgets/team/layout/frontend.php#L46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/0f78479f-8e28-4fa4-bf2b-eefedffa4d72?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T04:17:05Z"
+  }
+}
