@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5x67-m8gc-wm3p",
-  "modified": "2026-06-23T21:30:31Z",
+  "modified": "2026-06-24T18:32:36Z",
   "published": "2026-06-23T21:30:31Z",
   "aliases": [
     "CVE-2026-11819"

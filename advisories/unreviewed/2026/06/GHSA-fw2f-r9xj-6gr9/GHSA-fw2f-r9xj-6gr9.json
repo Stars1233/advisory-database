@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fw2f-r9xj-6gr9",
+  "modified": "2026-06-24T18:32:44Z",
+  "published": "2026-06-24T18:32:44Z",
+  "aliases": [
+    "CVE-2026-53028"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: typec: Fix error pointer dereference\n\nThe variable tps->partner is checked for an error pointer and then if it\nis, it sends an error message but does not return and then immediately\ndereferenced a few lines below:\n\ntps->partner = typec_register_partner(tps->port, &desc);\nif (IS_ERR(tps->partner))\n\tdev_warn(tps->dev, \"%s: failed to register partnet\\n\", __func__);\n\nif (desc.identity) {\n\ttypec_partner_set_identity(tps->partner);\n\tcd321x->cur_partner_identity = st.partner_identity;\n}\n\nAdd early return and fix spelling mistake in error message.\n\nDetected by Smatch:\ndrivers/usb/typec/tipd/core.c:827 cd321x_update_work() error:\n'tps->partner' dereferencing possible ERR_PTR()",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53028"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/19951118fb22b5ad512379ee64510fe0e2c40eb3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9e31082f92c913d74fefb4e60cd0284e605ba3a3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f2529d08fcb429ea01bb87c326342f41483f8b2f"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:14Z"
+  }
+}

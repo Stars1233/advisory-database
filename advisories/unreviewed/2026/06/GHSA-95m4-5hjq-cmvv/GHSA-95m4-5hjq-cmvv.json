@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-95m4-5hjq-cmvv",
+  "modified": "2026-06-24T18:32:48Z",
+  "published": "2026-06-24T18:32:48Z",
+  "aliases": [
+    "CVE-2026-53120"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nPCI: use generic driver_override infrastructure\n\nWhen a driver is probed through __driver_attach(), the bus' match()\ncallback is called without the device lock held, thus accessing the\ndriver_override field without a lock, which can cause a UAF.\n\nFix this by using the driver-core driver_override infrastructure taking\ncare of proper locking internally.\n\nNote that calling match() from __driver_attach() without the device lock\nheld is intentional. [1]",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53120"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/10a4206a24013be4d558d476010cbf2eb4c9fa64"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/58a42be0d70307d765594fc581f5f5e5ef059712"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/c5b2c5755495507e14f310c2653c85de0a309b1f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/dfe950d9464cad609f3b118c6203e2708055bc61"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:26Z"
+  }
+}

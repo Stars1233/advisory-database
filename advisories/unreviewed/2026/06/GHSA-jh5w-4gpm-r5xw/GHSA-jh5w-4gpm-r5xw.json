@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jh5w-4gpm-r5xw",
+  "modified": "2026-06-24T18:32:41Z",
+  "published": "2026-06-24T18:32:41Z",
+  "aliases": [
+    "CVE-2026-52955"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nlibceph: Fix potential out-of-bounds access in crush_decode()\n\nA message of type CEPH_MSG_OSD_MAP containing a crush map with at least\none bucket has two fields holding the bucket algorithm. If the values\nin these two fields differ, an out-of-bounds access can occur. This is\nthe case because the first algorithm field (alg) is used to allocate\nthe correct amount of memory for a bucket of this type, while the second\nalgorithm field inside the bucket (b->alg) is used in the subsequent\nprocessing.\n\nThis patch fixes the issue by adding a check that compares alg and\nb->alg and aborts the processing in case they differ. Furthermore,\nb->alg is set to 0 in this case, because the destruction of the crush\nmap also uses this field to determine the bucket type, which can again\nresult in an out-of-bounds access when trying to free the memory pointed\nto by the fields of the bucket. To correctly free the memory allocated\nfor the bucket in such a case, the corresponding call to kfree is moved\nfrom the algorithm-specific crush_destroy_bucket functions to the\ngeneric crush_destroy_bucket().",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52955"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/0f3604cbe4df14c5e58288ac9f57511e726a222d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/3f42508191e129ee6b5ea96578d5cab14f2a013a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4c79fc2d598694bda845b46229c9d48b65042970"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/6e70ef53e818c53eab28d7b0026b7fd03dddaba5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/cceb10023e76bc89f3fe9238ebd0ccab0fc7c7c5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ea0d42137f0c06da71e37ffc647aab4c5309599a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ebe76d58a48a48031b98543d86c4cd30a825b622"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fb176a99e4c1a5a8448a83d83d3606203ba81faa"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:05Z"
+  }
+}

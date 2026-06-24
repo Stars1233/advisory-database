@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9m3h-rxwg-69rx",
-  "modified": "2026-05-28T12:30:30Z",
+  "modified": "2026-06-24T18:32:33Z",
   "published": "2026-05-28T12:30:30Z",
   "aliases": [
     "CVE-2026-46142"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: libwx: fix VF illegal register access\n\nRegister WX_CFG_PORT_ST is a PF restricted register. When a VF is\ninitialized, attempting to read this register triggers an illegal\nregister access, which lead to a system hang.\n\nWhen the device is VF, the bus function ID can be obtained directly from\nthe PCI_FUNC(pdev->devfn).",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:29Z"

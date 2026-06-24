@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9qr8-jp95-w4m5",
+  "modified": "2026-06-24T18:32:42Z",
+  "published": "2026-06-24T18:32:42Z",
+  "aliases": [
+    "CVE-2026-52972"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: af_alg - Cap AEAD AD length to 0x80000000\n\nIn order to prevent arithmetic overflows when checking the TX\nbuffer size, cap the associated data length to 0x80000000.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52972"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/265ac26d1c5e17b34d497cbda1f754a1ec8552bc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/97948906dc8e0ea84775e03e35b60a2063c70193"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a1c5672faf8e93e38c2deac3979cc767ca5cf918"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a4fe4eb580bbc7439f649a496d4cf38415a4021c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a9f68d9ed38dd6e5a6c6d75b03d25c1c133e321d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/e4c4a5074532eaaa14951994a3aad0d479aa7431"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f8a5203596797f394ff3f9aa4005597a92249802"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:07Z"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-h99j-gm55-rrcw",
+  "modified": "2026-06-24T18:32:46Z",
+  "published": "2026-06-24T18:32:46Z",
+  "aliases": [
+    "CVE-2026-53072"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: fix locking in hci_conn_request_evt() with HCI_PROTO_DEFER\n\nWhen protocol sets HCI_PROTO_DEFER, hci_conn_request_evt() calls\nhci_connect_cfm(conn) without hdev->lock. Generally hci_connect_cfm()\nassumes it is held, and if conn is deleted concurrently -> UAF.\n\nOnly SCO and ISO set HCI_PROTO_DEFER and only for defer setup listen,\nand HCI_EV_CONN_REQUEST is not generated for ISO.  In the non-deferred\nlistening socket code paths, hci_connect_cfm(conn) is called with\nhdev->lock held.\n\nFix by holding the lock.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53072"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/385b2d0468a0871fc716c549fa3b0c257c7dbcb3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/541d5bf9b5afaf41090b2a3aa7b47f2db2ff801f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/5c7209a341ff2ac338b2b0375c34a307b37c9ac2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/60e3f4ff02d1f2d55bfbf2ca32a97285a9771ee4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/6b4d226d01ab7da0d2027a2a1e3a6079152e5065"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9d4a6c0f43fc5e4d4f062e8e450e5483eb74176e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/c27224daf0b08efbb2b24ed64b6139b294f5473a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/c7777f534a8018ae4bb1c80d8925af4df588a314"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:21Z"
+  }
+}

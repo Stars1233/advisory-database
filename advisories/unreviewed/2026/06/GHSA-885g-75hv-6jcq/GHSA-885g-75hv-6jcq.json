@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-885g-75hv-6jcq",
+  "modified": "2026-06-24T18:32:41Z",
+  "published": "2026-06-24T18:32:41Z",
+  "aliases": [
+    "CVE-2026-52964"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nALSA: usb-audio: Bound MIDI 2.0 endpoint descriptor scans\n\nThe USB MIDI 2.0 endpoint parser has the same descriptor walking\npattern as the legacy MIDI parser. It validates bLength against\nbNumGrpTrmBlock before reading baAssoGrpTrmBlkID[], but not against the\nremaining bytes in the endpoint-extra scan.\n\nA malformed device can therefore make later baAssoGrpTrmBlkID[] reads\nconsume bytes past the walked descriptor.\n\nReject zero-length and overlong descriptors while walking endpoint\nextras.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52964"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/17e76b19de1aff5ff4de64d269290bd1b07a01d3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/918be519c7876329e1b6e2ea1c59f0b75e792dca"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a310b4bebda5e4a1b26520c0cc5145ccd6d617e2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f9c184a83574549a36ea69b755f650e57d164c78"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fafc97bd01e4c737eaeafadfdadb1af4bbfa7307"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:06Z"
+  }
+}

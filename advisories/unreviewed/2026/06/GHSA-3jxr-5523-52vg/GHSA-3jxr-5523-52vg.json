@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3jxr-5523-52vg",
+  "modified": "2026-06-24T18:32:42Z",
+  "published": "2026-06-24T18:32:41Z",
+  "aliases": [
+    "CVE-2026-52967"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb/client: fix possible infinite loop and oob read in symlink_data()\n\nOn 32-bit architectures, the infinite loop is as follows:\n\n  len = p->ErrorDataLength == 0xfffffff8\n  u8 *next = p->ErrorContextData + len\n  next == p\n\nOn 32-bit architectures, the out-of-bounds read is as follows:\n\n  len = p->ErrorDataLength == 0xfffffff0\n  u8 *next = p->ErrorContextData + len\n  next == (u8 *)p - 8",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52967"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1b9331b16b0ed9414dcf7583d8134bdfeb117aae"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1cfa2d59f669db28d6292d10ff87ca6837c781b0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7d9a7f1f96cd617ee9e75bb22217c709038e26b8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/97a05b0ae9ea5ec052be2eef0f9cc7ce03501bbb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/b41598bf54b3fe528994e573df6008f8f4d0a4f4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/cd4b9b662f0fb9aa97ee6bf9034eca76fc6cab23"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:07Z"
+  }
+}

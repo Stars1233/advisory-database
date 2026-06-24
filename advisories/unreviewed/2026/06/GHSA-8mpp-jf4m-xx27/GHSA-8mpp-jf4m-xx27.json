@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8mpp-jf4m-xx27",
+  "modified": "2026-06-24T18:32:46Z",
+  "published": "2026-06-24T18:32:46Z",
+  "aliases": [
+    "CVE-2026-53095"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Fix abuse of kprobe_write_ctx via freplace\n\nuprobe programs are allowed to modify struct pt_regs.\n\nSince the actual program type of uprobe is KPROBE, it can be abused to\nmodify struct pt_regs via kprobe+freplace when the kprobe attaches to\nkernel functions.\n\nFor example,\n\nSEC(\"?kprobe\")\nint kprobe(struct pt_regs *regs)\n{\n\treturn 0;\n}\n\nSEC(\"?freplace\")\nint freplace_kprobe(struct pt_regs *regs)\n{\n\tregs->di = 0;\n\treturn 0;\n}\n\nfreplace_kprobe prog will attach to kprobe prog.\nkprobe prog will attach to a kernel function.\n\nWithout this patch, when the kernel function runs, its first arg will\nalways be set as 0 via the freplace_kprobe prog.\n\nTo fix the abuse of kprobe_write_ctx=true via kprobe+freplace, disallow\nattaching freplace programs on kprobe programs with different\nkprobe_write_ctx values.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53095"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/611fe4b79af72d00d80f2223354284447daafae9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9836cadbd96c7e0dbb0018fa60e7872dd31ac4f8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/b312cf41b9e43f442613053f6cad39898e1baf96"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:23Z"
+  }
+}

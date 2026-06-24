@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-q56q-rvw2-p4r2",
+  "modified": "2026-06-24T18:32:44Z",
+  "published": "2026-06-24T18:32:44Z",
+  "aliases": [
+    "CVE-2026-53042"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nfwctl: Fix class init ordering to avoid NULL pointer dereference on device removal\n\nCXL is linked before fwctl in drivers/Makefile. Both use `module_init, so\n`cxl_pci_driver_init()` runs first. When `cxl_pci_probe()` calls\n`fwctl_register()` and then `device_add()`, fwctl_class is not yet\nregistered because fwctl_init() hasn't run, causing `class_to_subsys()` to\nreturn NULL and skip knode_class initialization.\n\nOn device removal, `class_to_subsys()` returns non-NULL, and\n`device_del()` calls `klist_del()` on the uninitialized knode, triggering\na NULL pointer dereference.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53042"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1075f2f590fdac147f8b8010c35b606564b5c7d7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a28f56988c8e5bb9375806a5cfb0bf54d662ae3f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a55f80233f384dc89ef3425b2e1dd0e6d44bcf29"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:15Z"
+  }
+}

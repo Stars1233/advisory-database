@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g3ch-wcx8-mmq7",
+  "modified": "2026-06-24T18:32:43Z",
+  "published": "2026-06-24T18:32:42Z",
+  "aliases": [
+    "CVE-2026-52988"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: join hook list via splice_list_rcu() in commit phase\n\nPublish new hooks in the list into the basechain/flowtable using\nsplice_list_rcu() to ensure netlink dump list traversal via rcu is safe\nwhile concurrent ruleset update is going on.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52988"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1346be9379639c30877083b12747d4eacb83c24f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a6134e62dba2ea4f760b29d5226907f447c92400"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:09Z"
+  }
+}

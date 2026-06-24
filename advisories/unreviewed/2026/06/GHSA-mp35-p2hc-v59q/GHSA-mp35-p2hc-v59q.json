@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mp35-p2hc-v59q",
+  "modified": "2026-06-24T18:32:41Z",
+  "published": "2026-06-24T18:32:41Z",
+  "aliases": [
+    "CVE-2026-52950"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/xe/dma-buf: fix UAF with retry loop\n\nRetry doesn't work here, since bo will be freed on error, leading to\nUAF. However, now that we do the alloc & init before the attach, we can\nnow combine this as one unit and have the init do the alloc for us. This\nshould make the retry safe.\n\nReported by Sashiko.\n\nv2: Fix up the error unwind (CI)\n\n(cherry picked from commit 479669418253e0f27f8cf5db01a731352ea592e7)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52950"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/155a372a1cc50fa93387c5d3cdfd614a61e1afd1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/39fdac6be02eb7c3460518c1c4085f75f935c4ce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/827062952ed9bdf4220466c1f05ce452d04bdedf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:05Z"
+  }
+}

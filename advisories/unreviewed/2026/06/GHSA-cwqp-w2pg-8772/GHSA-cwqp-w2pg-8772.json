@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cwqp-w2pg-8772",
+  "modified": "2026-06-24T18:32:41Z",
+  "published": "2026-06-24T18:32:41Z",
+  "aliases": [
+    "CVE-2026-13164"
+  ],
+  "details": "Missing Authentication for Critical Function (CWE-306) in the RegisterView (apps/accounts/views.py), exposed at POST /api/auth/register/, in MailerUp <1.0.1 allows a remote, unauthenticated attacker to self-register a working account on instances where registration is intended to be restricted, because the endpoint applies the AllowAny permission with no email verification, CAPTCHA, or administrator approval. Any account created this way can read all email stored by the instance, resulting in full disclosure of stored messages to an arbitrary unauthenticated attacker",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13164"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Maalfer/mailerup/commit/99eb6d4586134bf3f4422093fbf47d6794ef0ee5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://secur0.com/en/cna/cve-list/cve-2026-13164-unauthenticated-self-registration-in-mailerup-allows-access-to-stored-email-data"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:16:56Z"
+  }
+}

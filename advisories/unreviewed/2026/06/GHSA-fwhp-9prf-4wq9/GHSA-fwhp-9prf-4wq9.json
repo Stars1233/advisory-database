@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fwhp-9prf-4wq9",
+  "modified": "2026-06-24T18:32:47Z",
+  "published": "2026-06-24T18:32:47Z",
+  "aliases": [
+    "CVE-2026-53115"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbus: fsl-mc: use generic driver_override infrastructure\n\nWhen a driver is probed through __driver_attach(), the bus' match()\ncallback is called without the device lock held, thus accessing the\ndriver_override field without a lock, which can cause a UAF.\n\nFix this by using the driver-core driver_override infrastructure taking\ncare of proper locking internally.\n\nNote that calling match() from __driver_attach() without the device lock\nheld is intentional. [1]",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53115"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4911b836f35c034c36f102db4ecbe339b38e7d1d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/60bfb563a399c4597dc80588a1109758a8908b97"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/6c8dfb0362732bf1e4829867a2a5239fedc592d0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/8139ce66b52a4a5638bfb445b037c07d4abeb08e"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:25Z"
+  }
+}

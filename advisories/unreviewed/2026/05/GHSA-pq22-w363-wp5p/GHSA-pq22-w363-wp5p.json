@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pq22-w363-wp5p",
-  "modified": "2026-06-01T18:31:36Z",
+  "modified": "2026-06-24T18:32:32Z",
   "published": "2026-05-28T12:30:29Z",
   "aliases": [
     "CVE-2026-46122"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: b43: enforce bounds check on firmware key index in b43_rx()\n\nThe firmware-controlled key index in b43_rx() can exceed the dev->key[]\narray size (58 entries). The existing B43_WARN_ON is non-enforcing in\nproduction builds, allowing an out-of-bounds read.\n\nMake the B43_WARN_ON check enforcing by dropping the frame when the\nfirmware returns an invalid key index.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-129"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:27Z"

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mcqq-386f-gvf4",
+  "modified": "2026-06-24T18:32:44Z",
+  "published": "2026-06-24T18:32:44Z",
+  "aliases": [
+    "CVE-2026-53027"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/ntfs3: fix missing run load for vcn0 in attr_data_get_block_locked()\n\nWhen a compressed or sparse attribute has its clusters frame-aligned,\nvcn is rounded down to the frame start using cmask, which can result\nin vcn != vcn0. In this case, vcn and vcn0 may reside in different\nattribute segments.\n\nThe code already handles the case where vcn is in a different segment\nby loading its runs before allocation. However, it fails to load runs\nfor vcn0 when vcn0 resides in a different segment than vcn. This causes\nrun_lookup_entry() to return SPARSE_LCN for vcn0 since its segment was\nnever loaded into the in-memory run list, triggering the WARN_ON(1).\n\nFix this by adding a missing check for vcn0 after the existing vcn\nsegment check. If vcn0 falls outside the current segment range\n[svcn, evcn1), find and load the attribute segment containing vcn0\nbefore performing the run lookup.\n\nThe following scenario triggers the bug:\n  attr_data_get_block_locked()\n    vcn = vcn0 & cmask        <- vcn != vcn0 after frame alignment\n    load runs for vcn segment <- vcn0 segment not loaded!\n    attr_allocate_clusters()  <- allocation succeeds\n    run_lookup_entry(vcn0)    <- vcn0 not in run -> SPARSE_LCN\n    WARN_ON(1)                <- bug fires here!",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53027"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/2b4ae1ce613ade8a7e118fba4a5a77cd23e97e54"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/d7ea8495fd307b58f8867acd81a1b40075b1d3ba"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:14Z"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9j35-6cp9-6x6g",
+  "modified": "2026-06-24T18:32:43Z",
+  "published": "2026-06-24T18:32:43Z",
+  "aliases": [
+    "CVE-2026-53007"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nice: fix potential NULL pointer deref in error path of ice_set_ringparam()\n\nice_set_ringparam nullifies tstamp_ring of temporary tx_rings, without\nclearing ICE_TX_RING_FLAGS_TXTIME bit.\nWhen ICE_TX_RING_FLAGS_TXTIME is set and the subsequent\nice_setup_tx_ring() call fails, a NULL pointer dereference could happen\nin the unwinding sequence:\n\nice_clean_tx_ring()\n-> ice_is_txtime_cfg() == true (ICE_TX_RING_FLAGS_TXTIME is set)\n-> ice_free_tx_tstamp_ring()\n  -> ice_free_tstamp_ring()\n    -> tstamp_ring->desc (NULL deref)\n\nClear ICE_TX_RING_FLAGS_TXTIME bit to avoid the potential issue.\n\nNote that this potential issue is found by manual code review.\nCompile test only since unfortunately I don't have E830 devices.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53007"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/c54e3c270384829336b2526033d44ce1aa6dc67c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fa28351f970fa5138c7c5dedfe5dea480a0ee065"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:11Z"
+  }
+}

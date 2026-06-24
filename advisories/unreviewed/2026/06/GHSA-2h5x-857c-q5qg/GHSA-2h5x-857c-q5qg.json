@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2h5x-857c-q5qg",
+  "modified": "2026-06-24T18:32:47Z",
+  "published": "2026-06-24T18:32:47Z",
+  "aliases": [
+    "CVE-2026-53107"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: libertas: don't kill URBs in interrupt context\n\nSerialization for the TX path was enforced by calling\nusb_kill_urb()/usb_kill_anchored_urbs(), to prevent transmission before\na previous URB was completed. usb_tx_block() can be called from\ninterrupt context (e.g. in the HCD giveback path), so we can't always\nuse it to kill in-flight URBs.\n\nPrevent sleeping during interrupt context by checking the tx_submitted\nanchor for existing URBs. We now return -EBUSY, to indicate there's\na pending request.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53107"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/00c0317cebf44151df18fb647781f315268cdd98"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4f273d3f98ebc60c30bbfb3ed4a7f0477d3eaed2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7c5c2b661bdb78c1472b8833265c9ed1ee880039"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:24Z"
+  }
+}

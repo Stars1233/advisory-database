@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hv9w-qqh8-9pfh",
+  "modified": "2026-06-24T18:32:45Z",
+  "published": "2026-06-24T18:32:45Z",
+  "aliases": [
+    "CVE-2026-53043"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nocfs2/dlm: validate qr_numregions in dlm_match_regions()\n\nPatch series \"ocfs2/dlm: fix two bugs in dlm_match_regions()\".\n\nIn dlm_match_regions(), the qr_numregions field from a DLM_QUERY_REGION\nnetwork message is used to drive loops over the qr_regions buffer without\nsufficient validation.  This series fixes two issues:\n\n- Patch 1 adds a bounds check to reject messages where qr_numregions\n  exceeds O2NM_MAX_REGIONS. The o2net layer only validates message\n  byte length; it does not constrain field values, so a crafted message\n  can set qr_numregions up to 255 and trigger out-of-bounds reads past\n  the 1024-byte qr_regions buffer.\n\n- Patch 2 fixes an off-by-one in the local-vs-remote comparison loop,\n  which uses '<=' instead of '<', reading one entry past the valid range\n  even when qr_numregions is within bounds.\n\n\nThis patch (of 2):\n\nThe qr_numregions field from a DLM_QUERY_REGION network message is used\ndirectly as loop bounds in dlm_match_regions() without checking against\nO2NM_MAX_REGIONS.  Since qr_regions is sized for at most O2NM_MAX_REGIONS\n(32) entries, a crafted message with qr_numregions > 32 causes\nout-of-bounds reads past the qr_regions buffer.\n\nAdd a bounds check for qr_numregions before entering the loops.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53043"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1f8b91275912cd428289c1fb424bebd7ff5302bd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/3c2d0de23ae4be22b6c18e8f0915be74d3b5fb21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/3f474c33ebc2e2ca3fcb587d7de4375348f13373"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/6c6e8fc3c007319981647b410c29bb5775048551"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7ab3fbb01bc6d79091bc375e5235d360cd9b78be"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/d3d5efade0c79dac1cac98c0cb1115432f804439"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f37de46149db49abd2b24f4f0c5a88cf4dfb5f47"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f69551139caf6d24242a0ad049ee46b264e3aee0"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:16Z"
+  }
+}

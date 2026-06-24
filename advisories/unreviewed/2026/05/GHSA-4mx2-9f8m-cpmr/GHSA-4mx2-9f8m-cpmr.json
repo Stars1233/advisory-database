@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4mx2-9f8m-cpmr",
-  "modified": "2026-05-27T15:33:17Z",
+  "modified": "2026-06-24T18:32:28Z",
   "published": "2026-05-27T15:33:16Z",
   "aliases": [
     "CVE-2026-45921"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nmtd: parsers: Fix memory leak in mtd_parser_tplink_safeloader_parse()\n\nThe function mtd_parser_tplink_safeloader_parse() allocates buf via\nmtd_parser_tplink_safeloader_read_table(). If the allocation for\nparts[idx].name fails inside the loop, the code jumps to the err_free\nlabel without freeing buf, leading to a memory leak.\n\nFix this by freeing the temporary buffer buf in the err_free label.\n\nCompile tested only. Issue found using a prototype static analysis tool\nand code review.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -36,8 +41,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:07Z"

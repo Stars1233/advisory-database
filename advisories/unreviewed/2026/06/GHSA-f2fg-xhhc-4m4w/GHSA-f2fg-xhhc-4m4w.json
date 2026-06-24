@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f2fg-xhhc-4m4w",
+  "modified": "2026-06-24T18:32:43Z",
+  "published": "2026-06-24T18:32:43Z",
+  "aliases": [
+    "CVE-2026-53006"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: fix possible UAF in icmpv6_rcv()\n\nCaching saddr and daddr before pskb_pull() is problematic\nsince skb->head can change.\n\nRemove these temporary variables:\n\n- We only access &ipv6_hdr(skb)->saddr and &ipv6_hdr(skb)->daddr\n  when net_dbg_ratelimited() is called in the slow path.\n\n- Avoid potential future misuse after pskb_pull() call.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53006"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/0069813e6ca9309eca78022bcb3aeb1e9ef90a12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/085e31a811ef234ef8c3e219c4636dfebfe7e10f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1e1f0f89ee4692a64be3f3707ff8ac1ae57b03e7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/38bdbc897c0d83a3e2b925a51b69420f1feba29a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7bff2c8fe5c35ae58bf73104f53db3676e6e5d94"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7c66b368c6ff453f99cb39d84af93e908e51eef2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/aff0f28f5be803de2452ce702631c021fcd9ce8a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f996edd7615e686ada141b7f3395025729ff8ccb"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:11Z"
+  }
+}

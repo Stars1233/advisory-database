@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qg9v-j962-8x98",
+  "modified": "2026-06-24T18:32:42Z",
+  "published": "2026-06-24T18:32:42Z",
+  "aliases": [
+    "CVE-2026-52970"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_ct: fix missing expect put in obj eval\n\nnft_ct_expect_obj_eval() allocates an expectation and may call\nnf_ct_expect_related(), but never drops its local reference.\n\nAdd nf_ct_expect_put(exp) before return to balance allocation.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52970"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/19f94b6fee75b3ef7fbc06f3745b9a771a8a19a4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1dced0725e2fae3ac3416274db20a7ff5a46931d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/26ab32ec73941871c97562ee1f39587950dc3b68"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/2aef1b13d5c0285f340512c6c07eb858fd018fd8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7b96242ceedfe249f158419f3254bcee04173ffe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/84c422cea5a45fe56be839f25880f21fd33940cd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/cdb9a25dd3416d427e8b2753210f8baf44207577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ecca618e1e339494911090474ed87742c0f73976"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:07Z"
+  }
+}

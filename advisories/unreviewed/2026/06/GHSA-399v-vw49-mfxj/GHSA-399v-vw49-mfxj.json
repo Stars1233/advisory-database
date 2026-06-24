@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-399v-vw49-mfxj",
+  "modified": "2026-06-24T18:32:44Z",
+  "published": "2026-06-24T18:32:43Z",
+  "aliases": [
+    "CVE-2026-53019"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nclk: spacemit: ccu_mix: fix inverted condition in ccu_mix_trigger_fc()\n\nFix inverted condition that skips frequency change trigger,\ncausing kernel panics during cpufreq scaling.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53019"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/16dfbc4e95c46dd9c79cb8d550c7f267d4a79b91"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/54e97360b44bed6b4399dd3be3d65f392df940fa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/da99d0302d3ccccfb13c69e663bf8eae698b9562"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:13Z"
+  }
+}

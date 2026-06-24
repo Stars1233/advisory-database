@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jm55-4g4j-2rgw",
-  "modified": "2026-06-01T18:31:37Z",
+  "modified": "2026-06-24T18:32:33Z",
   "published": "2026-05-28T12:30:30Z",
   "aliases": [
     "CVE-2026-46136"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mt76: mt7921: fix a potential clc buffer length underflow\n\nThe buf_len is used to limit the iterations for retrieving the country\npower setting and may underflow under certain conditions due to changes\nin the power table in CLC.\n\nThis underflow leads to an almost infinite loop or an invalid power\nsetting resulting in driver initialization failure.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -40,8 +45,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-787"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:29Z"

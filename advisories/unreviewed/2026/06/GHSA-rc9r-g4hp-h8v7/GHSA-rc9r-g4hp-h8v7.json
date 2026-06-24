@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rc9r-g4hp-h8v7",
+  "modified": "2026-06-24T18:32:45Z",
+  "published": "2026-06-24T18:32:45Z",
+  "aliases": [
+    "CVE-2026-53058"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/bridge: cadence: cdns-mhdp8546-core: Set the mhdp connector earlier in atomic_enable()\n\nIn case if we get errors in cdns_mhdp_link_up() or cdns_mhdp_reg_read()\nin atomic_enable, we will go to cdns_mhdp_modeset_retry_fn() and will hit\nNULL pointer while trying to access the mutex. We need the connector to\nbe set before that. Unlike in legacy cases with flag\n!DRM_BRIDGE_ATTACH_NO_CONNECTOR, we do not have connector initialised\nin bridge_attach(), so add the mhdp->connector_ptr in device structure\nto handle both cases with DRM_BRIDGE_ATTACH_NO_CONNECTOR and\n!DRM_BRIDGE_ATTACH_NO_CONNECTOR, set it in atomic_enable() earlier to\navoid possible NULL pointer dereference in recovery paths like\nmodeset_retry_fn() with the DRM_BRIDGE_ATTACH_NO_CONNECTOR flag set.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53058"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1af3b42e08a957e53bab8e1897393fe0a27d9fbf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/43d6508ddbf9fb974fbc359a033154f78c9d4c8b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/5302015daf26ef6b48e067f2b86c9482ac19e015"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/a3611554e599d1a24b45fd8415bacb72ce861e4b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/cf2ac2cac8b319f89b3a3851ca0c5ffb6a549575"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:18Z"
+  }
+}

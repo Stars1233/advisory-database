@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7qff-cmg5-8pwm",
+  "modified": "2026-06-24T18:32:45Z",
+  "published": "2026-06-24T18:32:45Z",
+  "aliases": [
+    "CVE-2026-53066"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/sun4i: backend: fix error pointer dereference\n\nThe function drm_atomic_get_plane_state() can return an error pointer\nand is not checked for it. Add error pointer check.\n\nDetected by Smatch:\ndrivers/gpu/drm/sun4i/sun4i_backend.c:496 sun4i_backend_atomic_check() error:\n'plane_state' dereferencing possible ERR_PTR()",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53066"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/06277983eca4a31d3c2114fa33d99a6e82484b11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/47038159c559824f4dbfb5b0d87b9b3416663372"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/779c2f10743fc021f2f0ebe2b188cadfb973c5e4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/cf615b90a11a39a28e313be5e508e94bcde72016"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/e9bef62f1bb9fcb38223730657af20f4c6283c16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ea51fd96aca01381e8f1ac0c671a57b7619193bb"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:19Z"
+  }
+}

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7m9c-w4qh-f86c",
-  "modified": "2026-05-28T12:30:29Z",
+  "modified": "2026-06-24T18:32:32Z",
   "published": "2026-05-28T12:30:29Z",
   "aliases": [
     "CVE-2026-46126"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/mana: Fix mana_destroy_wq_obj() cleanup in mana_ib_create_qp_rss()\n\nSashiko points out there are two bugs here in the error unwind flow, both\nrelated to how the WQ table is unwound.\n\nFirst there is a double i-- on the first failure path due to the while loop\nhaving a i--, remove it.\n\nSecond if mana_ib_install_cq_cb() fails then mana_create_wq_obj() is not\nundone due to the above i--.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -33,7 +38,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:28Z"

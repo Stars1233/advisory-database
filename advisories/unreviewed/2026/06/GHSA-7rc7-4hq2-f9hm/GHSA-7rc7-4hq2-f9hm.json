@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7rc7-4hq2-f9hm",
+  "modified": "2026-06-24T18:32:42Z",
+  "published": "2026-06-24T18:32:42Z",
+  "aliases": [
+    "CVE-2026-52978"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: psp: require admin permission for dev-set and key-rotate\n\nThe dev-set and key-rotate netlink operations modify shared device\nstate (PSP version configuration and cryptographic key material,\nrespectively) but do not require CAP_NET_ADMIN. The only access\ncontrol is psp_dev_check_access() which merely verifies netns\nmembership.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52978"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/aa1a08a4632af5d1117779e7ff0e32e3c69f29bd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/b718342a7fbaa2dff5fefc31988c07af8c6cbc21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fb88a8c86109edb15971481e3de816a8bfdfe571"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:08Z"
+  }
+}

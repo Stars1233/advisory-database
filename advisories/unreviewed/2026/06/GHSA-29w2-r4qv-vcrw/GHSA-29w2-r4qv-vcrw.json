@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-29w2-r4qv-vcrw",
+  "modified": "2026-06-24T18:32:42Z",
+  "published": "2026-06-24T18:32:42Z",
+  "aliases": [
+    "CVE-2026-52984"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: netem: fix queue limit check to include reordered packets\n\nThe queue limit check in netem_enqueue() uses q->t_len which only\ncounts packets in the internal tfifo. Packets placed in sch->q by\nthe reorder path (__qdisc_enqueue_head) are not counted, allowing\nthe total queue occupancy to exceed sch->limit under reordering.\n\nInclude sch->q.qlen in the limit check.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52984"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/0f875d52db4c921da610e481b72f03cc82fdcb72"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/39a66e83ea41fe845631eeb8d326953de27d13f9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4185701fcce6b426b6c3630b25330dddd9c47b0d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/54b5dbacd00dedffd5e2eed76de1c3839996b5e6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/74fcd8e127200a50ee22ba2b45c164722bdb9177"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/8450462eaf91d5d2a9e863507b16d18e814baef3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/936a7dd87251f6f3e88983350833edf60fe6a80b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ef9a41b3870fb90577da5b2de5bd140022d4021e"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:09Z"
+  }
+}

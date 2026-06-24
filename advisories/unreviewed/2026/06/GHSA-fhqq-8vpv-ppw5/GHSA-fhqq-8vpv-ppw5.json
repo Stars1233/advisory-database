@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fhqq-8vpv-ppw5",
+  "modified": "2026-06-24T18:32:40Z",
+  "published": "2026-06-24T18:32:39Z",
+  "aliases": [
+    "CVE-2026-50709"
+  ],
+  "details": "A Stored Cross-Site Scripting (XSS) vulnerability exists in Frappe Framework version 17.0.0-dev due to improper neutralization of user-controlled input in the Notifications > Events panel.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50709"
+    },
+    {
+      "type": "WEB",
+      "url": "https://fluidattacks.com/es/advisories/journey"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/frappe/frappe"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T16:16:31Z"
+  }
+}

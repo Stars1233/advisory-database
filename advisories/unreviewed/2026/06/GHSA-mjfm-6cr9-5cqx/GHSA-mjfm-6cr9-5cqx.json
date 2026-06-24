@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mjfm-6cr9-5cqx",
+  "modified": "2026-06-24T18:32:46Z",
+  "published": "2026-06-24T18:32:46Z",
+  "aliases": [
+    "CVE-2026-53091"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: pull headers in qdisc_pkt_len_segs_init()\n\nMost ndo_start_xmit() methods expects headers of gso packets\nto be already in skb->head.\n\nnet/core/tso.c users are particularly at risk, because tso_build_hdr()\ndoes a memcpy(hdr, skb->data, hdr_len);\n\nqdisc_pkt_len_segs_init() already does a dissection of gso packets.\n\nUse pskb_may_pull() instead of skb_header_pointer() to make\nsure drivers do not have to reimplement this.\n\nSome malicious packets could be fed, detect them so that we can\ndrop them sooner with a new SKB_DROP_REASON_SKB_BAD_GSO drop_reason.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53091"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7fb4c19670110f052c04e1ec1d2b953b9f4f57e4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9d4f5c68f5ad4ab425f3ce1500c97c9f9743999a"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:23Z"
+  }
+}

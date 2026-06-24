@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-gw83-jh7x-85p6",
-  "modified": "2026-05-27T15:33:17Z",
+  "modified": "2026-06-24T18:32:28Z",
   "published": "2026-05-27T15:33:17Z",
   "aliases": [
     "CVE-2026-45939"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ngpib: Fix memory leak in ni_usb_init()\n\nIn ni_usb_init(), if ni_usb_setup_init() fails, the function returns\n-EFAULT without freeing the allocated writes buffer, leading to a\nmemory leak.\n\nAdditionally, ni_usb_setup_init() returns 0 on failure, which causes\nni_usb_init() to return -EFAULT, an inappropriate error code for this\nsituation.\n\nFix the leak by freeing writes in the error path. Modify\nni_usb_setup_init() to return -EINVAL on failure and propagate this\nerror code in ni_usb_init().",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -28,8 +33,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:10Z"

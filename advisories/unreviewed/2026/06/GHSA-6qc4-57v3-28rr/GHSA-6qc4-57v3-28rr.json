@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6qc4-57v3-28rr",
-  "modified": "2026-06-24T15:31:48Z",
+  "modified": "2026-06-24T18:32:39Z",
   "published": "2026-06-24T15:31:48Z",
   "aliases": [
     "CVE-2026-57298"
   ],
   "details": "A cross-site request forgery (CSRF) vulnerability in Jenkins Contrast Continuous Application Security Plugin 3.11 and earlier allows attackers to have Jenkins connect to an attacker-specified URL using an attacker-specified username, API key, and service key.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -20,8 +25,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-24T14:17:35Z"

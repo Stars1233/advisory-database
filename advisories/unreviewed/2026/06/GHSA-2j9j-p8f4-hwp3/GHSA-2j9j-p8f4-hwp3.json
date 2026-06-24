@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-2j9j-p8f4-hwp3",
+  "modified": "2026-06-24T18:32:48Z",
+  "published": "2026-06-24T18:32:48Z",
+  "aliases": [
+    "CVE-2026-53130"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/omfs: reject s_sys_blocksize smaller than OMFS_DIR_START\n\nomfs_fill_super() rejects oversized s_sys_blocksize values (> PAGE_SIZE),\nbut it does not reject values smaller than OMFS_DIR_START (0x1b8 = 440).\n\nLater, omfs_make_empty() uses\n\n    sbi->s_sys_blocksize - OMFS_DIR_START\n\nas the length argument to memset().  Since s_sys_blocksize is u32,\na crafted filesystem image with s_sys_blocksize < OMFS_DIR_START causes\nan unsigned underflow there, wrapping to a value near 2^32.  That drives\na ~4 GiB memset() from bh->b_data + OMFS_DIR_START and overwrites kernel\nmemory far beyond the backing block buffer.\n\nAdd the corresponding lower-bound check alongside the existing upper-bound\ncheck in omfs_fill_super(), so that malformed images are rejected during\nsuperblock validation before any filesystem data is processed.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53130"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/0621c385fda1376e967f37ccd534c26c3e511d14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/131ea3e57fc22936ed0e2c8330f2e36106172f51"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/5822a05a841a10794ad818620dd2af490b0705d3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/6561afc38398e3518a29c5eebb975c30468f98a6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/754ff1bea3819a90c6f33cccfc1a299ef7609f07"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/79f84af38c9fef9deb0e02c79eb969b5541c2644"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/817f16ed62bc58a168417bfb5e859c2a370bab03"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fbc72f5c645155dc2ed3573243ed20f9913e3a54"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:28Z"
+  }
+}

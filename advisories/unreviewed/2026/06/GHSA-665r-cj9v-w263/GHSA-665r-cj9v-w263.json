@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-665r-cj9v-w263",
+  "modified": "2026-06-24T18:32:48Z",
+  "published": "2026-06-24T18:32:48Z",
+  "aliases": [
+    "CVE-2026-53127"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nblock: fix zones_cond memory leak on zone revalidation error paths\n\nWhen blk_revalidate_disk_zones() fails after disk_revalidate_zone_resources()\nhas allocated args.zones_cond, the memory is leaked because no error path\nfrees it.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53127"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/29153d128384fa7c48a8ca8d34094b1cbe2d5bdc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/2a2f520fda824b5a25c93f2249578ea150c24e06"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:28Z"
+  }
+}

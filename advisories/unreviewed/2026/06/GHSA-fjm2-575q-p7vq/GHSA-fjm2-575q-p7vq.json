@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fjm2-575q-p7vq",
+  "modified": "2026-06-24T18:32:45Z",
+  "published": "2026-06-24T18:32:45Z",
+  "aliases": [
+    "CVE-2026-53057"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\niommu/riscv: Add IOTINVAL after updating DDT/PDT entries\n\nAdd riscv_iommu_iodir_iotinval() to perform required TLB and context cache\ninvalidations after updating DDT or PDT entries, as mandated by the RISC-V\nIOMMU specification (Section 6.3.1 and 6.3.2).",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53057"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/3f917d9bff68600f77561900f3145bd4706dc840"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/d99d1c13faa793ff1abab0d20ab6473c838081b3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f5c262b544975e067ea265fc7403aefbbea8563e"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:17Z"
+  }
+}

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-3wqm-qqw5-qr42",
-  "modified": "2026-05-28T12:30:30Z",
+  "modified": "2026-06-24T18:32:32Z",
   "published": "2026-05-28T12:30:30Z",
   "aliases": [
     "CVE-2026-46131"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: x86: check for nEPT/nNPT in slow flush hypercalls\n\nChecking is_guest_mode(vcpu) is incorrect, because translate_nested_gpa()\nis only valid if an L2 guest is running *with nested EPT/NPT enabled*.\nInstead use the same condition as translate_nested_gpa() itself.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -37,7 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:28Z"

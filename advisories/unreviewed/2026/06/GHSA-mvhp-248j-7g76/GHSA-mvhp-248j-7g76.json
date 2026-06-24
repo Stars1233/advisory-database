@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mvhp-248j-7g76",
+  "modified": "2026-06-24T18:32:42Z",
+  "published": "2026-06-24T18:32:42Z",
+  "aliases": [
+    "CVE-2026-52983"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: airoha: fix BQL imbalance in TX path\n\nFix a possible BQL imbalance in airoha_dev_xmit(), where inflight\npackets are accounted only for the AIROHA_NUM_TX_RING netdev TX\nqueues. The queue index is computed as:\n\n    qid = skb_get_queue_mapping(skb) % ARRAY_SIZE(qdma->q_tx)\n    txq = netdev_get_tx_queue(dev, qid);\n\nHowever, airoha_qdma_tx_napi_poll() accounts completions across all\nnetdev TX queues (num_tx_queues), leading to inconsistent BQL\naccounting.\n\nAlso reset all netdev TX queues in the ndo_stop callback.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52983"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/2d9f5a118205da2683ffcec78b9347f1f01a820e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/aaad53a55812acd2355c0e5478896381e78b0110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ded2694247a55a16d0ebbe2d6f9139305c21457a"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:09Z"
+  }
+}

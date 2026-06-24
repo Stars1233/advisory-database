@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4p2m-h7j8-hhxj",
-  "modified": "2026-06-01T18:31:35Z",
+  "modified": "2026-06-24T18:32:29Z",
   "published": "2026-05-27T15:33:22Z",
   "aliases": [
     "CVE-2026-46064"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nibmasm: fix heap over-read in ibmasm_send_i2o_message()\n\nThe ibmasm_send_i2o_message() function uses get_dot_command_size() to\ncompute the byte count for memcpy_toio(), but this value is derived from\nuser-controlled fields in the dot_command_header (command_size: u8,\ndata_size: u16) and is never validated against the actual allocation size.\nA root user can write a small buffer with inflated header fields, causing\nmemcpy_toio() to read up to ~65 KB past the end of the allocation into\nadjacent kernel heap, which is then forwarded to the service processor\nover MMIO.\n\nSilently clamping the copy size is not sufficient: if the header fields\nclaim a larger size than the buffer, the SP receives a dot command whose\nown header is inconsistent with the I2O message length, which can cause\nthe SP to desynchronize. Reject such commands outright by returning\nfailure.\n\nValidate command_size before calling get_mfa_inbound() to avoid leaking\nan I2O message frame: reading INBOUND_QUEUE_PORT dequeues a hardware\nframe from the controller's free pool, and returning without a\ncorresponding set_mfa_inbound() call would permanently exhaust it.\n\nAdditionally, clamp command_size to I2O_COMMAND_SIZE before the\nmemcpy_toio() so the MMIO write stays within the I2O message frame,\nconsistent with the clamping already performed by outgoing_message_size()\nfor the header field.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:26Z"

@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-vpw8-mw7p-fcg5",
-  "modified": "2026-05-28T12:30:30Z",
+  "modified": "2026-06-24T18:32:33Z",
   "published": "2026-05-28T12:30:30Z",
   "aliases": [
     "CVE-2026-46140"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: btmtk: validate WMT event SKB length before struct access\n\nbtmtk_usb_hci_wmt_sync() casts the WMT event response SKB data to\nstruct btmtk_hci_wmt_evt (7 bytes) and struct btmtk_hci_wmt_evt_funcc\n(9 bytes) without first checking that the SKB contains enough data.\nA short firmware response causes out-of-bounds reads from SKB tailroom.\n\nUse skb_pull_data() to validate and advance past the base WMT event\nheader. For the FUNC_CTRL case, pull the additional status field bytes\nbefore accessing them.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-28T10:16:29Z"

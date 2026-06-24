@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q36x-5cv4-59hh",
-  "modified": "2026-06-19T15:33:13Z",
+  "modified": "2026-06-24T18:32:29Z",
   "published": "2026-05-27T15:33:22Z",
   "aliases": [
     "CVE-2026-46069"
   ],
   "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mwifiex: fix use-after-free in mwifiex_adapter_cleanup()\n\nThe mwifiex_adapter_cleanup() function uses timer_delete()\n(non-synchronous) for the wakeup_timer before the adapter structure is\nfreed. This is incorrect because timer_delete() does not wait for any\nrunning timer callback to complete.\n\nIf the wakeup_timer callback (wakeup_timer_fn) is executing when\nmwifiex_adapter_cleanup() is called, the callback will continue to\naccess adapter fields (adapter->hw_status, adapter->if_ops.card_reset,\netc.) which may be freed by mwifiex_free_adapter() called later in the\nmwifiex_remove_card() path.\n\nUse timer_delete_sync() instead to ensure any running timer callback has\ncompleted before returning.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -48,8 +53,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-05-27T14:17:28Z"

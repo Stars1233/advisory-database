@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-928w-8whm-4cq9",
+  "modified": "2026-06-24T18:32:41Z",
+  "published": "2026-06-24T18:32:41Z",
+  "aliases": [
+    "CVE-2026-52960"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: put folios not suitable for writeback\n\nThe batch holds references to the folios (see `filemap_get_folios`,\n`folio_batch_release`), so we need to `folio_put` the folios we remove.\n\nTested on v6.18.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52960"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/544576f0f05c4a759806acddfaaeb686f14fb4b0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/86921e890fe1dea9791fb70bec552516fd47716a"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T17:17:06Z"
+  }
+}
