@@ -1,13 +1,13 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-66rg-92q4-6m8q",
-  "modified": "2026-06-24T18:47:33Z",
+  "modified": "2026-06-24T20:56:21Z",
   "published": "2026-05-22T00:31:16Z",
   "aliases": [
     "CVE-2026-7882"
   ],
   "summary": "Concrete CMS is vulnerable to unauthorized file deletion",
-  "details": "Concrete CMS  9.5.0 and below is vulnerable to unauthorized file deletion due to an Inverted CSRF token check in the DeleteFile controller. The code throws an error when the token IS valid and proceeds with file deletion when the token is invalid or missing. This effectively disables CSRF protection for the file deletion endpoint, allowing cross-site request forgery attacks against users who have permission to edit conversation messages. The Concrete CMS security team thanks Tristan Mandani for reporting this issue.",
+  "details": "Concrete CMS  9.5.0 and below is vulnerable to unauthorized file deletion due to an Inverted CSRF token check in the DeleteFile controller. The code throws an error when the token IS valid and proceeds with file deletion when the token is invalid or missing. This effectively disables CSRF protection for the file deletion endpoint, allowing cross-site request forgery attacks against users who have permission to edit conversation messages.",
   "severity": [
     {
       "type": "CVSS_V4",

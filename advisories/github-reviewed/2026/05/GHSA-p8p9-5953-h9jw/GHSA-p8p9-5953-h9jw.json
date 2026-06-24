@@ -1,13 +1,13 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p8p9-5953-h9jw",
-  "modified": "2026-06-24T18:52:03Z",
+  "modified": "2026-06-24T20:56:41Z",
   "published": "2026-05-22T00:31:16Z",
   "aliases": [
     "CVE-2026-7886"
   ],
   "summary": "Concrete CMS is vulnerable to IDOR in AddMessage/UpdateMessage",
-  "details": "Concrete CMS 9.5.0 and below is vulnerable to IDOR in AddMessage/UpdateMessage via attachments[] parameter which can lead to file permission bypass. The `AddMessage` and `UpdateMessage` conversation controllers accept user-supplied file attachment IDs and load files directly via `$em->find(File::class, $attachmentID)` without checking per-file permissions (`canViewFile()`). A user who can post in any conversation can reference any file in the CMS file manager by its sequential ID, effectively bypassing the file permission system. If a site truly has private files, the owner should set up a  private storage location https://documentation.concretecms.org/user-guide/editors-reference/dashboard/system-and-maintenance/files/file-storage-locations outside of the webroot so that permissions can be checked on view as well. That way, even if an authorized user attaches a file, or otherwise links to it, unauthorized users won't be able to view the file. The Concrete CMS security team thanks Tristan Mandani for reporting this issue. ",
+  "details": "Concrete CMS 9.5.0 and below is vulnerable to IDOR in AddMessage/UpdateMessage via attachments[] parameter which can lead to file permission bypass. The `AddMessage` and `UpdateMessage` conversation controllers accept user-supplied file attachment IDs and load files directly via `$em->find(File::class, $attachmentID)` without checking per-file permissions (`canViewFile()`). A user who can post in any conversation can reference any file in the CMS file manager by its sequential ID, effectively bypassing the file permission system. If a site truly has private files, the owner should set up a  private storage location https://documentation.concretecms.org/user-guide/editors-reference/dashboard/system-and-maintenance/files/file-storage-locations outside of the webroot so that permissions can be checked on view as well. That way, even if an authorized user attaches a file, or otherwise links to it, unauthorized users won't be able to view the file.",
   "severity": [
     {
       "type": "CVSS_V4",

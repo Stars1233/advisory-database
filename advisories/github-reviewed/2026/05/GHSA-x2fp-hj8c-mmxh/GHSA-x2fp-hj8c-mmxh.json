@@ -1,13 +1,13 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x2fp-hj8c-mmxh",
-  "modified": "2026-06-24T18:12:55Z",
+  "modified": "2026-06-24T20:57:23Z",
   "published": "2026-05-21T21:30:38Z",
   "aliases": [
     "CVE-2026-8204"
   ],
   "summary": "Concrete CMS is vulnerable to authorization bypass in the Calendar Event Frontend Dialog",
-  "details": "Concrete CMS 9.5.0 and below is vulnerable to authorization Bypass in the Calendar Event Frontend Dialog which can allow cross-calendar data disclosure. A public calendar block can be used as a pivot point to access private calendar data. The Concrete CMS security team thanks Winston Crooker for reporting this issue.",
+  "details": "Concrete CMS 9.5.0 and below is vulnerable to authorization Bypass in the Calendar Event Frontend Dialog which can allow cross-calendar data disclosure. A public calendar block can be used as a pivot point to access private calendar data.",
   "severity": [
     {
       "type": "CVSS_V3",
