@@ -1,13 +1,13 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-9v2g-37mp-qpxf",
-  "modified": "2026-06-24T18:10:12Z",
+  "modified": "2026-06-24T20:58:10Z",
   "published": "2026-05-21T21:30:38Z",
   "aliases": [
     "CVE-2026-8203"
   ],
   "summary": "Concrete CMS has Stored XSS through its height parameter",
-  "details": "Concrete CMS 9.5.0 and below has Stored XSS on the height parameter. The controller does not validate or sanitize $height. Any user with editor privileges can inject malicious JavaScript that executes in the context of any visitor's browser, potentially leading to session hijacking, credential theft, or other malicious actions. The Concrete CMS security team thanks Alfin Joseph for reporting this issue.",
+  "details": "Concrete CMS 9.5.0 and below has Stored XSS on the height parameter. The controller does not validate or sanitize $height. Any user with editor privileges can inject malicious JavaScript that executes in the context of any visitor's browser, potentially leading to session hijacking, credential theft, or other malicious actions.",
   "severity": [
     {
       "type": "CVSS_V4",

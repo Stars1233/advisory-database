@@ -1,13 +1,13 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g7xp-jf3x-wcx4",
-  "modified": "2026-06-24T18:18:05Z",
+  "modified": "2026-06-24T20:58:34Z",
   "published": "2026-05-21T21:30:38Z",
   "aliases": [
     "CVE-2026-8350"
   ],
   "summary": "Concrete CMS is vulnerable to missing authorization in the bulk_user_assignment.php",
-  "details": "Concrete CMS 9.5.0 and below is vulnerable to missing authorization in the bulk_user_assignment.php which can lead to privilege escalation to Administrative Group. Any authenticated user with access to the bulk user assignment dashboard page can add any user email to any group and can remove legitimate admins. The Concrete CMS security team thanks Vincent55 for reporting this issue.",
+  "details": "Concrete CMS 9.5.0 and below is vulnerable to missing authorization in the bulk_user_assignment.php which can lead to privilege escalation to Administrative Group. Any authenticated user with access to the bulk user assignment dashboard page can add any user email to any group and can remove legitimate admins.",
   "severity": [
     {
       "type": "CVSS_V4",
