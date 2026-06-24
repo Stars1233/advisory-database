@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mjcx-qfvm-369j",
+  "modified": "2026-06-24T09:30:45Z",
+  "published": "2026-06-24T09:30:45Z",
+  "aliases": [
+    "CVE-2026-12095"
+  ],
+  "details": "The Kargo Takip plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 1.2 via the 'api_url' parameter. This makes it possible for unauthenticated attackers to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services. The script echoes internal API response data (specifically the value of any 'auth' key in a JSON response body) verbatim back to the attacker's browser, enabling direct exfiltration of responses from internal services such as cloud instance metadata endpoints.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12095"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/kargo-takip/trunk/ui/decodeandview.php#L21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/kargo-takip/trunk/ui/decodeandview.php#L28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/kargo-takip/trunk/ui/decodeandview.php#L3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/79d91300-b6b7-4c3f-89b1-c48b9e47c415?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T07:16:26Z"
+  }
+}

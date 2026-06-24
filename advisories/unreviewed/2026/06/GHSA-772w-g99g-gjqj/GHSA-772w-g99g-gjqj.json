@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-772w-g99g-gjqj",
+  "modified": "2026-06-24T09:30:49Z",
+  "published": "2026-06-24T09:30:49Z",
+  "aliases": [
+    "CVE-2026-10745"
+  ],
+  "details": "Improper output neutralization for logs vulnerability in upKeeper Solutions upKeeper Instant Privilege Access on Windows allows Log Injection-Tampering-Forging.\n\nThis issue affects upKeeper Instant Privilege Access: through 1.6.1.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10745"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.upkeeper.se/hc/en-us/articles/28408945088796-CVE-2026-10745-Improper-output-neutralization-for-logs"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-117"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T09:16:30Z"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hxr4-2fcj-gcw3",
+  "modified": "2026-06-24T09:30:47Z",
+  "published": "2026-06-24T09:30:47Z",
+  "aliases": [
+    "CVE-2026-8865"
+  ],
+  "details": "The Avalon23 Products Filter for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'avalon23_qr' shortcode in all versions up to, and including, 1.1.6. This is due to insufficient input sanitization and output escaping on user-supplied shortcode attributes (notably 'title' and 'fixed_link') which are concatenated directly into single-quoted HTML attributes by the AVALON23_HELPER::draw_html_item() helper without esc_attr() or any other encoding. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8865"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/avalon23-products-filter-for-woocommerce/trunk/classes/helper.php#L17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/avalon23-products-filter-for-woocommerce/trunk/ext/qr_generator/index.php#L113"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/avalon23-products-filter-for-woocommerce/trunk/ext/qr_generator/index.php#L96"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/da9089a2-420f-4744-96d1-46c050a95328?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T07:16:28Z"
+  }
+}

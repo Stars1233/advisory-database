@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jvgr-44j9-74mp",
+  "modified": "2026-06-24T09:30:48Z",
+  "published": "2026-06-24T09:30:48Z",
+  "aliases": [
+    "CVE-2026-52932"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: ipcomp: Free destination pages on acomp errors\n\nMove the out_free_req label up by a couple of lines so that the\nallocated dst SG list gets freed on error as well as success.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52932"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/7dbac7680eb629b3b4dc7e98c34f943b8814c0c8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/b30aa173c3809f6af4c83a86099be1be19aa48eb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/dc6dcba80d72a27ab61831ad3d253316e0c9b9d5"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T08:16:23Z"
+  }
+}

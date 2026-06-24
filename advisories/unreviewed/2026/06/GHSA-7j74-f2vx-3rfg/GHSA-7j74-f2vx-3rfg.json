@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7j74-f2vx-3rfg",
-  "modified": "2026-06-24T06:31:45Z",
+  "modified": "2026-06-24T09:30:43Z",
   "published": "2026-06-24T06:31:45Z",
   "aliases": [
     "CVE-2026-12488"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://www.geovision.com.tw/cyber_security.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2026-2411"
     }
   ],
   "database_specific": {

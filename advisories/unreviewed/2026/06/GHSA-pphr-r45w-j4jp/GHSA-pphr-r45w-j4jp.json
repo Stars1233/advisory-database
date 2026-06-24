@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pphr-r45w-j4jp",
+  "modified": "2026-06-24T09:30:45Z",
+  "published": "2026-06-24T09:30:45Z",
+  "aliases": [
+    "CVE-2026-11997"
+  ],
+  "details": "The Bulk SEO Image plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to and including 1.1. This is due to missing or incorrect nonce validation on the plugin's settings page handler BulkSeoImage(), which dispatches to launchbulk() / BulkSeoImageGo() whenever the request contains $_POST['bulkseoimage']. No wp_nonce_field() is emitted in the form and no check_admin_referer()/wp_verify_nonce() is performed before bulk-overwriting the _wp_attachment_image_alt post meta for every image attached to every published post and/or page. This makes it possible for unauthenticated attackers to bulk-overwrite image ALT-text metadata across the site via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11997"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/bulk-seo-image/tags/1.1/bulk-seo-image.php#L11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/bulk-seo-image/tags/1.1/bulk-seo-image.php#L147"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/bulk-seo-image/tags/1.1/bulk-seo-image.php#L76"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/ef176a6c-33d1-45d6-8a1d-3df1e8eb2170?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T07:16:26Z"
+  }
+}

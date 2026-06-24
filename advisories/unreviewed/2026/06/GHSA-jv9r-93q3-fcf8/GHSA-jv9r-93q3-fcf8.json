@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jv9r-93q3-fcf8",
+  "modified": "2026-06-24T09:30:48Z",
+  "published": "2026-06-24T09:30:48Z",
+  "aliases": [
+    "CVE-2026-52922"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbatman-adv: dat: handle forward allocation error\n\nbatadv_dat_forward_data() calls pskb_copy_for_clone() to duplicate an skb\nfor each DHT candidate, but does not check the return value before passing\nit to batadv_send_skb_prepare_unicast_4addr(). That function dereferences\nthe skb unconditionally, so a failed allocation triggers a NULL pointer\ndereference.\n\nSkip forwarding to the current DHT candidate on allocation failure.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52922"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/2d8826a2d3657cea66fb0370f9e521575a673871"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/2edb8aeb3cdda9d00ec4997252dc5bcd6f54d8ef"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4d420d9ee70a220a2cd95aa0dd2e15acad66a505"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/866ac1d57040ed0b44ca732e3c66b3aa6b93011c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9bcebaedfb8479cb4affb23c7a0d000ca9a20e73"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/9cceea8eeba710def2a5707ee00f00c74a9a1cac"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ce0c381199402a2c58f4599f4f6ed100d872d0da"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/cf48e75fc4fe0d5cc7721c82d454221d01367b93"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T08:16:22Z"
+  }
+}

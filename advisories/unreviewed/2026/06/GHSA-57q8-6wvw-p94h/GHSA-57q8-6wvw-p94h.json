@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-57q8-6wvw-p94h",
+  "modified": "2026-06-24T09:30:44Z",
+  "published": "2026-06-24T09:30:44Z",
+  "aliases": [
+    "CVE-2026-10749"
+  ],
+  "details": "The Post Duplicator WordPress plugin before 3.0.15 does not safely handle custom meta-data during post duplication, storing attacker-supplied serialized values without the WordPress meta API's double-serialization protection, allowing users with Contributor-level access and above to inject a PHP Object.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10749"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wpscan.com/vulnerability/224c36b5-e604-4eb3-aad8-47283b95e994"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T07:16:25Z"
+  }
+}

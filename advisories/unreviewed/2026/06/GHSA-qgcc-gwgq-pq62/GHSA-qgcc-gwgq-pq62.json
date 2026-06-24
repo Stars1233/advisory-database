@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qgcc-gwgq-pq62",
+  "modified": "2026-06-24T09:30:48Z",
+  "published": "2026-06-24T09:30:48Z",
+  "aliases": [
+    "CVE-2026-52920"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: xt_policy: fix strict mode inbound policy matching\n\nmatch_policy_in() walks sec_path entries from the last transform to the\nfirst one, but strict policy matching needs to consume info->pol[] in\nthe same forward order as the rule layout.\n\nDerive the strict-match policy position from the number of transforms\nalready consumed so that multi-element inbound rules are matched\nconsistently.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52920"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/392cc1d8408b5665215c1e9290bbf0f92339b043"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4b2b4d7d4e203c92db8966b163edfacb1f0e1e29"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/82664d0f1ba25e4f9a71994954abae24c60f4067"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/938867e870fb5471bb16f442aeac81326e05bf65"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/b130a6eefa02bd4d475f2f059da8bcfb3e7d18d9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/eb323f7b82d2e2f638de0cc2a177803eb20e0707"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f98b7f85e04b40e28b08c461ded0cc79f14f5509"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/fc1c518bb1f054831ecabb32da9b8e1dff9699c6"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T08:16:21Z"
+  }
+}

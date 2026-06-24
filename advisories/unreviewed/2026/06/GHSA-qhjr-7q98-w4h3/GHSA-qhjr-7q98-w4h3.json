@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qhjr-7q98-w4h3",
+  "modified": "2026-06-24T09:30:47Z",
+  "published": "2026-06-24T09:30:47Z",
+  "aliases": [
+    "CVE-2026-9643"
+  ],
+  "details": "The WP Meta SEO plugin for WordPress is vulnerable to Unauthenticated Stored Cross-Site Scripting via the REQUEST_URI server variable in all versions up to, and including, 4.5.18. When the plugin's `wpmsTemplateRedirect()` hook detects a 404, it concatenates `$_SERVER['HTTP_HOST']` with the raw `$_SERVER['REQUEST_URI']` and inserts that value verbatim into the `wp_wpms_links.link_url` column via `$wpdb->insert()`. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute whenever an administrator views the plugin's 404 & Redirects admin page (`/wp-admin/admin.php?page=metaseo_broken_link`).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9643"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-meta-seo/tags/4.5.18/inc/class.metaseo-broken-link-table.php#L894"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-meta-seo/tags/4.5.18/wp-meta-seo.php#L1135"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-meta-seo/tags/4.5.18/wp-meta-seo.php#L1171"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?old_path=/wp-meta-seo/tags/4.5.12&new_path=/wp-meta-seo/tags/4.5.13"
+    },
+    {
+      "type": "WEB",
+      "url": "https://ti.wordfence.io/vulnerabilities/ca91e41d-b728-4eb0-86d5-043813d8c2c1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/beceb218-34bf-4571-a07b-939abc7ead8e?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T07:16:30Z"
+  }
+}

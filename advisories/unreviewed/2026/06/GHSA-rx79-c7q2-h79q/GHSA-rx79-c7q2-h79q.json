@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rx79-c7q2-h79q",
+  "modified": "2026-06-24T09:30:47Z",
+  "published": "2026-06-24T09:30:47Z",
+  "aliases": [
+    "CVE-2026-9179"
+  ],
+  "details": "The WP Forms Connector plugin for WordPress is vulnerable to SQL Injection via the 'order' parameter of the /wp-json/wp/v3/post/list REST endpoint in versions up to and including 1.8. This is due to insufficient escaping on the user-supplied 'order' parameter (read directly from $_GET['order'] into $shorting) and the lack of sufficient preparation on the existing SQL query in the listPost() function, where the value is concatenated unquoted into the ORDER BY clause and executed via $wpdb->get_results() without $wpdb->prepare(). The endpoint is registered with permission_callback '__return_true' and performs only a broken header-based check that validates the supplied 'Username' corresponds to an administrator account while never verifying the 'Password'. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9179"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-forms-connector/tags/1.8/WP-Forms-Connector.php#L1244"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-forms-connector/tags/1.8/WP-Forms-Connector.php#L1259"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/wp-forms-connector/tags/1.8/WP-Forms-Connector.php#L694"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/2cd53590-ded1-4e68-a9a3-aa1d2d880b80?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T07:16:29Z"
+  }
+}

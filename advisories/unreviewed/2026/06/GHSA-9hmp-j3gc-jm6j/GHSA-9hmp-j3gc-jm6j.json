@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9hmp-j3gc-jm6j",
+  "modified": "2026-06-24T09:30:48Z",
+  "published": "2026-06-24T09:30:48Z",
+  "aliases": [
+    "CVE-2026-52936"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: jitterentropy - replace long-held spinlock with mutex\n\njent_kcapi_random() serializes the shared jitterentropy state, but it\ncurrently holds a spinlock across the jent_read_entropy() call. That\npath performs expensive jitter collection and SHA3 conditioning, so\nparallel readers can trigger stalls as contending waiters spin for\nthe same lock.\n\nTo prevent non-preemptible lock hold, replace rng->jent_lock with a\nmutex so contended readers sleep instead of spinning on a shared lock\nheld across expensive entropy generation.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52936"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/01d798e9feb30212952d4e992801ba6bd6a82351"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/18216b8ab6904753eaf31baf453cb02ecd202ba4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4c03e6eb98443dc4d6d422a9780034a5b75376b4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ec427dc5286da1ed08f2d510e2147a7581b0cb02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/ff734dbd9e2432601a6dcd167cfb0bf8a36d1880"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T08:16:23Z"
+  }
+}

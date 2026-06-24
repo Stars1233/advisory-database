@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7c77-5hjp-3754",
+  "modified": "2026-06-24T09:30:48Z",
+  "published": "2026-06-24T09:30:47Z",
+  "aliases": [
+    "CVE-2026-52913"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbatman-adv: v: stop OGMv2 on disabled interface\n\nWhen a batadv_hard_iface is disabled, its mesh_iface pointer is set to\nNULL. However, batadv_v_ogm_send_meshif() may still dispatch OGMs via\nbatadv_v_ogm_queue_on_if() for interfaces that have since lost their\nmesh_iface association. This results in a NULL pointer dereference when\nbatadv_v_ogm_queue_on_if() unconditionally calls netdev_priv() on the\nnow NULL hard_iface->mesh_iface to retrieve the batadv_priv.\n\nIt is necessary to ensure that the batadv_v_ogm_queue_on_if() checks that\nit is using the same mesh_iface for which batadv_v_ogm_send_meshif() was\ncalled.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52913"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/040fe8eb34624002071dd21de9824dfe668ce65d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/1be1e99cbd5b74a69d3f92200ca87cf1bce852db"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/31dcb9711abd1dcd2080d9fac05c79dd9997d6bf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4ff461af943efb5e74d09942d5ffee7644d1e1fe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/70c9f6ab0d8f785087fb74fb85464a9a5288bfdb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/aad70db50ea3d7dfe30e402b889ff075a293b287"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/d7391a2b854a62235539c68e9cbf6fc7910a8e9a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f8ce8b8331a1bc44ad4905886a482214d428b253"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T08:16:21Z"
+  }
+}

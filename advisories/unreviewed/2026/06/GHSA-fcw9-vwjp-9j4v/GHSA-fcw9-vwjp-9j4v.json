@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fcw9-vwjp-9j4v",
+  "modified": "2026-06-24T09:30:48Z",
+  "published": "2026-06-24T09:30:48Z",
+  "aliases": [
+    "CVE-2026-52917"
+  ],
+  "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nsctp: diag: reject stale associations in dump_one path\n\nThe SCTP exact sock_diag lookup can hold a transport reference, block on\nlock_sock(sk), and then resume after sctp_association_free() has marked\nthe association dead and freed its bind address list.\n\nWhen that happens, inet_assoc_attr_size() and\ninet_diag_msg_sctpasoc_fill() can still dereference association state\nthat is no longer valid for reporting. In particular,\ninet_diag_msg_sctpasoc_fill() may read an empty bind-address list as a\nreal sctp_sockaddr_entry and trigger an out-of-bounds read from\nunrelated association memory.\n\nReject the association after taking the socket lock if it has been\nreaped or detached from the endpoint, and report the lookup as stale.\nThis keeps the exact dump-one path from formatting torn association\nstate.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52917"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/480f754580b5686b928977d16a59f20cef83ff01"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/5425de8bd6e9fe5bd67d158e3348171ae7510117"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/5eba3e48d78edd7551b992cb7ba687019b3a78da"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/6657af827e21883ae90693e42e7f59a6aab690b5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/78c4f964b2f94e405721c093773f6250e1e676b2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/b2be72d401833194917e44fbd8d8144bb4f2db16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/e97c2a535e23ed0fdd2660993fb3f10d9535c9bc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/f5af203dec6e0e7a6090fcc2130e9f3901bfc84d"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T08:16:21Z"
+  }
+}

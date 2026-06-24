@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-hrxf-7cvc-wf78",
+  "modified": "2026-06-24T09:30:46Z",
+  "published": "2026-06-24T09:30:46Z",
+  "aliases": [
+    "CVE-2026-8617"
+  ],
+  "details": "The SearchPlus plugin for WordPress is vulnerable to unauthorized modification and deletion of data in versions up to, and including, 1.7.1. This is due to a missing capability check and missing nonce validation on the searchplus_save_token_action_callback() and searchplus_reset_token_action_callback() functions, both of which are exposed to unauthenticated users through the wp_ajax_nopriv_ hooks. This makes it possible for unauthenticated attackers to overwrite or delete the plugin's stored account token and account name options (dym_token, dym_name, searchplus_token, searchplus_name, sp_token, sp_name).",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8617"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/searchplus/tags/1.7.1/includes/functions.php#L24"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/searchplus/tags/1.7.1/includes/functions.php#L39"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/searchplus/tags/1.7.1/includes/functions.php#L45"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/searchplus/tags/1.7.1/includes/functions.php#L57"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b1800f37-f9ab-454b-84f7-4d5eb5ed3acf?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T07:16:27Z"
+  }
+}
