@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r6wq-h383-2vw2",
+  "modified": "2026-06-25T06:30:42Z",
+  "published": "2026-06-25T06:30:42Z",
+  "aliases": [
+    "CVE-2026-12079"
+  ],
+  "details": "The Dokan Pro plugin for WordPress is vulnerable to time-based SQL Injection via the ’orderby’ parameter in all versions up to, and including, 5.0.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12079"
+    },
+    {
+      "type": "WEB",
+      "url": "https://dokan.co"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/5bf95020-ac4f-4fb2-8fb4-a9998005991c?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T04:17:55Z"
+  }
+}

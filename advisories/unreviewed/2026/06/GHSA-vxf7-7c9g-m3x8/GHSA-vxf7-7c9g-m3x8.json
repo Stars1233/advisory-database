@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vxf7-7c9g-m3x8",
+  "modified": "2026-06-25T06:30:42Z",
+  "published": "2026-06-25T06:30:42Z",
+  "aliases": [
+    "CVE-2026-1606"
+  ],
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 14.8 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed an authenticated user to conceal content within a Snippet due to improper input validation.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1606"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3527473"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-1-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/588128"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T05:16:52Z"
+  }
+}

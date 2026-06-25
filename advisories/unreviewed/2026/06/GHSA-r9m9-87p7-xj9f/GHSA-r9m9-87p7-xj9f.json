@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r9m9-87p7-xj9f",
+  "modified": "2026-06-25T06:30:42Z",
+  "published": "2026-06-25T06:30:42Z",
+  "aliases": [
+    "CVE-2026-5309"
+  ],
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.6 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed an authenticated user to read or modify another group's virtual registry cleanup policy settings without authorization.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5309"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3628793"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-1-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/595468"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T05:16:55Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-px7v-hx94-8wmf",
+  "modified": "2026-06-25T06:30:42Z",
+  "published": "2026-06-25T06:30:42Z",
+  "aliases": [
+    "CVE-2026-12635"
+  ],
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 8.3 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed an authenticated user with maintainer-role permissions to make requests to internal network resources through mirror synchronization due to improper URL validation.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12635"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-1-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/594321"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-350"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T05:16:51Z"
+  }
+}
