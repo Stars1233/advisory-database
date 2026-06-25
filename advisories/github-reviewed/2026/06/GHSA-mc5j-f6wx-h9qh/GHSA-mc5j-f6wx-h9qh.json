@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mc5j-f6wx-h9qh",
+  "modified": "2026-06-25T18:45:46Z",
+  "published": "2026-06-25T18:45:45Z",
+  "aliases": [
+    "CVE-2026-48505"
+  ],
+  "summary": "Filament: Multi-factor authentication (app) recovery codes can still be used multiple times via concurrent submission",
+  "details": "A flaw in the handling of recovery codes for **app-based multi-factor authentication** allows the same recovery code to be reused via concurrent submission. This issue does **not** affect email-based MFA. It also only applies when recovery codes are enabled.\n\nIf an attacker gains access to both the user's password and their recovery codes, they get two authenticated sessions per recovery code burned instead of one, or more if they batch the parallel submissions wider, materially extending the attacker's window of access compared to what the single-use guarantee implies.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "filament/filament"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.11.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "filament/filament"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/filamentphp/filament/security/advisories/GHSA-mc5j-f6wx-h9qh"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48505"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/filamentphp/filament"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-362",
+      "CWE-841"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-25T18:45:45Z",
+    "nvd_published_at": "2026-06-22T22:16:47Z"
+  }
+}
