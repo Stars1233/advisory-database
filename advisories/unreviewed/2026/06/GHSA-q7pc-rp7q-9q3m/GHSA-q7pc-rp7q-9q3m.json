@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q7pc-rp7q-9q3m",
-  "modified": "2026-06-25T09:31:17Z",
+  "modified": "2026-06-25T12:32:09Z",
   "published": "2026-06-25T09:31:17Z",
   "aliases": [
     "CVE-2026-41566"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/zng5lp7psgkcv9jnm9tztdlm3rmzfydl"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/25/1"
     }
   ],
   "database_specific": {

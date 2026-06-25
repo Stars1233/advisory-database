@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m8g6-vrr2-x7ff",
-  "modified": "2026-06-25T09:31:23Z",
+  "modified": "2026-06-25T12:32:10Z",
   "published": "2026-06-25T09:31:23Z",
   "aliases": [
     "CVE-2026-56130"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/9k9b3bmlq516ylvf7cdp3dlrtdtmxbmo"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/24/8"
     }
   ],
   "database_specific": {

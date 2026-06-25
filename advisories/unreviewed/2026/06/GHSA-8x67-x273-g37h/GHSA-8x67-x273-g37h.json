@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8x67-x273-g37h",
-  "modified": "2026-06-25T09:31:23Z",
+  "modified": "2026-06-25T12:32:10Z",
   "published": "2026-06-25T09:31:23Z",
   "aliases": [
     "CVE-2026-54226"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/pnglz29zh804rd3257fbh56cqgy1q65g"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/25/5"
     }
   ],
   "database_specific": {
