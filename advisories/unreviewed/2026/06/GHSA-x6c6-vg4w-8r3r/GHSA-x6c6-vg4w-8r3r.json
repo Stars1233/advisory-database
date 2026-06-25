@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-x6c6-vg4w-8r3r",
+  "modified": "2026-06-25T18:30:39Z",
+  "published": "2026-06-25T18:30:39Z",
+  "aliases": [
+    "CVE-2026-48943"
+  ],
+  "details": "K2 ≤ 2.24 contains a mass-assignment defect in the K2 system user plugin `plg_user_k2`. A Registered Joomla user, by including the field `K2UserForm=1` in a standard `com_users` `profile.save` POST, can write arbitrary values into the `notes`, `image`, and `plugins` columns of their own row in the `#__k2_users` table — none of which are exposed by the K2 frontend profile-edit form.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48943"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.getk2.org"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-915"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T16:16:36Z"
+  }
+}

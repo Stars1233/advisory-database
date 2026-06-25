@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-633j-w347-p8v6",
+  "modified": "2026-06-25T18:30:40Z",
+  "published": "2026-06-25T18:30:40Z",
+  "aliases": [
+    "CVE-2026-9651"
+  ],
+  "details": "CWE-732 Incorrect Permission Assignment for Critical Resource vulnerability that could cause unauthorized disclosure of password hashes and potential account compromise when an attacker with privileged local access reads improperly protected system files.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9651"
+    },
+    {
+      "type": "WEB",
+      "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-160-02&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-160-02.pdf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-732"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T16:16:43Z"
+  }
+}

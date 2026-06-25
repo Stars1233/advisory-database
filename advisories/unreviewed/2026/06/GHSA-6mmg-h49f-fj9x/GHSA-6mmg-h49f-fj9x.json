@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6mmg-h49f-fj9x",
+  "modified": "2026-06-25T18:30:39Z",
+  "published": "2026-06-25T18:30:39Z",
+  "aliases": [
+    "CVE-2026-48945"
+  ],
+  "details": "The K2 article gallery upload path accepts a zip/tar archive, extracts it under `/media/k2/galleries/<id>/`, and only renames image files (gif/jpg/jpeg/png/webp) to safe names — non-image files (including `.php`) are extracted as-is and remain executable via direct HTTP access.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48945"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.getk2.org"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-434"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T16:16:37Z"
+  }
+}

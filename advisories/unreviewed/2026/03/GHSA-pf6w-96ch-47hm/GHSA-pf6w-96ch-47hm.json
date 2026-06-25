@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-pf6w-96ch-47hm",
-  "modified": "2026-03-06T00:31:29Z",
+  "modified": "2026-06-25T18:30:29Z",
   "published": "2026-03-03T18:31:33Z",
   "aliases": [
     "CVE-2026-3437"
@@ -22,6 +22,14 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3437"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-062-04.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://software.portwell.tw/security-advisory/PWS-2026-3437.html"
     },
     {
       "type": "WEB",
