@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-w3gf-4959-2377",
+  "modified": "2026-06-25T03:31:40Z",
+  "published": "2026-06-25T03:31:40Z",
+  "aliases": [
+    "CVE-2026-57589"
+  ],
+  "details": "sys/kern/sysv_sem.c in OpenBSD through 7.9 has a use-after-free allowing local privilege escalation to root. This is a context switch use-after-free after tsleep in sys_semget().",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57589"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbsd/src/commit/1957873d2063db11dab780eca75b5e629d1e838d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://openai.com/index/patch-the-planet"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T01:16:26Z"
+  }
+}

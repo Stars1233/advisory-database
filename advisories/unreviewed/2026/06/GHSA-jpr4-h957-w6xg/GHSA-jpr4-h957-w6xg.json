@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jpr4-h957-w6xg",
+  "modified": "2026-06-25T03:31:41Z",
+  "published": "2026-06-25T03:31:41Z",
+  "aliases": [
+    "CVE-2026-8658"
+  ],
+  "details": "OS Command Injection vulnerability in Rapid7 InsightConnect Tcpdump Plugin on Linux allows authenticated attackers to execute arbitrary OS commands via the options or filter parameters due to insufficient input sanitization in shell command construction.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8658"
+    },
+    {
+      "type": "WEB",
+      "url": "https://extensions.rapid7.com/extension/tcpdump"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-25T03:16:44Z"
+  }
+}
