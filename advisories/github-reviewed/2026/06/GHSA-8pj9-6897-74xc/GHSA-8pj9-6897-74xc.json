@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8pj9-6897-74xc",
+  "modified": "2026-06-25T21:52:50Z",
+  "published": "2026-06-25T21:52:50Z",
+  "aliases": [
+    "CVE-2026-49218"
+  ],
+  "summary": "ImageMagick: Policy Bypass in DCM decoder could result in image with invalid dimensions",
+  "details": "A missing check in the DCM decoder could result in an image with invalid dimensions and that could cause crashes in other operations.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-AnyCPU"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-HDRI-AnyCPU"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-HDRI-OpenMP-arm64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-HDRI-arm64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-HDRI-x64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-HDRI-x86"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-OpenMP-arm64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-OpenMP-x64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-arm64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-x64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q16-x86"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q8-AnyCPU"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q8-OpenMP-arm64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q8-OpenMP-x64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q8-arm64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q8-x64"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "Magick.NET-Q8-x86"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8pj9-6897-74xc"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49218"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/ImageMagick/ImageMagick"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/dlemstra/Magick.NET/releases/tag/14.14.0"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-25T21:52:50Z",
+    "nvd_published_at": "2026-06-10T23:16:49Z"
+  }
+}
