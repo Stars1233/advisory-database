@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cxmj-83gh-fp49",
+  "modified": "2026-06-25T21:26:43Z",
+  "published": "2026-06-25T21:26:43Z",
+  "aliases": [
+    "CVE-2026-48515"
+  ],
+  "summary": "MessagePack-CSharp: Multi-dimensional array formatters allocate from unchecked dimensions",
+  "details": "## Summary\n\nMessagePack-CSharp's multi-dimensional array formatters read dimension lengths directly from the payload and allocate `T[,]`, `T[,,]`, or `T[,,,]` before validating that the dimension product matches the encoded element count.\n\nThe formatter reads a guarded element array header, but allocation of the target multi-dimensional array happens before the dimensions are checked against that element count. A small payload can therefore declare large dimensions, provide an empty or tiny inner array, and cause a large heap allocation before element data is validated.\n\n## Impact\n\nApplications are affected when they deserialize untrusted MessagePack payloads into models containing multi-dimensional arrays such as `T[,]`, `T[,,]`, or `T[,,,]`.\n\nAn attacker can encode large dimension integers and a small guarded element array. The formatter allocates the target array from the dimensions before confirming that the product of dimensions is consistent with the element count.\n\nThe result can be out-of-memory exceptions, container termination on memory-constrained hosts, large object heap pressure, or severe CPU cost from zero-initializing oversized arrays. `MessagePackSecurity.UntrustedData` does not provide a general allocation cap for this path.\n\n## Affected components\n\n- Package: `MessagePack`\n- APIs: `TwoDimensionalArrayFormatter<T>.Deserialize`, `ThreeDimensionalArrayFormatter<T>.Deserialize`, `FourDimensionalArrayFormatter<T>.Deserialize`\n- Data shapes: `T[,]`, `T[,,]`, and `T[,,,]`\n- Finding IDs: `MESSAGEPACKCSHARP-040`, duplicate/open variant `MESSAGEPACKCSHARP-OPEN-003`\n\n## Patches\n\nFixes are prepared and will be released in coordinated patch versions.\n\nUpgrade guidance:\n\n1. Upgrade `MessagePack` to the patched version for your release line.\n2. Upgrade companion MessagePack packages in the same dependency graph to the coordinated patched versions.\n\nThe fix should validate dimensions before allocation. Dimension values should be non-negative, their checked product should match the encoded element count, and the product should be bounded by the available payload and any configured security limits before `new T[...]` is executed.\n\n## Workarounds\n\nPatching is recommended.\n\nUntil a patched version is available, avoid deserializing untrusted payloads into schemas containing multi-dimensional arrays. Prefer schema shapes that can be validated before allocation, such as bounded lists, dictionaries with application-level count limits, or jagged arrays with application-level limits.\n\nMessage-size limits reduce the blast radius but do not fully address allocation amplification where a small payload can encode disproportionate array dimensions.\n\n## Resources\n\n- `MESSAGEPACKCSHARP-040`: unchecked multi-dimensional array dimensions\n- `MESSAGEPACKCSHARP-OPEN-003`: duplicate/open finding for the multi-dimensional array issue\n- CWE-770: Allocation of Resources Without Limits or Throttling",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "MessagePack"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.301"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "NuGet",
+        "name": "MessagePack"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0"
+            },
+            {
+              "fixed": "3.1.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-cxmj-83gh-fp49"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48515"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-25T21:26:43Z",
+    "nvd_published_at": "2026-06-22T22:16:48Z"
+  }
+}
