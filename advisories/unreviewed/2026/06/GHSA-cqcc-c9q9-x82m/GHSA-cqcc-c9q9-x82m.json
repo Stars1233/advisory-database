@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cqcc-c9q9-x82m",
+  "modified": "2026-06-25T00:33:23Z",
+  "published": "2026-06-25T00:33:23Z",
+  "aliases": [
+    "CVE-2025-60474"
+  ],
+  "details": "A buffer overflow in the gf_media_import function (/media_tools/av_parsers.c) of GPAC Project/MP4Box before 26.02.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60474"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/issues/3287"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/commit/bd7fd6be546e0cd9e599c6b262c338c5f2ecec5c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/38/38_gf_media_import_media_tools_media_import_c_1297"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/38/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://infosec.exchange/@sigdevel/116780566799952592"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T23:16:40Z"
+  }
+}

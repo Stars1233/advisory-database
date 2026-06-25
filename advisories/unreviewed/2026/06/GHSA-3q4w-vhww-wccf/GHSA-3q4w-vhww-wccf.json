@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-3q4w-vhww-wccf",
+  "modified": "2026-06-25T00:33:23Z",
+  "published": "2026-06-25T00:33:23Z",
+  "aliases": [
+    "CVE-2025-60467"
+  ],
+  "details": "A use-after-free in the gf_filter_pid_inst_swap_delete_task function (/filter_core/filter_pid.c) of GPAC Project/MP4Box before 26.02.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted media file.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60467"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/issues/3286"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gpac/gpac/commit/976dacf65cb6986a4e4f350fb8d3ed0a17dc3a77"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/37/37_gf_filter_pid_inst_swap_delete_task_filter_core_filter_pid_c_574"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sigdevel/pocs/blob/main/res/gpac/MP4Box/37/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://infosec.exchange/@sigdevel/116780518074911144"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T23:16:39Z"
+  }
+}

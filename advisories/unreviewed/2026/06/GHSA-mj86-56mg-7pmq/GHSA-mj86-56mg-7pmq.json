@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mj86-56mg-7pmq",
+  "modified": "2026-06-25T00:33:23Z",
+  "published": "2026-06-25T00:33:23Z",
+  "aliases": [
+    "CVE-2026-9774"
+  ],
+  "details": "ATEN Unizon updateLicense Directory Traversal Arbitrary File Deletion Vulnerability. This vulnerability allows remote attackers to delete arbitrary files on affected installations of ATEN Unizon. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the updateLicense method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to delete files or create a denial-of-service condition on the system. Was ZDI-CAN-28502.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9774"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.aten.com/global/en/supportcenter/info/security-advisory/27"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-378"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T22:16:50Z"
+  }
+}

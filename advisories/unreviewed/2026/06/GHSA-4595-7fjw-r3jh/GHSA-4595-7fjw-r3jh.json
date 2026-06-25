@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4595-7fjw-r3jh",
+  "modified": "2026-06-25T00:33:22Z",
+  "published": "2026-06-25T00:33:22Z",
+  "aliases": [
+    "CVE-2026-47110"
+  ],
+  "details": "Tiptap for PHP before version 2.1.1 contains an input validation vulnerability that allows authenticated attackers to cause a denial of service by submitting Tiptap JSON with the attrs.href field set to an array instead of a string, causing an unhandled TypeError in the Link::isAllowedUri() function when passed to preg_match(). Attackers can persist malformed JSON records that permanently crash the server-side HTML rendering pipeline for all subsequent viewers of that record until the database entry is manually repaired.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ueberdosis/tiptap-php/pull/94"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ueberdosis/tiptap-php/commit/74bfb7be1c8c6102b240f3879b7f984a6ab87b97"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ueberdosis/tiptap-php/releases/tag/2.1.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/tiptap-for-php-dos-via-malformed-href-attribute"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-241"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-24T22:16:47Z"
+  }
+}
