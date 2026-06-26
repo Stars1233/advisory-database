@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8h84-fhqq-q58v",
-  "modified": "2026-06-10T18:34:29Z",
+  "modified": "2026-06-26T20:48:20Z",
   "published": "2026-06-10T18:34:29Z",
   "aliases": [
     "CVE-2026-48025"
@@ -14,6 +14,25 @@
       "package": {
         "ecosystem": "Go",
         "name": "github.com/juev/nebula-mesh"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.3.7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Go",
+        "name": "github.com/forgekeep/nebula-mesh"
       },
       "ranges": [
         {
