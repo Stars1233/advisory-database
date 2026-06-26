@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7mqq-4v55-88gh",
+  "modified": "2026-06-26T23:10:37Z",
+  "published": "2026-06-26T23:10:37Z",
+  "aliases": [
+    "CVE-2026-54244"
+  ],
+  "summary": "Statamic CMS's incorrect authorization lets view-only users submit Live Preview content reserved for editors",
+  "details": "### Impact\n\nThe Live Preview endpoint for existing entries and terms only checked view authorization, but it accepts and renders caller-supplied field values. A Control Panel user with view but not edit permission could therefore submit content they were not authorized to author and generate a shareable Live Preview URL rendering it.\n\n### Patches\n\nThis has been fixed in 5.74.0 and 6.20.3.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "statamic/cms"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.74.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "statamic/cms"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.20.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/statamic/cms/security/advisories/GHSA-7mqq-4v55-88gh"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/statamic/cms"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-26T23:10:37Z",
+    "nvd_published_at": null
+  }
+}
