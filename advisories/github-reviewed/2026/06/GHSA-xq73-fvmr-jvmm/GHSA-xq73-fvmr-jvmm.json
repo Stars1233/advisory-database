@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xq73-fvmr-jvmm",
+  "modified": "2026-06-26T17:32:18Z",
+  "published": "2026-06-26T17:32:18Z",
+  "aliases": [
+    "CVE-2026-46619"
+  ],
+  "summary": "OpenAM Authentication Bypass via MSISDN LDAP Injection",
+  "details": "## Summary\n\n**Description**\n\nAn LDAP Injection (CWE-90) vulnerability in the MSISDN authentication module allows an unauthenticated, remote attacker to obtain an arbitrary OpenAM session without a password in the default trusted gateway configuration. This impacts OpenAM Community Edition through version 16.0.6. This issue was patched in version 16.1.1.\n\n## Impact\nOpenAM deployments through version 16.0.6 that have MSISDN enabled are potentially affected. This enables a pre-authentication login bypass for any realm where an MSISDN module instance is enabled in an authentication chain and reachable through the trusted-gateway list, which allows all traffic by default. The request-supplied MSISDN value was concatenated directly into an LDAP search filter. The resulting OpenAM session is a normal authenticated session for the matched user.\n\n## Patch\nThis has been patched in OpenAM Community Edition version 16.1.1. Users are encouraged to update to the latest release.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.openidentityplatform.openam:openam-auth-msisdn"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "16.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-xq73-fvmr-jvmm"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/OpenIdentityPlatform/OpenAM"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1188",
+      "CWE-90"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-26T17:32:18Z",
+    "nvd_published_at": null
+  }
+}
