@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j7f5-gfqm-pcx3",
+  "modified": "2026-06-26T20:54:38Z",
+  "published": "2026-06-26T20:54:38Z",
+  "aliases": [],
+  "summary": "Pterodactyl Panel: Client email change endpoint allows enumeration of accounts in system",
+  "details": "### Summary\nAn unprotected user enumeration vulnerability exists in the account email update endpoint, allowing authenticated users to verify whether email addresses are registered on the panel through automated requests without rate limiting or CAPTCHA protection.\n\n### Details\nThe account settings page allows authenticated users to update their email address through a POST request. Unlike the login and password reset forms which implement reCAPTCHA and rate limiting protections, this endpoint lacks these safeguards entirely.\nAn attacker can capture the email update request (for example, using Burp Suite's proxy) and modify the email field to test arbitrary addresses. The panel's response will confirm whether each tested email is already registered in the system. Because there are no rate limits implemented, attackers can send hundreds or thousands of requests to enumerate the user base.\n\nThis is concerning because:\n\n- The login and password reset pages correctly implement protections against enumeration\n- The account page has no reCAPTCHA option available\n- No rate limiting exists in the panel for this endpoint\n- Authentication is required, but any valid account (including free tier/trial accounts) can exploit this\n\n### PoC\n- Log into the Pterodactyl panel with any valid account\n- Navigate to Account Settings\n- Open Burp Suite (or similar proxy tool) and configure your browser to proxy through it\n- Attempt to change your email address and capture the POST request\n- Send the captured request to Repeater\n- Modify the email field to test different addresses (e.g., admin@example.com, test@example.com)\n- Send multiple requests in rapid succession\n- Observe the response messages which confirm whether each email exists or not \n- Repeat indefinitely without encountering rate limits or CAPTCHA challenges\n\n\n### Impact\nThis is a user enumeration vulnerability (CWE-204: Observable Response Discrepancy).\n\nWho is impacted:\n\n- All Pterodactyl panel installations are affected\n- Any registered user's email address can be discovered\n- Particularly impacts administrators and high-value accounts\n\nPotential consequences:\n\n- Attackers can build a complete database of registered users\n- Enumerated emails can be used for targeted phishing campaigns\n- Combined with other attacks (credential stuffing, social engineering)\n- Privacy violation for all users on the platform\n- Competitive intelligence gathering (identifying which companies/individuals use specific panels)",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "pterodactyl/panel"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.12.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pterodactyl/panel/security/advisories/GHSA-j7f5-gfqm-pcx3"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/pterodactyl/panel"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-204"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-26T20:54:38Z",
+    "nvd_published_at": null
+  }
+}
