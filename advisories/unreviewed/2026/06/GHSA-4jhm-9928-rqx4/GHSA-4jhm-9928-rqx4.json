@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4jhm-9928-rqx4",
+  "modified": "2026-06-26T15:32:16Z",
+  "published": "2026-06-26T15:32:16Z",
+  "aliases": [
+    "CVE-2026-56029"
+  ],
+  "details": "Unauthenticated Broken Authentication in CorvusPay WooCommerce Payment Gateway <= 2.7.4 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56029"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/corvuspay-woocommerce-integration/vulnerability/wordpress-corvuspay-woocommerce-payment-gateway-plugin-2-7-4-broken-authentication-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-288"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:42Z"
+  }
+}

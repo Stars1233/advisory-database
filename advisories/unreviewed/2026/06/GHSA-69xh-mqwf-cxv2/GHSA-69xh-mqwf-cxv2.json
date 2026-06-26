@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-69xh-mqwf-cxv2",
+  "modified": "2026-06-26T15:32:13Z",
+  "published": "2026-06-26T15:32:13Z",
+  "aliases": [
+    "CVE-2026-57920"
+  ],
+  "details": "Peplink InControl 2 through 2.14.2 before 2026-06-03 allows use of a semicolon to bypass access-control rules for certain /rest/o/{orgId} endpoints.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57920"
+    },
+    {
+      "type": "WEB",
+      "url": "https://drive.google.com/file/d/1MoZn73YkDGGpqOgaQbRU1hWVygr8VaxY/view"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-551"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T13:16:36Z"
+  }
+}

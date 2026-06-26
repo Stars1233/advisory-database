@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-567r-vvh5-jjr8",
-  "modified": "2026-06-24T09:30:45Z",
+  "modified": "2026-06-26T15:32:07Z",
   "published": "2026-06-24T09:30:45Z",
   "aliases": [
     "CVE-2026-13006"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://logback.qos.ch/news.html#1.5.35"
+    },
+    {
+      "type": "WEB",
+      "url": "https://logback.qos.ch/news.html#1.5.36"
     }
   ],
   "database_specific": {

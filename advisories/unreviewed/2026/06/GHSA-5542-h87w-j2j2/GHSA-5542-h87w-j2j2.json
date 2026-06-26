@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5542-h87w-j2j2",
+  "modified": "2026-06-26T15:32:15Z",
+  "published": "2026-06-26T15:32:15Z",
+  "aliases": [
+    "CVE-2026-56010"
+  ],
+  "details": "Subscriber Privilege Escalation in Abandoned Cart Pro for WooCommerce <= 10.4.0 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56010"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/woocommerce-abandon-cart-pro/vulnerability/wordpress-abandoned-cart-pro-for-woocommerce-plugin-10-4-0-privilege-escalation-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-266"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:42Z"
+  }
+}

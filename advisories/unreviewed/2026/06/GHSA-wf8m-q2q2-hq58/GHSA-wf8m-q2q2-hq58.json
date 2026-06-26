@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-wf8m-q2q2-hq58",
-  "modified": "2026-06-25T21:31:31Z",
+  "modified": "2026-06-26T15:32:08Z",
   "published": "2026-06-25T21:31:31Z",
   "aliases": [
     "CVE-2026-38640"
   ],
   "details": "A reachable unwrap in the __assert_fail function (/assert/mod.rs) of relibc commit 61f42d allows attackers to cause a Denial of Service (DoS) via a crafted string.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -32,8 +37,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-400"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-25T21:16:27Z"

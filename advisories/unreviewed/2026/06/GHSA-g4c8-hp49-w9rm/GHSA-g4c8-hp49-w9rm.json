@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g4c8-hp49-w9rm",
-  "modified": "2026-06-25T21:31:30Z",
+  "modified": "2026-06-26T15:32:07Z",
   "published": "2026-06-25T21:31:30Z",
   "aliases": [
     "CVE-2025-60464"
   ],
   "details": "A use-after-free in the gf_sei_load_from_state_internal function (/filters/sei_load.c) of GPAC Project/MP4Box before 26.02.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted MPEG-2 TS file.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -36,8 +41,10 @@
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
-    "severity": null,
+    "cwe_ids": [
+      "CWE-416"
+    ],
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-25T20:17:08Z"

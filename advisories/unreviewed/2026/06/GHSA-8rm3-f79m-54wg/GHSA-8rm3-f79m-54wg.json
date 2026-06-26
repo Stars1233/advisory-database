@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8rm3-f79m-54wg",
+  "modified": "2026-06-26T15:32:15Z",
+  "published": "2026-06-26T15:32:15Z",
+  "aliases": [
+    "CVE-2026-3472"
+  ],
+  "details": "Mattermost versions 10.11.x <= 10.11.18, 11.6.x <= 11.6.3, 11.5.x <= 11.5.6 fail to properly apply markdown image rendering restrictions to AI bot tool result posts, which allows an authenticated attacker to exfiltrate data to an attacker-controlled server via injecting markdown image syntax into tool result content rendered by a victim's client.. Mattermost Advisory ID: MMSA-2026-00619",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3472"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-693"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:38Z"
+  }
+}

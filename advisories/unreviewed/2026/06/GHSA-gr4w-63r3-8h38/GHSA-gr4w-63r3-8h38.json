@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gr4w-63r3-8h38",
+  "modified": "2026-06-26T15:32:18Z",
+  "published": "2026-06-26T15:32:18Z",
+  "aliases": [
+    "CVE-2026-9699"
+  ],
+  "details": "Mattermost Plugins versions <=11.6 10.18.11 11.3.6 11.6.5.0 fail to sanitize error responses from the OpenAI API before logging, which allows a user with access to server logs or support packets to obtain a valid or partially reconstructable OpenAI API key via inspection of mattermost.log entries generated during authentication failures. Mattermost Advisory ID: MMSA-2026-00609",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9699"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-532"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:56Z"
+  }
+}

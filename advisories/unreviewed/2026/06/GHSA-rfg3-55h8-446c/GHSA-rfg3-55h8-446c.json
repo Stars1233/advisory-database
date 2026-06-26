@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rfg3-55h8-446c",
+  "modified": "2026-06-26T15:32:18Z",
+  "published": "2026-06-26T15:32:18Z",
+  "aliases": [
+    "CVE-2026-57655"
+  ],
+  "details": "Unauthenticated Cross Site Request Forgery (CSRF) in Child Theme Wizard <= 1.4 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57655"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/child-theme-wizard/vulnerability/wordpress-child-theme-wizard-plugin-1-4-cross-site-request-forgery-csrf-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:53Z"
+  }
+}

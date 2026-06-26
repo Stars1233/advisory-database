@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fpm8-6xjp-2hq8",
+  "modified": "2026-06-26T15:32:14Z",
+  "published": "2026-06-26T15:32:14Z",
+  "aliases": [
+    "CVE-2026-57940"
+  ],
+  "details": "HTMLy 3.1.1 contains a Server-Side Request Forgery (SSRF) vulnerability in the RSS feed import functionality. The function get_feed() in system/admin/admin.php passes user-supplied $feed_url directly to file_get_contents() without any validation. An authenticated attacker with administrative privileges can exploit this by entering a crafted URL (e.g., http://dnslog.example.com, file:///etc/passwd, or http://169.254.169.254 in cloud contexts) via Tools -> Import RSS. The server will then make a request to the attacker-controlled target.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:A/V:D/RE:L/U:Clear"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57940"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/danpros/htmly/blob/c8b7ed9af39a266b256759becf26dba6a59e11e6/system/admin/admin.php#L1549-L1551"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-918"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T14:17:07Z"
+  }
+}

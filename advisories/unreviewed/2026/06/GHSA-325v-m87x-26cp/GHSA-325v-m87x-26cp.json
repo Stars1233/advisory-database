@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-325v-m87x-26cp",
+  "modified": "2026-06-26T15:32:17Z",
+  "published": "2026-06-26T15:32:17Z",
+  "aliases": [
+    "CVE-2026-56773"
+  ],
+  "details": "Teable's v2 REST API controller lacks @Permissions metadata on ORPC endpoints, allowing any authenticated user to bypass authorization checks. Attackers can read table schemas, create tables, and modify or delete records across bases and tables via endpoints like GET /api/v2/tables/get and POST /api/v2/tables/updateRecords.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56773"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/teableio/teable/pull/3285"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/teableio/teable/releases/tag/release.2026-06-15T04-43-24Z.1912"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/teable-missing-authorization-in-v2-rest-api"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:47Z"
+  }
+}

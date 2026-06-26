@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7h56-5554-rc7g",
+  "modified": "2026-06-26T15:32:18Z",
+  "published": "2026-06-26T15:32:18Z",
+  "aliases": [
+    "CVE-2026-57657"
+  ],
+  "details": "Unauthenticated Cross Site Request Forgery (CSRF) in Gmail SMTP <= 1.2.3.19 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57657"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/gmail-smtp/vulnerability/wordpress-gmail-smtp-plugin-1-2-3-19-cross-site-request-forgery-csrf-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-352"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:53Z"
+  }
+}

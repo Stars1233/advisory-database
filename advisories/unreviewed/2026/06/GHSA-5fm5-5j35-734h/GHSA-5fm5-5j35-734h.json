@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5fm5-5j35-734h",
+  "modified": "2026-06-26T15:32:15Z",
+  "published": "2026-06-26T15:32:15Z",
+  "aliases": [
+    "CVE-2026-54832"
+  ],
+  "details": "Unauthenticated Broken Access Control in Gutenverse Companion <= 2.5.0 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54832"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/gutenverse-companion/vulnerability/wordpress-gutenverse-companion-plugin-2-5-0-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:40Z"
+  }
+}

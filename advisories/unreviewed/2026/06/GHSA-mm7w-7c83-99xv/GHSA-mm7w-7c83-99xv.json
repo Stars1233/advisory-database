@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mm7w-7c83-99xv",
-  "modified": "2026-06-26T09:30:46Z",
+  "modified": "2026-06-26T15:32:13Z",
   "published": "2026-06-26T09:30:46Z",
   "aliases": [
     "CVE-2025-10268"
   ],
   "details": "The Printcart Web to Print Product Designer for WooCommerce WordPress plugin through 2.4.8 is vulnerable to path traversal which makes it possible for the attacker to retrieve the directory listing for arbitrary directories on the server.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,7 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-06-26T07:16:21Z"

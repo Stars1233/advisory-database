@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4vhp-x3jq-9qc4",
+  "modified": "2026-06-26T15:32:15Z",
+  "published": "2026-06-26T15:32:15Z",
+  "aliases": [
+    "CVE-2026-54827"
+  ],
+  "details": "Unauthenticated SQL Injection in Real Estate 7 <= 3.5.9 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54827"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/theme/realestate-7/vulnerability/wordpress-real-estate-7-theme-3-5-9-sql-injection-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:40Z"
+  }
+}

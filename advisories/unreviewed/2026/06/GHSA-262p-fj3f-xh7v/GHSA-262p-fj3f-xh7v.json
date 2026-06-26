@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-262p-fj3f-xh7v",
+  "modified": "2026-06-26T15:32:13Z",
+  "published": "2026-06-26T15:32:13Z",
+  "aliases": [
+    "CVE-2026-57915"
+  ],
+  "details": "It is possible to bypass the Kerberos pre-authentication check in Apache Kerby by sending a PA-DATA with an unrecognized or unsupported type. Users are recommended to upgrade to version 2.1.2, which fixes this issue.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57915"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/1y3glgh3kzwoxo5m2lq504cjlh1dsrfh"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-304"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T13:16:35Z"
+  }
+}

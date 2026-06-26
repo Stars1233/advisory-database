@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-c6cp-9jv3-vfhh",
+  "modified": "2026-06-26T15:32:14Z",
+  "published": "2026-06-26T15:32:14Z",
+  "aliases": [
+    "CVE-2025-68074"
+  ],
+  "details": "Contributor Cross Site Scripting (XSS) in Image Carousel <= 1.0.0.41 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68074"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/image-carousel/vulnerability/wordpress-image-carousel-plugin-1-0-0-41-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:35Z"
+  }
+}

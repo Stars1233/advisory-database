@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-8ph7-m94w-6fwc",
+  "modified": "2026-06-26T15:32:18Z",
+  "published": "2026-06-26T15:32:18Z",
+  "aliases": [
+    "CVE-2026-57654"
+  ],
+  "details": "Affiliate Broken Access Control in Affiliates Manager <= 2.9.49 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57654"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/affiliates-manager/vulnerability/wordpress-affiliates-manager-plugin-2-9-49-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T15:16:53Z"
+  }
+}
