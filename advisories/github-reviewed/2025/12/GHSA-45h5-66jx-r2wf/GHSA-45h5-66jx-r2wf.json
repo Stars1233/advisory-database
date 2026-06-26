@@ -1,13 +1,13 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-45h5-66jx-r2wf",
-  "modified": "2025-12-17T18:12:02Z",
+  "modified": "2026-06-26T20:28:42Z",
   "published": "2025-12-15T00:30:25Z",
   "aliases": [
     "CVE-2025-67898"
   ],
   "summary": "MJML allows mj-include directory traversal due to an incomplete fix for CVE-2020-12827",
-  "details": "MJML through 4.18.0 allows mj-include directory traversal to test file existence and (in the type=\"css\" case) read files. NOTE: this issue exists because of an incomplete fix for CVE-2020-12827.",
+  "details": "MJML before 5.0.0-alpha.9 allows mj-include directory traversal to test file existence and (in the type=\"css\" case) read files. NOTE: this issue exists because of an incomplete fix for CVE-2020-12827.",
   "severity": [
     {
       "type": "CVSS_V3",
@@ -28,7 +28,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "4.18.0"
+              "fixed": "5.0.0-alpha.9"
             }
           ]
         }
@@ -47,6 +47,14 @@
     {
       "type": "WEB",
       "url": "https://github.com/mjmlio/mjml/issues/3018"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mjmlio/mjml/pull/3033"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mjmlio/mjml/commit/517b376b068e71c713ec4bb4ef9e5b0b7235b8ce"
     },
     {
       "type": "PACKAGE",
