@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mp55-p8c9-rfw2",
+  "modified": "2026-06-26T21:54:19Z",
+  "published": "2026-06-26T21:54:19Z",
+  "aliases": [
+    "CVE-2026-47069"
+  ],
+  "summary": "Hackney has CRLF / header injection via unvalidated `domain` and `path` options",
+  "details": "### Summary\n\nCRLF injection in `hackney_cookie:setcookie/3` (`src/hackney_cookie.erl`). The function validates `Name` and `Value` against CR/LF and control characters but concatenates the `domain` and `path` options verbatim into the output binary. If either option carries attacker-controlled data, a `Host` header forwarded as the cookie domain, a request URI forwarded as the cookie path, a `\\r\\n` in the value splits the `Set-Cookie` header and lets the attacker inject additional headers into the HTTP response.\n\n### Details\n\n**1. Asymmetric validation**\n\nLines 27–34 of `hackney_cookie.erl` run `binary:match` on `Name` and `Value`, rejecting `=`, `,`, `;`, whitespace, `\\r`, `\\n`, `\\013`, and `\\014`. The `Domain` and `Path` options (lines 47 and 51) skip this check entirely and land straight in the result iolist:\n\n```erlang\n[<<\"; Domain=\">>, Domain]\n[<<\"; Path=\">>,   Path]\n```\n\n`iolist_to_binary(...)` on line 63 flattens everything and returns it to the caller.\n\n**2. Injection**\n\nA `Path` of `<<\"/x\\r\\nSet-Cookie: admin=1; Path=/\">>` produces a binary with a literal `\\r\\n`. Written into a `Set-Cookie` response header, the receiving HTTP parser splits it into two headers — one legitimate, one attacker-controlled.\n\n**3. Realistic trigger**\n\nCommon patterns: keying the cookie domain off `Host`, deriving the path from the request URI, or copying a `Location` path into a cookie. Any of these lets a remote attacker control the injected content.\n\n### PoC\n\n1. Call `hackney_cookie:setcookie(<<\"sid\">>, <<\"abc\">>, [{path, <<\"/x\\r\\nSet-Cookie: admin=1; Path=/\">>}])`.\n2. The returned binary contains a literal `\\r\\n` followed by a second `Set-Cookie:` line.\n3. Write the result into a `Set-Cookie` response header — the client parses two headers, including `admin=1`.\n\n### Impact\n\nCookie injection / HTTP response splitting at the `hackney_cookie` API boundary. Affects hackney 0.9.0 through 4.0.0 wherever `domain` or `path` options are populated from request data. Exploitation can overwrite session/auth cookies, fix cookies, or strip `Secure`/`HttpOnly` flags. CVSS v4.0: **2.1 (LOW)** — requires attacker-controlled input to reach the `domain` or `path` option.\n\n## Resources\n\n* Introduction commit: https://github.com/benoitc/hackney/commit/602d5c7f2ea4acbc83ed75230655d935a0750ebc\n* Patch commit: https://github.com/benoitc/hackney/commit/8e02b99c28aea1b3fa2ddc0e66f51fe5bb0ac540",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Hex",
+        "name": "hackney"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.9.0"
+            },
+            {
+              "fixed": "4.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-mp55-p8c9-rfw2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47069"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/benoitc/hackney/commit/8e02b99c28aea1b3fa2ddc0e66f51fe5bb0ac540"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cna.erlef.org/cves/CVE-2026-47069.html"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/benoitc/hackney"
+    },
+    {
+      "type": "WEB",
+      "url": "https://osv.dev/vulnerability/EEF-CVE-2026-47069"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-93"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-26T21:54:19Z",
+    "nvd_published_at": "2026-05-25T15:16:21Z"
+  }
+}
