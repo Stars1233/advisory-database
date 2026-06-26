@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-r57w-h3mc-4jrv",
+  "modified": "2026-06-26T09:30:47Z",
+  "published": "2026-06-26T09:30:47Z",
+  "aliases": [
+    "CVE-2026-11625"
+  ],
+  "details": "Bytes::Random::Secure versions through 0.29 for Perl share internal state across forked processes.\n\nWhen an object is initialised before forking, or when the functional interface is used, then the internal state for the PRNG is shared across processes and identical random streams will be produced.\n\nSecrets generated in multiprocess applications are predictable across processes.",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11625"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/daoswald/Bytes-Random-Secure/issues/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/daoswald/Bytes-Random-Secure/pull/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.metacpan.org/patches/B/Bytes-Random-Secure/0.29/CVE-2026-11625-r1.patch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-41564"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-335"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T09:16:33Z"
+  }
+}

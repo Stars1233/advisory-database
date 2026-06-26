@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-m6qj-3mpp-57v8",
-  "modified": "2026-06-11T16:40:55Z",
+  "modified": "2026-06-26T09:30:45Z",
   "published": "2026-05-20T18:31:36Z",
   "aliases": [
     "CVE-2026-9087"
@@ -51,6 +51,14 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2026:25098"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30049"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30050"
     },
     {
       "type": "WEB",

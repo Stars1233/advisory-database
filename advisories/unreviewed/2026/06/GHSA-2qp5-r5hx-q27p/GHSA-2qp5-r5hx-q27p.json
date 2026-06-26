@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2qp5-r5hx-q27p",
-  "modified": "2026-06-25T15:32:02Z",
+  "modified": "2026-06-26T09:30:46Z",
   "published": "2026-06-25T15:32:02Z",
   "aliases": [
     "CVE-2026-49319"
@@ -26,6 +26,10 @@
     {
       "type": "WEB",
       "url": "https://fccid.io/CWTR53R0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.asrg.io/security-advisories/cve-2026-49319-suzuki-swift-2024-rkes-rollback-replay"
     }
   ],
   "database_specific": {

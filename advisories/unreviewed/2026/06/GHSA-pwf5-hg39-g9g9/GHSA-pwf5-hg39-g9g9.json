@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-pwf5-hg39-g9g9",
+  "modified": "2026-06-26T09:30:46Z",
+  "published": "2026-06-26T09:30:46Z",
+  "aliases": [
+    "CVE-2026-57872"
+  ],
+  "details": "An unauthenticated\ndirectory traversal vulnerability exists in get_fcont.cgi in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient validation of user-supplied file path input before the requested\nfile is accessed by the CGI component. A remote attacker may exploit this\nvulnerability by sending a crafted request to read arbitrary files accessible\nto the affected process, resulting in information disclosure.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57872"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.geovision.com.tw/cyber_security.php"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T08:16:24Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mm39-vhxr-6hjg",
+  "modified": "2026-06-26T09:30:47Z",
+  "published": "2026-06-26T09:30:47Z",
+  "aliases": [
+    "CVE-2026-57879"
+  ],
+  "details": "An unauthenticated\nstack-based buffer overflow vulnerability exists in ssvr in GeoVision\nGV-LPC2011 and GV-LPC2211 V1.12 and earlier. The vulnerability is caused by\ninsufficient bounds checking when processing RTSP custom authentication data. A\nremote attacker may exploit this vulnerability by sending a crafted RTSP\nrequest, resulting in memory corruption, denial of service, or potentially\narbitrary code execution.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57879"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.geovision.com.tw/cyber_security.php"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-121"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-26T08:16:24Z"
+  }
+}
