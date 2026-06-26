@@ -1,13 +1,13 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-95jq-xph2-cx9h",
-  "modified": "2026-01-22T13:51:31Z",
+  "modified": "2026-06-26T20:26:11Z",
   "published": "2025-07-26T00:30:32Z",
   "aliases": [
     "CVE-2025-8101"
   ],
   "summary": "Linkify Allows Prototype Pollution & HTML Attribute Injection (XSS)",
-  "details": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') vulnerability in Linkify (linkifyjs) allows XSS Targeting HTML Attributes and Manipulating User-Controlled Variables.This issue affects Linkify: from 4.3.1 before 4.3.2.",
+  "details": "Prototype Pollution in internal `assign()` helper in Linkify allows remote attackers to execute arbitrary JavaScript (Stored or Reflected XSS) via injection of event handlers through unfiltered proto property. This issue affects Linkify version 4.3.1 and is fixed in 4.3.2.",
   "severity": [
     {
       "type": "CVSS_V4",
@@ -25,13 +25,16 @@
           "type": "ECOSYSTEM",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "4.3.1"
             },
             {
               "fixed": "4.3.2"
             }
           ]
         }
+      ],
+      "versions": [
+        "4.3.1"
       ]
     }
   ],
@@ -39,6 +42,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8101"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nfrasser/linkifyjs/commit/931d3e28b68951b8f898ea4d6504696346b485b0"
     },
     {
       "type": "WEB",
