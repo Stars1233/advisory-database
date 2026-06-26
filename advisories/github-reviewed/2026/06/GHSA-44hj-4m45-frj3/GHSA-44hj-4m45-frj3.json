@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-44hj-4m45-frj3",
+  "modified": "2026-06-26T16:32:05Z",
+  "published": "2026-06-26T16:32:05Z",
+  "aliases": [
+    "CVE-2026-44024"
+  ],
+  "summary": "Fluentd is Vulnerable to Remote Code Execution (RCE) via Arbitrary File Write in `${tag}` Placeholder",
+  "details": "Fluentd allows dynamically constructing file paths using the `${tag}` placeholder.\nIt was discovered that validation for this placeholder was insufficient.\n\nIf a Fluentd instance is configured to receive logs from untrusted sources and uses the `${tag}` placeholder in file configurations (such as the `path` parameter in the `out_file` plugin), an attacker can inject path traversal characters (e.g., `../`).\n\nWhen combined with certain formatting options, this vulnerability allows an attacker to write arbitrary files or overwrite existing files on the system with attacker-controlled content, bypassing intended directory restrictions.\n\n### Impact\nThis vulnerability allows for **Arbitrary File Write**, which can be directly escalated to full **Remote Code Execution (RCE)**.\nAn attacker could achieve RCE by overwriting critical system files, injecting executable plugins, or modifying configuration files.\nThe impact is Critical as it can lead to full system compromise without any authentication, depending on the Fluentd configuration and the privileges of the Fluentd process.\n\n### Patches\nv1.19.3\n\n### Workarounds\nIf an immediate upgrade is not possible, users are strongly advised to apply the following mitigations:\n\n1. Restrict Network Access\n   * Ensure that Fluentd input ports (such as `in_forward` on default port `24224`) are deployed within a closed, trusted network. Use firewall rules (e.g., iptables, AWS Security Groups) to block access from untrusted networks or instances.\n2. Run Fluentd as a non-root user\n   * Dropping privileges prevents Fluentd from writing to sensitive system directories (e.g., `/etc/`), significantly mitigating the risk of system-wide RCE.\n3. Revise configurations\n   * Do not use the `${tag}` placeholder in the `path` parameter of output plugins (like `out_file`) if the tag originates from an untrusted source.\n4. Filter incoming tags\n   * Strictly validate and filter incoming tags at the input layer (e.g., using `fluent-plugin-rewrite-tag-filter`) to drop any tags containing `.` or `/` characters.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "RubyGems",
+        "name": "fluentd"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.3"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 1.19.2"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/security/advisories/GHSA-44hj-4m45-frj3"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/fluent/fluentd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/releases/tag/v1.19.3"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-22",
+      "CWE-94"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-26T16:32:05Z",
+    "nvd_published_at": null
+  }
+}
