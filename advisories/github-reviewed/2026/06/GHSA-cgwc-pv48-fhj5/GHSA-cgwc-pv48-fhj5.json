@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cgwc-pv48-fhj5",
+  "modified": "2026-06-26T20:51:37Z",
+  "published": "2026-06-26T20:51:37Z",
+  "aliases": [
+    "CVE-2026-48802"
+  ],
+  "summary": "python-engineio has unbound thread allocation that can cause denial of service",
+  "details": "### Impact\nAn attacker can cause the creation of unnecessary background threads in the python-engineio server by exploiting the heartbeat mechanism, which launches a thread when a new connection is received, and when the client sends a PONG packet.\n\nNote: this issue primarily affects synchronous servers. Asynchronous servers allocate background tasks instead of physical threads, which are lightweight and less likely to cause denial of service. However, the fix that was implemented was also applied to the asynchronous case.\n\n### Patches\nVersion 4.13.2 addresses this issue as follows:\n\n- The initial background thread (or async task( for heartbeat management is only launched if a client passes authentication in the `connect` handler.\n- The server now ensures that there is only one background heatbeat thread (or async task) per client at a given point in time. Out of sequence PONG packets are now discarded when an active heartbeat thread is already running.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "python-engineio"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.13.2"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 4.13.1"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/miguelgrinberg/python-engineio/security/advisories/GHSA-cgwc-pv48-fhj5"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/miguelgrinberg/python-engineio"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-770"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-26T20:51:37Z",
+    "nvd_published_at": null
+  }
+}
