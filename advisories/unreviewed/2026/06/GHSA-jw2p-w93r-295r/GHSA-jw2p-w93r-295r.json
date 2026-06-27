@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jw2p-w93r-295r",
+  "modified": "2026-06-27T09:30:36Z",
+  "published": "2026-06-27T09:30:36Z",
+  "aliases": [
+    "CVE-2026-11364"
+  ],
+  "details": "The Product Specifications for WooCommerce plugin for WordPress is vulnerable to unauthorized modification, creation, and deletion of data in versions up to and including 0.8.9. This is due to a missing capability check and missing nonce verification in the __invoke() methods of the AttributeGroupController and AttributeController classes, which are bound to the 'dwps_modify_groups' and 'dwps_modify_attributes' AJAX actions. This makes it possible for authenticated attackers, with Subscriber-level access and above, to create, edit, and delete arbitrary product specification groups and attributes (taxonomy terms in the 'spec-group' and attribute taxonomies), corrupting business data and impacting the site's frontend display.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11364"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/product-specifications/tags/0.8.7/src/EntityUpdater/AttributeController.php#L18"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/product-specifications/tags/0.8.7/src/EntityUpdater/AttributeGroupController.php#L13"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/product-specifications/tags/0.8.7/src/EntityUpdater/Module.php#L19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/product-specifications/tags/0.8.9/src/EntityUpdater/AttributeController.php#L18"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/product-specifications/tags/0.8.9/src/EntityUpdater/AttributeGroupController.php#L13"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/product-specifications/tags/0.8.9/src/EntityUpdater/Module.php#L19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3580068%40product-specifications&new=3580068%40product-specifications&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/38318605-40f7-4676-b409-f98a6c27cbfe?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-27T08:16:43Z"
+  }
+}

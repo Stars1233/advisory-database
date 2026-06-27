@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cm99-m826-vgg7",
-  "modified": "2026-06-25T21:31:18Z",
+  "modified": "2026-06-27T09:30:36Z",
   "published": "2026-03-24T15:30:29Z",
   "aliases": [
     "CVE-2026-4775"
@@ -30,6 +30,22 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/security/cve/CVE-2026-4775"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30349"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30089"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30087"
     },
     {
       "type": "WEB",

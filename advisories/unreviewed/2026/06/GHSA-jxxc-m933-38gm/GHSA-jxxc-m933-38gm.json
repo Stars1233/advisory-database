@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jxxc-m933-38gm",
+  "modified": "2026-06-27T09:30:37Z",
+  "published": "2026-06-27T09:30:37Z",
+  "aliases": [
+    "CVE-2026-9242"
+  ],
+  "details": "The RegistrationMagic – Custom Registration Forms, User Registration, Payment, and User Login plugin for WordPress is vulnerable to Authentication Bypass via Insufficient Verification of Data Authenticity in all versions up to and including 6.0.8.6. This is due to the PayPal IPN `callback` handler being registered as a nopriv AJAX action with no authentication or nonce requirement, and critically because the handler updates the payment log database row with attacker-controlled POST data — including `payment_status` and the `custom` field encoding the target `user_id` — before PayPal IPN validation is performed, meaning the database remains poisoned even when validation subsequently fails. This makes it possible for unauthenticated attackers to authenticate as any WordPress user, including administrators, by submitting a forged IPN request that overwrites a payment log entry's `user_id` with that of a target account, then visiting the success return URL with a legitimately obtained security hash to cause the plugin to issue real WordPress authentication cookies for the targeted account.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9242"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.1/includes/class_rm_utilities.php#L1384"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.1/public/class_rm_public.php#L728"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.1/services/class_rm_paypal_service.php#L110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.1/services/class_rm_paypal_service.php#L155"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.4/includes/class_rm_utilities.php#L1384"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.4/public/class_rm_public.php#L728"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.4/services/class_rm_paypal_service.php#L110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/tags/6.0.8.4/services/class_rm_paypal_service.php#L155"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/trunk/includes/class_rm_utilities.php#L1384"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/trunk/public/class_rm_public.php#L728"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/trunk/services/class_rm_paypal_service.php#L110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/custom-registration-form-builder-with-submission-manager/trunk/services/class_rm_paypal_service.php#L155"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3532900%40custom-registration-form-builder-with-submission-manager&new=3532900%40custom-registration-form-builder-with-submission-manager&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1dcf68fd-e9d3-4a46-8bd4-15c2598b91fe?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-345"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-27T08:16:45Z"
+  }
+}

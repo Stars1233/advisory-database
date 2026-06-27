@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7w4v-h7g8-xr5r",
+  "modified": "2026-06-27T09:30:37Z",
+  "published": "2026-06-27T09:30:37Z",
+  "aliases": [
+    "CVE-2026-11987"
+  ],
+  "details": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution – Build Your Own Amazon, eBay, Etsy plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.0.4 via the 'id' parameter due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber-level access and above, to read any other vendor's products — including unpublished draft and pending listings — exposing product names, prices, SKUs, and descriptions belonging to other vendors. The permission callbacks for both the collection endpoint and the single-item endpoint only verify the generic vendor capability ('dokan_view_product_menu' / 'dokandar'), which every vendor holds, rather than confirming the requested author ID or product ownership matches the authenticated user.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11987"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/4.3.3/includes/Abstracts/DokanRESTController.php#L299"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/4.3.3/includes/Abstracts/DokanRESTController.php#L39"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/4.3.3/includes/Abstracts/DokanRESTController.php#L66"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/4.3.3/includes/REST/ProductController.php#L159"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/4.3.3/includes/REST/ProductController.php#L473"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/4.3.3/includes/REST/ProductController.php#L495"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/5.0.4/includes/Abstracts/DokanRESTController.php#L299"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/5.0.4/includes/Abstracts/DokanRESTController.php#L39"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/5.0.4/includes/Abstracts/DokanRESTController.php#L66"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/5.0.4/includes/REST/ProductController.php#L159"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/5.0.4/includes/REST/ProductController.php#L473"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/dokan-lite/tags/5.0.4/includes/REST/ProductController.php#L495"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3578095%40dokan-lite&new=3578095%40dokan-lite&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1359945a-cf4e-4883-830b-53a3fcd40e56?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-27T08:16:44Z"
+  }
+}
