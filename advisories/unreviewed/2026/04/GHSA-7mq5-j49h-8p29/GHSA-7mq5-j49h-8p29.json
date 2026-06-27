@@ -1,13 +1,17 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7mq5-j49h-8p29",
-  "modified": "2026-04-28T09:34:13Z",
+  "modified": "2026-06-27T18:35:14Z",
   "published": "2026-04-28T09:34:13Z",
   "aliases": [
     "CVE-2024-54011"
   ],
   "details": "Penetration Testing engineers at Amazon have discovered a flaw where the camera system fails to properly handle data supplied in certain requests, causing a service disruption. The manufacturer has released patch firmware for the flaw, please refer to the manufacturer's report for details and workarounds.",
   "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+    },
     {
       "type": "CVSS_V4",
       "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
