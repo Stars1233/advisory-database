@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-xwv4-jx2p-x8xw",
+  "modified": "2026-06-27T03:31:12Z",
+  "published": "2026-06-27T03:31:12Z",
+  "aliases": [
+    "CVE-2026-13335"
+  ],
+  "details": "The CodePeople Post Map for Google Maps plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'cpm_point' Post Meta in all versions up to, and including, 1.2.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13335"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/codepeople-post-map/tags/1.2.6/include/functions.php#L132"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/codepeople-post-map/tags/1.2.6/include/functions.php#L163"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/codepeople-post-map/tags/1.2.6/include/functions.php#L710"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/codepeople-post-map/tags/1.2.6/include/functions.php#L712"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/codepeople-post-map/tags/1.2.6/include/functions.php#L713"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/codepeople-post-map/tags/1.2.6/include/functions.php#L881"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3586404%40codepeople-post-map&new=3586404%40codepeople-post-map&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/411d6ca0-933a-4c68-9681-7fce9eb34c9d?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-27T02:16:29Z"
+  }
+}
