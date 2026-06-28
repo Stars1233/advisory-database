@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v4h4-747p-qjgx",
+  "modified": "2026-06-28T09:31:48Z",
+  "published": "2026-06-28T09:31:48Z",
+  "aliases": [
+    "CVE-2026-13483"
+  ],
+  "details": "A flaw has been found in arc53 DocsGPT up to 0.18.0. The affected element is the function encrypt_credentials of the file application/security/encryption.py of the component Credential Storage. This manipulation causes insufficient verification of data authenticity. It is possible to initiate the attack remotely. The complexity of an attack is rather high. The exploitability is described as difficult. The exploit has been published and may be used. The pull request to fix this issue awaits acceptance.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13483"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/arc53/DocsGPT/issues/2503"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/arc53/DocsGPT/pull/2331"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/arc53/DocsGPT"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-13483"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/837646"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/374480"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/374480/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-345"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-28T07:16:21Z"
+  }
+}
