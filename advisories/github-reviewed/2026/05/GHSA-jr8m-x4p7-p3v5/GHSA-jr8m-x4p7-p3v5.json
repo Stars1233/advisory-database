@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jr8m-x4p7-p3v5",
+  "modified": "2026-06-29T17:39:15Z",
+  "published": "2026-05-19T12:31:39Z",
+  "aliases": [
+    "CVE-2026-8727"
+  ],
+  "summary": "TYPO3 Remote Code Execution in extension \"Site Crawler\" (crawler)",
+  "details": "The TYPO3 Crawler extension passes the X-T3Crawler-Meta response header from crawled URLs directly to PHP's `unserialize()`. An attacker controlling a crawled endpoint can inject arbitrary serialized PHP objects, leading to Remote Code Execution on the TYPO3 server. Exploitation requires administrative privileges to configure a crawler-enabled page and trigger the crawl via a Scheduler task. This has been patched in versions 12.0.11 and 11.0.13.",
+  "severity": [
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "tomasnorre/crawler"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.0.11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "tomasnorre/crawler"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "11.0.13"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8727"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/tomasnorre/crawler/CVE-2026-8727.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/tomasnorre/crawler"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-ext-sa-2026-008"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-502"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-29T17:39:15Z",
+    "nvd_published_at": "2026-05-19T10:16:25Z"
+  }
+}
