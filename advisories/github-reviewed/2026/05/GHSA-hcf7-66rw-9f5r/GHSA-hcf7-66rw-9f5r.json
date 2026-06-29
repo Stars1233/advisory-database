@@ -1,12 +1,12 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-hcf7-66rw-9f5r",
-  "modified": "2026-05-19T19:49:52Z",
+  "modified": "2026-06-29T15:30:55Z",
   "published": "2026-05-19T19:49:52Z",
   "aliases": [
     "CVE-2026-45773"
   ],
-  "summary": "Trubo: Login callback CSRF/session fixation",
+  "summary": "Turbo: Login callback CSRF/session fixation",
   "details": "### Impact\n\nTurborepo's self-hosted login and SSO browser flows did not validate a CSRF state value on the localhost callback. While the CLI was waiting for authentication, a malicious web page could send a request to the local callback server with an attacker-controlled token. If accepted before the legitimate callback, the CLI could complete login with the wrong credentials.\n\nThis affects users authenticating the `turbo` CLI against self-hosted remote cache/auth endpoints. Vercel-hosted login flows using device authorization are not affected.\n\n### Fix\n\nThe login and SSO redirect flows now generate a random state value, include it in the browser authentication URL, and require the same value on the localhost callback before accepting a token. Callbacks with a missing or mismatched state are rejected.\n\n### Workarounds\n\nIf you cannot upgrade immediately, avoid browser-based self-hosted `turbo login` or SSO flows on machines that may load untrusted web content during authentication. Use a pre-provisioned token or environment-based authentication instead.",
   "severity": [
     {
