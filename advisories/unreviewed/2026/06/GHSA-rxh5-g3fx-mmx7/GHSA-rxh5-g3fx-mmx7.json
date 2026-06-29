@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-rxh5-g3fx-mmx7",
+  "modified": "2026-06-29T15:32:07Z",
+  "published": "2026-06-29T15:32:07Z",
+  "aliases": [
+    "CVE-2026-57341"
+  ],
+  "details": "Unauthenticated Insecure Direct Object References (IDOR) in Colissimo Officiel : Méthodes de livraison pour WooCommerce <= 2.9.0 versions.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57341"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/colissimo-shipping-methods-for-woocommerce/vulnerability/wordpress-colissimo-officiel-methodes-de-livraison-pour-woocommerce-plugin-2-9-0-insecure-direct-object-references-idor-vulnerability?_s_id=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-29T15:16:44Z"
+  }
+}
