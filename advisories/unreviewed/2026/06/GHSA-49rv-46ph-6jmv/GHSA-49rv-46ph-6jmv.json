@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-49rv-46ph-6jmv",
+  "modified": "2026-06-29T12:31:44Z",
+  "published": "2026-06-29T12:31:44Z",
+  "aliases": [
+    "CVE-2026-13560"
+  ],
+  "details": "A security vulnerability has been detected in Edimax EW-7478APC 1.04. The affected element is the function formAccept of the file /goform/formAccept of the component POST Request Handler. The manipulation of the argument submit-url leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13560"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lavender-bicycle-a5a.notion.site/EDIMAX-EW-7478APC-formAccept-34b53a41781f80d29512d2cd2a772554"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/cve/CVE-2026-13560"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/844110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/374568"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/374568/cti"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-77"
+    ],
+    "severity": "LOW",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-29T12:16:27Z"
+  }
+}
