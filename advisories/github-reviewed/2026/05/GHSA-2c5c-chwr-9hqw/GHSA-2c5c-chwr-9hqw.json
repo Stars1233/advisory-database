@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-2c5c-chwr-9hqw",
-  "modified": "2026-05-14T20:41:09Z",
+  "modified": "2026-06-30T22:27:49Z",
   "published": "2026-05-07T00:19:21Z",
   "aliases": [
     "CVE-2026-42582"
@@ -25,7 +25,7 @@
           "type": "ECOSYSTEM",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "4.2.0.Final"
             },
             {
               "fixed": "4.2.13.Final"
