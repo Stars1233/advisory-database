@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-93c7-w42j-xh4p",
+  "modified": "2026-06-30T00:31:30Z",
+  "published": "2026-06-30T00:31:30Z",
+  "aliases": [
+    "CVE-2026-57997"
+  ],
+  "details": "Strapi users-permissions plugin fails to restrict JWT algorithms when plugin::users-permissions.jwt.algorithm is not explicitly configured, allowing acceptance of HS384 and HS512 tokens alongside HS256. Attackers possessing the jwtSecret can mint tokens with non-standard HMAC variants to bypass algorithm restrictions and weaken authentication controls.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57997"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/strapi/strapi/issues/26587"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/strapi/strapi/pull/26752"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/strapi/strapi"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/strapi-users-permissions-jwt-algorithm-confusion-via-missing-algorithm-configuration"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-327"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-29T22:16:49Z"
+  }
+}
