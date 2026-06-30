@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-jpx9-q676-jrjx",
+  "modified": "2026-06-30T03:37:15Z",
+  "published": "2026-06-30T03:37:15Z",
+  "aliases": [
+    "CVE-2026-14160"
+  ],
+  "details": "Time-of-check time-of-use (TOCTOU) race condition vulnerability in Samsung Open Source Escargot allows Leveraging Race Conditions.\n\nThis issue affects Escargot: bab3a5797557014ce3c2e28419a6310cfba90d0d.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14160"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Samsung/escargot/commit/9e8084ecc2f68e8584d389414c3f37fda12dab7d"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-367"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T03:17:15Z"
+  }
+}
