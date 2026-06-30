@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p42q-9prx-q5wq",
+  "modified": "2026-06-30T18:41:30Z",
+  "published": "2026-06-30T18:41:30Z",
+  "aliases": [
+    "CVE-2026-48805"
+  ],
+  "summary": "Twig: Sandbox state regression in deprecated internal wrappers in `src/Resources/core.php`",
+  "details": "### Description\n\nThe 3.26.0 source-policy hardening changed the signature of `CoreExtension::checkArrow()` to take a boolean `$isSandboxed` instead of an `Environment`, and added the same `$isSandboxed` argument to `CoreExtension::arraySome()` and `CoreExtension::arrayEvery()`. Compiled templates were updated to pass the per-source sandbox state computed at the call site.\n\nThe deprecated internal wrappers exposed in `src/Resources/core.php` for legacy third-party code (`twig_check_arrow_in_sandbox()`, `twig_array_some()`, `twig_array_every()`) were not updated:\n\n- `twig_array_some()` and `twig_array_every()` call `CoreExtension::arraySome()` / `arrayEvery()` without forwarding the sandbox state. The underlying methods default `$isSandboxed` to `false`, so the callable-must-be-a-`Closure` restriction is silently bypassed in sandbox mode and a string callable such as `'strcmp'` is accepted.\n- `twig_check_arrow_in_sandbox()` passes the `Environment` object where `CoreExtension::checkArrow()` now expects a `bool`, which throws a `TypeError` on PHP 8+.\n\nCompiled Twig templates are not affected: they call `CoreExtension::*` directly with the correct arguments. Applications are only impacted if they still call the deprecated `twig_*` helpers on top of a sandboxed `Environment`.\n\n### Resolution\n\nThe three wrappers now resolve the current sandbox state via `twig_resolve_is_sandboxed()` (the same helper compiled templates use), and forward it to the corresponding `CoreExtension::*` method. `twig_check_arrow_in_sandbox()` no longer triggers a `TypeError`, and `twig_array_some()` / `twig_array_every()` now enforce the same sandbox restriction as compiled templates.\n\n### Credits\n\nWe would like to thank El Kharoubi Iosif for reporting the issue and Fabien Potencier for providing the fix.",
+  "severity": [],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Packagist",
+        "name": "twig/twig"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.27.0"
+            }
+          ]
+        }
+      ],
+      "database_specific": {
+        "last_known_affected_version_range": "<= 3.26.0"
+      }
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-p42q-9prx-q5wq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/twig/twig/CVE-2026-48805.yaml"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/twigphp/Twig"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/twigphp/Twig/releases/tag/v3.27.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://symfony.com/blog/cve-2026-48805-sandbox-state-regression-in-deprecated-internal-wrappers-in-src-resources-core-php"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-693"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-30T18:41:30Z",
+    "nvd_published_at": null
+  }
+}
