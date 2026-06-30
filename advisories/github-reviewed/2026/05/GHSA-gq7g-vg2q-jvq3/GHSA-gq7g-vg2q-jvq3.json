@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-gq7g-vg2q-jvq3",
+  "modified": "2026-06-30T17:18:21Z",
+  "published": "2026-05-26T13:30:46Z",
+  "aliases": [
+    "CVE-2026-42782"
+  ],
+  "summary": "Apache Syncope has an Improper Isolation or Compartmentalization vulnerability",
+  "details": "Improper Isolation or Compartmentalization vulnerability in Apache Syncope.\n\nAn administrator with adequate entitlements for Implementations can create a malicious Groovy class containing untrusted code reaching a non-sandboxed execution path via the class static initializer.\n\nThis issue affects Apache Syncope: 3.0 through 3.0.16, 4.0 through 4.0.5, 4.1.0.\n\nUsers are recommended to upgrade to version 4.0.6 / 4.1.1, which fix this issue by forcing even the static initializer in Groovy code to run in a sandbox.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.syncope.core:syncope-core-spring"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0-M0"
+            },
+            {
+              "last_affected": "3.0.16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.syncope.core:syncope-core-spring"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0-M0"
+            },
+            {
+              "fixed": "4.0.6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Maven",
+        "name": "org.apache.syncope.core:syncope-core-spring"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.1.0-M0"
+            },
+            {
+              "fixed": "4.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42782"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/b869ms0ofrd129f7tgsn9flxgv9ztg2r"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/25/4"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-653"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-30T17:18:21Z",
+    "nvd_published_at": "2026-05-25T16:16:19Z"
+  }
+}
