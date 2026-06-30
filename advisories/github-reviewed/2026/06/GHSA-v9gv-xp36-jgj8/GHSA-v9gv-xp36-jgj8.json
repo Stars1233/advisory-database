@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-v9gv-xp36-jgj8",
+  "modified": "2026-06-30T16:15:48Z",
+  "published": "2026-06-30T16:15:48Z",
+  "aliases": [
+    "CVE-2022-31008"
+  ],
+  "summary": "RabbitMQ has predictable credential obfuscation seed value used in Shovel and Federation plugins",
+  "details": "### Impact\n\nShovel and Federation plugins perform URI obfuscation in their worker (link) state. The encryption key used to encrypt\nthe URI was seeded with a predictable secret.\n\nThis means that in case of certain exceptions related to Shovel and Federation plugins,\nreasonably easily deobfuscatable data could appear in the node log.\n\nPatched versions correctly use a cluster-wide secret for that purpose.\n\n### Patches\n\nPatched versions:\n\n * `3.10.2`\n * `3.9.18`\n * `3.8.32`\n\n### Workarounds\n\nDisable Shovel and Federation plugins.\n\n### Credits\n\nRabbitMQ core team would like to thank Lajos @luos Gerecs and Anh Nguyen from Erlang Solutions\nfor responsibly disclosing and working with us on a patch for this vulnerability.\n\n### For more information\n\n * [Mailing list](https://groups.google.com/forum/#!forum/rabbitmq-users)\n * [Community Slack](https://rabbitmq-slack.herokuapp.com/)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Hex",
+        "name": "rabbit_common"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Hex",
+        "name": "rabbit_common"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "Hex",
+        "name": "rabbit_common"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.32"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-v9gv-xp36-jgj8"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31008"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/pull/4841"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/c22e1cb20e656d211e025c417d1fc75a9067b717"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/rabbitmq/rabbitmq-server"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-330",
+      "CWE-335"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-06-30T16:15:48Z",
+    "nvd_published_at": "2022-10-06T18:16:00Z"
+  }
+}
