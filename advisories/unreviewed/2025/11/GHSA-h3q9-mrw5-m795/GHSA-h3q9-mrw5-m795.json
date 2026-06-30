@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-h3q9-mrw5-m795",
-  "modified": "2025-12-17T21:30:37Z",
+  "modified": "2026-06-30T03:35:22Z",
   "published": "2025-11-04T03:30:28Z",
   "aliases": [
     "CVE-2025-43438"
@@ -21,19 +21,7 @@
     },
     {
       "type": "WEB",
-      "url": "https://support.apple.com/en-us/125632"
-    },
-    {
-      "type": "WEB",
-      "url": "https://support.apple.com/en-us/125633"
-    },
-    {
-      "type": "WEB",
-      "url": "https://support.apple.com/en-us/125634"
-    },
-    {
-      "type": "WEB",
-      "url": "https://support.apple.com/en-us/125638"
+      "url": "https://support.apple.com/en-us/125640"
     },
     {
       "type": "WEB",
@@ -41,7 +29,75 @@
     },
     {
       "type": "WEB",
-      "url": "https://support.apple.com/en-us/125640"
+      "url": "https://support.apple.com/en-us/125638"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125634"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125633"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125632"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-43438.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2448784"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-43438"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23743"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23742"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23591"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23583"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23452"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23451"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23434"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23433"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:23110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:22790"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:22789"
     }
   ],
   "database_specific": {

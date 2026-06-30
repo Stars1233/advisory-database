@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-97q5-qf47-hvrw",
-  "modified": "2026-06-15T21:30:24Z",
+  "modified": "2026-06-30T03:36:17Z",
   "published": "2026-04-16T18:31:22Z",
   "aliases": [
     "CVE-2026-41082"
@@ -25,6 +25,14 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-41082"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2459003"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/ocaml/opam/releases/tag/2.5.1"
     },
     {
@@ -34,6 +42,10 @@
     {
       "type": "WEB",
       "url": "https://osv.dev/vulnerability/OSEC-2026-03"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-41082.json"
     }
   ],
   "database_specific": {

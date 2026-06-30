@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-p9cp-qq4c-2wr5",
-  "modified": "2026-01-09T12:32:25Z",
+  "modified": "2026-06-30T03:35:24Z",
   "published": "2026-01-09T12:32:25Z",
   "aliases": [
     "CVE-2025-9222"
@@ -29,7 +29,19 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-9222"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2428222"
+    },
+    {
+      "type": "WEB",
       "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/562561"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-9222.json"
     }
   ],
   "database_specific": {

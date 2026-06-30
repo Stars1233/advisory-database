@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-5w36-x85h-pphm",
-  "modified": "2026-01-27T21:31:49Z",
+  "modified": "2026-06-30T03:35:30Z",
   "published": "2026-01-27T21:31:49Z",
   "aliases": [
     "CVE-2026-24881"
@@ -21,7 +21,19 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-24881"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433480"
+    },
+    {
+      "type": "WEB",
       "url": "https://dev.gnupg.org/T8044"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-24881.json"
     },
     {
       "type": "WEB",

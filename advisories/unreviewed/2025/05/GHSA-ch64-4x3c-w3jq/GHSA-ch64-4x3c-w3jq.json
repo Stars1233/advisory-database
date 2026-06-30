@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-ch64-4x3c-w3jq",
-  "modified": "2026-06-24T12:30:30Z",
+  "modified": "2026-06-30T03:35:19Z",
   "published": "2025-05-27T21:32:17Z",
   "aliases": [
     "CVE-2025-5278"
@@ -22,6 +22,14 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2026:28911"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:33124"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:33313"
     },
     {
       "type": "WEB",

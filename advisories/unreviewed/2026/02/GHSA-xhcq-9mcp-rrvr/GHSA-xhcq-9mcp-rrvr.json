@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xhcq-9mcp-rrvr",
-  "modified": "2026-02-21T00:31:43Z",
+  "modified": "2026-06-30T03:35:37Z",
   "published": "2026-02-21T00:31:43Z",
   "aliases": [
     "CVE-2026-2047"
@@ -21,7 +21,23 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:4173"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-2047"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2441517"
+    },
+    {
+      "type": "WEB",
       "url": "https://gitlab.gnome.org/GNOME/gimp/-/merge_requests/2600/diffs?commit_id=dd2faac351f1ff2588529fedc606e6a5f815577c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-2047.json"
     },
     {
       "type": "WEB",
@@ -31,6 +47,7 @@
   "database_specific": {
     "cwe_ids": [
       "CWE-122",
+      "CWE-131",
       "CWE-787"
     ],
     "severity": "HIGH",

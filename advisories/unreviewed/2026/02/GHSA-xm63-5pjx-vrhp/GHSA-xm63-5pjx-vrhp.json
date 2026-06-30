@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xm63-5pjx-vrhp",
-  "modified": "2026-06-02T15:31:52Z",
+  "modified": "2026-06-30T03:35:34Z",
   "published": "2026-02-11T21:30:42Z",
   "aliases": [
     "CVE-2026-26157"
@@ -38,6 +38,10 @@
     {
       "type": "WEB",
       "url": "https://git.busybox.net/busybox/commit/archival?id=3fb6b31c716669e12f75a2accd31bb7685b1a1cb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-26157.json"
     }
   ],
   "database_specific": {

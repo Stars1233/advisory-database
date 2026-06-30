@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-727r-mf78-ghxp",
-  "modified": "2026-01-26T21:30:36Z",
+  "modified": "2026-06-30T03:35:30Z",
   "published": "2026-01-26T21:30:36Z",
   "aliases": [
     "CVE-2025-14459"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2420938"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-14459.json"
     }
   ],
   "database_specific": {

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-j4f8-4p6w-v5h6",
-  "modified": "2026-04-12T15:30:26Z",
+  "modified": "2026-06-30T03:36:15Z",
   "published": "2026-04-12T15:30:26Z",
   "aliases": [
     "CVE-2019-25695"
@@ -25,7 +25,19 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2019-25695"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2457652"
+    },
+    {
+      "type": "WEB",
       "url": "https://cloud.r-project.org/bin/windows"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2019/cve-2019-25695.json"
     },
     {
       "type": "WEB",

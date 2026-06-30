@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6j8r-j98h-9g9f",
-  "modified": "2026-03-19T15:31:10Z",
+  "modified": "2026-06-30T03:35:31Z",
   "published": "2026-02-02T15:30:34Z",
   "aliases": [
     "CVE-2026-1761"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1761"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-1761.json"
     },
     {
       "type": "WEB",

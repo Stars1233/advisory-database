@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-v24g-wpq8-cwqx",
-  "modified": "2026-06-01T18:31:27Z",
+  "modified": "2026-06-30T03:36:23Z",
   "published": "2026-04-24T15:32:35Z",
   "aliases": [
     "CVE-2026-31617"
@@ -18,6 +18,14 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31617"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-31617"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2461448"
     },
     {
       "type": "WEB",
@@ -54,10 +62,16 @@
     {
       "type": "WEB",
       "url": "https://git.kernel.org/stable/c/d58ba8f6546232f8414f396c189297dbee03f1a7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-31617.json"
     }
   ],
   "database_specific": {
-    "cwe_ids": [],
+    "cwe_ids": [
+      "CWE-191"
+    ],
     "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,

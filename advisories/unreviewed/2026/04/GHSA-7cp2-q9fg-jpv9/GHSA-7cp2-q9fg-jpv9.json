@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7cp2-q9fg-jpv9",
-  "modified": "2026-04-11T03:30:30Z",
+  "modified": "2026-06-30T03:36:16Z",
   "published": "2026-04-11T03:30:30Z",
   "aliases": [
     "CVE-2026-4154"
@@ -21,11 +21,67 @@
     },
     {
       "type": "WEB",
+      "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-221"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-4154.json"
+    },
+    {
+      "type": "WEB",
       "url": "https://gitlab.gnome.org/GNOME/gimp/-/commit/2e7ed91793792d9e980b2df4c829e9aa60459253"
     },
     {
       "type": "WEB",
-      "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-221"
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2457530"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-4154"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:26168"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25907"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25901"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25899"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20691"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20554"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20553"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20552"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19362"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:17533"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:16484"
     }
   ],
   "database_specific": {

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f67m-8h88-qhqh",
-  "modified": "2026-01-08T21:30:34Z",
+  "modified": "2026-06-30T03:35:24Z",
   "published": "2026-01-08T18:30:49Z",
   "aliases": [
     "CVE-2025-50334"
@@ -25,6 +25,14 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-50334"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2428058"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/FPokerFace/Security-Advisory/tree/main/CVE-2025-50334"
     },
     {
@@ -34,6 +42,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/TechnitiumSoftware/DnsServer/blob/v13.3/DnsServerCore/Dns/DnsServer.cs"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-50334.json"
     },
     {
       "type": "WEB",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g54x-7hpm-29q8",
-  "modified": "2026-02-27T06:31:28Z",
+  "modified": "2026-06-30T03:35:46Z",
   "published": "2026-02-27T06:31:28Z",
   "aliases": [
     "CVE-2026-28364"
@@ -21,15 +21,28 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-28364"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2443348"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/ocaml/security-advisories/blob/generated-osv/2026/OSEC-2026-01.json"
     },
     {
       "type": "WEB",
       "url": "https://osv.dev/vulnerability/OSEC-2026-01"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-28364.json"
     }
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-125",
       "CWE-126"
     ],
     "severity": "HIGH",

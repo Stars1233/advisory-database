@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-jgfq-mgxg-4qwm",
-  "modified": "2026-02-27T00:31:43Z",
+  "modified": "2026-06-30T03:35:30Z",
   "published": "2026-01-27T09:30:29Z",
   "aliases": [
     "CVE-2026-21721"
@@ -21,11 +21,48 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:2914"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:2920"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3078"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3529"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:5633"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:8229"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-21721"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433242"
+    },
+    {
+      "type": "WEB",
       "url": "https://grafana.com/security/security-advisories/CVE-2026-21721"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-21721.json"
     }
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-639",
       "CWE-863"
     ],
     "severity": "HIGH",

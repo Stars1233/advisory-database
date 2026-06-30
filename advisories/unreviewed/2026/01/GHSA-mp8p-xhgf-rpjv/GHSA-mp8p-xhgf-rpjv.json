@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mp8p-xhgf-rpjv",
-  "modified": "2026-01-06T18:31:31Z",
+  "modified": "2026-06-30T03:35:23Z",
   "published": "2026-01-02T18:30:31Z",
   "aliases": [
     "CVE-2025-67268"
@@ -25,16 +25,41 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0770"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0771"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:1621"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-67268"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2426835"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/Jaenact/gspd_cve/blob/main/CVE-2025-67268/README.md"
     },
     {
       "type": "WEB",
       "url": "https://github.com/ntpsec/gpsd/blob/master/drivers/driver_nmea2000.c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-67268.json"
     }
   ],
   "database_specific": {
     "cwe_ids": [
-      "CWE-122"
+      "CWE-122",
+      "CWE-1285"
     ],
     "severity": "CRITICAL",
     "github_reviewed": false,

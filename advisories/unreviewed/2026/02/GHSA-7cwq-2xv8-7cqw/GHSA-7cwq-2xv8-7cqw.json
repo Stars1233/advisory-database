@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7cwq-2xv8-7cqw",
-  "modified": "2026-03-18T21:32:57Z",
+  "modified": "2026-06-30T03:35:32Z",
   "published": "2026-02-04T18:30:43Z",
   "aliases": [
     "CVE-2026-23074"
@@ -21,23 +21,11 @@
     },
     {
       "type": "WEB",
-      "url": "https://git.kernel.org/stable/c/0686bedfed34155520f3f735cbf3210cb9044380"
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-23074.json"
     },
     {
       "type": "WEB",
-      "url": "https://git.kernel.org/stable/c/16ed73c1282d376b956bff23e5139add061767ba"
-    },
-    {
-      "type": "WEB",
-      "url": "https://git.kernel.org/stable/c/4c7e8aa71c9232cba84c289b4b56cba80b280841"
-    },
-    {
-      "type": "WEB",
-      "url": "https://git.kernel.org/stable/c/50da4b9d07a7a463e2cfb738f3ad4cff6b2c9c3b"
-    },
-    {
-      "type": "WEB",
-      "url": "https://git.kernel.org/stable/c/73d970ff0eddd874a84c953387c7f4464b705fc6"
+      "url": "https://git.kernel.org/stable/c/dad49a67c2d817bfec98e6e45121b351e3a0202c"
     },
     {
       "type": "WEB",
@@ -45,12 +33,73 @@
     },
     {
       "type": "WEB",
-      "url": "https://git.kernel.org/stable/c/dad49a67c2d817bfec98e6e45121b351e3a0202c"
+      "url": "https://git.kernel.org/stable/c/73d970ff0eddd874a84c953387c7f4464b705fc6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/50da4b9d07a7a463e2cfb738f3ad4cff6b2c9c3b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/4c7e8aa71c9232cba84c289b4b56cba80b280841"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/16ed73c1282d376b956bff23e5139add061767ba"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.kernel.org/stable/c/0686bedfed34155520f3f735cbf3210cb9044380"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2436791"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-23074"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3810"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3685"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3634"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3388"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3360"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3277"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3268"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3083"
     }
   ],
   "database_specific": {
     "cwe_ids": [
-      "CWE-416"
+      "CWE-416",
+      "CWE-825"
     ],
     "severity": "HIGH",
     "github_reviewed": false,

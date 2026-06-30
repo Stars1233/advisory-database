@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6q56-mrmc-cph4",
-  "modified": "2026-01-21T18:30:27Z",
+  "modified": "2026-06-30T03:35:24Z",
   "published": "2026-01-13T00:30:46Z",
   "aliases": [
     "CVE-2025-15514"
@@ -25,6 +25,14 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-15514"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2428828"
+    },
+    {
+      "type": "WEB",
       "url": "https://https://github.com/ollama/ollama"
     },
     {
@@ -34,6 +42,10 @@
     {
       "type": "WEB",
       "url": "https://ollama.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-15514.json"
     },
     {
       "type": "WEB",

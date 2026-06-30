@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-cm99-m826-vgg7",
-  "modified": "2026-06-27T09:30:36Z",
+  "modified": "2026-06-30T03:36:00Z",
   "published": "2026-03-24T15:30:29Z",
   "aliases": [
     "CVE-2026-4775"
@@ -21,6 +21,10 @@
     },
     {
       "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-4775.json"
+    },
+    {
+      "type": "WEB",
       "url": "https://lists.debian.org/debian-lts-announce/2026/04/msg00016.html"
     },
     {
@@ -30,6 +34,10 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/security/cve/CVE-2026-4775"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:33388"
     },
     {
       "type": "WEB",

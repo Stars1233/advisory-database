@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xrqh-48jh-pjv2",
-  "modified": "2026-06-10T18:31:39Z",
+  "modified": "2026-06-30T03:35:52Z",
   "published": "2026-03-13T21:31:51Z",
   "aliases": [
     "CVE-2026-4111"
@@ -22,6 +22,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/libarchive/libarchive/pull/2877"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-4111.json"
     },
     {
       "type": "WEB",

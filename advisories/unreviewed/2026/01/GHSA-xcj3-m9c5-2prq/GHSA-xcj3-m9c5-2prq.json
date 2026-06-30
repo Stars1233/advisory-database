@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-xcj3-m9c5-2prq",
-  "modified": "2026-01-06T18:31:32Z",
+  "modified": "2026-06-30T03:35:23Z",
   "published": "2026-01-02T18:30:31Z",
   "aliases": [
     "CVE-2025-67269"
@@ -21,6 +21,22 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0770"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0771"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-67269"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2426810"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/Jaenact/gspd_cve/blob/main/CVE-2025-67269/README.md"
     },
     {
@@ -30,6 +46,10 @@
     {
       "type": "WEB",
       "url": "https://gitlab.com/gpsd/gpsd/-/commit/ffa1d6f40bca0b035fc7f5e563160ebb67199da7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-67269.json"
     }
   ],
   "database_specific": {

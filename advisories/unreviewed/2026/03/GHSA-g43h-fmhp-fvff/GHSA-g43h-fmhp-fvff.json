@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-g43h-fmhp-fvff",
-  "modified": "2026-03-18T21:32:58Z",
+  "modified": "2026-06-30T03:35:56Z",
   "published": "2026-03-18T18:31:18Z",
   "aliases": [
     "CVE-2026-26740"
@@ -21,7 +21,19 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-26740"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2448747"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/zakkanijia/POC/blob/main/giflib/giftool/giflib_giftool_gce_len_heap_oobwrite_disclosure.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-26740.json"
     }
   ],
   "database_specific": {

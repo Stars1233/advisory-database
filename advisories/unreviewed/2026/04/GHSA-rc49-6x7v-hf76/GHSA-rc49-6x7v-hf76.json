@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rc49-6x7v-hf76",
-  "modified": "2026-04-07T18:31:34Z",
+  "modified": "2026-06-30T03:36:09Z",
   "published": "2026-04-07T15:30:51Z",
   "aliases": [
     "CVE-2026-20911"
@@ -21,6 +21,18 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-20911"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2455959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-20911.json"
+    },
+    {
+      "type": "WEB",
       "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2026-2330"
     },
     {
@@ -30,6 +42,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-120",
       "CWE-131"
     ],
     "severity": "CRITICAL",

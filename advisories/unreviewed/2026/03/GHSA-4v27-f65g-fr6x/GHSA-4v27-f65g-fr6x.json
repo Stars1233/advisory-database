@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-4v27-f65g-fr6x",
-  "modified": "2026-03-13T21:31:44Z",
+  "modified": "2026-06-30T03:35:51Z",
   "published": "2026-03-12T03:31:05Z",
   "aliases": [
     "CVE-2023-43010"
@@ -21,15 +21,7 @@
     },
     {
       "type": "WEB",
-      "url": "https://support.apple.com/en-us/120300"
-    },
-    {
-      "type": "WEB",
-      "url": "https://support.apple.com/en-us/120877"
-    },
-    {
-      "type": "WEB",
-      "url": "https://support.apple.com/en-us/120879"
+      "url": "https://support.apple.com/en-us/126646"
     },
     {
       "type": "WEB",
@@ -37,7 +29,67 @@
     },
     {
       "type": "WEB",
-      "url": "https://support.apple.com/en-us/126646"
+      "url": "https://support.apple.com/en-us/120879"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/120877"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/120300"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2023/cve-2023-43010.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2448778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2023-43010"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:10364"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:9680"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:9679"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:9653"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:9646"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:9636"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:9144"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:8496"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:8492"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:8180"
     },
     {
       "type": "WEB",
@@ -46,6 +98,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-120",
       "CWE-787"
     ],
     "severity": "HIGH",

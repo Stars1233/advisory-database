@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8xcr-6f99-hm7w",
-  "modified": "2026-03-25T18:31:43Z",
+  "modified": "2026-06-30T03:36:00Z",
   "published": "2026-03-25T09:31:36Z",
   "aliases": [
     "CVE-2026-3608"
@@ -21,6 +21,22 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:11344"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:7342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-3608"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2451139"
+    },
+    {
+      "type": "WEB",
       "url": "https://downloads.isc.org/isc/kea/2.6.5"
     },
     {
@@ -30,6 +46,10 @@
     {
       "type": "WEB",
       "url": "https://kb.isc.org/docs/cve-2026-3608"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3608.json"
     },
     {
       "type": "WEB",

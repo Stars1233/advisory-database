@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-92xv-mw29-x4px",
-  "modified": "2026-05-03T15:30:28Z",
+  "modified": "2026-06-30T03:36:15Z",
   "published": "2026-04-09T18:31:27Z",
   "aliases": [
     "CVE-2026-1584"
@@ -30,6 +30,10 @@
     {
       "type": "WEB",
       "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2435258"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-1584.json"
     }
   ],
   "database_specific": {

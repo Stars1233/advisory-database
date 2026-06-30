@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-j84q-hxmx-jr5m",
-  "modified": "2026-01-16T21:30:37Z",
+  "modified": "2026-06-30T03:35:25Z",
   "published": "2026-01-16T21:30:36Z",
   "aliases": [
     "CVE-2021-47839"
@@ -25,11 +25,23 @@
     },
     {
       "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2021-47839"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2430451"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/vesparny/marky"
     },
     {
       "type": "WEB",
       "url": "https://imgur.com/a/qclfrUx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2021/cve-2021-47839.json"
     },
     {
       "type": "WEB",

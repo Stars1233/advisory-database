@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-6p7x-c5rv-9w7v",
-  "modified": "2026-04-27T15:30:38Z",
+  "modified": "2026-06-30T03:36:22Z",
   "published": "2026-04-22T15:31:42Z",
   "aliases": [
     "CVE-2026-31474"
@@ -18,6 +18,26 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31474"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:27288"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:27731"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:27789"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-31474"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2460646"
     },
     {
       "type": "WEB",
@@ -38,10 +58,15 @@
     {
       "type": "WEB",
       "url": "https://git.kernel.org/stable/c/eec8a1b18a79600bd4419079dc0026c1db72a830"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-31474.json"
     }
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-364",
       "CWE-416"
     ],
     "severity": "HIGH",

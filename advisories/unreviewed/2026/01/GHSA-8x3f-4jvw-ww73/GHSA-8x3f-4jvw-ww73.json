@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-8x3f-4jvw-ww73",
-  "modified": "2026-02-17T21:31:12Z",
+  "modified": "2026-06-30T03:35:24Z",
   "published": "2026-01-08T15:31:25Z",
   "aliases": [
     "CVE-2026-0719"
@@ -18,6 +18,10 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0719"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-0719.json"
     },
     {
       "type": "WEB",

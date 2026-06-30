@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-mf24-ggcw-q27g",
-  "modified": "2026-03-26T15:30:32Z",
+  "modified": "2026-06-30T03:36:00Z",
   "published": "2026-03-25T03:31:32Z",
   "aliases": [
     "CVE-2026-28861"
@@ -18,6 +18,18 @@
     {
       "type": "ADVISORY",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-28861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2453007"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-28861.json"
     },
     {
       "type": "WEB",
@@ -42,6 +54,7 @@
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-346",
       "CWE-79"
     ],
     "severity": "MODERATE",

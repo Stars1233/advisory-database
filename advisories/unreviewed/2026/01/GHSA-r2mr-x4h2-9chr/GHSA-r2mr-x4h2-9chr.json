@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-r2mr-x4h2-9chr",
-  "modified": "2026-05-12T15:31:13Z",
+  "modified": "2026-06-30T03:35:29Z",
   "published": "2026-01-21T00:31:43Z",
   "aliases": [
     "CVE-2026-21945"
@@ -21,15 +21,80 @@
     },
     {
       "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpujan2026.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-21945.json"
+    },
+    {
+      "type": "WEB",
       "url": "https://cert-portal.siemens.com/productcert/html/ssa-032379.html"
     },
     {
       "type": "WEB",
-      "url": "https://www.oracle.com/security-alerts/cpujan2026.html"
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2429927"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-21945"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:4832"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:1606"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0933"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0932"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0931"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0928"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0927"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0901"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0899"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0897"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0895"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:0847"
     }
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-295",
       "CWE-400"
     ],
     "severity": "HIGH",

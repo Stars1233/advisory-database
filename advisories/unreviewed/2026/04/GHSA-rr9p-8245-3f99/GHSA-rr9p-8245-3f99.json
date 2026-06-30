@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-rr9p-8245-3f99",
-  "modified": "2026-04-11T03:30:30Z",
+  "modified": "2026-06-30T03:36:16Z",
   "published": "2026-04-11T03:30:30Z",
   "aliases": [
     "CVE-2026-4153"
@@ -21,15 +21,72 @@
     },
     {
       "type": "WEB",
+      "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-220"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-4153.json"
+    },
+    {
+      "type": "WEB",
       "url": "https://gitlab.gnome.org/GNOME/gimp/-/commit/98cb1371fd4e22cca75017ea3252dc32fc218712"
     },
     {
       "type": "WEB",
-      "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-220"
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2457536"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-4153"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:26168"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25907"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25901"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:25899"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20691"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20554"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20553"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:20552"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19362"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:17533"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:16484"
     }
   ],
   "database_specific": {
     "cwe_ids": [
+      "CWE-120",
       "CWE-122",
       "CWE-787"
     ],
