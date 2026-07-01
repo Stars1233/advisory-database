@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4pmm-4ff4-v6hc",
+  "modified": "2026-07-01T00:34:05Z",
+  "published": "2026-07-01T00:34:05Z",
+  "aliases": [
+    "CVE-2026-13884"
+  ],
+  "details": "Integer overflow in Chromecast in Google Chrome prior to 150.0.7871.47 allowed a local attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: Medium)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13884"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/500077014"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-122"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:02Z"
+  }
+}

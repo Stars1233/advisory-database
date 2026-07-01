@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9wj8-w8j2-m68x",
+  "modified": "2026-07-01T00:34:03Z",
+  "published": "2026-07-01T00:34:03Z",
+  "aliases": [
+    "CVE-2026-13822"
+  ],
+  "details": "Inappropriate implementation in Extensions in Google Chrome on Android prior to 150.0.7871.47 allowed an attacker who convinced a user to install a malicious extension to bypass same origin policy via a crafted Chrome Extension. (Chromium security severity: High)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13822"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/513148038"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:16:56Z"
+  }
+}

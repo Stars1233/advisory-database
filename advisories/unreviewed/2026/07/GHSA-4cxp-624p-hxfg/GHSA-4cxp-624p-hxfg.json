@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-4cxp-624p-hxfg",
+  "modified": "2026-07-01T00:34:10Z",
+  "published": "2026-07-01T00:34:10Z",
+  "aliases": [
+    "CVE-2026-14070"
+  ],
+  "details": "Integer overflow in WebNN in Google Chrome prior to 150.0.7871.47 allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Low)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14070"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/505137978"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-457"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:19Z"
+  }
+}

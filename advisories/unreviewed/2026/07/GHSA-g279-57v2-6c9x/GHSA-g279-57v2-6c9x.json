@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g279-57v2-6c9x",
+  "modified": "2026-07-01T00:34:10Z",
+  "published": "2026-07-01T00:34:10Z",
+  "aliases": [
+    "CVE-2026-14090"
+  ],
+  "details": "Insufficient validation of untrusted input in CameraCapture in Google Chrome on ChromeOS prior to 150.0.7871.47 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Low)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14090"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/513194241"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-125"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:21Z"
+  }
+}

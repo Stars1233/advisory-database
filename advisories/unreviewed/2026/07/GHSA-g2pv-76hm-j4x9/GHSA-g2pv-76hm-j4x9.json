@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-g2pv-76hm-j4x9",
+  "modified": "2026-07-01T00:34:13Z",
+  "published": "2026-07-01T00:34:12Z",
+  "aliases": [
+    "CVE-2026-56264"
+  ],
+  "details": "Crawl4AI before 0.8.7 contains an arbitrary JavaScript execution vulnerability in the Docker API server's /execute_js endpoint, which accepts and executes arbitrary user-supplied JavaScript in the server's browser context with --disable-web-security enabled. An attacker can execute arbitrary JavaScript and, combined with the browser's relaxed security settings, perform server-side request forgery against internal services.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56264"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/unclecode/crawl4ai"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/crawl4ai-arbitrary-javascript-execution-via-execute-js-endpoint"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:29Z"
+  }
+}

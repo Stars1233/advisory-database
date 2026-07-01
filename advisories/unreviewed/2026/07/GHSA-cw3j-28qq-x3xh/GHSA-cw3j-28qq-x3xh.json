@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-cw3j-28qq-x3xh",
+  "modified": "2026-07-01T00:34:02Z",
+  "published": "2026-07-01T00:34:02Z",
+  "aliases": [
+    "CVE-2025-71381"
+  ],
+  "details": "Hono before 4.10.2 (fixed in 4.10.3) contains a flaw in its CORS middleware: when the origin is not set to \"*\", the middleware copies the Vary header from the incoming request into the response. Because Vary is a response header that should be managed by the server, an attacker can supply arbitrary Vary values that are reflected into the response, potentially causing cache key pollution and inconsistent CORS enforcement in environments that rely on shared caches or proxies.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/honojs/hono/security/advisories/GHSA-q7jf-gf43-6x6p"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71381"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/hono-vary-header-injection-in-cors-middleware"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-113"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:16:52Z"
+  }
+}

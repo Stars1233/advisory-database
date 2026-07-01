@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fmjf-m6r6-43rw",
+  "modified": "2026-07-01T00:34:04Z",
+  "published": "2026-07-01T00:34:03Z",
+  "aliases": [
+    "CVE-2026-13833"
+  ],
+  "details": "Uninitialized Use in ANGLE in Google Chrome on Mac prior to 150.0.7871.47 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13833"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/513920082"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-457"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:16:57Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-994r-m5r3-f3p9",
+  "modified": "2026-07-01T00:34:13Z",
+  "published": "2026-07-01T00:34:13Z",
+  "aliases": [
+    "CVE-2026-56331"
+  ],
+  "details": "Capgo before 12.128.2 contains improper error handling in the /private/accept_invitation endpoint that returns HTTP 500 instead of safe 4xx errors when magic_invite_string is invalid. Attackers can trigger this vulnerability using only the public key by submitting malformed magic_invite_string values to cause server errors and leak internal processing details.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-34p8-fh3m-376x"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56331"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/capgo-improper-error-handling-in-accept-invitation-endpoint-via-invalid-magic-string"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-209"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:30Z"
+  }
+}

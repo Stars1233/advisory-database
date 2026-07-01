@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-85cg-fg77-rrm5",
+  "modified": "2026-07-01T00:34:01Z",
+  "published": "2026-07-01T00:34:01Z",
+  "aliases": [
+    "CVE-2026-58447"
+  ],
+  "details": "Invidious through 2.20260626.0, fixed in commit 77ad416, contains a broken object level authorization vulnerability that allows authenticated attackers to delete videos from other users' playlists by supplying an arbitrary global video index in the remove_video action of the playlist endpoint. Attackers can obtain per-video index values from the public playlist JSON API and submit them to the playlist video deletion endpoint without ownership validation, permanently removing videos from playlists they do not own.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58447"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/iv-org/invidious/issues/5777"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/iv-org/invidious/pull/5790"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/iv-org/invidious/commit/77ad41678b45c4f6815940123f1796fc51259f45"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/invidious-cross-user-playlist-video-deletion-via-missing-ownership-check"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T22:16:58Z"
+  }
+}

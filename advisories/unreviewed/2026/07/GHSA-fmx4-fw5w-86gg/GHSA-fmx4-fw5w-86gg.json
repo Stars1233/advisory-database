@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-fmx4-fw5w-86gg",
+  "modified": "2026-07-01T00:34:12Z",
+  "published": "2026-07-01T00:34:12Z",
+  "aliases": [
+    "CVE-2026-56230"
+  ],
+  "details": "Capgo before 12.128.2 contains a broken object level authorization vulnerability in middlewareKey() that accepts the client-controlled x-limited-key-id header without validating ownership, allowing authenticated users to adopt cross-tenant limited keys. Attackers can supply another tenant's limited key ID to bypass authorization checks and access unauthorized cross-tenant resources across multiple API endpoints.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-cppm-733w-hg86"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56230"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/capgo-broken-object-level-authorization-via-x-limited-key-id-header"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:28Z"
+  }
+}

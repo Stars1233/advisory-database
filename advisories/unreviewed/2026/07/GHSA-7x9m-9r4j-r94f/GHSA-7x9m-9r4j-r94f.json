@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7x9m-9r4j-r94f",
+  "modified": "2026-07-01T00:34:12Z",
+  "published": "2026-07-01T00:34:12Z",
+  "aliases": [
+    "CVE-2026-50110"
+  ],
+  "details": "Storage Concentrator (SC & SCVM) contains hardcoded credentials for numerous internal services embedded within a configuration file. While the credentials are stored in an encoded format, the encoding can be reversed to plaintext. The exposed credentials span a broad range of internal services, including database accounts, licensing, replication services, and third-party integrations, meaning successful exploitation of this vulnerability could provide an attacker with unauthorized access to multiple interconnected systems.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50110"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-181-06.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://stonefly.com/contact-us"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-798"
+    ],
+    "severity": "CRITICAL",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:27Z"
+  }
+}

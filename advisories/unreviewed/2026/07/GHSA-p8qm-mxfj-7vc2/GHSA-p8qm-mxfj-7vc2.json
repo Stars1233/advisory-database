@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-p8qm-mxfj-7vc2",
+  "modified": "2026-07-01T00:34:00Z",
+  "published": "2026-07-01T00:34:00Z",
+  "aliases": [
+    "CVE-2026-35505"
+  ],
+  "details": "An unauthenticated remote attacker can repeatedly send crafted connection requests to leak memory. In single-process deployments the memory grows until the service is killed and the port stops responding until restart.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35505"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/DCMTK/dcmtk/releases/tag/latest"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsma-26-181-01.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-181-01"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T22:16:46Z"
+  }
+}

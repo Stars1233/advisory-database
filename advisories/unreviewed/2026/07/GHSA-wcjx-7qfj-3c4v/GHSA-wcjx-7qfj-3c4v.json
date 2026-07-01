@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-wcjx-7qfj-3c4v",
+  "modified": "2026-07-01T00:34:01Z",
+  "published": "2026-07-01T00:34:01Z",
+  "aliases": [
+    "CVE-2026-58450"
+  ],
+  "details": "Invoice Ninja through 5.13.26 contains an open redirect vulnerability in the client portal login that allows unauthenticated attackers to redirect authenticated victims to attacker-controlled external URLs by injecting a malicious value into the intended query parameter. Attackers can craft a client login link with an external URL in the intended parameter, which is stored in the session without host validation and emitted verbatim via a bare redirect in the ContactLoginController authenticated() handler after the victim completes a legitimate login, enabling phishing attacks.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58450"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/invoiceninja/invoiceninja/issues/12039"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/invoice-ninja-open-redirect-in-client-portal-login-via-intended-parameter"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-601"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T22:16:58Z"
+  }
+}

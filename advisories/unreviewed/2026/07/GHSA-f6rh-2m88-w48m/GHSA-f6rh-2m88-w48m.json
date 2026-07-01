@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-f6rh-2m88-w48m",
+  "modified": "2026-07-01T00:34:01Z",
+  "published": "2026-07-01T00:34:01Z",
+  "aliases": [
+    "CVE-2026-58448"
+  ],
+  "details": "yudao-cloud before 2026.06 contains a broken access control vulnerability in the BPM module that allows any authenticated user to access arbitrary process instance records by supplying a caller-controlled process-instance identifier to an unprotected endpoint lacking the @PreAuthorize annotation. Attackers can query any process-instance identifier through the unguarded GET endpoint to read sensitive workflow data including submitted form variables, approver identities, approval and rejection comments, and process BPMN XML without ownership or tenant party verification.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58448"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/YunaiV/yudao-cloud/issues/315"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/YunaiV/yudao-cloud/releases#release-v2026.06(jdk8/11)"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/yudao-cloud-bpm-module-broken-access-control-via-process-instance-api"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-862"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T22:16:58Z"
+  }
+}

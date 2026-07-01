@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j37g-2qp6-q3pv",
+  "modified": "2026-07-01T00:34:04Z",
+  "published": "2026-07-01T00:34:04Z",
+  "aliases": [
+    "CVE-2026-13863"
+  ],
+  "details": "Insufficient validation of untrusted input in CustomTabs in Google Chrome on Android prior to 150.0.7871.47 allowed a local attacker to perform privilege escalation via a malicious file. (Chromium security severity: Medium)",
+  "severity": [],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13863"
+    },
+    {
+      "type": "WEB",
+      "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0175352312.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.chromium.org/issues/496012495"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-20"
+    ],
+    "severity": null,
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-06-30T23:17:00Z"
+  }
+}
