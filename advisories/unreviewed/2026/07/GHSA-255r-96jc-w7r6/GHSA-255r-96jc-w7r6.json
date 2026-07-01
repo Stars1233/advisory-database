@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-255r-96jc-w7r6",
+  "modified": "2026-07-01T09:30:25Z",
+  "published": "2026-07-01T09:30:25Z",
+  "aliases": [
+    "CVE-2026-14193"
+  ],
+  "details": "DVP80ES300T with Improper Validation of Array Index Vulnerability",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14193"
+    },
+    {
+      "type": "WEB",
+      "url": "https://filecenter.deltaww.com/news/download/doc/Delta-PCSA-2026-00013_DVP80ES300T%20Improper%20Validation%20of%20Array%20Index%20Vulnerability%20(CVE-2026-14193).pdf"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-129"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-07-01T07:16:22Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-7fxm-rp47-f3xm",
+  "modified": "2026-07-01T09:30:25Z",
+  "published": "2026-07-01T09:30:25Z",
+  "aliases": [
+    "CVE-2026-10540"
+  ],
+  "details": "The Control-M/Enterprise Manager uses weak protections for stored hashes of account passwords, potentially allowing offline password recovery attacks if credential data is obtained by an attacker. This vulnerability affects Control-M/Enterprise Manager unsupported versions 9.0.20.x and potentially earlier unsupported versions",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:L"
+    },
+    {
+      "type": "CVSS_V4",
+      "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10540"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bmcapps.my.site.com/casemgmt/sc_KnowledgeArticle?sfdcid=kA3cx000000GFeDCAW&type=Solution"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-328"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-07-01T08:16:20Z"
+  }
+}

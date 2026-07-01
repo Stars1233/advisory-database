@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-69gg-pvp7-2fx5",
+  "modified": "2026-07-01T09:30:25Z",
+  "published": "2026-07-01T09:30:25Z",
+  "aliases": [
+    "CVE-2026-10096"
+  ],
+  "details": "The Qi Blocks plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 1.4.9 via the 'page_id' parameter due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with author-level access and above, to modify the stored Qi Blocks styles of arbitrary posts, templates, or widgets they do not own — including site-wide surfaces via the reserved 'template' and 'widget' page_id values — enabling unauthorized frontend defacement, content hiding, and degradation of any page on the site. The endpoint's permission_callback checks only the generic edit_posts and publish_posts capabilities, meaning any user with the built-in Author role satisfies the check regardless of post ownership.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10096"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/qi-blocks/tags/1.4.9/inc/admin/global-styles/class-qi-blocks-framework-global-styles.php#L134"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/qi-blocks/tags/1.4.9/inc/admin/global-styles/class-qi-blocks-framework-global-styles.php#L142"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/qi-blocks/tags/1.4.9/inc/admin/global-styles/class-qi-blocks-framework-global-styles.php#L82"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3572812%40qi-blocks&new=3572812%40qi-blocks&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/64251fd4-1627-49d0-831f-5cb9898c38bf?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-639"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-07-01T08:16:19Z"
+  }
+}
