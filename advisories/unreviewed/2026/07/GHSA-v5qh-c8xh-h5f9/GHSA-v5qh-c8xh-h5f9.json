@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-v5qh-c8xh-h5f9",
-  "modified": "2026-07-01T06:31:32Z",
+  "modified": "2026-07-01T12:31:34Z",
   "published": "2026-07-01T06:31:32Z",
   "aliases": [
     "CVE-2026-20458"
   ],
   "details": "In Modem, there is a possible memory corruption due to a missing bounds check. This could lead to remote escalation of privilege, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: MOLY01402160; Issue ID: MSV-7298.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -23,7 +28,7 @@
     "cwe_ids": [
       "CWE-787"
     ],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-07-01T04:17:13Z"

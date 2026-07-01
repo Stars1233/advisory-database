@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-9xqc-qhp9-fr5q",
+  "modified": "2026-07-01T12:31:35Z",
+  "published": "2026-07-01T12:31:35Z",
+  "aliases": [
+    "CVE-2026-13228"
+  ],
+  "details": "The LatePoint – Calendar Booking Plugin for Appointments and Events plugin for WordPress is vulnerable to Privilege Escalation to Administrator in versions up to, and including, 5.6.3 This is due to an Insecure Direct Object Reference (IDOR) in the create_or_update() function of OsOrdersController, which allows an authenticated Agent to supply an arbitrary order[customer_id] and overwrite any LatePoint customer's email field (including one linked to a WordPress Administrator's account) through the public-scope customer set_data() call, combined with a missing role verification in OsAuthHelper::authorize_customer() which logs in the linked WordPress user without checking its role. This makes it possible for authenticated attackers, with custom (Agent)-level access and above, to elevate their privileges to Administrator.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13228"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.6.2/lib/controllers/orders_controller.php#L112"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.6.2/lib/controllers/orders_controller.php#L127"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.6.2/lib/controllers/orders_controller.php#L137"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.6.2/lib/helpers/auth_helper.php#L256"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3590914/latepoint/trunk/lib/controllers/orders_controller.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?old_path=%2Flatepoint/tags/5.6.3&new_path=%2Flatepoint/tags/5.6.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/8f9db3b8-dd37-4d8b-b041-50b453858a39?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-269"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-07-01T11:16:25Z"
+  }
+}

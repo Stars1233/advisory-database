@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-7cqg-gq5x-qr9q",
-  "modified": "2026-07-01T06:31:33Z",
+  "modified": "2026-07-01T12:31:34Z",
   "published": "2026-07-01T06:31:32Z",
   "aliases": [
     "CVE-2026-20460"
   ],
   "details": "In Modem, there is a possible information disclosure due to improper input validation. This could lead to remote information disclosure, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: MOLY01811421; Issue ID: MSV-6788.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -23,7 +28,7 @@
     "cwe_ids": [
       "CWE-288"
     ],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-07-01T04:17:15Z"

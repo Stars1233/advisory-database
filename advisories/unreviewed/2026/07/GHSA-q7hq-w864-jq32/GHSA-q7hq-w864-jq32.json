@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q7hq-w864-jq32",
-  "modified": "2026-07-01T09:30:25Z",
+  "modified": "2026-07-01T12:31:34Z",
   "published": "2026-07-01T09:30:25Z",
   "aliases": [
     "CVE-2026-11880"
   ],
   "details": "The Fluent Forms  WordPress plugin before 6.2.1 does not properly verify ownership before processing a subscription cancellation request, allowing authenticated users with a low-privilege account to cancel subscriptions belonging to other users.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,7 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "LOW",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-07-01T07:16:22Z"

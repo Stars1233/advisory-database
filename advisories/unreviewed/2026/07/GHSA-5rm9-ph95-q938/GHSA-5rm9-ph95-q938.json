@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-5rm9-ph95-q938",
+  "modified": "2026-07-01T12:31:34Z",
+  "published": "2026-07-01T12:31:34Z",
+  "aliases": [
+    "CVE-2026-13454"
+  ],
+  "details": "The MotoPress Appointment Booking plugin for WordPress is vulnerable to generic SQL Injection via the 's' parameter in all versions up to, and including, 2.4.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with custom-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Exploitation requires the mpa_appointment_employee custom role, meaning any user assigned this role can perform the attack.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13454"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/motopress-appointment-lite/tags/2.4.3/includes/admin-pages/manage/ManageBookingsPage.php#L247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/motopress-appointment-lite/tags/2.4.3/includes/admin-pages/manage/ManageBookingsPage.php#L310"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/motopress-appointment-lite/tags/2.4.5/includes/admin-pages/manage/ManageBookingsPage.php#L247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/motopress-appointment-lite/tags/2.4.5/includes/admin-pages/manage/ManageBookingsPage.php#L310"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset/3591693/motopress-appointment-lite/trunk/includes/admin-pages/manage/ManageBookingsPage.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/64e4d51a-7b65-4fba-9742-bc7d23f46f8d?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-89"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-07-01T10:16:27Z"
+  }
+}

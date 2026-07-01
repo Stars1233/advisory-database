@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-f24q-32qp-rrx8",
-  "modified": "2026-07-01T00:33:59Z",
+  "modified": "2026-07-01T12:31:34Z",
   "published": "2026-07-01T00:33:59Z",
   "aliases": [
     "CVE-2026-10585"

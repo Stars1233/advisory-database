@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-x525-xmpm-prq9",
-  "modified": "2026-07-01T09:30:25Z",
+  "modified": "2026-07-01T12:31:34Z",
   "published": "2026-07-01T09:30:25Z",
   "aliases": [
     "CVE-2026-11568"
   ],
   "details": "The Product Configurator for WooCommerce WordPress plugin before 1.7.3 does not perform any authorisation or post-status check before returning WooCommerce product data through a public AJAX action, allowing unauthenticated users to retrieve the data (title, price, weight, stock status, and configurator option pricing/SKUs) of private and draft, non-public products by supplying the product ID. WordPress post-visibility controls are bypassed.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,7 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "HIGH",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-07-01T07:16:22Z"

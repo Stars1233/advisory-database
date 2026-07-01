@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-qrfm-jqh3-mc7c",
-  "modified": "2026-07-01T09:30:25Z",
+  "modified": "2026-07-01T12:31:34Z",
   "published": "2026-07-01T09:30:25Z",
   "aliases": [
     "CVE-2026-11570"
   ],
   "details": "The User Submitted Posts  WordPress plugin before 20260608 does not escape a submitted value before outputting it in an admin-configured display template, leading to a Stored Cross-Site Scripting that can be triggered by unauthenticated users when a non-default display option is enabled.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,7 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-07-01T07:16:22Z"

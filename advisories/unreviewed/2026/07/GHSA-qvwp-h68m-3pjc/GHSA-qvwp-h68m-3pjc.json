@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-qvwp-h68m-3pjc",
+  "modified": "2026-07-01T12:31:34Z",
+  "published": "2026-07-01T12:31:34Z",
+  "aliases": [
+    "CVE-2026-12754"
+  ],
+  "details": "The VikBooking Hotel Booking Engine & PMS plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'layoutstyle' parameter in all versions up to, and including, 1.8.12 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. Exploitation requires the targeted page to render the [vikbooking view=\"roomslist\"] shortcode, as the vulnerable layoutstyle parameter is only processed in that view context.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12754"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.12/libraries/adapter/input/filter.php#L385"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.12/site/views/roomslist/tmpl/default.php#L26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.12/site/views/roomslist/tmpl/default.php#L46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/vikbooking/tags/1.8.13/site/views/roomslist/tmpl/default.php#L46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6d126213-e342-4271-aca0-5cc47214ae8b?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-07-01T10:16:26Z"
+  }
+}

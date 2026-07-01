@@ -1,13 +1,18 @@
 {
   "schema_version": "1.4.0",
   "id": "GHSA-q6pc-8fwh-45m2",
-  "modified": "2026-07-01T09:30:25Z",
+  "modified": "2026-07-01T12:31:34Z",
   "published": "2026-07-01T09:30:25Z",
   "aliases": [
     "CVE-2026-11887"
   ],
   "details": "The Salon Booking System  WordPress plugin before 10.30.20 does not have proper authorisation checks on one of its AJAX actions, allowing any authenticated user, such as a subscriber, to modify a Salon Booking System  WordPress plugin before 10.30.20 setting and bypass the manual approval of new bookings.",
-  "severity": [],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    }
+  ],
   "affected": [],
   "references": [
     {
@@ -21,7 +26,7 @@
   ],
   "database_specific": {
     "cwe_ids": [],
-    "severity": null,
+    "severity": "MODERATE",
     "github_reviewed": false,
     "github_reviewed_at": null,
     "nvd_published_at": "2026-07-01T07:16:22Z"

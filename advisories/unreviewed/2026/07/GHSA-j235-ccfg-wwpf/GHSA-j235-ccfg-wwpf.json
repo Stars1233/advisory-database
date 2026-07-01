@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-j235-ccfg-wwpf",
+  "modified": "2026-07-01T12:31:35Z",
+  "published": "2026-07-01T12:31:35Z",
+  "aliases": [
+    "CVE-2026-12142"
+  ],
+  "details": "The NEX-Forms – Ultimate Forms Plugin for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via '_name[]' Array Parameter in all versions up to, and including, 9.2.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The wp_kses() output filtering pass provides no mitigation because NEXForms_allowed_tags() explicitly permits &lt;script&gt;, &lt;iframe src/srcdoc&gt;, and JS event handlers such as onClick, onBlur, and onChange in its allow-list.",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+    }
+  ],
+  "affected": [],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12142"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/includes/classes/class.db.php#L2660"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/includes/classes/class.db.php#L2809"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/includes/classes/class.functions.php#L2343"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/main.php#L2660"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/main.php#L2720"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.1.10/main.php#L2903"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.2/includes/classes/class.db.php#L2660"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.2/includes/classes/class.db.php#L2809"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.2/includes/classes/class.functions.php#L2343"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.2/main.php#L2660"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.2/main.php#L2720"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.2/main.php#L2903"
+    },
+    {
+      "type": "WEB",
+      "url": "https://plugins.trac.wordpress.org/changeset?old_path=%2Fnex-forms-express-wp-form-builder/tags/9.2.2&new_path=%2Fnex-forms-express-wp-form-builder/tags/9.2.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/da235dea-4884-4e6a-a8b8-65d34f050684?source=cve"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": false,
+    "github_reviewed_at": null,
+    "nvd_published_at": "2026-07-01T11:16:24Z"
+  }
+}
